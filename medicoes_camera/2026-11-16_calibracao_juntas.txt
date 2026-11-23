@@ -1,0 +1,5 @@
+pose1 cmd(0,0,0) elos(2,-3,-3)
+pose2 cmd(45,0,0) elos(33,40,40)
+pose3 cmd(90,0,0) elos(108,98,96)
+pose4 cmd(0,45,0) elos(2,53,60)
+pose5 cmd(0,0,45) elos(3,-2,52)
