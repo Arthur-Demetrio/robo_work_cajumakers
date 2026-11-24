@@ -1,0 +1,991 @@
+Perfil operacional original confirmado; somente filtros de fita adicionados aos costmaps.
+Aplicado: /home/marcos/robo_jazzy_ws/entregas/correcao_perfil_20261116/nav2_legado_com_fita.yaml Backup: /home/marcos/robo_jazzy_ws/entregas/correcao_perfil_20261116/nav2_legado_com_fita.yaml.bak_ANTECIPACAO_DWB_20261116_20261119_211246_531764
+CM_LATERAL65: lateral 65-135 graus (diag 45-65) em /home/marcos/robo_jazzy_ws/entregas/correcao_perfil_20261116/nav2_legado_com_fita.yaml
+Alinhador operacional: nav2_principal=false. Aguardando base/TF recentes.
+Base/TF disponíveis e descoberta persistente sem Nav2 anterior. Nenhuma velocidade publicada.
+[INFO] [launch]: All log files can be found below /home/marcos/.ros/log/2026-11-19-21-12-54-131639-marcos-ThinkPad-E14-Gen-2-30515
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [controller_server-1]: process started with pid [30587]
+[INFO] [smoother_server-2]: process started with pid [30588]
+[INFO] [planner_server-3]: process started with pid [30589]
+[INFO] [behavior_server-4]: process started with pid [30590]
+[INFO] [bt_navigator-5]: process started with pid [30591]
+[INFO] [waypoint_follower-6]: process started with pid [30592]
+[INFO] [velocity_smoother-7]: process started with pid [30593]
+[INFO] [collision_monitor-8]: process started with pid [30594]
+[INFO] [python3-9]: process started with pid [30595]
+[INFO] [python3-10]: process started with pid [30596]
+[INFO] [python3-11]: process started with pid [30597]
+[INFO] [python3-12]: process started with pid [30598]
+[INFO] [progressive_spin_node-13]: process started with pid [30599]
+[INFO] [mecanum_escape_node-14]: process started with pid [30600]
+[waypoint_follower-6] [INFO] [1795133574.833277469] [waypoint_follower]: 
+[waypoint_follower-6] 	waypoint_follower lifecycle node launched. 
+[waypoint_follower-6] 	Waiting on external lifecycle transitions to activate
+[waypoint_follower-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-6] [INFO] [1795133574.834975947] [waypoint_follower]: Creating
+[behavior_server-4] [INFO] [1795133575.017941001] [behavior_server]: 
+[behavior_server-4] 	behavior_server lifecycle node launched. 
+[behavior_server-4] 	Waiting on external lifecycle transitions to activate
+[behavior_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-2] [INFO] [1795133575.239607251] [smoother_server]: 
+[smoother_server-2] 	smoother_server lifecycle node launched. 
+[smoother_server-2] 	Waiting on external lifecycle transitions to activate
+[smoother_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-2] [INFO] [1795133575.273940786] [smoother_server]: Creating smoother server
+[velocity_smoother-7] [INFO] [1795133575.398459649] [velocity_smoother]: 
+[velocity_smoother-7] 	velocity_smoother lifecycle node launched. 
+[velocity_smoother-7] 	Waiting on external lifecycle transitions to activate
+[velocity_smoother-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-5] [INFO] [1795133575.419351155] [bt_navigator]: 
+[bt_navigator-5] 	bt_navigator lifecycle node launched. 
+[bt_navigator-5] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-5] [INFO] [1795133575.440620754] [bt_navigator]: Creating
+[planner_server-3] [INFO] [1795133575.484299359] [planner_server]: 
+[planner_server-3] 	planner_server lifecycle node launched. 
+[planner_server-3] 	Waiting on external lifecycle transitions to activate
+[planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-3] [INFO] [1795133575.501582840] [planner_server]: Creating
+[collision_monitor-8] [INFO] [1795133575.820472475] [collision_monitor]: 
+[collision_monitor-8] 	collision_monitor lifecycle node launched. 
+[collision_monitor-8] 	Waiting on external lifecycle transitions to activate
+[collision_monitor-8] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-1] [INFO] [1795133575.825389093] [controller_server]: 
+[controller_server-1] 	controller_server lifecycle node launched. 
+[controller_server-1] 	Waiting on external lifecycle transitions to activate
+[controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-1] [INFO] [1795133575.897259395] [controller_server]: Creating controller server
+[planner_server-3] [INFO] [1795133575.898633693] [global_costmap.global_costmap]: 
+[planner_server-3] 	global_costmap lifecycle node launched. 
+[planner_server-3] 	Waiting on external lifecycle transitions to activate
+[planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-3] [INFO] [1795133575.899992422] [global_costmap.global_costmap]: Creating Costmap
+[controller_server-1] [INFO] [1795133576.027601766] [local_costmap.local_costmap]: 
+[controller_server-1] 	local_costmap lifecycle node launched. 
+[controller_server-1] 	Waiting on external lifecycle transitions to activate
+[controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-1] [INFO] [1795133576.038523301] [local_costmap.local_costmap]: Creating Costmap
+[INFO] [lifecycle_manager-15]: process started with pid [30735]
+[lifecycle_manager-15] [INFO] [1795133577.128759664] [lifecycle_manager_navigation]: Creating
+[lifecycle_manager-15] [INFO] [1795133577.601391010] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[python3-9] [INFO] [1795133578.226429242] [filtro_corpo_scan]: Filtro do corpo: /scan_front -> /scan_nav; MEMORIA_PERTO DESLIGADA (MEMORIA_OFF)
+[python3-9] [INFO] [1795133578.231983567] [filtro_corpo_scan]: LiDAR em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[python3-12] [INFO] [1795133578.613657862] [suavizador_nav]: Suavizador pronto: /cmd_vel_ctrl -> /cmd_vel_nav (tau 0.25 s)
+[lifecycle_manager-15] [INFO] [1795133579.395485963] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-15] [INFO] [1795133579.395873065] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[controller_server-1] [INFO] [1795133579.399098311] [controller_server]: Configuring controller interface
+[controller_server-1] [INFO] [1795133579.399198545] [controller_server]: getting progress checker plugins..
+[controller_server-1] [INFO] [1795133579.401162309] [controller_server]: getting goal checker plugins..
+[controller_server-1] [INFO] [1795133579.404384084] [controller_server]: Controller frequency set to 10.0000Hz
+[controller_server-1] [INFO] [1795133579.406015371] [local_costmap.local_costmap]: Configuring
+[controller_server-1] [INFO] [1795133579.523648839] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[controller_server-1] [INFO] [1795133579.549083600] [local_costmap.local_costmap]: Subscribed to Topics: scan bloqueio
+[controller_server-1] [INFO] [1795133579.591720295] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[controller_server-1] [INFO] [1795133579.594086747] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-1] [INFO] [1795133579.595697455] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[controller_server-1] [INFO] [1795133579.595769914] [local_costmap.local_costmap]: Using costmap filter "tape_keepout_filter"
+[controller_server-1] [INFO] [1795133579.646674706] [local_costmap.local_costmap]: Initialized costmap filter "tape_keepout_filter"
+[controller_server-1] [INFO] [1795133579.646822961] [local_costmap.local_costmap]: Using costmap filter "tape_inflation"
+[controller_server-1] [INFO] [1795133579.654382020] [local_costmap.local_costmap]: Initialized costmap filter "tape_inflation"
+[controller_server-1] [INFO] [1795133579.899678617] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::PoseProgressChecker
+[controller_server-1] [INFO] [1795133579.903515748] [controller_server]: Controller Server has progress_checker  progress checkers available.
+[controller_server-1] [INFO] [1795133579.906417114] [controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-1] [INFO] [1795133579.913608513] [controller_server]: Controller Server has goal_checker  goal checkers available.
+[controller_server-1] [INFO] [1795133579.953515945] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[controller_server-1] [INFO] [1795133579.968136695] [controller_server]: Setting transform_tolerance to 0.300000
+[controller_server-1] [INFO] [1795133580.245660586] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[controller_server-1] [INFO] [1795133580.263321401] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795133580.263643412] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[controller_server-1] [INFO] [1795133580.264311719] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795133580.264514485] [controller_server]: Using critic "ObstacleFootprint" (dwb_critics::ObstacleFootprintCritic)
+[controller_server-1] [INFO] [1795133580.264751928] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795133580.264892674] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[controller_server-1] [INFO] [1795133580.283456121] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795133580.283724966] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[controller_server-1] [INFO] [1795133580.284227304] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795133580.284407561] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[controller_server-1] [INFO] [1795133580.284723597] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795133580.284940370] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[controller_server-1] [INFO] [1795133580.285382405] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795133580.285591967] [controller_server]: Using critic "Twirling" (dwb_critics::TwirlingCritic)
+[controller_server-1] [INFO] [1795133580.285769452] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795133580.285810003] [controller_server]: Controller Server has FollowPath  controllers available.
+[mecanum_escape_node-14] [INFO] [1795133580.427548581] [mecanum_escape_node]: Mecanum Escape pronto. Aguardando action /mecanum_escape.
+[lifecycle_manager-15] [INFO] [1795133580.550948923] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[smoother_server-2] [INFO] [1795133580.555748147] [smoother_server]: Configuring smoother server
+[smoother_server-2] [INFO] [1795133580.681485462] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[smoother_server-2] [INFO] [1795133580.683544657] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[lifecycle_manager-15] [INFO] [1795133580.751997680] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-3] [INFO] [1795133580.760886620] [planner_server]: Configuring
+[planner_server-3] [INFO] [1795133580.761477041] [global_costmap.global_costmap]: Configuring
+[planner_server-3] [INFO] [1795133580.884453965] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-3] [INFO] [1795133580.940501653] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-3] [INFO] [1795133580.969811442] [global_costmap.global_costmap]: Subscribing to updates
+[planner_server-3] [INFO] [1795133581.029950826] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-3] [INFO] [1795133581.033166319] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-3] [INFO] [1795133581.071587683] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[python3-11] [INFO] [1795133581.096706462] [alinhador_passagem]: Alinhador pronto. Entrada no corredor exige centro e angulo confirmados pelas duas paredes. Translacao continua no preparo e na travessia a 50%. Envie goals em /goal_pose_alinhado.
+[planner_server-3] [INFO] [1795133581.196471671] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-3] [INFO] [1795133581.202545530] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-3] [INFO] [1795133581.206793941] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-3] [INFO] [1795133581.206918049] [global_costmap.global_costmap]: Using costmap filter "tape_keepout_filter"
+[planner_server-3] [INFO] [1795133581.227638545] [global_costmap.global_costmap]: Initialized costmap filter "tape_keepout_filter"
+[planner_server-3] [INFO] [1795133581.227890598] [global_costmap.global_costmap]: Using costmap filter "tape_inflation"
+[planner_server-3] [INFO] [1795133581.235547158] [global_costmap.global_costmap]: Initialized costmap filter "tape_inflation"
+[python3-11] [INFO] [1795133581.279146597] [alinhador_passagem]: Laser em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[progressive_spin_node-13] [INFO] [1795133581.515791256] [progressive_spin]: smart_spin pronto; micro-giros usam spin. CM continua ativo.
+[planner_server-3] [INFO] [1795133581.703325015] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 259 X 266 at 0.050000 m/pix
+[planner_server-3] [INFO] [1795133581.705880687] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[planner_server-3] [INFO] [1795133581.710585281] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-3] [INFO] [1795133581.716316987] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-15] [INFO] [1795133582.208166782] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[behavior_server-4] [INFO] [1795133582.212070081] [behavior_server]: Configuring
+[behavior_server-4] [INFO] [1795133582.249863207] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+[behavior_server-4] [INFO] [1795133582.260946802] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+[behavior_server-4] [INFO] [1795133582.265462652] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+[behavior_server-4] [INFO] [1795133582.268327728] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+[python3-10] [INFO] [1795133582.294504707] [destravar]: Destravar v4 pronto (acao /destravar): diagnostica, devolve ao Nav2 se ainda contorna, desliza com continuacao, gira pelo smart_spin; re LIBERADA.
+[behavior_server-4] [INFO] [1795133582.318660413] [behavior_server]: Configuring spin
+Giro de abertura: rcl_interfaces.srv.SetParameters_Response(results=[rcl_interfaces.msg.SetParametersResult(successful=True, reason='')])
+[behavior_server-4] [INFO] [1795133582.395451572] [behavior_server]: Configuring backup
+[behavior_server-4] [INFO] [1795133582.479189411] [behavior_server]: Configuring drive_on_heading
+[behavior_server-4] [INFO] [1795133582.555555513] [behavior_server]: Configuring wait
+[lifecycle_manager-15] [INFO] [1795133582.603105824] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-5] [INFO] [1795133582.605411371] [bt_navigator]: Configuring
+[bt_navigator-5] [INFO] [1795133582.663012025] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-5] [WARN] [1795133582.698247001] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+[bt_navigator-5] Make sure these match your BT and there are not other sources of error codes youreported to your application
+[bt_navigator-5] [INFO] [1795133583.161943807] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+[lifecycle_manager-15] [INFO] [1795133583.286228377] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[waypoint_follower-6] [INFO] [1795133583.287240160] [waypoint_follower]: Configuring
+[waypoint_follower-6] [INFO] [1795133583.516469629] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[waypoint_follower-6] [INFO] [1795133583.518179999] [waypoint_follower]: Waypoint pause duration is set to zero, disabling task executor plugin.
+[lifecycle_manager-15] [INFO] [1795133583.522619565] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[velocity_smoother-7] [INFO] [1795133583.524485705] [velocity_smoother]: Configuring velocity smoother
+[lifecycle_manager-15] [INFO] [1795133583.570264022] [lifecycle_manager_navigation]: [34m[1mConfiguring collision_monitor[0m[0m
+[collision_monitor-8] [INFO] [1795133583.571957716] [collision_monitor]: Configuring
+[collision_monitor-8] [INFO] [1795133583.609807055] [collision_monitor]: [scan]: Creating Scan
+[collision_monitor-8] [INFO] [1795133583.619091656] [collision_monitor]: [VelocityPolygonStop]: Creating Polygon
+[collision_monitor-8] [INFO] [1795133583.619254667] [collision_monitor]: [VelocityPolygonStop]: Creating VelocityPolygon
+[collision_monitor-8] [INFO] [1795133583.663841023] [collision_monitor]: [SweptTurnStop]: Creating Polygon
+[collision_monitor-8] [INFO] [1795133583.663958827] [collision_monitor]: [SweptTurnStop]: Creating VelocityPolygon
+[lifecycle_manager-15] [INFO] [1795133583.746993651] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[controller_server-1] [INFO] [1795133583.751175054] [controller_server]: Activating
+[controller_server-1] [INFO] [1795133583.751276649] [local_costmap.local_costmap]: Activating
+[controller_server-1] [INFO] [1795133583.751307101] [local_costmap.local_costmap]: Checking transform
+[controller_server-1] [INFO] [1795133583.751547743] [local_costmap.local_costmap]: start
+[controller_server-1] [INFO] [1795133583.769818875] [local_costmap.local_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[controller_server-1] [WARN] [1795133583.953135980] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795133583.984904319] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795133584.105943440] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-15] [INFO] [1795133584.106102166] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[smoother_server-2] [INFO] [1795133584.108229464] [smoother_server]: Activating
+[smoother_server-2] [INFO] [1795133584.108681510] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795133584.225412408] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[lifecycle_manager-15] [INFO] [1795133584.225551554] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-3] [INFO] [1795133584.226281870] [planner_server]: Activating
+[planner_server-3] [INFO] [1795133584.226377190] [global_costmap.global_costmap]: Activating
+[planner_server-3] [INFO] [1795133584.226408924] [global_costmap.global_costmap]: Checking transform
+[planner_server-3] [INFO] [1795133584.226635779] [global_costmap.global_costmap]: start
+[planner_server-3] [INFO] [1795133584.231659328] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[planner_server-3] [WARN] [1795133584.735387192] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [INFO] [1795133584.786787008] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[planner_server-3] [INFO] [1795133584.792147427] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795133584.911819936] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-15] [INFO] [1795133584.911954160] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[behavior_server-4] [INFO] [1795133584.912593788] [behavior_server]: Activating
+[behavior_server-4] [INFO] [1795133584.912657936] [behavior_server]: Activating spin
+[behavior_server-4] [INFO] [1795133584.912693259] [behavior_server]: Activating backup
+[behavior_server-4] [INFO] [1795133584.912733717] [behavior_server]: Activating drive_on_heading
+[behavior_server-4] [INFO] [1795133584.912770785] [behavior_server]: Activating wait
+[behavior_server-4] [INFO] [1795133584.912817797] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795133585.037222249] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-15] [INFO] [1795133585.038933287] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-5] [INFO] [1795133585.040113418] [bt_navigator]: Activating
+[bt_navigator-5] [INFO] [1795133585.506716120] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795133585.618740344] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-15] [INFO] [1795133585.619499906] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[waypoint_follower-6] [INFO] [1795133585.621081831] [waypoint_follower]: Activating
+[waypoint_follower-6] [INFO] [1795133585.621166543] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795133585.744889530] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[lifecycle_manager-15] [INFO] [1795133585.745223127] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[velocity_smoother-7] [INFO] [1795133585.747554738] [velocity_smoother]: Activating
+[velocity_smoother-7] [INFO] [1795133585.747746766] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795133585.861273402] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[lifecycle_manager-15] [INFO] [1795133585.861436781] [lifecycle_manager_navigation]: [34m[1mActivating collision_monitor[0m[0m
+[collision_monitor-8] [INFO] [1795133585.863332596] [collision_monitor]: Activating
+[collision_monitor-8] [INFO] [1795133585.863978671] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[controller_server-1] [WARN] [1795133585.953168628] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[lifecycle_manager-15] [INFO] [1795133585.992807030] [lifecycle_manager_navigation]: Server collision_monitor connected with bond.
+[lifecycle_manager-15] [INFO] [1795133585.993389984] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-15] [INFO] [1795133585.993575313] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[planner_server-3] [WARN] [1795133587.235645791] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133587.953378199] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133589.733268782] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133590.153204348] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133591.734087001] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133592.263915850] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133593.734415597] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133594.293676287] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133596.232385482] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133596.325740930] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133598.235023050] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133598.338009396] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133600.364062681] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133600.730551246] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133602.395419758] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133602.731576298] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133604.411308753] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133605.251837398] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133606.450492238] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133607.735885147] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133608.455023559] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [INFO] [1795133609.398381533] [global_costmap.global_costmap]: Message Filter dropping message: frame 'laser_raw' at time 1795133609.093 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-3] [WARN] [1795133610.232502690] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133610.455057991] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133612.233142544] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133612.655379615] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133614.728752759] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133614.855066483] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133616.729072974] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133616.855151029] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133618.731442230] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133619.055284316] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133621.235292311] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133621.254980561] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133623.255020281] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133623.732256239] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133625.455261336] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133625.734422192] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133627.654989105] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133628.232874452] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133629.655119317] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133630.234571046] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133631.855330488] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133632.728607764] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133634.055178508] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133635.234258709] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133636.255017370] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133637.234836831] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133638.255296184] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133639.733745313] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133640.455023249] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133642.232134760] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133642.654989890] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133644.236696818] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133644.655187760] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133646.497105827] [alinhador_passagem]: PEDIDO RECEBIDO /ir_para_area: _SONDA_EXECUTOR
+[python3-11] [ERROR] [1795133646.513809547] [alinhador_passagem]: Area _SONDA_EXECUTOR nao esta em /home/marcos/mapas/service_areas.yaml nem em /home/marcos/mapas/pontos.yaml (tem: WS_1, WS_2, START, FINISH)
+[python3-11] [INFO] [1795133646.533317387] [alinhador_passagem]: PEDIDO RECEBIDO /ir_para_area: WS_1
+[python3-11] [INFO] [1795133646.551837880] [alinhador_passagem]: TRABALHADOR RECEBEU: WS_1
+[python3-11] [INFO] [1795133646.555693014] [alinhador_passagem]: Indo para WS_1: aproximacao em x=2.22 y=2.22 yaw=-4 graus
+[planner_server-3] [WARN] [1795133646.728938582] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133646.855173251] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133646.973760135] [alinhador_passagem]: Analise: caminho curto demais.
+[python3-11] [INFO] [1795133646.999527897] [alinhador_passagem]: TRAJETO CURTO: 8 cm em linha reta, sem Nav2 (angulo -4 graus)
+[python3-11] [INFO] [1795133647.670511324] [alinhador_passagem]: TRAJETO CURTO: angulo -4 graus (erro -5.9)
+[controller_server-1] [WARN] [1795133649.054988992] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133649.126637857] [alinhador_passagem]: TRAJETO CURTO: andei 3 cm para esq
+[planner_server-3] [WARN] [1795133649.233590326] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133650.271753074] [alinhador_passagem]: TRAJETO CURTO: andei 6 cm para frente
+[controller_server-1] [WARN] [1795133651.055044931] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133651.512777461] [alinhador_passagem]: TRAJETO CURTO: angulo -4 graus (erro -2.0)
+[planner_server-3] [WARN] [1795133651.732932832] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133651.769751071] [alinhador_passagem]: TRAJETO CURTO: SUCESSO (4 cm do ponto)
+[python3-11] [INFO] [1795133651.784995443] [alinhador_passagem]: ENCOSTAR WS_1: medindo a face da mesa
+[python3-11] [INFO] [1795133651.894391788] [alinhador_passagem]: ENCOSTAR WS_1: aguardando segunda observacao coerente
+[python3-11] [INFO] [1795133652.053918686] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.600 c+0.032 a-2.3g)
+[python3-11] [INFO] [1795133652.216296246] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.59 w0.44)
+[python3-11] [INFO] [1795133652.388806764] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.600 c+0.032 a-2.3g)
+[python3-11] [INFO] [1795133652.858302619] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 1: face a 24 cm (para-choque), girar -2.3 graus, centro +3.2 cm
+[controller_server-1] [WARN] [1795133653.255077084] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133654.232137998] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133654.296939731] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 2: face a 23 cm (para-choque), girar -0.1 graus, centro +2.9 cm
+[python3-11] [INFO] [1795133654.349558890] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +2.9 cm de lado
+[controller_server-1] [WARN] [1795133655.455254354] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133655.752118653] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 3: face a 23 cm (para-choque), girar -0.1 graus, centro +2.0 cm
+[planner_server-3] [WARN] [1795133656.232880101] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133657.655098316] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133658.115224159] [alinhador_passagem]: ENCOSTAR WS_1: face WS parcial: so distancia/angulo (d0.593 c nd a+0.1g)
+[planner_server-3] [WARN] [1795133658.234474459] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133658.450884042] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.594 c+0.026 a-0.0g)
+[python3-11] [INFO] [1795133658.902383315] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 4: face a 23 cm (para-choque), girar -0.0 graus, centro +2.5 cm
+[python3-11] [INFO] [1795133658.953814788] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +2.5 cm de lado
+[controller_server-1] [WARN] [1795133659.855267224] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133660.354399089] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 5: face a 22 cm (para-choque), girar -0.4 graus, centro +2.0 cm
+[python3-11] [INFO] [1795133660.418324042] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +2.0 cm de lado
+[planner_server-3] [WARN] [1795133660.728135384] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133661.771684064] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 6: face a 22 cm (para-choque), girar -0.6 graus, centro -0.7 cm
+[python3-11] [INFO] [1795133661.773090696] [alinhador_passagem]: ENCOSTAR WS_1: Alinhado com a mesa: avancando ate 9 cm
+[controller_server-1] [WARN] [1795133662.055049355] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133662.729318134] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133663.986614063] [alinhador_passagem]: ENCOSTAR WS_1: face WS parcial: so distancia/angulo (d0.468 c nd a-1.7g)
+[controller_server-1] [WARN] [1795133664.055059120] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133664.159925523] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.468 c+0.028 a-1.1g)
+[python3-11] [INFO] [1795133664.655544432] [alinhador_passagem]: ENCOSTAR WS_1: Encostado: frente a 10.3 cm da mesa, -1.1 graus, centro +2.8 cm
+[python3-11] [INFO] [1795133664.658413483] [alinhador_passagem]: ENCOSTAR WS_1: ENCOSTO_CEGO: encostado a 10.3 cm, -1.1 graus; centro medido de longe -0.7 cm (perto o LiDAR nao ve o meio da face)
+[python3-11] [INFO] [1795133664.915712151] [alinhador_passagem]: ENCOSTAR WS_1: SUCESSO
+[python3-11] [INFO] [1795133664.917374800] [alinhador_passagem]: RESULTADO: WS_1 SUCESSO folga=10.3cm ang=-1.1 centro=+2.8cm
+[planner_server-3] [WARN] [1795133665.232960132] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133666.055085882] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133667.235184437] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133668.255079837] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133669.734730857] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133670.053228812] [alinhador_passagem]: PEDIDO RECEBIDO /ir_para_area: WS_2
+[python3-11] [INFO] [1795133670.074957063] [alinhador_passagem]: Indo para WS_2: aproximacao em x=1.70 y=4.22 yaw=-174 graus
+[python3-11] [INFO] [1795133670.075534710] [alinhador_passagem]: TRABALHADOR RECEBEU: WS_2
+[python3-11] [INFO] [1795133670.089262651] [alinhador_passagem]: SAIR DA MESA: saindo de re 0.25 m (odom) para tentar de novo
+[controller_server-1] [WARN] [1795133670.255099501] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133672.231929163] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133672.455087519] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133673.205745188] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[python3-11] [INFO] [1795133673.283940507] [alinhador_passagem]: GOAL FINAL (virar para o caminho): o caminho sai a +85 graus da frente: viro antes do Nav2
+[planner_server-3] [WARN] [1795133674.232374048] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133674.455127730] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133676.655098908] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133676.729955346] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133678.373560781] [alinhador_passagem]: GOAL FINAL (virar para o caminho): angulo 81 graus (erro 1.7)
+[python3-11] [INFO] [1795133678.631852319] [alinhador_passagem]: GOAL FINAL (virar para o caminho): SUCESSO
+[python3-11] [INFO] [1795133678.632947135] [alinhador_passagem]: GOAL FINAL: x=1.70 y=4.22 yaw=95 graus
+[bt_navigator-5] [INFO] [1795133678.635154964] [bt_navigator]: Begin navigating from current location (2.11, 2.24) to (1.70, 4.22)
+[controller_server-1] [WARN] [1795133678.655373885] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [WARN] [1795133678.656019292] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: sem costmap ainda: sigo com o original sem conferir (como antes)
+[controller_server-1] [INFO] [1795133678.659289130] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-1] [WARN] [1795133678.659418910] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
+[controller_server-1] [WARN] [1795133678.659469466] [controller_server]: No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+[planner_server-3] [WARN] [1795133678.730211369] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795133679.186722777] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (50 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795133679.260244182] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795133679.761104101] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795133680.855441991] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133681.234837833] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795133682.786180629] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (17 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795133682.860022436] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795133683.055312098] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133683.733467046] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133685.255205777] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133685.734907928] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133687.255223456] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133688.232778540] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133689.455339708] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133690.233402966] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133691.655220081] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [ERROR] [1795133692.657384831] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-5] [INFO] [1795133692.657743710] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-5] [INFO] [1795133692.659744171] [bt_navigator]: Goal canceled
+[controller_server-1] [INFO] [1795133692.662733666] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-1] [INFO] [1795133692.662848737] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[planner_server-3] [WARN] [1795133692.730392849] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133692.950951007] [alinhador_passagem]: GOAL FINAL: SUCESSO (aceito a 1 cm do ponto, sem exigir angulo)
+[controller_server-1] [WARN] [1795133693.655236660] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133695.234393024] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133695.855203655] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133697.732050180] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133698.055192607] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133699.231072998] [alinhador_passagem]: GOAL FINAL (giro final): angulo -174 graus (erro 1.8)
+[python3-11] [INFO] [1795133699.490359497] [alinhador_passagem]: GOAL FINAL (giro final): SUCESSO (1 cm e 2 graus do ponto)
+[python3-11] [INFO] [1795133699.496625495] [alinhador_passagem]: ENCOSTAR WS_2: medindo a face da mesa
+[python3-11] [INFO] [1795133699.674403589] [alinhador_passagem]: ENCOSTAR WS_2: aguardando segunda observacao coerente
+[planner_server-3] [WARN] [1795133699.733678113] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133699.853699648] [alinhador_passagem]: ENCOSTAR WS_2: face WS consistente (d0.642 c-0.086 a+4.8g)
+[controller_server-1] [WARN] [1795133700.055221995] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133700.475250907] [alinhador_passagem]: ENCOSTAR WS_2: Medicao 1: face a 28 cm (para-choque), girar +4.8 graus, centro -8.5 cm
+[controller_server-1] [WARN] [1795133702.055384792] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133702.081588109] [alinhador_passagem]: ENCOSTAR WS_2: Medicao 2: face a 27 cm (para-choque), girar +0.4 graus, centro -7.1 cm
+[python3-11] [INFO] [1795133702.132976621] [alinhador_passagem]: ENCOSTAR WS_2: Deslizando -7.1 cm de lado
+[planner_server-3] [WARN] [1795133702.233138562] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133704.255166522] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133704.314048417] [alinhador_passagem]: ENCOSTAR WS_2: Medicao 3: face a 26 cm (para-choque), girar +0.9 graus, centro +1.3 cm
+[python3-11] [INFO] [1795133704.315844715] [alinhador_passagem]: ENCOSTAR WS_2: RECUO_LATERAL: o deslize de 5.8 cm avancou 1.9 cm (k 0.33)
+[python3-11] [INFO] [1795133704.316762483] [alinhador_passagem]: ENCOSTAR WS_2: Alinhado com a mesa: avancando ate 9 cm
+[planner_server-3] [WARN] [1795133704.730294726] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133706.255209099] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133707.232284480] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133707.654851913] [alinhador_passagem]: ENCOSTAR WS_2: Encostado: frente a 9.5 cm da mesa, 0.1 graus, centro +1.1 cm
+[python3-11] [INFO] [1795133707.655857050] [alinhador_passagem]: ENCOSTAR WS_2: ENCOSTO_CEGO: encostado a 9.5 cm, 0.1 graus; centro medido de longe +1.3 cm (perto o LiDAR nao ve o meio da face)
+[python3-11] [INFO] [1795133707.914968110] [alinhador_passagem]: ENCOSTAR WS_2: SUCESSO
+[python3-11] [INFO] [1795133707.916235852] [alinhador_passagem]: RESULTADO: WS_2 SUCESSO folga=9.5cm ang=+0.1 centro=+1.1cm
+[controller_server-1] [WARN] [1795133708.255382358] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133709.233575396] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133710.455167325] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133711.732317065] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133712.455203831] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133713.733074856] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133714.455379503] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133716.231996848] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133716.655626521] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133718.085671638] [alinhador_passagem]: PEDIDO RECEBIDO /ir_para_area: WS_1
+[python3-11] [INFO] [1795133718.095057450] [alinhador_passagem]: TRABALHADOR RECEBEU: WS_1
+[python3-11] [INFO] [1795133718.096544353] [alinhador_passagem]: SAIR DA MESA: saindo de re 0.25 m (odom) para tentar de novo
+[python3-11] [INFO] [1795133718.102266392] [alinhador_passagem]: Indo para WS_1: aproximacao em x=2.22 y=2.22 yaw=-4 graus
+[planner_server-3] [WARN] [1795133718.234936971] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133718.855190686] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133720.725596149] [planner_server]: GridBased plugin failed to plan from (1.75, 4.31) to (2.22, 2.22): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795133720.726642857] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [WARN] [1795133720.731526642] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133720.855504358] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [WARN] [1795133721.219059985] [alinhador_passagem]: ROTA_MAPA_OBSTACULO (recusar): 28 celula(s) de objeto do momento a < 35 cm da rota do mapa, a 1a em (1.70, 2.41)
+[python3-11] [WARN] [1795133721.704716026] [alinhador_passagem]: Planner: sem caminho; mapa: 2.3 m: sigo a rota do mapa
+[python3-11] [INFO] [1795133721.752727730] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[planner_server-3] [WARN] [1795133721.755551644] [planner_server]: GridBased plugin failed to plan from (1.77, 4.24) to (2.22, 2.22): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795133721.755703142] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [WARN] [1795133721.776707660] [planner_server]: GridBased plugin failed to plan from (1.77, 4.24) to (2.22, 2.22): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795133721.777008860] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[controller_server-1] [INFO] [1795133722.154754508] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-1] [INFO] [1795133722.164616079] [local_costmap.local_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[planner_server-3] [INFO] [1795133722.189214758] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [INFO] [1795133722.197894331] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[controller_server-1] [WARN] [1795133723.055341789] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133723.232166194] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133723.780928107] [alinhador_passagem]: GOAL FINAL: VIRAR_REPLANEJA: planner estava sem caminho; limpei os costmaps e ele achou (89 pontos)
+[python3-11] [INFO] [1795133723.782976456] [alinhador_passagem]: GOAL FINAL (virar para o caminho): o caminho sai a +84 graus da frente: viro antes do Nav2
+[planner_server-3] [WARN] [1795133725.232401510] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133725.255065551] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133727.232488523] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133727.255092342] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133728.689057987] [alinhador_passagem]: GOAL FINAL (virar para o caminho): angulo -90 graus (erro 3.7)
+[python3-11] [INFO] [1795133728.970547180] [alinhador_passagem]: GOAL FINAL (virar para o caminho): SUCESSO
+[python3-11] [INFO] [1795133728.971875603] [alinhador_passagem]: GOAL FINAL: x=2.22 y=2.22 yaw=-78 graus
+[bt_navigator-5] [INFO] [1795133728.974129300] [bt_navigator]: Begin navigating from current location (1.77, 4.24) to (2.22, 2.22)
+[bt_navigator-5] [INFO] [1795133728.995134479] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (49 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795133728.996013575] [controller_server]: Received a goal, begin computing control effort.
+[planner_server-3] [WARN] [1795133729.233368261] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133729.255135075] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795133729.596490678] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795133730.096499316] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795133731.256556622] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133731.733452261] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133733.455225064] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133734.234076887] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133735.455430627] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133736.732427665] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133737.455785061] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133739.234851145] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133739.655438137] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133741.655461245] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133741.734280648] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795133741.794858543] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795133741.796489179] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795133742.308791574] [controller_server]: Reached the goal!
+[controller_server-1] [INFO] [1795133742.315988377] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-1] [INFO] [1795133742.328983595] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1795133742.355374966] [bt_navigator]: Goal succeeded
+[python3-11] [INFO] [1795133742.743008813] [alinhador_passagem]: GOAL FINAL: SUCESSO
+[controller_server-1] [WARN] [1795133743.855544677] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133744.233002605] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133746.055402535] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133746.729316961] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133747.251553681] [alinhador_passagem]: GOAL FINAL (giro final): angulo -4 graus (erro 4.1)
+[python3-11] [INFO] [1795133747.514984375] [alinhador_passagem]: GOAL FINAL (giro final): SUCESSO (3 cm e 4 graus do ponto)
+[python3-11] [INFO] [1795133747.535630373] [alinhador_passagem]: ENCOSTAR WS_1: medindo a face da mesa
+[python3-11] [INFO] [1795133747.694764195] [alinhador_passagem]: ENCOSTAR WS_1: aguardando segunda observacao coerente
+[python3-11] [INFO] [1795133747.869578850] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.633 c-0.050 a+6.9g)
+[controller_server-1] [WARN] [1795133748.255294925] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133748.475731745] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 1: face a 27 cm (para-choque), girar +6.9 graus, centro -4.9 cm
+[planner_server-3] [WARN] [1795133748.730238160] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133750.255377421] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133750.567896619] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 2: face a 26 cm (para-choque), girar +0.4 graus, centro -4.3 cm
+[python3-11] [INFO] [1795133750.631921223] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando -4.3 cm de lado
+[planner_server-3] [WARN] [1795133751.236148638] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133752.009662840] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 3: face a 26 cm (para-choque), girar +0.3 graus, centro -3.2 cm
+[python3-11] [INFO] [1795133752.070229699] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando -3.2 cm de lado
+[controller_server-1] [WARN] [1795133752.455283740] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133753.439757628] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 4: face a 27 cm (para-choque), girar +1.1 graus, centro -1.4 cm
+[python3-11] [INFO] [1795133753.440920219] [alinhador_passagem]: ENCOSTAR WS_1: Alinhado com a mesa: avancando ate 9 cm
+[planner_server-3] [WARN] [1795133753.731828567] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133754.455326171] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133755.732755910] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133756.455434276] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133756.975966854] [alinhador_passagem]: ENCOSTAR WS_1: face WS parcial: so distancia/angulo (d0.465 c nd a-0.1g)
+[python3-11] [INFO] [1795133756.984385872] [alinhador_passagem]: ENCOSTAR WS_1: Encostado: frente a 10.1 cm da mesa, 0.6 graus, centro +0.6 cm
+[python3-11] [INFO] [1795133756.987564128] [alinhador_passagem]: ENCOSTAR WS_1: ENCOSTO_CEGO: encostado a 10.1 cm, 0.6 graus; centro medido de longe -1.4 cm (perto o LiDAR nao ve o meio da face)
+[python3-11] [INFO] [1795133757.248579260] [alinhador_passagem]: ENCOSTAR WS_1: SUCESSO
+[python3-11] [INFO] [1795133757.249424769] [alinhador_passagem]: RESULTADO: WS_1 SUCESSO folga=10.1cm ang=+0.6 centro=+0.6cm
+[planner_server-3] [WARN] [1795133757.734286021] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133758.655180591] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133760.231924078] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133760.655202517] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133762.233516904] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133762.395910599] [alinhador_passagem]: PEDIDO RECEBIDO /ir_para_area: FINISH
+[python3-11] [INFO] [1795133762.430481445] [alinhador_passagem]: TRABALHADOR RECEBEU: FINISH
+[python3-11] [INFO] [1795133762.435699781] [alinhador_passagem]: Indo para FINISH: aproximacao em x=0.02 y=-0.01 yaw=2 graus
+[python3-11] [INFO] [1795133762.441980793] [alinhador_passagem]: SAIR DA MESA: saindo de re 0.25 m (odom) para tentar de novo
+[controller_server-1] [WARN] [1795133762.655226493] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133764.233918248] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133764.655248549] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133765.784806663] [alinhador_passagem]: Passagem 1: entrada (1.85, 0.96), eixo -83 graus, largura no mapa 0.73 m, preparo a 0.45 m da entrada
+[python3-11] [WARN] [1795133765.787872518] [alinhador_passagem]: PREPARO_LATERAL: eixo sem lugar no mapa: preparo deslocado +8 cm para o lado (a travessia centraliza na boca)
+[python3-11] [INFO] [1795133765.813650232] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem): x=1.87 y=1.42 yaw=-83 graus
+[python3-11] [INFO] [1795133765.903233959] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem) (posicao) (virar para o caminho): o caminho sai a -84 graus da frente: viro antes do Nav2
+[controller_server-1] [WARN] [1795133766.655329606] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133766.730025362] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133768.655366237] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133768.730403469] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133770.731118801] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133770.855164070] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133772.666969055] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem) (posicao) (virar para o caminho): angulo -88 graus (erro -3.4)
+[controller_server-1] [WARN] [1795133772.855274652] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133772.933048187] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem) (posicao) (virar para o caminho): SUCESSO
+[python3-11] [INFO] [1795133772.933859722] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem) (posicao): x=1.87 y=1.42 yaw=-142 graus
+[bt_navigator-5] [INFO] [1795133772.934639435] [bt_navigator]: Begin navigating from current location (2.11, 2.16) to (1.87, 1.42)
+[bt_navigator-5] [INFO] [1795133772.955522978] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795133772.956190988] [controller_server]: Received a goal, begin computing control effort.
+[planner_server-3] [WARN] [1795133773.233489278] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795133773.556676333] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795133774.556645077] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795133775.055480993] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795133775.070532432] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795133775.156652463] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795133775.235550717] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795133775.656696169] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795133776.156642883] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795133776.756650330] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [INFO] [1795133777.185888692] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[planner_server-3] [WARN] [1795133777.236677298] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133777.255245753] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795133777.258783199] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795133777.756645436] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795133778.256688739] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795133778.856630748] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795133779.255451178] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795133779.305707421] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[planner_server-3] [WARN] [1795133779.736548736] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795133780.457086631] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [INFO] [1795133781.406656337] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [WARN] [1795133781.455423954] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795133781.458298138] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795133782.232200938] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795133783.056676457] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [INFO] [1795133783.516180936] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[planner_server-3] [INFO] [1795133783.539560383] [global_costmap.global_costmap]: Message Filter dropping message: frame 'laser_raw' at time 1795133783.233 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-1] [INFO] [1795133783.556633811] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795133783.655462126] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795133784.057077122] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795133784.234154999] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795133784.657070544] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795133785.156643936] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [INFO] [1795133785.635937586] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795133785.656637421] [controller_server]: Passing new path to controller.
+[collision_monitor-8] [INFO] [1795133785.668751932] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[bt_navigator-5] [ERROR] [1795133785.725937541] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-5] [INFO] [1795133785.726294353] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-5] [INFO] [1795133785.726599379] [bt_navigator]: Goal canceled
+[controller_server-1] [INFO] [1795133785.756654988] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-1] [INFO] [1795133785.756875178] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[collision_monitor-8] [INFO] [1795133785.821221957] [collision_monitor]: Robot to continue normal operation
+[controller_server-1] [WARN] [1795133785.855208614] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133786.021699795] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem) (posicao): SUCESSO (aceito a 9 cm do ponto, sem exigir angulo)
+[planner_server-3] [WARN] [1795133786.730512184] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133788.055197629] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133789.233772143] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133789.949762792] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem): angulo -83 graus (erro 3.4)
+[controller_server-1] [WARN] [1795133790.055411469] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133791.233944741] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133792.089722374] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem): andei 8 cm para dir
+[python3-11] [INFO] [1795133792.091898993] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem): SUCESSO (2.7 cm e 1.4 graus do preparo no mapa)
+[controller_server-1] [WARN] [1795133792.255161828] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133792.753863554] [alinhador_passagem]: Passagem 1 termina num cruzamento em (1.95, 0.08) com curva para a DIREITA: modo de curva: lateral
+[python3-11] [INFO] [1795133792.781465567] [alinhador_passagem]: TRAVESSIA 1: travessia pelo LiDAR ate (1.94, 0.16) + 0.00 m
+[python3-11] [INFO] [1795133793.050607663] [alinhador_passagem]: TRAVESSIA 1: Paredes vistas (largura 0.90 m): parando na boca para alinhar
+[planner_server-3] [WARN] [1795133793.234189439] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133794.012539185] [alinhador_passagem]: TRAVESSIA 1: Medicao 1: girar -8.9 graus, centro a +1.4 cm, largura 0.87 m
+[controller_server-1] [WARN] [1795133794.255162887] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133795.734528096] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133796.092568848] [alinhador_passagem]: TRAVESSIA 1: Medicao 2: girar -2.2 graus, centro a +4.9 cm, largura 0.90 m
+[controller_server-1] [WARN] [1795133796.255175745] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133798.027855585] [alinhador_passagem]: TRAVESSIA 1: Medicao 3: girar -1.9 graus, centro a -1.7 cm, largura 0.89 m
+[planner_server-3] [WARN] [1795133798.233375536] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133798.255258991] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133799.630082436] [alinhador_passagem]: TRAVESSIA 1: Medicao 4: girar -1.3 graus, centro a +0.0 cm, largura 0.87 m
+[python3-11] [INFO] [1795133799.634572525] [alinhador_passagem]: TRAVESSIA 1: Alinhado: atravessando
+[planner_server-3] [WARN] [1795133800.235600608] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133800.255731591] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133802.455129427] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133802.730360034] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133804.455419372] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133804.731131983] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133806.655243398] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133807.235467216] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133808.655260206] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133809.732518705] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133810.655280771] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133811.733050183] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133812.655395994] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133814.233323114] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133814.655458777] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133816.233696477] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133816.855194531] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133817.874936485] [alinhador_passagem]: TRAVESSIA 1: FREIO_CRUZAMENTO: algo a 8 cm do para-choque, ja 2 cm alem do ponto do cruzamento: paro aqui e sigo a saida
+[python3-11] [INFO] [1795133818.135460922] [alinhador_passagem]: TRAVESSIA 1 (LiDAR): SUCESSO
+[python3-11] [INFO] [1795133818.158555251] [alinhador_passagem]: CURVA 1: saindo de lado para a DIREITA ate (1.00, 0.02) + 0.60 m
+[python3-11] [INFO] [1795133818.171014763] [alinhador_passagem]: CURVA 1: Cruzamento: saindo de lado para a DIREITA
+[planner_server-3] [WARN] [1795133818.729294148] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133818.996530587] [alinhador_passagem]: CURVA 1: ALINHAR_CRUZAMENTO: parede da frente a +14.2 graus mas so 7 cm a frente: recuo 5 cm antes de girar
+[controller_server-1] [WARN] [1795133819.055198672] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133820.438057952] [alinhador_passagem]: CURVA 1: ALINHAR_CRUZAMENTO: parede da frente (corredor novo) a +14.6 graus com uma parede so: giro antes de deslizar (2/6)
+[planner_server-3] [WARN] [1795133820.729916586] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133821.255202820] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133822.405192792] [alinhador_passagem]: CURVA 1: ALINHAR_CRUZAMENTO: parede da frente (corredor novo) a +7.3 graus com uma parede so: giro antes de deslizar (3/6)
+[planner_server-3] [WARN] [1795133823.233614738] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133823.255211095] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133823.953062073] [alinhador_passagem]: CURVA 1: ALINHAR_CRUZAMENTO: parede da frente (corredor novo) a +1.9 graus com uma parede so: giro antes de deslizar (4/6)
+[python3-11] [INFO] [1795133824.797488345] [alinhador_passagem]: CURVA 1: ALINHAR_CRUZAMENTO: parede da frente (corredor novo) a +2.0 graus com uma parede so: giro antes de deslizar (5/6)
+[planner_server-3] [WARN] [1795133825.234405540] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133825.455272149] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133825.911283974] [alinhador_passagem]: CURVA 1: ALINHAR_CRUZAMENTO: sem giro: parede da frente a +0.3 graus (faixa 1-16) | medidas: +0.3(n65,18), +0.3(n65,18), +0.2(n66,18)
+[python3-11] [INFO] [1795133825.911959890] [alinhador_passagem]: CURVA 1: Medicao: girar +0.0 graus, centro +5.2 cm a frente (1 parede(s)), folga frente 17 / tras 32 cm
+[python3-11] [INFO] [1795133827.363502065] [alinhador_passagem]: CURVA 1: ALINHAR_CRUZAMENTO: sem giro: parede da frente a -0.2 graus (faixa 1-16) | medidas: -0.3(n69,13), -0.2(n69,13), -0.2(n69,13)
+[python3-11] [INFO] [1795133827.369994365] [alinhador_passagem]: CURVA 1: Medicao: girar +0.0 graus, centro +0.9 cm a frente (1 parede(s)), folga frente 13 / tras 31 cm
+[controller_server-1] [WARN] [1795133827.655264219] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133827.734093427] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133829.855240615] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133830.233012239] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133831.392535472] [alinhador_passagem]: CURVA 1: PARADA DE SEGURANCA: folga frente 17 / tras 4 cm
+[collision_monitor-8] [INFO] [1795133831.660596412] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[controller_server-1] [WARN] [1795133832.055345641] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133832.153895791] [alinhador_passagem]: CURVA 1: Medicao: girar +1.2 graus, centro +7.8 cm a frente (folgas), folga frente 18 / tras 3 cm
+[python3-11] [INFO] [1795133832.157246305] [alinhador_passagem]: CURVA 1: Perto da parede: afastando +7.8 cm
+[planner_server-3] [WARN] [1795133832.233085803] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[collision_monitor-8] [INFO] [1795133832.268542911] [collision_monitor]: Robot to continue normal operation
+[python3-11] [INFO] [1795133833.614439747] [alinhador_passagem]: CURVA 1: Medicao: girar +2.1 graus, centro +2.5 cm a frente (folgas), folga frente 12 / tras 7 cm
+[controller_server-1] [WARN] [1795133834.255154143] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133834.729575960] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133834.754069760] [alinhador_passagem]: CURVA 1: PARADA DE SEGURANCA: folga frente 13 / tras 4 cm
+[collision_monitor-8] [INFO] [1795133835.221473842] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[collision_monitor-8] [INFO] [1795133835.369357888] [collision_monitor]: Robot to continue normal operation
+[python3-11] [INFO] [1795133835.676327690] [alinhador_passagem]: CURVA 1: Medicao: girar +1.4 graus, centro +2.7 cm a frente (folgas), folga frente 13 / tras 8 cm
+[controller_server-1] [WARN] [1795133836.255378032] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133837.235387456] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133838.455170956] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133839.733854240] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133840.455236314] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133842.236404397] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133842.455391249] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133844.655265295] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133844.729925220] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133844.890520484] [alinhador_passagem]: CURVA 1: Rumo saiu -5.0 graus: corrigindo parado
+[python3-11] [INFO] [1795133845.969914157] [alinhador_passagem]: CURVA 1: Medicao: girar +0.0 graus, centro -0.2 cm a frente (1 parede(s)), folga frente 10 / tras 13 cm
+[planner_server-3] [WARN] [1795133846.730412669] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133846.855157272] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133848.855161193] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133849.233430811] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133850.855317634] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133851.234911055] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133852.855467287] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133853.732368498] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133854.875775060] [alinhador_passagem]: CURVA 1: Saida lateral concluida
+[controller_server-1] [WARN] [1795133855.055189528] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133855.137660219] [alinhador_passagem]: CURVA 1: SUCESSO
+[python3-11] [INFO] [1795133855.512251123] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[python3-11] [INFO] [1795133855.549744409] [alinhador_passagem]: FINISH: angulo livre, usando o de chegada (-157 graus)
+[python3-11] [INFO] [1795133855.601890948] [alinhador_passagem]: TRAJETO CURTO: 43 cm em linha reta, sem Nav2 (sem angulo)
+[planner_server-3] [WARN] [1795133855.732386327] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133857.055505904] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133857.733446367] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133859.255632389] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133860.234261718] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133861.455569762] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133862.032561654] [alinhador_passagem]: TRAJETO CURTO: andei 37 cm para dir
+[planner_server-3] [WARN] [1795133862.729609354] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133863.655432824] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133864.605837848] [alinhador_passagem]: TRAJETO CURTO: andei 21 cm para frente
+[planner_server-3] [WARN] [1795133865.236747719] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133865.655590447] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133867.733617793] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133867.855465812] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133869.590775257] [alinhador_passagem]: TRAJETO CURTO: andei 28 cm para esq
+[controller_server-1] [WARN] [1795133870.055583555] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133870.233841229] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133870.870235510] [alinhador_passagem]: TRAJETO CURTO: andei 7 cm para tras
+[controller_server-1] [WARN] [1795133872.255812897] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795133872.270056746] [alinhador_passagem]: TRAJETO CURTO: andei 9 cm para tras
+[python3-11] [INFO] [1795133872.271713864] [alinhador_passagem]: TRAJETO CURTO: SUCESSO (3 cm do ponto)
+[python3-11] [INFO] [1795133872.272893440] [alinhador_passagem]: RESULTADO: FINISH SUCESSO chegou (ponto sem mesa)
+[planner_server-3] [WARN] [1795133872.729071632] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133874.455209095] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133875.233255719] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133876.455241539] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133877.233397661] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133878.655220317] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133879.233473715] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133880.655659038] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133881.234015690] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133882.855240893] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133883.731640299] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133884.855333963] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133885.735310170] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133887.055235073] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133888.233704771] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133889.055324608] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133890.234516038] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133891.255235644] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133892.729912441] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133893.255322183] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133895.233300592] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133895.255522386] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133897.233526641] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133897.455406665] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133899.655223463] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133899.733144704] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133901.655227987] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133901.734857689] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133903.655232822] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133904.232824991] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133905.655407989] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133906.234346919] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133907.855270543] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133908.728897099] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133910.055191077] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133911.232822906] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133912.055215495] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133913.235021225] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133914.055321002] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133915.732906493] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133916.055521679] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133917.734402130] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133918.255225965] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133920.233295571] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133920.455179638] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133922.455198067] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133922.729393141] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133924.455424067] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133924.729555174] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133926.655205840] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133927.232595311] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133928.655267257] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133929.233312236] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133930.655380646] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133931.732222283] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133932.855237293] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133934.232001172] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133935.055405510] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133936.233280797] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133937.055537850] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133938.235401262] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133939.255263918] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133940.729536084] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133941.455348753] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133942.729770247] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133943.655196589] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133945.234968585] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133945.655472479] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133947.732194787] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133947.855238867] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133949.732197388] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133949.855472197] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133951.732871801] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133952.055181605] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133954.055194548] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133954.232901956] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133956.055216000] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133956.729526311] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133958.055217157] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133959.233214925] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133960.055232616] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133961.236851399] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133962.055370919] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133963.732615091] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133964.255244694] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133966.232558359] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133966.255311757] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133968.455223368] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133968.729418304] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133970.455257780] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133970.729445450] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133972.455270261] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133972.729882729] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133974.655244154] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133975.233002252] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133976.655250627] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133977.234143753] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133978.855203074] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133979.734231218] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133980.855212354] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133982.234543802] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133982.855246588] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133984.729358380] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133985.055300756] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133986.729427500] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133987.255262334] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133989.232749802] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133989.255299632] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133991.233600599] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133991.455338461] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133993.234905093] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133993.655248970] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133995.655257486] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133995.732497548] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133997.733356016] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795133997.855422714] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795133999.733452479] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134000.055171626] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134001.733626241] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134002.055268313] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134004.232182755] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134004.255244214] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134006.234232931] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134006.255415309] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134008.455246723] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134008.729996299] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134010.655158088] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134011.232595421] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134012.655230455] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134013.232606644] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134014.855336779] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134015.233847930] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134017.055219362] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134017.732853851] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134019.055483011] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134019.733216863] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134021.255197366] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134021.734174966] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134023.255278105] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134024.234302409] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134025.455415247] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134026.729427844] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134027.655241765] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134029.232803086] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134029.655448971] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134031.233899882] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134031.855236262] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134033.732243985] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134033.855293910] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134035.732591786] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134036.055579947] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134038.232169277] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134038.255466379] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134040.232240654] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134040.455259345] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134042.232523675] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134042.655427040] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134044.655508596] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134044.728862106] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134046.729614282] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134046.855239453] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134048.855429928] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134049.233510400] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134051.055519242] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134051.732010377] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134053.255195359] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134053.732161003] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134055.255201034] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [INFO] [1795134055.579967383] [global_costmap.global_costmap]: Message Filter dropping message: frame 'laser_raw' at time 1795134055.273 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-3] [WARN] [1795134056.232753598] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134057.255223740] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134058.729446044] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134059.455224073] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134060.729627180] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134061.455338836] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134063.234306679] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134063.655203218] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134065.655230048] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134065.732197664] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134067.733485738] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134067.855505400] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134070.055215824] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134070.232468999] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134072.233489992] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134072.255246841] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134074.234154976] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134074.255262677] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134076.455221750] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134076.729220984] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134078.455225598] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134078.729443859] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134080.655228867] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134080.729650567] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134082.655254399] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134083.234970985] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134084.655516378] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134085.732162092] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134086.855198755] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134087.732803082] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134089.055201681] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134089.734487625] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134091.055237409] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134092.234007560] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134093.255238765] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134094.729124954] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134095.255240214] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134097.232964989] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134097.455261562] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134099.235592564] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134099.455473335] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134101.655248918] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134101.733565448] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134103.734067560] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134103.855228581] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134105.855400474] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134106.232271915] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134107.855422685] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134108.232316648] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134110.055221086] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134110.232435432] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134112.255263511] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134112.728622532] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134114.255285898] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134114.728754265] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134116.255351396] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134116.729870948] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134118.455271892] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134119.234978176] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134120.455272276] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134121.732956152] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134122.455520261] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134123.734826133] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134124.655532494] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134126.233291762] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134126.855224088] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134128.240006356] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134128.855638947] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134130.728854239] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134131.055289577] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134132.729648300] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134133.255285381] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134135.235679826] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134135.255299656] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134137.238914975] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134137.255356860] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134139.455249602] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134139.733342081] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134141.455533035] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134141.735336166] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134143.655283504] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134144.236897593] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134145.655335744] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134146.729612524] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134147.655607825] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134148.729982582] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134149.855390810] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134151.236479815] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134152.055324999] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134153.735167502] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134154.255363621] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134155.735345946] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134156.455306518] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134158.235410865] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134158.455324726] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134160.455445012] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134160.729820155] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134162.655331814] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134163.234009910] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134164.855378305] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134165.733849778] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134166.855547995] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134168.232748391] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134169.055264198] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134170.235281090] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134171.255298991] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134172.729893085] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134173.255759391] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134175.236103768] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134175.455886920] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134177.655471653] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134177.732342159] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134179.855282875] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134180.232460547] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134181.855450799] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134182.235762996] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795134184.055217333] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795134184.730143390] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received

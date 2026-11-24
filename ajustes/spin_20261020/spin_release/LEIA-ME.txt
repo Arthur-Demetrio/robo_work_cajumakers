@@ -1,0 +1,51 @@
+SMOOTH / SMART SPIN — teste incremental de 20/10/2026
+
+Base: pacote ajuste_spin_atual.tar.gz enviado pelo usuario.
+A Smooth, re de 10 cm, escape de 6 cm, GridBased, velocidades, footprint,
+Collision Monitor e launch sao preservados. O pacote recebido permite Y +/-0.08;
+nao e aplicada restricao frontal nova.
+
+ETAPA 1, NAV2 PARADO:
+  python3 instalar.py --spin
+  cd ~/robo_jazzy_ws
+  source /opt/ros/jazzy/setup.bash
+  colcon build --packages-select robo_progressive_spin robo_navigation --symlink-install
+  source install/setup.bash
+Reabra Nav2 pelo comando habitual, no ambiente atualizado.
+  ros2 param get /progressive_spin lookahead_angle
+Esperado: 0.36. Arvore: navigate_to_pose_smooth.xml.
+
+Novo spin: considera ambos os arcos ate 0.36 rad, sem atravesar um trecho
+bloqueado para avaliar uma abertura. Compara abertura frontal alcancavel,
+folga adicional de 1 a 4 cm durante o proximo micro-giro, arco livre e abertura.
+Mantem micro-passos de 0.12 rad e limite original de 0.70 rad. Empate completo
+usa o sinal solicitado pela BT; nao e possivel inferir um lado melhor em empate.
+Mantem sentido dentro da mesma action. Se bloquear, falha para reposicionar
+pela BT; nao faz micro-giros alternados que desfazem o progresso anterior.
+Revalida mapa/pose antes do passo. Desconhecido permanece bloqueado.
+
+Primeiro teste: mesma meta aberta, depois uma quina com espaco para re.
+Grave rosbag; procure logs 'spin avaliacao', 'micro-giro' e Collision Monitor.
+Um giro durante FollowPath e comandado pelo DWB, nao por smart_spin;
+a mudanca so afeta a action de recuperacao. Correlacione os logs.
+Nao garante resolver todas as quinas. Mantem checagens geometricas discretas
+preexistentes, Spin nativo e Collision Monitor, que podem continuar recusando.
+
+ETAPA 2, APOS COMPARAR A ETAPA 1, NAV2 PARADO:
+  python3 instalar.py --inflacao
+Compile robo_navigation e reinicie Nav2.
+Reduz somente inflation_radius global/local de 0.55 para 0.50 m.
+Mantem cost_scaling_factor=5 e todos os poligonos do Collision Monitor.
+Esta alteracao reduz a extensao da camada de custos; nao remove obstaculos,
+nao reduz o footprint e nao corrige diretamente VelocityPolygonStop.
+
+Cada etapa cria backup em logs/spin_v2_*. O instalador imprime o comando
+--restore com o caminho exato. Use-o com Nav2 parado, recompile e reinicie.
+A restauracao recusa sobrescrever arquivos alterados depois da etapa.
+Instalacao recusa versoes de codigo diferentes das enviadas.
+
+VERIFICACOES EXECUTADAS AQUI:
+Sintaxe Python; testes geometricos de quinas espelhadas, ambos bloqueados,
+desconhecido, limite de mapa, empate e ausencia de reversao; instalacao em
+copia de teste, repeticao idempotente, inflacao e restauracao.
+Nao houve execucao ROS/TF/action nem teste fisico neste ambiente.

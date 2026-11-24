@@ -1,0 +1,1168 @@
+Perfil operacional original confirmado; somente filtros de fita adicionados aos costmaps.
+Aplicado: /home/marcos/robo_jazzy_ws/entregas/correcao_perfil_20261116/nav2_legado_com_fita.yaml Backup: /home/marcos/robo_jazzy_ws/entregas/correcao_perfil_20261116/nav2_legado_com_fita.yaml.bak_ANTECIPACAO_DWB_20261116_20261119_185313_187825
+Alinhador operacional: nav2_principal=false. Aguardando base/TF recentes.
+Base/TF disponíveis e descoberta persistente sem Nav2 anterior. Nenhuma velocidade publicada.
+[INFO] [launch]: All log files can be found below /home/marcos/.ros/log/2026-11-19-18-53-20-143960-marcos-ThinkPad-E14-Gen-2-2620
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [controller_server-1]: process started with pid [2744]
+[INFO] [smoother_server-2]: process started with pid [2745]
+[INFO] [planner_server-3]: process started with pid [2746]
+[INFO] [behavior_server-4]: process started with pid [2747]
+[INFO] [bt_navigator-5]: process started with pid [2748]
+[INFO] [waypoint_follower-6]: process started with pid [2749]
+[INFO] [velocity_smoother-7]: process started with pid [2750]
+[INFO] [collision_monitor-8]: process started with pid [2751]
+[INFO] [python3-9]: process started with pid [2752]
+[INFO] [python3-10]: process started with pid [2753]
+[INFO] [python3-11]: process started with pid [2754]
+[INFO] [python3-12]: process started with pid [2755]
+[INFO] [progressive_spin_node-13]: process started with pid [2756]
+[INFO] [mecanum_escape_node-14]: process started with pid [2757]
+[planner_server-3] [INFO] [1795125200.887219215] [planner_server]: 
+[planner_server-3] 	planner_server lifecycle node launched. 
+[planner_server-3] 	Waiting on external lifecycle transitions to activate
+[planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-3] [INFO] [1795125200.913037213] [planner_server]: Creating
+[planner_server-3] [INFO] [1795125201.026581767] [global_costmap.global_costmap]: 
+[planner_server-3] 	global_costmap lifecycle node launched. 
+[planner_server-3] 	Waiting on external lifecycle transitions to activate
+[planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-3] [INFO] [1795125201.056024167] [global_costmap.global_costmap]: Creating Costmap
+[waypoint_follower-6] [INFO] [1795125201.239022856] [waypoint_follower]: 
+[waypoint_follower-6] 	waypoint_follower lifecycle node launched. 
+[waypoint_follower-6] 	Waiting on external lifecycle transitions to activate
+[waypoint_follower-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-6] [INFO] [1795125201.252971665] [waypoint_follower]: Creating
+[bt_navigator-5] [INFO] [1795125201.311476494] [bt_navigator]: 
+[bt_navigator-5] 	bt_navigator lifecycle node launched. 
+[bt_navigator-5] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-5] [INFO] [1795125201.352415976] [bt_navigator]: Creating
+[velocity_smoother-7] [INFO] [1795125201.477928506] [velocity_smoother]: 
+[velocity_smoother-7] 	velocity_smoother lifecycle node launched. 
+[velocity_smoother-7] 	Waiting on external lifecycle transitions to activate
+[velocity_smoother-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-1] [INFO] [1795125201.679417728] [controller_server]: 
+[controller_server-1] 	controller_server lifecycle node launched. 
+[controller_server-1] 	Waiting on external lifecycle transitions to activate
+[controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[collision_monitor-8] [INFO] [1795125201.685241594] [collision_monitor]: 
+[collision_monitor-8] 	collision_monitor lifecycle node launched. 
+[collision_monitor-8] 	Waiting on external lifecycle transitions to activate
+[collision_monitor-8] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-1] [INFO] [1795125201.771082738] [controller_server]: Creating controller server
+[smoother_server-2] [INFO] [1795125201.840310058] [smoother_server]: 
+[smoother_server-2] 	smoother_server lifecycle node launched. 
+[smoother_server-2] 	Waiting on external lifecycle transitions to activate
+[smoother_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-2] [INFO] [1795125201.889124682] [smoother_server]: Creating smoother server
+[controller_server-1] [INFO] [1795125201.972888399] [local_costmap.local_costmap]: 
+[controller_server-1] 	local_costmap lifecycle node launched. 
+[controller_server-1] 	Waiting on external lifecycle transitions to activate
+[controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[behavior_server-4] [INFO] [1795125201.979312716] [behavior_server]: 
+[behavior_server-4] 	behavior_server lifecycle node launched. 
+[behavior_server-4] 	Waiting on external lifecycle transitions to activate
+[behavior_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-1] [INFO] [1795125201.980995911] [local_costmap.local_costmap]: Creating Costmap
+[INFO] [lifecycle_manager-15]: process started with pid [2904]
+[lifecycle_manager-15] [INFO] [1795125202.734130985] [lifecycle_manager_navigation]: Creating
+[lifecycle_manager-15] [INFO] [1795125202.769340645] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[python3-9] [INFO] [1795125202.895440270] [filtro_corpo_scan]: Filtro do corpo: /scan_front -> /scan_nav
+[python3-12] [INFO] [1795125203.428055892] [suavizador_nav]: Suavizador pronto: /cmd_vel_ctrl -> /cmd_vel_nav (tau 0.25 s)
+[mecanum_escape_node-14] [INFO] [1795125203.597348182] [mecanum_escape_node]: Mecanum Escape pronto. Aguardando action /mecanum_escape.
+[python3-9] [INFO] [1795125204.731302095] [filtro_corpo_scan]: LiDAR em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[lifecycle_manager-15] [INFO] [1795125204.784354416] [lifecycle_manager_navigation]: Waiting for service controller_server/get_state...
+[progressive_spin_node-13] [INFO] [1795125205.263972380] [progressive_spin]: smart_spin pronto; micro-giros usam spin. CM continua ativo.
+[python3-10] [INFO] [1795125205.369814414] [destravar]: Destravar v4 pronto (acao /destravar): diagnostica, devolve ao Nav2 se ainda contorna, desliza com continuacao, gira pelo smart_spin; re LIBERADA.
+[python3-11] [INFO] [1795125205.478662309] [alinhador_passagem]: Alinhador pronto. Entrada no corredor exige centro e angulo confirmados pelas duas paredes. Translacao continua no preparo e na travessia a 50%. Envie goals em /goal_pose_alinhado.
+[lifecycle_manager-15] [INFO] [1795125205.597414814] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-15] [INFO] [1795125205.597507900] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[controller_server-1] [INFO] [1795125205.599014476] [controller_server]: Configuring controller interface
+[controller_server-1] [INFO] [1795125205.599076243] [controller_server]: getting progress checker plugins..
+[controller_server-1] [INFO] [1795125205.599320800] [controller_server]: getting goal checker plugins..
+[controller_server-1] [INFO] [1795125205.599669996] [controller_server]: Controller frequency set to 10.0000Hz
+[controller_server-1] [INFO] [1795125205.599742073] [local_costmap.local_costmap]: Configuring
+[controller_server-1] [INFO] [1795125205.645151300] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[controller_server-1] [INFO] [1795125205.672926910] [local_costmap.local_costmap]: Subscribed to Topics: scan bloqueio
+[controller_server-1] [INFO] [1795125205.763892100] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[controller_server-1] [INFO] [1795125205.763967448] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-1] [INFO] [1795125205.769984274] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[controller_server-1] [INFO] [1795125205.770061999] [local_costmap.local_costmap]: Using costmap filter "tape_keepout_filter"
+[controller_server-1] [INFO] [1795125205.787501911] [local_costmap.local_costmap]: Initialized costmap filter "tape_keepout_filter"
+[controller_server-1] [INFO] [1795125205.788748255] [local_costmap.local_costmap]: Using costmap filter "tape_inflation"
+[controller_server-1] [INFO] [1795125205.792998125] [local_costmap.local_costmap]: Initialized costmap filter "tape_inflation"
+[controller_server-1] [INFO] [1795125205.974335370] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::PoseProgressChecker
+[controller_server-1] [INFO] [1795125205.975531249] [controller_server]: Controller Server has progress_checker  progress checkers available.
+[controller_server-1] [INFO] [1795125205.977252353] [controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-1] [INFO] [1795125205.978052624] [controller_server]: Controller Server has goal_checker  goal checkers available.
+[controller_server-1] [INFO] [1795125205.996301955] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[controller_server-1] [INFO] [1795125206.003638086] [controller_server]: Setting transform_tolerance to 0.300000
+[controller_server-1] [INFO] [1795125206.055912937] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[controller_server-1] [INFO] [1795125206.058503365] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795125206.058893862] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[controller_server-1] [INFO] [1795125206.062693414] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795125206.062940898] [controller_server]: Using critic "ObstacleFootprint" (dwb_critics::ObstacleFootprintCritic)
+[controller_server-1] [INFO] [1795125206.063219058] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795125206.063386285] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[controller_server-1] [INFO] [1795125206.063870883] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795125206.064663769] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[controller_server-1] [INFO] [1795125206.065679291] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795125206.066027594] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[controller_server-1] [INFO] [1795125206.066799276] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795125206.067211823] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[controller_server-1] [INFO] [1795125206.068129054] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795125206.068456252] [controller_server]: Using critic "Twirling" (dwb_critics::TwirlingCritic)
+[controller_server-1] [INFO] [1795125206.068679894] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1795125206.068745245] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-15] [INFO] [1795125206.107341956] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[smoother_server-2] [INFO] [1795125206.107870759] [smoother_server]: Configuring smoother server
+[smoother_server-2] [INFO] [1795125206.157418796] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[smoother_server-2] [INFO] [1795125206.158310189] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[lifecycle_manager-15] [INFO] [1795125206.193475897] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-3] [INFO] [1795125206.193895039] [planner_server]: Configuring
+[planner_server-3] [INFO] [1795125206.193941884] [global_costmap.global_costmap]: Configuring
+[planner_server-3] [INFO] [1795125206.226908761] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-3] [INFO] [1795125206.241934209] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-3] [INFO] [1795125206.252913818] [global_costmap.global_costmap]: Subscribing to updates
+[planner_server-3] [INFO] [1795125206.279691600] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-3] [INFO] [1795125206.279764196] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-3] [INFO] [1795125206.288410988] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-3] [INFO] [1795125206.305757117] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-3] [INFO] [1795125206.305837033] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-3] [INFO] [1795125206.306850538] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-3] [INFO] [1795125206.306894573] [global_costmap.global_costmap]: Using costmap filter "tape_keepout_filter"
+[planner_server-3] [INFO] [1795125206.323791678] [global_costmap.global_costmap]: Initialized costmap filter "tape_keepout_filter"
+[planner_server-3] [INFO] [1795125206.323865516] [global_costmap.global_costmap]: Using costmap filter "tape_inflation"
+[planner_server-3] [INFO] [1795125206.324813219] [global_costmap.global_costmap]: Initialized costmap filter "tape_inflation"
+[planner_server-3] [INFO] [1795125206.486152210] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 250 X 267 at 0.050000 m/pix
+[planner_server-3] [INFO] [1795125206.499569360] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[planner_server-3] [INFO] [1795125206.499665554] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-3] [INFO] [1795125206.500588691] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-15] [INFO] [1795125206.572011365] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[behavior_server-4] [INFO] [1795125206.572756774] [behavior_server]: Configuring
+[behavior_server-4] [INFO] [1795125206.621332876] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+[behavior_server-4] [INFO] [1795125206.637236899] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+[behavior_server-4] [INFO] [1795125206.644441261] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+[behavior_server-4] [INFO] [1795125206.649768062] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+[behavior_server-4] [INFO] [1795125206.704716049] [behavior_server]: Configuring spin
+[behavior_server-4] [INFO] [1795125206.739075759] [behavior_server]: Configuring backup
+[behavior_server-4] [INFO] [1795125206.750596805] [behavior_server]: Configuring drive_on_heading
+[behavior_server-4] [INFO] [1795125206.762785103] [behavior_server]: Configuring wait
+[lifecycle_manager-15] [INFO] [1795125206.789086188] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-5] [INFO] [1795125206.797453811] [bt_navigator]: Configuring
+[bt_navigator-5] [INFO] [1795125206.854661355] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-5] [WARN] [1795125206.877239755] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+[bt_navigator-5] Make sure these match your BT and there are not other sources of error codes youreported to your application
+Giro de abertura: rcl_interfaces.srv.SetParameters_Response(results=[rcl_interfaces.msg.SetParametersResult(successful=True, reason='')])
+[python3-11] [INFO] [1795125207.173615121] [alinhador_passagem]: Laser em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[bt_navigator-5] [INFO] [1795125207.408498322] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+[lifecycle_manager-15] [INFO] [1795125207.497454915] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[waypoint_follower-6] [INFO] [1795125207.498200758] [waypoint_follower]: Configuring
+[waypoint_follower-6] [INFO] [1795125207.631228337] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[waypoint_follower-6] [INFO] [1795125207.631841399] [waypoint_follower]: Waypoint pause duration is set to zero, disabling task executor plugin.
+[lifecycle_manager-15] [INFO] [1795125207.637043206] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[velocity_smoother-7] [INFO] [1795125207.637677851] [velocity_smoother]: Configuring velocity smoother
+[lifecycle_manager-15] [INFO] [1795125207.673059446] [lifecycle_manager_navigation]: [34m[1mConfiguring collision_monitor[0m[0m
+[collision_monitor-8] [INFO] [1795125207.673815192] [collision_monitor]: Configuring
+[collision_monitor-8] [INFO] [1795125207.697654997] [collision_monitor]: [scan]: Creating Scan
+[collision_monitor-8] [INFO] [1795125207.710166696] [collision_monitor]: [VelocityPolygonStop]: Creating Polygon
+[collision_monitor-8] [INFO] [1795125207.710241947] [collision_monitor]: [VelocityPolygonStop]: Creating VelocityPolygon
+[collision_monitor-8] [INFO] [1795125207.731556254] [collision_monitor]: [SweptTurnStop]: Creating Polygon
+[collision_monitor-8] [INFO] [1795125207.732292205] [collision_monitor]: [SweptTurnStop]: Creating VelocityPolygon
+[lifecycle_manager-15] [INFO] [1795125207.783186701] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[controller_server-1] [INFO] [1795125207.783896909] [controller_server]: Activating
+[controller_server-1] [INFO] [1795125207.783965903] [local_costmap.local_costmap]: Activating
+[controller_server-1] [INFO] [1795125207.783985133] [local_costmap.local_costmap]: Checking transform
+[controller_server-1] [INFO] [1795125207.784221134] [local_costmap.local_costmap]: start
+[controller_server-1] [INFO] [1795125207.791989259] [local_costmap.local_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[controller_server-1] [WARN] [1795125207.985646585] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125208.001476764] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795125208.117813153] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-15] [INFO] [1795125208.117890766] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[smoother_server-2] [INFO] [1795125208.120159047] [smoother_server]: Activating
+[smoother_server-2] [INFO] [1795125208.120231744] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795125208.232704712] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[lifecycle_manager-15] [INFO] [1795125208.232772525] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-3] [INFO] [1795125208.233233597] [planner_server]: Activating
+[planner_server-3] [INFO] [1795125208.233289044] [global_costmap.global_costmap]: Activating
+[planner_server-3] [INFO] [1795125208.233302302] [global_costmap.global_costmap]: Checking transform
+[planner_server-3] [INFO] [1795125208.233449369] [global_costmap.global_costmap]: start
+[planner_server-3] [INFO] [1795125208.236262978] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[planner_server-3] [WARN] [1795125208.741868711] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [INFO] [1795125208.791816189] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[planner_server-3] [INFO] [1795125208.794922478] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795125208.913568332] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-15] [INFO] [1795125208.913638346] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[behavior_server-4] [INFO] [1795125208.914711260] [behavior_server]: Activating
+[behavior_server-4] [INFO] [1795125208.914830259] [behavior_server]: Activating spin
+[behavior_server-4] [INFO] [1795125208.914886186] [behavior_server]: Activating backup
+[behavior_server-4] [INFO] [1795125208.914915752] [behavior_server]: Activating drive_on_heading
+[behavior_server-4] [INFO] [1795125208.914949957] [behavior_server]: Activating wait
+[behavior_server-4] [INFO] [1795125208.915003950] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795125209.042085760] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-15] [INFO] [1795125209.042173846] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-5] [INFO] [1795125209.043017619] [bt_navigator]: Activating
+[bt_navigator-5] [INFO] [1795125209.334617944] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795125209.453764365] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-15] [INFO] [1795125209.453831872] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[waypoint_follower-6] [INFO] [1795125209.454361032] [waypoint_follower]: Activating
+[waypoint_follower-6] [INFO] [1795125209.454412715] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795125209.574273549] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[lifecycle_manager-15] [INFO] [1795125209.574339256] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[velocity_smoother-7] [INFO] [1795125209.574858705] [velocity_smoother]: Activating
+[velocity_smoother-7] [INFO] [1795125209.574949828] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795125209.699069257] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[lifecycle_manager-15] [INFO] [1795125209.699187197] [lifecycle_manager_navigation]: [34m[1mActivating collision_monitor[0m[0m
+[collision_monitor-8] [INFO] [1795125209.700777899] [collision_monitor]: Activating
+[collision_monitor-8] [INFO] [1795125209.700960739] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[lifecycle_manager-15] [INFO] [1795125209.814179199] [lifecycle_manager_navigation]: Server collision_monitor connected with bond.
+[lifecycle_manager-15] [INFO] [1795125209.814258712] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-15] [INFO] [1795125209.814302478] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[controller_server-1] [WARN] [1795125210.185556297] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125210.742081430] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125212.185684741] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125213.237210205] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125214.385937670] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125215.240170842] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125216.585407398] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125217.248527409] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125218.585638310] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125219.323371118] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125220.585660509] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125221.742583020] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125222.785705134] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125224.239823713] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125224.785786495] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125226.240333196] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125226.986066734] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125228.240636216] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125229.186342225] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125230.240854998] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125231.385895648] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125232.241691640] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125233.585843773] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125234.741475682] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125235.590231728] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125237.239440311] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125237.786287319] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125239.739321452] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125239.988107266] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125241.742678203] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125242.185762278] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125244.239486470] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125244.385651715] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125246.240296471] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125246.385765621] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125248.585629562] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125248.741347350] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125250.585750895] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125250.741827604] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125252.785736864] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125253.237376143] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125254.985700887] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125255.237464513] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125257.185554328] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125257.740706865] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125259.185734990] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125260.239436078] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125261.385406901] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125262.738431024] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125263.385438564] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125264.744170328] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125265.385774163] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125267.238122566] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125267.585486916] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125269.585665016] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125269.739368172] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125271.740891100] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125271.785644220] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125273.985547865] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125274.240025544] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125276.185692155] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125276.738291591] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125278.185835141] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125278.738595313] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125280.385655347] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125280.740019614] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125282.585449616] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125283.239354907] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125284.585659176] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125285.739904493] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125286.785455353] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125287.741107143] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125288.785561192] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125290.238760676] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125290.985402988] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125292.738307548] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125292.985657037] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125294.738441892] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125295.185575436] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125296.739860527] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125297.149451616] [alinhador_passagem]: TRABALHADOR RECEBEU: goal sem area
+[python3-11] [INFO] [1795125297.209546820] [alinhador_passagem]: Novo goal: x=1.86 y=2.60 yaw=0 graus
+[controller_server-1] [WARN] [1795125297.385376426] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125297.649319444] [alinhador_passagem]: Passagem 1: entrada (0.96, 0.01), eixo -1 graus, largura no mapa 0.73 m, preparo a 0.60 m da entrada
+[python3-11] [INFO] [1795125297.667781336] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem): x=0.36 y=0.02 yaw=-1 graus
+[python3-11] [INFO] [1795125297.726792040] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem) (posicao): x=0.36 y=0.02 yaw=-9 graus
+[bt_navigator-5] [INFO] [1795125297.736510505] [bt_navigator]: Begin navigating from current location (-0.09, 0.13) to (0.36, 0.02)
+[bt_navigator-5] [WARN] [1795125297.757122049] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: sem costmap ainda: sigo com o original sem conferir (como antes)
+[controller_server-1] [INFO] [1795125297.758263134] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-1] [WARN] [1795125297.758340962] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
+[controller_server-1] [WARN] [1795125297.758365881] [controller_server]: No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+[planner_server-3] [WARN] [1795125299.237227960] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125299.386071085] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125301.237575719] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125301.585488790] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125302.368448596] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1795125302.397094830] [bt_navigator]: Goal succeeded
+[python3-11] [INFO] [1795125302.759141111] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem) (posicao): SUCESSO
+[python3-11] [INFO] [1795125302.773726320] [alinhador_passagem]: PREPARO 1 (alinhar fora da passagem): SUCESSO (3.2 cm e 1.0 graus do preparo no mapa)
+[python3-11] [INFO] [1795125303.284775428] [alinhador_passagem]: Passagem 1 termina num cruzamento em (1.90, -0.00) com curva para a ESQUERDA: modo de curva: lateral
+[python3-11] [INFO] [1795125303.301471963] [alinhador_passagem]: TRAVESSIA 1: travessia pelo LiDAR ate (1.82, -0.00) + 0.00 m
+[python3-11] [INFO] [1795125303.515654019] [alinhador_passagem]: TRAVESSIA 1: Paredes vistas (largura 0.82 m): parando na boca para alinhar
+[controller_server-1] [WARN] [1795125303.585559223] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125303.741938742] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125304.521272249] [alinhador_passagem]: TRAVESSIA 1: Medicao 1: girar +3.1 graus, centro a -3.8 cm, largura 0.82 m
+[controller_server-1] [WARN] [1795125305.586085751] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125306.243498564] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125306.445355585] [alinhador_passagem]: TRAVESSIA 1: Medicao 2: girar +3.4 graus, centro a +1.6 cm, largura 0.81 m
+[controller_server-1] [WARN] [1795125307.785542572] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125307.935006895] [alinhador_passagem]: TRAVESSIA 1: Medicao 3: girar +3.2 graus, centro a -0.7 cm, largura 0.81 m
+[planner_server-3] [WARN] [1795125308.738713575] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125309.570872006] [alinhador_passagem]: TRAVESSIA 1: Medicao 4: girar +0.5 graus, centro a -1.0 cm, largura 0.81 m
+[python3-11] [INFO] [1795125309.571599871] [alinhador_passagem]: TRAVESSIA 1: Alinhado: atravessando
+[controller_server-1] [WARN] [1795125309.785760673] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125310.739574776] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125311.985662985] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125313.237627936] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125314.185456351] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125315.241724033] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125316.185793148] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125317.741311629] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125318.385741404] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125320.238457466] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125320.585630603] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125322.240136919] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125322.585722488] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[collision_monitor-8] [INFO] [1795125323.545523271] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[collision_monitor-8] [INFO] [1795125323.585421833] [collision_monitor]: Robot to continue normal operation
+[planner_server-3] [WARN] [1795125324.738654044] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125324.785663664] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[collision_monitor-8] [INFO] [1795125326.545541324] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[collision_monitor-8] [INFO] [1795125326.645857843] [collision_monitor]: Robot to continue normal operation
+[planner_server-3] [WARN] [1795125326.740641151] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125326.785689358] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125328.785790860] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125328.927931867] [alinhador_passagem]: TRAVESSIA 1: Parei no cruzamento pelo LiDAR: parede a 8 cm do para-choque (alvo 5 cm; pelo mapa faltavam -0 cm)
+[python3-11] [INFO] [1795125329.191685344] [alinhador_passagem]: TRAVESSIA 1 (LiDAR): SUCESSO
+[python3-11] [INFO] [1795125329.211862412] [alinhador_passagem]: CURVA 1: saindo de lado para a ESQUERDA ate (1.85, 0.86) + 0.60 m
+[python3-11] [INFO] [1795125329.212952533] [alinhador_passagem]: CURVA 1: Cruzamento: saindo de lado para a ESQUERDA
+[planner_server-3] [WARN] [1795125329.237756369] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125330.227595961] [alinhador_passagem]: CURVA 1: Medicao: girar +0.0 graus, centro -6.1 cm a frente (1 parede(s)), folga frente 7 / tras 13 cm
+[controller_server-1] [WARN] [1795125330.985463347] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125331.239404707] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125331.871494500] [alinhador_passagem]: CURVA 1: Medicao: girar +0.0 graus, centro -4.0 cm a frente (1 parede(s)), folga frente 5 / tras 9 cm
+[python3-9] [INFO] [1795125332.745661588] [filtro_corpo_scan]: MEMORIA_PERTO: 8 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (117 guardados)
+[controller_server-1] [WARN] [1795125332.985491704] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125333.741053574] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125334.985634780] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125336.240500660] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125336.985680618] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125338.241340857] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125338.985717269] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125340.241878930] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125341.185786003] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125342.742743140] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-9] [INFO] [1795125342.746433705] [filtro_corpo_scan]: MEMORIA_PERTO: 156 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (192 guardados)
+[controller_server-1] [WARN] [1795125343.386420697] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125345.237724339] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125345.585533551] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125347.238874448] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125347.785566435] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125349.240313931] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125349.985444335] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125351.537631713] [alinhador_passagem]: CURVA 1: corpo fora da curva, abertura de 0.70 m confirmada à frente; verificando folga e parada
+[planner_server-3] [WARN] [1795125351.739599934] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125351.985484168] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125352.353829524] [alinhador_passagem]: CURVA 1: saída da curva confirmada pelo LiDAR e mapa; robô parado
+[python3-11] [INFO] [1795125352.623213890] [alinhador_passagem]: CURVA 1: SUCESSO
+[planner_server-3] [WARN] [1795125352.633441125] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (1.86, 2.60): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125352.633540855] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[python3-11] [WARN] [1795125352.995270946] [alinhador_passagem]: ROTA_MAPA_OBSTACULO (recusar): 11 celula(s) de objeto do momento a < 35 cm da rota do mapa, a 1a em (1.62, 1.84)
+[python3-11] [WARN] [1795125353.349819976] [alinhador_passagem]: PASSAGEM_BLOQUEADA: planner sem caminho e objeto na rota do mapa: vou pela rota do mapa sem ele (2.2 m; a direta tinha 1.4 m)
+[python3-11] [INFO] [1795125353.375156896] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[planner_server-3] [WARN] [1795125353.379602791] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (1.86, 2.60): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125353.379739538] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[controller_server-1] [INFO] [1795125353.712657894] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-1] [INFO] [1795125353.717018016] [local_costmap.local_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[planner_server-3] [INFO] [1795125353.734238675] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1795125353.746096658] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [INFO] [1795125353.754775404] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[controller_server-1] [WARN] [1795125354.185397577] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125355.270245998] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (1.86, 2.60): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125355.270350954] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[python3-11] [WARN] [1795125355.608866372] [alinhador_passagem]: GOAL FINAL: VIRAR_REPLANEJA: rota do mapa com objeto do momento a < 35 cm no 1o metro (1.67, 1.79): nao viro por ela
+[python3-11] [INFO] [1795125355.611597919] [alinhador_passagem]: GOAL FINAL: x=1.86 y=2.60 yaw=0 graus
+[bt_navigator-5] [INFO] [1795125355.612489877] [bt_navigator]: Begin navigating from current location (1.81, 1.28) to (1.86, 2.60)
+[planner_server-3] [WARN] [1795125355.614540091] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (1.86, 2.60): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125355.614625703] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1795125355.633243762] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [INFO] [1795125355.636538124] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[planner_server-3] [WARN] [1795125355.753570906] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (1.86, 2.60): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125355.753661477] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [WARN] [1795125356.239997244] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125356.385612390] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125356.798719111] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (1.86, 2.60): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125356.798810365] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1795125357.437819860] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [INFO] [1795125357.442436635] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[controller_server-1] [INFO] [1795125357.459809327] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-1] [INFO] [1795125357.466806852] [local_costmap.local_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[python3-10] [INFO] [1795125358.083752509] [destravar]: BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+[python3-10] [INFO] [1795125358.085457725] [destravar]: DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)
+[controller_server-1] [WARN] [1795125358.585423260] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125358.737717247] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125360.087550695] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (1.86, 2.60): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125360.087623901] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[controller_server-1] [WARN] [1795125360.585435445] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [INFO] [1795125360.728331667] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [INFO] [1795125360.731122675] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[planner_server-3] [WARN] [1795125360.742449762] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125360.749494323] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-1] [INFO] [1795125360.754612240] [local_costmap.local_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[python3-10] [INFO] [1795125361.371283735] [destravar]: BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+[python3-10] [INFO] [1795125361.375446523] [destravar]: DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (2/2)
+[controller_server-1] [WARN] [1795125362.585657605] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125363.237797408] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125363.378855741] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (1.86, 2.60): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125363.378955174] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[python3-10] [INFO] [1795125363.854781210] [destravar]: DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_caminho_global (planner sem_caminho, frente 114 cm, retornos 0)
+[python3-10] [INFO] [1795125364.287332146] [destravar]: DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: planner sem caminho | lateral: esq 40 cm: 7 ponto(s) do LiDAR na area varrida; esq 30 cm: 7 ponto(s) do LiDAR na area varrida; esq 25 cm: 7 ponto(s) do LiDAR na area varrida; esq 15 cm: 4 ponto(s) do LiDAR na area varrida | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 9 cm do mais perto: nao esta encostado | re: 30 cm: 22 ponto(s) do LiDAR na area varrida; 10 cm: 11 ponto(s) do LiDAR na area varrida
+[python3-10] [WARN] [1795125364.288959051] [destravar]: DESTRAVAR: FALHA: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: 7 ponto(s) do LiDAR na area varrida; esq 30 cm: 7 ponto(s) do LiDAR na area varrida; esq 25 cm: 7 ponto(s) do LiDAR na area varrida; esq 15 cm: 4 ponto(s) do LiDAR na area varrida | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 9 cm do mais perto: nao esta encostado | re: 30 cm: 22 ponto(s) do LiDAR na area varrida; 10 cm: 11 ponto(s) do LiDAR na area varrida)
+[python3-10] [WARN] [1795125364.546913723] [destravar]: DESTRAVAR: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: 7 ponto(s) do LiDAR na area varrida; esq 30 cm: 7 ponto(s) do LiDAR na area varrida; esq 25 cm: 7 ponto(s) do LiDAR na area varrida; esq 15 cm: 4 ponto(s) do LiDAR na area varrida | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 9 cm do mais perto: nao esta encostado | re: 30 cm: 22 ponto(s) do LiDAR na area varrida; 10 cm: 11 ponto(s) do LiDAR na area varrida)
+[bt_navigator-5] [WARN] [1795125364.572715007] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[bt_navigator-5] [ERROR] [1795125364.572938865] [bt_navigator]: Goal failed
+[controller_server-1] [WARN] [1795125364.785622382] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125364.932740048] [alinhador_passagem]: GOAL FINAL: FALHOU
+[planner_server-3] [WARN] [1795125365.739360084] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125366.985614858] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125367.739376487] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125369.185414575] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125369.739636664] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125371.185497982] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125372.036184313] [alinhador_passagem]: Novo goal: x=2.08 y=2.75 yaw=0 graus
+[python3-11] [INFO] [1795125372.036439819] [alinhador_passagem]: TRABALHADOR RECEBEU: goal sem area
+[planner_server-3] [WARN] [1795125372.039312301] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (2.08, 2.75): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125372.039425604] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [WARN] [1795125372.239732787] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [WARN] [1795125372.407884308] [alinhador_passagem]: ROTA_MAPA_OBSTACULO (recusar): 10 celula(s) de objeto do momento a < 35 cm da rota do mapa, a 1a em (2.02, 2.04)
+[python3-11] [WARN] [1795125372.743907200] [alinhador_passagem]: PASSAGEM_BLOQUEADA: planner sem caminho e objeto na rota do mapa: vou pela rota do mapa sem ele (1.7 m; a direta tinha 1.6 m)
+[python3-11] [INFO] [1795125372.769152992] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[planner_server-3] [WARN] [1795125372.772072980] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (2.08, 2.75): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125372.772148795] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[controller_server-1] [INFO] [1795125372.786109104] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-1] [INFO] [1795125372.788989661] [local_costmap.local_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[planner_server-3] [INFO] [1795125372.803526134] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [INFO] [1795125372.806225333] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[controller_server-1] [WARN] [1795125373.385386824] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125374.243062796] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125374.318080403] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (2.08, 2.75): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125374.318162434] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[python3-11] [WARN] [1795125374.696854940] [alinhador_passagem]: GOAL FINAL: VIRAR_REPLANEJA: rota do mapa com objeto do momento a < 35 cm no 1o metro (2.02, 2.04): nao viro por ela
+[python3-11] [INFO] [1795125374.713857948] [alinhador_passagem]: GOAL FINAL: x=2.08 y=2.75 yaw=0 graus
+[bt_navigator-5] [INFO] [1795125374.714706566] [bt_navigator]: Begin navigating from current location (1.81, 1.28) to (2.08, 2.75)
+[planner_server-3] [WARN] [1795125374.716748421] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (2.08, 2.75): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125374.716828770] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1795125374.735344389] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [INFO] [1795125374.750824201] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[planner_server-3] [WARN] [1795125375.246881145] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (2.08, 2.75): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125375.246975609] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[controller_server-1] [WARN] [1795125375.385489984] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125376.352734743] [planner_server]: GridBased plugin failed to plan from (1.81, 1.28) to (1.86, 2.60): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125376.352804746] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [WARN] [1795125376.738926874] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [INFO] [1795125376.993438972] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [INFO] [1795125376.995550389] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[controller_server-1] [INFO] [1795125377.013927090] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-1] [INFO] [1795125377.016316658] [local_costmap.local_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[controller_server-1] [WARN] [1795125377.585672984] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-10] [INFO] [1795125377.635282055] [destravar]: BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+[python3-10] [INFO] [1795125377.639988471] [destravar]: DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)
+[python3-11] [INFO] [1795125378.243271094] [alinhador_passagem]: Novo goal: x=2.28 y=1.44 yaw=91 graus
+[bt_navigator-5] [ERROR] [1795125378.249941927] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for destravar in node halt!
+[bt_navigator-5] [INFO] [1795125378.250162199] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-5] [INFO] [1795125378.251126070] [bt_navigator]: Goal canceled
+[python3-11] [INFO] [1795125378.576170519] [alinhador_passagem]: Goal substituido por um novo.
+[python3-11] [INFO] [1795125378.576862967] [alinhador_passagem]: TRABALHADOR RECEBEU: goal sem area
+[python3-11] [INFO] [1795125378.869775060] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[python3-11] [INFO] [1795125378.933724388] [alinhador_passagem]: GOAL FINAL: x=2.28 y=1.44 yaw=91 graus
+[bt_navigator-5] [INFO] [1795125378.934542265] [bt_navigator]: Begin navigating from current location (1.81, 1.28) to (2.28, 1.44)
+[bt_navigator-5] [INFO] [1795125378.955659874] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125378.956768569] [controller_server]: Received a goal, begin computing control effort.
+[planner_server-3] [WARN] [1795125379.237815476] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-10] [INFO] [1795125379.688807782] [destravar]: DESTRAVAR: caminho novo (18 pontos)
+[controller_server-1] [WARN] [1795125379.785575900] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-10] [INFO] [1795125380.230287495] [destravar]: DESTRAVAR: DIAGNOSTICO: dwb_sem_trajetoria (planner ok, frente 59 cm, retornos 1)
+[python3-10] [WARN] [1795125380.236126314] [destravar]: DESTRAVAR: FALHA: cancelado
+[python3-10] [WARN] [1795125380.493917247] [destravar]: DESTRAVAR: cancelado
+[planner_server-3] [WARN] [1795125381.238260613] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125381.785792727] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[collision_monitor-8] [INFO] [1795125383.185420377] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[planner_server-3] [WARN] [1795125383.238458468] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[collision_monitor-8] [INFO] [1795125383.245530695] [collision_monitor]: Robot to continue normal operation
+[collision_monitor-8] [INFO] [1795125383.345863851] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[bt_navigator-5] [INFO] [1795125383.555310647] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125383.557192863] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795125383.985711528] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125384.157196621] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125384.657198743] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795125385.239461560] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125385.665648409] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [WARN] [1795125386.185748824] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125386.257208824] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125387.357191855] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795125387.739888384] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125387.795362658] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125388.357204337] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795125388.385751536] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125389.264841245] [controller_server]: Failed to make progress
+[controller_server-1] [WARN] [1795125389.265945337] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[collision_monitor-8] [INFO] [1795125389.285385134] [collision_monitor]: Robot to continue normal operation
+[python3-10] [WARN] [1795125389.312442282] [destravar]: DESTRAVAR: CONTROLADOR_ORFAO: o controlador ainda comandava com a recuperacao chamada; pedi cancelar o FollowPath (aceito)
+[planner_server-3] [WARN] [1795125389.741297920] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125390.104361638] [alinhador_passagem]: Novo goal: x=1.88 y=1.34 yaw=91 graus
+[bt_navigator-5] [ERROR] [1795125390.128866422] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for destravar in node halt!
+[bt_navigator-5] [INFO] [1795125390.129148909] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-5] [INFO] [1795125390.129413779] [bt_navigator]: Goal canceled
+[python3-11] [INFO] [1795125390.491018700] [alinhador_passagem]: GOAL FINAL: FALHOU
+[python3-11] [INFO] [1795125390.491712635] [alinhador_passagem]: TRABALHADOR RECEBEU: goal sem area
+[controller_server-1] [WARN] [1795125390.585475114] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125390.826626097] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[python3-11] [INFO] [1795125390.892650998] [alinhador_passagem]: GOAL FINAL: x=1.88 y=1.34 yaw=91 graus
+[bt_navigator-5] [INFO] [1795125390.893830788] [bt_navigator]: Begin navigating from current location (2.11, 1.35) to (1.88, 1.34)
+[bt_navigator-5] [INFO] [1795125390.914751977] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125390.915461338] [controller_server]: Received a goal, begin computing control effort.
+[python3-10] [INFO] [1795125391.049519155] [destravar]: DESTRAVAR: caminho novo (8 pontos)
+[controller_server-1] [INFO] [1795125391.515940183] [controller_server]: Passing new path to controller.
+[python3-10] [INFO] [1795125391.587217442] [destravar]: DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_progresso_fisico,frente_barrada (planner ok, frente 10 cm, retornos 0)
+[python3-10] [WARN] [1795125391.592167125] [destravar]: DESTRAVAR: FALHA: cancelado
+[python3-10] [WARN] [1795125391.847943647] [destravar]: DESTRAVAR: cancelado
+[controller_server-1] [INFO] [1795125392.015971482] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795125392.242673369] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125392.585707874] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125393.024849540] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125393.115859544] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125393.615830259] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125394.115833994] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125394.615871308] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795125394.738915139] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125394.785561921] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125395.134958762] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125395.215973119] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125395.715973421] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125396.216010534] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795125396.739782638] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125396.785681832] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125396.816199293] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [INFO] [1795125397.254519887] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125397.315870107] [controller_server]: Passing new path to controller.
+[controller_server-1] [ERROR] [1795125397.625183628] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125397.625292623] [DWBLocalPlanner]: 0.50: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125397.625312665] [DWBLocalPlanner]: 0.50: Oscillation/Trajectory is oscillating.
+[controller_server-1] [WARN] [1795125397.625506695] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [INFO] [1795125397.815920111] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125398.315933214] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125398.916015636] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795125398.985512528] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125399.243206999] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125399.374578700] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125399.415997782] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125399.915941370] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125400.515869106] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795125400.986014148] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125401.015871634] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [INFO] [1795125401.494542178] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125401.516283700] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795125401.741434222] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125402.115854179] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125402.615945175] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795125402.987109514] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125403.116449628] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [INFO] [1795125403.615055826] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125403.615863996] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125404.215991919] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795125404.240739973] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125404.715876076] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795125405.185864153] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125405.215873045] [controller_server]: Passing new path to controller.
+[python3-11] [INFO] [1795125405.336051543] [alinhador_passagem]: Novo goal: x=2.14 y=1.45 yaw=93 graus
+[bt_navigator-5] [ERROR] [1795125405.349691454] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-5] [INFO] [1795125405.349967932] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-5] [INFO] [1795125405.350503957] [bt_navigator]: Goal canceled
+[controller_server-1] [INFO] [1795125405.415918919] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-1] [INFO] [1795125405.415985611] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[python3-11] [INFO] [1795125405.701691611] [alinhador_passagem]: Goal substituido por um novo.
+[python3-11] [INFO] [1795125405.715360308] [alinhador_passagem]: TRABALHADOR RECEBEU: goal sem area
+[python3-11] [INFO] [1795125406.049905051] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[python3-11] [INFO] [1795125406.088738984] [alinhador_passagem]: TRAJETO CURTO: 20 cm em linha reta, sem Nav2 (angulo 93 graus)
+[planner_server-3] [WARN] [1795125406.739520456] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125407.385824875] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125408.741533752] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125409.585956423] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125411.239514479] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125411.586133230] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125412.810244919] [alinhador_passagem]: TRAJETO CURTO: angulo 93 graus (erro 2.4)
+[planner_server-3] [WARN] [1795125413.240236195] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125413.785672938] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125414.310112932] [alinhador_passagem]: TRAJETO CURTO: andei 4 cm para dir
+[planner_server-3] [WARN] [1795125415.742418142] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[collision_monitor-8] [INFO] [1795125415.785417227] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[controller_server-1] [WARN] [1795125415.985700054] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125416.292050238] [alinhador_passagem]: TRAJETO CURTO: andei 15 cm para frente
+[collision_monitor-8] [INFO] [1795125416.385581614] [collision_monitor]: Robot to continue normal operation
+[controller_server-1] [WARN] [1795125418.185715642] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125418.240349681] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125419.176919071] [alinhador_passagem]: TRAJETO CURTO: andei 14 cm para esq
+[python3-11] [INFO] [1795125419.817317723] [alinhador_passagem]: Novo goal: x=2.08 y=3.16 yaw=93 graus
+[python3-11] [INFO] [1795125420.110743941] [alinhador_passagem]: Goal substituido por um novo.
+[python3-11] [INFO] [1795125420.112107296] [alinhador_passagem]: TRABALHADOR RECEBEU: goal sem area
+[planner_server-3] [WARN] [1795125420.241241281] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125420.385769262] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125420.494597519] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[python3-11] [INFO] [1795125420.528982974] [alinhador_passagem]: GOAL FINAL: x=2.08 y=3.16 yaw=93 graus
+[bt_navigator-5] [INFO] [1795125420.529837003] [bt_navigator]: Begin navigating from current location (2.34, 1.45) to (2.08, 3.16)
+[bt_navigator-5] [INFO] [1795125420.541257284] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (35 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125420.542953355] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-1] [WARN] [1795125422.386475418] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125422.590963975] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (23 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125422.644700829] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795125422.741064544] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125423.645188978] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795125424.585560380] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125424.741324060] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125425.161922845] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (1 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125425.244711765] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125425.744707112] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795125426.585856309] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125426.742883284] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125428.261767736] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125428.344700310] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795125428.785722122] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125429.238367106] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125429.654371005] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125429.654458422] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [WARN] [1795125429.654676060] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125429.753739551] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125429.753803753] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [WARN] [1795125429.754007313] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [WARN] [1795125430.985646347] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125431.150499977] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1795125431.170285139] [bt_navigator]: Goal succeeded
+[planner_server-3] [WARN] [1795125431.240958602] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125431.546019400] [alinhador_passagem]: GOAL FINAL: SUCESSO
+[python3-11] [INFO] [1795125432.752767105] [alinhador_passagem]: TRABALHADOR RECEBEU: goal sem area
+[python3-11] [INFO] [1795125432.754343817] [alinhador_passagem]: Novo goal: x=1.99 y=1.72 yaw=93 graus
+[planner_server-3] [WARN] [1795125432.755478073] [planner_server]: GridBased plugin failed to plan from (2.13, 3.12) to (1.99, 1.72): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125432.755562071] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[python3-11] [WARN] [1795125433.112679154] [alinhador_passagem]: ROTA_MAPA_OBSTACULO (recusar): 43 celula(s) de objeto do momento a < 35 cm da rota do mapa, a 1a em (1.72, 1.94)
+[controller_server-1] [WARN] [1795125433.185701053] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125433.742463624] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [WARN] [1795125433.847770583] [alinhador_passagem]: Planner: sem caminho; mapa: 1.5 m: sigo a rota do mapa
+[python3-11] [INFO] [1795125433.887169561] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[planner_server-3] [WARN] [1795125433.890090125] [planner_server]: GridBased plugin failed to plan from (2.13, 3.12) to (1.99, 1.72): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125433.890158829] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[controller_server-1] [INFO] [1795125433.906022720] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-1] [INFO] [1795125433.908806323] [local_costmap.local_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[planner_server-3] [INFO] [1795125433.917667915] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [INFO] [1795125433.922938818] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[controller_server-1] [WARN] [1795125435.385651217] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125435.435272115] [planner_server]: GridBased plugin failed to plan from (2.13, 3.12) to (1.99, 1.72): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125435.435362734] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[python3-11] [WARN] [1795125435.811399552] [alinhador_passagem]: GOAL FINAL: VIRAR_REPLANEJA: rota do mapa com objeto do momento a < 35 cm no 1o metro (2.27, 2.49): nao viro por ela
+[python3-11] [INFO] [1795125435.827284798] [alinhador_passagem]: GOAL FINAL: x=1.99 y=1.72 yaw=93 graus
+[bt_navigator-5] [INFO] [1795125435.828512795] [bt_navigator]: Begin navigating from current location (2.13, 3.12) to (1.99, 1.72)
+[planner_server-3] [WARN] [1795125435.830796344] [planner_server]: GridBased plugin failed to plan from (2.13, 3.12) to (1.99, 1.72): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125435.830887535] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1795125435.849288761] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [INFO] [1795125435.852254514] [global_costmap.global_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[planner_server-3] [WARN] [1795125436.238502245] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125436.249621052] [planner_server]: GridBased plugin failed to plan from (2.13, 3.12) to (1.99, 1.72): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1795125436.249697416] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[python3-11] [INFO] [1795125436.549792538] [alinhador_passagem]: Novo goal: x=2.15 y=3.30 yaw=-97 graus
+[bt_navigator-5] [ERROR] [1795125436.565933578] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for destravar in node halt!
+[bt_navigator-5] [INFO] [1795125436.566212215] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-5] [INFO] [1795125436.566762226] [bt_navigator]: Goal canceled
+[python3-11] [INFO] [1795125436.909428094] [alinhador_passagem]: Goal substituido por um novo.
+[python3-11] [INFO] [1795125436.910744627] [alinhador_passagem]: TRABALHADOR RECEBEU: goal sem area
+[python3-11] [INFO] [1795125437.206764396] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[python3-11] [INFO] [1795125437.250185898] [alinhador_passagem]: TRAJETO CURTO: 18 cm em linha reta, sem Nav2 (angulo -97 graus)
+[python3-10] [INFO] [1795125437.353399288] [destravar]: DESTRAVAR: caminho novo (7 pontos)
+[python3-11] [INFO] [1795125437.514665331] [alinhador_passagem]: TRAJETO CURTO: girando 164 graus a quina pegaria: primeiro 10 cm para frente
+[controller_server-1] [WARN] [1795125437.585515372] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-10] [INFO] [1795125437.936561078] [destravar]: DESTRAVAR: DIAGNOSTICO: dwb_sem_trajetoria (planner ok, frente 127 cm, retornos 0)
+[python3-10] [WARN] [1795125437.949230884] [destravar]: DESTRAVAR: FALHA: cancelado
+[python3-10] [WARN] [1795125438.206995373] [destravar]: DESTRAVAR: cancelado
+[planner_server-3] [WARN] [1795125438.239437108] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125439.268426716] [alinhador_passagem]: TRAJETO CURTO: andei 9 cm para frente
+[python3-11] [INFO] [1795125439.527857127] [alinhador_passagem]: TRAJETO CURTO: girando 164 graus a quina pegaria: primeiro 16 cm para frente
+[controller_server-1] [WARN] [1795125439.585575277] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125440.739274965] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125441.585938057] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125441.597964578] [alinhador_passagem]: TRAJETO CURTO: andei 15 cm para frente
+[python3-11] [INFO] [1795125441.867815552] [alinhador_passagem]: TRAJETO CURTO: girando 165 graus a quina pegaria: primeiro 42 cm para dir
+[planner_server-3] [WARN] [1795125442.740544906] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125443.785689477] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125445.237824227] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125445.985496014] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125447.237950794] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125447.985540215] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125448.934262792] [alinhador_passagem]: TRAJETO CURTO: andei 41 cm para dir
+[python3-11] [INFO] [1795125449.206546145] [alinhador_passagem]: TRAJETO CURTO: girando 166 graus a quina pegaria: primeiro 20 cm para frente
+[planner_server-3] [WARN] [1795125449.239403508] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125450.185599557] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125450.895358312] [alinhador_passagem]: Novo goal: x=2.10 y=3.73 yaw=-97 graus
+[planner_server-3] [WARN] [1795125451.239848646] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125451.414639467] [alinhador_passagem]: Goal substituido por um novo.
+[python3-11] [INFO] [1795125451.415823404] [alinhador_passagem]: TRABALHADOR RECEBEU: goal sem area
+[python3-11] [INFO] [1795125451.792349916] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[python3-11] [INFO] [1795125451.834717078] [alinhador_passagem]: TRAJETO CURTO: 49 cm em linha reta, sem Nav2 (angulo -97 graus)
+[python3-11] [INFO] [1795125452.109298411] [alinhador_passagem]: TRAJETO CURTO: girando 163 graus a quina pegaria: primeiro 20 cm para frente
+[controller_server-1] [WARN] [1795125452.385732233] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125453.240959700] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125454.385754540] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125454.477808234] [alinhador_passagem]: TRAJETO CURTO: andei 19 cm para frente
+[python3-11] [INFO] [1795125454.737658206] [alinhador_passagem]: TRAJETO CURTO: girando 164 graus a quina pegaria: primeiro 13 cm para frente
+[planner_server-3] [WARN] [1795125455.739932106] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125456.504241413] [alinhador_passagem]: TRAJETO CURTO: andei 12 cm para frente
+[controller_server-1] [WARN] [1795125456.585788535] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125456.771347107] [alinhador_passagem]: TRAJETO CURTO: girando 164 graus a quina pegaria: primeiro 26 cm para frente
+[planner_server-3] [WARN] [1795125457.740878387] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125458.785743141] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125459.729200122] [alinhador_passagem]: TRAJETO CURTO: andei 25 cm para frente
+[python3-11] [INFO] [1795125459.992645231] [alinhador_passagem]: TRAJETO CURTO: girando 165 graus a quina pegaria: primeiro 20 cm para frente
+[planner_server-3] [WARN] [1795125460.239340947] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125460.785758772] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125462.241319918] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125462.410022620] [alinhador_passagem]: TRAJETO CURTO: andei 19 cm para frente
+[python3-11] [WARN] [1795125462.673560002] [alinhador_passagem]: TRAJETO CURTO: sem espaco para girar nem para me afastar
+[python3-11] [INFO] [1795125462.952566523] [alinhador_passagem]: GOAL FINAL: x=2.10 y=3.73 yaw=-97 graus
+[bt_navigator-5] [INFO] [1795125462.953473941] [bt_navigator]: Begin navigating from current location (2.41, 3.87) to (2.10, 3.73)
+[bt_navigator-5] [INFO] [1795125462.975315714] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125462.976073670] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-1] [WARN] [1795125462.987328541] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125464.076506128] [controller_server]: Passing new path to controller.
+[python3-11] [INFO] [1795125464.161885557] [alinhador_passagem]: Novo goal: x=2.16 y=4.82 yaw=-92 graus
+[controller_server-1] [INFO] [1795125464.176572675] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-1] [INFO] [1795125464.176767303] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-5] [INFO] [1795125464.178352133] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-5] [INFO] [1795125464.178835443] [bt_navigator]: Goal canceled
+[planner_server-3] [WARN] [1795125464.242164765] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125464.513859700] [alinhador_passagem]: Goal substituido por um novo.
+[python3-11] [INFO] [1795125464.514645542] [alinhador_passagem]: TRABALHADOR RECEBEU: goal sem area
+[python3-11] [INFO] [1795125464.883287586] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[python3-11] [INFO] [1795125464.931585111] [alinhador_passagem]: TRAJETO CURTO: 96 cm em linha reta, sem Nav2 (angulo -92 graus)
+[controller_server-1] [WARN] [1795125465.185476036] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125465.197850884] [alinhador_passagem]: TRAJETO CURTO: girando 169 graus a quina pegaria: primeiro 26 cm para frente
+[planner_server-3] [WARN] [1795125466.740930196] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125467.185676731] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125468.192512983] [alinhador_passagem]: TRAJETO CURTO: andei 25 cm para frente
+[python3-11] [INFO] [1795125468.453220276] [alinhador_passagem]: TRAJETO CURTO: girando 170 graus a quina pegaria: primeiro 20 cm para frente
+[planner_server-3] [WARN] [1795125469.239574279] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125469.385496319] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125470.886808724] [alinhador_passagem]: TRAJETO CURTO: andei 19 cm para frente
+[python3-11] [INFO] [1795125471.152198277] [alinhador_passagem]: TRAJETO CURTO: girando 170 graus a quina pegaria: primeiro 13 cm para frente
+[controller_server-1] [WARN] [1795125471.385540370] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125471.739725087] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125472.909176693] [alinhador_passagem]: TRAJETO CURTO: andei 12 cm para frente
+[python3-11] [INFO] [1795125473.172594086] [alinhador_passagem]: TRAJETO CURTO: girando 171 graus a quina pegaria: primeiro 16 cm para frente
+[controller_server-1] [WARN] [1795125473.585515289] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125474.239391411] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125475.177364771] [alinhador_passagem]: TRAJETO CURTO: andei 15 cm para frente
+[python3-11] [WARN] [1795125475.454212694] [alinhador_passagem]: TRAJETO CURTO: sem espaco para girar nem para me afastar
+[controller_server-1] [WARN] [1795125475.585732796] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125475.738071113] [alinhador_passagem]: GOAL FINAL: x=2.16 y=4.82 yaw=-92 graus
+[bt_navigator-5] [INFO] [1795125475.739516190] [bt_navigator]: Begin navigating from current location (1.81, 4.34) to (2.16, 4.82)
+[bt_navigator-5] [INFO] [1795125475.762949218] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125475.763750652] [controller_server]: Received a goal, begin computing control effort.
+[planner_server-3] [WARN] [1795125476.241239753] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125476.864336727] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125477.364440065] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795125477.785515490] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125478.739271396] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125478.870410801] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125478.964367811] [controller_server]: Passing new path to controller.
+[controller_server-1] [WARN] [1795125479.785824148] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125480.739378878] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125481.985496760] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125483.238715498] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125483.985533114] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125484.270878680] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125484.270962633] [DWBLocalPlanner]: 0.01: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125484.270980499] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125484.271111131] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125484.370916540] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125484.370977678] [DWBLocalPlanner]: 0.01: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125484.370989055] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125484.371101365] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[planner_server-3] [WARN] [1795125485.741313758] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125486.185507270] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125486.769748864] [controller_server]: Reached the goal!
+[bt_navigator-5] [INFO] [1795125486.790351285] [bt_navigator]: Goal succeeded
+[python3-11] [INFO] [1795125487.150396294] [alinhador_passagem]: GOAL FINAL: SUCESSO
+[controller_server-1] [WARN] [1795125488.185708921] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125488.240747930] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125490.385414759] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125490.738799627] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125491.934347360] [alinhador_passagem]: TRABALHADOR RECEBEU: goal sem area
+[python3-11] [INFO] [1795125491.953326456] [alinhador_passagem]: Novo goal: x=2.12 y=4.29 yaw=-99 graus
+[python3-11] [INFO] [1795125492.263262871] [alinhador_passagem]: Analise: nenhuma passagem estreita no caminho.
+[python3-11] [INFO] [1795125492.315528600] [alinhador_passagem]: TRAJETO CURTO: 57 cm em linha reta, sem Nav2 (angulo -99 graus)
+[controller_server-1] [WARN] [1795125492.385444089] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125492.739208498] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125493.958606890] [alinhador_passagem]: TRAJETO CURTO: angulo -99 graus (erro -1.6)
+[controller_server-1] [WARN] [1795125494.385666526] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125494.739310106] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125495.268730232] [alinhador_passagem]: TRAJETO CURTO: andei 3 cm para esq
+[planner_server-3] [INFO] [1795125495.733698146] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 253 X 267 at 0.050000 m/pix
+[controller_server-1] [WARN] [1795125496.585559505] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125496.739903206] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125498.741231920] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125498.785657824] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [INFO] [1795125499.733684107] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 253 X 278 at 0.050000 m/pix
+[controller_server-1] [WARN] [1795125500.785704703] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125500.920319142] [local_costmap.local_costmap]: Message Filter dropping message: frame 'laser_raw' at time 1795125500.616 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[python3-11] [INFO] [1795125501.049880561] [alinhador_passagem]: TRAJETO CURTO: andei 56 cm para frente
+[planner_server-3] [WARN] [1795125501.237202062] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125502.985497004] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125503.010574116] [alinhador_passagem]: TRAJETO CURTO: andei 9 cm para dir
+[planner_server-3] [WARN] [1795125503.238263338] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[collision_monitor-8] [INFO] [1795125504.345584769] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[collision_monitor-8] [INFO] [1795125504.385560244] [collision_monitor]: Robot to continue normal operation
+[python3-11] [INFO] [1795125504.916443250] [alinhador_passagem]: TRAJETO CURTO: andei 8 cm para dir
+[controller_server-1] [WARN] [1795125504.985539078] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125505.731718709] [alinhador_passagem]: TRAJETO CURTO: andei 3 cm para tras
+[planner_server-3] [WARN] [1795125505.743721086] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[collision_monitor-8] [INFO] [1795125505.845521868] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[controller_server-1] [WARN] [1795125507.185507888] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125508.239257947] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[collision_monitor-8] [INFO] [1795125508.385341425] [collision_monitor]: Robot to continue normal operation
+[collision_monitor-8] [INFO] [1795125508.745739543] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[collision_monitor-8] [INFO] [1795125508.785334891] [collision_monitor]: Robot to continue normal operation
+[collision_monitor-8] [INFO] [1795125509.045621819] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[python3-11] [INFO] [1795125509.289441271] [alinhador_passagem]: TRAJETO CURTO: andei 2 cm para dir
+[controller_server-1] [WARN] [1795125509.385604454] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125509.850176537] [alinhador_passagem]: TRAJETO CURTO: andei 0 cm para frente
+[python3-11] [WARN] [1795125509.851686532] [alinhador_passagem]: TRAJETO CURTO: fiquei a 21 cm do ponto: sigo pelo Nav2
+[python3-11] [INFO] [1795125509.873123646] [alinhador_passagem]: GOAL FINAL: x=2.12 y=4.29 yaw=-99 graus
+[bt_navigator-5] [INFO] [1795125509.874080229] [bt_navigator]: Begin navigating from current location (2.10, 4.08) to (2.12, 4.29)
+[bt_navigator-5] [INFO] [1795125509.894807962] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125509.895410707] [controller_server]: Received a goal, begin computing control effort.
+[planner_server-3] [WARN] [1795125510.241424844] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125511.585617893] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125512.014762455] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[collision_monitor-8] [INFO] [1795125512.285462464] [collision_monitor]: Robot to continue normal operation
+[collision_monitor-8] [INFO] [1795125512.445459593] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[collision_monitor-8] [INFO] [1795125512.485378861] [collision_monitor]: Robot to continue normal operation
+[collision_monitor-8] [INFO] [1795125512.585432787] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[controller_server-1] [INFO] [1795125512.595712787] [controller_server]: Passing new path to controller.
+[planner_server-3] [WARN] [1795125512.741736003] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[collision_monitor-8] [INFO] [1795125512.885382103] [collision_monitor]: Robot to continue normal operation
+[collision_monitor-8] [INFO] [1795125512.985511843] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[controller_server-1] [INFO] [1795125513.095661352] [controller_server]: Passing new path to controller.
+[collision_monitor-8] [INFO] [1795125513.247234408] [collision_monitor]: Robot to continue normal operation
+[collision_monitor-8] [INFO] [1795125513.645576932] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[controller_server-1] [INFO] [1795125513.695687268] [controller_server]: Passing new path to controller.
+[collision_monitor-8] [INFO] [1795125513.785426978] [collision_monitor]: Robot to continue normal operation
+[controller_server-1] [WARN] [1795125513.785444898] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[collision_monitor-8] [INFO] [1795125513.945580704] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[bt_navigator-5] [ERROR] [1795125514.034895423] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-5] [INFO] [1795125514.035144739] [bt_navigator]: [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+[bt_navigator-5] [INFO] [1795125514.035346060] [bt_navigator]: Goal canceled
+[collision_monitor-8] [INFO] [1795125514.085412389] [collision_monitor]: Robot to continue normal operation
+[controller_server-1] [INFO] [1795125514.095698826] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-1] [INFO] [1795125514.095761514] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[python3-11] [WARN] [1795125514.309621127] [alinhador_passagem]: ANTI_CISCADO 1: GOAL FINAL: 4 inversoes em 4 s sem sair do lugar (1 cm, 10 graus): paro, destravo e mando o goal de novo
+[python3-10] [WARN] [1795125514.334848346] [destravar]: DESTRAVAR: CONTROLADOR_ORFAO: o controlador ainda comandava com a recuperacao chamada; pedi cancelar o FollowPath (aceito)
+[python3-10] [INFO] [1795125515.036480290] [destravar]: DESTRAVAR: CONTROLADOR_ORFAO: comando exclusivo depois de 0.7 s
+[planner_server-3] [WARN] [1795125515.237253070] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125515.985606787] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-10] [INFO] [1795125516.076502963] [destravar]: DESTRAVAR: caminho novo (9 pontos)
+[python3-10] [INFO] [1795125516.667790972] [destravar]: DESTRAVAR: DIAGNOSTICO: caminho_invalido,cm_bloqueou,dwb_sem_trajetoria,oscilacao,frente_barrada (planner ok, frente 5 cm, retornos 0)
+[python3-10] [INFO] [1795125516.856950296] [destravar]: DESTRAVAR: DECISAO: giro (abertura -20 graus: continuacao no caminho de 4 para 16 cm; area 84% observada) | recusadas: retomar: causa cm_bloqueou,oscilacao: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 25 cm: 14 ponto(s) do LiDAR na area varrida; dir 15 cm: 8 ponto(s) do LiDAR na area varrida; dir 10 cm: 5 ponto(s) do LiDAR na area varrida; esq 25 cm: 22 ponto(s) do LiDAR na area varrida | mover: corpo nao passa 10 cm + continuacao na direcao do caminho
+[python3-10] [INFO] [1795125516.867411737] [destravar]: BLOQUEIO: marquei 30 cm a frente do robo por 10 s
+[planner_server-3] [WARN] [1795125517.237475035] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[progressive_spin_node-13] [INFO] [1795125517.325049001] [progressive_spin]: spin avaliacao: sentido=-1 arco_livre=13.3 graus folga_extra=0.00 m abertura=0.00 m folga_giro=0.038 m
+[progressive_spin_node-13] [INFO] [1795125517.352170989] [progressive_spin]: micro-giro -6.9 graus (acumulado 0.0 / max 20.0)
+[behavior_server-4] [INFO] [1795125517.353634877] [behavior_server]: Running spin
+[behavior_server-4] [INFO] [1795125517.353866990] [behavior_server]: Turning -0.12 for spin behavior.
+[behavior_server-4] [INFO] [1795125518.154134046] [behavior_server]: spin completed successfully
+[controller_server-1] [WARN] [1795125518.185428800] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[progressive_spin_node-13] [INFO] [1795125518.254793965] [progressive_spin]: spin avaliacao: sentido=+1 arco_livre=11.0 graus folga_extra=0.00 m abertura=0.00 m folga_giro=0.008 m
+[progressive_spin_node-13] [INFO] [1795125518.256176342] [progressive_spin]: smart_spin fail: sentido bloqueado; sem inverter giro; BT deve reposicionar
+[python3-10] [WARN] [1795125519.072186957] [destravar]: DESTRAVAR: RESULTADO giro: falhou | smart_spin: sentido bloqueado; sem inverter giro; BT deve reposicionar | IMU: girou -10 graus; abertura medida: 12 cm, continuacao 3 ponto(s) do LiDAR na area varrida
+[python3-10] [INFO] [1795125519.452490672] [destravar]: DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa cm_bloqueou,oscilacao: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 25 cm: 12 ponto(s) do LiDAR na area varrida; dir 15 cm: depois o caminho so anda 0 cm; dir 10 cm: depois o caminho so anda 4 cm; esq 25 cm: 28 ponto(s) do LiDAR na area varrida | mover: corpo nao passa 10 cm + continuacao na direcao do caminho | orientar: -60 graus pelo lado curto: 12 ponto(s) do LiDAR na area varrida; +300 graus pelo outro lado: 39 ponto(s) do LiDAR na area varrida | giro: ja girou aqui sem resultado | re: 30 cm: 13 ponto(s) do LiDAR na area varrida; 10 cm: 1 ponto(s) do LiDAR na area varrida
+[python3-10] [WARN] [1795125519.460784786] [destravar]: DESTRAVAR: FALHA: sem alternativa segura (retomar: causa cm_bloqueou,oscilacao: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 25 cm: 12 ponto(s) do LiDAR na area varrida; dir 15 cm: depois o caminho so anda 0 cm; dir 10 cm: depois o caminho so anda 4 cm; esq 25 cm: 28 ponto(s) do LiDAR na area varrida | mover: corpo nao passa 10 cm + continuacao na direcao do caminho | orientar: -60 graus pelo lado curto: 12 ponto(s) do LiDAR na area varrida; +300 graus pelo outro lado: 39 ponto(s) do LiDAR na area varrida | giro: ja girou aqui sem resultado | re: 30 cm: 13 ponto(s) do LiDAR na area varrida; 10 cm: 1 ponto(s) do LiDAR na area varrida)
+[python3-10] [WARN] [1795125519.717339640] [destravar]: DESTRAVAR: sem alternativa segura (retomar: causa cm_bloqueou,oscilacao: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 25 cm: 12 ponto(s) do LiDAR na area varrida; dir 15 cm: depois o caminho so anda 0 cm; dir 10 cm: depois o caminho so anda 4 cm; esq 25 cm: 28 ponto(s) do LiDAR na area varrida | mover: corpo nao passa 10 cm + continuacao na direcao do caminho | orientar: -60 graus pelo lado curto: 12 ponto(s) do LiDAR na area varrida; +300 graus pelo outro lado: 39 ponto(s) do LiDAR na area varrida | giro: ja girou aqui sem resultado | re: 30 cm: 13 ponto(s) do LiDAR na area varrida; 10 cm: 1 ponto(s) do LiDAR na area varrida)
+[python3-11] [INFO] [1795125519.733802862] [alinhador_passagem]: ANTI_CISCADO 1: destravar falhou
+[planner_server-3] [WARN] [1795125519.741946999] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-11] [INFO] [1795125519.771506117] [alinhador_passagem]: GOAL FINAL: x=2.12 y=4.29 yaw=-99 graus
+[bt_navigator-5] [INFO] [1795125519.772463278] [bt_navigator]: Begin navigating from current location (2.10, 4.09) to (2.12, 4.29)
+[bt_navigator-5] [INFO] [1795125519.793250066] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125519.794286058] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-1] [WARN] [1795125520.185625683] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [INFO] [1795125520.394518615] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125520.894530237] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1795125521.394525599] [controller_server]: Passing new path to controller.
+[planner_server-3] [INFO] [1795125521.733693561] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 253 X 281 at 0.050000 m/pix
+[planner_server-3] [WARN] [1795125521.743454303] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125522.386210254] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125522.405014847] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125522.494540512] [controller_server]: Passing new path to controller.
+[python3-9] [INFO] [1795125522.745938061] [filtro_corpo_scan]: MEMORIA_PERTO: 98 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (134 guardados)
+[controller_server-1] [ERROR] [1795125522.802739421] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125522.802838076] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125522.802860450] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125522.803017135] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125522.900421028] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125522.900492649] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125522.900511338] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125522.900658228] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125522.999534482] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125522.999616356] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125522.999636660] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125523.000157062] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[planner_server-3] [WARN] [1795125523.743985247] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125523.999638370] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125523.999711893] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125523.999729906] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125523.999742858] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125523.999884211] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125524.101670247] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125524.101732379] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125524.101746648] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125524.101760323] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125524.101908259] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125524.201472615] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125524.201717375] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125524.201741622] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125524.201781875] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125524.201937130] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[bt_navigator-5] [INFO] [1795125524.513389475] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [WARN] [1795125524.585619437] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125525.204133809] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125525.204359249] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125525.204389542] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125525.204772847] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125525.298777189] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125525.298856695] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125525.298874607] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125525.299010196] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125525.701103161] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125525.701175476] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125525.701192713] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125525.701343097] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125525.800701283] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125525.800780864] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125525.800797176] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125525.800951194] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125525.900776714] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125525.900857018] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125525.900873821] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125525.901021381] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[planner_server-3] [WARN] [1795125526.240307032] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125526.633367825] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [WARN] [1795125526.785399588] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125527.199579938] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125527.199651887] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125527.199670037] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125527.199682638] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125527.199834453] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125527.301409553] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125527.301489922] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125527.301507013] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125527.301518081] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125527.301677118] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125527.401020433] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125527.401101630] [DWBLocalPlanner]: 0.01: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125527.401118673] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125527.401260666] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [INFO] [1795125527.475507211] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-1] [INFO] [1795125527.478187331] [local_costmap.local_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[controller_server-1] [WARN] [1795125527.602481324] [controller_server]: Control loop missed its desired rate of 10.0000 Hz. Current loop rate is 9.2634 Hz.
+[controller_server-1] [ERROR] [1795125528.611439334] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125528.611526528] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125528.611545006] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125528.611681790] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125528.708339985] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125528.708391832] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125528.708403422] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125528.708494043] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[bt_navigator-5] [INFO] [1795125528.743261657] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[planner_server-3] [WARN] [1795125528.743772857] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125528.785582752] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125528.810154230] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125528.810214451] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125528.810226585] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125528.810337237] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125529.910796263] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125529.910921483] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125529.910945408] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125529.910957471] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125529.911125009] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125530.008803860] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125530.008881342] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125530.008899001] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125530.008916342] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125530.009067723] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [WARN] [1795125530.785591151] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125530.843197592] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [ERROR] [1795125530.908234964] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125530.908290987] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125530.908302799] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125530.908397946] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125531.009945092] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125531.010024572] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125531.010061881] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125531.010202215] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125531.109609994] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125531.109676204] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125531.109692639] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125531.109827102] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[planner_server-3] [WARN] [1795125531.239101429] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125531.509891797] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125531.509948577] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125531.509960670] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125531.510076330] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125531.611119906] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125531.611212385] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125531.611232686] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125531.611386103] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [INFO] [1795125532.279066840] [local_costmap.local_costmap]: Message Filter dropping message: frame 'laser_raw' at time 1795125531.976 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-1] [ERROR] [1795125532.708084130] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125532.708149642] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125532.708165980] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125532.708175988] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125532.708312021] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[python3-9] [INFO] [1795125532.745127546] [filtro_corpo_scan]: MEMORIA_PERTO: 914 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (120 guardados)
+[controller_server-1] [ERROR] [1795125532.809908401] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125532.809977750] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125532.809995617] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125532.810006737] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125532.810150677] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125532.907362593] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125532.907422765] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125532.907433395] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125532.907439596] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125532.907534440] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[bt_navigator-5] [INFO] [1795125532.963290287] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [WARN] [1795125532.985695655] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125533.002724964] [controller_server]: Failed to make progress
+[controller_server-1] [WARN] [1795125533.002984311] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[python3-10] [WARN] [1795125533.049546888] [destravar]: DESTRAVAR: CONTROLADOR_ORFAO: o controlador ainda comandava com a recuperacao chamada; pedi cancelar o FollowPath (aceito)
+[planner_server-3] [WARN] [1795125533.239796753] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-10] [INFO] [1795125533.652546867] [destravar]: DESTRAVAR: CONTROLADOR_ORFAO: comando exclusivo depois de 0.6 s
+[python3-10] [INFO] [1795125534.587262693] [destravar]: DESTRAVAR: caminho novo (2 pontos)
+[python3-10] [INFO] [1795125535.068159131] [destravar]: DESTRAVAR: DIAGNOSTICO: caminho_invalido,dwb_sem_trajetoria,frente_barrada (planner ok, frente 6 cm, retornos 0)
+[controller_server-1] [WARN] [1795125535.185392992] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125535.743189718] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-10] [INFO] [1795125536.417509954] [destravar]: DESTRAVAR: DECISAO: re (re 10 cm para abrir espaco (area 85% observada); depois reavalia) | recusadas: retomar: planner sem caminho | contornar: nao e objeto pequeno com lado livre | lateral: esq 40 cm: 53 ponto(s) do LiDAR na area varrida; esq 30 cm: 46 ponto(s) do LiDAR na area varrida; esq 25 cm: 38 ponto(s) do LiDAR na area varrida; esq 15 cm: 4 ponto(s) do LiDAR na area varrida | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: frente 10 cm: 28 ponto(s) do LiDAR na area varrida; frente 6 cm: 4 ponto(s) do LiDAR na area varrida; esq 10 cm: folga so iria a 4 cm; esq 6 cm: folga so iria a 6 cm
+[python3-10] [INFO] [1795125536.427691702] [destravar]: BLOQUEIO: marquei 30 cm a frente do robo por 10 s
+[controller_server-1] [WARN] [1795125537.185604562] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[planner_server-3] [WARN] [1795125537.743688201] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-10] [INFO] [1795125539.169780539] [destravar]: DESTRAVAR: RESULTADO re: ok | chegou | ICP: 9 cm na direcao pedida (dx -9, dy +0 cm)
+[controller_server-1] [WARN] [1795125539.185888034] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[python3-10] [INFO] [1795125539.212348021] [destravar]: DESTRAVAR: caminho novo (2 pontos)
+[python3-10] [INFO] [1795125539.213340573] [destravar]: DESTRAVAR: REAVALIACAO depois da re: frente 14 cm, planner True
+[python3-10] [INFO] [1795125539.589787174] [destravar]: DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: planner sem caminho | contornar: nao e objeto pequeno com lado livre | lateral: esq 40 cm: 32 ponto(s) do LiDAR na area varrida; esq 30 cm: 12 ponto(s) do LiDAR na area varrida; esq 25 cm: 8 ponto(s) do LiDAR na area varrida; esq 15 cm: depois o caminho so anda 0 cm | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 12 cm do mais perto: nao esta encostado | re: acabou de dar re: nunca duas seguidas
+[python3-10] [INFO] [1795125539.595966673] [destravar]: DESTRAVAR: OK: re (re 10 cm para abrir espaco (area 85% observada); depois reavalia; ICP: 9 cm na direcao pedida (dx -9, dy +0 cm)); sem 2a manobra segura: devolvo ao Nav2 para replanejar
+[planner_server-3] [INFO] [1795125539.733679694] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 253 X 286 at 0.050000 m/pix
+[python3-10] [INFO] [1795125539.849731608] [destravar]: DESTRAVAR: re (re 10 cm para abrir espaco (area 85% observada); depois reavalia; ICP: 9 cm na direcao pedida (dx -9, dy +0 cm)); sem 2a manobra segura: devolvo ao Nav2 para replanejar
+[bt_navigator-5] [WARN] [1795125539.882869309] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: sem costmap ainda: sigo com o original sem conferir (como antes)
+[bt_navigator-5] [INFO] [1795125539.903949427] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [INFO] [1795125539.904614609] [controller_server]: Received a goal, begin computing control effort.
+[planner_server-3] [WARN] [1795125540.245085086] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125540.710845276] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125540.710932882] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125540.710949180] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125540.710958971] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125540.711103897] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [WARN] [1795125541.385605767] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125541.611276844] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125541.611356766] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125541.611375162] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125541.611527867] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125541.713195645] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125541.713282337] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125541.713323115] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125541.713528371] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[bt_navigator-5] [INFO] [1795125542.013593592] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[planner_server-3] [WARN] [1795125542.742342761] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[python3-9] [INFO] [1795125542.745342222] [filtro_corpo_scan]: MEMORIA_PERTO: 398 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (117 guardados)
+[controller_server-1] [WARN] [1795125543.385803886] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125543.412937947] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125543.413025532] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125543.413058256] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125543.413216123] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125543.511815082] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125543.511871042] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125543.511884364] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125543.511981853] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125543.613739025] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125543.613812241] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125543.613832512] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125543.614009967] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[bt_navigator-5] [INFO] [1795125544.133287910] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[planner_server-3] [WARN] [1795125545.241139363] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125545.586721627] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125546.243237971] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [ERROR] [1795125546.310362809] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125546.310422420] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125546.310438572] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125546.310569219] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125546.410640033] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125546.410712160] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125546.410725209] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125546.410834559] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125546.514354511] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125546.514429081] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125546.514449725] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125546.514649286] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [INFO] [1795125546.975201110] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-1] [INFO] [1795125546.977419731] [local_costmap.local_costmap]: KeepoutFilter: Subscribing to "/virtual_wall/filter_info" topic for filter info...
+[planner_server-3] [WARN] [1795125547.745148860] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [WARN] [1795125547.785811407] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125548.363126444] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
+[controller_server-1] [ERROR] [1795125549.010109029] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125549.010163963] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125549.010175547] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125549.010265468] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125549.112896827] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125549.112987981] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125549.113007031] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125549.113203186] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125549.410956002] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125549.411054935] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125549.411078309] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125549.411220810] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125549.510924423] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125549.510983025] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125549.510995475] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125549.511159190] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125549.610538751] [DWBLocalPlanner]: No valid trajectories out of 344! 
+[controller_server-1] [ERROR] [1795125549.610608808] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125549.610625119] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125549.610772717] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 344! 
+[controller_server-1] [WARN] [1795125549.985603998] [local_costmap.local_costmap]: KeepoutFilter: Filter mask was not received
+[controller_server-1] [ERROR] [1795125550.010607607] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125550.010681808] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125550.010698722] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125550.010708718] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125550.010845885] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125550.111308637] [DWBLocalPlanner]: No valid trajectories out of 352! 
+[controller_server-1] [ERROR] [1795125550.111367623] [DWBLocalPlanner]: 0.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1795125550.111378945] [DWBLocalPlanner]: 0.00: Oscillation/Trajectory is oscillating.
+[controller_server-1] [ERROR] [1795125550.111385383] [DWBLocalPlanner]: 0.99: RotateToGoal/Nonrotation command near goal.
+[controller_server-1] [WARN] [1795125550.111503756] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 352! 
+[planner_server-3] [WARN] [1795125550.241486169] [global_costmap.global_costmap]: KeepoutFilter: Filter mask was not received
+[bt_navigator-5] [INFO] [1795125550.473109187] [bt_navigator_navigate_to_pose_rclcpp_node]: CAMINHO_ORIGINAL: suavizado reprovado, original conferido e liberado (0 poses, 0 rasantes)
