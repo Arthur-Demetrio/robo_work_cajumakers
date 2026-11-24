@@ -28,6 +28,7 @@ setup(
             'camera_cubo = garra_coleta.camera_cubo:main',
             'plataforma_y = garra_coleta.plataforma_y:main',
             'gerenciador_slots = garra_coleta.gerenciador_slots:main',
+            'bateria_virtual = garra_coleta.bateria_virtual:main',
         ],
     },
 )

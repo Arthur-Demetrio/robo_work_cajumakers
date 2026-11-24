@@ -1,0 +1,27 @@
+# Estruturas da bateria de testes virtuais (bateria_virtual.py). Frame robo_base, metros.
+# A frente do robo fica em x = 0.275. borda_x = onde comeca o tampo (o robo encostado: 0.275).
+#
+# ATENCAO: alturas e profundidades abaixo sao HIPOTESES (regulamento RoboCup@Work, de memoria), nao
+# medidas da arena. Medir e corrigir antes de confiar no relatorio.
+#
+# tipo:
+#   chao   - so o piso
+#   mesa   - bloco solido do chao ate 'altura' (workstation)
+#   estante - prateleira em 'altura' com outra prateleira (teto) em 'altura + vao', espessura 'espessura'
+# Para cada estrutura, a bateria testa cubos de borda_x + x_min ate borda_x + x_max, a cada passo.
+
+cubo: 0.042            # aresta do cubo
+passo: 0.01
+x_min: 0.03            # centro do cubo a partir da borda (ao menos meia aresta + folga)
+x_max: 0.30
+largura_y: 1.0         # largura das estruturas em Y (centradas no Y do TCP)
+
+estruturas:
+  - {nome: chao, tipo: chao, borda_x: 0.275}
+  - {nome: mesa_5cm, tipo: mesa, altura: 0.05, borda_x: 0.275, profundidade: 0.40}
+  - {nome: mesa_10cm, tipo: mesa, altura: 0.10, borda_x: 0.275, profundidade: 0.40}
+  - {nome: mesa_15cm, tipo: mesa, altura: 0.15, borda_x: 0.275, profundidade: 0.40}
+  - {nome: estante_baixa, tipo: estante, altura: 0.10, vao: 0.25, espessura: 0.02,
+     borda_x: 0.275, profundidade: 0.30}
+  - {nome: estante_alta, tipo: estante, altura: 0.35, vao: 0.25, espessura: 0.02,
+     borda_x: 0.275, profundidade: 0.30}
