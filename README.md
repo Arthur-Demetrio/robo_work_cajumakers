@@ -2,14 +2,16 @@
 
 Como subir o robô inteiro (base móvel + garra + câmera) para uma prova com coleta automática de cubos.
 
-| Pasta | Repositório | O que é |
-|---|---|---|
-| `garra/` | [Arthur-Demetrio/garra](https://github.com/Arthur-Demetrio/garra) | garra (MoveIt, driver, firmware) e os scripts da coleta |
-| `robo/` | [OttavioSilva/Robo-WORK](https://github.com/OttavioSilva/Robo-WORK) | base mecanum: hardware, LiDAR, SLAM, Nav2, executor da prova |
-| `camera/` | [niviton/-WORK](https://github.com/niviton/-WORK) | visão dos cubos (`cube_vision`, AprilTag 36h11) |
+Tudo fica num repositório só: [Arthur-Demetrio/robo_work_cajumakers](https://github.com/Arthur-Demetrio/robo_work_cajumakers).
 
-O `robo/` aqui é uma cópia local: o `executor_prova.py` dela já chama a garra no PEGAR (patch em
-`garra/integracao_robo/`). Não faça commit nem push nesse repositório.
+| Pasta | O que é | Origem |
+|---|---|---|
+| `garra/` | garra (MoveIt, driver, firmware) e os scripts da coleta | antigo [Arthur-Demetrio/garra](https://github.com/Arthur-Demetrio/garra) |
+| `robo/` | base mecanum: hardware, LiDAR, SLAM, Nav2, executor da prova | antigo [OttavioSilva/Robo-WORK](https://github.com/OttavioSilva/Robo-WORK) |
+| `camera/` | visão dos cubos (`cube_vision`, AprilTag 36h11) | antigo [niviton/-WORK](https://github.com/niviton/-WORK) |
+| `teleop/` | teleop por controle Xbox/PS5 para mapear e marcar pontos (seção 0.5) | novo |
+
+O `executor_prova.py` do `robo/` já chama a garra no PEGAR (patch em `garra/integracao_robo/`).
 
 ## Visão geral da ordem
 
@@ -41,13 +43,13 @@ sudo apt install -y ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-nav2-
   ros-jazzy-usb-cam ros-jazzy-vision-msgs
 ```
 
-Conferir: `rosdep check --os=ubuntu:noble --from-paths <pasta> --ignore-src -r` em cada repositório
+Conferir: `rosdep check --os=ubuntu:noble --from-paths <pasta> --ignore-src -r` em cada pasta (`garra/`, `robo/`, `camera/`)
 (no Linux Mint é preciso o `--os=ubuntu:noble`).
 
 ### 0.2 Caminhos que o robô espera
 
 Os scripts do robô usam caminhos fixos na home: `~/robo_jazzy_ws`, `~/subir_robo.sh` e `~/mapas/`.
-Aponte-os para esta pasta com links (não altera o repositório):
+Aponte-os para esta pasta com links (não altera os arquivos do repositório):
 
 ```bash
 ln -s ~/work/robo/workspaces/robo_jazzy_ws ~/robo_jazzy_ws
@@ -103,19 +105,29 @@ controle por USB ou Bluetooth; ele aparece em `/dev/input/js0` e o modelo é det
 python3 ~/work/teleop/teleop_mapeamento_joy.py
 ```
 
+**Para dirigir**
+
 | Xbox / PS5 | Ação |
 |---|---|
-| LB / L1 (segurar) | homem-morto: só anda segurando; soltar para na hora |
-| analógico esquerdo | frente/ré e lateral |
-| analógico direito (horizontal) | girar |
-| RB / R1 (segurar) | 2× mais rápido |
-| B / Círculo | PARADA: zera e trava até soltar tudo |
-| D-pad ↑↓ | tipo: START, FINISH, WS, SH, PP |
-| D-pad ←→ | número (WS_1, WS_2, …) |
-| A / Cruz | marca a pose atual no item escolhido |
-| Y / Triângulo (2× em 2 s) | apaga o item escolhido |
-| Menu / Options | grava os arquivos (backup `.bak_teleop_<hora>`) |
-| View / Create | lista o que já foi marcado |
+| **LB / L1** (segurar) | Homem-morto: o robô só anda com ele apertado e para assim que você solta |
+| **Analógico esquerdo** | Anda para frente/ré e de lado (lateral do mecanum) |
+| **Analógico direito** (só horizontal) | Gira o robô |
+| **RB / R1** (segurar) | Deixa 2× mais rápido |
+| **B / Círculo** | Parada: zera a velocidade e trava até você soltar todos os botões e analógicos |
+
+**Para marcar pontos**
+
+| Xbox / PS5 | Ação |
+|---|---|
+| **D-pad ↑ ↓** | Escolhe o tipo: START → FINISH → WS (workstation) → SH (shelf) → PP (precision) |
+| **D-pad ← →** | Escolhe o número (WS_1, WS_2, … até 9). Não vale para START/FINISH |
+| **A / Cruz** | Marca a pose atual do robô no item escolhido |
+| **Y / Triângulo** | Apaga o item escolhido. É preciso apertar duas vezes em até 2 s |
+| **Menu / Options** | Grava os arquivos em `~/mapas/` |
+| **View / Create** | Lista no terminal tudo o que já foi marcado |
+
+Exemplo: D-pad ↓ até `WS`, → até `WS_2`, leve o robô de frente para a mesa a uns 60 cm e aperte **A**;
+no fim, **Menu** para gravar. O terminal mostra sempre o item escolhido e se ele já foi marcado.
 
 - START/FINISH vão para `~/mapas/pontos.yaml`; WS/SH/PP para `~/mapas/service_areas.yaml` (as áreas que já
   estão no arquivo são mantidas). Outros caminhos: `--pontos` e `--service-areas`.
