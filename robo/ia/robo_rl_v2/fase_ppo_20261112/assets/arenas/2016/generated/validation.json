@@ -1,0 +1,631 @@
+{
+  "minimum_passage_m": 0.8,
+  "min_pair_gap_m": 0.8146446609406727,
+  "violations": [],
+  "internal_clearances_m": {
+    "cavidade_noroeste": [
+      1.9,
+      0.8
+    ],
+    "cavidade_nordeste": [
+      1.9,
+      0.8
+    ],
+    "cavidade_oeste": [
+      1.56,
+      1.1
+    ],
+    "cavidade_leste": [
+      1.56,
+      1.1
+    ],
+    "cruzamento_central": [
+      1.2,
+      1.04
+    ]
+  },
+  "conservative_disk_components": 8,
+  "safe_cells": 51084,
+  "pairs": [
+    {
+      "a": "boundary",
+      "b": "divisoria_sul",
+      "lower_bound_m": 1.8896446609406727
+    },
+    {
+      "a": "boundary",
+      "b": "divisoria_norte",
+      "lower_bound_m": 2.289644660940673
+    },
+    {
+      "a": "boundary",
+      "b": "quina_oeste",
+      "lower_bound_m": 2.5896446609406727
+    },
+    {
+      "a": "boundary",
+      "b": "estacao_noroeste",
+      "lower_bound_m": 0.8396446609406726
+    },
+    {
+      "a": "boundary",
+      "b": "estacao_nordeste",
+      "lower_bound_m": 0.8396446609406726
+    },
+    {
+      "a": "boundary",
+      "b": "cobertura_oeste",
+      "lower_bound_m": 0.8396446609406726
+    },
+    {
+      "a": "boundary",
+      "b": "cobertura_leste",
+      "lower_bound_m": 0.8396446609406726
+    },
+    {
+      "a": "boundary",
+      "b": "mesa_vermelha",
+      "lower_bound_m": 0.8896446609406726
+    },
+    {
+      "a": "boundary",
+      "b": "plataforma_circular",
+      "lower_bound_m": 1.0146446609406727
+    },
+    {
+      "a": "boundary",
+      "b": "plataforma_sudoeste",
+      "lower_bound_m": 0.8646446609406726
+    },
+    {
+      "a": "boundary",
+      "b": "plataforma_sudeste",
+      "lower_bound_m": 0.8646446609406726
+    },
+    {
+      "a": "boundary",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 0.9896446609406727
+    },
+    {
+      "a": "boundary",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 0.9896446609406727
+    },
+    {
+      "a": "boundary",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 3.664644660940673
+    },
+    {
+      "a": "boundary",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 2.864644660940673
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "divisoria_norte",
+      "lower_bound_m": 1.0896446609406727
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "quina_oeste",
+      "lower_bound_m": 1.4191634817195584
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "estacao_noroeste",
+      "lower_bound_m": 4.372733816118911
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "estacao_nordeste",
+      "lower_bound_m": 4.4203292323617696
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "cobertura_oeste",
+      "lower_bound_m": 2.758611375130375
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "cobertura_leste",
+      "lower_bound_m": 2.8331155079251773
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "mesa_vermelha",
+      "lower_bound_m": 2.66105431082698
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "plataforma_circular",
+      "lower_bound_m": 2.6872353389530694
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "plataforma_sudoeste",
+      "lower_bound_m": 0.9040593723434694
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "plataforma_sudeste",
+      "lower_bound_m": 1.3966450101026413
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 4.10725857005651
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 4.05464771717425
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 1.8922403135607961
+    },
+    {
+      "a": "divisoria_sul",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 1.2646446609406727
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "quina_oeste",
+      "lower_bound_m": 2.5633222092332653
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "estacao_noroeste",
+      "lower_bound_m": 2.739757271268405
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "estacao_nordeste",
+      "lower_bound_m": 1.7203496475486166
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "cobertura_oeste",
+      "lower_bound_m": 2.739644660940673
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "cobertura_leste",
+      "lower_bound_m": 1.8940227990981466
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "mesa_vermelha",
+      "lower_bound_m": 4.069672066452115
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "plataforma_circular",
+      "lower_bound_m": 5.192753783749798
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "plataforma_sudoeste",
+      "lower_bound_m": 4.170592829903291
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "plataforma_sudeste",
+      "lower_bound_m": 3.911874702374792
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 1.3898639423145953
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 1.0646446609406728
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 1.2896446609406729
+    },
+    {
+      "a": "divisoria_norte",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 2.1047381168439423
+    },
+    {
+      "a": "quina_oeste",
+      "b": "estacao_noroeste",
+      "lower_bound_m": 4.092371032685777
+    },
+    {
+      "a": "quina_oeste",
+      "b": "estacao_nordeste",
+      "lower_bound_m": 6.293595995877608
+    },
+    {
+      "a": "quina_oeste",
+      "b": "cobertura_oeste",
+      "lower_bound_m": 1.0005621286957058
+    },
+    {
+      "a": "quina_oeste",
+      "b": "cobertura_leste",
+      "lower_bound_m": 4.872864806777654
+    },
+    {
+      "a": "quina_oeste",
+      "b": "mesa_vermelha",
+      "lower_bound_m": 1.0646446609406728
+    },
+    {
+      "a": "quina_oeste",
+      "b": "plataforma_circular",
+      "lower_bound_m": 1.5252935644420336
+    },
+    {
+      "a": "quina_oeste",
+      "b": "plataforma_sudoeste",
+      "lower_bound_m": 1.0646446609406728
+    },
+    {
+      "a": "quina_oeste",
+      "b": "plataforma_sudeste",
+      "lower_bound_m": 3.733762594887553
+    },
+    {
+      "a": "quina_oeste",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 4.589914923314538
+    },
+    {
+      "a": "quina_oeste",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 5.532465150144684
+    },
+    {
+      "a": "quina_oeste",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 2.064644660940673
+    },
+    {
+      "a": "quina_oeste",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 3.2146446609406727
+    },
+    {
+      "a": "estacao_noroeste",
+      "b": "estacao_nordeste",
+      "lower_bound_m": 5.689644660940673
+    },
+    {
+      "a": "estacao_noroeste",
+      "b": "cobertura_oeste",
+      "lower_bound_m": 1.6896446609406728
+    },
+    {
+      "a": "estacao_noroeste",
+      "b": "cobertura_leste",
+      "lower_bound_m": 5.943879561828913
+    },
+    {
+      "a": "estacao_noroeste",
+      "b": "mesa_vermelha",
+      "lower_bound_m": 3.989644660940673
+    },
+    {
+      "a": "estacao_noroeste",
+      "b": "plataforma_circular",
+      "lower_bound_m": 5.534934150724844
+    },
+    {
+      "a": "estacao_noroeste",
+      "b": "plataforma_sudoeste",
+      "lower_bound_m": 5.96651936806344
+    },
+    {
+      "a": "estacao_noroeste",
+      "b": "plataforma_sudeste",
+      "lower_bound_m": 7.317365245867044
+    },
+    {
+      "a": "estacao_noroeste",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 0.9396446609406727
+    },
+    {
+      "a": "estacao_noroeste",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 3.989644660940673
+    },
+    {
+      "a": "estacao_noroeste",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 1.6155913590505784
+    },
+    {
+      "a": "estacao_noroeste",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 5.746566919152037
+    },
+    {
+      "a": "estacao_nordeste",
+      "b": "cobertura_oeste",
+      "lower_bound_m": 5.943879561828913
+    },
+    {
+      "a": "estacao_nordeste",
+      "b": "cobertura_leste",
+      "lower_bound_m": 1.6896446609406728
+    },
+    {
+      "a": "estacao_nordeste",
+      "b": "mesa_vermelha",
+      "lower_bound_m": 7.759274222375906
+    },
+    {
+      "a": "estacao_nordeste",
+      "b": "plataforma_circular",
+      "lower_bound_m": 8.930447748227389
+    },
+    {
+      "a": "estacao_nordeste",
+      "b": "plataforma_sudoeste",
+      "lower_bound_m": 7.742979958419176
+    },
+    {
+      "a": "estacao_nordeste",
+      "b": "plataforma_sudeste",
+      "lower_bound_m": 6.024553901185117
+    },
+    {
+      "a": "estacao_nordeste",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 4.239644660940673
+    },
+    {
+      "a": "estacao_nordeste",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 1.1896446609406728
+    },
+    {
+      "a": "estacao_nordeste",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 4.463047155160148
+    },
+    {
+      "a": "estacao_nordeste",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 4.081758334377441
+    },
+    {
+      "a": "cobertura_oeste",
+      "b": "cobertura_leste",
+      "lower_bound_m": 5.689644660940673
+    },
+    {
+      "a": "cobertura_oeste",
+      "b": "mesa_vermelha",
+      "lower_bound_m": 0.8896446609406726
+    },
+    {
+      "a": "cobertura_oeste",
+      "b": "plataforma_circular",
+      "lower_bound_m": 2.414644660940673
+    },
+    {
+      "a": "cobertura_oeste",
+      "b": "plataforma_sudoeste",
+      "lower_bound_m": 2.8685213800869938
+    },
+    {
+      "a": "cobertura_oeste",
+      "b": "plataforma_sudeste",
+      "lower_bound_m": 5.10978800199542
+    },
+    {
+      "a": "cobertura_oeste",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 2.3938935160397135
+    },
+    {
+      "a": "cobertura_oeste",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 4.563693475641382
+    },
+    {
+      "a": "cobertura_oeste",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 0.8396446609406726
+    },
+    {
+      "a": "cobertura_oeste",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 4.235549131892932
+    },
+    {
+      "a": "cobertura_leste",
+      "b": "mesa_vermelha",
+      "lower_bound_m": 6.703431643773711
+    },
+    {
+      "a": "cobertura_leste",
+      "b": "plataforma_circular",
+      "lower_bound_m": 7.322845867757459
+    },
+    {
+      "a": "cobertura_leste",
+      "b": "plataforma_sudoeste",
+      "lower_bound_m": 5.701586354909682
+    },
+    {
+      "a": "cobertura_leste",
+      "b": "plataforma_sudeste",
+      "lower_bound_m": 2.986647308192988
+    },
+    {
+      "a": "cobertura_leste",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 4.784006651910017
+    },
+    {
+      "a": "cobertura_leste",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 2.504575762368426
+    },
+    {
+      "a": "cobertura_leste",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 4.239644660940673
+    },
+    {
+      "a": "cobertura_leste",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 1.2915301119122327
+    },
+    {
+      "a": "mesa_vermelha",
+      "b": "plataforma_circular",
+      "lower_bound_m": 0.8146446609406727
+    },
+    {
+      "a": "mesa_vermelha",
+      "b": "plataforma_sudoeste",
+      "lower_bound_m": 1.6675832975333131
+    },
+    {
+      "a": "mesa_vermelha",
+      "b": "plataforma_sudeste",
+      "lower_bound_m": 5.3246819742436315
+    },
+    {
+      "a": "mesa_vermelha",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 4.882088102404947
+    },
+    {
+      "a": "mesa_vermelha",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 6.689691129181617
+    },
+    {
+      "a": "mesa_vermelha",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 2.6721573571251245
+    },
+    {
+      "a": "mesa_vermelha",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 5.089644660940673
+    },
+    {
+      "a": "plataforma_circular",
+      "b": "plataforma_sudoeste",
+      "lower_bound_m": 1.1896446609406728
+    },
+    {
+      "a": "plataforma_circular",
+      "b": "plataforma_sudeste",
+      "lower_bound_m": 5.289644660940673
+    },
+    {
+      "a": "plataforma_circular",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 6.478332172634799
+    },
+    {
+      "a": "plataforma_circular",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 8.066997714220935
+    },
+    {
+      "a": "plataforma_circular",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 4.162337479620954
+    },
+    {
+      "a": "plataforma_circular",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 5.379266069682008
+    },
+    {
+      "a": "plataforma_sudoeste",
+      "b": "plataforma_sudeste",
+      "lower_bound_m": 3.439644660940673
+    },
+    {
+      "a": "plataforma_sudoeste",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 6.4677208560963155
+    },
+    {
+      "a": "plataforma_sudoeste",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 7.231865587814989
+    },
+    {
+      "a": "plataforma_sudoeste",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 3.94090232361798
+    },
+    {
+      "a": "plataforma_sudoeste",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 3.632154033798498
+    },
+    {
+      "a": "plataforma_sudeste",
+      "b": "plataforma_norte_1",
+      "lower_bound_m": 7.042073572628872
+    },
+    {
+      "a": "plataforma_sudeste",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 6.464644660940673
+    },
+    {
+      "a": "plataforma_sudeste",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 4.826807245634854
+    },
+    {
+      "a": "plataforma_sudeste",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 1.3396446609406727
+    },
+    {
+      "a": "plataforma_norte_1",
+      "b": "plataforma_norte_2",
+      "lower_bound_m": 2.539644660940673
+    },
+    {
+      "a": "plataforma_norte_1",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 1.8646446609406728
+    },
+    {
+      "a": "plataforma_norte_1",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 5.22540743833332
+    },
+    {
+      "a": "plataforma_norte_2",
+      "b": "plataforma_centro_oeste",
+      "lower_bound_m": 3.164742315700602
+    },
+    {
+      "a": "plataforma_norte_2",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 4.464644660940673
+    },
+    {
+      "a": "plataforma_centro_oeste",
+      "b": "plataforma_centro_leste",
+      "lower_bound_m": 3.330094110865601
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "nota": "Snapshot posterior ao goal; nao prova custos no instante da falha. BFS de celulas nao prova passagem do footprint.",
+  "pose_atual": [
+    0.3438544851457379,
+    -0.0874801555903762
+  ],
+  "goal_log": [
+    1.57,
+    2.31
+  ],
+  "costmap_metadata": {
+    "res": 0.05000000074505806,
+    "ox": -3.4043464607333136,
+    "oy": -4.240189982221546,
+    "w": 214,
+    "h": 219
+  },
+  "mapa_metadata": {
+    "res": 0.05000000074505806,
+    "ox": -3.4043464607333136,
+    "oy": -4.240189982221546
+  },
+  "costmap_sem_unknown": {
+    "inicio_cel": [
+      74,
+      83
+    ],
+    "goal_cel": [
+      99,
+      131
+    ],
+    "inicio_custo": 87,
+    "goal_custo": 0,
+    "conectado": false,
+    "visitadas": 689
+  },
+  "costmap_com_unknown": {
+    "inicio_cel": [
+      74,
+      83
+    ],
+    "goal_cel": [
+      99,
+      131
+    ],
+    "inicio_custo": 87,
+    "goal_custo": 0,
+    "conectado": false,
+    "visitadas": 689
+  },
+  "mapa_ocupacao": {
+    "inicio_cel": [
+      74,
+      83
+    ],
+    "goal_cel": [
+      99,
+      131
+    ],
+    "inicio_custo": 0,
+    "goal_custo": 0,
+    "conectado": true,
+    "visitadas": 6111
+  }
+}

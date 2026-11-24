@@ -1,0 +1,52 @@
+[INFO] [1794261162.771763708] [alinhador_passagem]: Alinhador pronto. Envie goals em /goal_pose_alinhado.
+[INFO] [1794261162.773638702] [alinhador_passagem]: BANCADA: gatilho /sim/encostar pronto (codigo de /home/marcos/robo_jazzy_ws/src/robo_navigation/scripts)
+[INFO] [1794261165.816512479] [alinhador_passagem]: Laser em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[INFO] [1794261166.652255452] [alinhador_passagem]: BANCADA: encostar WS_1
+[INFO] [1794261166.660785854] [alinhador_passagem]: ENCOSTAR WS_1: medindo a face da mesa
+[INFO] [1794261166.715557678] [alinhador_passagem]: ENCOSTAR WS_1: aguardando segunda observacao coerente
+[INFO] [1794261166.875983648] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.610 c-0.024 a-1.9g)
+[INFO] [1794261167.709029089] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 1: face a 25 cm (para-choque), girar -1.7 graus, centro -2.9 cm
+[INFO] [1794261167.763764334] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando -2.9 cm de lado
+[INFO] [1794261169.078562108] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 2: face a 24 cm (para-choque), girar -1.7 graus, centro -1.4 cm
+[INFO] [1794261169.079089866] [alinhador_passagem]: ENCOSTAR WS_1: Alinhado com a mesa: avancando ate 9 cm
+[INFO] [1794261170.936618802] [alinhador_passagem]: ENCOSTAR WS_1: face WS parcial: so distancia/angulo (d0.476 c nd a-2.0g)
+[INFO] [1794261171.093449743] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.474 c-0.019 a-2.0g)
+[INFO] [1794261171.144387990] [alinhador_passagem]: ENCOSTAR WS_1: Folga 11.1 cm: pulso 1 de 0.15 s
+[INFO] [1794261172.254307046] [alinhador_passagem]: ENCOSTAR WS_1: face WS parcial: so distancia/angulo (d0.468 c nd a-2.1g)
+[INFO] [1794261172.413176988] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.467 c-0.004 a-2.1g)
+[INFO] [1794261172.948116807] [alinhador_passagem]: ENCOSTAR WS_1: Encostado: frente a 10.3 cm da mesa, -1.9 graus, centro -0.3 cm
+[INFO] [1794261172.948631110] [alinhador_passagem]: ENCOSTAR WS_1: ENCOSTO_CEGO: encostado a 10.3 cm, -1.9 graus; centro medido de longe -1.4 cm (perto o LiDAR nao ve o meio da face)
+[INFO] [1794261173.205995917] [alinhador_passagem]: ENCOSTAR WS_1: SUCESSO
+[INFO] [1794261173.206698958] [alinhador_passagem]: RESULTADO: WS_1 SUCESSO folga=10.3cm ang=-1.9 centro=-0.3cm
+Traceback (most recent call last):
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 4101, in main
+    executor.spin()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 359, in spin
+    self._spin_once_impl()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 991, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 748, in _wait_for_ready_callbacks
+    context_stack.enter_context(waitable)
+  File "/usr/lib/python3.12/contextlib.py", line 511, in enter_context
+    def enter_context(self, cm):
+
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/alinhador_bancada.py", line 57, in <module>
+    alinhador_passagem.main()
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 4104, in main
+    no._parar()
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 2862, in _parar
+    self._publicar_vel(0.0, 0.0, 0.0)
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 2858, in _publicar_vel
+    (self.pub_t if self.controle_t_ativo else self.pub_cmd).publish(m)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:423

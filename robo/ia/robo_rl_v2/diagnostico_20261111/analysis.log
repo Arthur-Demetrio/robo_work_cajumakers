@@ -1,0 +1,191 @@
+/home/marcos/robo_rl_v2/.venv/lib/python3.12/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+125000 stage0_fixed
+125000 stage0_holdout
+125000 arena_full
+5025000 stage0_fixed
+5025000 stage0_holdout
+5025000 arena_full
+5525000 stage0_fixed
+5525000 stage0_holdout
+5525000 arena_full
+6025000 stage0_fixed
+6025000 stage0_holdout
+6025000 arena_full
+{
+  "snapshot": {
+    "model": "/home/marcos/robo_rl_v2/runs/treino_continuo_20261111/checkpoints/ppo_000006025000.zip",
+    "steps": 6025000
+  },
+  "eval_count": 236,
+  "episodes": 23077,
+  "windows": {
+    "500k": {
+      "previous": {
+        "evals": 20,
+        "success": 0.05500000000000001,
+        "collision": 0.9339999999999999,
+        "train_success": 0.07100591715976332,
+        "train_collision": 0.9201183431952663,
+        "train_distance": 1.521814246684433,
+        "optimizer_median": {
+          "train/clip_fraction": 0.2984375,
+          "train/learning_rate": 0.0003,
+          "train/entropy_loss": -14.390501809120178,
+          "train/policy_gradient_loss": -0.030179545853752644,
+          "train/explained_variance": 0.4628051221370697,
+          "train/value_loss": 40.8383810043335,
+          "train/n_updates": 148855.0,
+          "train/clip_range": 0.2,
+          "train/loss": 10.125204086303711,
+          "train/approx_kl": 0.055773994,
+          "train/std": 31308.3330078125
+        }
+      },
+      "recent": {
+        "evals": 20,
+        "success": 0.07050000000000002,
+        "collision": 0.9115,
+        "train_success": 0.0634465820712239,
+        "train_collision": 0.934916086778551,
+        "train_distance": 1.5988517149431485,
+        "optimizer_median": {
+          "train/clip_fraction": 0.297265625,
+          "train/learning_rate": 0.0003,
+          "train/entropy_loss": -15.597534358501434,
+          "train/policy_gradient_loss": -0.03226898707216606,
+          "train/explained_variance": 0.48947882652282715,
+          "train/value_loss": 39.79096176624298,
+          "train/n_updates": 158620.0,
+          "train/clip_range": 0.2,
+          "train/loss": 9.5357027053833,
+          "train/approx_kl": 0.05490493,
+          "train/std": 75125.5546875
+        }
+      }
+    },
+    "1M": {
+      "previous": {
+        "evals": 40,
+        "success": 0.07375000000000001,
+        "collision": 0.90625,
+        "train_success": 0.0852837447899968,
+        "train_collision": 0.8957999358768837,
+        "train_distance": 1.537135270961112,
+        "optimizer_median": {
+          "train/clip_fraction": 0.26953125,
+          "train/learning_rate": 0.0003,
+          "train/entropy_loss": -12.589593636989594,
+          "train/policy_gradient_loss": -0.03006162055535242,
+          "train/explained_variance": 0.43183213472366333,
+          "train/value_loss": 43.50696576833725,
+          "train/n_updates": 134210.0,
+          "train/clip_range": 0.2,
+          "train/loss": 10.383798599243164,
+          "train/approx_kl": 0.045762226,
+          "train/std": 4339.67919921875
+        }
+      },
+      "recent": {
+        "evals": 40,
+        "success": 0.06275,
+        "collision": 0.92275,
+        "train_success": 0.06653762400193564,
+        "train_collision": 0.9288652310670216,
+        "train_distance": 1.567350790346674,
+        "optimizer_median": {
+          "train/clip_fraction": 0.298046875,
+          "train/learning_rate": 0.0003,
+          "train/entropy_loss": -15.241502201557159,
+          "train/policy_gradient_loss": -0.03122245942358859,
+          "train/explained_variance": 0.47873276472091675,
+          "train/value_loss": 40.135733735561374,
+          "train/n_updates": 153740.0,
+          "train/clip_range": 0.2,
+          "train/loss": 9.856751441955566,
+          "train/approx_kl": 0.055295132,
+          "train/std": 44387.30078125
+        }
+      }
+    }
+  },
+  "weights": [
+    {
+      "steps": 125000,
+      "sha256": "014847f8796d7571d47e04d6ba490ea99b8eb2b190febffcc4c7a823d20ae3ea",
+      "log_std": [
+        -0.7485669255256653,
+        -0.36937883496284485,
+        0.9292445182800293
+      ],
+      "ent_coef": 0.01,
+      "n_updates": 48280,
+      "n_epochs": 10,
+      "target_kl": null,
+      "learning_rate": 0.0003,
+      "parameter_rms": 0.3375870883464813,
+      "rms_delta_initial": 0
+    },
+    {
+      "steps": 5025000,
+      "sha256": "0184751f9ac9a1b084329a999f6b6e8a0839ec04e7be09e27530ec0987d601b4",
+      "log_std": [
+        -0.8369946479797363,
+        -0.42875662446022034,
+        10.848172187805176
+      ],
+      "ent_coef": 0.01,
+      "n_updates": 143980,
+      "n_epochs": 10,
+      "target_kl": null,
+      "learning_rate": 0.0003,
+      "parameter_rms": 0.4677887558937073,
+      "rms_delta_initial": 0.28189927339553833
+    },
+    {
+      "steps": 5525000,
+      "sha256": "db954f9a911363164e8d448011b1ffe3e9549538b3fb3e405971ce59d4fdc287",
+      "log_std": [
+        -0.5490589737892151,
+        -0.2887660264968872,
+        11.823328018188477
+      ],
+      "ent_coef": 0.01,
+      "n_updates": 153740,
+      "n_epochs": 10,
+      "target_kl": null,
+      "learning_rate": 0.0003,
+      "parameter_rms": 0.47492870688438416,
+      "rms_delta_initial": 0.2951013445854187
+    },
+    {
+      "steps": 6025000,
+      "sha256": "4a348a38806f4a4bbb1840aa835713824b24e1d47ed67a17a4cdce1200ef3ba3",
+      "log_std": [
+        -1.1235898733139038,
+        -0.6551766395568848,
+        13.135286331176758
+      ],
+      "ent_coef": 0.01,
+      "n_updates": 163510,
+      "n_epochs": 10,
+      "target_kl": null,
+      "learning_rate": 0.0003,
+      "parameter_rms": 0.4829349219799042,
+      "rms_delta_initial": 0.3110431134700775
+    }
+  ],
+  "native_python_max_abs": 0.0,
+  "sampling": {
+    "angles": 24,
+    "states": 1163258,
+    "physical_grid_shape": [
+      484,
+      331
+    ],
+    "layout_loaded": "/home/marcos/robo_rl_v2/experimentos_v2_20261110/layout_service_candidate.yaml",
+    "unique_start": 100,
+    "distance_min": 0.8139410298049856,
+    "distance_max": 1.9751582215103676
+  }
+}

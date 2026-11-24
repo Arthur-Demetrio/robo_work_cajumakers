@@ -1,0 +1,49 @@
+[INFO] [1794261227.061380175] [alinhador_passagem]: Alinhador pronto. Envie goals em /goal_pose_alinhado.
+[INFO] [1794261227.064289004] [alinhador_passagem]: BANCADA: gatilho /sim/encostar pronto (codigo de /home/marcos/robo_jazzy_ws/src/robo_navigation/scripts)
+[INFO] [1794261229.380263761] [alinhador_passagem]: Laser em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[INFO] [1794261233.490563988] [alinhador_passagem]: BANCADA: encostar WS_2
+[INFO] [1794261233.508735610] [alinhador_passagem]: ENCOSTAR WS_2: medindo a face da mesa
+[INFO] [1794261233.628843678] [alinhador_passagem]: ENCOSTAR WS_2: aguardando segunda observacao coerente
+[INFO] [1794261233.791441851] [alinhador_passagem]: ENCOSTAR WS_2: face WS consistente (d0.609 c+0.018 a-1.9g)
+[INFO] [1794261234.631451754] [alinhador_passagem]: ENCOSTAR WS_2: Medicao 1: face a 24 cm (para-choque), girar -1.7 graus, centro +1.8 cm
+[INFO] [1794261241.047085488] [alinhador_passagem]: ENCOSTAR WS_2: Medicao 2: face a 23 cm (para-choque), girar -1.5 graus, centro -0.5 cm
+[INFO] [1794261241.047651667] [alinhador_passagem]: ENCOSTAR WS_2: Alinhado com a mesa: avancando ate 9 cm
+[INFO] [1794261242.571570119] [alinhador_passagem]: ENCOSTAR WS_2: salto de referencia geometrica
+[INFO] [1794261242.796659491] [alinhador_passagem]: ENCOSTAR WS_2: aguardando segunda observacao coerente
+[INFO] [1794261242.959516321] [alinhador_passagem]: ENCOSTAR WS_2: face WS consistente (d0.476 c-0.002 a-2.0g)
+[INFO] [1794261243.125906064] [alinhador_passagem]: ENCOSTAR WS_2: Folga 11.1 cm: pulso 1 de 0.15 s
+[INFO] [1794261244.816792068] [alinhador_passagem]: ENCOSTAR WS_2: Encostado: frente a 10.6 cm da mesa, -1.8 graus, centro -1.1 cm
+[INFO] [1794261244.821082877] [alinhador_passagem]: ENCOSTAR WS_2: ENCOSTO_CEGO: encostado a 10.6 cm, -1.8 graus; centro medido de longe -0.5 cm (perto o LiDAR nao ve o meio da face)
+[INFO] [1794261245.077153129] [alinhador_passagem]: ENCOSTAR WS_2: SUCESSO
+[INFO] [1794261245.080385560] [alinhador_passagem]: RESULTADO: WS_2 SUCESSO folga=10.6cm ang=-1.8 centro=-1.1cm
+Traceback (most recent call last):
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 4101, in main
+    executor.spin()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 359, in spin
+    self._spin_once_impl()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 991, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 778, in _wait_for_ready_callbacks
+    waitable.add_to_wait_set(wait_set)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/event_handler.py", line 124, in add_to_wait_set
+    with self.__event:
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/alinhador_bancada.py", line 57, in <module>
+    alinhador_passagem.main()
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 4104, in main
+    no._parar()
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 2862, in _parar
+    self._publicar_vel(0.0, 0.0, 0.0)
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 2858, in _publicar_vel
+    (self.pub_t if self.controle_t_ativo else self.pub_cmd).publish(m)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:423

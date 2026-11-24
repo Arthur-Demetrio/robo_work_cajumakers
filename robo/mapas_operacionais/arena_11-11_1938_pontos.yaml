@@ -1,0 +1,11 @@
+# START e FINISH (frame map do mapa arena_11-11_1938). Gravado em 11/11 19:39 pela pose map->base_link medida com o
+# robo de volta ao inicio do mapeamento (no 0 do grafo do SLAM em (0,000; 0,000); robo a 1,8 cm e 2,5 graus dele).
+pontos:
+  START:
+    x: 0.018
+    y: -0.007
+    yaw: 0.043
+  FINISH:
+    x: 0.018
+    y: -0.007
+    yaw: 0.043

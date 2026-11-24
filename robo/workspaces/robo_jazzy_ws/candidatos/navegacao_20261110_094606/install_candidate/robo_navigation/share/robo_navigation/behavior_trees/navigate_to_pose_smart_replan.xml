@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+
+<root BTCPP_format="4" main_tree_to_execute="MainTree">
+
+  <BehaviorTree ID="MainTree">
+
+    <RecoveryNode number_of_retries="6" name="NavigateRecovery">
+
+      <PipelineSequence name="NavigateWithSmartReplanning">
+
+        <ControllerSelector
+          selected_controller="{selected_controller}"
+          default_controller="FollowPath"
+          topic_name="controller_selector"/>
+
+        <PlannerSelector
+          selected_planner="{selected_planner}"
+          default_planner="GridBased"
+          topic_name="planner_selector"/>
+
+
+        <!--
+          Verifica o estado do caminho a 2 Hz,
+          mas só recalcula quando necessário.
+        -->
+        <RateController hz="2.0">
+
+          <RecoveryNode number_of_retries="1" name="ComputePathToPose">
+
+            <Fallback name="SmartReplanning">
+
+              <!--
+                Mantém o caminho atual apenas se:
+                1) ainda não passou de 10 s
+                2) o Goal não mudou
+                3) o trecho RESTANTE do caminho continua válido
+              -->
+              <ReactiveSequence name="CheckIfNewPathNeeded">
+
+                <Inverter>
+                  <PathExpiringTimer
+                    seconds="10.0"
+                    path="{smoothed_path}"/>
+                </Inverter>
+
+                <Inverter>
+                  <GlobalUpdatedGoal/>
+                </Inverter>
+
+                <!--
+                  Remove do teste a parte já percorrida.
+                  distance_forward = -1:
+                  mantém todo o trecho à frente.
+                  distance_backward = 0:
+                  não valida trecho atrás do robô.
+                -->
+                <TruncatePathLocal
+                  input_path="{smoothed_path}"
+                  output_path="{remaining_path}"
+                  distance_forward="-1.0"
+                  distance_backward="0.0"
+                  robot_frame="base_link"
+                  transform_tolerance="0.50"/>
+
+                <!--
+                  Só valida o caminho ainda relevante.
+                -->
+                <IsPathValid
+                  path="{remaining_path}"/>
+
+              </ReactiveSequence>
+
+
+              <!--
+                Se alguma condição acima falhar,
+                gera uma nova rota e suaviza.
+              -->
+              <Sequence name="ComputeAndSmoothPath">
+
+                <ComputePathToPose
+                  goal="{goal}"
+                  path="{path}"
+                  planner_id="{selected_planner}"
+                  error_code_id="{compute_path_error_code}"/>
+
+                <SmoothPath
+                  unsmoothed_path="{path}"
+                  smoothed_path="{smoothed_path}"
+                  smoother_id="simple_smoother"
+                  max_smoothing_duration="2.0"
+                  check_for_collisions="false"
+                  error_code_id="{smoothing_path_error_code}"/>
+
+              </Sequence>
+
+            </Fallback>
+
+
+            <!-- Recuperação contextual de planejamento -->
+            <Sequence name="PlanningRecovery">
+
+              <Fallback name="PlanningOrSmoothingRecovery">
+
+                <WouldAPlannerRecoveryHelp
+                  error_code="{compute_path_error_code}"/>
+
+                <WouldASmootherRecoveryHelp
+                  error_code="{smoothing_path_error_code}"/>
+
+              </Fallback>
+
+              <ClearEntireCostmap
+                name="ClearGlobalCostmap-Context"
+                service_name="global_costmap/clear_entirely_global_costmap"/>
+
+            </Sequence>
+
+          </RecoveryNode>
+
+        </RateController>
+
+
+        <!-- Segue sempre o caminho suavizado -->
+        <RecoveryNode number_of_retries="1" name="FollowPath">
+
+          <FollowPath
+            path="{smoothed_path}"
+            controller_id="{selected_controller}"
+            error_code_id="{follow_path_error_code}"/>
+
+          <Sequence name="ControllerRecovery">
+
+            <WouldAControllerRecoveryHelp
+              error_code="{follow_path_error_code}"/>
+
+            <ClearEntireCostmap
+              name="ClearLocalCostmap-Context"
+              service_name="local_costmap/clear_entirely_local_costmap"/>
+
+          </Sequence>
+
+        </RecoveryNode>
+
+      </PipelineSequence>
+
+
+      <!-- Recuperação geral -->
+      <Sequence name="SystemRecovery">
+
+        <Fallback name="RecoveryNeeded">
+
+          <WouldAControllerRecoveryHelp
+            error_code="{follow_path_error_code}"/>
+
+          <WouldAPlannerRecoveryHelp
+            error_code="{compute_path_error_code}"/>
+
+          <WouldASmootherRecoveryHelp
+            error_code="{smoothing_path_error_code}"/>
+
+        </Fallback>
+
+        <ReactiveFallback name="RecoveryFallback">
+
+          <GoalUpdated/>
+
+          <RoundRobin name="RecoveryActions">
+
+            <Sequence name="ClearingActions">
+
+              <ClearEntireCostmap
+                name="ClearLocalCostmap-Subtree"
+                service_name="local_costmap/clear_entirely_local_costmap"/>
+
+              <ClearEntireCostmap
+                name="ClearGlobalCostmap-Subtree"
+                service_name="global_costmap/clear_entirely_global_costmap"/>
+
+            </Sequence>
+
+            <Spin
+              name="SpinRecovery"
+              spin_dist="1.57"
+              error_code_id="{spin_error_code}"/>
+
+            <Wait
+              name="WaitRecovery"
+              wait_duration="5.0"/>
+
+            <BackUp
+              name="BackUpRecovery"
+              backup_dist="0.30"
+              backup_speed="0.15"
+              error_code_id="{backup_error_code}"/>
+
+          </RoundRobin>
+
+        </ReactiveFallback>
+
+      </Sequence>
+
+    </RecoveryNode>
+
+  </BehaviorTree>
+
+</root>

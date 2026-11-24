@@ -1,0 +1,162 @@
+........................FFFFF......F.............................        [100%]
+=================================== FAILURES ===================================
+____________ test_goal_comum_bancada_preserva_interface_e_yaw[None] ____________
+
+area = None
+
+    @pytest.mark.parametrize('area',[None,'FINISH','WS_1'])
+    def test_goal_comum_bancada_preserva_interface_e_yaw(area):
+        f,calls=fake_exec();goal=NS(pose=NS(position=NS(x=1,y=2),orientation=NS(z=.7,w=.7)))
+>       metodo('_executar_principal')(f,goal,area)
+
+src/robo_navigation/test/test_nav2_principal.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = namespace(_log_nav_principal=<function fake_exec.<locals>.<lambda> at 0x7c9376e68540>, p=<function fake_exec.<locals>....exec.<locals>.<lambda> at 0x7c9376e68a40>, _navegar_principal=<function fake_exec.<locals>.<lambda> at 0x7c9376e68ae0>)
+goal = namespace(pose=namespace(position=namespace(x=1, y=2), orientation=namespace(z=0.7, w=0.7)))
+area = None
+
+>   ???
+E   AttributeError: 'types.SimpleNamespace' object has no attribute 'get_logger'
+
+<alinhador real>:4191: AttributeError
+___________ test_goal_comum_bancada_preserva_interface_e_yaw[FINISH] ___________
+
+area = 'FINISH'
+
+    @pytest.mark.parametrize('area',[None,'FINISH','WS_1'])
+    def test_goal_comum_bancada_preserva_interface_e_yaw(area):
+        f,calls=fake_exec();goal=NS(pose=NS(position=NS(x=1,y=2),orientation=NS(z=.7,w=.7)))
+>       metodo('_executar_principal')(f,goal,area)
+
+src/robo_navigation/test/test_nav2_principal.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = namespace(_log_nav_principal=<function fake_exec.<locals>.<lambda> at 0x7c9376e69bc0>, p=<function fake_exec.<locals>....exec.<locals>.<lambda> at 0x7c9376e6a0c0>, _navegar_principal=<function fake_exec.<locals>.<lambda> at 0x7c9376e6a160>)
+goal = namespace(pose=namespace(position=namespace(x=1, y=2), orientation=namespace(z=0.7, w=0.7)))
+area = 'FINISH'
+
+>   ???
+E   AttributeError: 'types.SimpleNamespace' object has no attribute 'get_logger'
+
+<alinhador real>:4191: AttributeError
+____________ test_goal_comum_bancada_preserva_interface_e_yaw[WS_1] ____________
+
+area = 'WS_1'
+
+    @pytest.mark.parametrize('area',[None,'FINISH','WS_1'])
+    def test_goal_comum_bancada_preserva_interface_e_yaw(area):
+        f,calls=fake_exec();goal=NS(pose=NS(position=NS(x=1,y=2),orientation=NS(z=.7,w=.7)))
+>       metodo('_executar_principal')(f,goal,area)
+
+src/robo_navigation/test/test_nav2_principal.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = namespace(_log_nav_principal=<function fake_exec.<locals>.<lambda> at 0x7c9376e6a200>, p=<function fake_exec.<locals>....exec.<locals>.<lambda> at 0x7c9376e6a5c0>, _navegar_principal=<function fake_exec.<locals>.<lambda> at 0x7c9376e6a7a0>)
+goal = namespace(pose=namespace(position=namespace(x=1, y=2), orientation=namespace(z=0.7, w=0.7)))
+area = 'WS_1'
+
+>   ???
+E   AttributeError: 'types.SimpleNamespace' object has no attribute 'get_logger'
+
+<alinhador real>:4191: AttributeError
+_______ test_corredor_t_devolve_nav2_com_novo_goal_e_sem_insistir[False] _______
+
+curva = False
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7c9376dfb800>
+
+    @pytest.mark.parametrize('curva',[False,True])
+    def test_corredor_t_devolve_nav2_com_novo_goal_e_sem_insistir(curva,monkeypatch):
+        f,calls=fake_exec();f.p=lambda k:{'max_passagens':4,'largura_estreita':.9,
+            'distancia_preparo':.6,'distancia_saida':.45,'centro_corpo':.08}[k]
+        f.plano=[(0,0),(2,0)];f.plano_t=time.monotonic()+100;f.scan=(time.monotonic(),[],None)
+        f._pose_mapa_yaw=lambda **kw:(0,0,0);f._mapa=lambda:object()
+        info={'entrada':(0,0),'largura_mapa':.82,'eixo_graus':0}
+        if curva: info['curva']={'juncao':(1,0),'lado':1,'entrada_b':(1,0)}
+        fn=metodo('_executar_principal')
+        fn.__globals__['planejar_etapas']=lambda *a,**k:([{'x':0,'y':0,'yaw':0}],info)
+        fn.__globals__['medir_corredor']=lambda pts:{'largura':.82,'lados':2}
+        n=[0]
+        def nav(goal,nome,vigia):
+            n[0]+=1;calls.append('navigate')
+            if n[0]==1: assert vigia();return 'interrompido'
+            return 'ok'
+        f._navegar_principal=nav;f._chegar_preparo=lambda *a:(calls.append('preparo'),'ok')[1]
+        f._travessia_lidar=lambda *a:(calls.append('corredor'),'ok')[1]
+        f._travessia_lateral=lambda *a:(calls.append('T'),'ok')[1]
+        goal=NS(pose=NS(position=NS(x=2,y=0)))
+>       fn(f,goal)
+
+src/robo_navigation/test/test_nav2_principal.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = namespace(_log_nav_principal=<function fake_exec.<locals>.<lambda> at 0x7c9376e6ade0>, p=<function test_corredor_t_dev...essia_lateral=<function test_corredor_t_devolve_nav2_com_novo_goal_e_sem_insistir.<locals>.<lambda> at 0x7c9376e6a020>)
+goal = namespace(pose=namespace(position=namespace(x=2, y=0))), area = None
+
+>   ???
+E   AttributeError: 'types.SimpleNamespace' object has no attribute 'get_logger'
+
+<alinhador real>:4191: AttributeError
+_______ test_corredor_t_devolve_nav2_com_novo_goal_e_sem_insistir[True] ________
+
+curva = True
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7c9376e66240>
+
+    @pytest.mark.parametrize('curva',[False,True])
+    def test_corredor_t_devolve_nav2_com_novo_goal_e_sem_insistir(curva,monkeypatch):
+        f,calls=fake_exec();f.p=lambda k:{'max_passagens':4,'largura_estreita':.9,
+            'distancia_preparo':.6,'distancia_saida':.45,'centro_corpo':.08}[k]
+        f.plano=[(0,0),(2,0)];f.plano_t=time.monotonic()+100;f.scan=(time.monotonic(),[],None)
+        f._pose_mapa_yaw=lambda **kw:(0,0,0);f._mapa=lambda:object()
+        info={'entrada':(0,0),'largura_mapa':.82,'eixo_graus':0}
+        if curva: info['curva']={'juncao':(1,0),'lado':1,'entrada_b':(1,0)}
+        fn=metodo('_executar_principal')
+        fn.__globals__['planejar_etapas']=lambda *a,**k:([{'x':0,'y':0,'yaw':0}],info)
+        fn.__globals__['medir_corredor']=lambda pts:{'largura':.82,'lados':2}
+        n=[0]
+        def nav(goal,nome,vigia):
+            n[0]+=1;calls.append('navigate')
+            if n[0]==1: assert vigia();return 'interrompido'
+            return 'ok'
+        f._navegar_principal=nav;f._chegar_preparo=lambda *a:(calls.append('preparo'),'ok')[1]
+        f._travessia_lidar=lambda *a:(calls.append('corredor'),'ok')[1]
+        f._travessia_lateral=lambda *a:(calls.append('T'),'ok')[1]
+        goal=NS(pose=NS(position=NS(x=2,y=0)))
+>       fn(f,goal)
+
+src/robo_navigation/test/test_nav2_principal.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = namespace(_log_nav_principal=<function fake_exec.<locals>.<lambda> at 0x7c9376e685e0>, p=<function test_corredor_t_dev...essia_lateral=<function test_corredor_t_devolve_nav2_com_novo_goal_e_sem_insistir.<locals>.<lambda> at 0x7c9376e6b240>)
+goal = namespace(pose=namespace(position=namespace(x=2, y=0))), area = None
+
+>   ???
+E   AttributeError: 'types.SimpleNamespace' object has no attribute 'get_logger'
+
+<alinhador real>:4191: AttributeError
+______________ test_preempcao_durante_manobra_para_e_nao_reenvia _______________
+
+    def test_preempcao_durante_manobra_para_e_nao_reenvia():
+        f,calls=fake_exec();f.dono_mov='especial'
+        def cancelar(*a):raise InterruptedError('goal novo')
+        f._navegar_principal=cancelar
+>       with pytest.raises(InterruptedError):metodo('_executar_principal')(f,object())
+
+src/robo_navigation/test/test_nav2_principal.py:189: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = namespace(_log_nav_principal=<function fake_exec.<locals>.<lambda> at 0x7c9376b482c0>, p=<function fake_exec.<locals>....>, _navegar_principal=<function test_preempcao_durante_manobra_para_e_nao_reenvia.<locals>.cancelar at 0x7c93768b2ca0>)
+goal = <object object at 0x7c93792a5580>, area = None
+
+>   ???
+E   AttributeError: 'types.SimpleNamespace' object has no attribute 'get_logger'
+
+<alinhador real>:4191: AttributeError
+=========================== short test summary info ============================
+FAILED src/robo_navigation/test/test_nav2_principal.py::test_goal_comum_bancada_preserva_interface_e_yaw[None]
+FAILED src/robo_navigation/test/test_nav2_principal.py::test_goal_comum_bancada_preserva_interface_e_yaw[FINISH]
+FAILED src/robo_navigation/test/test_nav2_principal.py::test_goal_comum_bancada_preserva_interface_e_yaw[WS_1]
+FAILED src/robo_navigation/test/test_nav2_principal.py::test_corredor_t_devolve_nav2_com_novo_goal_e_sem_insistir[False]
+FAILED src/robo_navigation/test/test_nav2_principal.py::test_corredor_t_devolve_nav2_com_novo_goal_e_sem_insistir[True]
+FAILED src/robo_navigation/test/test_nav2_principal.py::test_preempcao_durante_manobra_para_e_nao_reenvia
+6 failed, 59 passed in 3.30s

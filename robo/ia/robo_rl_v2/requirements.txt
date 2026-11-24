@@ -1,0 +1,11 @@
+numpy==1.26.4
+scipy==1.11.4
+PyYAML==6.0.1
+Pillow==13.0.0
+matplotlib==3.11.2
+gymnasium==1.4.0
+stable-baselines3==2.9.2
+torch==2.15.0
+protobuf>=4.21,<8
+# Optional UI; not needed by training or scalar event writer:
+# tensorboard

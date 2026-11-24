@@ -1,0 +1,60 @@
+"""Reconhece inteira de longe, acompanha parcial perto sem inventar centro."""
+import math
+import unittest
+from test_lateral_ws import segmento, ZERO
+from face_ws import RastreioFaceWS, transformar_ponto
+from alinhador_passagem import Encosto
+
+class TestFaceProxima(unittest.TestCase):
+    def rastreio(self):
+        r = RastreioFaceWS(dict(x=.50,y=0.,yaw=0.,largura_medida=.8))
+        pts = segmento(.50, n=81)
+        r.medir(pts, 0., ZERO, ZERO)
+        self.assertIsNotNone(r.medir(pts, .17, ZERO, ZERO))
+        return r, pts
+
+    def test_acompanha_lacuna_e_compensa_centro_sem_extremidades(self):
+        r, pts = self.rastreio()
+        pose = (.055,.012,0.)
+        parcial = [transformar_ponto(p,ZERO,pose) for p in pts if -.30 < p[1] < .32 and abs(p[1]) > .10]
+        m = r.medir(parcial,.34,pose,pose)
+        self.assertIsNotNone(m)
+        self.assertTrue(m['parcial'])
+        self.assertAlmostEqual(m['dist'],.445)
+        self.assertAlmostEqual(m['centro'],-.012)
+        self.assertIsNotNone(r.medir(parcial,.51,pose,pose))
+
+    def test_parcial_nao_reconhece_nem_reassume_apos_perda(self):
+        r,pts = self.rastreio()
+        partial = [p for p in pts if abs(p[1]) > .1]
+        fresh = RastreioFaceWS(r.face)
+        self.assertIsNone(fresh.medir(partial,0.,ZERO,ZERO))
+        self.assertIsNone(r.medir(partial,1.,ZERO,ZERO))
+        self.assertIsNone(r.medir(pts,1.17,ZERO,ZERO))
+        self.assertIsNone(r.medir(partial,1.34,ZERO,ZERO))
+
+    def test_nao_aceita_plano_errado_ou_sem_retorno(self):
+        for pts in ([],segmento(.40),segmento(.50,a=math.radians(15),width=.3)):
+            r,_ = self.rastreio()
+            self.assertIsNone(r.medir(pts,.34,ZERO,ZERO))
+
+    def enc(self, centro=0., dist=.445):
+        e=Encosto(log=lambda _:None)
+        e.t0=e.t_estado=0.
+        e.estado='medir_final'
+        for t in (3.5,3.67,3.84,4.):
+            e.nova_medicao(t,dict(dist=dist,ang=0.,centro=centro,parcial=True),ZERO)
+        return e
+
+    def test_final_confere_distancia_e_centro(self):
+        e=self.enc();self.assertEqual(e.passo(4.,ZERO),(0.,0.,0.));self.assertEqual(e.estado,'fim')
+        e=self.enc(.06);e.passo(4.,ZERO);self.assertEqual(e.estado,'abortar')
+        e=self.enc(dist=.49);e.passo(4.,ZERO);self.assertEqual(e.estado,'avancar')
+
+    def test_parcial_interrompe_correcao(self):
+        for state in ('girar','deslocar','lat_mover','lat_pulso','lat_esperar'):
+            e=self.enc();e.estado=state
+            self.assertEqual(e.passo(4.,ZERO),(0.,0.,0.))
+            self.assertEqual(e.estado,'assentar_final')
+
+if __name__=='__main__':unittest.main()

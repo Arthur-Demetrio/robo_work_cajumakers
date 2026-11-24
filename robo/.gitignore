@@ -1,0 +1,45 @@
+# ROS 2 / colcon
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# IDE / sistema
+.vscode/
+.idea/
+.DS_Store
+*~
+
+# Arquivos locais e segredos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Dados completos publicados nos assets da release
+.venv/
+venv/
+CMakeFiles/
+build_*/
+install_*/
+*.o
+*.a
+*.so
+*.mcap
+*.db3
+*.posegraph
+*.data
+*.zip
+*.tar.gz
+ia/robo_rl_v2/runs/
+ia/robo_rl_v2/fase_ppo_*/runs/
+ia/robo_rl_v2/fase_ppo_*/interrupcoes/

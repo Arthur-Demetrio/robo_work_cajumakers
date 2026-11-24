@@ -1,0 +1,9 @@
+{
+  "success": 0.0,
+  "collision": 0.0,
+  "timeout": 1.0,
+  "elapsed": 5.12,
+  "distance": 4.381209733797939,
+  "reward": -0.26854859606252396,
+  "episodes": 3
+}

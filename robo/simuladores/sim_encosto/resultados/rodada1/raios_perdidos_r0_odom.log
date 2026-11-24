@@ -1,0 +1,4 @@
+[INFO] [1794261137.648274983] [command_imu_odometry]: ODOM_TABELA: velocidade pela tabela medida; comando [0.02, 0.03, 0.05, 0.08, 0.12, 0.16, 0.2, 0.31] -> frente [0.1035, 0.1103, 0.1239, 0.1444, 0.1717, 0.1991, 0.2264, 0.3015] / lado [0.0621, 0.0662, 0.0743, 0.0866, 0.103, 0.1195, 0.1358, 0.1809] m/s, zona morta 0.005
+[INFO] [1794261137.650317367] [command_imu_odometry]: Odometria comando+BNO055 pronta: /cmd_vel + /imu/data -> /odom; TF odom -> base_link
+[WARN] [1794261137.651792633] [command_imu_odometry]: Aguardando a primeira mensagem da IMU
+[INFO] [1794261140.533388749] [command_imu_odometry]: Referencia inicial de yaw capturada

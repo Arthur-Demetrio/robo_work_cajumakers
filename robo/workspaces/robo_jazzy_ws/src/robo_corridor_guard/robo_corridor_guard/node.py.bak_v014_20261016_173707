@@ -1,0 +1,278 @@
+"""ROS 2 Jazzy corridor observer + unconnected command preview (no actuation)."""
+import json
+import math
+import time
+from dataclasses import asdict
+
+import rclpy
+from rclpy.node import Node
+from rclpy.qos import qos_profile_sensor_data
+from rclpy.time import Time
+from rclpy.duration import Duration
+from geometry_msgs.msg import TwistStamped, Point
+from sensor_msgs.msg import LaserScan
+from std_msgs.msg import String
+from visualization_msgs.msg import Marker, MarkerArray
+import tf2_ros
+
+from .geometry import Config, find_corridor, evaluate_zones, preview_cmd
+
+class CorridorObserver(Node):
+    def __init__(self):
+        super().__init__('robo_corridor_observer')
+        self.declare_parameter('scan_topic','/scan_front')
+        self.declare_parameter('base_frame','base_link')
+        self.declare_parameter('max_scan_age_s',0.8)
+        self.declare_parameter('robot_width_m',0.63)
+        self.declare_parameter('min_width_m',0.70)
+        self.declare_parameter('max_width_m',1.05)
+        self.declare_parameter('min_clearance_m',0.045)
+        self.declare_parameter('corridor_confirm_scans',3)
+        self.declare_parameter('corridor_lost_scans',2)
+        self.cfg=Config(robot_width_m=float(self.get_parameter('robot_width_m').value),
+                        min_width_m=float(self.get_parameter('min_width_m').value),
+                        max_width_m=float(self.get_parameter('max_width_m').value),
+                        min_clearance_m=float(self.get_parameter('min_clearance_m').value))
+        self.base_frame=str(self.get_parameter('base_frame').value)
+        self.max_scan_age=float(self.get_parameter('max_scan_age_s').value)
+        self.confirm_scans=max(1,int(self.get_parameter('corridor_confirm_scans').value))
+        self.lost_scans=max(1,int(self.get_parameter('corridor_lost_scans').value))
+        self.buf=tf2_ros.Buffer(cache_time=Duration(seconds=5.0))
+        self.tf=tf2_ros.TransformListener(self.buf,self)
+        self.pending=None
+        self.scan_received_monotonic=None
+        self.latest=None
+        self.latest_ahead=None
+        self.last_lookahead_confirmed=False
+        self.lookahead_good_count=0
+        self.latest_stamp_age=None
+        self.latest_stats={}
+        self.last_good_monotonic=None
+        self.good_count=0
+        self.lost_count=0
+        self.corridor_active=False
+        self.cmd=(0.0,0.0,0.0)
+        self.last_cmd_monotonic=None
+        self.pub_status=self.create_publisher(String,'/geometry_corridor/status',10)
+        self.pub_markers=self.create_publisher(MarkerArray,'/geometry_corridor/markers',10)
+        self.pub_preview=self.create_publisher(TwistStamped,'/geometry_corridor/cmd_vel_preview',10)
+        self.create_subscription(LaserScan,str(self.get_parameter('scan_topic').value),self.on_scan,qos_profile_sensor_data)
+        self.create_subscription(TwistStamped,'/cmd_vel_nav',self.on_cmd,10)
+        self.create_timer(0.10,self.on_timer)
+        self.last_warning=time.monotonic()-10.0
+        self.get_logger().info('Modo corredor OBSERVADOR iniciado. Nenhum topico de motores recebe comandos deste no.')
+
+    def on_scan(self,msg):
+        self.pending=msg
+        self.scan_received_monotonic=time.monotonic()
+
+    def on_cmd(self,msg):
+        self.cmd=(float(msg.twist.linear.x),float(msg.twist.linear.y),float(msg.twist.angular.z))
+        self.last_cmd_monotonic=time.monotonic()
+
+    def _scan_points(self, msg, trans):
+        q=trans.transform.rotation
+        yaw=math.atan2(2*(q.w*q.z+q.x*q.y),1-2*(q.y*q.y+q.z*q.z))
+        cy,sy=math.cos(yaw), math.sin(yaw)
+        tx,ty=trans.transform.translation.x,trans.transform.translation.y
+        out=[]
+        for i,r in enumerate(msg.ranges):
+            if not math.isfinite(r) or not (msg.range_min < r < msg.range_max):
+                continue
+            a=msg.angle_min+i*msg.angle_increment
+            xx=r*math.cos(a);yy=r*math.sin(a)
+            out.append((cy*xx-sy*yy+tx,sy*xx+cy*yy+ty))
+        return out
+
+    def _point_statistics(self, points):
+        """Non-decisional counts for local and lookahead observation windows."""
+        cfg=self.cfg
+        windows={
+            'local':(-0.25,0.75),
+            'a_frente':(0.75,1.40),
+        }
+        result={'pontos_transformados':len(points)}
+        for key,(xmin,xmax) in windows.items():
+            usable=[(x,y) for x,y in points if xmin<=x<=xmax]
+            left=[(x,y) for x,y in usable if cfg.side_min_y_m<=y<=cfg.side_max_y_m]
+            right=[(x,y) for x,y in usable if -cfg.side_max_y_m<=y<=-cfg.side_min_y_m]
+            def xspan(side):
+                return round(max(x for x,_ in side)-min(x for x,_ in side),3) if side else 0.0
+            result[key]={
+                'pontos_esquerda':len(left), 'pontos_direita':len(right),
+                'extensao_esquerda_m':xspan(left),'extensao_direita_m':xspan(right),
+            }
+        return result
+
+    def process_latest(self):
+        if self.pending is None:
+            return
+        msg=self.pending
+        stamp=Time.from_msg(msg.header.stamp)
+        now=self.get_clock().now()
+        age=(now-stamp).nanoseconds/1.e9
+        self.latest_stamp_age=age
+        # Don't evaluate scans that disagree with the node's ROS clock.
+        if age>self.max_scan_age or age < -0.25:
+            self.pending=None
+            return
+        if not self.buf.can_transform(self.base_frame,msg.header.frame_id,stamp):
+            if time.monotonic()-self.scan_received_monotonic>self.max_scan_age:
+                self.pending=None
+            return
+        try:
+            trans=self.buf.lookup_transform(self.base_frame,msg.header.frame_id,stamp)
+        except tf2_ros.TransformException:
+            return
+        self.pending=None
+        points=self._scan_points(msg,trans)
+        self.latest_stats=self._point_statistics(points)
+        near,ahead=evaluate_zones(points,self.cfg)
+        new=near
+        self.latest=new
+        self.latest_ahead=ahead
+        if ahead.detected:
+            self.lookahead_good_count+=1
+        else:
+            self.lookahead_good_count=0
+        self.last_lookahead_confirmed=self.lookahead_good_count>=self.confirm_scans
+        self.last_good_monotonic=time.monotonic()
+        if new.detected:
+            self.good_count+=1
+            self.lost_count=0
+            if self.good_count>=self.confirm_scans:
+                self.corridor_active=True
+        else:
+            self.good_count=0
+            self.lost_count+=1
+            if self.lost_count>=self.lost_scans:
+                self.corridor_active=False
+
+    def _markers(self, fresh):
+        msg=MarkerArray()
+        clear=Marker()
+        clear.header.frame_id=self.base_frame
+        clear.header.stamp=self.get_clock().now().to_msg()
+        clear.action=Marker.DELETEALL
+        msg.markers.append(clear)
+        # Green: locally supported. Amber: ahead only, no current clearance proof.
+        selected=[]
+        if fresh and self.corridor_active and self.latest and self.latest.detected:
+            selected.append((self.latest,-0.25,0.75,'paredes_locais',0,0.8,0.3))
+        if fresh and self.last_lookahead_confirmed and self.latest_ahead and self.latest_ahead.detected:
+            selected.append((self.latest_ahead,0.75,1.40,'paredes_a_frente',10,0.85,0.55))
+        for c,xmin,xmax,namespace,id_start,r,g in selected:
+            for idx,wall in enumerate((c.left,c.right)):
+                if not wall: continue
+                m=Marker()
+                m.header.frame_id=self.base_frame
+                m.header.stamp=clear.header.stamp
+                m.ns=namespace
+                m.id=id_start+idx
+                m.type=Marker.LINE_STRIP
+                m.action=Marker.ADD
+                m.scale.x=0.018
+                m.color.a=1.0
+                m.color.r=r; m.color.g=g; m.color.b=0.20
+                for x in (xmin,xmax):
+                    p=Point(); p.x=float(x); p.y=float(wall.slope*x+wall.offset)
+                    m.points.append(p)
+                msg.markers.append(m)
+        return msg
+
+    def on_timer(self):
+        self.process_latest()
+        current=time.monotonic()
+        scan_fresh=(self.last_good_monotonic is not None and
+                    current-self.last_good_monotonic<self.max_scan_age)
+        c=self.latest
+        ahead=self.latest_ahead
+        # No fabricated claim of a detected corridor if lidar/TF is stale.
+        active=bool(scan_fresh and self.corridor_active and c and c.detected)
+        ahead_active=bool(scan_fresh and self.last_lookahead_confirmed and ahead and ahead.detected)
+        effective=c if active else find_corridor([],self.cfg)
+        cmd=self.cmd if self.last_cmd_monotonic and current-self.last_cmd_monotonic<0.5 else (0.0,0.0,0.0)
+        preview,reason=preview_cmd(*cmd,effective,scan_fresh,self.cfg)
+        # A geometric corridor seen only ahead does NOT prove current body clearance.
+        if ahead_active and not active:
+            preview=(0.0,0.0,0.0)
+            reason='CORREDOR_A_FRENTE_SEM_FOLGA_LOCAL_VERIFICADA'
+        if not scan_fresh:
+            diagnostic_reason='SEM_SCAN_VALIDO'
+        elif c is None:
+            diagnostic_reason='SEM_AVALIACAO'
+        elif c.detected and not active:
+            diagnostic_reason='AGUARDANDO_CONFIRMACAO_TEMPORAL_LOCAL'
+        elif active:
+            diagnostic_reason=c.reason
+        elif ahead_active:
+            diagnostic_reason='CORREDOR_A_FRENTE_SEM_FOLGA_LOCAL_VERIFICADA'
+        elif ahead and ahead.detected:
+            diagnostic_reason='AGUARDANDO_CONFIRMACAO_TEMPORAL_A_FRENTE'
+        elif ahead and ahead.reason!='DUAS_PAREDES_NAO_OBSERVADAS':
+            diagnostic_reason='A_FRENTE_'+ahead.reason
+        else:
+            diagnostic_reason=c.reason
+        obj={
+            'modo':'OBSERVACAO_SOMENTE',
+            'scan_fresh':scan_fresh,
+            'scan_stamp_age_s':round(self.latest_stamp_age,3) if self.latest_stamp_age is not None else None,
+            'corredor_detectado':active,
+            'corredor_a_frente':ahead_active,
+            'folga_local_verificada':active and c.reason=='CORREDOR_POSSIVEL',
+            'aviso':'DETECCAO_GEOMETRICA_NAO_AUTORIZA_NAVEGACAO', 
+            'largura_m':round(c.width_m,3) if active and c.width_m is not None else None,
+            'desvio_centro_m':round(c.center_y_m,3) if active and c.center_y_m is not None else None,
+            'desalinhamento_graus':round(math.degrees(c.heading_rad),1) if active and c.heading_rad is not None else None,
+            'folga_minima_estimativa_m':round(c.physical_clearance_m,3) if active and c.physical_clearance_m is not None else None,
+            'evidencia_geometrica':diagnostic_reason,
+            'candidata_no_scan':bool(scan_fresh and c and c.detected),
+            'candidata_a_frente_no_scan':bool(scan_fresh and ahead and ahead.detected),
+            'scans_consecutivos_a_frente':self.lookahead_good_count,
+            'scans_validos_consecutivos':self.good_count,
+            'scans_necessarios_confirmacao':self.confirm_scans,
+            'parede_esquerda_ajustada':bool(scan_fresh and c and c.left),
+            'parede_esquerda_a_frente':bool(scan_fresh and ahead and ahead.left),
+            'parede_direita_a_frente':bool(scan_fresh and ahead and ahead.right),
+            'largura_a_frente_m':round(ahead.width_m,3) if scan_fresh and ahead and ahead.width_m is not None else None,
+            'desvio_a_frente_m':round(ahead.center_y_m,3) if scan_fresh and ahead and ahead.center_y_m is not None else None,
+            'desalinhamento_a_frente_graus':round(math.degrees(ahead.heading_rad),1) if scan_fresh and ahead and ahead.heading_rad is not None else None,
+            'motivo_a_frente':ahead.reason if scan_fresh and ahead else None,
+            'parede_direita_ajustada':bool(scan_fresh and c and c.right),
+            'largura_candidata_m':round(c.width_m,3) if scan_fresh and c and c.width_m is not None else None,
+            'diagnostico_pontos':self.latest_stats if scan_fresh else {},
+            'comando_recebido':dict(vx=round(cmd[0],3),vy=round(cmd[1],3),wz=round(cmd[2],3)),
+            'acao_simulada':reason,
+            'comando_simulado':dict(vx=round(preview[0],3),vy=round(preview[1],3),wz=round(preview[2],3))
+        }
+        s=String(); s.data=json.dumps(obj,ensure_ascii=False)
+        self.pub_status.publish(s)
+        self.pub_markers.publish(self._markers(scan_fresh))
+        # Explicitly unconnected preview topic, NEVER /cmd_vel or /cmd_vel_nav.
+        out=TwistStamped()
+        out.header.stamp=self.get_clock().now().to_msg()
+        out.header.frame_id=self.base_frame
+        # Fail-closed preview output: never publish nonzero motor-like commands.
+        # Simulated rule conclusions remain visible in /geometry_corridor/status.
+        out.twist.linear.x=0.0
+        out.twist.linear.y=0.0
+        out.twist.angular.z=0.0
+        self.pub_preview.publish(out)
+        if not scan_fresh and current-self.last_warning>5:
+            self.last_warning=current
+            self.get_logger().warn('SEM_SCAN_VALIDO: LiDAR/TF ausente ou timestamp divergente. Nenhuma ordem aos motores foi enviada.')
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node=CorridorObserver()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+if __name__=='__main__':
+    main()

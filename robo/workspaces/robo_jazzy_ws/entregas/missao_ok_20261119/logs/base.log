@@ -1,0 +1,273 @@
+[INFO] [launch]: All log files can be found below /home/marcos/.ros/log/2026-11-19-20-30-01-067677-marcos-ThinkPad-E14-Gen-2-21433
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [hardware_bridge_node-1]: process started with pid [21452]
+[INFO] [static_transform_publisher-2]: process started with pid [21453]
+[INFO] [scan_filter_node-3]: process started with pid [21454]
+[INFO] [scan_filter_node-4]: process started with pid [21455]
+[INFO] [command_imu_odometry_node-5]: process started with pid [21456]
+[INFO] [localization_slam_toolbox_node-6]: process started with pid [21457]
+[INFO] [parede_virtual-7]: process started with pid [21458]
+[INFO] [mesas-8]: process started with pid [21459]
+[INFO] [cadastro-9]: process started with pid [21461]
+[INFO] [mapa-10]: process started with pid [21464]
+[parede_virtual-7] Aguardando a câmera frontal XIFT
+[static_transform_publisher-2] [INFO] [1795131001.626798589] [base_to_laser_tf]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('0.330000', '0.005000', '0.000000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-2] from 'base_link' to 'laser_raw'
+[hardware_bridge_node-1] [INFO] [1795131001.640726937] [robo_hardware]: Mecanum+BNO055 bridge ready: port=/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0 baud=500000 heading_hold=on
+[hardware_bridge_node-1] [INFO] [1795131001.643784495] [robo_hardware]: Serial connected: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0; command TX starts after 5.0 s
+[localization_slam_toolbox_node-6] [INFO] [1795131001.698764601] [slam_toolbox]: Node using stack size 40000000
+[cadastro-9] WS_1   face (2.94, 2.04)   -4 graus | aproximacao (2.34, 2.09) | altura 10 cm
+[cadastro-9] WS_2   face (1.49, 4.25)  176 graus | aproximacao (2.09, 4.22) | altura 10 cm
+[INFO] [cadastro-9]: process has finished cleanly [pid 21461]
+[localization_slam_toolbox_node-6] [INFO] [1795131002.311323472] [slam_toolbox]: Configuring
+[localization_slam_toolbox_node-6] [INFO] [1795131002.326303946] [slam_toolbox]: Using solver plugin solver_plugins::CeresSolver
+[localization_slam_toolbox_node-6] [INFO] [1795131002.328802080] [slam_toolbox]: CeresSolver: Using SCHUR_JACOBI preconditioner.
+[localization_slam_toolbox_node-6] Load From File /home/marcos/mapas/arena_11-11_1938.posegraph 
+[localization_slam_toolbox_node-6] Mapper <- Module
+[localization_slam_toolbox_node-6] Mapper <- m_pSequentialScanMatcher
+[localization_slam_toolbox_node-6] Mapper <- m_pGraph
+[localization_slam_toolbox_node-6] MapperGraph <- Graph; Graph <- m_Edges; Graph <- m_Vertices
+[localization_slam_toolbox_node-6] MapperGraph <- m_pMapper; MapperGraph <- m_pLoopScanMatcher; MapperGraph <- m_pTraversal
+[localization_slam_toolbox_node-6] Mapper <- m_pMapperSensorManager
+[localization_slam_toolbox_node-6] MapperSensorManager <- m_ScanManagers; MapperSensorManager <- m_Scans
+[localization_slam_toolbox_node-6] Mapper <- m_Listeners
+[localization_slam_toolbox_node-6] **Finished serializing Mapper**
+[localization_slam_toolbox_node-6] Load From File
+[localization_slam_toolbox_node-6] **Serializing Dataset**
+[localization_slam_toolbox_node-6] Dataset <- m_SensorNameLookup
+[localization_slam_toolbox_node-6] Dataset <- m_Data
+[localization_slam_toolbox_node-6] Dataset <- m_Lasers
+[localization_slam_toolbox_node-6] Dataset <- m_pDatasetInfo
+[localization_slam_toolbox_node-6] **Finished serializing Dataset**
+[localization_slam_toolbox_node-6] Registering sensor: [Custom Described Lidar]
+[localization_slam_toolbox_node-6] WARNING: Logging before InitGoogleLogging() is written to STDERR
+[localization_slam_toolbox_node-6] W20261119 20:30:02.622040 21457 preprocessor.cc:67] Specified options.num_threads: 50 exceeds maximum available from the threading model Ceres was compiled with: 8.  Bounding to maximum number available.
+[INFO] [launch.user]: [LifecycleLaunch] Slamtoolbox node is activating.
+[localization_slam_toolbox_node-6] [INFO] [1795131002.679872349] [slam_toolbox]: Activating
+[mesas-8] Publicando em /marcar_mesa/marcadores (frame map). Ctrl+C para sair.
+[mesas-8] Arquivo: 2 mesa(s): WS_1, WS_2
+[command_imu_odometry_node-5] [INFO] [1795131002.987799104] [command_imu_odometry]: ODOM_TABELA: velocidade pela tabela medida; comando [0.02, 0.03, 0.05, 0.08, 0.12, 0.16, 0.2, 0.31] -> frente [0.1035, 0.1103, 0.1239, 0.1444, 0.1717, 0.1991, 0.2264, 0.3015] / lado [0.0621, 0.0662, 0.0743, 0.0866, 0.103, 0.1195, 0.1358, 0.1809] m/s, zona morta 0.005
+[command_imu_odometry_node-5] [INFO] [1795131002.989344704] [command_imu_odometry]: Odometria comando+BNO055 pronta: /cmd_vel + /imu/data -> /odom; TF odom -> base_link
+[command_imu_odometry_node-5] [WARN] [1795131002.990869749] [command_imu_odometry]: Aguardando a primeira mensagem da IMU
+[scan_filter_node-3] [INFO] [1795131003.033841423] [scan_filter_temporal]: Filtro LiDAR pronto: /scan_raw_temporal -> /scan_temporal_front; inversao angular=ativa; intervalos bloqueados=0
+[scan_filter_node-3] [INFO] [1795131003.035090145] [scan_filter_temporal]: CHAO_TRASEIRO: |angulo| >= 130 graus, retorno >= 1.05 m vira NaN (chao)
+[mapa-10] waiting for service to become available...
+[scan_filter_node-3] [INFO] [1795131003.036454795] [scan_filter_temporal]: CHAO_LADOS: 60 <= |angulo| < 130 graus, retorno >= 1.50 m vira NaN (chao)
+[scan_filter_node-4] [INFO] [1795131003.066305904] [scan_filter]: Filtro LiDAR pronto: /scan_raw -> /scan_front; inversao angular=ativa; intervalos bloqueados=0
+[scan_filter_node-4] [INFO] [1795131003.067249772] [scan_filter]: CHAO_TRASEIRO: |angulo| >= 130 graus, retorno >= 1.05 m vira NaN (chao)
+[scan_filter_node-4] [INFO] [1795131003.068111221] [scan_filter]: CHAO_LADOS: 60 <= |angulo| < 130 graus, retorno >= 1.50 m vira NaN (chao)
+[hardware_bridge_node-1] [INFO] [1795131003.154864401] [robo_hardware]: First serial RX after 1.511 s (96 bytes)
+[command_imu_odometry_node-5] [INFO] [1795131003.194802550] [command_imu_odometry]: Referencia inicial de yaw capturada
+[localization_slam_toolbox_node-6] Info: clipped range threshold to be within minimum and maximum range!
+[localization_slam_toolbox_node-6] Registering sensor: [Custom Described Lidar]
+[mapa-10] requester: making request: slam_toolbox.srv.DeserializePoseGraph_Request(filename='/home/marcos/mapas/arena_11-11_1938', match_type=3, initial_pose=geometry_msgs.msg.Pose2D(x=0.018, y=-0.007, theta=0.043))
+[mapa-10] 
+[localization_slam_toolbox_node-6] Load From File /home/marcos/mapas/arena_11-11_1938.posegraph 
+[localization_slam_toolbox_node-6] Mapper <- Module
+[localization_slam_toolbox_node-6] Mapper <- m_pSequentialScanMatcher
+[localization_slam_toolbox_node-6] Mapper <- m_pGraph
+[localization_slam_toolbox_node-6] MapperGraph <- Graph; Graph <- m_Edges; Graph <- m_Vertices
+[localization_slam_toolbox_node-6] MapperGraph <- m_pMapper; MapperGraph <- m_pLoopScanMatcher; MapperGraph <- m_pTraversal
+[localization_slam_toolbox_node-6] Mapper <- m_pMapperSensorManager
+[localization_slam_toolbox_node-6] MapperSensorManager <- m_ScanManagers; MapperSensorManager <- m_Scans
+[localization_slam_toolbox_node-6] Mapper <- m_Listeners
+[localization_slam_toolbox_node-6] **Finished serializing Mapper**
+[localization_slam_toolbox_node-6] Load From File
+[localization_slam_toolbox_node-6] **Serializing Dataset**
+[localization_slam_toolbox_node-6] Dataset <- m_SensorNameLookup
+[localization_slam_toolbox_node-6] Dataset <- m_Data
+[localization_slam_toolbox_node-6] Dataset <- m_Lasers
+[localization_slam_toolbox_node-6] Dataset <- m_pDatasetInfo
+[localization_slam_toolbox_node-6] **Finished serializing Dataset**
+[localization_slam_toolbox_node-6] Unregistering sensor: Custom Described Lidar
+[localization_slam_toolbox_node-6] Registering sensor: [Custom Described Lidar]
+[localization_slam_toolbox_node-6] W20261119 20:30:06.194240 21457 preprocessor.cc:67] Specified options.num_threads: 50 exceeds maximum available from the threading model Ceres was compiled with: 8.  Bounding to maximum number available.
+[localization_slam_toolbox_node-6] Info: clipped range threshold to be within minimum and maximum range!
+[localization_slam_toolbox_node-6] Registering sensor: [Custom Described Lidar]
+[mapa-10] response:
+[mapa-10] slam_toolbox.srv.DeserializePoseGraph_Response()
+[mapa-10] 
+[INFO] [mapa-10]: process has finished cleanly [pid 21464]
+[scan_filter_node-4] [WARN] [1795131015.030369481] [scan_filter]: New subscription discovered on topic '/scan_front', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY
+[localization_slam_toolbox_node-6] [INFO] [1795131020.825041619] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795131020.800 for reason 'discarding message because the queue is full'
+[hardware_bridge_node-1] [WARN] [1795131095.583632582] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131095.623793851] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131148.284309932] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131148.323765547] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131154.023549442] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131154.084078977] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131177.983830868] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131186.784193640] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131186.823815536] [robo_hardware]: Velocity command source timestamp invalid/stale
+[localization_slam_toolbox_node-6] W20261119 20:33:09.704382 21525 preprocessor.cc:67] Specified options.num_threads: 50 exceeds maximum available from the threading model Ceres was compiled with: 8.  Bounding to maximum number available.
+[hardware_bridge_node-1] [WARN] [1795131202.623510660] [robo_hardware]: Velocity command source timestamp invalid/stale
+[localization_slam_toolbox_node-6] W20261119 20:33:41.524559 21525 preprocessor.cc:67] Specified options.num_threads: 50 exceeds maximum available from the threading model Ceres was compiled with: 8.  Bounding to maximum number available.
+[localization_slam_toolbox_node-6] [INFO] [1795131221.611091180] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795131221.442 for reason 'discarding message because the queue is full'
+[hardware_bridge_node-1] [WARN] [1795131260.284192229] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131267.883636644] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131267.923570562] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131276.783765547] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131276.823639153] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131281.023675629] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131282.583625173] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131296.384119731] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131304.023534809] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131304.084626537] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131306.123514432] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131307.623727173] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131308.183709588] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131308.223764486] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131308.983715054] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131310.883662314] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131312.884364304] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131312.923518457] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131341.983672137] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131390.183711007] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [ERROR] [1795131549.390892110] [robo_hardware]: Serial write failed on /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0: Input/output error
+[hardware_bridge_node-1] [WARN] [1795131550.392910908] [robo_hardware]: Unable to open /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0: No such file or directory
+[hardware_bridge_node-1] [INFO] [1795131551.394316710] [robo_hardware]: Serial connected: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0; command TX starts after 5.0 s
+[command_imu_odometry_node-5] [WARN] [1795131552.946315605] [command_imu_odometry]: IMU voltou depois de 3.6 s: yaw da odom mantido
+[hardware_bridge_node-1] [WARN] [1795131564.898906073] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131566.107833765] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131567.400326134] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131568.747690047] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131570.108384720] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131595.810460092] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131598.107643051] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131598.148342439] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131604.649241953] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131604.709891164] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131609.009078381] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131611.447636855] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131614.047480851] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131621.847469948] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131624.798664404] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131625.438620937] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131625.487749922] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131682.108970253] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131682.147692454] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131705.347301844] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131715.107619053] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131715.137591923] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131727.907952632] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131727.947860518] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131729.307557489] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131729.347925588] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131730.807695005] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131786.607550725] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131791.947357909] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131791.997956660] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131807.807649847] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795131807.847461781] [robo_hardware]: Velocity command source timestamp invalid/stale
+[localization_slam_toolbox_node-6] [INFO] [1795132178.814831577] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795132178.765 for reason 'discarding message because the queue is full'
+[localization_slam_toolbox_node-6] [INFO] [1795132190.895316910] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795132190.888 for reason 'discarding message because the queue is full'
+[localization_slam_toolbox_node-6] [INFO] [1795132243.754890024] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795132243.595 for reason 'discarding message because the queue is full'
+[hardware_bridge_node-1] [WARN] [1795132283.787613178] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132284.592748794] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132284.624388934] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132285.882958993] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132287.725980311] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132287.785328154] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132289.781616774] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132291.085450633] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132291.125865644] [robo_hardware]: Velocity command source timestamp invalid/stale
+[localization_slam_toolbox_node-6] [INFO] [1795132302.873251290] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795132302.665 for reason 'discarding message because the queue is full'
+[localization_slam_toolbox_node-6] [INFO] [1795132307.777939996] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795132307.746 for reason 'discarding message because the queue is full'
+[localization_slam_toolbox_node-6] [INFO] [1795132333.111318745] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795132332.830 for reason 'discarding message because the queue is full'
+[hardware_bridge_node-1] [WARN] [1795132343.923560429] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132343.984377638] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132354.883077089] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132356.681986239] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132359.881962387] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132361.484794890] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132361.524808981] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132363.082183848] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132364.221962300] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132378.923411060] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132386.781837647] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132396.181898661] [robo_hardware]: Velocity command source timestamp invalid/stale
+[localization_slam_toolbox_node-6] W20261119 20:53:18.955068 21525 preprocessor.cc:67] Specified options.num_threads: 50 exceeds maximum available from the threading model Ceres was compiled with: 8.  Bounding to maximum number available.
+[hardware_bridge_node-1] [WARN] [1795132408.382184751] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132408.421715282] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132413.083685023] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132413.121275602] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132418.582505959] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132420.321280855] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132421.481551424] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132421.521921702] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132422.721193404] [robo_hardware]: Velocity command source timestamp invalid/stale
+[mesas-8] Arquivo: 2 mesa(s): WS_1, WS_2
+[hardware_bridge_node-1] [WARN] [1795132721.122327780] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132730.381934667] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132737.181784891] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132737.224264506] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132770.521467153] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132770.583770327] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132774.381961467] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132786.921744589] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132786.982222993] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132788.982129048] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132789.021460596] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132793.882071265] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132795.991768882] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132796.884298996] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132796.921168144] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132798.381478588] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132798.422128925] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132857.581914194] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132859.981630990] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132860.031569721] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132862.022698647] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132863.081458915] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132863.121196938] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132864.281761075] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132864.322353313] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132865.823714881] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132865.882429988] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132867.584264058] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132867.621633426] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132868.481408205] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132868.522079531] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132869.781650682] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132869.832744344] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795132870.482976624] [robo_hardware]: Velocity command source timestamp invalid/stale
+[localization_slam_toolbox_node-6] [INFO] [1795132911.937226068] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795132911.635 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[mesas-8] Arquivo: 2 mesa(s): WS_1, WS_2
+[localization_slam_toolbox_node-6] [INFO] [1795133168.474870806] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795133168.315 for reason 'discarding message because the queue is full'
+[localization_slam_toolbox_node-6] [INFO] [1795133575.217647818] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795133575.151 for reason 'discarding message because the queue is full'
+[hardware_bridge_node-1] [WARN] [1795133647.461853006] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133647.523341766] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133649.020512248] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133649.060426178] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133650.220423580] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133651.320414258] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133651.361556859] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133665.124356722] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133672.922453492] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133672.969925244] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133678.225047086] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133693.159503996] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133699.062559797] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133720.919832361] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133720.969102046] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133728.521527325] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133742.623225268] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133747.062889795] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133765.270566881] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133765.322511332] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133772.521041370] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133786.223405795] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133786.268852999] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133789.759508488] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133792.023612448] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133855.361089403] [robo_hardware]: Velocity command source timestamp invalid/stale
+[localization_slam_toolbox_node-6] [INFO] [1795133858.441456477] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1795133858.275 for reason 'discarding message because the queue is full'
+[hardware_bridge_node-1] [WARN] [1795133861.921271037] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133861.960867111] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133864.521225462] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133869.531415660] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133870.770217476] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133870.820360883] [robo_hardware]: Velocity command source timestamp invalid/stale
+[hardware_bridge_node-1] [WARN] [1795133872.229142443] [robo_hardware]: Velocity command source timestamp invalid/stale

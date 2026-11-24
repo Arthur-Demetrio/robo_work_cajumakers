@@ -1,0 +1,28 @@
+[INFO] [1794262742.537937438] [collision_monitor]: 
+	collision_monitor lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1794262742.790311366] [collision_monitor]: Configuring
+[INFO] [1794262742.798193670] [collision_monitor]: [scan]: Creating Scan
+[INFO] [1794262742.801188830] [collision_monitor]: [VelocityPolygonStop]: Creating Polygon
+[INFO] [1794262742.801225825] [collision_monitor]: [VelocityPolygonStop]: Creating VelocityPolygon
+[INFO] [1794262742.806207462] [collision_monitor]: [SweptTurnStop]: Creating Polygon
+[INFO] [1794262742.806248490] [collision_monitor]: [SweptTurnStop]: Creating VelocityPolygon
+[INFO] [1794262742.829120291] [collision_monitor]: Activating
+[INFO] [1794262742.829229501] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[INFO] [1794262858.436534596] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[INFO] [1794262859.096675908] [collision_monitor]: Robot to continue normal operation
+[INFO] [1794262859.136583373] [collision_monitor]: Robot to stop due to VelocityPolygonStop polygon
+[INFO] [1794262874.136753993] [collision_monitor]: Robot to continue normal operation
+[INFO] [1794263002.641578862] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1794263002.641691982] [collision_monitor]: Running Nav2 LifecycleNode rcl preshutdown (collision_monitor)
+[INFO] [1794263002.641785072] [collision_monitor]: Deactivating
+[INFO] [1794263002.641819549] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[INFO] [1794263002.652079022] [collision_monitor]: Cleaning up
+[INFO] [1794263002.652131493] [collision_monitor]: [VelocityPolygonStop]: Destroying VelocityPolygon
+[INFO] [1794263002.652154289] [collision_monitor]: [VelocityPolygonStop]: Destroying Polygon
+[INFO] [1794263002.652175794] [collision_monitor]: [SweptTurnStop]: Destroying VelocityPolygon
+[INFO] [1794263002.652190429] [collision_monitor]: [SweptTurnStop]: Destroying Polygon
+[INFO] [1794263002.652206942] [collision_monitor]: [scan]: Destroying Scan
+[INFO] [1794263002.653864479] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[INFO] [1794263002.658118189] [collision_monitor]: Destroying

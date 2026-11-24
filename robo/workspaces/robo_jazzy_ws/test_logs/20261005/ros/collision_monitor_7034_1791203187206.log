@@ -1,0 +1,51 @@
+[INFO] [1791203187.226361838] [collision_monitor]: 
+	collision_monitor lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791203187.484057244] [collision_monitor]: Configuring
+[INFO] [1791203187.486888426] [collision_monitor]: [scan]: Creating Scan
+[INFO] [1791203187.487967878] [collision_monitor]: [FootprintApproach]: Creating Polygon
+[INFO] [1791203187.488117250] [collision_monitor]: [FootprintApproach]: Polygon points are not defined. Using dynamic subscription instead.
+[INFO] [1791203187.488806785] [collision_monitor]: [FootprintApproach]: Making footprint subscriber on /local_costmap/published_footprint topic
+[INFO] [1791203188.494303638] [collision_monitor]: Activating
+[INFO] [1791203188.494358170] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[INFO] [1791203272.562114494] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[INFO] [1791203272.662202534] [collision_monitor]: Robot to continue normal operation
+[INFO] [1791203284.201735242] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[INFO] [1791203284.801714383] [collision_monitor]: Robot to continue normal operation
+[INFO] [1791203308.601903299] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[INFO] [1791203308.662088164] [collision_monitor]: Robot to continue normal operation
+[INFO] [1791203331.101737263] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[INFO] [1791203331.152189845] [collision_monitor]: Robot to continue normal operation
+[INFO] [1791203331.261897874] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[INFO] [1791203331.502193174] [collision_monitor]: Robot to continue normal operation
+[INFO] [1791203339.801824651] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[INFO] [1791203340.262009445] [collision_monitor]: Robot to continue normal operation
+[INFO] [1791203346.501740670] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[INFO] [1791203356.562092852] [collision_monitor]: Robot to continue normal operation
+[INFO] [1791203369.501707628] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[INFO] [1791203379.561972649] [collision_monitor]: Robot to continue normal operation
+[INFO] [1791203386.001825785] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[INFO] [1791203396.062009803] [collision_monitor]: Robot to continue normal operation
+[INFO] [1791203402.501715589] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[INFO] [1791203412.562011257] [collision_monitor]: Robot to continue normal operation
+[INFO] [1791205024.597756538] [collision_monitor]: Deactivating
+[INFO] [1791205024.597793483] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[INFO] [1791205026.408629508] [collision_monitor]: Cleaning up
+[INFO] [1791205026.411193307] [collision_monitor]: [FootprintApproach]: Destroying Polygon
+[INFO] [1791205026.412669433] [collision_monitor]: [scan]: Destroying Scan
+[INFO] [1791205027.773551370] [collision_monitor]: Configuring
+[INFO] [1791205027.774874554] [collision_monitor]: [scan]: Creating Scan
+[INFO] [1791205027.775357370] [collision_monitor]: [FootprintApproach]: Creating Polygon
+[INFO] [1791205027.775384538] [collision_monitor]: [FootprintApproach]: Polygon points are not defined. Using dynamic subscription instead.
+[INFO] [1791205027.775410759] [collision_monitor]: [FootprintApproach]: Making footprint subscriber on /local_costmap/published_footprint topic
+[INFO] [1791205028.765112936] [collision_monitor]: Activating
+[INFO] [1791205028.765139218] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[INFO] [1791206403.236942135] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791206403.236983708] [collision_monitor]: Running Nav2 LifecycleNode rcl preshutdown (collision_monitor)
+[INFO] [1791206403.237019158] [collision_monitor]: Deactivating
+[INFO] [1791206403.237030188] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[INFO] [1791206403.247374030] [collision_monitor]: Cleaning up
+[INFO] [1791206403.247398854] [collision_monitor]: [FootprintApproach]: Destroying Polygon
+[INFO] [1791206403.247410817] [collision_monitor]: [scan]: Destroying Scan
+[INFO] [1791206403.249005643] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.

@@ -1,0 +1,3 @@
+## navegacao-h1-sensor-parado
+ M CLAUDE.md
+ M ferramentas/gravar_teste.sh

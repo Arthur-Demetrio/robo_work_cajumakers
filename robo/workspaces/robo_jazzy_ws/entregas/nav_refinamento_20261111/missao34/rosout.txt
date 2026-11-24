@@ -1,0 +1,556 @@
+11:02:31.32 alinhador_passagem Novo goal: x=1.56 y=2.43 yaw=0 graus
+11:02:31.33 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+11:02:32.03 alinhador_passagem Passagem 1: entrada (0.73, -0.17), eixo -2 graus, largura no mapa 0.75 m, preparo a 0.60 m da entrada
+11:02:32.04 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=0.13 y=-0.16 yaw=-2 graus
+11:02:34.82 alinhador_passagem PREPARO 1 (alinhar fora da passagem): andei 14 cm para dir
+11:02:37.27 alinhador_passagem PREPARO 1 (alinhar fora da passagem): andei 19 cm para frente
+11:02:37.28 alinhador_passagem PREPARO 1 (alinhar fora da passagem): SUCESSO (16 cm e 2 graus do preparo)
+11:02:37.29 planner_server GridBased plugin failed to plan from (0.01, -0.06) to (1.56, 2.43): "Failed to create plan with tolerance of: 0.100000"
+11:02:38.16 alinhador_passagem Planner: sem caminho; mapa: 4.1 m: sigo a rota do mapa
+11:02:38.25 alinhador_passagem Passagem 1 termina num cruzamento em (1.53, -0.19) com curva para a ESQUERDA: modo de curva: lateral
+11:02:38.26 alinhador_passagem TRAVESSIA 1: travessia pelo LiDAR ate (1.45, -0.19) + 0.00 m
+11:02:41.05 alinhador_passagem TRAVESSIA 1: Paredes vistas (largura 0.81 m): parando na boca para alinhar
+11:02:45.32 alinhador_passagem TRAVESSIA 1: Paredes vistas (largura 0.80 m): parando na boca para alinhar
+11:02:49.88 alinhador_passagem TRAVESSIA 1: Paredes vistas (largura 0.81 m): parando na boca para alinhar
+11:02:50.84 alinhador_passagem TRAVESSIA 1: Medicao 1: girar +2.7 graus, centro a -13.8 cm, largura 0.82 m
+11:02:55.25 alinhador_passagem TRAVESSIA 1: Medicao 2: girar +2.8 graus, centro a -0.4 cm, largura 0.82 m
+11:02:56.72 alinhador_passagem TRAVESSIA 1: Medicao 3: girar +0.4 graus, centro a -0.5 cm, largura 0.83 m
+11:02:56.73 alinhador_passagem TRAVESSIA 1: Alinhado: atravessando
+11:03:11.65 alinhador_passagem TRAVESSIA 1: Parei no cruzamento pelo LiDAR: parede a 14 cm do para-choque (alvo 12 cm; pelo mapa faltavam -4 cm)
+11:03:11.91 alinhador_passagem TRAVESSIA 1 (LiDAR): SUCESSO
+11:03:11.92 alinhador_passagem CURVA 1: saindo de lado para a ESQUERDA ate (1.62, 1.04) + 0.60 m
+11:03:11.93 alinhador_passagem CURVA 1: Cruzamento: saindo de lado para a ESQUERDA
+11:03:12.86 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +0.1 cm a frente (1 parede(s)), folga frente 11 / tras - cm
+11:03:17.59 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 15 cm
+11:03:17.91 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:03:18.40 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -7.3 cm a frente (folgas), folga frente 3 / tras 17 cm
+11:03:18.40 alinhador_passagem CURVA 1: Perto da parede: afastando -7.3 cm
+11:03:18.57 collision_monitor Robot to continue normal operation
+11:03:20.01 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -3.3 cm a frente (1 parede(s)), folga frente 8 / tras 12 cm
+11:03:21.39 robo_hardware.rclc failed to send response to /robo_hardware/get_parameters (timeout): client will not receive response, at ./src/rmw_response.cpp:153, at ./src/rcl/service.c:400
+11:03:21.43 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 16 cm
+11:03:21.47 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:03:23.08 global_costmap.glo StaticLayer: Resizing costmap to 227 X 219 at 0.050000 m/pix
+11:03:23.87 alinhador_passagem CURVA 1: Perto da parede (sem medicao): afastando -8.0 cm
+11:03:24.01 collision_monitor Robot to continue normal operation
+11:03:25.48 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -3.4 cm a frente (folgas), folga frente 7 / tras 13 cm
+11:03:26.31 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:03:26.49 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 3 / tras 16 cm
+11:03:27.30 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -7.1 cm a frente (folgas), folga frente 3 / tras 17 cm
+11:03:27.31 alinhador_passagem CURVA 1: Perto da parede: afastando -7.1 cm
+11:03:27.45 collision_monitor Robot to continue normal operation
+11:03:29.28 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -2.6 cm a frente (folgas), folga frente 7 / tras 13 cm
+11:03:30.25 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:03:30.46 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 3 / tras 16 cm
+11:03:31.25 alinhador_passagem CURVA 1: Medicao: girar +5.8 graus, centro -7.2 cm a frente (folgas), folga frente 3 / tras 17 cm
+11:03:31.25 alinhador_passagem CURVA 1: Perto da parede: afastando -7.2 cm
+11:03:31.41 collision_monitor Robot to continue normal operation
+11:03:32.80 alinhador_passagem CURVA 1: Medicao: girar +0.1 graus, centro -2.5 cm a frente (folgas), folga frente 8 / tras 13 cm
+11:03:34.21 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:03:35.75 alinhador_passagem CURVA 1: Collision Monitor segurando em "deslizar": parando para medir de novo
+11:03:35.95 collision_monitor Robot to continue normal operation
+11:03:36.68 alinhador_passagem CURVA 1: Medicao: girar +0.6 graus, centro -5.4 cm a frente (folgas), folga frente 5 / tras 16 cm
+11:03:38.18 alinhador_passagem CURVA 1: Medicao: girar +0.2 graus, centro -0.9 cm a frente (folgas), folga frente 9 / tras 11 cm
+11:03:39.15 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:03:39.36 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 16 cm
+11:03:39.51 collision_monitor Robot to continue normal operation
+11:03:40.18 alinhador_passagem CURVA 1: Medicao: girar +1.4 graus, centro -6.4 cm a frente (folgas), folga frente 4 / tras 17 cm
+11:03:40.18 alinhador_passagem CURVA 1: Perto da parede: afastando -6.4 cm
+11:03:41.83 alinhador_passagem CURVA 1: Medicao: girar +1.0 graus, centro -1.1 cm a frente (folgas), folga frente 9 / tras 12 cm
+11:03:42.62 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:03:44.15 alinhador_passagem CURVA 1: Collision Monitor segurando em "deslizar": parando para medir de novo
+11:03:44.35 collision_monitor Robot to continue normal operation
+11:03:45.11 alinhador_passagem CURVA 1: Medicao: girar +1.6 graus, centro -5.6 cm a frente (folgas), folga frente 5 / tras 16 cm
+11:03:46.57 alinhador_passagem CURVA 1: Medicao: girar +1.4 graus, centro -1.0 cm a frente (folgas), folga frente 9 / tras 11 cm
+11:03:47.41 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:03:47.56 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 16 cm
+11:03:50.02 alinhador_passagem CURVA 1: Perto da parede (sem medicao): afastando -6.8 cm
+11:03:50.15 collision_monitor Robot to continue normal operation
+11:03:51.53 alinhador_passagem CURVA 1: Medicao: girar +6.1 graus, centro -1.8 cm a frente (folgas), folga frente 9 / tras 12 cm
+11:03:52.71 alinhador_passagem CURVA 1: Medicao: girar -0.3 graus, centro -1.1 cm a frente (folgas), folga frente 10 / tras 12 cm
+11:03:53.65 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:03:53.85 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 17 cm
+11:03:56.29 alinhador_passagem CURVA 1: Perto da parede (sem medicao): afastando -4.0 cm
+11:03:56.45 collision_monitor Robot to continue normal operation
+11:03:57.64 alinhador_passagem CURVA 1: Medicao: girar +3.9 graus, centro -4.5 cm a frente (folgas), folga frente 6 / tras 15 cm
+11:03:58.78 alinhador_passagem CURVA 1: Medicao: girar +3.4 graus, centro -4.3 cm a frente (folgas), folga frente 7 / tras 15 cm
+11:04:00.01 alinhador_passagem CURVA 1: Medicao: girar +1.4 graus, centro -3.6 cm a frente (folgas), folga frente 7 / tras 14 cm
+11:04:00.62 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:04:02.18 alinhador_passagem CURVA 1: Collision Monitor segurando em "deslizar": parando para medir de novo
+11:04:02.35 collision_monitor Robot to continue normal operation
+11:04:03.05 alinhador_passagem CURVA 1: Medicao: girar +2.2 graus, centro -5.6 cm a frente (2 parede(s)), folga frente 5 / tras 18 cm
+11:04:04.52 alinhador_passagem CURVA 1: Medicao: girar -3.1 graus, centro -3.3 cm a frente (folgas), folga frente 6 / tras 13 cm
+11:04:05.53 alinhador_passagem CURVA 1: Medicao: girar -1.6 graus, centro -3.5 cm a frente (folgas), folga frente 7 / tras 14 cm
+11:04:06.31 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:04:07.87 alinhador_passagem CURVA 1: Saida lateral abortada: Collision Monitor bloqueou 4 vezes
+11:04:08.01 collision_monitor Robot to continue normal operation
+11:04:08.14 alinhador_passagem CURVA 1: FALHOU - Collision Monitor bloqueou 4 vezes
+11:04:08.14 alinhador_passagem Nao consegui sair de lado pelo corredor novo (curva 1). Parei; ajude o robo e mande o goal de novo.
+11:04:59.91 alinhador_passagem Novo goal: x=1.65 y=2.46 yaw=0 graus
+11:04:59.92 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+11:05:00.40 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+11:05:00.46 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +85 graus da frente: viro antes do Nav2
+11:05:00.77 alinhador_passagem GOAL FINAL (virar para o caminho): girando 85 graus a quina pegaria: primeiro 10 cm para tras
+11:05:02.28 alinhador_passagem GOAL FINAL (virar para o caminho): andei 10 cm para tras
+11:05:02.57 alinhador_passagem GOAL FINAL (virar para o caminho): girando 84 graus a quina pegaria: primeiro 20 cm para dir
+11:05:04.35 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:05:09.70 alinhador_passagem GOAL FINAL (virar para o caminho): andei 11 cm para dir
+11:05:09.97 alinhador_passagem GOAL FINAL (virar para o caminho): girando 83 graus a quina pegaria: primeiro 14 cm para frente
+11:05:10.05 collision_monitor Robot to continue normal operation
+11:05:11.83 alinhador_passagem GOAL FINAL (virar para o caminho): andei 13 cm para frente
+11:05:12.12 alinhador_passagem GOAL FINAL (virar para o caminho): girando 84 graus a quina pegaria: primeiro 4 cm para tras
+11:05:13.03 alinhador_passagem GOAL FINAL (virar para o caminho): andei 3 cm para tras
+11:05:13.30 alinhador_passagem GOAL FINAL (virar para o caminho): sem espaco para girar nem para me afastar
+11:05:13.61 alinhador_passagem GOAL FINAL (virar para o caminho): nao consegui virar; sigo pelo Nav2
+11:05:13.61 alinhador_passagem GOAL FINAL: x=1.65 y=2.46 yaw=0 graus
+11:05:13.62 bt_navigator Begin navigating from current location (1.54, 0.41) to (1.65, 2.46)
+11:05:13.65 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.409810, theta: 1.446299
+11:05:13.67 controller_server Received a goal, begin computing control effort.
+11:05:13.67 controller_server No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
+11:05:13.67 controller_server No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+11:05:14.28 bt_navigator_navig failed to send response to /bt_navigator_navigate_to_pose_rclcpp_node/list_parameters (timeout): client will not receive response, at ./src/rmw_response.cpp:153, at ./src/rcl/service.c:400
+11:05:14.31 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.459810, theta: 1.479608
+11:05:14.87 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.459810, theta: 1.479173
+11:05:15.11 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:05:15.40 smoother_server Smoothed path leads to a collision at x: 1.595654, y: 0.459810, theta: -1.399837
+11:05:15.94 smoother_server Smoothed path leads to a collision at x: 1.595654, y: 0.459810, theta: -1.438832
+11:05:16.50 smoother_server Smoothed path leads to a collision at x: 1.595654, y: 0.459810, theta: -1.438832
+11:05:17.03 smoother_server Smoothed path leads to a collision at x: 1.595654, y: 0.459810, theta: -1.438832
+11:05:17.56 smoother_server Smoothed path leads to a collision at x: 1.595654, y: 0.459810, theta: -1.438832
+11:05:18.10 smoother_server Smoothed path leads to a collision at x: 1.595654, y: 0.459810, theta: -1.438832
+11:05:18.65 smoother_server Smoothed path leads to a collision at x: 1.595654, y: 0.459810, theta: -1.438832
+11:05:19.19 smoother_server Smoothed path leads to a collision at x: 1.595654, y: 0.459810, theta: -1.438832
+11:05:19.71 smoother_server Smoothed path leads to a collision at x: 1.595654, y: 0.459810, theta: -1.438832
+11:05:20.27 smoother_server Smoothed path leads to a collision at x: 1.595654, y: 0.459810, theta: -1.438832
+11:05:20.82 smoother_server Smoothed path leads to a collision at x: 1.595654, y: 0.459810, theta: -1.438832
+11:05:21.17 controller_server Failed to make progress
+11:05:21.25 collision_monitor Robot to continue normal operation
+11:05:22.38 destravar DESTRAVAR: caminho novo (81 pontos)
+11:05:22.92 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_progresso_fisico,frente_barrada (planner ok, frente 3 cm, retornos 0)
+11:05:23.20 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Coll
+11:05:23.21 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Collision Monitor barraria 
+11:05:23.48 destravar DESTRAVAR: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Collision Monitor barraria (obstac
+11:05:23.51 bt_navigator Goal failed
+11:05:23.52 alinhador_passagem GOAL FINAL: FALHOU
+11:05:23.53 alinhador_passagem REINSISTIR 1/2: o Nav2 desistiu do GOAL FINAL; reanaliso, viro para o caminho e mando de novo
+11:05:25.08 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+11:05:25.14 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +83 graus da frente: viro antes do Nav2
+11:05:25.42 alinhador_passagem GOAL FINAL (virar para o caminho): girando 83 graus a quina pegaria: primeiro 11 cm para tras
+11:05:27.01 alinhador_passagem GOAL FINAL (virar para o caminho): andei 10 cm para tras
+11:05:27.30 alinhador_passagem GOAL FINAL (virar para o caminho): girando 82 graus a quina pegaria: primeiro 20 cm para dir
+11:05:29.61 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:05:34.43 alinhador_passagem GOAL FINAL (virar para o caminho): andei 14 cm para dir
+11:05:34.70 alinhador_passagem GOAL FINAL (virar para o caminho): girando 82 graus a quina pegaria: primeiro 14 cm para frente
+11:05:34.80 collision_monitor Robot to continue normal operation
+11:05:36.56 alinhador_passagem GOAL FINAL (virar para o caminho): andei 13 cm para frente
+11:05:36.83 alinhador_passagem GOAL FINAL (virar para o caminho): girando 83 graus a quina pegaria: primeiro 20 cm para dir
+11:05:39.95 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:05:40.49 alinhador_passagem GOAL FINAL (virar para o caminho): andei 19 cm para dir
+11:05:41.61 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+11:05:41.62 alinhador_passagem GOAL FINAL (virar para o caminho): o giro trava sempre
+11:05:41.87 alinhador_passagem GOAL FINAL (virar para o caminho): nao consegui virar; sigo pelo Nav2
+11:05:41.88 alinhador_passagem GOAL FINAL: x=1.65 y=2.46 yaw=0 graus
+11:05:41.88 bt_navigator Begin navigating from current location (1.49, 0.21) to (1.65, 2.46)
+11:05:41.92 smoother_server Smoothed path leads to a collision at x: 1.504934, y: 0.237493, theta: 1.248050
+11:05:41.94 controller_server Received a goal, begin computing control effort.
+11:05:42.49 smoother_server Smoothed path leads to a collision at x: 1.503065, y: 0.233691, theta: 1.259499
+11:05:43.05 smoother_server Smoothed path leads to a collision at x: 1.504934, y: 0.237493, theta: 1.248050
+11:05:43.61 smoother_server Smoothed path leads to a collision at x: 1.504934, y: 0.237493, theta: 1.248050
+11:05:44.17 smoother_server Smoothed path leads to a collision at x: 1.504934, y: 0.237493, theta: 1.248050
+11:05:44.73 smoother_server Smoothed path leads to a collision at x: 1.504934, y: 0.237493, theta: 1.248050
+11:05:45.30 smoother_server Smoothed path leads to a collision at x: 1.504934, y: 0.237493, theta: 1.248050
+11:05:45.87 smoother_server Smoothed path leads to a collision at x: 1.504934, y: 0.237493, theta: 1.248050
+11:05:46.43 smoother_server Smoothed path leads to a collision at x: 1.503065, y: 0.233691, theta: 1.259499
+11:05:47.00 smoother_server Smoothed path leads to a collision at x: 1.504934, y: 0.237493, theta: 1.248050
+11:05:47.56 smoother_server Smoothed path leads to a collision at x: 1.504934, y: 0.237493, theta: 1.248050
+11:05:47.94 controller_server Failed to make progress
+11:05:49.10 destravar DESTRAVAR: caminho novo (99 pontos)
+11:05:49.69 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_progresso_fisico (planner ok, frente 20 cm, retornos 0)
+11:05:50.25 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa sem_progresso_fisico: o mesmo controle repetiria | lateral: esq 40 cm: area varrida 37% observada (minimo 50%); esq 30 c
+11:05:50.26 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | lateral: esq 40 cm: area varrida 37% observada (minimo 50%); esq 30 cm: area varrida 34% obs
+11:05:50.52 destravar DESTRAVAR: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | lateral: esq 40 cm: area varrida 37% observada (minimo 50%); esq 30 cm: area varrida 34% observada 
+11:05:50.55 bt_navigator Goal failed
+11:05:50.56 alinhador_passagem GOAL FINAL: FALHOU
+11:05:50.56 alinhador_passagem REINSISTIR 2/2: o Nav2 desistiu do GOAL FINAL; reanaliso, viro para o caminho e mando de novo
+11:05:52.12 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+11:05:52.20 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +64 graus da frente: viro antes do Nav2
+11:05:53.30 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+11:05:54.40 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+11:05:55.47 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+11:05:56.57 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+11:05:57.68 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+11:05:57.68 alinhador_passagem GOAL FINAL (virar para o caminho): o giro trava sempre
+11:05:57.95 collision_monitor Robot to continue normal operation
+11:05:57.96 alinhador_passagem GOAL FINAL (virar para o caminho): nao consegui virar; sigo pelo Nav2
+11:05:57.96 alinhador_passagem GOAL FINAL: x=1.65 y=2.46 yaw=0 graus
+11:05:57.96 bt_navigator Begin navigating from current location (1.49, 0.21) to (1.65, 2.46)
+11:05:58.01 smoother_server Smoothed path leads to a collision at x: 1.495654, y: 0.209810, theta: 1.328856
+11:05:58.03 controller_server Received a goal, begin computing control effort.
+11:05:58.59 smoother_server Smoothed path leads to a collision at x: 1.495654, y: 0.259810, theta: 1.336960
+11:05:58.71 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:05:58.81 collision_monitor Robot to continue normal operation
+11:05:59.15 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.259810, theta: 1.548492
+11:05:59.71 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.309810, theta: -1.548076
+11:05:59.91 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:06:00.27 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.359810, theta: -1.519368
+11:06:00.82 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.359810, theta: 1.459177
+11:06:01.38 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.359810, theta: 1.459177
+11:06:01.94 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.359810, theta: 1.455890
+11:06:02.52 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.359810, theta: 1.455890
+11:06:03.09 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.359810, theta: 1.455890
+11:06:03.65 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.359810, theta: 1.459177
+11:06:04.19 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.359810, theta: 1.459177
+11:06:04.76 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.359810, theta: 1.459177
+11:06:05.33 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.359810, theta: 1.459177
+11:06:05.83 controller_server Failed to make progress
+11:06:07.02 destravar DESTRAVAR: caminho novo (87 pontos)
+11:06:07.57 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_progresso_fisico,frente_barrada (planner ok, frente 1 cm, retornos 1)
+11:06:07.62 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Coll
+11:06:07.63 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Collision Monitor barraria 
+11:06:07.89 destravar DESTRAVAR: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Collision Monitor barraria (obstac
+11:06:07.92 bt_navigator Goal failed
+11:06:07.94 alinhador_passagem GOAL FINAL: FALHOU
+11:06:19.84 alinhador_passagem Novo goal: x=1.71 y=2.18 yaw=0 graus
+11:06:19.84 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+11:06:20.29 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+11:06:20.35 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +82 graus da frente: viro antes do Nav2
+11:06:20.41 collision_monitor Robot to continue normal operation
+11:06:20.62 alinhador_passagem GOAL FINAL (virar para o caminho): girando 82 graus a quina pegaria: primeiro 6 cm para frente
+11:06:21.76 alinhador_passagem GOAL FINAL (virar para o caminho): andei 6 cm para frente
+11:06:22.04 alinhador_passagem GOAL FINAL (virar para o caminho): girando 82 graus a quina pegaria: primeiro 20 cm para dir
+11:06:22.85 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:06:23.21 collision_monitor Robot to continue normal operation
+11:06:23.44 alinhador_passagem GOAL FINAL (virar para o caminho): andei 4 cm para dir
+11:06:23.72 alinhador_passagem GOAL FINAL (virar para o caminho): girando 81 graus a quina pegaria: primeiro 4 cm para frente
+11:06:24.65 alinhador_passagem GOAL FINAL (virar para o caminho): andei 3 cm para frente
+11:06:24.93 alinhador_passagem GOAL FINAL (virar para o caminho): girando 74 graus a quina pegaria: primeiro 36 cm para esq
+11:06:30.81 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:06:31.09 alinhador_passagem GOAL FINAL (virar para o caminho): andei 35 cm para esq
+11:06:31.36 alinhador_passagem GOAL FINAL (virar para o caminho): sem espaco para girar nem para me afastar
+11:06:31.63 alinhador_passagem GOAL FINAL (virar para o caminho): nao consegui virar; sigo pelo Nav2
+11:06:31.64 alinhador_passagem GOAL FINAL: x=1.71 y=2.18 yaw=0 graus
+11:06:31.64 bt_navigator Begin navigating from current location (1.56, 0.75) to (1.71, 2.18)
+11:06:31.66 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.759810, theta: 1.471936
+11:06:31.67 controller_server Received a goal, begin computing control effort.
+11:06:31.81 collision_monitor Robot to continue normal operation
+11:06:32.20 smoother_server Smoothed path leads to a collision at x: 1.545654, y: 0.759810, theta: 1.471936
+11:06:32.74 smoother_server Smoothed path leads to a collision at x: 1.603402, y: 1.049109, theta: 1.381434
+11:06:33.27 smoother_server Smoothed path leads to a collision at x: 1.600684, y: 0.999414, theta: 1.394681
+11:06:33.82 smoother_server Smoothed path leads to a collision at x: 1.599376, y: 0.990665, theta: 1.417615
+11:06:34.36 smoother_server Smoothed path leads to a collision at x: 1.655819, y: 1.143259, theta: -1.888314
+11:06:34.91 smoother_server Smoothed path leads to a collision at x: 1.695654, y: 0.959810, theta: -1.378793
+11:06:35.46 smoother_server Smoothed path leads to a collision at x: 1.745654, y: 0.959810, theta: -1.327830
+11:06:36.00 smoother_server Smoothed path leads to a collision at x: 1.795654, y: 1.009810, theta: -1.372627
+11:06:36.53 smoother_server Smoothed path leads to a collision at x: 1.795654, y: 1.009810, theta: -1.372627
+11:06:37.07 smoother_server Smoothed path leads to a collision at x: 1.795654, y: 1.009810, theta: -1.375354
+11:06:37.61 smoother_server Smoothed path leads to a collision at x: 1.845654, y: 1.059810, theta: -1.423699
+11:06:38.16 smoother_server Smoothed path leads to a collision at x: 1.895654, y: 1.059810, theta: -1.456435
+11:06:38.71 smoother_server Smoothed path leads to a collision at x: 1.945654, y: 1.059810, theta: -1.462815
+11:06:39.26 smoother_server Smoothed path leads to a collision at x: 1.945654, y: 1.109810, theta: -1.502532
+11:06:39.81 smoother_server Smoothed path leads to a collision at x: 1.995654, y: 1.109810, theta: -1.509188
+11:06:40.35 smoother_server Smoothed path leads to a collision at x: 2.045654, y: 1.109810, theta: -1.558506
+11:06:40.89 smoother_server Smoothed path leads to a collision at x: 2.045654, y: 1.159810, theta: -1.543667
+11:06:41.43 smoother_server Smoothed path leads to a collision at x: 2.045654, y: 1.159810, theta: -1.542558
+11:06:41.98 smoother_server Smoothed path leads to a collision at x: 2.095654, y: 1.159810, theta: -1.423443
+11:06:42.51 smoother_server Smoothed path leads to a collision at x: 2.095654, y: 1.209810, theta: -1.443063
+11:06:43.06 smoother_server Smoothed path leads to a collision at x: 2.095654, y: 1.209810, theta: -1.440729
+11:06:44.55 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:06:45.01 collision_monitor Robot to continue normal operation
+11:06:47.25 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:06:53.17 controller_server Failed to make progress
+11:06:53.25 collision_monitor Robot to continue normal operation
+11:06:54.18 destravar DESTRAVAR: caminho novo (40 pontos)
+11:06:54.73 destravar DESTRAVAR: DIAGNOSTICO: sem_progresso_fisico,quina_esq,frente_barrada (planner ok, frente 2 cm, retornos 0)
+11:06:54.98 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 40 cm: 
+11:06:54.99 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 40 cm: 5 ponto(s) do LiDAR na 
+11:06:55.25 destravar DESTRAVAR: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 40 cm: 5 ponto(s) do LiDAR na area va
+11:06:55.28 bt_navigator Goal failed
+11:06:55.31 alinhador_passagem GOAL FINAL: FALHOU
+11:06:55.32 alinhador_passagem REINSISTIR 1/2: o Nav2 desistiu do GOAL FINAL; reanaliso, viro para o caminho e mando de novo
+11:06:56.84 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+11:06:56.94 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +125 graus da frente: viro antes do Nav2
+11:06:57.22 alinhador_passagem GOAL FINAL (virar para o caminho): girando 125 graus a quina pegaria: primeiro 7 cm para tras
+11:06:58.44 alinhador_passagem GOAL FINAL (virar para o caminho): andei 6 cm para tras
+11:06:58.72 alinhador_passagem GOAL FINAL (virar para o caminho): girando 125 graus a quina pegaria: primeiro 4 cm para tras
+11:06:59.66 alinhador_passagem GOAL FINAL (virar para o caminho): andei 3 cm para tras
+11:07:09.80 alinhador_passagem GOAL FINAL (virar para o caminho): angulo 123 graus (erro 2.8)
+11:07:10.07 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+11:07:10.07 alinhador_passagem GOAL FINAL: x=1.71 y=2.18 yaw=0 graus
+11:07:10.08 bt_navigator Begin navigating from current location (2.17, 1.33) to (1.71, 2.18)
+11:07:10.11 smoother_server Smoothed path leads to a collision at x: 2.145654, y: 1.309810, theta: -1.206819
+11:07:10.12 controller_server Received a goal, begin computing control effort.
+11:07:25.63 controller_server Reached the goal!
+11:07:25.66 bt_navigator Goal succeeded
+11:07:25.69 alinhador_passagem GOAL FINAL: SUCESSO
+11:07:29.13 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+11:07:29.14 alinhador_passagem Novo goal: x=1.34 y=4.47 yaw=0 graus
+11:07:29.65 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+11:07:29.71 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +78 graus da frente: viro antes do Nav2
+11:07:36.31 alinhador_passagem GOAL FINAL (virar para o caminho): angulo 84 graus (erro 2.3)
+11:07:36.57 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+11:07:36.57 alinhador_passagem GOAL FINAL: x=1.34 y=4.47 yaw=0 graus
+11:07:36.58 bt_navigator Begin navigating from current location (1.69, 2.16) to (1.34, 4.47)
+11:07:36.62 controller_server Received a goal, begin computing control effort.
+11:07:45.08 global_costmap.glo StaticLayer: Resizing costmap to 234 X 220 at 0.050000 m/pix
+11:07:46.04 controller_server Could not find a legal trajectory: No valid trajectories out of 352! 
+11:07:46.15 controller_server Could not find a legal trajectory: No valid trajectories out of 352! 
+11:07:46.54 controller_server Could not find a legal trajectory: No valid trajectories out of 352! 
+11:07:46.71 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:07:46.81 collision_monitor Robot to continue normal operation
+11:07:46.85 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:07:46.94 controller_server Could not find a legal trajectory: No valid trajectories out of 400! 
+11:07:47.01 collision_monitor Robot to continue normal operation
+11:07:47.05 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:07:52.60 collision_monitor Robot to continue normal operation
+11:07:52.72 controller_server Failed to make progress
+11:07:52.91 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:07:53.84 destravar DESTRAVAR: caminho novo (33 pontos)
+11:07:54.28 destravar DESTRAVAR: DIAGNOSTICO: cm_bloqueou,sem_progresso_fisico,quina_dir,frente_barrada (planner ok, frente 2 cm, retornos 0)
+11:07:54.40 destravar DESTRAVAR: DECISAO: lateral (40 cm para esq; depois o corpo anda 50 cm no caminho (area 52% observada)) | recusadas: retomar: causa cm_bloqueou,sem_progresso_fisico: o mesmo controle repetiria | conto
+11:07:54.40 destravar BLOQUEIO: marquei 30 cm a frente do robo por 10 s
+11:07:54.91 collision_monitor Robot to continue normal operation
+11:08:02.56 destravar DESTRAVAR: RESULTADO lateral: ok | chegou | ICP: 27 cm na direcao pedida (dx +17, dy +27 cm)
+11:08:02.57 destravar DESTRAVAR: OK: lateral (40 cm para esq; depois o corpo anda 50 cm no caminho (area 52% observada); ICP: 27 cm na direcao pedida (dx +17, dy +27 cm))
+11:08:02.83 destravar DESTRAVAR: lateral (40 cm para esq; depois o corpo anda 50 cm no caminho (area 52% observada); ICP: 27 cm na direcao pedida (dx +17, dy +27 cm))
+11:08:02.92 controller_server Received a goal, begin computing control effort.
+11:08:05.06 local_costmap.loca Received request to clear entirely the local_costmap
+11:08:11.13 controller_server Reached the goal!
+11:08:11.16 bt_navigator Goal succeeded
+11:08:11.20 alinhador_passagem GOAL FINAL: SUCESSO
+11:08:27.10 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+11:08:27.10 alinhador_passagem Novo goal: x=1.73 y=1.48 yaw=0 graus
+11:08:27.69 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+11:08:27.75 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a -99 graus da frente: viro antes do Nav2
+11:08:35.77 alinhador_passagem GOAL FINAL (virar para o caminho): angulo -93 graus (erro -1.8)
+11:08:36.04 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+11:08:36.05 alinhador_passagem GOAL FINAL: x=1.73 y=1.48 yaw=0 graus
+11:08:36.05 bt_navigator Begin navigating from current location (1.38, 4.48) to (1.73, 1.48)
+11:08:36.09 smoother_server Smoothed path leads to a collision at x: 1.022272, y: 2.575139, theta: 0.469373
+11:08:36.10 controller_server Received a goal, begin computing control effort.
+11:08:37.18 smoother_server Smoothed path leads to a collision at x: 1.483963, y: 2.514792, theta: 1.058803
+11:08:42.90 smoother_server Smoothed path leads to a collision at x: 1.439900, y: 3.160408, theta: -1.818077
+11:08:43.08 global_costmap.glo StaticLayer: Resizing costmap to 234 X 220 at 0.050000 m/pix
+11:08:47.42 controller_server Could not find a legal trajectory: No valid trajectories out of 352! 
+11:08:55.02 controller_server Could not find a legal trajectory: No valid trajectories out of 392! 
+11:08:55.62 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:08:55.65 collision_monitor Robot to continue normal operation
+11:09:16.10 smoother_server Smoothed path leads to a collision at x: 1.698519, y: 1.167692, theta: -1.536882
+11:09:32.20 controller_server Cancellation was successful. Stopping the robot.
+11:09:32.20 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+11:09:32.20 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+11:09:32.20 bt_navigator Goal canceled
+11:09:32.52 alinhador_passagem ANTI_CISCADO 1: GOAL FINAL: 4 inversoes em 4 s sem sair do lugar (4 cm, 13 graus): paro, destravo e mando o goal de novo
+11:09:33.47 destravar DESTRAVAR: caminho novo (12 pontos)
+11:09:33.70 alinhador_passagem Novo goal: x=1.51 y=4.72 yaw=0 graus
+11:09:33.74 alinhador_passagem Goal substituido por um novo.
+11:09:33.75 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+11:09:34.02 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,frente_barrada (planner ok, frente 14 cm, retornos 0)
+11:09:34.27 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: caminho para tras (+139 graus): o DWB nao da re | contornar: nao e objeto pequeno com lado livre | lateral: esq 25 cm: depois 
+11:09:34.27 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: caminho para tras (+139 graus): o DWB nao da re | contornar: nao e objeto pequeno com lado livre | lateral: esq 25 cm: depois o caminho so anda 0 cm;
+11:09:34.53 destravar DESTRAVAR: sem alternativa segura (retomar: caminho para tras (+139 graus): o DWB nao da re | contornar: nao e objeto pequeno com lado livre | lateral: esq 25 cm: depois o caminho so anda 0 cm; esq 15
+11:09:34.55 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+11:09:34.65 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +139 graus da frente: viro antes do Nav2
+11:09:45.74 alinhador_passagem GOAL FINAL (virar para o caminho): angulo 82 graus (erro 2.6)
+11:09:46.00 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+11:09:46.00 alinhador_passagem GOAL FINAL: x=1.51 y=4.72 yaw=0 graus
+11:09:46.00 bt_navigator Begin navigating from current location (1.74, 1.18) to (1.51, 4.72)
+11:09:46.05 controller_server Received a goal, begin computing control effort.
+11:09:53.57 controller_server Could not find a legal trajectory: No valid trajectories out of 368! 
+11:09:53.65 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:09:53.67 controller_server Could not find a legal trajectory: No valid trajectories out of 400! 
+11:09:53.85 collision_monitor Robot to continue normal operation
+11:09:54.66 controller_server Could not find a legal trajectory: No valid trajectories out of 400! 
+11:09:54.86 controller_server Could not find a legal trajectory: No valid trajectories out of 400! 
+11:09:54.95 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:10:00.75 controller_server Failed to make progress
+11:10:01.54 destravar DESTRAVAR: caminho novo (128 pontos)
+11:10:02.13 destravar DESTRAVAR: DIAGNOSTICO: sem_progresso_fisico,frente_barrada (planner ok, frente 0 cm, retornos 0)
+11:10:02.43 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq 40 cm: 
+11:10:02.44 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq 40 cm: 6 ponto(s) do LiDAR na 
+11:10:02.70 destravar DESTRAVAR: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq 40 cm: 6 ponto(s) do LiDAR na area va
+11:10:02.73 bt_navigator Goal failed
+11:10:02.74 alinhador_passagem GOAL FINAL: FALHOU
+11:10:02.76 alinhador_passagem REINSISTIR 1/2: o Nav2 desistiu do GOAL FINAL; reanaliso, viro para o caminho e mando de novo
+11:10:04.41 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+11:10:04.49 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +79 graus da frente: viro antes do Nav2
+11:10:04.75 alinhador_passagem GOAL FINAL (virar para o caminho): girando 79 graus a quina pegaria: primeiro 20 cm para tras
+11:10:04.85 collision_monitor Robot to continue normal operation
+11:10:07.19 alinhador_passagem GOAL FINAL (virar para o caminho): andei 19 cm para tras
+11:10:09.31 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:10:09.45 collision_monitor Robot to continue normal operation
+11:10:09.61 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:10:09.75 collision_monitor Robot to continue normal operation
+11:10:09.95 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:10:11.09 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+11:10:11.36 alinhador_passagem GOAL FINAL (virar para o caminho): girando 47 graus a quina pegaria: primeiro 4 cm para esq
+11:10:11.45 collision_monitor Robot to continue normal operation
+11:10:12.01 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:10:12.05 collision_monitor Robot to continue normal operation
+11:10:12.53 alinhador_passagem GOAL FINAL (virar para o caminho): andei 4 cm para esq
+11:10:12.80 alinhador_passagem GOAL FINAL (virar para o caminho): girando 46 graus a quina pegaria: primeiro 4 cm para esq
+11:10:12.85 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:10:12.91 collision_monitor Robot to continue normal operation
+11:10:13.50 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:10:13.71 collision_monitor Robot to continue normal operation
+11:10:13.99 alinhador_passagem GOAL FINAL (virar para o caminho): andei 3 cm para esq
+11:10:14.35 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+11:10:15.31 collision_monitor Robot to continue normal operation
+11:10:15.45 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+11:10:15.46 alinhador_passagem GOAL FINAL (virar para o caminho): o giro trava sempre
+11:10:15.73 alinhador_passagem GOAL FINAL (virar para o caminho): nao consegui virar; sigo pelo Nav2
+11:10:15.74 alinhador_passagem GOAL FINAL: x=1.51 y=4.72 yaw=0 graus
+11:10:15.74 bt_navigator Begin navigating from current location (1.48, 1.92) to (1.51, 4.72)
+11:10:15.77 smoother_server Smoothed path leads to a collision at x: 1.498519, y: 1.917692, theta: 0.000000
+11:10:15.79 controller_server Received a goal, begin computing control effort.
+11:10:17.33 smoother_server Smoothed path leads to a collision at x: 1.298519, y: 2.117692, theta: 0.084700
+11:10:23.03 smoother_server Smoothed path leads to a collision at x: 1.461086, y: 4.681673, theta: 0.672979
+11:10:23.58 planner_server GridBased plugin failed to plan from (1.14, 2.74) to (1.51, 4.72): "Failed to create plan with tolerance of: 0.100000"
+11:10:23.60 global_costmap.glo Received request to clear entirely the global_costmap
+11:10:24.11 planner_server Planner loop missed its desired rate of 2.0000 Hz. Current loop rate is 1.9832 Hz
+11:10:24.11 smoother_server Smoothed path leads to a collision at x: 1.286614, y: 4.381469, theta: 1.428574
+11:10:24.68 smoother_server Smoothed path leads to a collision at x: 1.277147, y: 4.385899, theta: 1.200287
+11:10:25.21 smoother_server Smoothed path leads to a collision at x: 1.425460, y: 4.631450, theta: 0.851912
+11:10:25.74 smoother_server Smoothed path leads to a collision at x: 1.404490, y: 4.612571, theta: 0.845122
+11:10:26.29 smoother_server Smoothed path leads to a collision at x: 1.382772, y: 4.596294, theta: 0.822227
+11:10:26.82 smoother_server Smoothed path leads to a collision at x: 1.464331, y: 4.677562, theta: 0.762143
+11:10:28.39 smoother_server Smoothed path leads to a collision at x: 1.510845, y: 4.721171, theta: 0.000000
+11:10:28.93 smoother_server Smoothed path leads to a collision at x: 1.510845, y: 4.721171, theta: 0.000000
+11:10:44.84 alinhador_passagem Novo goal: x=0.21 y=-0.08 yaw=6 graus
+11:10:44.85 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+11:10:44.85 bt_navigator Goal canceled
+11:10:44.89 controller_server Cancellation was successful. Stopping the robot.
+11:10:44.89 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+11:10:44.90 alinhador_passagem Goal substituido por um novo.
+11:10:44.92 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+11:10:44.92 planner_server GridBased plugin failed to plan from (1.38, 4.63) to (0.21, -0.08): "Failed to create plan with tolerance of: 0.100000"
+11:10:45.59 alinhador_passagem Planner: sem caminho; mapa: 6.0 m: sigo a rota do mapa
+11:10:45.71 alinhador_passagem Analise: passagem em (1.44, 0.85) sem espaco livre para a pose de preparo.
+11:10:45.71 planner_server GridBased plugin failed to plan from (1.37, 4.65) to (0.21, -0.08): "Failed to create plan with tolerance of: 0.100000"
+11:10:45.75 alinhador_passagem GOAL FINAL: x=0.21 y=-0.08 yaw=6 graus
+11:10:45.75 bt_navigator Begin navigating from current location (1.37, 4.65) to (0.21, -0.08)
+11:10:45.75 planner_server GridBased plugin failed to plan from (1.37, 4.65) to (0.21, -0.08): "Failed to create plan with tolerance of: 0.100000"
+11:10:45.77 global_costmap.glo Received request to clear entirely the global_costmap
+11:10:46.10 smoother_server Smoothed path leads to a collision at x: 1.392967, y: 4.280455, theta: 2.169972
+11:10:46.13 controller_server Received a goal, begin computing control effort.
+11:10:46.66 smoother_server Smoothed path leads to a collision at x: 1.748519, y: 3.767692, theta: 2.356194
+11:10:47.19 planner_server GridBased plugin failed to plan from (1.39, 4.63) to (0.21, -0.08): "Failed to create plan with tolerance of: 0.100000"
+11:10:47.20 global_costmap.glo Received request to clear entirely the global_costmap
+11:10:47.60 planner_server GridBased plugin failed to plan from (1.42, 4.63) to (0.21, -0.08): "Failed to create plan with tolerance of: 0.100000"
+11:10:47.63 controller_server Cancellation was successful. Stopping the robot.
+11:10:47.63 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+11:10:49.01 planner_server GridBased plugin failed to plan from (1.41, 4.60) to (0.21, -0.08): "Failed to create plan with tolerance of: 0.100000"
+11:10:49.65 global_costmap.glo Received request to clear entirely the global_costmap
+11:10:49.67 local_costmap.loca Received request to clear entirely the local_costmap
+11:10:50.29 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+11:10:50.30 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)
+11:10:52.30 planner_server GridBased plugin failed to plan from (1.41, 4.60) to (0.21, -0.08): "Failed to create plan with tolerance of: 0.100000"
+11:10:52.94 global_costmap.glo Received request to clear entirely the global_costmap
+11:10:52.97 local_costmap.loca Received request to clear entirely the local_costmap
+11:10:53.59 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+11:10:53.60 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (2/2)
+11:10:55.60 planner_server GridBased plugin failed to plan from (1.41, 4.60) to (0.21, -0.08): "Failed to create plan with tolerance of: 0.100000"
+11:10:56.18 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_caminho_global (planner sem_caminho, frente 138 cm, retornos 0)
+11:10:56.75 destravar DESTRAVAR: DECISAO: giro (gira -40 graus para o caminho (-171); area 59% observada) | recusadas: retomar: planner sem caminho | lateral: dir 40 cm: depois o caminho so anda 0 cm; dir 30 cm: depois o c
+11:10:57.38 progressive_spin spin avaliacao: sentido=+1 arco_livre=20.6 graus folga_extra=0.04 m abertura=0.20 m folga_giro=0.300 m
+11:10:57.39 progressive_spin spin avaliacao: sentido=-1 arco_livre=20.6 graus folga_extra=0.04 m abertura=0.20 m folga_giro=0.300 m
+11:10:57.41 progressive_spin micro-giro -6.9 graus (acumulado 0.0 / max 40.1)
+11:10:57.41 behavior_server Running spin
+11:10:57.41 behavior_server Turning -0.12 for spin behavior.
+11:10:58.22 behavior_server spin completed successfully
+11:10:58.28 progressive_spin smart_spin ok: abertura frontal verificada após 7.7 graus; BT pode replanejar
+11:10:59.09 destravar DESTRAVAR: RESULTADO giro: ok | smart_spin: abertura frontal verificada após 7.7 graus; BT pode replanejar | IMU: girou -10 graus
+11:10:59.10 destravar DESTRAVAR: OK: giro (gira -40 graus para o caminho (-171); area 59% observada; IMU: girou -10 graus)
+11:10:59.36 destravar DESTRAVAR: giro (gira -40 graus para o caminho (-171); area 59% observada; IMU: girou -10 graus)
+11:10:59.40 smoother_server Smoothed path leads to a collision at x: 1.469593, y: 4.400845, theta: -1.043506
+11:10:59.44 smoother_server Smoothed path leads to a collision at x: 1.469593, y: 4.400845, theta: -1.043506
+11:10:59.45 controller_server Received a goal, begin computing control effort.
+11:10:59.97 smoother_server Smoothed path leads to a collision at x: 1.488925, y: 4.381895, theta: -1.117822
+11:11:00.53 smoother_server Smoothed path leads to a collision at x: 1.473043, y: 4.402351, theta: -1.068830
+11:11:01.08 smoother_server Smoothed path leads to a collision at x: 1.610031, y: 3.954806, theta: 2.083177
+11:11:01.63 smoother_server Smoothed path leads to a collision at x: 1.654724, y: 3.878520, theta: 2.232914
+11:11:02.17 smoother_server Smoothed path leads to a collision at x: 1.565975, y: 3.819093, theta: 2.260811
+11:11:02.72 smoother_server Smoothed path leads to a collision at x: 1.726346, y: 3.686294, theta: 2.232208
+11:11:03.27 smoother_server Smoothed path leads to a collision at x: 1.766681, y: 3.673374, theta: 2.143978
+11:11:03.82 smoother_server Smoothed path leads to a collision at x: 1.733391, y: 3.685743, theta: 2.237337
+11:11:04.38 smoother_server Smoothed path leads to a collision at x: 1.643641, y: 3.642212, theta: 1.767186
+11:11:04.92 smoother_server Smoothed path leads to a collision at x: 1.643527, y: 3.706901, theta: 2.042742
+11:11:04.96 controller_server Cancellation was successful. Stopping the robot.
+11:11:04.96 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+11:11:04.96 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+11:11:04.96 bt_navigator Goal canceled
+11:11:05.27 alinhador_passagem ANTI_CISCADO 1: GOAL FINAL: 10 inversoes em 4 s sem sair do lugar (4 cm, 1 graus): paro, destravo e mando o goal de novo
+11:11:06.75 destravar DESTRAVAR: caminho novo (234 pontos)
+11:11:07.34 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,oscilacao (planner ok, frente 44 cm, retornos 1)
+11:11:07.57 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa oscilacao: o mesmo controle repetiria | lateral: esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 46% o
+11:11:07.59 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: causa oscilacao: o mesmo controle repetiria | lateral: esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 46% observada (minimo 50%); 
+11:11:07.85 destravar DESTRAVAR: sem alternativa segura (retomar: causa oscilacao: o mesmo controle repetiria | lateral: esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 46% observada (minimo 50%); esq 10 
+11:11:07.87 alinhador_passagem ANTI_CISCADO 1: destravar falhou
+11:11:07.95 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +174 graus da frente: viro antes do Nav2
+11:11:17.86 alinhador_passagem GOAL FINAL (virar para o caminho): angulo -108 graus (erro 2.0)
+11:11:18.14 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+11:11:18.15 alinhador_passagem GOAL FINAL: x=0.21 y=-0.08 yaw=6 graus
+11:11:18.15 bt_navigator Begin navigating from current location (1.52, 4.55) to (0.21, -0.08)
+11:11:18.18 smoother_server Smoothed path leads to a collision at x: 1.457647, y: 0.764229, theta: 1.542954
+11:11:18.20 controller_server Received a goal, begin computing control effort.
+11:11:18.74 smoother_server Smoothed path leads to a collision at x: 1.457641, y: 0.764223, theta: 1.542992
+11:11:19.29 smoother_server Smoothed path leads to a collision at x: 1.452347, y: 0.921281, theta: -1.586651
+11:11:19.58 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+11:11:19.59 bt_navigator Goal canceled
+11:11:19.60 controller_server Cancellation was successful. Stopping the robot.
+11:11:19.60 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+11:11:19.62 alinhador_passagem GOAL FINAL: interrompido para alinhar
+11:11:19.65 alinhador_passagem Passagem 1: entrada (1.44, 0.89), eixo -81 graus, largura no mapa 0.78 m, preparo a 1.00 m da entrada
+11:11:19.66 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=1.29 y=1.88 yaw=-81 graus
+11:11:20.08 alinhador_passagem PREPARO 1 (alinhar fora da passagem) (posicao): x=1.29 y=1.88 yaw=121 graus
+11:11:20.09 bt_navigator Begin navigating from current location (1.24, 4.46) to (1.29, 1.88)
+11:11:20.12 smoother_server Smoothed path leads to a collision at x: 1.049025, y: 3.730353, theta: 1.424793
+11:11:20.14 controller_server Received a goal, begin computing control effort.
+11:11:20.68 smoother_server Smoothed path leads to a collision at x: 1.051243, y: 3.731913, theta: 1.454838
+11:11:21.23 smoother_server Smoothed path leads to a collision at x: 1.048353, y: 3.730125, theta: 1.390827
+11:11:21.79 smoother_server Smoothed path leads to a collision at x: 1.051638, y: 3.755781, theta: 1.386637
+11:11:22.37 smoother_server Smoothed path leads to a collision at x: 1.081341, y: 3.888846, theta: -1.680338
+11:11:22.97 smoother_server Smoothed path leads to a collision at x: 1.216815, y: 4.025484, theta: -1.403249
+11:11:23.54 smoother_server Smoothed path leads to a collision at x: 1.221392, y: 3.802564, theta: -1.686301
+11:11:24.08 smoother_server Smoothed path leads to a collision at x: 1.221392, y: 3.802564, theta: -1.686301
+11:11:24.61 planner_server GridBased plugin failed to plan from (0.99, 4.05) to (1.29, 1.88): "Failed to create plan with tolerance of: 0.100000"
+11:11:24.63 global_costmap.glo Received request to clear entirely the global_costmap
+11:11:25.11 smoother_server Smoothed path leads to a collision at x: 1.672440, y: 3.705467, theta: -0.837675
+11:11:25.66 smoother_server Smoothed path leads to a collision at x: 1.708711, y: 3.626433, theta: -1.091754
+11:11:26.17 planner_server GridBased plugin failed to plan from (0.97, 3.93) to (1.29, 1.88): "Failed to create plan with tolerance of: 0.100000"
+11:11:26.19 global_costmap.glo Received request to clear entirely the global_costmap
+11:11:26.61 smoother_server Smoothed path leads to a collision at x: 1.417369, y: 3.735422, theta: -0.900419
+11:11:27.16 smoother_server Smoothed path leads to a collision at x: 0.948519, y: 3.867692, theta: 0.096065
+11:11:27.70 smoother_server Smoothed path leads to a collision at x: 0.898519, y: 3.817692, theta: 0.093993
+11:11:28.25 smoother_server Smoothed path leads to a collision at x: 0.848519, y: 3.767692, theta: 0.175496
+11:11:28.77 planner_server GridBased plugin failed to plan from (0.79, 3.74) to (1.29, 1.88): "Failed to create plan with tolerance of: 0.100000"
+11:11:28.79 global_costmap.glo Received request to clear entirely the global_costmap
+11:11:29.10 planner_server GridBased plugin failed to plan from (0.81, 3.73) to (1.29, 1.88): "Failed to create plan with tolerance of: 0.100000"
+11:11:29.14 controller_server Cancellation was successful. Stopping the robot.
+11:11:29.14 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+11:11:30.14 planner_server GridBased plugin failed to plan from (0.74, 3.70) to (1.29, 1.88): "Failed to create plan with tolerance of: 0.100000"
+11:11:30.78 global_costmap.glo Received request to clear entirely the global_costmap
+11:11:30.80 local_costmap.loca Received request to clear entirely the local_costmap
+11:11:31.42 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+11:11:31.42 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)
+11:11:33.42 planner_server GridBased plugin failed to plan from (0.74, 3.70) to (1.29, 1.88): "Failed to create plan with tolerance of: 0.100000"
+11:11:34.07 global_costmap.glo Received request to clear entirely the global_costmap
+11:11:34.09 local_costmap.loca Received request to clear entirely the local_costmap
+11:11:34.72 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+11:11:34.72 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (2/2)
+11:11:36.72 planner_server GridBased plugin failed to plan from (0.74, 3.70) to (1.29, 1.88): "Failed to create plan with tolerance of: 0.100000"
+11:11:37.36 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_caminho_global (planner sem_caminho, frente 177 cm, retornos 0)
+11:11:37.90 destravar DESTRAVAR: DECISAO: giro (gira +40 graus para o caminho (+143); area 54% observada) | recusadas: retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o c
+11:11:38.56 progressive_spin spin avaliacao: sentido=+1 arco_livre=20.6 graus folga_extra=0.04 m abertura=0.20 m folga_giro=0.095 m
+11:11:38.56 progressive_spin spin avaliacao: sentido=-1 arco_livre=20.6 graus folga_extra=0.04 m abertura=0.20 m folga_giro=0.139 m
+11:11:38.59 progressive_spin micro-giro -6.9 graus (acumulado 0.0 / max 40.1)
+11:11:38.59 behavior_server Running spin
+11:11:38.59 behavior_server Turning -0.12 for spin behavior.
+11:11:39.39 behavior_server spin completed successfully
+11:11:39.42 progressive_spin smart_spin ok: abertura frontal verificada após 6.9 graus; BT pode replanejar
+11:11:40.29 destravar DESTRAVAR: RESULTADO giro: nao_verificado | smart_spin: abertura frontal verificada após 6.9 graus; BT pode replanejar | IMU: girou -10 graus
+11:11:40.82 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: 
+11:11:40.82 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so and
+11:11:41.09 destravar DESTRAVAR: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm;
+11:11:41.12 bt_navigator Goal failed
+11:11:41.15 alinhador_passagem PREPARO 1 (alinhar fora da passagem) (posicao): FALHOU
+11:11:41.16 alinhador_passagem Preparo 1 falhou. Parei fora da passagem; mande o goal de novo.

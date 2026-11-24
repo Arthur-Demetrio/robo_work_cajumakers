@@ -1,0 +1,383 @@
+--- entregas/nav_refinamento_20261111/backups/baseline_20261111_084923/src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml	2026-11-10 12:13:43.482728372 -0300
++++ src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml	2026-11-11 09:14:38.595460538 -0300
+@@ -26,6 +26,7 @@
+          tentativa de replanejar; so volta a true com um caminho novo para o goal atual. -->
+     <Sequence name="GoalNovo">
+     <Script name="CaminhoAindaNao" code="caminho_do_goal := false" />
++    <Script name="SemBloqueioAinda" code="caminho_bloqueado := false" />
+     <RecoveryNode number_of_retries="6" name="NavigateRecovery">
+       <PipelineSequence name="NavigateWithReplanning">
+         <ControllerSelector selected_controller="{selected_controller}" default_controller="FollowPath" topic_name="controller_selector" />
+@@ -50,11 +51,25 @@
+                 <!-- ORIGINAL_SEM_GATE (10/11): suavizado que colide -> caminho do planner (feito agora no costmap
+                      atual, raio inscrito). O IsPathValid reprovava esses caminhos pelo trecho do goal, que fica
+                      na zona inflada perto de mesa/parede, e parava o robo no meio do trajeto. -->
++                <!-- CAMINHO_ORIGINAL (11/11): o original so vai ao FollowPath se a condicao CaminhoOriginalSeguro
++                     (robo_bt_plugins) nao achar BLOQUEIO no trecho restante: footprint na tangente sobre LETHAL que
++                     nenhum deslocamento lateral de ate 10 cm livra (rasante de parede passa). Instalado em
++                     modo="registrar" (so log); A/B: publicar "aplicar" no topico /caminho_original/modo (comando
++                     em ferramentas/patches/aplicar_caminho_original.py). Reprovado: caminho_bloqueado e recuperacao
++                     avaliada. -->
+                 <Fallback name="SuavizadoOuOriginal">
+                   <SmoothPath unsmoothed_path="{path}" smoothed_path="{smoothed_path}" smoother_id="simple_smoother" max_smoothing_duration="2.0" check_for_collisions="true" error_code_id="{smoothing_path_error_code}" />
+-                  <SetBlackboard name="UsarOriginalDoPlanner" output_key="smoothed_path" value="{path}" />
++                  <Sequence name="OriginalConferido">
++                    <CaminhoOriginalSeguro name="ConferirOriginal" path="{path}" goal="{goal}" modo="registrar" folga_inicio="0.30" folga_fim="0.60" tolerancia_lateral="0.10" />
++                    <SetBlackboard name="UsarOriginalDoPlanner" output_key="smoothed_path" value="{path}" />
++                  </Sequence>
++                  <Sequence name="OriginalBloqueado">
++                    <Script name="MarcarBloqueio" code="caminho_bloqueado := true" />
++                    <AlwaysFailure />
++                  </Sequence>
+                 </Fallback>
+                 <Script name="CaminhoDesteGoal" code="caminho_do_goal := true" />
++                <Script name="CaminhoLiberado" code="caminho_bloqueado := false" />
+               </Sequence>
+             </Fallback>
+             <Sequence>
+@@ -70,6 +85,7 @@
+           <WouldAControllerRecoveryHelp error_code="{follow_path_error_code}" />
+           <WouldAPlannerRecoveryHelp error_code="{compute_path_error_code}" />
+           <WouldASmootherRecoveryHelp error_code="{smoothing_path_error_code}" />
++          <ScriptCondition name="OriginalBloqueadoPedeRecuperacao" code="caminho_bloqueado" />
+         </Fallback>
+         <ReactiveFallback name="RecoveryFallback">
+           <GoalUpdated />
+@@ -81,7 +97,10 @@
+                 <ComputePathToPose name="ReplanAfterRecovery" goal="{goal}" path="{path}" planner_id="{selected_planner}" error_code_id="{compute_path_error_code}" />
+                 <Fallback>
+                   <SmoothPath name="CheckRecoveredPath" unsmoothed_path="{path}" smoothed_path="{smoothed_path}" smoother_id="simple_smoother" max_smoothing_duration="2.0" check_for_collisions="true" error_code_id="{smoothing_path_error_code}" />
+-                  <SetBlackboard output_key="smoothed_path" value="{path}" />
++                  <Sequence name="OriginalConferidoRecuperacao">
++                    <CaminhoOriginalSeguro name="ConferirOriginalRecuperacao" path="{path}" goal="{goal}" modo="registrar" folga_inicio="0.30" folga_fim="0.60" tolerancia_lateral="0.10" />
++                    <SetBlackboard output_key="smoothed_path" value="{path}" />
++                  </Sequence>
+                 </Fallback>
+                 <Script name="CaminhoDesteGoalRecuperacao" code="caminho_do_goal := true" />
+               </Sequence>
+--- entregas/nav_refinamento_20261111/backups/baseline_20261111_084923/src/robo_navigation/config/nav2_params.yaml	2026-11-10 10:52:42.758043221 -0300
++++ src/robo_navigation/config/nav2_params.yaml	2026-11-11 08:58:18.910522330 -0300
+@@ -232,6 +232,9 @@
+     bt_loop_duration: 10
+     default_server_timeout: 20
+     wait_for_service_timeout: 1000
++    # CAMINHO_ORIGINAL (11/11): era sem plugin_lib_names (so os plugins do Nav2)
++    plugin_lib_names:
++    - robo_caminho_original_seguro_bt_node
+     navigators:
+     - navigate_to_pose
+     - navigate_through_poses
+--- entregas/nav_refinamento_20261111/backups/baseline_20261111_084923/src/robo_navigation/scripts/alinhador_passagem.py	2026-11-09 19:28:41.980636673 -0300
++++ src/robo_navigation/scripts/alinhador_passagem.py	2026-11-11 09:24:39.034044533 -0300
+@@ -337,6 +337,33 @@
+     return tang
+ 
+ 
++# ROTA_MAPA_OBSTACULO (11/11): objeto do momento na rota do mapa (Patch 04)
++def obstaculo_novo_na_rota(mapa, obs, rota, raio=0.35, dist_parede=0.10):
++    """Celulas ocupadas do `obs` (Mapa do obstacle_layer global, ocupado = 100) que estao livres no `mapa`,
++    a mais de `dist_parede` de qualquer parede do mapa e a menos de `raio` de algum ponto da `rota`.
++    Devolve [(x, y), ...]. Sem obs ou sem rota: []."""
++    if obs is None or not rota:
++        return []
++    achados = []
++    n = int(math.ceil(dist_parede / mapa.res))
++    xs = [p[0] for p in rota]; ys = [p[1] for p in rota]
++    x0, x1, y0, y1 = min(xs) - raio, max(xs) + raio, min(ys) - raio, max(ys) + raio
++    for j in range(obs.h):
++        for i in range(obs.w):
++            if obs.dados[j * obs.w + i] < obs.limiar:
++                continue
++            gx, gy = (i + 0.5) * obs.res, (j + 0.5) * obs.res
++            x, y = obs.ox + obs.c * gx - obs.s * gy, obs.oy + obs.s * gx + obs.c * gy
++            if x < x0 or x > x1 or y < y0 or y > y1 or mapa.estado(x, y) != 0:
++                continue
++            if any(mapa.estado(x + a * mapa.res, y + b * mapa.res) == 1
++                   for a in range(-n, n + 1) for b in range(-n, n + 1) if math.hypot(a, b) <= n):
++                continue
++            if any(math.hypot(x - p[0], y - p[1]) < raio for p in rota):
++                achados.append((x, y))
++    return achados
++
++
+ def _raio(mapa, x, y, ux, uy, alcance):
+     passo = mapa.res / 2.0
+     s = 0.0
+@@ -2388,6 +2415,8 @@
+             self.declare_parameter('entrada_rapida', True)      # ENTRADA_RAPIDA
+             self.declare_parameter('uma_parede', True)          # UMA_PAREDE
+             self.declare_parameter('rota_mapa', True)           # ROTA_MAPA
++            # ROTA_MAPA_OBSTACULO (11/11): ignorar | registrar | recusar (padrao ignorar = como antes)
++            self.declare_parameter('rota_mapa_obstaculo', 'ignorar')
+             self.declare_parameter('vel_aproximacao', 0.03)   # comando (PWM60: real ~0,10 m/s)
+             self.declare_parameter('vel_travessia', 0.06)   # VEL_ZONAS: era 0.035
+             self.declare_parameter('margem_saida', 0.30)      # centro do robo alem da saida
+@@ -2401,6 +2430,8 @@
+             self.declare_parameter('virar_caminho_graus', 45.0)  # v3.30 VIRAR_CAMINHO: vira antes do Nav2 (0 desliga)
+             self.declare_parameter('anti_ciscado', True)      # v3.31 ANTI_CISCADO
+             self.declare_parameter('giro_final_alinhador', True)  # v3.32 GIRO_FINAL nas mesas
++            # GIRO_FINAL_COMUM (11/11): goal sem area tambem com o giro final pelo alinhador (padrao: nao)
++            self.declare_parameter('giro_final_comum', False)
+             self.declare_parameter('ciscado_janela', 4.0)     # s
+             self.declare_parameter('ciscado_inversoes', 4)    # trocas de sentido (giro + lado) na janela
+             self.declare_parameter('ciscado_max', 3)          # intervencoes por goal
+@@ -2491,6 +2522,9 @@
+             self.create_subscription(OccupancyGrid, '/map', self.ao_mapa, qos_mapa,
+                                      callback_group=grupo)
+             self.create_subscription(Path, '/plan', self.ao_plano, 5, callback_group=grupo)
++            self.obs_msg = None   # ROTA_MAPA_OBSTACULO (11/11)
++            self.create_subscription(OccupancyGrid, '/global_costmap/obstacle_layer', self.ao_obs_global,
++                                     qos_mapa, callback_group=grupo)
+             self.create_subscription(PoseStamped, self.get_parameter('topico_goal').value,
+                                      self.ao_goal, 10, callback_group=grupo)
+             self.create_subscription(String, '/ir_para_area', self.ao_ir_area, 10,
+@@ -2511,6 +2545,19 @@
+             with self.lock:
+                 self.mapa_msg = msg
+ 
++        def ao_obs_global(self, msg):   # ROTA_MAPA_OBSTACULO (11/11)
++            with self.lock:
++                self.obs_msg = msg
++
++        def _obs_global(self):
++            with self.lock:
++                m = self.obs_msg
++            if m is None:
++                return None
++            i = m.info
++            return Mapa(i.resolution, i.width, i.height, i.origin.position.x, i.origin.position.y,
++                        yaw_de(i.origin.orientation), m.data, limiar_ocupado=100)
++
+         def ao_conflito_t(self, msg):
+             with self.lock:
+                 self.conflito_t = (time.monotonic(), msg.data)
+@@ -3957,9 +4004,19 @@
+                     and self.rota_tent.get((round(gx, 1), round(gy, 1)), 0) <= 2:
+                 rota = rota_no_mapa(mapa, pm, (gx, gy))
+                 if rota is not None and (pontos is None or _comp_rota(pontos) > 1.3 * _comp_rota(rota) + 0.5):
+-                    self.get_logger().warn('Planner: %s; mapa: %.1f m: sigo a rota do mapa' % (
+-                        'sem caminho' if pontos is None else '%.1f m' % _comp_rota(pontos), _comp_rota(rota)))
+-                    pontos = rota
++                    modo_obs = str(self.p('rota_mapa_obstaculo'))   # ROTA_MAPA_OBSTACULO (11/11)
++                    novos = obstaculo_novo_na_rota(mapa, self._obs_global(), rota) if modo_obs in (
++                        'registrar', 'recusar') else []
++                    if novos:
++                        self.get_logger().warn('ROTA_MAPA_OBSTACULO (%s): %d celula(s) de objeto do momento a '
++                                               '< 35 cm da rota do mapa, a 1a em (%.2f, %.2f)' % (
++                                                   modo_obs, len(novos), novos[0][0], novos[0][1]))
++                    if novos and modo_obs == 'recusar' and pontos is not None:
++                        self.get_logger().warn('ROTA_MAPA_OBSTACULO: fico com o planner (%.1f m)' % _comp_rota(pontos))
++                    else:
++                        self.get_logger().warn('Planner: %s; mapa: %.1f m: sigo a rota do mapa' % (
++                            'sem caminho' if pontos is None else '%.1f m' % _comp_rota(pontos), _comp_rota(rota)))
++                        pontos = rota
+             if mapa is None or pontos is None:
+                 return [], 'sem mapa ou sem caminho'
+             return planejar_etapas(mapa, pontos, (gx, gy), self.p('largura_estreita'),
+@@ -4129,7 +4186,9 @@
+                             alerta['desviar'] = True
+                             return True
+                         return False
+-                    if area is not None and not livre and self.p('giro_final_alinhador'):
++                    # GIRO_FINAL_COMUM (11/11): com giro_final_comum, goal sem area segue o mesmo caminho
++                    if (area is not None and not livre and self.p('giro_final_alinhador')) or \
++                            (area is None and self.p('giro_final_comum')):
+                         # v3.32 GIRO_FINAL: Nav2 so ate a posicao, chegando com o rumo do caminho;
+                         # o giro para a mesa e do alinhador
+                         gyaw = yaw_de(goal.pose.orientation)
+--- src/robo_navigation/test/bt_mini.py.bak_caminho_original_20261111_090354	2026-11-10 12:15:18.634990140 -0300
++++ src/robo_navigation/test/bt_mini.py	2026-11-11 09:03:54.221921326 -0300
+@@ -181,6 +181,8 @@
+             return {S: F, F: S, R: R}[st]
+         if t == 'AlwaysSuccess':
+             return S
++        if t == 'AlwaysFailure':  # CAMINHO_ORIGINAL (11/11)
++            return F
+         if t == 'Script':
+             # so o que as arvores usam: "chave := true|false"
+             k, v = [x.strip() for x in self.a['code'].split(':=')]
+--- src/robo_navigation/test/test_arvore_integrada.py.bak_caminho_original_20261111_090354	2026-11-10 12:14:57.978145831 -0300
++++ src/robo_navigation/test/test_arvore_integrada.py	2026-11-11 09:04:05.422055452 -0300
+@@ -29,7 +29,7 @@
+     """Cenario configuravel. Caminhos: ('plan', n), ('smooth', n), ('rest', caminho)."""
+ 
+     def __init__(self, duracao=6.0, invalido=None, planner=None, suaviza=None, seguir=None,
+-                 destravar=None, spin=None, goal_novo_em=None):
++                 destravar=None, spin=None, goal_novo_em=None, original=None):
+         self.n_plan = 0
+         self.log = []
+         self.duracao = duracao            # s de FollowPath ate chegar com o caminho atual
+@@ -40,6 +40,8 @@
+         self.destravar = destravar or (lambda mundo, t: True)
+         self.spin = spin or (lambda mundo, t: True)
+         self.goal_novo_em = goal_novo_em
++        # CAMINHO_ORIGINAL (11/11): veredito da condicao CaminhoOriginalSeguro no modo "aplicar"
++        self.original = original or (lambda mundo, cam, t: True)
+         self.goal_do_caminho = {}
+         self.t_follow = None
+         self.progresso = 0.0
+@@ -162,6 +164,13 @@
+             sets = {'WouldAControllerRecoveryHelp': CTRL_AJUDA, 'WouldAPlannerRecoveryHelp': PLAN_AJUDA,
+                     'WouldASmootherRecoveryHelp': SUAV_AJUDA}[tag]
+             return S if code in sets else F
++        if tag == 'CaminhoOriginalSeguro':  # CAMINHO_ORIGINAL (11/11)
++            cam = no.porta('path')
++            ok = cam is not None and self.original(self, cam, t)
++            self.log.append((t, 'CaminhoOriginalSeguro', no.a.get('modo'), ok))
++            if no.a.get('modo', 'registrar') == 'registrar':
++                return S
++            return S if ok else F
+         raise AssertionError('folha nao simulada: ' + tag)
+ 
+ 
+@@ -352,3 +361,65 @@
+         return True
+     st, m = rodar(INTEGRADA, Mundo(seguir=seg, planner=planner))
+     assert st == S
++
++
++# CAMINHO_ORIGINAL (11/11): Patch 01. O original do planner so vai ao FollowPath se a condicao aprovar
++# (modo "aplicar"); no modo "registrar" (o instalado) o comportamento e o de antes.
++def _integrada_aplicar(tmp_path):
++    txt = INTEGRADA.read_text()
++    assert txt.count('modo="registrar" folga_inicio') == 2, 'a arvore instalada deve vir em modo registrar'
++    p = tmp_path / 'aplicar.xml'
++    p.write_text(txt.replace('modo="registrar" folga_inicio', 'modo="aplicar" folga_inicio'))
++    return p
++
++
++def test_original_registrar_mantem_o_comportamento_anterior():
++    suav = lambda m, cam, check, t: not check                  # noqa: E731
++    bloq = lambda m, cam, t: False                              # noqa: E731  reprovaria sempre
++    st, m = rodar(INTEGRADA, Mundo(suaviza=suav, original=bloq))
++    seguidos = [e[2] for e in m.log if e[1] == 'FollowPath:start']
++    assert st == S and seguidos[0] == ('plan', 1) and m.conta('DriveOnHeading') == 0
++    assert any(e[1] == 'CaminhoOriginalSeguro' and e[3] is False for e in m.log)  # registrou
++
++
++def test_original_aprovado_vai_ao_followpath(tmp_path):
++    suav = lambda m, cam, check, t: not check                  # noqa: E731
++    st, m = rodar(_integrada_aplicar(tmp_path), Mundo(suaviza=suav))
++    seguidos = [e[2] for e in m.log if e[1] == 'FollowPath:start']
++    assert st == S and seguidos[0] == ('plan', 1) and m.conta('DriveOnHeading') == 0
++
++
++def test_original_bloqueado_nao_vai_ao_followpath_e_recupera(tmp_path):
++    # bloqueio nos 2 primeiros planos; o destravar resolve e o 3o plano passa
++    suav = lambda m, cam, check, t: not check                  # noqa: E731
++    bloq = lambda m, cam, t: cam[1] >= 3                       # noqa: E731
++    st, m = rodar(_integrada_aplicar(tmp_path), Mundo(suaviza=suav, original=bloq))
++    seguidos = [e[2] for e in m.log if e[1] == 'FollowPath:start']
++    assert st == S
++    assert ('plan', 1) not in seguidos and ('plan', 2) not in seguidos
++    assert m.conta('DriveOnHeading') >= 1                      # recuperacao avaliada (destravar v4)
++    assert m.conta('SUCESSO_FALSO') == 0
++
++
++def test_original_bloqueado_sempre_falha_explicita_limitada(tmp_path):
++    suav = lambda m, cam, check, t: not check                  # noqa: E731
++    bloq = lambda m, cam, t: False                              # noqa: E731
++    st, m = rodar(_integrada_aplicar(tmp_path), Mundo(suaviza=suav, original=bloq), max_ticks=6000)
++    assert st == F                                              # nao segue caminho bloqueado
++    assert m.conta('FollowPath:start') == 0
++    assert 1 <= m.conta('DriveOnHeading') <= 6                  # RecoveryNode de 6 tentativas
++
++
++def test_original_bloqueado_com_suavizacao_ok_nao_interfere(tmp_path):
++    bloq = lambda m, cam, t: False                              # noqa: E731
++    st, m = rodar(_integrada_aplicar(tmp_path), Mundo(original=bloq))
++    assert st == S and m.conta('CaminhoOriginalSeguro') == 0    # so roda quando o suavizado falha
++
++
++def test_original_goal_novo_durante_bloqueio(tmp_path):
++    suav = lambda m, cam, check, t: not check                  # noqa: E731
++    bloq = lambda m, cam, t: m.arv.bb.get('goal') == 'G1'      # noqa: E731  so o goal novo passa
++    st, m = rodar(_integrada_aplicar(tmp_path), Mundo(suaviza=suav, original=bloq, goal_novo_em=3.0))
++    assert st == S and m.conta('SUCESSO_FALSO') == 0
++    seguidos = [e[2] for e in m.log if e[1] == 'FollowPath:start']
++    assert seguidos and all(m.goal_do_caminho[c[1]] == 'G1' for c in seguidos)
+--- src/robo_navigation/test/test_config_integrada.py.bak_caminho_original_20261111_091140	2026-11-10 12:14:57.978552676 -0300
++++ src/robo_navigation/test/test_config_integrada.py	2026-11-11 09:19:58.895937351 -0300
+@@ -107,8 +107,15 @@
+     assert t.find('.//Sequence[@name="GoalNovo"]/Script').get('code') == 'caminho_do_goal := false'
+     assert t.find('.//ReactiveSequence/ScriptCondition').get('code') == 'caminho_do_goal'
+     for seq in [s for s in t.iter('Sequence') if s.find('ComputePathToPose') is not None]:
+-        cs = [c.get('code') for c in seq.iter('Script')]
++        # CAMINHO_ORIGINAL (11/11): os Scripts de caminho_bloqueado ficam de fora desta ordem
++        cs = [c.get('code') for c in seq.iter('Script') if 'caminho_do_goal' in c.get('code')]
+         assert cs[0] == 'caminho_do_goal := false' and cs[-1] == 'caminho_do_goal := true'
++    # CAMINHO_ORIGINAL (11/11): o original so vai ao FollowPath depois da CaminhoOriginalSeguro
++    for fb in [f for f in t.iter('Fallback') if f.find('SmoothPath') is not None]:
++        filhos = list(fb)
++        assert filhos[0].tag == 'SmoothPath' and filhos[1].tag == 'Sequence'
++        assert [c.tag for c in filhos[1]] == ['CaminhoOriginalSeguro', 'SetBlackboard']
++        assert filhos[1][0].get('modo') in ('registrar', 'aplicar')
+ 
+ 
+ def _launch(nome):
+@@ -156,12 +163,28 @@
+     return str(p)
+ 
+ 
++# CAMINHO_ORIGINAL (11/11): a arvore usa o plugin robo_bt_plugins (CaminhoOriginalSeguro)
++PLUGIN_ROBO = NAV.parents[1] / 'install' / 'robo_bt_plugins' / 'lib' / 'librobo_caminho_original_seguro_bt_node.so'
++
++
+ def test_bt_valida_com_os_plugins_reais_do_nav2():
++    env = dict(ENV)
++    if 'CaminhoOriginalSeguro' in XML.read_text():
++        if not PLUGIN_ROBO.exists():
++            pytest.fail('arvore usa CaminhoOriginalSeguro mas %s nao existe: colcon build --packages-select '
++                        'robo_bt_plugins' % PLUGIN_ROBO)
++        env['ROBO_BT_PLUGINS'] = str(PLUGIN_ROBO)
+     r = subprocess.run([_sonda('dwb_probe', 'bt_probe'), str(XML)], capture_output=True, text=True,
+-                       env=ENV, timeout=60)
++                       env=env, timeout=60)
+     assert r.returncode == 0 and 'registered_and_parsed' in r.stdout, r.stderr
+ 
+ 
++def test_plugin_lib_names_bate_com_a_arvore():
++    cfg = yaml.safe_load(YAML.read_text())['bt_navigator']['ros__parameters']
++    usa = 'CaminhoOriginalSeguro' in XML.read_text()
++    assert usa == ('robo_caminho_original_seguro_bt_node' in cfg.get('plugin_lib_names', []))
++
++
+ def test_setblackboard_copia_caminho_tipado():
+     r = subprocess.run([_sonda('setblackboard', 'sonda')], capture_output=True, text=True, timeout=30)
+     assert r.returncode == 0 and 'consumido_poses=7' in r.stdout, r.stdout + r.stderr
+--- src/robo_navigation/test/test_navigation_profiles.py.bak_caminho_original_20261111_091458	2026-11-10 10:52:42.765964986 -0300
++++ src/robo_navigation/test/test_navigation_profiles.py	2026-11-11 09:14:58.838553308 -0300
+@@ -47,6 +47,9 @@
+     follow=original['controller_server']['ros__parameters']['FollowPath']
+     assert follow['plugin']=='dwb_core::DWBLocalPlanner'
+     for key in ['primary_controller','angular_dist_threshold','angular_disengage_threshold','forward_sampling_distance','rotate_to_heading_angular_vel','max_angular_accel','simulate_ahead_time','closed_loop','rotate_to_heading_once']:assert key not in follow
++    # CAMINHO_ORIGINAL (11/11): o principal carrega o plugin robo_bt_plugins (so a arvore principal o usa);
++    # os perfis de teste usam a arvore reduzida e nao precisam dele
++    original['bt_navigator']['ros__parameters'].pop('plugin_lib_names',None)
+     stage=yaml.safe_load((NAV/'config/nav2_params_dwb_test.yaml').read_text())
+     assert stage==original
+     early=yaml.safe_load((NAV/'config/nav2_params_early_test.yaml').read_text())
+--- src/robo_navigation/test/sondas_nav2/dwb_probe/bt_probe.cpp.bak_caminho_original_20261111_085754	2026-11-10 10:51:28.642989961 -0300
++++ src/robo_navigation/test/sondas_nav2/dwb_probe/bt_probe.cpp	2026-11-11 08:57:54.612518738 -0300
+@@ -4,6 +4,7 @@
+ #include <behaviortree_cpp/xml_parsing.h>
+ #include <sstream>
+ #include <string>
++#include <cstdlib>
+ #include <behaviortree_cpp/bt_factory.h>
+ #include <nav2_behavior_tree/plugins_list.hpp>
+ int main(int argc, char **argv) {
+@@ -13,6 +14,13 @@
+   while (std::getline(plugins, name, ';')) {
+     factory.registerFromPlugin("/opt/ros/jazzy/lib/lib" + name + ".so");
+   }
++  // CAMINHO_ORIGINAL (11/11): plugins do workspace (ROBO_BT_PLUGINS=/caminho/libX.so:/caminho/libY.so)
++  if (const char * extra = std::getenv("ROBO_BT_PLUGINS")) {
++    std::stringstream ex(extra);
++    while (std::getline(ex, name, ':')) {
++      if (!name.empty()) {factory.registerFromPlugin(name);}
++    }
++  }
+   if (argc == 1) { std::cout << BT::writeTreeNodesModelXML(factory); return 0; }
+   for (int i=1; i<argc; ++i) {
+     factory.clearRegisteredBehaviorTrees();

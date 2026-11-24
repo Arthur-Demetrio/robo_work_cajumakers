@@ -1,0 +1,10 @@
+# START e FINISH (frame map desta sessao). Gerado por executor_prova.py
+pontos:
+  START:
+    x: 0.197
+    y: 0.003
+    yaw: -0.1053
+  FINISH:
+    x: 0.197
+    y: 0.003
+    yaw: -0.1053

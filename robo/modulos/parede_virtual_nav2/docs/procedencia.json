@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-13",
+  "source": "Robo-WORK operational virtual wall package validated in session",
+  "original_parent_commit": "e0c0492244fb1d3f8d716280532b062b4400f7b7",
+  "unchanged_core_sha256": {
+    "detector.py": "ceaf9401b3c7c70769abea8fe3101e1d1c1b021475e071f6458a779b1828bfd1",
+    "projection.py": "cecd5f88af7ca7028f611dcf8a5d0cdea9c82b2c762fa19ee96730741741b240",
+    "stabilization.py": "e03179a13739e5d15ab4c26bebcf3e8c0d3fbbaebcdc634fcd15bbe0ecfe6723",
+    "point_probe.py": "c4ef1cffa48c3d7e4e5382a32de743896641bb30fa7291e0a345d354be49cbbf",
+    "calibrate.py": "53ff029bc5072919f88be76c1a87c72bfb6f3b26ee3ffc7c4e517f68f431fd23",
+    "wall_map.py": "c8d1158c87957788f5f6216cf2e4c34e012d5e72d2435abd432d011f16d5962e",
+    "keepout_node.py": "3c4b144bd388fa7d0680be52e48d41bfe4a87b2e9083578650e5ce227948bb68",
+    "visible_retirement.py": "e5134c9e18236f89d71879e72d82b6ce68d5ee473bed0a4778707e71b377a3fe",
+    "nav_config.py": "9089df396a26e40725cf686c70cdf08fcd44a42e68210e1ae4ffcb53407e3d9c"
+  },
+  "packaging_changes": [
+    "Removed unused gripper mask and dynamic tracking options.",
+    "HSV/calibration/RViz/filter resources installed inside package.",
+    "Default capture directory ~/.ros/virtual_wall/captures instead of notebook checkout.",
+    "No hardware/navigation process modified during publication."
+  ]
+}

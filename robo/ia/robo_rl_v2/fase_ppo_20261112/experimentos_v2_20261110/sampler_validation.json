@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "resets": 500,
+  "collision_queries": 1000,
+  "starts_outside_old_largest_component": 353,
+  "old_component_labels_reached": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    9,
+    10
+  ],
+  "main_state_count": 1163258,
+  "coverage_method": "Largest connected component of discretized full-footprint SE(2) graph; conservative swept rotations",
+  "guidance_compatibility": "The old disk planner is deliberately rejected; no learning was run with the new sampler"
+}

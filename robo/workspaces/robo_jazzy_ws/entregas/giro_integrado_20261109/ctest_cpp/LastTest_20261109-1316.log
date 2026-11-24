@@ -1,0 +1,19 @@
+Start testing: Nov 09 10:16 -03
+----------------------------------------------------------
+1/1 Testing: sensor_clock
+1/1 Test: sensor_clock
+Command: "/home/marcos/robo_jazzy_ws/build/robo_hardware/test_sensor_clock"
+Directory: /home/marcos/robo_jazzy_ws/build/robo_hardware
+"sensor_clock" start time: Nov 09 10:16 -03
+Output:
+----------------------------------------------------------
+sensor_clock: 32 checks passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"sensor_clock" end time: Nov 09 10:16 -03
+"sensor_clock" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 09 10:16 -03

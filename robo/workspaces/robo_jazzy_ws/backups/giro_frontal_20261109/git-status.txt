@@ -1,0 +1,2 @@
+?? backups/giro_frontal_20261109/
+?? docs/

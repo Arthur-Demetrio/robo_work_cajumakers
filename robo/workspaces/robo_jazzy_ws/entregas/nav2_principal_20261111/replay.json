@@ -1,0 +1,3308 @@
+[
+  {
+    "bag": "/home/marcos/bags/missao33_20261111_102905_949360/bag",
+    "goals_diretos_preservados": 10,
+    "novos_goals_intervalo_menor_30s": 3,
+    "caixa_logs": 0,
+    "curva_t_logs": 80,
+    "giros_comandados": 770,
+    "planos": 28,
+    "amostras": [
+      {
+        "t": 1794403806.656613,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794403807.8246903,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794403808.9907653,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794403809.991094,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794403810.9953218,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794403812.1629012,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794403813.3294315,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794403814.3319433,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794403815.4989188,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794403816.6649487,
+        "passagem_mapa": true,
+        "confirmada": true,
+        "curva_t": true
+      },
+      {
+        "t": 1794403817.8283837,
+        "passagem_mapa": true,
+        "confirmada": true,
+        "curva_t": true
+      },
+      {
+        "t": 1794403818.8366632,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794403819.9943662,
+        "passagem_mapa": true,
+        "confirmada": true,
+        "curva_t": true
+      },
+      {
+        "t": 1794403820.99651,
+        "passagem_mapa": true,
+        "confirmada": true,
+        "curva_t": true
+      },
+      {
+        "t": 1794403822.1621144,
+        "passagem_mapa": true,
+        "confirmada": true,
+        "curva_t": true
+      },
+      {
+        "t": 1794403960.9148653,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403962.0810685,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403963.0817752,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403964.083365,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403965.4180083,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403966.5827212,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403967.749541,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403968.912915,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403969.9194934,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403970.9195755,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403971.9208634,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403972.9222937,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403973.9224548,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403974.9235485,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403975.9245148,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403976.926134,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403978.0898697,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403979.096345,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403980.0991642,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403981.2611864,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403982.270157,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403983.4364135,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403984.4370937,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403985.439316,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403986.6055853,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403987.7711365,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403988.7738109,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403989.9413185,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403991.1112072,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403992.2775397,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403993.4396942,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403994.4454882,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403995.6095498,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403996.77772,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403997.9477203,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794403999.1109753,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404000.2757924,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404001.4392538,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404002.6010702,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404003.6018345,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404004.6048837,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404005.7679183,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404006.7709572,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404007.934686,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404009.0990326,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404010.10029,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404011.2679613,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404012.4358692,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404013.6011753,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404014.6012118,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404015.763287,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404016.770407,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404017.9374194,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404019.094851,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404020.1013653,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404021.1019316,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404022.2643256,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404023.269723,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404031.7655256,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404032.7656422,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404033.7685268,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404034.7696722,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404035.9329398,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404036.9346442,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404038.0991755,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404039.2630641,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404040.2661526,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404041.4290733,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404042.433372,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404043.434893,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404044.597973,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404045.7628243,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404046.9341817,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404048.095117,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404049.2614608,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404050.2615767,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404051.2628624,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404052.431373,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404053.432474,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404054.5971894,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404055.7617133,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404056.7617178,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404057.9191227,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404058.9232402,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404060.0830293,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404061.088171,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404062.2531798,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404063.4115984,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404064.41294,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404065.5751104,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404130.6581151,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404131.660097,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404132.8233283,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404133.9897764,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404135.158029,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404136.3234906,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404137.4896233,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404138.4934733,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404139.6532812,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404140.6572824,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404141.657422,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404142.8231485,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404143.988683,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404144.988707,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404146.1477292,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404147.148012,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404148.309839,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404149.3110912,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404150.4713774,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404151.4717247,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404152.632484,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404153.7973347,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404154.9584973,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404155.9590554,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404157.1213481,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404158.285363,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404159.4491208,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404160.4499164,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404161.6100628,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404162.7716353,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404163.9337578,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404164.9362013,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404166.0949547,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404167.0982132,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404168.2528875,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404169.4195104,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404170.5776844,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404171.7349398,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404172.8932292,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404173.895473,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404175.060274,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404176.2177794,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404177.378497,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404178.5393295,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404179.7013707,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404180.8621027,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404182.0215838,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404183.1840801,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404184.34987,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404185.508403,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404186.6701515,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404187.8345876,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404188.9911506,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404190.1532679,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404191.319228,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404192.4793878,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404193.6372962,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404194.8011541,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404195.9683454,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404197.1228878,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404198.2888699,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404199.4536073,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404200.609493,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404201.6109982,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404202.7657428,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404203.931372,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404205.0890987,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404206.251283,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404207.4120116,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404208.5729928,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404209.7346504,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404210.897643,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404212.05984,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404213.2252753,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404214.3848765,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404215.5488486,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404216.7102919,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404217.8733597,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404219.0330045,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404220.1938114,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404221.3542888,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404222.5153651,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794404223.680523,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      }
+    ],
+    "limite": "replay de decisao; nao comprova trajetoria alternativa, frenagem ou sucesso fisico"
+  },
+  {
+    "bag": "/home/marcos/bags/missao34_20261111_110217_913450/bag",
+    "goals_diretos_preservados": 7,
+    "novos_goals_intervalo_menor_30s": 0,
+    "caixa_logs": 6,
+    "curva_t_logs": 46,
+    "giros_comandados": 1422,
+    "planos": 150,
+    "amostras": [
+      {
+        "t": 1794405751.3838887,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405752.5351863,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405753.6893337,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405754.8356514,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405755.974986,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405757.120313,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405758.2555966,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405759.402899,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405760.542608,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405761.675422,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405762.8182304,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405763.959509,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405765.099716,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405766.2397792,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794405900.0700278,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405901.213706,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405902.3562136,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405903.4947243,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405904.6386166,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405905.7766106,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405906.915086,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405908.057401,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405909.196358,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405910.3439047,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405911.4854312,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405912.619071,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405913.7659802,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405914.9057992,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405916.0501397,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405917.1880395,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405918.3277543,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405919.4695308,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405920.6119485,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405921.7519581,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405922.8913991,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405924.0307186,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405925.1760144,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405926.3135216,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405927.4550714,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405928.595446,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405929.7327378,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405930.877684,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405932.0154912,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405933.1538672,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405934.2971504,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405935.4383035,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405936.5845034,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405937.7191055,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405938.8602614,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405940.0174026,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405941.953713,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405943.0942454,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405944.236918,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405945.376903,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405946.5147684,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405947.65453,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405948.7964783,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405949.9326842,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405951.0781667,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405952.2162857,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405953.3532875,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405954.4989538,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405955.6360407,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405956.7738008,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405957.919826,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405959.0609257,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405960.1976757,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405961.337597,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405962.479567,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405963.6197133,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405964.7633758,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405965.9017446,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405967.0376701,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405968.181025,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405969.320223,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405970.464056,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405971.6012788,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405972.7422152,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405973.8839407,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405975.0235353,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405976.167036,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405977.3052115,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405978.443036,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405979.5857124,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405980.7243245,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405981.8686934,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405983.0092468,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405984.1523416,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405985.2926495,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405986.4569237,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405987.4584548,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405988.4593637,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405989.6206849,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405990.7832057,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405991.9390664,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405993.0980544,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405994.2612033,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405995.42287,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405996.5797203,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405997.7381458,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794405998.903826,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406000.0558262,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406001.2052524,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406002.3626084,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406003.531735,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406004.6964488,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406005.857099,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406006.8594718,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406008.0253391,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406009.1844218,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406010.1908782,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406011.3453543,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406012.5053022,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406013.6716871,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406014.8310487,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406015.98986,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406016.9919364,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406018.1537685,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406019.3162568,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406020.4721484,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406021.630959,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406022.7917814,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406023.9519951,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406025.1060317,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406026.2654278,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406027.4218543,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406028.5771585,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406029.735203,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406030.88796,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406032.04547,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406033.2050579,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406034.3641553,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406035.536154,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406036.6859639,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406037.8476331,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406039.00144,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406040.1670024,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406041.3240566,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406042.4802735,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406043.6387072,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406044.7978997,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406045.959489,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406049.2746503,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406050.4329288,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406051.591692,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406052.752707,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406053.9052873,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406055.0616512,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406056.2188976,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406057.3764977,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406058.5382717,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406059.6958115,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406060.8536396,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406062.012576,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406063.1753635,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406064.334021,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406065.4864826,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406066.6480007,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406067.7994354,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406068.9590786,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406070.1146855,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406071.2709813,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406072.4357913,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406073.5914683,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406074.7404737,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406075.896218,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406077.0516,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406078.2095182,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406079.3678267,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406080.3678277,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406081.533262,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406082.6904426,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406083.851744,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406085.0135412,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406086.179318,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406087.3359208,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406088.4998925,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406089.6606028,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406090.81753,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406091.974186,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406093.1333566,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406094.2964656,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406095.4483511,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406096.6061296,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406097.7600305,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406098.7604258,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406107.1993315,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406108.358377,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406109.519289,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406110.6804872,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406111.8432307,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406112.8472974,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406114.011314,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406115.1707656,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406116.3354511,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406117.335941,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406118.336563,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406119.4970353,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406120.6625717,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406121.8305464,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406122.9989676,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406124.1576085,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406125.1608646,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406126.3261318,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406127.4926653,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406128.6438158,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406129.6476834,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406130.809955,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406131.8120584,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406132.814686,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406133.9801207,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406135.1287024,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406136.2619932,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406137.4001522,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406138.5421572,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406139.683177,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406140.822438,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406141.972529,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406143.113258,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406144.252653,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406145.394291,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406146.5390975,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406147.6833062,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406148.8312385,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406149.9721003,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406151.1125169,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406152.2582805,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406153.3981862,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406154.543554,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406155.6862252,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406156.8307884,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406157.9733334,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406159.1188796,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406160.261351,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406161.405042,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406162.549712,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406163.6923523,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406164.8358707,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406165.9752767,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406167.113134,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406168.2602684,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406169.4007027,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406170.5412567,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406171.6867113,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406172.8331294,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406173.9749026,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406175.1184242,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406176.2587178,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406177.4029868,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406178.5419426,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406179.6857197,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406180.8337116,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406181.9757168,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406183.117737,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406184.265695,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406185.4010537,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406186.5455194,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406187.6923838,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406188.8323011,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406189.9750483,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406191.118443,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406192.2628102,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406193.402341,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406194.5446892,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406195.6925564,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406196.8355732,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406197.976868,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406199.1177058,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406200.261232,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406201.4071262,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406202.5553267,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406203.6936429,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406204.8355055,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406205.9800637,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406207.124185,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406208.266998,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406209.4116,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406210.5535686,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406211.6915336,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406212.8379726,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406213.9771876,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406215.1216257,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406216.265969,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406217.4083142,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406218.5476773,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406219.6962755,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406220.847655,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406221.9914572,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406223.1396554,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406224.2883196,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406225.4352307,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406226.5794191,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406227.7312517,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406228.8714743,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406230.0200658,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406231.1656265,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406232.314701,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406233.4620454,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406234.6137857,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406235.7541423,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406236.9033055,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406238.0508087,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406239.2002513,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406240.3518133,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406241.5002003,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406242.6544616,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406243.796715,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406244.9492638,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406246.099016,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406247.2454636,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406248.3963726,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406249.5501192,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406250.695346,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406251.842314,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406252.9947193,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406254.143376,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406255.2908392,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406256.4385364,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406257.5954216,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406258.743251,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406259.8947387,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406261.0375404,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406262.1952589,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406263.338821,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406264.4878893,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406265.6406417,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406266.790842,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406267.935973,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406269.0962727,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406270.243024,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406271.3950279,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406272.5434134,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406273.697484,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406274.8553903,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406276.0124426,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406277.1635745,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406278.3212726,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": true
+      },
+      {
+        "t": 1794406279.474028,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406280.633347,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406281.7919338,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406282.944035,
+        "passagem_mapa": true,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406284.1030595,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406285.2559102,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406286.4121273,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406287.5743346,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406288.7253273,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406289.87798,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406291.03535,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406292.194269,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406293.3483348,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406294.509812,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406295.6538603,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406296.8104098,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406297.9563663,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406299.1133204,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406300.2597394,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406301.4135067,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406302.5700672,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      },
+      {
+        "t": 1794406303.7148993,
+        "passagem_mapa": false,
+        "confirmada": false,
+        "curva_t": false
+      }
+    ],
+    "limite": "replay de decisao; nao comprova trajetoria alternativa, frenagem ou sucesso fisico"
+  }
+]

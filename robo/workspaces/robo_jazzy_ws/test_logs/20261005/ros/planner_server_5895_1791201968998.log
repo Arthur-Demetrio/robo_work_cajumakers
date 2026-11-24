@@ -1,0 +1,183 @@
+[INFO] [1791201969.013219984] [planner_server]: 
+	planner_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791201969.014584345] [planner_server]: Creating
+[INFO] [1791201969.032932151] [global_costmap.global_costmap]: 
+	global_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791201969.033389861] [global_costmap.global_costmap]: Creating Costmap
+[INFO] [1791201969.198266064] [planner_server]: Configuring
+[INFO] [1791201969.198291872] [global_costmap.global_costmap]: Configuring
+[INFO] [1791201969.201486597] [global_costmap.global_costmap]: Using plugin "static_layer"
+[INFO] [1791201969.204001878] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1791201969.204571040] [global_costmap.global_costmap]: Subscribing to updates
+[INFO] [1791201969.205480949] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[INFO] [1791201969.205494801] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[INFO] [1791201969.205897780] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1791201969.214791779] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 205 X 192 at 0.050000 m/pix
+[INFO] [1791201969.215208627] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[INFO] [1791201969.215230634] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[INFO] [1791201969.215981753] [planner_server]: Planner Server has GridBased  planners available.
+[INFO] [1791201969.768475469] [planner_server]: Activating
+[INFO] [1791201969.768499664] [global_costmap.global_costmap]: Activating
+[INFO] [1791201969.768505237] [global_costmap.global_costmap]: Checking transform
+[INFO] [1791201969.768588523] [global_costmap.global_costmap]: start
+[INFO] [1791201969.818726767] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[INFO] [1791201969.819180758] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[INFO] [1791202016.268707074] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 124 X 46 at 0.050000 m/pix
+[INFO] [1791202076.268704413] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 124 X 53 at 0.050000 m/pix
+[INFO] [1791202078.268836096] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 181 X 85 at 0.050000 m/pix
+[INFO] [1791202080.268702059] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 181 X 134 at 0.050000 m/pix
+[INFO] [1791202082.269020752] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 199 X 187 at 0.050000 m/pix
+[INFO] [1791202084.268702126] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 201 X 189 at 0.050000 m/pix
+[INFO] [1791202090.268966035] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 201 X 189 at 0.050000 m/pix
+[WARN] [1791202106.469902483] [planner_server]: GridBased plugin failed to plan from (2.05, 0.55) to (1.92, 2.25): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202106.469945173] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202106.489513273] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202106.770289332] [planner_server]: GridBased plugin failed to plan from (2.05, 0.55) to (1.92, 2.25): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202106.770335344] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202106.789739804] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202107.270528089] [planner_server]: GridBased plugin failed to plan from (2.05, 0.55) to (1.92, 2.25): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202107.270575458] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202107.289569773] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202107.770395434] [planner_server]: GridBased plugin failed to plan from (2.05, 0.55) to (1.92, 2.25): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202107.770559314] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202113.710886035] [planner_server]: GridBased plugin failed to plan from (2.05, 0.55) to (1.92, 2.25): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202113.711040501] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202113.729371454] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202113.770048067] [planner_server]: GridBased plugin failed to plan from (2.05, 0.55) to (1.92, 2.25): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202113.770093380] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202118.810950615] [planner_server]: GridBased plugin failed to plan from (2.05, 0.55) to (1.92, 2.25): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202118.810998966] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202118.829360464] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202119.270004410] [planner_server]: GridBased plugin failed to plan from (2.05, 0.55) to (1.92, 2.25): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202119.270056530] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202120.268725178] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 201 X 211 at 0.050000 m/pix
+[WARN] [1791202120.311516122] [planner_server]: GridBased plugin failed to plan from (2.05, 0.34) to (1.95, 2.38): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202120.311731897] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202120.329383775] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202120.770035351] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (1.95, 2.38): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202120.770081797] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202120.789663559] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202121.270362371] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (1.95, 2.38): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202121.270419491] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202121.289363382] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202121.770015271] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (1.95, 2.38): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202121.770060761] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202127.710540849] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (1.95, 2.38): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202127.710588552] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202127.729363373] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202127.770004765] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (1.95, 2.38): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202127.770058486] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202131.812339367] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (0.01, 0.04): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202131.812446762] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202131.831785555] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202132.272475395] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (0.01, 0.04): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202132.272524101] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202132.292389316] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202132.773220824] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (0.01, 0.04): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202132.773331970] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202132.791790725] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202133.272451891] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (0.01, 0.04): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202133.272501142] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202139.112234903] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (0.01, 0.04): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202139.112296864] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202139.131814425] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202139.273117007] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (0.01, 0.04): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202139.273365208] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202144.312322133] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (0.01, 0.04): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202144.312379268] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202144.331799657] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202144.772891193] [planner_server]: GridBased plugin failed to plan from (2.05, 0.36) to (0.01, 0.04): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202144.773084337] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202150.268709103] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 210 X 211 at 0.050000 m/pix
+[INFO] [1791202154.268767335] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 215 X 211 at 0.050000 m/pix
+[WARN] [1791202224.338095984] [planner_server]: GridBased plugin failed to plan from (2.09, 0.71) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202224.338149671] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202224.355980402] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202224.778384555] [planner_server]: GridBased plugin failed to plan from (2.09, 0.71) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202224.778434803] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202224.796190187] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202225.278784820] [planner_server]: GridBased plugin failed to plan from (2.09, 0.71) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202225.278842884] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202225.295937806] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202225.777941681] [planner_server]: GridBased plugin failed to plan from (2.09, 0.71) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202225.777992198] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202231.517948833] [planner_server]: GridBased plugin failed to plan from (2.09, 0.71) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202231.518156325] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202231.536046187] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202231.778289443] [planner_server]: GridBased plugin failed to plan from (2.09, 0.71) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202231.778341796] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202236.817614461] [planner_server]: GridBased plugin failed to plan from (2.09, 0.71) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202236.817666924] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202236.835953256] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202237.278367454] [planner_server]: GridBased plugin failed to plan from (2.09, 0.71) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202237.278425889] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202238.268709624] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 215 X 216 at 0.050000 m/pix
+[WARN] [1791202238.317588038] [planner_server]: GridBased plugin failed to plan from (2.11, 0.49) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202238.317639969] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202238.336002093] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202238.778344545] [planner_server]: GridBased plugin failed to plan from (2.11, 0.51) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202238.778413747] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202238.796212397] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202239.278228176] [planner_server]: GridBased plugin failed to plan from (2.11, 0.51) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202239.278274389] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202239.296084008] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202239.778160359] [planner_server]: GridBased plugin failed to plan from (2.11, 0.51) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202239.778208549] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202245.718346378] [planner_server]: GridBased plugin failed to plan from (2.11, 0.51) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202245.718390242] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202245.735904685] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202245.778492455] [planner_server]: GridBased plugin failed to plan from (2.11, 0.51) to (2.01, 1.56): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202245.778548027] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202252.268701647] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 216 X 216 at 0.050000 m/pix
+[WARN] [1791202252.352371659] [planner_server]: GridBased plugin failed to plan from (2.22, 0.43) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202252.352432136] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202252.369947310] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202252.772773945] [planner_server]: GridBased plugin failed to plan from (2.29, 0.38) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202252.773042206] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202252.810586431] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202253.272989829] [planner_server]: GridBased plugin failed to plan from (2.26, 0.38) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202253.273046137] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202253.291643645] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202253.774775925] [planner_server]: GridBased plugin failed to plan from (2.26, 0.38) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202253.774836069] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202259.513227547] [planner_server]: GridBased plugin failed to plan from (2.26, 0.38) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202259.513275305] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202259.531615879] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202259.774315263] [planner_server]: GridBased plugin failed to plan from (2.26, 0.38) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202259.774404863] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202264.813264528] [planner_server]: GridBased plugin failed to plan from (2.26, 0.38) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202264.813318325] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202264.831680262] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202265.273398232] [planner_server]: GridBased plugin failed to plan from (2.26, 0.38) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202265.273449318] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202266.313342796] [planner_server]: GridBased plugin failed to plan from (2.32, 0.68) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202266.313394027] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202266.331717240] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202266.773234501] [planner_server]: GridBased plugin failed to plan from (2.26, 0.61) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202266.773294416] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202266.791898949] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202267.273517808] [planner_server]: GridBased plugin failed to plan from (2.26, 0.61) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202267.273565481] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202267.291825893] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202267.774521734] [planner_server]: GridBased plugin failed to plan from (2.26, 0.61) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202267.774582541] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791202273.713514713] [planner_server]: GridBased plugin failed to plan from (2.26, 0.61) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202273.713563305] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202273.731719219] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791202273.773740168] [planner_server]: GridBased plugin failed to plan from (2.26, 0.61) to (1.89, 3.51): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791202273.773790694] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791202444.423196167] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791202444.423226276] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[INFO] [1791202444.423262284] [planner_server]: Deactivating
+[INFO] [1791202444.423284515] [global_costmap.global_costmap]: Deactivating
+[INFO] [1791202444.768799788] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[INFO] [1791202444.768839734] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[INFO] [1791202444.778982288] [planner_server]: Cleaning up
+[INFO] [1791202444.794142155] [global_costmap.global_costmap]: Cleaning up
+[INFO] [1791202444.799080568] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[INFO] [1791202444.799249314] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[INFO] [1791202444.819843576] [planner_server]: Destroying bond (planner_server) to lifecycle manager.

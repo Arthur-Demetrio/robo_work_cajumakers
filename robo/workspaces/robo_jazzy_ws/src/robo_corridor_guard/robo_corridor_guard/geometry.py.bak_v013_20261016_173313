@@ -1,0 +1,139 @@
+"""Pure-Python geometric inference and preview-only velocity guard.
+
+No ROS dependency; physical movement is NEVER requested by this module.
+All lengths are metres, velocities m/s and rad/s.
+"""
+from dataclasses import dataclass
+import math
+from statistics import median
+from typing import List, Optional, Tuple
+
+Point = Tuple[float, float]
+
+@dataclass(frozen=True)
+class Wall:
+    slope: float
+    offset: float
+    inliers: int
+    residual_m: float
+    xspan_m: float
+
+@dataclass(frozen=True)
+class Corridor:
+    detected: bool
+    width_m: Optional[float] = None
+    center_y_m: Optional[float] = None
+    heading_rad: Optional[float] = None
+    left: Optional[Wall] = None
+    right: Optional[Wall] = None
+    reason: str = 'SEM_LEITURA'
+    physical_clearance_m: Optional[float] = None
+
+@dataclass(frozen=True)
+class Config:
+    robot_width_m: float = 0.630
+    min_width_m: float = 0.70
+    max_width_m: float = 1.05
+    side_min_y_m: float = 0.20
+    side_max_y_m: float = 0.80
+    x_min_m: float = -0.25
+    x_max_m: float = 0.75
+    min_side_samples: int = 6
+    min_x_span_m: float = 0.25
+    max_residual_m: float = 0.045
+    max_parallel_error_rad: float = 0.13
+    min_clearance_m: float = 0.045
+    large_heading_error_rad: float = 0.12
+    max_turn_in_corridor_rad_s: float = 0.065
+    reverse_turn_epsilon_rad_s: float = 0.015
+
+
+def _linear_fit(points: List[Point]):
+    n=len(points)
+    avgx=sum(p[0] for p in points)/n
+    avgy=sum(p[1] for p in points)/n
+    den=sum((x-avgx)**2 for x,_ in points)
+    if den <= 1.e-7:
+        return None
+    slope=sum((x-avgx)*(y-avgy) for x,y in points)/den
+    return slope, avgy-slope*avgx
+
+
+def _fit_wall(points: List[Point], cfg: Config) -> Optional[Wall]:
+    if len(points) < cfg.min_side_samples:
+        return None
+    # Two passes of geometric residual trimming. This resists isolated scan returns.
+    kept=list(points)
+    for _ in range(2):
+        coeff=_linear_fit(kept)
+        if coeff is None:
+            return None
+        a,b=coeff
+        errors=[abs(y-(a*x+b))/math.sqrt(1+a*a) for x,y in kept]
+        robust_scale=median(errors)
+        cutoff=max(0.018, min(cfg.max_residual_m, 3.0*robust_scale+0.009))
+        filtered=[p for p,e in zip(kept,errors) if e<=cutoff]
+        if len(filtered)<cfg.min_side_samples:
+            return None
+        kept=filtered
+    coeff=_linear_fit(kept)
+    if coeff is None:
+        return None
+    a,b=coeff
+    span=max(x for x,_ in kept)-min(x for x,_ in kept)
+    residual=max(abs(y-(a*x+b))/math.sqrt(1+a*a) for x,y in kept)
+    if span < cfg.min_x_span_m or residual > cfg.max_residual_m:
+        return None
+    return Wall(a,b,len(kept),residual,span)
+
+
+def find_corridor(points: List[Point], cfg: Config = Config()) -> Corridor:
+    """Conservative candidate, not proof the corridor is safe to traverse.
+
+    Points must be already expressed in base_link; makes no use of map pose.
+    Does not infer wall geometry when one side is missing.
+    """
+    usable=[(x,y) for x,y in points if math.isfinite(x) and math.isfinite(y)
+            and cfg.x_min_m <= x <= cfg.x_max_m]
+    left_pts=[(x,y) for x,y in usable if cfg.side_min_y_m<=y<=cfg.side_max_y_m]
+    right_pts=[(x,y) for x,y in usable if -cfg.side_max_y_m<=y<=-cfg.side_min_y_m]
+    left=_fit_wall(left_pts,cfg)
+    right=_fit_wall(right_pts,cfg)
+    if left is None or right is None:
+        return Corridor(False,reason='DUAS_PAREDES_NAO_OBSERVADAS',left=left,right=right)
+    heading1=math.atan(left.slope)
+    heading2=math.atan(right.slope)
+    if abs(heading1-heading2)>cfg.max_parallel_error_rad:
+        return Corridor(False,reason='PAREDES_NAO_PARALELAS',left=left,right=right)
+    width=(left.offset-right.offset)/math.sqrt(1+((left.slope+right.slope)/2)**2)
+    center=(left.offset+right.offset)/2
+    heading=(heading1+heading2)/2
+    clearance=(width-cfg.robot_width_m)/2
+    if not (cfg.min_width_m<=width<=cfg.max_width_m):
+        return Corridor(False,width,center,heading,left,right,'LARGURA_INCOMPATIVEL',clearance)
+    # Note: if corridor center is offset relative to base_link, nominal clearance
+    # of the actual robot is reduced by abs(center_y_m).
+    side_clearance=clearance-abs(center)
+    if side_clearance < cfg.min_clearance_m:
+        return Corridor(True,width,center,heading,left,right,'FOLGA_INSUFICIENTE',side_clearance)
+    return Corridor(True,width,center,heading,left,right,'CORREDOR_POSSIVEL',side_clearance)
+
+
+def preview_cmd(vx:float,vy:float,wz:float, corridor:Corridor,
+                scan_fresh:bool, cfg:Config=Config()):
+    """What a future stop-only guard would do. PREVIEW, never drive motors."""
+    if not scan_fresh:
+        return (0.0,0.0,0.0),'SCAN_AUSENTE_OU_ANTIGO'
+    if not corridor.detected:
+        return (vx,vy,wz),'FORA_DO_MODO_CORREDOR'
+    if corridor.reason=='FOLGA_INSUFICIENTE':
+        return (0.0,0.0,0.0),'FOLGA_INSUFICIENTE'
+    if abs(corridor.heading_rad or 0)>cfg.large_heading_error_rad:
+        return (0.0,0.0,0.0),'DESALINHAMENTO_GRANDE'
+    if vx < -0.01 and abs(wz)>cfg.reverse_turn_epsilon_rad_s:
+        return (0.0,0.0,0.0),'RE_COM_ROTACAO'
+    if abs(vy)>0.015:
+        return (0.0,0.0,0.0),'DESLOCAMENTO_LATERAL_NO_CORREDOR'
+    if abs(wz)>cfg.max_turn_in_corridor_rad_s:
+        return (0.0,0.0,0.0),'GIRO_EXCESSIVO'
+    return (vx,vy,wz),'PASSAGEM_CANDIDATA_SEM_BLOQUEIO_DE_COMANDO'

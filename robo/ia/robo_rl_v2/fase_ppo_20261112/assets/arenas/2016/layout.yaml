@@ -1,0 +1,70 @@
+name: arena_2016
+attribution: reconstrução aproximada da arena RoboCup@Work 2016 baseada em referência visual e restrições geométricas conhecidas
+size_m: [12.0, 10.0]
+resolution_m: 0.025
+minimum_passage_m: 0.80
+boundary_m: 0.10
+# Coordinates are metric, origin southwest. Each group is one connected fixture.
+# Rect: [center_x, center_y, width, height]; circle: [center_x, center_y, radius].
+fixtures:
+  - {id: divisoria_sul, kind: wall, shapes: [{rect: [5.96, 3.10, 0.12, 2.20]}, {rect: [5.39, 2.06, 1.26, 0.12]}]}
+  - {id: divisoria_norte, kind: wall, shapes: [{rect: [5.96, 6.45, 0.12, 2.30]}, {rect: [6.56, 6.95, 1.32, 0.12]}]}
+  - {id: quina_oeste, kind: wall, shapes: [{rect: [3.35, 3.10, 0.12, 0.80]}, {rect: [3.68, 3.44, 0.78, 0.12]}]}
+  - id: estacao_noroeste
+    kind: workstation
+    shapes:
+      - {rect: [2.05, 8.94, 2.20, 0.12]}
+      - {rect: [1.01, 8.30, 0.12, 1.40]}
+      - {rect: [3.09, 8.30, 0.12, 1.40]}
+      - {rect: [2.05, 8.66, 2.00, 0.44], white: true}
+  - id: estacao_nordeste
+    kind: workstation
+    shapes:
+      - {rect: [9.95, 8.94, 2.20, 0.12]}
+      - {rect: [8.91, 8.30, 0.12, 1.40]}
+      - {rect: [10.99, 8.30, 0.12, 1.40]}
+      - {rect: [9.95, 8.66, 2.00, 0.44], white: true}
+  - id: cobertura_oeste
+    kind: canopy
+    shapes:
+      - {rect: [1.01, 5.20, 0.12, 1.40]}
+      - {rect: [2.05, 4.56, 2.20, 0.12]}
+      - {rect: [2.05, 5.84, 2.20, 0.12]}
+      - {rect: [1.30, 5.20, 0.46, 1.20], white: true}
+  - id: cobertura_leste
+    kind: canopy
+    shapes:
+      - {rect: [10.99, 5.20, 0.12, 1.40]}
+      - {rect: [9.95, 4.56, 2.20, 0.12]}
+      - {rect: [9.95, 5.84, 2.20, 0.12]}
+      - {rect: [10.70, 5.20, 0.46, 1.20], white: true}
+  - {id: mesa_vermelha, kind: red_table, shapes: [{rect: [1.60, 3.25, 1.20, 0.70]}]}
+  - {id: plataforma_circular, kind: circular, shapes: [{circle: [1.60, 1.60, 0.45]}]}
+  - {id: plataforma_sudoeste, kind: platform, shapes: [{rect: [3.60, 1.30, 0.65, 0.65], white: true}]}
+  - {id: plataforma_sudeste, kind: platform, shapes: [{rect: [7.70, 1.30, 0.65, 0.65], white: true}]}
+  - {id: plataforma_norte_1, kind: platform, shapes: [{rect: [4.35, 8.50, 0.50, 0.80], white: true}]}
+  - {id: plataforma_norte_2, kind: platform, shapes: [{rect: [7.40, 8.50, 0.50, 0.80], white: true}]}
+  - {id: plataforma_centro_oeste, kind: platform, shapes: [{rect: [4.30, 5.90, 0.60, 0.65], white: true}]}
+  - {id: plataforma_centro_leste, kind: platform, shapes: [{rect: [7.60, 3.30, 0.60, 0.65], white: true}]}
+variants:
+  arena_2016_aproximada: {mobile_boxes: 0, noise: false}
+  arena_2016_limpa: {mobile_boxes: 0, noise: false}
+  arena_2016_treino:
+    mobile_boxes: 3
+    box_size_m: [0.25, 0.45]
+    noise: true
+    sensor_noise_m: 0.015
+    physical_noise_std: [0.001, 0.002, 0.001]
+    scan_dropout_probability: 0.01
+    friction_range: [0.90, 1.0]
+    slip_range: [0.02, 0.06]
+    odom_bias_std: [0.003, 0.003, 0.002]
+    delay_ticks: [1, 2]
+    pose_jitter_m: 0.08
+# Explicit free internal cavities and central crossing, checked against raster occupancy.
+passage_areas:
+  - {id: cavidade_noroeste, rect: [2.05, 8.02, 1.90, 0.80]}
+  - {id: cavidade_nordeste, rect: [9.95, 8.02, 1.90, 0.80]}
+  - {id: cavidade_oeste, rect: [2.34, 5.20, 1.56, 1.10]}
+  - {id: cavidade_leste, rect: [9.66, 5.20, 1.56, 1.10]}
+  - {id: cruzamento_central, rect: [5.96, 4.75, 1.20, 1.04]}

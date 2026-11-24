@@ -1,0 +1,3694 @@
+{
+ "/home/marcos/bags/missao24_20261106_104812/bag": [
+  {
+   "t": 1793972919.95,
+   "vy": -0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0,
+   "tf_frente_cm": 1.5,
+   "tf_lado_cm": -8.0,
+   "log": [
+    [
+     "-0.04",
+     "Indo para WS_2: aproximacao em x=2.00 y=2.01 yaw=-3 graus"
+    ],
+    [
+     "-0.00",
+     "Passagem 1: entrada (0.77, -0.18), eixo -1 graus, largura no mapa 0.75 m, preparo a 0.60 m da entrada"
+    ],
+    [
+     "-0.00",
+     "PREPARO 1 (alinhar fora da passagem): x=0.17 y=-0.17 yaw=-1 graus"
+    ]
+   ]
+  },
+  {
+   "t": 1793972932.97,
+   "vy": -0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 1.8,
+   "tf_lado_cm": -6.8,
+   "log": [
+    [
+     "-6.83",
+     "TRAVESSIA 1: travessia pelo LiDAR ate (2.30, -0.18) + 0.30 m"
+    ],
+    [
+     "-1.01",
+     "TRAVESSIA 1: Paredes vistas (largura 0.86 m): parando na boca para alinhar"
+    ],
+    [
+     "-0.05",
+     "TRAVESSIA 1: Medicao 1: girar +2.1 graus, centro a -13.1 cm, largura 0.85 m"
+    ]
+   ]
+  },
+  {
+   "t": 1793973048.42,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.025,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.025,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.025,
+   "n_nav": 24,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0,
+   "tf_frente_cm": -3.6,
+   "tf_lado_cm": 1.1,
+   "log": [
+    [
+     "-0.03",
+     "Indo para WS_2: aproximacao em x=2.00 y=2.01 yaw=-3 graus"
+    ],
+    [
+     "-0.00",
+     "Passagem 1: entrada (0.72, -0.16), eixo -0 graus, largura no mapa 0.78 m, preparo a 0.60 m da entrada"
+    ],
+    [
+     "-0.00",
+     "PREPARO 1 (alinhar fora da passagem): x=0.12 y=-0.16 yaw=-0 graus"
+    ]
+   ]
+  },
+  {
+   "t": 1793973076.59,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -3.0,
+   "tf_lado_cm": 2.0,
+   "log": [
+    [
+     "-0.00",
+     "TRAVESSIA 1 (LiDAR): FALHOU - Collision Monitor bloqueando dentro da passagem"
+    ],
+    [
+     "-0.00",
+     "Travessia pelo LiDAR falhou: voltando ao preparo para tentar de novo."
+    ],
+    [
+     "-0.00",
+     "PREPARO 1 (2a tentativa): x=0.12 y=-0.16 yaw=-0 graus"
+    ]
+   ]
+  },
+  {
+   "t": 1793973080.87,
+   "vy": -0.023,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.06,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.06,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.06,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 17,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.03,
+   "tf_frente_cm": 6.2,
+   "tf_lado_cm": 0.3,
+   "log": [
+    [
+     "-0.31",
+     "PREPARO 1 (2a tentativa): SUCESSO (9 cm e 6 graus do preparo)"
+    ],
+    [
+     "-0.31",
+     "TRAVESSIA 1 (2a tentativa): travessia pelo LiDAR ate (1.45, -0.16) + 0.00 m"
+    ],
+    [
+     "-0.05",
+     "TRAVESSIA 1 (2a tentativa): Paredes vistas: entrando sem parar (+0.2 graus, centro -4.6 cm)"
+    ]
+   ]
+  },
+  {
+   "t": 1793973103.76,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0,
+   "tf_frente_cm": 0.4,
+   "tf_lado_cm": 10.5,
+   "log": [
+    [
+     "-1.22",
+     "CURVA 1: Medicao: girar +5.5 graus, centro -1.0 cm a frente (1 parede(s)), folga frente 10 / tras - cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +5.5 graus, centro -0.9 cm a frente (1 parede(s)), folga frente 11 / tras - cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Sem mais correcoes: sigo deslizando (folgas boas)"
+    ]
+   ]
+  },
+  {
+   "t": 1793973110.54,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -6.3,
+   "tf_lado_cm": 8.9,
+   "log": [
+    [
+     "-2.18",
+     "CURVA 1: Medicao: girar +5.3 graus, centro -1.4 cm a frente (1 parede(s)), folga frente 8 / tras 17 cm"
+    ],
+    [
+     "-1.01",
+     "CURVA 1: Medicao: girar +3.1 graus, centro -1.6 cm a frente (1 parede(s)), folga frente 9 / tras 18 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.3 graus, centro -1.6 cm a frente (1 parede(s)), folga frente 9 / tras 19 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973116.52,
+   "vy": 0.08,
+   "vx_onset": -0.021,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.043,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.043,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.043,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 1.1,
+   "tf_lado_cm": 6.6,
+   "log": [
+    [
+     "-1.57",
+     "CURVA 1: Medicao: girar +1.1 graus, centro -7.8 cm a frente (folgas), folga frente 4 / tras 19 cm"
+    ],
+    [
+     "-1.57",
+     "CURVA 1: Perto da parede: afastando -7.8 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +0.3 graus, centro -1.4 cm a frente (folgas), folga frente 10 / tras 13 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973121.13,
+   "vy": 0.08,
+   "vx_onset": -0.027,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.036,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.036,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.036,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 3.8,
+   "tf_lado_cm": -2.3,
+   "log": [
+    [
+     "-1.52",
+     "CURVA 1: Medicao: girar +6.1 graus, centro -9.2 cm a frente (folgas), folga frente 3 / tras 21 cm"
+    ],
+    [
+     "-1.52",
+     "CURVA 1: Perto da parede: afastando -9.2 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +0.8 graus, centro -2.7 cm a frente (folgas), folga frente 9 / tras 15 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973124.78,
+   "vy": 0.08,
+   "vx_onset": -0.023,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.039,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.039,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.039,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.9,
+   "tf_lado_cm": 6.2,
+   "log": [
+    [
+     "-2.38",
+     "CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 18 cm"
+    ],
+    [
+     "-1.52",
+     "CURVA 1: Medicao: girar +3.0 graus, centro -7.3 cm a frente (folgas), folga frente 5 / tras 19 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -1.2 graus, centro -1.7 cm a frente (folgas), folga frente 9 / tras 12 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973130.55,
+   "vy": 0.08,
+   "vx_onset": -0.019,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.03,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.03,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.03,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -2.2,
+   "tf_lado_cm": 5.2,
+   "log": [
+    [
+     "-1.52",
+     "CURVA 1: Medicao: girar -1.7 graus, centro -7.2 cm a frente (folgas), folga frente 4 / tras 18 cm"
+    ],
+    [
+     "-1.52",
+     "CURVA 1: Perto da parede: afastando -7.2 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -1.7 graus, centro -0.8 cm a frente (folgas), folga frente 10 / tras 12 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973134.7,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 5.7,
+   "tf_lado_cm": 6.0,
+   "log": [
+    [
+     "-1.57",
+     "CURVA 1: Medicao: girar +0.7 graus, centro -8.0 cm a frente (folgas), folga frente 3 / tras 19 cm"
+    ],
+    [
+     "-1.57",
+     "CURVA 1: Perto da parede: afastando -8.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +0.6 graus, centro -2.6 cm a frente (1 parede(s)), folga frente 9 / tras 13 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973142.14,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.7,
+   "tf_lado_cm": 5.6,
+   "log": [
+    [
+     "-2.53",
+     "CURVA 1: Perto da parede: afastando -4.0 cm"
+    ],
+    [
+     "-1.21",
+     "CURVA 1: Medicao: girar -4.8 graus, centro -3.3 cm a frente (1 parede(s)), folga frente 7 / tras 14 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -2.2 graus, centro -3.2 cm a frente (1 parede(s)), folga frente 7 / tras 14 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973145.28,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.3,
+   "tf_lado_cm": 6.5,
+   "log": [
+    [
+     "-1.37",
+     "CURVA 1: Medicao: girar +1.3 graus, centro -6.7 cm a frente (1 parede(s)), folga frente 4 / tras 17 cm"
+    ],
+    [
+     "-1.37",
+     "CURVA 1: Perto da parede: afastando -4.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -1.3 graus, centro -3.3 cm a frente (1 parede(s)), folga frente 7 / tras 13 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973152.06,
+   "vy": 0.08,
+   "vx_onset": -0.028,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.042,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.042,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.042,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 2.5,
+   "tf_lado_cm": 12.3,
+   "log": [
+    [
+     "-2.23",
+     "CURVA 1: Medicao: girar +6.8 graus, centro -2.1 cm a frente (1 parede(s)), folga frente 8 / tras 14 cm"
+    ],
+    [
+     "-1.06",
+     "CURVA 1: Medicao: girar +3.7 graus, centro -2.4 cm a frente (1 parede(s)), folga frente 9 / tras 15 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.1 graus, centro -3.0 cm a frente (folgas), folga frente 9 / tras 15 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973160.67,
+   "vy": 0.08,
+   "vx_onset": -0.03,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.04,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.04,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.04,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -3.5,
+   "tf_lado_cm": 8.1,
+   "log": [
+    [
+     "-2.23",
+     "CURVA 1: Medicao: girar +5.7 graus, centro -3.5 cm a frente (folgas), folga frente 8 / tras 15 cm"
+    ],
+    [
+     "-1.06",
+     "CURVA 1: Medicao: girar +3.1 graus, centro -3.6 cm a frente (folgas), folga frente 8 / tras 16 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +1.8 graus, centro -3.6 cm a frente (folgas), folga frente 8 / tras 16 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973166.65,
+   "vy": 0.08,
+   "vx_onset": -0.015,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.035,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.035,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.035,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 3.2,
+   "tf_lado_cm": 7.1,
+   "log": [
+    [
+     "-2.89",
+     "CURVA 1: Perto da parede: afastando -4.0 cm"
+    ],
+    [
+     "-1.57",
+     "CURVA 1: Medicao: girar -2.0 graus, centro -5.5 cm a frente (2 parede(s)), folga frente 7 / tras 15 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -2.5 graus, centro +0.3 cm a frente (2 parede(s)), folga frente 13 / tras 10 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973176.0,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -3.2,
+   "tf_lado_cm": 8.9,
+   "log": [
+    [
+     "-5.10",
+     "CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 24 cm"
+    ],
+    [
+     "-2.67",
+     "CURVA 1: Medicao: girar -3.4 graus, centro -10.8 cm a frente (1 parede(s)), folga frente - / tras 23 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Paredes acabaram perto da saida: terminando de sair"
+    ]
+   ]
+  },
+  {
+   "t": 1793973192.36,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 24,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.025,
+   "tf_frente_cm": 1.1,
+   "tf_lado_cm": 0.8,
+   "log": [
+    [
+     "-9.48",
+     "TRAJETO CURTO: 55 cm em linha reta, sem Nav2 (angulo -3 graus)"
+    ],
+    [
+     "-3.43",
+     "TRAJETO CURTO: andei 35 cm para esq"
+    ],
+    [
+     "-0.00",
+     "TRAJETO CURTO: andei 30 cm para frente"
+    ]
+   ]
+  },
+  {
+   "t": 1793973195.98,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 1.0,
+   "tf_lado_cm": 5.4,
+   "log": [
+    [
+     "-3.63",
+     "TRAJETO CURTO: andei 30 cm para frente"
+    ],
+    [
+     "-2.12",
+     "TRAJETO CURTO: andei 6 cm para esq"
+    ],
+    [
+     "-0.00",
+     "TRAJETO CURTO: andei 16 cm para tras"
+    ]
+   ]
+  },
+  {
+   "t": 1793973201.32,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.025,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.025,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.025,
+   "n_nav": 24,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -2.9,
+   "tf_lado_cm": 3.5,
+   "log": [
+    [
+     "-5.34",
+     "TRAJETO CURTO: andei 16 cm para tras"
+    ],
+    [
+     "-0.85",
+     "TRAJETO CURTO: andei 25 cm para esq"
+    ],
+    [
+     "-0.00",
+     "TRAJETO CURTO: andei 3 cm para tras"
+    ]
+   ]
+  },
+  {
+   "t": 1793973230.93,
+   "vy": 0.03,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.028,
+   "tf_frente_cm": 2.4,
+   "tf_lado_cm": 7.5,
+   "log": []
+  },
+  {
+   "t": 1793973243.88,
+   "vy": 0.03,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.2,
+   "tf_lado_cm": 2.9,
+   "log": []
+  },
+  {
+   "t": 1793973246.95,
+   "vy": -0.053,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.053,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.053,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.02,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 16,
+   "n_nav_vx_fwd": 6,
+   "n_nav_puro_lat": 4,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.5,
+   "tf_lado_cm": -7.7,
+   "log": []
+  },
+  {
+   "t": 1793973250.33,
+   "vy": 0.03,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 2.8,
+   "tf_lado_cm": 10.8,
+   "log": [
+    [
+     "-0.50",
+     "ANTI_CISCADO 1: GOAL FINAL: 5 inversoes em 4 s sem sair do lugar (4 cm, 2 graus): paro, destravo e mando o goa"
+    ]
+   ]
+  },
+  {
+   "t": 1793973256.31,
+   "vy": -0.08,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.009,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 16,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 3,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.2,
+   "tf_lado_cm": -2.3,
+   "log": [
+    [
+     "-1.45",
+     "ANTI_CISCADO 1: destravar terminou"
+    ],
+    [
+     "-1.45",
+     "GOAL FINAL: x=2.00 y=2.01 yaw=100 graus"
+    ]
+   ]
+  },
+  {
+   "t": 1793973277.02,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 4.3,
+   "tf_lado_cm": -18.0,
+   "log": [
+    [
+     "-1.07",
+     "ENCOSTAR WS_2: medindo a face da mesa"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Medicao 1: face a 26 cm (para-choque), girar +1.6 graus, centro +6.0 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando +6.0 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973281.81,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 1.8,
+   "tf_lado_cm": -0.8,
+   "log": [
+    [
+     "-1.48",
+     "ENCOSTAR WS_2: Medicao 3: face a 20 cm (para-choque), girar +3.0 graus, centro +4.7 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Medicao 4: face a 20 cm (para-choque), girar -0.5 graus, centro +5.1 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando +5.1 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973285.79,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": 1.6,
+   "log": [
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Encostado: frente a 10.3 cm da mesa, -0.6 graus, centro +4.3 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Encostado fora do centro (+4.3 cm): corrigindo de lado"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando +4.3 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973325.78,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.1,
+   "tf_lado_cm": -3.1,
+   "log": [
+    [
+     "-1.72",
+     "Analise: nenhuma passagem estreita no caminho."
+    ],
+    [
+     "-1.71",
+     "TRAJETO CURTO: 18 cm em linha reta, sem Nav2 (angulo -3 graus)"
+    ],
+    [
+     "-0.25",
+     "TRAJETO CURTO: angulo -3 graus (erro -1.1)"
+    ]
+   ]
+  },
+  {
+   "t": 1793973329.71,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.025,
+   "tf_frente_cm": 3.9,
+   "tf_lado_cm": 8.6,
+   "log": [
+    [
+     "-4.18",
+     "TRAJETO CURTO: angulo -3 graus (erro -1.1)"
+    ],
+    [
+     "-1.41",
+     "TRAJETO CURTO: andei 13 cm para esq"
+    ],
+    [
+     "-0.00",
+     "TRAJETO CURTO: andei 9 cm para frente"
+    ]
+   ]
+  },
+  {
+   "t": 1793973334.86,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 28,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.8,
+   "tf_lado_cm": 7.8,
+   "log": [
+    [
+     "-2.32",
+     "TRAJETO CURTO: andei 14 cm para esq"
+    ],
+    [
+     "-1.76",
+     "TRAJETO CURTO: andei 0 cm para esq"
+    ],
+    [
+     "-0.00",
+     "TRAJETO CURTO: andei 12 cm para tras"
+    ]
+   ]
+  },
+  {
+   "t": 1793973341.19,
+   "vy": -0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": -2.5,
+   "log": [
+    [
+     "-2.50",
+     "ENCOSTAR WS_2: Medicao 1: face a 17 cm (para-choque), girar +11.7 graus, centro -10.8 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Medicao 2: face a 17 cm (para-choque), girar -0.8 graus, centro -5.9 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando -5.9 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973344.31,
+   "vy": -0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": -2.1,
+   "log": [
+    [
+     "-1.59",
+     "ENCOSTAR WS_2: Deslizando -3.1 cm de lado"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Medicao 4: face a 19 cm (para-choque), girar -0.3 graus, centro -4.8 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando -4.8 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973347.93,
+   "vy": -0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -5.3,
+   "tf_lado_cm": -3.0,
+   "log": [
+    [
+     "-2.09",
+     "ENCOSTAR WS_2: Deslizando -7.1 cm de lado"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Medicao 6: face a 25 cm (para-choque), girar -0.7 graus, centro -5.5 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando -5.5 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973380.51,
+   "vy": -0.029,
+   "vx_onset": 0.008,
+   "vx_max_cmd_vel_nav": 0.008,
+   "vx_min_cmd_vel_nav": 0.008,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 4.9,
+   "tf_lado_cm": -16.3,
+   "log": []
+  },
+  {
+   "t": 1793973408.7,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 2.6,
+   "tf_lado_cm": -0.9,
+   "log": [
+    [
+     "-1.63",
+     "ENCOSTAR WS_1: Medicao 1: face a 18 cm (para-choque), girar +4.5 graus, centro +11.3 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_1: Medicao 2: face a 19 cm (para-choque), girar -0.7 graus, centro +11.6 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_1: Deslizando +11.6 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973413.29,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.0,
+   "tf_lado_cm": 1.6,
+   "log": [
+    [
+     "-1.84",
+     "ENCOSTAR WS_1: Deslizando +5.7 cm de lado"
+    ],
+    [
+     "-0.11",
+     "ENCOSTAR WS_1: Medicao 4: face a 20 cm (para-choque), girar -1.0 graus, centro +3.7 cm"
+    ],
+    [
+     "-0.06",
+     "ENCOSTAR WS_1: Deslizando +3.7 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973416.91,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -1.1,
+   "tf_lado_cm": 1.1,
+   "log": [
+    [
+     "-3.73",
+     "ENCOSTAR WS_1: Medicao 4: face a 20 cm (para-choque), girar -1.0 graus, centro +3.7 cm"
+    ],
+    [
+     "-3.68",
+     "ENCOSTAR WS_1: Deslizando +3.7 cm de lado"
+    ],
+    [
+     "-2.34",
+     "ENCOSTAR WS_1: Medicao 5: face a 20 cm (para-choque), girar -1.1 graus, centro +1.9 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973423.42,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": 1.2,
+   "log": [
+    [
+     "-0.10",
+     "ENCOSTAR WS_1: Encostado: frente a 10.2 cm da mesa, -0.7 graus, centro +3.2 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_1: Encostado fora do centro (+3.2 cm): corrigindo de lado"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_1: Deslizando +3.2 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973439.66,
+   "vy": -0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 26,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -2.5,
+   "tf_lado_cm": -6.0,
+   "log": [
+    [
+     "-0.27",
+     "Analise: nenhuma passagem estreita no caminho."
+    ],
+    [
+     "-0.25",
+     "GOAL FINAL (virar para o caminho): o caminho sai a +109 graus da frente: viro antes do Nav2"
+    ],
+    [
+     "-0.00",
+     "GOAL FINAL (virar para o caminho): girando 109 graus a quina pegaria: primeiro 7 cm para dir"
+    ]
+   ]
+  },
+  {
+   "t": 1793973469.7,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 1.7,
+   "tf_lado_cm": -16.1,
+   "log": [
+    [
+     "-1.63",
+     "ENCOSTAR WS_2: Medicao 1: face a 27 cm (para-choque), girar +3.5 graus, centro +8.4 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Medicao 2: face a 27 cm (para-choque), girar -0.2 graus, centro +8.5 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando +8.5 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973473.93,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.02,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.02,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.02,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 4,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 1.0,
+   "tf_lado_cm": 0.9,
+   "log": [
+    [
+     "-1.38",
+     "ENCOSTAR WS_2: Deslizando +2.6 cm de lado"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Medicao 4: face a 23 cm (para-choque), girar +0.0 graus, centro +2.1 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando +2.1 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973478.06,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": 3.1,
+   "log": [
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Encostado: frente a 10.3 cm da mesa, 0.6 graus, centro +7.9 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Encostado fora do centro (+7.9 cm): corrigindo de lado"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando +7.9 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973503.5,
+   "vy": 0.016,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.035,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.035,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.035,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 21,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.03,
+   "tf_frente_cm": 11.5,
+   "tf_lado_cm": 3.9,
+   "log": [
+    [
+     "-0.71",
+     "Passagem 1 termina num cruzamento em (1.52, -0.17) com curva para a DIREITA: paro no cruzamento e saio de lado"
+    ],
+    [
+     "-0.71",
+     "TRAVESSIA 1: travessia pelo LiDAR ate (1.53, -0.09) + 0.00 m"
+    ],
+    [
+     "-0.05",
+     "TRAVESSIA 1: Paredes vistas: entrando sem parar (+5.2 graus, centro +1.4 cm)"
+    ]
+   ]
+  },
+  {
+   "t": 1793973513.76,
+   "vy": 0.018,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.035,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.035,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.035,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 17,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.035,
+   "tf_frente_cm": 7.4,
+   "tf_lado_cm": 7.0,
+   "log": [
+    [
+     "-10.98",
+     "Passagem 1 termina num cruzamento em (1.52, -0.17) com curva para a DIREITA: paro no cruzamento e saio de lado"
+    ],
+    [
+     "-10.98",
+     "TRAVESSIA 1: travessia pelo LiDAR ate (1.53, -0.09) + 0.00 m"
+    ],
+    [
+     "-10.31",
+     "TRAVESSIA 1: Paredes vistas: entrando sem parar (+5.2 graus, centro +1.4 cm)"
+    ]
+   ]
+  },
+  {
+   "t": 1793973525.4,
+   "vy": -0.08,
+   "vx_onset": 0.016,
+   "vx_max_cmd_vel_nav": 0.016,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.016,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.016,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 30,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -4.7,
+   "tf_lado_cm": -8.0,
+   "log": [
+    [
+     "-2.28",
+     "CURVA 1: Medicao: girar +6.2 graus, centro -2.4 cm a frente (1 parede(s)), folga frente 7 / tras - cm"
+    ],
+    [
+     "-1.06",
+     "CURVA 1: Medicao: girar +3.5 graus, centro -2.6 cm a frente (1 parede(s)), folga frente 8 / tras - cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.0 graus, centro -2.5 cm a frente (1 parede(s)), folga frente 9 / tras 23 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973533.98,
+   "vy": -0.08,
+   "vx_onset": 0.016,
+   "vx_max_cmd_vel_nav": 0.045,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.039,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.039,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 30,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.018,
+   "tf_frente_cm": 4.0,
+   "tf_lado_cm": -8.5,
+   "log": [
+    [
+     "-3.00",
+     "CURVA 1: Perto da parede: afastando +4.0 cm"
+    ],
+    [
+     "-1.63",
+     "CURVA 1: Medicao: girar -1.5 graus, centro +5.6 cm a frente (1 parede(s)), folga frente 18 / tras 5 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -1.5 graus, centro -0.8 cm a frente (1 parede(s)), folga frente 11 / tras 11 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973537.9,
+   "vy": -0.08,
+   "vx_onset": 0.015,
+   "vx_max_cmd_vel_nav": 0.025,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.025,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.025,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 30,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.018,
+   "tf_frente_cm": 3.8,
+   "tf_lado_cm": -10.4,
+   "log": [
+    [
+     "-2.24",
+     "CURVA 1: PARADA DE SEGURANCA: folga frente 16 / tras 4 cm"
+    ],
+    [
+     "-1.43",
+     "CURVA 1: Medicao: girar -0.8 graus, centro +4.3 cm a frente (2 parede(s)), folga frente 15 / tras 7 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -1.0 graus, centro -0.3 cm a frente (2 parede(s)), folga frente 10 / tras 12 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973547.55,
+   "vy": -0.08,
+   "vx_onset": 0.014,
+   "vx_max_cmd_vel_nav": 0.034,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.034,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.034,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 30,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 3.6,
+   "tf_lado_cm": -17.2,
+   "log": [
+    [
+     "-2.44",
+     "CURVA 1: PARADA DE SEGURANCA: folga frente 19 / tras 4 cm"
+    ],
+    [
+     "-1.62",
+     "CURVA 1: Medicao: girar +1.3 graus, centro +6.2 cm a frente (folgas), folga frente 18 / tras 6 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -1.6 graus, centro -0.4 cm a frente (folgas), folga frente 11 / tras 12 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973555.2,
+   "vy": -0.08,
+   "vx_onset": 0.016,
+   "vx_max_cmd_vel_nav": 0.016,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.016,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.016,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 30,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.018,
+   "tf_frente_cm": -0.5,
+   "tf_lado_cm": -5.6,
+   "log": [
+    [
+     "-2.94",
+     "CURVA 1: Perto da parede: afastando +4.0 cm"
+    ],
+    [
+     "-1.62",
+     "CURVA 1: Medicao: girar +2.5 graus, centro +7.0 cm a frente (1 parede(s)), folga frente 19 / tras 6 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.4 graus, centro +0.5 cm a frente (1 parede(s)), folga frente 12 / tras 12 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973559.25,
+   "vy": -0.08,
+   "vx_onset": 0.016,
+   "vx_max_cmd_vel_nav": 0.016,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.016,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.016,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 30,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.018,
+   "tf_frente_cm": 1.7,
+   "tf_lado_cm": -7.0,
+   "log": [
+    [
+     "-1.37",
+     "CURVA 1: Medicao: girar -1.2 graus, centro +8.6 cm a frente (1 parede(s)), folga frente 21 / tras 4 cm"
+    ],
+    [
+     "-1.36",
+     "CURVA 1: Perto da parede: afastando +4.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -1.0 graus, centro +4.4 cm a frente (1 parede(s)), folga frente 18 / tras 7 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973577.75,
+   "vy": -0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.025,
+   "tf_frente_cm": -3.3,
+   "tf_lado_cm": -5.7,
+   "log": [
+    [
+     "-4.68",
+     "TRAJETO CURTO: 24 cm em linha reta, sem Nav2 (sem angulo)"
+    ],
+    [
+     "-2.57",
+     "TRAJETO CURTO: andei 10 cm para esq"
+    ],
+    [
+     "-0.00",
+     "TRAJETO CURTO: andei 21 cm para frente"
+    ]
+   ]
+  },
+  {
+   "t": 1793973580.82,
+   "vy": -0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -6.8,
+   "tf_lado_cm": -11.1,
+   "log": [
+    [
+     "-5.64",
+     "TRAJETO CURTO: andei 10 cm para esq"
+    ],
+    [
+     "-3.07",
+     "TRAJETO CURTO: andei 21 cm para frente"
+    ],
+    [
+     "-0.00",
+     "TRAJETO CURTO: andei 16 cm para dir"
+    ]
+   ]
+  },
+  {
+   "t": 1793973584.39,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.025,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.025,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.025,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 24,
+   "n_nav_vx_fwd": 9,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.025,
+   "tf_frente_cm": 2.5,
+   "tf_lado_cm": 2.7,
+   "log": [
+    [
+     "-3.57",
+     "TRAJETO CURTO: andei 16 cm para dir"
+    ],
+    [
+     "-0.96",
+     "TRAJETO CURTO: andei 13 cm para dir"
+    ],
+    [
+     "-0.00",
+     "TRAJETO CURTO: andei 4 cm para frente"
+    ]
+   ]
+  },
+  {
+   "t": 1793973597.61,
+   "vy": -0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -19.7,
+   "tf_lado_cm": -10.6,
+   "log": [
+    [
+     "-4.63",
+     "Passagem 1: entrada (0.68, -0.16), eixo -1 graus, largura no mapa 0.78 m, preparo a 0.60 m da entrada"
+    ],
+    [
+     "-4.63",
+     "PREPARO 1 (alinhar fora da passagem): x=0.08 y=-0.15 yaw=-1 graus"
+    ],
+    [
+     "-0.25",
+     "PREPARO 1 (alinhar fora da passagem): angulo -1 graus (erro 3.6)"
+    ]
+   ]
+  },
+  {
+   "t": 1793973611.5,
+   "vy": -0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 2.4,
+   "tf_lado_cm": -6.0,
+   "log": [
+    [
+     "-6.68",
+     "Passagem 1 termina num cruzamento em (1.56, -0.18) com curva para a ESQUERDA: paro no cruzamento e saio de lad"
+    ],
+    [
+     "-6.68",
+     "TRAVESSIA 1: travessia pelo LiDAR ate (1.48, -0.18) + 0.00 m"
+    ],
+    [
+     "-0.05",
+     "TRAVESSIA 1: Medicao 1: girar -0.1 graus, centro a -11.3 cm, largura 0.84 m"
+    ]
+   ]
+  },
+  {
+   "t": 1793973619.74,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -2.5,
+   "tf_lado_cm": 5.5,
+   "log": [
+    [
+     "-2.48",
+     "CURVA 1: saindo de lado para a ESQUERDA ate (1.59, 1.09) + 0.60 m"
+    ],
+    [
+     "-2.48",
+     "CURVA 1: Cruzamento: saindo de lado para a ESQUERDA"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual"
+    ]
+   ]
+  },
+  {
+   "t": 1793973625.51,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0,
+   "vx_min_cmd_vel": 0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": 0.0,
+   "log": [
+    [
+     "-5.81",
+     "CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual"
+    ],
+    [
+     "-2.48",
+     "CURVA 1: Collision Monitor segurando em \"deslizar\": parando para medir de novo"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual"
+    ]
+   ]
+  },
+  {
+   "t": 1793973629.5,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0,
+   "tf_frente_cm": -1.7,
+   "tf_lado_cm": -1.3,
+   "log": [
+    [
+     "-4.04",
+     "CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual"
+    ],
+    [
+     "-2.47",
+     "CURVA 1: Collision Monitor segurando em \"deslizar\": parando para medir de novo"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual"
+    ]
+   ]
+  },
+  {
+   "t": 1793973634.76,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0,
+   "vx_min_cmd_vel": 0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": 0.0,
+   "log": [
+    [
+     "-5.31",
+     "CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual"
+    ],
+    [
+     "-2.48",
+     "CURVA 1: Collision Monitor segurando em \"deslizar\": parando para medir de novo"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual"
+    ]
+   ]
+  },
+  {
+   "t": 1793973641.83,
+   "vy": -0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.06,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.06,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.06,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 7,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.03,
+   "tf_frente_cm": -5.5,
+   "tf_lado_cm": -4.3,
+   "log": [
+    [
+     "-0.36",
+     "Passagem 1 termina num cruzamento em (1.56, -0.16) com curva para a ESQUERDA: paro no cruzamento e saio de lad"
+    ],
+    [
+     "-0.36",
+     "TRAVESSIA 1: travessia pelo LiDAR ate (1.48, -0.16) + 0.00 m"
+    ],
+    [
+     "-0.05",
+     "TRAVESSIA 1: Paredes vistas: entrando sem parar (+1.7 graus, centro -8.0 cm)"
+    ]
+   ]
+  },
+  {
+   "t": 1793973690.95,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": 11.9,
+   "log": [
+    [
+     "-1.27",
+     "CURVA 1: Medicao: girar +5.7 graus, centro -0.7 cm a frente (1 parede(s)), folga frente 10 / tras - cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +5.7 graus, centro -0.7 cm a frente (1 parede(s)), folga frente 10 / tras - cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Sem mais correcoes: sigo deslizando (folgas boas)"
+    ]
+   ]
+  },
+  {
+   "t": 1793973700.28,
+   "vy": 0.08,
+   "vx_onset": -0.015,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.033,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.033,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.033,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.4,
+   "tf_lado_cm": 1.3,
+   "log": [
+    [
+     "-2.49",
+     "CURVA 1: Medicao: girar +3.6 graus, centro -6.3 cm a frente (folgas), folga frente 5 / tras 18 cm"
+    ],
+    [
+     "-1.47",
+     "CURVA 1: Medicao: girar +2.7 graus, centro -5.4 cm a frente (folgas), folga frente 6 / tras 17 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +1.8 graus, centro +0.2 cm a frente (folgas), folga frente 12 / tras 11 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973705.89,
+   "vy": 0.08,
+   "vx_onset": -0.027,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.038,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.038,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.038,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -6.3,
+   "tf_lado_cm": 7.3,
+   "log": [
+    [
+     "-3.94",
+     "CURVA 1: PARADA DE SEGURANCA: folga frente 3 / tras 19 cm"
+    ],
+    [
+     "-1.52",
+     "CURVA 1: Perto da parede (sem medicao): afastando -9.3 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +1.6 graus, centro -2.8 cm a frente (folgas), folga frente 9 / tras 14 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973709.79,
+   "vy": 0.08,
+   "vx_onset": -0.024,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.033,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.033,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.033,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -7.3,
+   "tf_lado_cm": 15.0,
+   "log": [
+    [
+     "-1.72",
+     "CURVA 1: Medicao: girar +7.7 graus, centro -8.3 cm a frente (folgas), folga frente 3 / tras 20 cm"
+    ],
+    [
+     "-1.72",
+     "CURVA 1: Perto da parede: afastando -8.3 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +0.4 graus, centro -2.0 cm a frente (folgas), folga frente 9 / tras 13 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973714.09,
+   "vy": 0.08,
+   "vx_onset": -0.026,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.029,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.029,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.029,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 1.2,
+   "tf_lado_cm": 9.5,
+   "log": [
+    [
+     "-1.62",
+     "CURVA 1: Medicao: girar -0.3 graus, centro -7.0 cm a frente (folgas), folga frente 4 / tras 18 cm"
+    ],
+    [
+     "-1.62",
+     "CURVA 1: Perto da parede: afastando -7.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +1.2 graus, centro -2.6 cm a frente (folgas), folga frente 8 / tras 14 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973719.86,
+   "vy": 0.08,
+   "vx_onset": -0.03,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.036,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.036,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.036,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -1.6,
+   "tf_lado_cm": 10.7,
+   "log": [
+    [
+     "-3.94",
+     "CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 17 cm"
+    ],
+    [
+     "-1.52",
+     "CURVA 1: Perto da parede (sem medicao): afastando -9.5 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -1.3 graus, centro -3.6 cm a frente (folgas), folga frente 7 / tras 14 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973724.62,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.031,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.031,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.031,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -2.6,
+   "tf_lado_cm": 10.9,
+   "log": [
+    [
+     "-1.42",
+     "CURVA 1: Medicao: girar -0.6 graus, centro -6.6 cm a frente (1 parede(s)), folga frente 4 / tras 17 cm"
+    ],
+    [
+     "-1.42",
+     "CURVA 1: Perto da parede: afastando -4.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -2.2 graus, centro -2.8 cm a frente (1 parede(s)), folga frente 7 / tras 13 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973729.22,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.6,
+   "tf_lado_cm": 3.1,
+   "log": [
+    [
+     "-3.84",
+     "CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 16 cm"
+    ],
+    [
+     "-1.42",
+     "CURVA 1: Perto da parede (sem medicao): afastando -4.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -0.8 graus, centro -4.9 cm a frente (1 parede(s)), folga frente 5 / tras 15 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973736.71,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.045,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.045,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.045,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.5,
+   "tf_lado_cm": 5.1,
+   "log": [
+    [
+     "-4.45",
+     "CURVA 1: Perto da parede (sem medicao): afastando -4.0 cm"
+    ],
+    [
+     "-1.57",
+     "CURVA 1: Medicao: girar +7.0 graus, centro -8.1 cm a frente (1 parede(s)), folga frente 5 / tras 16 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.0 graus, centro -0.3 cm a frente (1 parede(s)), folga frente 11 / tras 10 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973740.5,
+   "vy": 0.08,
+   "vx_onset": -0.028,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.049,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.049,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.049,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -1.1,
+   "tf_lado_cm": 3.7,
+   "log": [
+    [
+     "-1.57",
+     "CURVA 1: Medicao: girar +3.5 graus, centro -9.3 cm a frente (folgas), folga frente 3 / tras 21 cm"
+    ],
+    [
+     "-1.57",
+     "CURVA 1: Perto da parede: afastando -9.3 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.2 graus, centro -3.0 cm a frente (folgas), folga frente 9 / tras 15 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973745.67,
+   "vy": 0.08,
+   "vx_onset": -0.027,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.032,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.031,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.031,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -3.6,
+   "tf_lado_cm": 8.5,
+   "log": [
+    [
+     "-1.62",
+     "CURVA 1: Medicao: girar +1.3 graus, centro -8.8 cm a frente (folgas), folga frente 3 / tras 20 cm"
+    ],
+    [
+     "-1.62",
+     "CURVA 1: Perto da parede: afastando -8.8 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -1.1 graus, centro -2.7 cm a frente (folgas), folga frente 9 / tras 14 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973751.79,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -3.9,
+   "tf_lado_cm": 8.4,
+   "log": [
+    [
+     "-2.93",
+     "CURVA 1: Medicao: girar -4.0 graus, centro -8.3 cm a frente (2 parede(s)), folga frente 4 / tras 19 cm"
+    ],
+    [
+     "-2.93",
+     "CURVA 1: Perto da parede: afastando -4.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Paredes acabaram perto da saida: terminando de sair"
+    ]
+   ]
+  },
+  {
+   "t": 1793973756.3,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 1.1,
+   "tf_lado_cm": 0.2,
+   "log": [
+    [
+     "-4.56",
+     "CURVA 1: Paredes acabaram perto da saida: terminando de sair"
+    ],
+    [
+     "-2.48",
+     "CURVA 1: PARADA DE SEGURANCA: folga frente 3 / tras 16 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Paredes acabaram perto da saida: terminando de sair"
+    ]
+   ]
+  },
+  {
+   "t": 1793973767.22,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 7.8,
+   "tf_lado_cm": 5.1,
+   "log": [
+    [
+     "-1.52",
+     "Analise: nenhuma passagem estreita no caminho."
+    ],
+    [
+     "-1.51",
+     "TRAJETO CURTO: 41 cm em linha reta, sem Nav2 (angulo -3 graus)"
+    ],
+    [
+     "-0.25",
+     "TRAJETO CURTO: angulo -3 graus (erro -1.6)"
+    ]
+   ]
+  },
+  {
+   "t": 1793973775.08,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.025,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": 3.6,
+   "log": [
+    [
+     "-8.11",
+     "TRAJETO CURTO: angulo -3 graus (erro -1.6)"
+    ],
+    [
+     "-2.42",
+     "TRAJETO CURTO: andei 31 cm para esq"
+    ],
+    [
+     "-0.00",
+     "TRAJETO CURTO: andei 19 cm para frente"
+    ]
+   ]
+  },
+  {
+   "t": 1793973784.84,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 2.3,
+   "tf_lado_cm": 7.1,
+   "log": [
+    [
+     "-9.76",
+     "TRAJETO CURTO: andei 19 cm para frente"
+    ],
+    [
+     "-2.01",
+     "TRAJETO CURTO: andei 4 cm para esq"
+    ],
+    [
+     "-0.00",
+     "TRAJETO CURTO: andei 15 cm para tras"
+    ]
+   ]
+  },
+  {
+   "t": 1793973789.22,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.025,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.025,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.025,
+   "n_nav": 24,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -2.7,
+   "tf_lado_cm": -2.5,
+   "log": [
+    [
+     "-4.38",
+     "TRAJETO CURTO: andei 15 cm para tras"
+    ],
+    [
+     "-1.01",
+     "TRAJETO CURTO: andei 18 cm para esq"
+    ],
+    [
+     "-0.00",
+     "TRAJETO CURTO: andei 4 cm para tras"
+    ]
+   ]
+  },
+  {
+   "t": 1793973798.93,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 26,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 6.6,
+   "tf_lado_cm": 4.3,
+   "log": [
+    [
+     "-1.81",
+     "GOAL FINAL: SUCESSO"
+    ],
+    [
+     "-0.25",
+     "GOAL FINAL (giro final): Collision Monitor travou o giro"
+    ],
+    [
+     "-0.00",
+     "GOAL FINAL (giro final): girando -112 graus a quina pegaria: primeiro 7 cm para esq"
+    ]
+   ]
+  },
+  {
+   "t": 1793973814.32,
+   "vy": -0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -1.9,
+   "tf_lado_cm": -1.9,
+   "log": [
+    [
+     "-2.34",
+     "ENCOSTAR WS_2: Medicao 1: face a 23 cm (para-choque), girar +12.2 graus, centro -10.8 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Medicao 2: face a 21 cm (para-choque), girar -0.5 graus, centro -11.0 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando -11.0 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973818.09,
+   "vy": -0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.0,
+   "tf_lado_cm": -1.6,
+   "log": [
+    [
+     "-3.83",
+     "ENCOSTAR WS_2: Deslizando -11.0 cm de lado"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Medicao 3: face a 31 cm (para-choque), girar -0.2 graus, centro -2.4 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando -2.4 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973822.43,
+   "vy": -0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": -1.1,
+   "log": [
+    [
+     "-1.53",
+     "ENCOSTAR WS_2: Medicao 5: face a 32 cm (para-choque), girar -0.1 graus, centro -3.8 cm"
+    ],
+    [
+     "-1.48",
+     "ENCOSTAR WS_2: Deslizando -3.8 cm de lado"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Medicao 6: face a 32 cm (para-choque), girar -0.2 graus, centro -1.7 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973828.59,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": 1.2,
+   "log": [
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Encostado: frente a 10.9 cm da mesa, -2.0 graus, centro +3.0 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Encostado fora do centro (+3.0 cm): corrigindo de lado"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_2: Deslizando +3.0 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973866.35,
+   "vy": -0.08,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 30,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.3,
+   "tf_lado_cm": -12.4,
+   "log": []
+  },
+  {
+   "t": 1793973883.26,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -1.4,
+   "tf_lado_cm": -5.3,
+   "log": [
+    [
+     "-1.68",
+     "ENCOSTAR WS_1: Medicao 1: face a 26 cm (para-choque), girar +5.4 graus, centro +11.9 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_1: Medicao 2: face a 25 cm (para-choque), girar -0.1 graus, centro +12.5 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_1: Deslizando +12.5 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973887.23,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": 1.9,
+   "log": [
+    [
+     "-1.78",
+     "ENCOSTAR WS_1: Deslizando +8.1 cm de lado"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_1: Medicao 4: face a 25 cm (para-choque), girar +0.9 graus, centro +4.5 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_1: Deslizando +4.5 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973890.33,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.02,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 1,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.0,
+   "tf_lado_cm": 2.1,
+   "log": [
+    [
+     "-1.63",
+     "ENCOSTAR WS_1: Deslizando +4.4 cm de lado"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_1: Medicao 6: face a 25 cm (para-choque), girar +1.5 graus, centro +3.4 cm"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_1: Deslizando +3.4 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973895.12,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 3.5,
+   "tf_lado_cm": 4.8,
+   "log": [
+    [
+     "-0.10",
+     "ENCOSTAR WS_1: Encostado: frente a 10.4 cm da mesa, 1.1 graus, centro +3.8 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_1: Encostado fora do centro (+3.8 cm): corrigindo de lado"
+    ],
+    [
+     "-0.05",
+     "ENCOSTAR WS_1: Deslizando +3.8 cm de lado"
+    ]
+   ]
+  },
+  {
+   "t": 1793973910.35,
+   "vy": -0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 24,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.1,
+   "tf_lado_cm": -3.7,
+   "log": [
+    [
+     "-0.27",
+     "Analise: nenhuma passagem estreita no caminho."
+    ],
+    [
+     "-0.26",
+     "GOAL FINAL (virar para o caminho): o caminho sai a +112 graus da frente: viro antes do Nav2"
+    ],
+    [
+     "-0.00",
+     "GOAL FINAL (virar para o caminho): girando 111 graus a quina pegaria: primeiro 4 cm para dir"
+    ]
+   ]
+  },
+  {
+   "t": 1793973940.23,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.025,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 24,
+   "n_nav_vx_fwd": 2,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -2.6,
+   "tf_lado_cm": -8.4,
+   "log": [
+    [
+     "-3.77",
+     "GOAL FINAL: SUCESSO (aceito a 7 cm do ponto, sem exigir angulo)"
+    ],
+    [
+     "-0.25",
+     "GOAL FINAL (giro final): angulo -3 graus (erro 2.6)"
+    ]
+   ]
+  },
+  {
+   "t": 1793973954.32,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": 1.1,
+   "log": [
+    [
+     "-3.78",
+     "ENCOSTAR WS_2: medindo a face da mesa"
+    ],
+    [
+     "-2.70",
+     "ENCOSTAR WS_2: Medicao 1: face a 14 cm (para-choque), girar +15.0 graus, centro +1.2 cm"
+    ],
+    [
+     "-0.10",
+     "ENCOSTAR WS_2: Medicao 2: face a 13 cm (para-choque), girar -0.4 graus, centro +1.8 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973957.34,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.0,
+   "tf_lado_cm": 1.6,
+   "log": [
+    [
+     "-6.79",
+     "ENCOSTAR WS_2: medindo a face da mesa"
+    ],
+    [
+     "-5.72",
+     "ENCOSTAR WS_2: Medicao 1: face a 14 cm (para-choque), girar +15.0 graus, centro +1.2 cm"
+    ],
+    [
+     "-3.12",
+     "ENCOSTAR WS_2: Medicao 2: face a 13 cm (para-choque), girar -0.4 graus, centro +1.8 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793973988.32,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -9.6,
+   "tf_lado_cm": -2.8,
+   "log": [
+    [
+     "-3.69",
+     "TRAVESSIA 1: travessia pelo LiDAR ate (1.56, -0.10) + 0.00 m"
+    ],
+    [
+     "-2.28",
+     "TRAVESSIA 1: Medicao 1: girar +2.9 graus, centro a +1.2 cm, largura 0.76 m"
+    ],
+    [
+     "-0.05",
+     "TRAVESSIA 1: Medicao 2: girar -0.9 graus, centro a +1.7 cm, largura 0.76 m"
+    ]
+   ]
+  },
+  {
+   "t": 1793974007.08,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.035,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.035,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.035,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 21,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.035,
+   "tf_frente_cm": 14.4,
+   "tf_lado_cm": 0.3,
+   "log": [
+    [
+     "-14.81",
+     "TRAVESSIA 1: So vejo uma parede: usando a largura de 0.75 m para achar o centro"
+    ],
+    [
+     "-14.81",
+     "TRAVESSIA 1: Medicao 3: girar -1.1 graus, centro a +1.0 cm, largura 0.75 m"
+    ],
+    [
+     "-14.81",
+     "TRAVESSIA 1: Alinhado: atravessando"
+    ]
+   ]
+  },
+  {
+   "t": 1793974010.73,
+   "vy": -0.08,
+   "vx_onset": 0.016,
+   "vx_max_cmd_vel_nav": 0.016,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.016,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.016,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 30,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -1.7,
+   "tf_lado_cm": -6.8,
+   "log": [
+    [
+     "-0.96",
+     "CURVA 1: saindo de lado para a DIREITA ate (0.73, -0.17) + 0.60 m"
+    ],
+    [
+     "-0.96",
+     "CURVA 1: Cruzamento: saindo de lado para a DIREITA"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -0.9 graus, centro -2.6 cm a frente (1 parede(s)), folga frente 8 / tras - cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793974016.96,
+   "vy": -0.08,
+   "vx_onset": 0.016,
+   "vx_max_cmd_vel_nav": 0.04,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.04,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.04,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 30,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.018,
+   "tf_frente_cm": 7.4,
+   "tf_lado_cm": -15.5,
+   "log": [
+    [
+     "-1.32",
+     "CURVA 1: Medicao: girar +0.1 graus, centro +8.5 cm a frente (1 parede(s)), folga frente 20 / tras 2 cm"
+    ],
+    [
+     "-1.32",
+     "CURVA 1: Perto da parede: afastando +4.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -0.4 graus, centro +5.0 cm a frente (1 parede(s)), folga frente 17 / tras 6 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793974029.67,
+   "vy": -0.08,
+   "vx_onset": 0.031,
+   "vx_max_cmd_vel_nav": 0.031,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.031,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.031,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 30,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.018,
+   "tf_frente_cm": 5.0,
+   "tf_lado_cm": -11.1,
+   "log": [
+    [
+     "-1.62",
+     "CURVA 1: Medicao: girar -0.6 graus, centro +9.4 cm a frente (folgas), folga frente 21 / tras 2 cm"
+    ],
+    [
+     "-1.62",
+     "CURVA 1: Perto da parede: afastando +9.4 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -0.2 graus, centro +3.9 cm a frente (folgas), folga frente 15 / tras 8 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793974036.6,
+   "vy": -0.08,
+   "vx_onset": 0.016,
+   "vx_max_cmd_vel_nav": 0.016,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.016,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.016,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 30,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.018,
+   "tf_frente_cm": 4.1,
+   "tf_lado_cm": -7.2,
+   "log": [
+    [
+     "-2.93",
+     "CURVA 1: Perto da parede: afastando +4.0 cm"
+    ],
+    [
+     "-1.57",
+     "CURVA 1: Medicao: girar +2.3 graus, centro +6.3 cm a frente (1 parede(s)), folga frente 18 / tras 6 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.4 graus, centro +0.5 cm a frente (1 parede(s)), folga frente 13 / tras 12 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793974069.59,
+   "vy": 0.053,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.045,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.032,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.032,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 15,
+   "n_nav_vx_fwd": 4,
+   "n_nav_puro_lat": 6,
+   "vx_final_antes": 0.026,
+   "tf_frente_cm": -5.3,
+   "tf_lado_cm": 3.0,
+   "log": [
+    [
+     "-8.86",
+     "Novo goal: x=-0.19 y=0.06 yaw=-2 graus"
+    ],
+    [
+     "-8.85",
+     "Analise: nenhuma passagem estreita no caminho."
+    ],
+    [
+     "-8.83",
+     "GOAL FINAL: x=-0.19 y=0.06 yaw=-2 graus"
+    ]
+   ]
+  },
+  {
+   "t": 1793974123.69,
+   "vy": 0.03,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 22,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 1,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 3.5,
+   "tf_lado_cm": 3.8,
+   "log": []
+  }
+ ],
+ "/home/marcos/bags/missao23_20261106_100713/bag": [
+  {
+   "t": 1793970590.03,
+   "vy": -0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0,
+   "tf_frente_cm": -1.3,
+   "tf_lado_cm": -1.0,
+   "log": [
+    [
+     "-0.07",
+     "Indo para WS_2: aproximacao em x=2.00 y=2.01 yaw=-3 graus"
+    ],
+    [
+     "-0.00",
+     "Passagem 1: entrada (0.78, -0.18), eixo -2 graus, largura no mapa 0.75 m, preparo a 0.60 m da entrada"
+    ],
+    [
+     "-0.00",
+     "PREPARO 1 (alinhar fora da passagem): x=0.18 y=-0.16 yaw=-2 graus"
+    ]
+   ]
+  },
+  {
+   "t": 1793970617.89,
+   "vy": -0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -6.9,
+   "tf_lado_cm": -5.7,
+   "log": [
+    [
+     "-0.00",
+     "TRAVESSIA 1 (LiDAR): FALHOU - nao vejo as paredes da passagem"
+    ],
+    [
+     "-0.00",
+     "Travessia pelo LiDAR falhou: voltando ao preparo para tentar de novo."
+    ],
+    [
+     "-0.00",
+     "PREPARO 1 (2a tentativa): x=0.18 y=-0.16 yaw=-2 graus"
+    ]
+   ]
+  },
+  {
+   "t": 1793970624.44,
+   "vy": -0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 3.3,
+   "tf_lado_cm": -4.3,
+   "log": [
+    [
+     "-2.28",
+     "TRAVESSIA 1 (2a tentativa): travessia pelo LiDAR ate (2.29, -0.17) + 0.30 m"
+    ],
+    [
+     "-1.06",
+     "TRAVESSIA 1 (2a tentativa): Paredes vistas (largura 0.93 m): parando na boca para alinhar"
+    ],
+    [
+     "-0.05",
+     "TRAVESSIA 1 (2a tentativa): Medicao 1: girar +2.9 graus, centro a -14.2 cm, largura 0.93 m"
+    ]
+   ]
+  },
+  {
+   "t": 1793970637.95,
+   "vy": 0.02,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0,
+   "tf_frente_cm": 0.1,
+   "tf_lado_cm": 5.6,
+   "log": [
+    [
+     "-4.15",
+     "TRAVESSIA 1 (2a tentativa): Medicao 3: girar -6.1 graus, centro a +5.9 cm, largura 0.88 m"
+    ],
+    [
+     "-0.05",
+     "TRAVESSIA 1 (2a tentativa): So vejo uma parede: usando a largura de 0.89 m para achar o centro"
+    ],
+    [
+     "-0.05",
+     "TRAVESSIA 1 (2a tentativa): Medicao 4: girar -2.2 graus, centro a +5.9 cm, largura 0.89 m"
+    ]
+   ]
+  },
+  {
+   "t": 1793970647.3,
+   "vy": 0.019,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.06,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.06,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.06,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 12,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.06,
+   "tf_frente_cm": 8.2,
+   "tf_lado_cm": 0.0,
+   "log": [
+    [
+     "-3.13",
+     "TRAVESSIA 1 (2a tentativa): Medicao 6: girar -5.9 graus, centro a +2.1 cm, largura 0.87 m"
+    ],
+    [
+     "-0.66",
+     "TRAVESSIA 1 (2a tentativa): Medicao 7: girar +0.7 graus, centro a +0.5 cm, largura 0.91 m"
+    ],
+    [
+     "-0.66",
+     "TRAVESSIA 1 (2a tentativa): Alinhado: atravessando"
+    ]
+   ]
+  },
+  {
+   "t": 1793970679.4,
+   "vy": -0.018,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.06,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.06,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.06,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 27,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.03,
+   "tf_frente_cm": 7.9,
+   "tf_lado_cm": -1.3,
+   "log": [
+    [
+     "-0.26",
+     "Passagem 1 termina num cruzamento em (1.50, -0.18) com curva para a ESQUERDA: paro no cruzamento e saio de lad"
+    ],
+    [
+     "-0.25",
+     "TRAVESSIA 1: travessia pelo LiDAR ate (1.42, -0.18) + 0.00 m"
+    ],
+    [
+     "-0.05",
+     "TRAVESSIA 1: Paredes vistas: entrando sem parar (-0.0 graus, centro -3.7 cm)"
+    ]
+   ]
+  },
+  {
+   "t": 1793970686.05,
+   "vy": 0.018,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.035,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.035,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.035,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 27,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.035,
+   "tf_frente_cm": 26.9,
+   "tf_lado_cm": -2.8,
+   "log": [
+    [
+     "-6.90",
+     "Passagem 1 termina num cruzamento em (1.50, -0.18) com curva para a ESQUERDA: paro no cruzamento e saio de lad"
+    ],
+    [
+     "-6.90",
+     "TRAVESSIA 1: travessia pelo LiDAR ate (1.42, -0.18) + 0.00 m"
+    ],
+    [
+     "-6.70",
+     "TRAVESSIA 1: Paredes vistas: entrando sem parar (-0.0 graus, centro -3.7 cm)"
+    ]
+   ]
+  },
+  {
+   "t": 1793970698.36,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0,
+   "tf_frente_cm": -2.5,
+   "tf_lado_cm": 4.9,
+   "log": [
+    [
+     "-2.32",
+     "CURVA 1: Medicao: girar +4.5 graus, centro +0.1 cm a frente (1 parede(s)), folga frente 11 / tras - cm"
+    ],
+    [
+     "-1.16",
+     "CURVA 1: Medicao: girar +4.5 graus, centro +0.0 cm a frente (1 parede(s)), folga frente 11 / tras - cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -2.2 graus, centro -0.6 cm a frente (1 parede(s)), folga frente 11 / tras - cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793970708.64,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.7,
+   "tf_lado_cm": 4.4,
+   "log": [
+    [
+     "-1.87",
+     "CURVA 1: Medicao: girar +0.0 graus, centro -6.1 cm a frente (1 parede(s)), folga frente 3 / tras 37 cm"
+    ],
+    [
+     "-1.87",
+     "CURVA 1: Perto da parede: afastando -4.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.9 graus, centro -4.5 cm a frente (1 parede(s)), folga frente 8 / tras 32 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793970727.61,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.9,
+   "tf_lado_cm": 0.7,
+   "log": [
+    [
+     "-5.80",
+     "CURVA 1: Perto da parede (sem medicao): afastando -4.0 cm"
+    ],
+    [
+     "-2.93",
+     "CURVA 1: Perto da parede (sem medicao): afastando -4.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual"
+    ]
+   ]
+  },
+  {
+   "t": 1793970733.41,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.016,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.016,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.016,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -3.3,
+   "tf_lado_cm": 10.8,
+   "log": [
+    [
+     "-5.35",
+     "CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 21 cm"
+    ],
+    [
+     "-2.93",
+     "CURVA 1: Perto da parede (sem medicao): afastando -4.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual"
+    ]
+   ]
+  },
+  {
+   "t": 1793970741.19,
+   "vy": 0.08,
+   "vx_onset": -0.015,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.039,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.033,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.033,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -1.9,
+   "tf_lado_cm": 9.6,
+   "log": [
+    [
+     "-2.17",
+     "CURVA 1: Medicao: girar +6.1 graus, centro -0.8 cm a frente (folgas), folga frente 10 / tras 12 cm"
+    ],
+    [
+     "-1.01",
+     "CURVA 1: Medicao: girar +3.5 graus, centro +0.1 cm a frente (folgas), folga frente 11 / tras 11 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.4 graus, centro +0.3 cm a frente (folgas), folga frente 12 / tras 11 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793970745.28,
+   "vy": 0.08,
+   "vx_onset": -0.02,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.04,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.04,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.04,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.5,
+   "tf_lado_cm": -2.1,
+   "log": [
+    [
+     "-1.52",
+     "CURVA 1: Medicao: girar +2.4 graus, centro -7.8 cm a frente (folgas), folga frente 4 / tras 19 cm"
+    ],
+    [
+     "-1.52",
+     "CURVA 1: Perto da parede: afastando -7.8 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +1.0 graus, centro -1.0 cm a frente (folgas), folga frente 11 / tras 13 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793970749.08,
+   "vy": 0.08,
+   "vx_onset": -0.022,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.031,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.031,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.031,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -2.3,
+   "tf_lado_cm": 8.9,
+   "log": [
+    [
+     "-1.53",
+     "CURVA 1: Medicao: girar +3.9 graus, centro -7.7 cm a frente (folgas), folga frente 4 / tras 19 cm"
+    ],
+    [
+     "-1.52",
+     "CURVA 1: Perto da parede: afastando -7.7 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +0.4 graus, centro -1.5 cm a frente (folgas), folga frente 10 / tras 13 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793970755.14,
+   "vy": 0.08,
+   "vx_onset": -0.026,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.032,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.032,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.032,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -2.2,
+   "tf_lado_cm": 5.8,
+   "log": [
+    [
+     "-1.51",
+     "CURVA 1: Medicao: girar +0.2 graus, centro -7.5 cm a frente (folgas), folga frente 3 / tras 18 cm"
+    ],
+    [
+     "-1.51",
+     "CURVA 1: Perto da parede: afastando -7.5 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar -0.1 graus, centro -2.5 cm a frente (folgas), folga frente 8 / tras 13 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793970758.93,
+   "vy": 0.08,
+   "vx_onset": -0.022,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.025,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.025,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.025,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.8,
+   "tf_lado_cm": 5.6,
+   "log": [
+    [
+     "-1.57",
+     "CURVA 1: Medicao: girar +1.3 graus, centro -7.6 cm a frente (folgas), folga frente 2 / tras 18 cm"
+    ],
+    [
+     "-1.57",
+     "CURVA 1: Perto da parede: afastando -7.6 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +1.2 graus, centro -1.4 cm a frente (folgas), folga frente 9 / tras 12 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793970766.0,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.045,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.045,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.045,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -0.3,
+   "tf_lado_cm": 11.1,
+   "log": [
+    [
+     "-3.83",
+     "CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 16 cm"
+    ],
+    [
+     "-1.41",
+     "CURVA 1: Perto da parede (sem medicao): afastando -4.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.7 graus, centro -4.0 cm a frente (1 parede(s)), folga frente 7 / tras 14 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793970769.74,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.04,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.04,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.04,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 0.1,
+   "tf_lado_cm": 8.4,
+   "log": [
+    [
+     "-1.36",
+     "CURVA 1: Medicao: girar +0.3 graus, centro -6.9 cm a frente (1 parede(s)), folga frente 4 / tras 21 cm"
+    ],
+    [
+     "-1.36",
+     "CURVA 1: Perto da parede: afastando -4.0 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.8 graus, centro -2.9 cm a frente (1 parede(s)), folga frente 8 / tras 16 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793970778.27,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.049,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.049,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.049,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": 3.7,
+   "tf_lado_cm": 8.3,
+   "log": [
+    [
+     "-2.48",
+     "CURVA 1: Medicao: girar +0.5 graus, centro -5.9 cm a frente (1 parede(s)), folga frente 6 / tras 20 cm"
+    ],
+    [
+     "-1.01",
+     "CURVA 1: Medicao: girar +3.9 graus, centro -1.5 cm a frente (1 parede(s)), folga frente 10 / tras 16 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.1 graus, centro -1.0 cm a frente (1 parede(s)), folga frente 10 / tras 15 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793970784.19,
+   "vy": 0.08,
+   "vx_onset": -0.016,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": -0.025,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": -0.025,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": -0.025,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0.0,
+   "tf_frente_cm": -1.2,
+   "tf_lado_cm": 8.2,
+   "log": [
+    [
+     "-2.48",
+     "CURVA 1: Medicao: girar +2.2 graus, centro -7.4 cm a frente (2 parede(s)), folga frente 8 / tras 18 cm"
+    ],
+    [
+     "-1.01",
+     "CURVA 1: Medicao: girar +3.1 graus, centro +0.3 cm a frente (folgas), folga frente 14 / tras 13 cm"
+    ],
+    [
+     "-0.05",
+     "CURVA 1: Medicao: girar +2.7 graus, centro +0.1 cm a frente (folgas), folga frente 13 / tras 13 cm"
+    ]
+   ]
+  },
+  {
+   "t": 1793970833.16,
+   "vy": 0.025,
+   "vx_onset": 0.0,
+   "vx_max_cmd_vel_nav": 0.0,
+   "vx_min_cmd_vel_nav": 0.0,
+   "vx_max_cmd_vel_smoothed": 0.0,
+   "vx_min_cmd_vel_smoothed": 0.0,
+   "vx_max_cmd_vel": 0.0,
+   "vx_min_cmd_vel": 0.0,
+   "n_nav": 30,
+   "n_nav_vx_fwd": 0,
+   "n_nav_puro_lat": 0,
+   "vx_final_antes": 0,
+   "tf_frente_cm": 0.1,
+   "tf_lado_cm": -0.2,
+   "log": [
+    [
+     "-0.26",
+     "Analise: nenhuma passagem estreita no caminho."
+    ],
+    [
+     "-0.25",
+     "GOAL FINAL (virar para o caminho): o caminho sai a +70 graus da frente: viro antes do Nav2"
+    ],
+    [
+     "-0.00",
+     "GOAL FINAL (virar para o caminho): girando 70 graus a quina pegaria: primeiro 36 cm para esq"
+    ]
+   ]
+  }
+ ]
+}

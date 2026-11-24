@@ -1,0 +1,6 @@
+/home/marcos/robo_rl_v2/.venv/lib/python3.12/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+P02_base_cobertura_esquerda 6 {'outside_floor': 22, 'robot_footprint_collision': 17, 'not_connected_at_fixed_heading': 7, 'ok': 6}
+P03_fundo_esquerdo 16 {'outside_floor': 15, 'ok': 16, 'not_connected_at_fixed_heading': 9, 'robot_footprint_collision': 12}
+P08_base_cobertura_direita 2 {'not_connected_at_fixed_heading': 3, 'approach_rectangle_blocked': 24, 'robot_footprint_collision': 23, 'ok': 2}
+C01_plataforma_circular 198 {'not_connected_at_fixed_heading': 95, 'ok': 198, 'approach_rectangle_blocked': 36, 'robot_footprint_collision': 56, 'outside_floor': 83}

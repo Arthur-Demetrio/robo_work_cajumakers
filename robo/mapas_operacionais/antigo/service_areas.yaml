@@ -1,0 +1,49 @@
+# Gerado por service_areas.py. Coordenadas no frame map desta sessao.
+frame: map
+gerado_em: '2026-10-26 12:39:40'
+service_areas:
+  WS_1:
+    type: workstation
+    table:
+      width: 0.8
+      depth: 0.5
+      height: 0.15
+    face:
+      x: 2.883
+      y: -0.024
+      yaw: -0.0524
+      largura_medida: 0.9
+    aproximacao:
+      x: 2.284
+      y: 0.007
+      yaw: -0.0524
+  WS_2:
+    type: workstation
+    table:
+      width: 0.8
+      depth: 0.5
+      height: 0.15
+    face:
+      x: 0.975
+      y: 3.77
+      yaw: -2.9845
+      largura_medida: 0.78
+    aproximacao:
+      x: 1.568
+      y: 3.864
+      yaw: -2.9845
+  WS_3:
+    type: workstation
+    table:
+      width: 0.8
+      depth: 0.5
+      height: 0.15
+    face:
+      x: 0.744
+      y: 1.851
+      yaw: -3.0892
+      largura_medida: 0.75
+    aproximacao:
+      x: 1.343
+      y: 1.882
+      yaw: -3.0892

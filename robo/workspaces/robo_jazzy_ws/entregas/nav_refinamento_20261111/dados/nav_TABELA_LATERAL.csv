@@ -1,0 +1,35 @@
+hora,duracao_s,fonte,vy_medio,vx_medio,vx_min,vx_max,frac_vx_negativo,frac_so_feedforward,frac_com_parede_ou_centro,vx_ff_esperado,slam_dx_cm,slam_dy_cm,odom_dx_cm,odom_dy_cm,razao_slam_dx_dy,log
+11:53:45.54,3.3,alinhador,-0.025,0.0,0.0,0.0,0.0,1.0,0.0,0.005,1.3,-10.2,-0.0,-17.9,-0.13,
+11:54:26.26,3.5,alinhador,0.08,-0.033,-0.046,-0.016,1.0,0.42,0.58,-0.016,-0.2,8.0,-4.5,13.7,-0.03,
+11:54:32.44,1.5,alinhador,0.08,-0.016,-0.016,-0.016,1.0,1.0,0.0,-0.016,0.0,0.0,0.0,0.0,,
+11:54:34.98,1.5,alinhador,0.08,-0.016,-0.016,-0.016,1.0,1.0,0.0,-0.016,0.0,0.0,0.0,0.0,,
+11:54:37.41,1.5,alinhador,0.08,-0.016,-0.016,-0.016,1.0,1.0,0.0,-0.016,0.0,0.0,0.0,0.0,,
+11:55:49.46,10.4,alinhador,0.025,0.0,0.0,0.0,0.0,1.0,0.0,-0.005,46.9,52.0,0.6,66.4,0.9,
+11:56:02.69,9.1,alinhador,0.025,0.0,0.0,0.0,0.0,1.0,0.0,-0.005,11.4,7.8,0.1,19.9,1.45,
+11:56:17.81,2.7,alinhador,0.025,0.0,0.0,0.0,0.0,1.0,0.0,-0.005,3.3,7.1,-0.1,17.6,0.47,
+11:56:23.82,2.0,alinhador,0.025,0.0,0.0,0.0,0.0,1.0,0.0,-0.005,3.5,9.7,0.1,12.4,0.36,
+11:56:44.72,2.2,DWB,-0.047,0.16,0.107,0.181,0.0,0.0,1.0,,49.5,0.4,44.2,-8.1,,
+11:56:52.61,4.5,destravar,0.03,0.0,0.0,0.0,0.0,1.0,0.0,,23.2,11.0,0.2,29.6,2.11,DESTRAVAR: DECISAO: lateral (30 cm para esq; depois o corpo anda 50 cm no caminho (area 50
+11:57:10.96,4.5,destravar,-0.03,0.0,0.0,0.0,0.0,1.0,0.0,,-18.0,-16.5,0.1,-29.9,1.09,DESTRAVAR: DECISAO: lateral (30 cm para dir; depois o corpo anda 50 cm no caminho (area 57
+11:57:18.35,23.6,DWB,0.076,0.095,0.0,0.167,0.0,0.0,1.0,,153.1,52.6,185.1,108.3,2.91,"DESTRAVAR: RESULTADO lateral: ok | chegou | ICP: 15 cm na direcao pedida (dx -22, dy -15 c | DESTRAVAR: OK: lateral (30 cm para dir; depois o corpo anda 50 cm no caminho (area 57% obs | DESTRAVAR: lateral (30 cm para dir; depois o corpo anda 50 cm no caminho (area 57% observa"
+11:59:37.68,2.8,alinhador,0.025,0.0,0.0,0.0,0.0,1.0,0.0,-0.005,5.7,6.8,0.1,18.3,0.83,
+11:59:57.88,4.6,DWB,-0.051,0.141,0.053,0.18,0.0,0.0,1.0,,6.5,25.0,82.3,-18.8,0.26,
+12:00:06.90,9.9,DWB,-0.081,0.122,0.044,0.161,0.0,0.0,1.0,,114.1,-45.7,144.0,-82.1,-2.5,DESTRAVAR: DECISAO: retomar (caminho novo e corpo passa 50 cm na direcao dele) | recusadas
+12:00:23.90,1.3,DWB,0.059,0.104,0.0,0.143,0.0,0.0,1.0,,20.4,6.6,16.7,4.6,3.07,DESTRAVAR: DECISAO: retomar (caminho novo e corpo passa 50 cm na direcao dele) | recusadas
+12:00:58.31,1.4,DWB,-0.053,0.165,0.133,0.186,0.0,0.0,1.0,,23.7,-2.9,29.7,-4.5,-8.21,
+12:01:00.72,3.2,DWB,0.069,0.123,0.036,0.182,0.0,0.0,1.0,,42.3,15.7,53.1,18.4,2.7,
+12:01:07.15,6.0,destravar,-0.03,0.0,0.0,0.0,0.0,1.0,0.0,,-21.3,-23.6,0.1,-39.7,0.9,DESTRAVAR: DECISAO: lateral (40 cm para dir; depois o corpo anda 26 cm no caminho (area 60
+12:01:15.14,1.2,DWB,0.083,0.079,0.043,0.117,0.0,0.0,1.0,,10.5,5.4,13.3,9.6,1.93,"DESTRAVAR: RESULTADO lateral: ok | chegou | ICP: 19 cm na direcao pedida (dx -30, dy -19 c | DESTRAVAR: OK: lateral (40 cm para dir; depois o corpo anda 26 cm no caminho (area 60% obs | DESTRAVAR: lateral (40 cm para dir; depois o corpo anda 26 cm no caminho (area 60% observa"
+12:01:22.72,1.0,DWB,0.036,0.176,0.169,0.188,0.0,0.0,1.0,,18.5,4.7,26.5,2.2,3.96,
+12:01:24.83,3.7,DWB,-0.054,0.09,0.032,0.184,0.0,0.0,1.0,,33.9,-9.1,49.8,-20.2,-3.72,
+12:02:00.91,1.8,alinhador,-0.025,0.0,0.0,0.0,0.0,1.0,0.0,0.005,-5.6,-8.3,-0.1,-11.5,0.67,
+12:02:18.50,1.6,alinhador,0.024,0.0,0.0,0.0,0.0,1.0,0.0,-0.005,10.7,3.6,0.8,11.8,2.99,
+12:02:27.64,3.0,alinhador,-0.08,0.004,-0.016,0.016,0.38,0.62,0.38,0.016,-4.1,-0.9,3.4,-25.9,,"CURVA 1: saindo de lado para a DIREITA ate (0.85, -0.20) + 0.60 m | CURVA 1: Cruzamento: saindo de lado para a DIREITA"
+12:02:32.91,1.3,alinhador,-0.08,0.024,-0.016,0.046,0.36,0.0,1.0,0.016,-0.1,-7.1,6.0,-10.9,0.01,CURVA 1: PARADA DE SEGURANCA: folga frente 13 / tras 4 cm | CURVA 1: Perto da parede: afastando +4.0 cm
+12:02:36.52,3.0,alinhador,-0.08,0.033,0.026,0.046,0.0,0.0,1.0,0.016,2.7,-6.8,16.7,-24.9,-0.4,CURVA 1: PARADA DE SEGURANCA: folga frente 13 / tras 4 cm | CURVA 1: Perto da parede: afastando +4.0 cm
+12:02:41.99,1.2,alinhador,-0.08,0.025,0.022,0.031,0.0,0.0,1.0,0.016,-0.5,-0.8,5.1,-10.7,,CURVA 1: PARADA DE SEGURANCA: folga frente 14 / tras 4 cm | CURVA 1: Perto da parede: afastando +5.3 cm
+12:02:49.22,1.2,alinhador,-0.08,0.028,0.024,0.035,0.0,0.0,1.0,0.016,0.5,-10.4,5.7,-10.7,-0.05,CURVA 1: PARADA DE SEGURANCA: folga frente 15 / tras 3 cm | CURVA 1: Perto da parede: afastando +6.5 cm
+12:02:56.22,1.8,alinhador,-0.08,0.031,0.021,0.046,0.0,0.26,0.74,0.016,-1.9,-6.0,9.7,-15.0,0.31,CURVA 1: PARADA DE SEGURANCA: folga frente 15 / tras 4 cm | CURVA 1: Perto da parede: afastando +6.1 cm
+12:03:03.48,1.5,alinhador,-0.08,0.046,0.046,0.046,0.0,0.0,1.0,0.016,1.9,1.0,11.7,-12.7,,
+12:03:10.56,16.2,alinhador,-0.08,0.027,0.016,0.056,0.0,0.63,0.37,0.016,-38.7,-40.7,61.6,-122.0,0.95,
+12:03:30.92,1.2,alinhador,-0.08,0.032,0.016,0.046,0.0,0.48,0.52,0.016,3.4,-28.6,6.1,-10.1,-0.12,

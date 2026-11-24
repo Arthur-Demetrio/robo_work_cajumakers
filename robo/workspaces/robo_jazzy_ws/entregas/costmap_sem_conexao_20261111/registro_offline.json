@@ -1,0 +1,17 @@
+{
+  "pontos": 117,
+  "atual": {
+    "media_aparada": 0.022616543172017587,
+    "fracao_ate5cm": 0.6923076923076923,
+    "mediana": 0.02447837574257984
+  },
+  "melhor_busca": {
+    "dx": -0.09999999999999942,
+    "dy": -1.1102230246251565e-16,
+    "dyaw_graus": 3.0000000000000004,
+    "media_aparada": 0.010067440952887495,
+    "fracao_ate5cm": 0.7606837606837606,
+    "mediana": 0.006349014958945384
+  },
+  "limite": "Busca offline entre endpoints LiDAR e ocupacao. Sem raycasting/IMU/observabilidade, nao e autorizacao de relocalizacao."
+}

@@ -1,0 +1,61 @@
+# PROTOTIPO: parametros do controle. Alvo: sistema Robo-WORK, workspace
+# operacional ~/robo_jazzy_ws (base mecanum, cmd_vel em TwistStamped).
+joy_node:
+  ros__parameters:
+    device_id: 0            # primeiro controle conectado
+    deadzone: 0.05          # a zona morta "de verdade" fica no controle_node
+    autorepeat_rate: 20.0   # /joy mesmo com o analogico parado (evita timeout)
+
+controle_mapeamento:
+  ros__parameters:
+    # Entrada do velocity_smoother: o comando passa pelo Collision Monitor.
+    # A navegacao (terminal 05) precisa estar rodando para o robo andar.
+    topico_cmd_vel: /cmd_vel_nav
+    frame_id: base_link
+    # Parada de emergencia do robo_hardware. "" desliga (o botao de emergencia so trava o controle).
+    topico_emergencia: /emergency_stop
+    taxa_hz: 20.0
+    timeout_joy_s: 0.5
+    ceder_por_s: 0.5
+
+    # Indices do controle do notebook: DragonRise "PC TWIN SHOCK" (USB
+    # 0079:0006), mapeados com `ros2 run robo_controle mapear_controle` em
+    # 21/10/2026 (copia: ~/robo_testes_prototipos/controles/). Esse controle
+    # NAO segue o layout Xbox. Com outro controle, rode o mapear_controle e
+    # suba com botoes:=<arquivo gerado>, que sobrepoe estes valores.
+    #
+    # Layout Xbox/PS/8BitDo reconhecido pelo SDL, para referencia:
+    #   eixos frente 1, lateral 0, giro 2; homem-morto 9 (LB), lento 10 (RB),
+    #   emergencia 1 (B), liberar 0 (A), salvar_local 3 (Y),
+    #   salvar_mapa 6 (START), finalizar 4 (SELECT)
+    eixo_frente: 1          # andar para frente/tras
+    eixo_lateral: 0         # andar de lado (mecanum)
+    eixo_giro: 3            # girar no lugar
+    inverter_frente: false
+    inverter_lateral: false
+    inverter_giro: false
+    botao_homem_morto: 8    # SEGURAR para andar
+    botao_lento: 9          # segurar: metade da velocidade
+    botao_emergencia: 0     # /emergency_stop = true
+    botao_liberar: 2        # SEGURAR 2 s -> /emergency_stop = false
+    segurar_liberar_s: 2.0
+    botao_salvar_local: 1   # prototipo robo_locais
+    botao_salvar_mapa: 3    # slam_toolbox serialize_map
+    botao_finalizar: 4      # SEGURAR 2 s -> finaliza o mapeamento
+    segurar_finalizar_s: 2.0
+
+    # "" desliga o extra correspondente.
+    servico_salvar_local: /locais/salvar_pose_atual
+    servico_finalizar: /locais/finalizar_mapeamento
+    arquivo_mapa: ~/robo_mapas/arena
+
+    # Maximos = velocity_smoother.max_velocity do ~/robo_jazzy_ws (19/10/2026).
+    # Se a equipe mudar o nav2_params.yaml, atualize aqui (ver comando.py).
+    limites:
+      vx_max: 0.08
+      vy_max: 0.08
+      w_max: 0.14
+      v_min: 0.016
+      w_min: 0.016
+      fator_lento: 0.5
+      zona_morta: 0.15

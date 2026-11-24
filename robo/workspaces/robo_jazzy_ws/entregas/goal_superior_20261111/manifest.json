@@ -1,0 +1,20 @@
+[
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py",
+    "backup": "alinhador_passagem.py",
+    "snapshot": "0_alinhador_passagem.py",
+    "sha256": "d628484d709f6b512ea51002832e220fa5f978742033c25e1f4498adb3e993bc"
+  },
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/AGENTS.md",
+    "backup": "AGENTS.md",
+    "snapshot": "1_AGENTS.md",
+    "sha256": "0c556f0d1c3d24d9e374f5eb6dc19378560be477243a72f455a7bc5210ed4473"
+  },
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/CLAUDE.md",
+    "backup": "CLAUDE.md",
+    "snapshot": "2_CLAUDE.md",
+    "sha256": "0210705cd0635e4815e4304a3f8b3d5618c212d09712479a13acbf85c6c1e8f3"
+  }
+]

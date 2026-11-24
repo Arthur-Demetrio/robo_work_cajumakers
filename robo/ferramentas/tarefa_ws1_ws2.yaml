@@ -1,0 +1,20 @@
+# Tarefa de treino so com WS_1 e WS_2 (formato do arquivo de equipe do atwork_commander).
+# 3 objetos: 2 vao de WS_1 para WS_2 e 1 volta de WS_2 para WS_1.
+task_id: TREINO_WS12
+name: Treino WS_1 e WS_2
+duration_min: 10
+active_service_areas: [WS_1, WS_2]
+objects:
+  - {id: 4}
+  - {id: 9}
+  - {id: 17}
+start_state:
+  WS_1:
+    obj_ids: [4, 9]
+  WS_2:
+    obj_ids: [17]
+finish_state:
+  WS_1:
+    obj_ids: [17]
+  WS_2:
+    obj_ids: [4, 9]

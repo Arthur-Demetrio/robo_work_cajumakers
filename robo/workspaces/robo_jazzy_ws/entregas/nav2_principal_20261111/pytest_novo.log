@@ -1,0 +1,14 @@
+...............FF                                                        [100%]
+=================================== FAILURES ===================================
+___________ test_perfil_nao_ativa_patches_m34_e_preserva_invariantes ___________
+src/robo_navigation/test/test_nav2_principal.py:143: in test_perfil_nao_ativa_patches_m34_e_preserva_invariantes
+    assert tree.find('.//GoalNovo/Script').get('code')=='caminho_do_goal := false'
+E   AttributeError: 'NoneType' object has no attribute 'get'
+__________ test_launch_flag_remapeia_todos_publicadores_sem_mexer_cm ___________
+src/robo_navigation/test/test_nav2_principal.py:164: in test_launch_flag_remapeia_todos_publicadores_sem_mexer_cm
+    pairs=[(perform_substitutions(ctx,a),perform_substitutions(ctx,b)) for a,b in n.remappings]
+E   AttributeError: 'Node' object has no attribute 'remappings'
+=========================== short test summary info ============================
+FAILED src/robo_navigation/test/test_nav2_principal.py::test_perfil_nao_ativa_patches_m34_e_preserva_invariantes
+FAILED src/robo_navigation/test/test_nav2_principal.py::test_launch_flag_remapeia_todos_publicadores_sem_mexer_cm
+2 failed, 15 passed in 2.53s

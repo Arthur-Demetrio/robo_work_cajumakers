@@ -1,0 +1,107 @@
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+[37;1m2026-11-10 09:52:13.319 [31;1m[[37;1mTRANSPORT_UDP[31;1m Error] [37mError creating socket: Operation not permitted[34;1m -> Function [36minit[m
+[37;1m2026-11-10 09:52:13.320 [31;1m[[37;1mRTPS_PARTICIPANT[31;1m Error] [37mUser transport failed to register.[34;1m -> Function [36mRTPSParticipantImpl[m
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+[INFO] [1794315133.350924380] [controller_server]: 
+	controller_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+[INFO] [1794315133.363084719] [offline.fixture]: 
+	fixture lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1794315133.363857049] [offline.fixture]: Creating Costmap
+[INFO] [1794315133.378208944] [controller_server]: Setting transform_tolerance to 0.300000
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+[INFO] [1794315133.401055283] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[INFO] [1794315133.401355856] [controller_server]: Critic plugin initialized
+[INFO] [1794315133.401465437] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[INFO] [1794315133.401642128] [controller_server]: Critic plugin initialized
+[INFO] [1794315133.401712359] [controller_server]: Using critic "ObstacleFootprint" (dwb_critics::ObstacleFootprintCritic)
+[INFO] [1794315133.401811231] [controller_server]: Critic plugin initialized
+[INFO] [1794315133.401895258] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[INFO] [1794315133.402795729] [controller_server]: Critic plugin initialized
+[INFO] [1794315133.402906742] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[INFO] [1794315133.403549612] [controller_server]: Critic plugin initialized
+[INFO] [1794315133.403615655] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[INFO] [1794315133.404176339] [controller_server]: Critic plugin initialized
+[INFO] [1794315133.404229998] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[INFO] [1794315133.404802074] [controller_server]: Critic plugin initialized
+[INFO] [1794315133.404860565] [controller_server]: Using critic "Twirling" (dwb_critics::TwirlingCritic)
+[INFO] [1794315133.404897570] [controller_server]: Critic plugin initialized
+[INFO] [1794315133.406001435] [controller_server]: Configuring plugin GridBased of type NavfnPlanner
+[INFO] [1794315133.558963098] [controller_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[INFO] [1794315133.560100286] [controller_server]: Destroying plugin GridBased of type NavfnPlanner
+[INFO] [1794315133.560224956] [offline.fixture]: Destroying
+[INFO] [1794315133.563935969] [controller_server]: Destroying

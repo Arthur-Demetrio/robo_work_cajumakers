@@ -1,0 +1,21 @@
+=== m32_t3_r0 (missao32 T3: 32 cm de lado, deslize k 0,8) ===
+  -> SUCESSO_FALSO / ruim | disse: WS_1 SUCESSO folga=10.4cm ang=+0.9 centro=+0.5cm | real: folga 9.5 cm centro +3.1 cm ang -3.0 g | menor dist mesa 8.3 cm
+=== m32_t3_r1 (missao32 T3: 32 cm de lado, deslize k 0,8) ===
+  -> SUCESSO_FALSO / ruim | disse: WS_1 SUCESSO folga=10.5cm ang=+0.9 centro=+0.7cm | real: folga 9.6 cm centro +3.0 cm ang -3.0 g | menor dist mesa 8.5 cm
+=== m32_t4_r0 (missao32 T4: 14 cm de lado, deslize k 1,3) ===
+  -> SUCESSO_OK / bom | disse: WS_1 SUCESSO folga=10.6cm ang=-0.8 centro=+3.8cm | real: folga 9.8 cm centro +1.5 cm ang -1.3 g | menor dist mesa 8.7 cm
+=== m32_t4_r1 (missao32 T4: 14 cm de lado, deslize k 1,3) ===
+  -> SUCESSO_OK / bom | disse: WS_1 SUCESSO folga=10.8cm ang=-0.7 centro=+3.5cm | real: folga 9.9 cm centro +0.5 cm ang -1.4 g | menor dist mesa 8.8 cm
+# Bancada de encosto (Gazebo) - 09/11/2026 19:26
+
+Criterio honesto: folga 6-12 cm, centro +-3 cm, angulo +-3 graus (pose real do Gazebo).
+
+| cenario | esperado | classe | avaliacao | o alinhador disse | real: folga / centro / ang | menor dist mesa | frag/parcial/sem face |
+|---|---|---|---|---|---|---|---|
+| m32_t3 r0 | seguro | SUCESSO_FALSO | ruim | WS_1 SUCESSO folga=10.4cm ang=+0.9 centro=+0.5cm | 9.5 / +3.1 / -3.0 | 8.3 | 1/0/3 |
+| m32_t3 r1 | seguro | SUCESSO_FALSO | ruim | WS_1 SUCESSO folga=10.5cm ang=+0.9 centro=+0.7cm | 9.6 / +3.0 / -3.0 | 8.5 | 0/1/2 |
+| m32_t4 r0 | seguro | SUCESSO_OK | bom | WS_1 SUCESSO folga=10.6cm ang=-0.8 centro=+3.8cm | 9.8 / +1.5 / -1.3 | 8.7 | 0/1/1 |
+| m32_t4 r1 | seguro | SUCESSO_OK | bom | WS_1 SUCESSO folga=10.8cm ang=-0.7 centro=+3.5cm | 9.9 / +0.5 / -1.4 | 8.8 | 0/0/2 |
+
+Resumo: bom 2, ruim 2
+

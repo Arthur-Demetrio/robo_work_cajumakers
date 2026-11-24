@@ -1,0 +1,51 @@
+[INFO] [1794261110.298327162] [alinhador_passagem]: Alinhador pronto. Envie goals em /goal_pose_alinhado.
+[INFO] [1794261110.300221783] [alinhador_passagem]: BANCADA: gatilho /sim/encostar pronto (codigo de /home/marcos/robo_jazzy_ws/src/robo_navigation/scripts)
+[INFO] [1794261113.365425193] [alinhador_passagem]: Laser em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[INFO] [1794261116.243453480] [alinhador_passagem]: BANCADA: encostar WS_1
+[INFO] [1794261116.249969974] [alinhador_passagem]: ENCOSTAR WS_1: medindo a face da mesa
+[INFO] [1794261116.465742375] [alinhador_passagem]: ENCOSTAR WS_1: aguardando segunda observacao coerente
+[INFO] [1794261116.629057351] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.605 c+0.120 a-1.8g)
+[INFO] [1794261117.264930192] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 1: face a 24 cm (para-choque), girar -1.8 graus, centro +12.2 cm
+[INFO] [1794261117.323099296] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +12.2 cm de lado
+[INFO] [1794261120.310701565] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 2: face a 21 cm (para-choque), girar -1.2 graus, centro +5.5 cm
+[INFO] [1794261120.364306346] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +5.5 cm de lado
+[INFO] [1794261121.839863767] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 3: face a 20 cm (para-choque), girar -1.0 graus, centro +3.4 cm
+[INFO] [1794261121.890843422] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +3.4 cm de lado
+[INFO] [1794261123.205258381] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 4: face a 20 cm (para-choque), girar -1.0 graus, centro +2.0 cm
+[INFO] [1794261127.410721289] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 5: face a 19 cm (para-choque), girar -0.9 graus, centro -0.4 cm
+[INFO] [1794261127.411357721] [alinhador_passagem]: ENCOSTAR WS_1: Alinhado com a mesa: avancando ate 9 cm
+[INFO] [1794261129.944899864] [alinhador_passagem]: ENCOSTAR WS_1: Encostado: frente a 10.5 cm da mesa, -1.1 graus, centro +1.7 cm
+[INFO] [1794261129.945505363] [alinhador_passagem]: ENCOSTAR WS_1: ENCOSTO_CEGO: encostado a 10.5 cm, -1.1 graus; centro medido de longe -0.4 cm (perto o LiDAR nao ve o meio da face)
+[INFO] [1794261130.208831659] [alinhador_passagem]: ENCOSTAR WS_1: SUCESSO
+[INFO] [1794261130.209952070] [alinhador_passagem]: RESULTADO: WS_1 SUCESSO folga=10.5cm ang=-1.1 centro=+1.7cm
+Traceback (most recent call last):
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 4101, in main
+    executor.spin()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 359, in spin
+    self._spin_once_impl()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 991, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 750, in _wait_for_ready_callbacks
+    valid_waitables.append(waitable)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/alinhador_bancada.py", line 57, in <module>
+    alinhador_passagem.main()
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 4104, in main
+    no._parar()
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 2862, in _parar
+    self._publicar_vel(0.0, 0.0, 0.0)
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 2858, in _publicar_vel
+    (self.pub_t if self.controle_t_ativo else self.pub_cmd).publish(m)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:423
+The following exception was never retrieved: cannot use Destroyable because destruction was requested
+The following exception was never retrieved: cannot use Destroyable because destruction was requested

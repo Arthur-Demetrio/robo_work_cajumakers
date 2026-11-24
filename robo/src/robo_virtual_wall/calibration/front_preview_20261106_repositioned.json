@@ -1,0 +1,82 @@
+{
+  "H": [
+    [
+      5.818328294083105e-05,
+      -0.012584230744219117,
+      7.005180441487104
+    ],
+    [
+      -0.013590018601951229,
+      -0.0006463668544804507,
+      4.677573190706738
+    ],
+    [
+      0.002427303146061625,
+      0.024314707361022068,
+      1.0
+    ]
+  ],
+  "frame_id": "virtual_wall_front",
+  "units": "m",
+  "image_space": "raw",
+  "validated": false,
+  "image_size": [
+    640,
+    480
+  ],
+  "valid_pixels": [
+    [
+      451.0,
+      379.0
+    ],
+    [
+      206.0,
+      385.0
+    ],
+    [
+      242.0,
+      268.0
+    ],
+    [
+      424.0,
+      260.0
+    ]
+  ],
+  "pixels": [
+    [
+      206.0,
+      385.0
+    ],
+    [
+      451.0,
+      379.0
+    ],
+    [
+      242.0,
+      268.0
+    ],
+    [
+      424.0,
+      260.0
+    ]
+  ],
+  "metres": [
+    [
+      0.20000000298023224,
+      0.15000000596046448
+    ],
+    [
+      0.20000000298023224,
+      -0.15000000596046448
+    ],
+    [
+      0.44999998807907104,
+      0.15000000596046448
+    ],
+    [
+      0.44999998807907104,
+      -0.15000000596046448
+    ]
+  ],
+  "source": "User screenshot /tmp/codex-clipboard-Tuyxko.png, 2026-11-06. Estimated cross centres; native image origin (11,41), 640x480, no resizing. Assumed user-positioned crosses at X=0.20/0.45 m, Y=+/-0.15 m from front white edge. New camera pose. Verify independent measured points; camera must remain fixed."
+}

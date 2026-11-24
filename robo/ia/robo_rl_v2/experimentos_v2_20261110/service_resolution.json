@@ -1,0 +1,13 @@
+{
+  "resolved": [
+    "P02_base_cobertura_esquerda",
+    "P03_fundo_esquerdo",
+    "P08_base_cobertura_direita",
+    "C01_plataforma_circular"
+  ],
+  "accessible": 14,
+  "total": 14,
+  "unresolved": [],
+  "source_objects_unchanged": true,
+  "heights_unchanged": true
+}

@@ -1,0 +1,11 @@
+{
+  "binary_sha256": "802b59626f33845d75e3add31adc0947b710d04b520e8e1e04f2d35e46a29346",
+  "configs": {
+    "nav2_params_global_unambiguous_candidate.yaml": "155f02fbdf1cad9319f51e3ced77dac6d5072f557b16541668ad40e430e48eff",
+    "nav2_params_predictive_candidate.yaml": "e7024211d4405d9421cef7455185ceae4cce5fea9fa4882cb792b7c5ac7a685f",
+    "nav2_params_dwb_candidate.yaml": "155f02fbdf1cad9319f51e3ced77dac6d5072f557b16541668ad40e430e48eff",
+    "nav2_params_global_shim_candidate.yaml": "efcea3a4388128d2888e6043d9af5ddb46c7d1c0b95231fccfde32c880a3d977",
+    "nav2_params_early_candidate.yaml": "a30431ec25e055a44ec561759479979bcd4f903ecbf2e84180ada8c2f131b259"
+  },
+  "model": "Ideal target-twist integration dt=.1, synthetic map and inflation. No BT, smoother, CM, encoder error, scan delay, or hardware in this loop."
+}

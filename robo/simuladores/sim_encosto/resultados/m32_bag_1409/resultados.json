@@ -1,0 +1,290 @@
+[
+ {
+  "cenario": "m32_t3",
+  "versao": "versoes/bag_1409",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "missao32 T3: 32 cm de lado, deslize k 0,8",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.59,
+   "lado": -0.32,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 0.8
+  },
+  "disse": "WS_1 FALHOU encosto: nao vejo a face da mesa a frente",
+  "classe": "FALHA_EXPLICITA",
+  "avaliacao": "bom",
+  "duracao": 12.4,
+  "real_final": {
+   "folga_cm": 8.5,
+   "centro_cm": 16.2,
+   "ang_graus": -1.6
+  },
+  "real_inicio": {
+   "folga_cm": 22.5,
+   "centro_cm": 32.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 7.0,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 24,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "m32_t3",
+  "versao": "versoes/bag_1409",
+  "rep": 1,
+  "ws": "WS_1",
+  "descricao": "missao32 T3: 32 cm de lado, deslize k 0,8",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.59,
+   "lado": -0.32,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 0.8
+  },
+  "disse": "WS_1 FALHOU encosto: nao vejo a face da mesa a frente",
+  "classe": "FALHA_EXPLICITA",
+  "avaliacao": "bom",
+  "duracao": 11.8,
+  "real_final": {
+   "folga_cm": 8.6,
+   "centro_cm": 16.3,
+   "ang_graus": -1.6
+  },
+  "real_inicio": {
+   "folga_cm": 22.5,
+   "centro_cm": 32.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 7.1,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 25,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "m32_t4",
+  "versao": "versoes/bag_1409",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "missao32 T4: 14 cm de lado, deslize k 1,3",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.58,
+   "lado": -0.14,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 1.3
+  },
+  "disse": "WS_1 FALHOU encosto: nao vejo a face da mesa a frente",
+  "classe": "FALHA_EXPLICITA",
+  "avaliacao": "bom",
+  "duracao": 10.0,
+  "real_final": {
+   "folga_cm": 8.1,
+   "centro_cm": 4.6,
+   "ang_graus": -1.0
+  },
+  "real_inicio": {
+   "folga_cm": 21.5,
+   "centro_cm": 14.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 7.0,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 24,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "m32_t4",
+  "versao": "versoes/bag_1409",
+  "rep": 1,
+  "ws": "WS_1",
+  "descricao": "missao32 T4: 14 cm de lado, deslize k 1,3",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.58,
+   "lado": -0.14,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 1.3
+  },
+  "disse": "WS_1 FALHOU encosto: nao vejo a face da mesa a frente",
+  "classe": "FALHA_EXPLICITA",
+  "avaliacao": "bom",
+  "duracao": 11.2,
+  "real_final": {
+   "folga_cm": 8.4,
+   "centro_cm": 4.8,
+   "ang_graus": -0.9
+  },
+  "real_inicio": {
+   "folga_cm": 21.5,
+   "centro_cm": 14.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 7.3,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 26,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "m32_t4_k08",
+  "versao": "versoes/bag_1409",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "missao32 T4 com deslize k 0,8",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.58,
+   "lado": -0.14,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 0.8
+  },
+  "disse": "WS_1 FALHOU encosto: perdi a face da mesa",
+  "classe": "FALHA_EXPLICITA",
+  "avaliacao": "bom",
+  "duracao": 13.0,
+  "real_final": {
+   "folga_cm": 8.2,
+   "centro_cm": 2.0,
+   "ang_graus": -1.2
+  },
+  "real_inicio": {
+   "folga_cm": 21.5,
+   "centro_cm": 14.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 7.1,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 18,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "m32_t4_k08",
+  "versao": "versoes/bag_1409",
+  "rep": 1,
+  "ws": "WS_1",
+  "descricao": "missao32 T4 com deslize k 0,8",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.58,
+   "lado": -0.14,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 0.8
+  },
+  "disse": "WS_1 FALHOU encosto: perdi a face da mesa",
+  "classe": "FALHA_EXPLICITA",
+  "avaliacao": "bom",
+  "duracao": 10.4,
+  "real_final": {
+   "folga_cm": 8.0,
+   "centro_cm": 2.3,
+   "ang_graus": -1.2
+  },
+  "real_inicio": {
+   "folga_cm": 21.5,
+   "centro_cm": 14.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 7.0,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 18,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "m32_lado_m20_k1",
+  "versao": "versoes/bag_1409",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "20 cm de lado, deslize k 1,0",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.58,
+   "lado": -0.2,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 1.0
+  },
+  "disse": "WS_1 FALHOU encosto: nao vejo a face da mesa a frente",
+  "classe": "FALHA_EXPLICITA",
+  "avaliacao": "bom",
+  "duracao": 9.4,
+  "real_final": {
+   "folga_cm": 8.3,
+   "centro_cm": 8.1,
+   "ang_graus": -1.2
+  },
+  "real_inicio": {
+   "folga_cm": 21.5,
+   "centro_cm": 20.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 7.2,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 24,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "m32_lado_m20_k1",
+  "versao": "versoes/bag_1409",
+  "rep": 1,
+  "ws": "WS_1",
+  "descricao": "20 cm de lado, deslize k 1,0",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.58,
+   "lado": -0.2,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 1.0
+  },
+  "disse": "WS_1 FALHOU encosto: nao vejo a face da mesa a frente",
+  "classe": "FALHA_EXPLICITA",
+  "avaliacao": "bom",
+  "duracao": 9.6,
+  "real_final": {
+   "folga_cm": 8.6,
+   "centro_cm": 8.3,
+   "ang_graus": -1.2
+  },
+  "real_inicio": {
+   "folga_cm": 21.5,
+   "centro_cm": 20.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 7.4,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 23,
+  "n_mede_de_novo": 0
+ }
+]

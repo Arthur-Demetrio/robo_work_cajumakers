@@ -1,0 +1,3 @@
+...............................................................          [100%]
+- generated xml file: /home/marcos/publicacoes/robo_work_20261112/validacao/ros.xml -
+63 passed in 3.88s

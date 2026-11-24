@@ -1,0 +1,19 @@
+# Mesas marcadas com marcar_mesa.py (pose do robo + LiDAR). Frame map.
+frame: map
+service_areas:
+  WS_2:
+    type: workstation
+    table:
+      width: 0.8
+      depth: 0.5
+      height: 0.1
+    face:
+      x: 0.754
+      y: 3.734
+      yaw: 3.0159
+      largura_medida: 0.89
+    aproximacao:
+      x: 1.349
+      y: 3.659
+      yaw: 3.0159
+gerado_em: '2026-11-04 08:41:20'

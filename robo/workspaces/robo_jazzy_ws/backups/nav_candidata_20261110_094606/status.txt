@@ -1,0 +1,153 @@
+ M CLAUDE.md
+ M ferramentas/gravar_teste.sh
+ M src/robo_hardware/CMakeLists.txt
+ M src/robo_hardware/launch/hardware.launch.py
+ M src/robo_hardware/src/hardware_bridge_node.cpp
+ M src/robo_lidar/launch/lidar_filter.launch.py
+ M src/robo_lidar/package.xml
+ M src/robo_navigation/CMakeLists.txt
+ M src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml
+ M src/robo_navigation/config/nav2_params.yaml
+ M src/robo_navigation/launch/navigation.launch.py
+ M src/robo_navigation/package.xml
+ M src/robo_navigation/scripts/alinhador_passagem.py
+ M src/robo_navigation/scripts/executor_prova.py
+?? backups/giro_frontal_20261109/HEAD
+?? backups/giro_frontal_20261109/alteracoes.patch
+?? backups/giro_frontal_20261109/fontes_antes.tar.gz
+?? backups/giro_frontal_20261109/git-status-inicial.txt
+?? backups/giro_frontal_20261109/git-status.txt
+?? backups/giro_frontal_revisao2_20261109/antes.tar.gz
+?? backups/giro_frontal_revisao2_20261109/rastreados.patch
+?? backups/giro_frontal_revisao2_20261109/status.txt
+?? backups/giro_integrado_20261109/antes.tar.gz
+?? backups/giro_integrado_20261109/git-status.txt
+?? backups/giro_integrado_20261109/gravar_teste_home.sh
+?? backups/giro_integrado_20261109/rastreados.patch
+?? backups/giro_integrado_20261109/workotvio_original.ino
+?? backups/prioridade_lateral_ws_20261109/antes.tar.gz
+?? backups/prioridade_lateral_ws_20261109/git-diff-inicial.patch
+?? backups/prioridade_lateral_ws_20261109/git-status-inicial.txt
+?? backups/prioridade_lateral_ws_20261109/gravar_teste_home.sh
+?? docs/face_fragmentada_20261109/RELATORIO.md
+?? docs/face_fragmentada_20261109/face_fragmentada.patch
+?? docs/face_fragmentada_20261109/reverter.sh
+?? docs/face_fragmentada_20261109/sha256_novos.txt
+?? docs/implementacao_giro_t/RELATORIO.md
+?? docs/implementacao_giro_t/REVISAO2.md
+?? docs/implementacao_giro_t/implementacao.patch
+?? docs/implementacao_giro_t/integrado/ARQUIVOS.md
+?? docs/implementacao_giro_t/integrado/OPERACAO.md
+?? docs/implementacao_giro_t/integrado/PROTOCOLO.md
+?? docs/implementacao_giro_t/integrado/RESULTADOS.md
+?? docs/implementacao_giro_t/integrado/arquivos.json
+?? docs/implementacao_giro_t/integrado/firmware_compilado/manifesto.json
+?? docs/implementacao_giro_t/integrado/firmware_compilado/mega_mecanum_temporal.elf
+?? docs/implementacao_giro_t/integrado/firmware_compilado/mega_mecanum_temporal.hex
+?? docs/implementacao_giro_t/integrado/git-status.txt
+?? docs/implementacao_giro_t/integrado/integracao.patch
+?? docs/implementacao_giro_t/integrado/verificacoes.txt
+?? docs/implementacao_giro_t/integrado/verificacoes_finais.txt
+?? docs/implementacao_giro_t/revisao2.patch
+?? docs/implementacao_giro_t/verificacoes.txt
+?? docs/implementacao_giro_t/verificacoes_revisao2.txt
+?? docs/prioridade_lateral_ws_20261109/RELATORIO.md
+?? docs/prioridade_lateral_ws_20261109/arquivos.json
+?? docs/prioridade_lateral_ws_20261109/build.log
+?? docs/prioridade_lateral_ws_20261109/colcon-result.log
+?? docs/prioridade_lateral_ws_20261109/colcon-test.log
+?? docs/prioridade_lateral_ws_20261109/cpp-regressao.log
+?? docs/prioridade_lateral_ws_20261109/delta-rodada.patch
+?? docs/prioridade_lateral_ws_20261109/git-diff-final.patch
+?? docs/prioridade_lateral_ws_20261109/git-diff-stat.txt
+?? docs/prioridade_lateral_ws_20261109/git-head.txt
+?? docs/prioridade_lateral_ws_20261109/git-status-final.txt
+?? docs/prioridade_lateral_ws_20261109/gravador_offline.json
+?? docs/prioridade_lateral_ws_20261109/launch_efetivo.json
+?? docs/prioridade_lateral_ws_20261109/missao24/deslizes.tsv
+?? docs/prioridade_lateral_ws_20261109/missao24/folgas.tsv
+?? docs/prioridade_lateral_ws_20261109/missao24/linha_do_tempo.tsv
+?? docs/prioridade_lateral_ws_20261109/missao24/planner.tsv
+?? docs/prioridade_lateral_ws_20261109/missao24/relatorio.txt
+?? docs/prioridade_lateral_ws_20261109/pytest.xml
+?? docs/prioridade_lateral_ws_20261109/replay_ws.json
+?? docs/prioridade_lateral_ws_20261109/replay_ws.log
+?? docs/prioridade_lateral_ws_20261109/subsistemas_preservados.json
+?? docs/tarefas/tarefa_missao21.md
+?? docs/tarefas/tarefa_missao22.md
+?? entregas/giro_integrado_20261109.tar.gz
+?? entregas/giro_integrado_20261109.tar.gz.sha256
+?? entregas/giro_integrado_20261109/backup_pre_integracao/antes.tar.gz
+?? entregas/giro_integrado_20261109/backup_pre_integracao/git-status.txt
+?? entregas/giro_integrado_20261109/backup_pre_integracao/gravar_teste_home.sh
+?? entregas/giro_integrado_20261109/backup_pre_integracao/rastreados.patch
+?? entregas/giro_integrado_20261109/backup_pre_integracao/workotvio_original.ino
+?? entregas/giro_integrado_20261109/ctest_cpp/CTestCostData.txt
+?? entregas/giro_integrado_20261109/ctest_cpp/LastTest.log
+?? entregas/giro_integrado_20261109/ctest_cpp/LastTest_20261109-1255.log
+?? entregas/giro_integrado_20261109/ctest_cpp/LastTest_20261109-1309.log
+?? entregas/giro_integrado_20261109/ctest_cpp/LastTest_20261109-1312.log
+?? entregas/giro_integrado_20261109/ctest_cpp/LastTest_20261109-1316.log
+?? entregas/giro_integrado_20261109/fontes/binarios.json
+?? entregas/giro_integrado_20261109/fontes/diff.txt
+?? entregas/giro_integrado_20261109/fontes/gravar_teste_home.sh
+?? entregas/giro_integrado_20261109/fontes/head.txt
+?? entregas/giro_integrado_20261109/fontes/sha256.json
+?? entregas/giro_integrado_20261109/fontes/staged.txt
+?? entregas/giro_integrado_20261109/fontes/status.txt
+?? entregas/giro_integrado_20261109/fontes/ultimo_commit.txt
+?? entregas/giro_integrado_20261109/fontes/untracked.txt
+?? entregas/giro_integrado_20261109/fontes/workotvio_fonte_disponivel.ino
+?? entregas/giro_integrado_20261109/fontes/workspace_fontes.tar.gz
+?? entregas/giro_integrado_20261109/manifesto_entrega.json
+?? entregas/giro_integrado_20261109/relatorio/ARQUIVOS.md
+?? entregas/giro_integrado_20261109/relatorio/OPERACAO.md
+?? entregas/giro_integrado_20261109/relatorio/PROTOCOLO.md
+?? entregas/giro_integrado_20261109/relatorio/RESULTADOS.md
+?? entregas/giro_integrado_20261109/relatorio/arquivos.json
+?? entregas/giro_integrado_20261109/relatorio/firmware_compilado/manifesto.json
+?? entregas/giro_integrado_20261109/relatorio/firmware_compilado/mega_mecanum_temporal.elf
+?? entregas/giro_integrado_20261109/relatorio/firmware_compilado/mega_mecanum_temporal.hex
+?? entregas/giro_integrado_20261109/relatorio/git-status.txt
+?? entregas/giro_integrado_20261109/relatorio/integracao.patch
+?? entregas/giro_integrado_20261109/relatorio/verificacoes.txt
+?? entregas/giro_integrado_20261109/relatorio/verificacoes_finais.txt
+?? entregas/giro_integrado_20261109/xunit_python/giro_frontal.xunit.xml
+?? entregas/giro_integrado_20261109/xunit_python/giro_integrado.xunit.xml
+?? entregas/prioridade_lateral_ws_20261109.tar.gz
+?? entregas/prioridade_lateral_ws_20261109.tar.gz.sha256
+?? ferramentas/analise/revisao_ws_lateral.py
+?? ferramentas/compilar_firmware_temporal.py
+?? ferramentas/gravacao_qos.yaml
+?? ferramentas/gravar_teste.py
+?? ferramentas/iniciar_teste_giro_t.sh
+?? ferramentas/patches/aplicar_cm_rigido.py
+?? ferramentas/patches/aplicar_localizacao_fixa.py
+?? ferramentas/patches/aplicar_recuo_lateral.py
+?? ferramentas/patches/aplicar_ws1_remap.py
+?? ferramentas/patches/aplicar_ws2_remap.py
+?? ferramentas/priorizar_lateral_ws.py
+?? ferramentas/restaurar_arquivos_integrado.py
+?? ferramentas/reverter_prioridade_lateral_ws.py
+?? ferramentas/trajetoria_teste.py
+?? ferramentas/verificar_giro_t.py
+?? firmware/mega_mecanum_temporal/mega_mecanum_temporal.ino
+?? firmware/mega_mecanum_temporal/sliding_scan.h
+?? src/robo_hardware/include/robo_hardware/sensor_clock.hpp
+?? src/robo_hardware/test/test_sensor_clock.cpp
+?? src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml.antes_lateral_ws
+?? src/robo_navigation/config/slam_localizacao.yaml
+?? src/robo_navigation/launch/localizacao_slam.launch.py
+?? src/robo_navigation/launch/navigation.launch.py.antes_lateral_ws
+?? src/robo_navigation/scripts/alinhador_passagem.py.backup_20261109_112856
+?? src/robo_navigation/scripts/arbitro_t.py
+?? src/robo_navigation/scripts/face_ws.py
+?? src/robo_navigation/scripts/giro_frontal.py
+?? src/robo_navigation/test/dados/missao32_ws1_scans.json
+?? src/robo_navigation/test/test_face_fragmentada.py
+?? src/robo_navigation/test/test_face_proxima.py
+?? src/robo_navigation/test/test_freio_cruzamento.py
+?? src/robo_navigation/test/test_giro_frontal.py
+?? src/robo_navigation/test/test_integrado_t.py
+?? src/robo_navigation/test/test_lateral_ws.py
+?? src/robo_navigation/test/test_recuo_lateral.py

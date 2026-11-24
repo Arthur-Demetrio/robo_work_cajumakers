@@ -1,0 +1,606 @@
+[INFO] [1791200191.668214811] [planner_server]: 
+	planner_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791200191.683770615] [planner_server]: Creating
+[INFO] [1791200191.690969606] [global_costmap.global_costmap]: 
+	global_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791200191.693097583] [global_costmap.global_costmap]: Creating Costmap
+[INFO] [1791200191.990672444] [planner_server]: Configuring
+[INFO] [1791200191.990696256] [global_costmap.global_costmap]: Configuring
+[INFO] [1791200191.993748111] [global_costmap.global_costmap]: Using plugin "static_layer"
+[INFO] [1791200191.996339974] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1791200191.996968445] [global_costmap.global_costmap]: Subscribing to updates
+[INFO] [1791200191.997821441] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[INFO] [1791200191.997840405] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[INFO] [1791200191.998241028] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1791200192.007621500] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[INFO] [1791200192.007647056] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[INFO] [1791200192.008058753] [planner_server]: Planner Server has GridBased  planners available.
+[INFO] [1791200192.578789487] [planner_server]: Activating
+[INFO] [1791200192.578817458] [global_costmap.global_costmap]: Activating
+[INFO] [1791200192.578823663] [global_costmap.global_costmap]: Checking transform
+[INFO] [1791200192.578856897] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200193.078914243] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200193.578904625] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200194.078904909] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200194.578908838] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200195.078906131] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200195.578902825] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200196.078900286] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200196.578902544] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200197.078912378] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200197.578901621] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200198.078901769] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200198.578900469] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200199.078905788] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200199.578900704] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200200.078906184] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200200.578905434] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200201.078900388] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200201.578900008] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200202.078904864] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200202.578901092] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200203.078902441] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200203.578906008] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200204.078900973] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200204.578899925] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200205.078904138] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200205.578900571] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200206.078901158] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200206.578905327] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200207.078905695] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200207.578898795] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200208.078902504] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200208.578904528] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200209.078899934] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200209.578900971] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200210.078900264] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200210.578899459] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200211.078901474] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200211.578899837] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200212.078900232] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200212.578901949] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200213.078900234] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200213.578899260] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200214.078900482] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200214.578899676] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200215.078902787] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200215.578901590] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200216.078901299] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200216.578902704] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200217.078900996] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200217.578900336] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200218.078905017] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200218.578900599] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200219.078899519] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200219.578898895] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200220.078900759] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200220.578900978] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200221.078899798] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200221.578899399] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200222.078904581] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200222.578904417] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200223.078903148] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200223.578899462] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200224.078899757] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200224.578901681] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200225.078900952] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200225.578900216] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200226.078900293] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200226.578903525] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200227.078902339] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200227.578898783] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200228.078898696] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200228.578899994] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200229.078976505] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200229.578905227] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200230.078900802] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200230.578903866] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200231.078901325] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200231.578901489] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200232.078904813] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200232.578900326] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200233.078899919] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200233.578901358] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[INFO] [1791200234.078975901] [global_costmap.global_costmap]: start
+[INFO] [1791200234.129234195] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[INFO] [1791200234.129806740] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[INFO] [1791200234.957733283] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 119 X 50 at 0.050000 m/pix
+[INFO] [1791200411.079129381] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 127 X 54 at 0.050000 m/pix
+[ERROR] [1791200421.382580485] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200411.371777, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200421.882395958] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200411.851777, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200422.382470796] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200412.351765, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200422.882619411] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200412.851761, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200423.382368089] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200413.351800, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200423.882231590] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200413.851872, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200424.382476803] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200414.371778, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200424.882679570] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200414.851794, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200425.382769884] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200415.371769, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200425.882568757] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200415.871753, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200426.382608666] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200416.371774, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200426.882611588] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200416.871772, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200427.382363333] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200417.371773, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200427.882188408] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200417.871783, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200428.382344786] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200418.351796, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200428.882328887] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200418.871754, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200429.382360033] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200419.351756, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200429.882763067] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200419.871752, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200430.382467308] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200420.371783, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200430.882481416] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200420.871769, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200431.382835379] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200421.371749, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200431.882470277] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200421.871778, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200432.382419410] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200422.351754, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200432.882351785] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200422.871727, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200433.382410156] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200423.371751, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200433.882855440] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200423.871790, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200434.382556225] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200424.351875, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200434.882481419] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200424.871889, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200435.383026808] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200425.351867, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200435.882308326] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200425.851873, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200436.382606786] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200426.371781, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200436.882694307] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200426.851769, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200437.382256520] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200427.351768, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200437.882508681] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200427.851790, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200438.383182648] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200428.371752, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200438.882356531] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200428.851854, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200439.382488060] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200429.371710, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200439.882250642] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200429.851922, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200440.382733348] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200430.351775, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200440.883098512] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200430.851912, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200441.382399159] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200431.351811, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200441.882691876] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200431.851845, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200442.382882489] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200432.371741, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200442.882588108] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200432.871801, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200443.382551389] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200433.351765, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200443.882281346] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200433.851783, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200444.382530436] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200434.351768, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200444.882859978] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200434.851818, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200445.382258515] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200435.371804, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200445.882791357] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200435.871774, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200446.383323554] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200436.351787, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200446.882814588] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200436.871859, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200447.382866880] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200437.371775, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200447.882487945] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200437.872175, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200448.382802705] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200438.351872, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200448.882819825] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200438.871782, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200449.382385293] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200439.351780, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200449.882759254] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200439.851903, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200450.382330250] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200410.616025 but the earliest data is at time 1791200440.351758, when looking up transform from frame [base_link] to frame [map]
+
+[INFO] [1791200451.079129377] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 155 X 54 at 0.050000 m/pix
+[ERROR] [1791200465.382220684] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200455.351764, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200465.882613851] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200455.851756, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200466.382696410] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200456.371777, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200466.882606632] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200456.872151, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200467.382395648] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200457.371750, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200467.882585198] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200457.872067, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200468.382408671] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200458.372125, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200468.882730778] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200458.871708, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200469.382267577] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200459.351817, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200469.882314412] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200459.851774, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200470.382925803] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200460.371719, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200470.882689227] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200460.871751, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200471.382405220] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200461.351752, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200471.882781017] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200461.871762, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200472.382093249] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200462.351773, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200472.882423336] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200462.871703, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200473.382493852] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200463.371779, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200473.882404633] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200463.871675, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200474.382848609] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200464.371758, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200474.882731025] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200464.871690, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200475.382725696] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200465.371727, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200475.882885234] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200465.871783, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200476.382667111] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200466.352746, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200476.883010128] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200466.871721, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200477.382407767] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200467.371724, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200477.882362552] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200467.851860, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200478.382491718] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200468.351776, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200478.882954238] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200468.852801, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200479.382378272] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200469.371791, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200479.882659786] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200469.871757, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200480.382324271] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200470.352831, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200480.882403984] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200470.852661, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200481.382274112] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200471.371791, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200481.882297541] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200471.852591, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200482.382489211] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200472.371776, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200482.882611407] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200472.871779, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200483.382335543] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200473.352556, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200483.882568664] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200473.851810, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200484.382370000] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200474.352495, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200484.882526196] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200474.852334, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200485.382339650] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200475.352161, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200485.882420150] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200475.852474, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200486.382624408] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200476.371797, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200486.882828705] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200476.871772, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200487.382458687] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200477.352254, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200487.882513977] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200477.871677, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200488.382638045] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200478.351751, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200488.882787315] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200478.852774, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200489.382879121] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200479.352200, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200489.882675575] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200479.851888, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200490.382926302] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200480.351762, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200490.882922429] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200480.871781, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200491.382269756] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200481.351831, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200491.882330907] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200481.871780, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200492.382394277] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200482.351815, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200492.882935642] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200482.852660, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200493.382739656] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200483.371767, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200493.882892043] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200483.851799, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200494.382714783] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200484.371778, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200494.882478956] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200484.871783, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200495.382962540] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200485.351768, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200495.882444606] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200485.851812, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200496.382361335] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200486.351953, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200496.882664748] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200486.852262, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200497.382505358] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200487.351731, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200497.882095235] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200487.852180, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200498.382835051] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200488.371772, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200498.882849453] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200488.871745, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200499.382731562] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200489.351755, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200499.882737702] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200489.871714, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200500.382322562] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200490.372961, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200500.882539186] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200490.852645, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200501.382894995] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200491.371763, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200501.882356788] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200491.851825, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200502.382557392] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200492.351731, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200502.882815148] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200492.871752, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200503.383323322] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200493.351757, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200503.882968878] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200493.871752, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200504.382409329] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200494.351748, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200504.882405287] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200494.852569, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200505.382573300] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200495.371773, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200505.882386966] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200495.851789, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200506.382416397] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200496.371777, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200506.882400058] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200496.871703, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200507.382576474] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200497.371731, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200507.882399665] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200497.871774, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200508.382376779] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200498.351785, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200508.882332754] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200498.852305, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200509.382600224] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200499.351754, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200509.882784182] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200499.871773, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200510.382566651] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200500.351835, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200510.882825355] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200500.871750, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200511.382589112] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200501.351782, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200511.882302713] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200501.871731, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200512.382390268] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200502.351712, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200512.882380082] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200502.852689, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200513.382219877] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200503.371767, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200513.882231231] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200503.851800, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200514.382417465] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200504.371771, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200514.882678947] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200504.871768, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200515.382253740] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200505.351798, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200515.882840774] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200505.871750, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200516.382319536] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200506.351747, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200516.882489833] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200506.852240, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200517.382772195] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200507.371722, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200517.882625790] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200507.851766, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200518.382550736] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200508.371773, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200518.882586889] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200508.871745, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200519.382830806] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200509.351742, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200519.882478116] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200509.851887, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200520.382448433] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200510.371837, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200520.882325995] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200510.852467, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200521.382407197] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200511.351770, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200521.882553781] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200511.871706, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200522.382682514] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200512.351692, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200522.882632286] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200512.872283, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200523.382495188] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200513.351761, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200523.882369497] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200513.871745, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200524.382358194] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200514.351759, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200524.882281307] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200514.852659, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200525.382239177] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200515.371767, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200525.882380330] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200515.851766, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200526.382549197] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200516.371766, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200526.882365155] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200516.871690, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200527.382158582] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200517.351780, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200527.882403240] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200517.871756, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200528.382333827] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200518.352109, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200528.882386436] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200518.852276, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200529.382184540] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200519.351705, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200529.882573343] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200519.871772, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200530.382400916] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200520.371763, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200530.882935912] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200520.871778, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200531.382123278] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200521.371729, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200531.882965048] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200521.851765, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200532.382666951] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200522.371800, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200532.882401722] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200522.871674, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200533.382266437] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200523.371770, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200533.882345210] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200523.851786, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200534.382608511] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200524.371725, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200534.882470861] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200524.871777, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200535.383229352] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200525.351758, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200535.882592488] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200525.871772, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200536.382356765] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200526.371786, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200536.882901397] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200526.851860, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200537.382322787] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200527.371750, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200537.882628412] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200527.851754, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200538.382532436] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200528.371785, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200538.882896753] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200528.851760, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200539.382715971] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200529.371734, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200539.882392508] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200529.871671, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200540.382665828] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200530.351799, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200540.882477293] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200530.851777, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200541.382209042] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200531.371706, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200541.882028537] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200531.871772, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200542.382546796] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200532.351710, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200542.882768407] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200532.871749, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200543.382467374] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200533.371775, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200543.882551056] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200533.871776, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200544.382198195] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200534.351839, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200544.882222178] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200534.851771, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200545.382466095] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200535.371749, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200545.882397179] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200535.851789, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200546.382829596] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200536.371747, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200546.882236906] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200536.871774, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200547.382540571] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200537.351761, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200547.882077548] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200537.871780, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200548.382387537] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200538.351765, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200548.882323128] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200538.871758, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200549.382172271] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200539.371781, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200549.882406961] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200539.871751, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200550.382989702] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200540.371743, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200550.882718479] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200540.851753, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200551.382509540] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200541.351745, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200551.882509460] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200541.851723, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200552.382392802] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200542.371850, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200552.882759435] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200542.871731, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200553.382306320] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200543.371763, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200553.882558472] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200543.851768, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200554.382729823] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200544.351770, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200554.882669770] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200544.871756, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200555.382231281] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200545.351777, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791200555.882590970] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200454.908032 but the earliest data is at time 1791200545.871773, when looking up transform from frame [base_link] to frame [map]
+
+[INFO] [1791200581.759702118] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791200581.759737193] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[INFO] [1791200581.759780323] [planner_server]: Deactivating
+[INFO] [1791200581.759801938] [global_costmap.global_costmap]: Deactivating
+[INFO] [1791200582.079231676] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[INFO] [1791200582.079270356] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[INFO] [1791200582.089400914] [planner_server]: Cleaning up
+[INFO] [1791200582.101374558] [global_costmap.global_costmap]: Cleaning up
+[INFO] [1791200582.107967308] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[INFO] [1791200582.107991950] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[INFO] [1791200582.124294444] [planner_server]: Destroying bond (planner_server) to lifecycle manager.

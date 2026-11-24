@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "equivalent_transitions": 4360,
+  "boundary_cases": 64,
+  "step_rates": [
+    {
+      "kind": "FastV2Env",
+      "steps_s": 168.32323722746767
+    },
+    {
+      "kind": "NativeV2Env",
+      "steps_s": 285.82775279850534
+    }
+  ]
+}

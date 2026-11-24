@@ -1,0 +1,283 @@
+{
+  "status": "PROVISIONAL_NOT_APPROVED",
+  "orientations": 24,
+  "step_deg": 15,
+  "method": "Conservative polygon configuration spaces + verified swept rotation connections. Translation uses 4-neighbor cells and conservative cell padding.",
+  "configuration_components": 116,
+  "small_components_warning": "Conservative orientation-state pockets; do not equate count with disconnected macroscopic rooms.",
+  "largest_component_state_fraction": 0.9992226174513363,
+  "region_state_sizes": [
+    1163258,
+    184,
+    129,
+    55,
+    33,
+    28,
+    27,
+    27,
+    23,
+    23,
+    21,
+    21,
+    21,
+    21,
+    15,
+    14,
+    14,
+    13,
+    11,
+    11,
+    10,
+    10,
+    10,
+    10,
+    8,
+    7,
+    7,
+    6,
+    5,
+    5,
+    5,
+    5,
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "service_count": 14,
+  "accessible_services": 10,
+  "unresolved_services": [
+    "P02_base_cobertura_esquerda",
+    "P03_fundo_esquerdo",
+    "P08_base_cobertura_direita",
+    "C01_plataforma_circular"
+  ],
+  "pairs_closer_than_080m": [
+    {
+      "a": "W01_nicho_lateral_mesa",
+      "b": "E01_cobertura_esquerda",
+      "lower_bound_m": 0.7396446609406726,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W02_divisoria_mesa",
+      "b": "P01_ao_lado_mesa",
+      "lower_bound_m": 0.0,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W02_divisoria_mesa",
+      "b": "T01_mesa_vermelha_tampo",
+      "lower_bound_m": 0.42085185071303916,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W03_espinha_central",
+      "b": "P01_ao_lado_mesa",
+      "lower_bound_m": 0.7900233619016315,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W03_espinha_central",
+      "b": "P04_centro_esquerdo",
+      "lower_bound_m": 0.36464466094067266,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W03_espinha_central",
+      "b": "P05_espinha_fundo",
+      "lower_bound_m": 0.03964466094067263,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W04_ramo_inferior",
+      "b": "P09_centro_frontal",
+      "lower_bound_m": 0.0,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W05_nicho_cobertura_direita",
+      "b": "P08_base_cobertura_direita",
+      "lower_bound_m": 0.0,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W05_nicho_cobertura_direita",
+      "b": "E02_cobertura_direita",
+      "lower_bound_m": 0.03964466094067263,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W06_cotovelo_fundo",
+      "b": "P05_espinha_fundo",
+      "lower_bound_m": 0.6524854855505529,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W08_nicho_direita",
+      "b": "P10_nicho_lateral_direito",
+      "lower_bound_m": 0.0,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W09_nicho_frontal",
+      "b": "P13_nicho_frontal",
+      "lower_bound_m": 0.23964466094067263,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "W09_nicho_frontal",
+      "b": "P14_viga_baixa_frontal",
+      "lower_bound_m": 0.741255889291126,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "P01_ao_lado_mesa",
+      "b": "T01_mesa_vermelha_tampo",
+      "lower_bound_m": 0.4076457896074064,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "P02_base_cobertura_esquerda",
+      "b": "P03_fundo_esquerdo",
+      "lower_bound_m": 0.2646446609406727,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "P02_base_cobertura_esquerda",
+      "b": "E01_cobertura_esquerda",
+      "lower_bound_m": 0.0,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "P03_fundo_esquerdo",
+      "b": "E01_cobertura_esquerda",
+      "lower_bound_m": 0.28964466094067265,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "P06_fundo_direito_1",
+      "b": "P07_fundo_direito_2",
+      "lower_bound_m": 0.6146446609406726,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "P08_base_cobertura_direita",
+      "b": "E02_cobertura_direita",
+      "lower_bound_m": 0.0,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "P11_frente_direita",
+      "b": "P12_mesa_precisao",
+      "lower_bound_m": 0.11464466094067263,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "P11_frente_direita",
+      "b": "P14_viga_baixa_frontal",
+      "lower_bound_m": 0.7896446609406726,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "P13_nicho_frontal",
+      "b": "P14_viga_baixa_frontal",
+      "lower_bound_m": 0.7540273311330198,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    },
+    {
+      "a": "P15_base_circular",
+      "b": "C01_plataforma_circular",
+      "lower_bound_m": 0.0,
+      "interpretation": "May be intentionally associated furniture; requires visual review, not automatic separation"
+    }
+  ],
+  "random_obstacles_generated": 0,
+  "physical_height_assumed": [
+    0,
+    0.55
+  ],
+  "lidar_height_assumed_m": 0.2,
+  "area_m2": 100.0,
+  "all_navigation_requirements_satisfied": false
+}

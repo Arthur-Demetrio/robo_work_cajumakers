@@ -1,0 +1,89 @@
+/home/marcos/robo_rl_v2/.venv/lib/python3.12/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+{
+  "all": {
+    "n": 120,
+    "success": 28,
+    "collision": 51,
+    "timeout": 41,
+    "success_ci95": [
+      0.16665469513089648,
+      0.31655611609893264
+    ],
+    "median_est_error": 2.1114941026653877,
+    "mean_reward": -27.79718460447444
+  },
+  "level_1": {
+    "n": 24,
+    "success": 10,
+    "collision": 1,
+    "timeout": 13,
+    "success_ci95": [
+      0.24467347246538232,
+      0.6116566235061137
+    ],
+    "median_est_error": 3.0914413074882265,
+    "mean_reward": 16.902619252706657
+  },
+  "level_2": {
+    "n": 24,
+    "success": 2,
+    "collision": 12,
+    "timeout": 10,
+    "success_ci95": [
+      0.023158327842973503,
+      0.258492152014506
+    ],
+    "median_est_error": 3.2259611558842796,
+    "mean_reward": -46.06878806942075
+  },
+  "level_3": {
+    "n": 24,
+    "success": 4,
+    "collision": 8,
+    "timeout": 12,
+    "success_ci95": [
+      0.06678568000728924,
+      0.3585347038786943
+    ],
+    "median_est_error": 3.1603296495107687,
+    "mean_reward": -29.821096362620565
+  },
+  "level_4": {
+    "n": 24,
+    "success": 5,
+    "collision": 19,
+    "timeout": 0,
+    "success_ci95": [
+      0.0924468910478809,
+      0.40470844485235474
+    ],
+    "median_est_error": 0.42001616602676206,
+    "mean_reward": -62.79196928911781
+  },
+  "level_5": {
+    "n": 24,
+    "success": 7,
+    "collision": 11,
+    "timeout": 6,
+    "success_ci95": [
+      0.14914460334164278,
+      0.49168063658709704
+    ],
+    "median_est_error": 1.8781907187198155,
+    "mean_reward": -17.206688553919733
+  },
+  "viewer": {
+    "n": 8,
+    "success": 2,
+    "collision": 6,
+    "timeout": 0,
+    "success_ci95": [
+      0.07147768885802763,
+      0.5907301208974108
+    ],
+    "median_est_error": 0.7429357254146974,
+    "mean_reward": -55.44200783524033
+  }
+}
+preserved 1431 []

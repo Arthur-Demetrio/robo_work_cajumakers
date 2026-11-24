@@ -1,0 +1,6 @@
+11:57:48.35 atual=chegou arvore=chegou
+11:58:11.78 atual=chegou arvore=chegou
+11:58:30.91 atual=chegou arvore=chegou
+11:58:43.54 atual=chegou arvore=chegou
+12:00:37.56 atual=chegou arvore=chegou
+Reached reais: 5 | reproduzidos no modo atual: 5 | na arvore GOAL_TF_ATUAL: 5

@@ -1,0 +1,81 @@
+hora,n,robo,goal,suavizacao_falhou,ispathvalid_jazzy,ipv_idx,original_sem_colisao_total,total_idx,proposta_valida,prop_idx,motivo
+12:33:31.47,252,"0.10,0.05","1.57,4.49",False,False,0,False,4,False,18,footprint em obstaculo a 0.46 m do robo
+12:33:38.72,416,"0.06,-0.12","1.57,4.49",False,False,0,False,15,False,15,footprint em obstaculo a 0.40 m do robo
+12:34:56.11,68,"1.38,0.06","1.49,1.95",False,False,0,False,0,False,11,footprint em obstaculo a 0.31 m do robo
+12:34:56.54,65,"1.38,0.06","1.49,1.95",False,False,0,False,0,False,11,footprint em obstaculo a 0.31 m do robo
+12:35:07.24,79,"1.42,-0.08","1.49,1.95",True,False,0,False,0,False,12,footprint em obstaculo a 0.32 m do robo
+12:35:07.77,77,"1.43,-0.03","1.49,1.95",True,False,0,False,0,False,12,footprint em obstaculo a 0.31 m do robo
+12:35:08.32,76,"1.52,-0.02","1.49,1.95",True,False,0,False,0,False,12,footprint em obstaculo a 0.31 m do robo
+12:35:08.88,76,"1.57,-0.02","1.49,1.95",True,False,0,False,1,False,12,footprint em obstaculo a 0.31 m do robo
+12:35:09.42,85,"1.57,-0.02","1.49,1.95",True,False,0,False,1,False,12,footprint em obstaculo a 0.31 m do robo
+12:35:09.98,84,"1.57,-0.02","1.49,1.95",True,False,0,False,1,False,11,footprint em obstaculo a 0.30 m do robo
+12:35:10.51,84,"1.57,-0.02","1.49,1.95",True,False,0,False,1,False,11,footprint em obstaculo a 0.30 m do robo
+12:35:17.92,82,"1.51,-0.17","1.49,1.95",False,False,1,False,0,False,15,footprint em obstaculo a 0.35 m do robo
+12:35:57.36,160,"1.58,0.79","1.69,4.71",False,False,0,False,0,False,12,footprint em obstaculo a 0.31 m do robo
+12:35:57.94,159,"1.58,0.79","1.69,4.71",True,False,0,False,7,False,12,footprint em obstaculo a 0.32 m do robo
+12:35:58.02,159,"1.58,0.79","1.69,4.71",True,False,0,False,7,False,12,footprint em obstaculo a 0.32 m do robo
+12:35:58.58,158,"1.59,0.84","1.69,4.71",True,False,0,False,6,True,,ok
+12:35:59.12,155,"1.61,0.83","1.69,4.71",True,False,0,False,3,True,,ok
+12:35:59.67,155,"1.62,0.91","1.69,4.71",True,False,0,False,0,True,,ok
+12:36:00.20,149,"1.68,0.98","1.69,4.71",True,False,0,False,0,True,,ok
+12:36:00.76,153,"1.72,1.06","1.69,4.71",True,False,0,False,0,True,,ok
+12:36:01.30,152,"1.72,1.13","1.69,4.71",True,False,0,False,145,False,145,footprint em obstaculo a 3.63 m do robo
+12:36:02.36,142,"1.73,1.41","1.64,4.71",False,False,2,True,,True,,ok
+12:36:02.90,135,"1.73,1.56","1.64,4.71",False,False,67,True,,True,,ok
+12:36:12.12,74,"1.79,3.12","1.69,4.71",False,False,1,True,,True,,ok
+12:36:13.70,69,"1.81,3.36","1.69,4.71",False,False,1,True,,True,,ok
+12:36:14.24,57,"1.85,3.47","1.69,4.71",True,False,0,True,,True,,ok
+12:36:14.79,64,"1.83,3.47","1.69,4.71",True,False,0,True,,True,,ok
+12:36:27.70,141,"1.71,4.77","1.68,1.39",False,False,0,False,127,False,127,footprint em obstaculo a 3.20 m do robo
+12:36:28.18,141,"1.71,4.77","1.68,1.39",False,False,0,False,127,False,127,footprint em obstaculo a 3.20 m do robo
+12:36:35.61,145,"1.71,4.77","1.68,1.39",True,False,0,False,125,False,125,footprint em obstaculo a 3.15 m do robo
+12:36:43.79,107,"1.42,3.78","1.68,1.39",True,False,0,False,102,False,102,footprint em obstaculo a 2.58 m do robo
+12:36:44.85,108,"1.42,3.77","1.68,1.39",True,False,0,False,103,False,103,footprint em obstaculo a 2.58 m do robo
+12:36:48.72,108,"1.41,3.75","1.68,1.39",False,False,0,False,103,False,103,footprint em obstaculo a 2.58 m do robo
+12:36:49.85,108,"1.41,3.75","1.68,1.39",False,False,0,False,103,False,103,footprint em obstaculo a 2.58 m do robo
+12:36:56.76,109,"1.43,3.83","1.68,1.39",True,False,0,False,104,False,104,footprint em obstaculo a 2.62 m do robo
+12:36:58.84,100,"1.54,3.65","1.68,1.39",True,False,9,False,95,False,95,footprint em obstaculo a 2.35 m do robo
+12:37:00.92,78,"1.63,3.31","1.68,1.39",False,False,3,True,,True,,ok
+12:37:01.46,82,"1.55,3.28","1.68,1.39",False,False,3,True,,True,,ok
+12:37:02.01,81,"1.61,3.13","1.68,1.39",False,False,2,False,79,False,79,footprint em obstaculo a 1.97 m do robo
+12:37:09.67,62,"1.45,2.84","1.68,1.39",False,False,0,False,56,False,56,footprint em obstaculo a 1.41 m do robo
+12:37:11.76,55,"1.52,2.64","1.68,1.39",False,False,0,False,50,False,50,footprint em obstaculo a 1.26 m do robo
+12:37:26.58,3,"1.76,1.41","1.68,1.39",False,False,0,True,,True,,ok
+12:37:41.85,155,"1.63,1.40","1.68,4.90",False,False,0,False,136,False,136,footprint em obstaculo a 3.42 m do robo
+12:37:42.37,155,"1.63,1.40","1.68,4.90",False,False,0,False,136,False,136,footprint em obstaculo a 3.43 m do robo
+12:37:49.66,169,"1.63,1.32","1.68,4.90",True,False,1,False,86,False,86,footprint em obstaculo a 2.12 m do robo
+12:37:50.21,166,"1.67,1.37","1.68,4.90",True,False,0,False,79,False,79,footprint em obstaculo a 1.99 m do robo
+12:37:50.76,160,"1.74,1.39","1.68,4.90",True,False,0,False,78,False,78,footprint em obstaculo a 1.96 m do robo
+12:37:51.31,146,"1.79,1.42","1.68,4.90",False,False,25,True,,True,,ok
+12:38:04.88,106,"2.04,2.51","1.68,4.90",False,False,1,True,,True,,ok
+12:38:17.72,94,"2.04,2.51","1.31,4.59",False,False,1,True,,True,,ok
+12:38:18.09,94,"2.04,2.51","1.31,4.59",False,False,1,True,,True,,ok
+12:38:25.54,94,"2.05,2.46","1.31,4.59",False,False,0,True,,True,,ok
+12:38:27.62,79,"1.88,2.73","1.31,4.59",False,False,19,True,,True,,ok
+12:38:28.17,75,"1.82,2.78","1.31,4.59",True,False,0,False,72,False,72,footprint em obstaculo a 1.82 m do robo
+12:38:44.00,2,"1.28,4.54","1.31,4.59",False,False,0,True,,True,,ok
+12:38:44.92,274,"1.20,4.62","-0.30,-0.12",False,False,0,False,36,False,36,footprint em obstaculo a 0.91 m do robo
+12:38:45.70,130,"1.20,4.62","1.62,1.63",False,False,0,False,127,False,127,footprint em obstaculo a 3.20 m do robo
+12:38:45.74,130,"1.20,4.62","1.62,1.63",False,False,0,False,127,False,127,footprint em obstaculo a 3.20 m do robo
+12:38:52.61,122,"1.20,4.62","1.62,1.63",True,False,0,False,86,False,86,footprint em obstaculo a 2.17 m do robo
+12:38:53.16,121,"1.37,4.54","1.62,1.63",True,False,4,False,87,False,87,footprint em obstaculo a 2.08 m do robo
+12:38:53.69,116,"1.40,4.50","1.67,1.63",True,False,23,False,97,False,97,footprint em obstaculo a 2.43 m do robo
+12:39:10.78,124,"1.20,4.50","1.62,1.63",True,False,0,False,80,False,80,footprint em obstaculo a 2.01 m do robo
+12:39:13.45,122,"1.32,4.42","1.62,1.68",False,False,0,False,72,False,72,footprint em obstaculo a 1.81 m do robo
+12:39:14.34,122,"1.32,4.42","1.62,1.68",True,False,0,False,69,False,69,footprint em obstaculo a 1.74 m do robo
+12:39:14.40,122,"1.32,4.42","1.62,1.68",True,False,0,False,69,False,69,footprint em obstaculo a 1.74 m do robo
+12:39:14.95,120,"1.36,4.31","1.62,1.68",True,False,41,False,75,False,75,footprint em obstaculo a 1.83 m do robo
+12:39:15.48,109,"1.38,4.28","1.62,1.68",True,False,37,False,55,False,55,footprint em obstaculo a 1.40 m do robo
+12:39:16.79,109,"1.48,4.11","1.62,1.63",True,False,27,False,69,False,69,footprint em obstaculo a 1.75 m do robo
+12:39:17.34,104,"1.50,4.03","1.62,1.63",True,False,25,False,98,False,98,footprint em obstaculo a 2.45 m do robo
+12:39:20.94,84,"1.67,3.60","1.62,1.63",False,False,0,True,,True,,ok
+12:39:22.50,78,"1.72,3.50","1.62,1.63",False,False,0,True,,True,,ok
+12:39:23.04,72,"1.75,3.47","1.62,1.63",False,False,0,True,,True,,ok
+12:39:25.12,67,"1.72,3.22","1.62,1.63",True,False,7,False,17,False,17,footprint em obstaculo a 0.40 m do robo
+12:39:35.75,24,"1.93,2.09","1.62,1.63",False,False,0,False,2,False,12,footprint em obstaculo a 0.32 m do robo
+12:39:36.61,22,"1.93,2.09","1.62,1.63",False,False,20,True,,True,,ok
+12:39:43.88,144,"1.65,1.65","-0.30,-0.12",False,False,0,False,24,False,24,footprint em obstaculo a 0.61 m do robo
+12:41:07.57,125,"1.72,1.72","0.35,0.06",False,False,3,False,28,False,28,footprint em obstaculo a 0.71 m do robo
+12:41:10.88,125,"1.70,1.71","0.35,0.06",False,False,14,False,27,False,27,footprint em obstaculo a 0.68 m do robo
+12:42:34.88,14,"0.23,0.40","0.35,0.06",False,False,0,False,1,True,,ok
+12:42:35.14,14,"0.23,0.40","0.35,0.06",False,False,0,False,1,True,,ok

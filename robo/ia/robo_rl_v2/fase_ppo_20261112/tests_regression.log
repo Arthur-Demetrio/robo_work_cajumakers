@@ -1,0 +1,11 @@
+/home/marcos/robo_rl_v2/.venv/lib/python3.12/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+...............EVALUATION {"steps": 125000, "stage": 0, "n": 1, "success": 0.0, "collisions": 1, "gate_passed": false}
+EVALUATION {"steps": 150000, "stage": 0, "n": 1, "success": 0.0, "collisions": 1, "gate_passed": false}
+EVALUATION {"steps": 125000, "stage": 0, "n": 1, "success": 0.0, "collisions": 1, "gate_passed": false}
+STOP: no improvement in fixed-seed evaluations
+........................
+----------------------------------------------------------------------
+Ran 39 tests in 19.954s
+
+OK

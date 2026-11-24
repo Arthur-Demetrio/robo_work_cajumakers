@@ -1,0 +1,15 @@
+........................................................................ [ 24%]
+........................................................................ [ 48%]
+..............................................................F......... [ 73%]
+........................................................................ [ 97%]
+......                                                                   [100%]
+=================================== FAILURES ===================================
+_________ TestConfiguracao.test_patch_idempotente_reversivel_em_copia __________
+src/robo_navigation/test/test_lateral_ws.py:272: in test_patch_idempotente_reversivel_em_copia
+    self.assertEqual(new,atual)
+E   AssertionError: '"""I[301 chars]unch.event_handlers import OnProcessStart\nfro[8415 chars] )\n' != '"""I[301 chars]unch.conditions import IfCondition\nfrom launc[10071 chars] )\n'
+E   Diff is 11377 characters long. Set self.maxDiff to None to see it.
+- generated xml file: /home/marcos/robo_jazzy_ws/entregas/nav2_principal_20261111/pytest_final.xml -
+=========================== short test summary info ============================
+FAILED src/robo_navigation/test/test_lateral_ws.py::TestConfiguracao::test_patch_idempotente_reversivel_em_copia
+1 failed, 293 passed in 202.57s (0:03:22)

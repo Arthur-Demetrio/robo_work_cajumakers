@@ -1,0 +1,33 @@
+...............................F                                         [100%]
+=================================== FAILURES ===================================
+_______________ test_arbitro_real_filtra_fonte_e_para_sem_lease ________________
+
+    def test_arbitro_real_filtra_fonte_e_para_sem_lease():
+        tree=ast.parse((NAV/'scripts/arbitro_nav_principal.py').read_text())
+        cls=next(n for n in ast.walk(tree) if isinstance(n,ast.ClassDef) and n.name=='Arbitro')
+        sent=[];mono=[1.0];ros=[100.0]
+        def msg(stamp=100.1,dono='nav2'):
+            return NS(header=NS(stamp=NS(sec=int(stamp),nanosec=int((stamp-int(stamp))*1e9)),frame_id=dono))
+        class Node:
+            def __init__(self,*a):pass
+            def create_publisher(self,*a):return NS(publish=lambda m:sent.append(m))
+            def create_subscription(self,*a):pass
+            def create_service(self,*a):pass
+            def create_timer(self,*a):pass
+            def get_clock(self):return NS(now=lambda:NS(nanoseconds=int(ros[0]*1e9),to_msg=lambda:msg(ros[0]).header.stamp))
+        env={'Node':Node,'Autoridade':Autoridade,'TwistStamped':msg,'SetBool':object,'time':NS(monotonic=lambda:mono[0])}
+        exec(compile(ast.Module(body=[cls],type_ignores=[]),'<arbitro real>','exec'),env)
+>       n=env['Arbitro']();n.cmd('nav2',msg());assert sent==[]
+
+robo_jazzy_ws/src/robo_navigation/test/test_nav2_principal.py:245: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Arbitro object at 0x71208931a360>
+
+>   ???
+E   AttributeError: 'Arbitro' object has no attribute 'get_logger'
+
+<arbitro real>:24: AttributeError
+=========================== short test summary info ============================
+FAILED robo_jazzy_ws/src/robo_navigation/test/test_nav2_principal.py::test_arbitro_real_filtra_fonte_e_para_sem_lease
+1 failed, 31 passed in 27.67s

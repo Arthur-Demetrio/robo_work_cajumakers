@@ -1,0 +1,8 @@
+Starting >>> robo_recovery
+Finished <<< robo_recovery [3.87s]
+Starting >>> robo_navigation
+Finished <<< robo_navigation [0.22s]
+
+Summary: 2 packages finished [4.63s]
+Overlay candidato: /home/marcos/robo_jazzy_ws/candidatos/navegacao_20261110_094606/install_candidate/setup.bash
+A navegação ativa não foi alterada.

@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "ppo_000000125000.zip": true,
+    "ppo_000005025000.zip": true,
+    "ppo_000005525000.zip": true,
+    "ppo_000006025000.zip": true,
+    "robo_rl_v2/env.py": true,
+    "experimentos_v2_20261110/train_gated.py": true,
+    "experimentos_v2_20261110/full_sampler.py": true,
+    "experimentos_v2_20261110/native.py": true,
+    "runs/treino_continuo_20261111/checkpoints/ppo_000006025000.zip": true,
+    "aprendizado.png": true,
+    "ppo.png": true,
+    "checkpoints.png": true,
+    "360_episodes": true
+  },
+  "all_passed": true,
+  "rms_parameter_delta_by_network": {
+    "actor": 0.17472827434539795,
+    "critic": 0.40427377820014954
+  },
+  "live_after": {
+    "steps": 6110720,
+    "stage": 0,
+    "stale_evaluations": 204
+  }
+}

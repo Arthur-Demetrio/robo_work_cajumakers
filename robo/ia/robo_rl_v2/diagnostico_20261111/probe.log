@@ -1,0 +1,69 @@
+{
+  "checkpoint": "/home/marcos/robo_rl_v2/runs/treino_continuo_20261111/checkpoints/ppo_000006025000.zip",
+  "physics": {
+    "dt": 0.16,
+    "max_steps": 1500,
+    "beams": 72,
+    "limits": [
+      0.2,
+      0.08,
+      0.16
+    ],
+    "reverse_limit": 0.16,
+    "accel": [
+      0.2,
+      0.2,
+      0.4
+    ],
+    "decel": [
+      0.5,
+      0.5,
+      0.2
+    ],
+    "max_xy": 0.2,
+    "max_range": 4.0,
+    "lidar_offset": [
+      0.33,
+      0.005
+    ]
+  },
+  "physical_grid_equal": true,
+  "laser_grid_equal": true,
+  "layout_objects_equal": true,
+  "shape_observation": [
+    152
+  ],
+  "shape_action": [
+    3
+  ],
+  "saturation_by_axis": [
+    0.8592236280129896,
+    0.47931950659346534,
+    0.9999984247202464
+  ],
+  "mean_action_abs": [
+    2.505519760772586,
+    0.9987792471796274,
+    5.610620693266392
+  ],
+  "deterministic_clip_by_axis": [
+    0.87,
+    0.46,
+    0.93
+  ],
+  "native_python_max_obs_error": 0.0,
+  "native_python_max_reward_error": 0.0,
+  "native_python_max_pose_error": 0.0,
+  "unique_starts": 100,
+  "sample_distance_range": [
+    0.8139410298049856,
+    1.9751582215103676
+  ],
+  "hashes": {
+    "robo_rl_v2/env.py": "1974a382d9d5d28feb0244b25dd759ba82f42b735b160fc0b06f50801bd267d0",
+    "experimentos_v2_20261110/train_gated.py": "4958708e5b48867ff45a062c0f5d967d71fc448b6eb1a56e447b69d6f57c053f",
+    "experimentos_v2_20261110/full_sampler.py": "7b9292a0db7bf1b54fa314b6aa9d8fcfb88c93a9b81bd2661ebc2691673fe6e3",
+    "experimentos_v2_20261110/native.py": "56ecc86f2552660714bfd4fdf9ff19bf45c14dffa77f1565a2fa6c3d4ac7dfa0",
+    "runs/treino_continuo_20261111/checkpoints/ppo_000006025000.zip": "4a348a38806f4a4bbb1840aa835713824b24e1d47ed67a17a4cdce1200ef3ba3"
+  }
+}

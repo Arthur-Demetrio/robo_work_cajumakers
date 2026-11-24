@@ -1,0 +1,69 @@
+--- snapshot_local/nav2_params.yaml
++++ candidata/nav2_params.yaml
+@@ -24,16 +24,7 @@
+       xy_goal_tolerance: 0.06
+       yaw_goal_tolerance: 0.17  # CHEGADA_10G (05/11): era 0.035; o encosto acerta o angulo
+     FollowPath:
+-      plugin: "nav2_rotation_shim_controller::RotationShimController"  # ROTATION_SHIM
+-      primary_controller: "dwb_core::DWBLocalPlanner"
+-      angular_dist_threshold: 0.44        # SHIM_ALINHAR (04/11): gira antes se o caminho estiver a mais de 25 graus (era 0.785)
+-      angular_disengage_threshold: 0.10   # SHIM_ALINHAR: gira ate ~6 graus do caminho (padrao 0.3925)
+-      forward_sampling_distance: 0.5       # direcao do caminho medida 0.5 m a frente
+-      rotate_to_heading_angular_vel: 0.40  # GIRO_RAPIDO: ~25 graus/s real (teste 26/10)
+-      max_angular_accel: 0.8
+-      simulate_ahead_time: 1.0             # confere colisao do giro
+-      closed_loop: false                   # usa o ultimo comando (a odom nao mede bem o giro)
+-      rotate_to_heading_once: false  # NAV_FRENTE (05/11): era true
++      plugin: "dwb_core::DWBLocalPlanner"
+       debug_trajectory_details: true
+       min_vel_x: 0.0  # DWB_SEM_RE (05/11): era -0.16; re so pelo BackUp e pelo alinhador
+       max_vel_x: 0.20  # NAV_VEL20 (06/11): era 0.16
+@@ -52,7 +43,7 @@
+       vx_samples: 7
+       vy_samples: 7
+       vtheta_samples: 7
+-      sim_time: 0.8
++      sim_time: 1.6
+       linear_granularity: 0.025
+       angular_granularity: 0.025
+       transform_tolerance: 0.3
+@@ -74,7 +65,7 @@
+       ObstacleFootprint.scale: 0.1
+       PathAlign.scale: 24.0
+       PathAlign.forward_point_distance: 0.1
+-      GoalAlign.scale: 18.0
++      GoalAlign.scale: 0.0
+       GoalAlign.forward_point_distance: 0.1
+       PathDist.scale: 24.0
+       GoalDist.scale: 18.0
+@@ -150,30 +141,6 @@
+         plugin: nav2_costmap_2d::StaticLayer
+         map_subscribe_transient_local: true
+         subscribe_to_updates: true
+-      obstacle_layer:
+-        plugin: nav2_costmap_2d::ObstacleLayer
+-        enabled: true
+-        observation_sources: scan  # BLOQUEIO_LOCAL (05/11): era "scan bloqueio"; no global fechava a passagem
+-        scan:
+-          topic: /scan_nav  # FILTRO_CORPO: sem os pontos de dentro do robo
+-          data_type: LaserScan
+-          clearing: true
+-          marking: true
+-          obstacle_min_range: 0.08
+-          obstacle_max_range: 5.0
+-          raytrace_min_range: 0.08
+-          raytrace_max_range: 5.5
+-          max_obstacle_height: 2.0
+-          inf_is_valid: true  # INF_VALIDO: raio sem retorno limpa o costmap
+-        bloqueio:  # BLOQUEIO_VIRTUAL: faixa onde o robo empacou (destravar v2)
+-          topic: /bloqueio_virtual
+-          data_type: PointCloud2
+-          marking: true
+-          clearing: false
+-          obstacle_min_range: 0.0
+-          obstacle_max_range: 8.0
+-          min_obstacle_height: 0.0
+-          max_obstacle_height: 2.0
+       obstacle_layer:  # GLOBAL_OBSTACULOS (29/10): obstaculos novos pelo LiDAR
+         plugin: nav2_costmap_2d::ObstacleLayer
+         enabled: true

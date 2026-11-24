@@ -1,0 +1,23 @@
+{
+  "backup": "backups/partida_nav_20261111_125658",
+  "originais": {
+    "CLAUDE.md": "2d43bdd4c32dab43fc65f1f7e4a996fc0b838917f3832da051b5d5accec8397e",
+    "src/robo_navigation/launch/navigation.launch.py": "63f5582e3f2572065c1ac62a20026ef53a12449cedaf90e4d51d034872f39eb2",
+    "src/robo_navigation/scripts/alinhador_passagem.py": "ee921f7bda8bfac77c2abb938e4c3e6ed3f378b1e688bf7d44f51d1d74ea4272",
+    "src/robo_navigation/test/test_nav2_principal.py": "16412ff3dd3734edff5840884ad189c08dae2027033b3af182dd8fe4804d820a",
+    "src/robo_navigation/test/test_ajustes_missao35.py": "6f9baacf7d62107223618aa24470371e378fb1361c8ae759e4faf3e21efa57b8"
+  },
+  "novos": [
+    "ferramentas/iniciar_nav_validada.sh",
+    "src/robo_navigation/test/test_partida_validada.py"
+  ],
+  "esperado": {
+    "CLAUDE.md": "3ed4c00b659217742e87f08b4885a428c742abb9836611637eec02db0413b18e",
+    "src/robo_navigation/launch/navigation.launch.py": "2c06dd6a4d4fef528c967f69a8231e74f3d7f62f346a5b03a3adf61d5475d413",
+    "src/robo_navigation/scripts/alinhador_passagem.py": "97378092799747ad7c8383f04ca783d0cf2410a8cd6f34a26c2a441179c33056",
+    "src/robo_navigation/test/test_nav2_principal.py": "fa73b24bd9da6646c52aff2f4de181b69ec3e63b50a2f4ce5e08cee9b9f2c6e8",
+    "src/robo_navigation/test/test_ajustes_missao35.py": "5b5456513c28b6864e0f17fbd8dded170d2656c00334b5001fd0eff3da4a9f20",
+    "ferramentas/iniciar_nav_validada.sh": "9714c54090f4938c3a13b094edbb4f296fe8a1788d98ab9d447e3408e0241e94",
+    "src/robo_navigation/test/test_partida_validada.py": "26f10cb178269a574e9e56e814f965588fe8818ddba750d6fce5fda23e6e099d"
+  }
+}

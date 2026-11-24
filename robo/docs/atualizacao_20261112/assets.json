@@ -1,0 +1,26 @@
+[
+  {
+    "name": "robo-work-ros-20261112.tar.gz",
+    "bytes": 464221569,
+    "sha256": "08d9d5134854741711f2f1031b66a406a7eac79d49190d2d5b8cdd1e10759a56",
+    "wall_s": 28.317259073257446
+  },
+  {
+    "name": "robo-work-ia-20261112.tar.gz",
+    "bytes": 633902330,
+    "sha256": "73b534f7d7712a8d48a187439a38e781ef4bf371400f9d42291dab67c7c4b528",
+    "wall_s": 44.64814019203186
+  },
+  {
+    "name": "robo-work-mapas-simuladores-versoes-20261112.tar.gz",
+    "bytes": 48232945,
+    "sha256": "07e096446ee8a89113d90afac60bbfcd33dd8d33090f2566a0f6c5044c496f2b",
+    "wall_s": 3.4503400325775146
+  },
+  {
+    "name": "robo-work-referencia-historicos-git-20261112.tar.gz",
+    "bytes": 170667665,
+    "sha256": "503072097489f4bf4c72d459b561604d5570e12ece0cefc2e4af13e3da2495b2",
+    "wall_s": 10.139705896377563
+  }
+]

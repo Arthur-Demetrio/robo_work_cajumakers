@@ -1,0 +1,35 @@
+[
+ {
+  "cenario": "centrado",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "WS_1 de frente, centrado, 0,60 m",
+  "esperado": "sucesso",
+  "inicio": {
+   "dist": 0.6,
+   "lado": 0.0,
+   "ang": 0.0
+  },
+  "modelo": {},
+  "disse": "WS_1 SUCESSO folga=10.6cm ang=-1.8 centro=-1.0cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 9.6,
+  "real_final": {
+   "folga_cm": 11.2,
+   "centro_cm": 2.1,
+   "ang_graus": -0.2
+  },
+  "real_inicio": {
+   "folga_cm": 25.2,
+   "centro_cm": 0.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 8.5,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 0,
+  "n_mede_de_novo": 0
+ }
+]

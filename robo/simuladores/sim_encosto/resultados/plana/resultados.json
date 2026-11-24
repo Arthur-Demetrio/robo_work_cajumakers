@@ -1,0 +1,173 @@
+[
+ {
+  "cenario": "centrado",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "WS_1 de frente, centrado, 0,60 m",
+  "esperado": "sucesso",
+  "inicio": {
+   "dist": 0.6,
+   "lado": 0.0,
+   "ang": 0.0
+  },
+  "modelo": {},
+  "disse": "WS_1 SUCESSO folga=10.7cm ang=+0.1 centro=-2.4cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 5.8,
+  "real_final": {
+   "folga_cm": 10.7,
+   "centro_cm": -0.0,
+   "ang_graus": 0.0
+  },
+  "real_inicio": {
+   "folga_cm": 23.5,
+   "centro_cm": -0.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 9.7,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 0,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "lado_p05",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "5 cm a esquerda",
+  "esperado": "sucesso",
+  "inicio": {
+   "dist": 0.6,
+   "lado": 0.05,
+   "ang": 0.0
+  },
+  "modelo": {},
+  "disse": "WS_1 SUCESSO folga=10.8cm ang=+0.5 centro=-0.5cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 12.2,
+  "real_final": {
+   "folga_cm": 10.8,
+   "centro_cm": -0.4,
+   "ang_graus": -0.4
+  },
+  "real_inicio": {
+   "folga_cm": 23.5,
+   "centro_cm": -5.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 9.6,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 0,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "obst_frente",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "caixa 10x10 entre o robo e a face (5,5 cm a frente do para-choque no inicio)",
+  "esperado": "falha",
+  "inicio": {
+   "dist": 0.6,
+   "lado": 0.0,
+   "ang": 0.0
+  },
+  "modelo": {},
+  "disse": "WS_1 FALHOU encosto: nao vejo a face da mesa a frente",
+  "classe": "FALHA_EXPLICITA",
+  "avaliacao": "bom",
+  "duracao": 4.8,
+  "real_final": {
+   "folga_cm": 23.5,
+   "centro_cm": -0.0,
+   "ang_graus": 0.0
+  },
+  "real_inicio": {
+   "folga_cm": 23.5,
+   "centro_cm": -0.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 22.5,
+  "menor_dist_obst_cm": 5.5,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 20,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "lado_p10_sem_deslize",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "controle: 10 cm de lado com motor ideal de lado",
+  "esperado": "sucesso",
+  "inicio": {
+   "dist": 0.6,
+   "lado": 0.1,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 0.0,
+   "fator_lado": 1.0,
+   "deriva_lado": 0.0
+  },
+  "disse": "WS_1 SUCESSO folga=10.5cm ang=+0.1 centro=-2.3cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 11.2,
+  "real_final": {
+   "folga_cm": 10.5,
+   "centro_cm": -1.2,
+   "ang_graus": 0.0
+  },
+  "real_inicio": {
+   "folga_cm": 23.5,
+   "centro_cm": -10.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 9.5,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 2,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "imu_falhando",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "5 cm de lado, IMU com buracos de 0,6 s andando",
+  "esperado": "sucesso",
+  "inicio": {
+   "dist": 0.6,
+   "lado": 0.05,
+   "ang": 0.0
+  },
+  "modelo": {
+   "imu_falha_andando": 0.5
+  },
+  "disse": "WS_1 SUCESSO folga=10.1cm ang=+0.5 centro=-0.7cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 15.6,
+  "real_final": {
+   "folga_cm": 10.1,
+   "centro_cm": 0.5,
+   "ang_graus": -0.5
+  },
+  "real_inicio": {
+   "folga_cm": 23.5,
+   "centro_cm": -5.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 8.8,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 1,
+  "n_parcial": 0,
+  "n_sem_face": 0,
+  "n_mede_de_novo": 0
+ }
+]

@@ -1,0 +1,42 @@
+# Exemplo de locais (coordenadas ficticias). Na pratica este arquivo e
+# gerado pelo locais_node durante o mapeamento e fica junto do mapa salvo.
+#
+# 'objetos' = o que ha para pegar no local; 'recebe' = o que deve ser
+# entregue nele. Com essas anotacoes o autonomo_node monta a missao sozinho:
+# aqui, a caixa_azul vai de X para Z e as duas caixas vao para os pontos
+# Y1/Y2 da area Y (cada uma num ponto).
+frame_id: map
+mapa: arena_exemplo
+locais:
+  inicio:
+    tipo: inicio
+    pose: {x: 0.0, y: 0.0, yaw: 0.0}
+  A:
+    tipo: alinhamento
+    descricao: alinhar com o objeto antes de seguir
+    pose: {x: 1.2, y: 0.4, yaw: 1.571}
+  X:
+    tipo: coleta
+    descricao: mesa de onde os objetos sao pegos
+    pose: {x: 2.1, y: -0.3, yaw: 0.0}
+    area: [[2.3, -0.7], [2.9, -0.7], [2.9, 0.1], [2.3, 0.1]]
+    objetos: [caixa_azul, caixa, caixa]
+  Y:
+    tipo: entrega
+    descricao: area de entrega
+    pose: {x: 0.5, y: 1.6, yaw: 3.142}
+    area: [[-0.2, 1.4], [0.3, 1.4], [0.3, 2.2], [-0.2, 2.2]]
+    recebe: [caixa, caixa]
+  Y1:
+    tipo: entrega
+    area_pai: Y
+    pose: {x: 0.3, y: 1.5, yaw: 3.142}
+  Y2:
+    tipo: entrega
+    area_pai: Y
+    pose: {x: 0.3, y: 2.1, yaw: 3.142}
+  Z:
+    tipo: entrega
+    descricao: ponto exato onde a caixa azul deve ser deixada
+    pose: {x: 0.5, y: -1.2, yaw: 3.142}
+    recebe: [caixa_azul]

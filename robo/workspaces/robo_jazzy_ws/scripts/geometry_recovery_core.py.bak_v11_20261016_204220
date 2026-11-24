@@ -1,0 +1,229 @@
+#!/usr/bin/env python3
+"""Nucleo geometrico do Geometry. Nao utiliza ROS nem controla motores."""
+from dataclasses import dataclass
+import math
+
+
+@dataclass(frozen=True)
+class Footprint:
+    rear: float = -0.205
+    front: float = 0.365
+    half_width: float = 0.315
+    padding: float = 0.03
+    inner_margin: float = 0.02
+
+    def vertices(self, padded=True):
+        m = self.padding if padded else 0.0
+        return [(self.front + m, self.half_width + m),
+                (self.front + m, -self.half_width - m),
+                (self.rear - m, -self.half_width - m),
+                (self.rear - m, self.half_width + m)]
+
+    def classify(self, x, y):
+        if (self.rear + self.inner_margin < x < self.front - self.inner_margin
+                and abs(y) < self.half_width - self.inner_margin):
+            return 'interno'
+        if self.rear <= x <= self.front and abs(y) <= self.half_width:
+            return 'borda_ambigua'
+        return 'externo'
+
+
+@dataclass(frozen=True)
+class Pose:
+    x: float = 0.0
+    y: float = 0.0
+    yaw_deg: float = 0.0
+
+
+@dataclass(frozen=True)
+class Grid:
+    width: int
+    height: int
+    resolution: float
+    origin_x: float
+    origin_y: float
+    origin_yaw: float  # radians
+    data: tuple
+
+    def __post_init__(self):
+        if (self.width <= 0 or self.height <= 0 or self.resolution <= 0
+                or len(self.data) != self.width * self.height):
+            raise ValueError('Dados incompletos do costmap')
+
+    def to_grid_meters(self, wx, wy):
+        dx, dy = wx - self.origin_x, wy - self.origin_y
+        c, s = math.cos(self.origin_yaw), math.sin(self.origin_yaw)
+        return c * dx + s * dy, -s * dx + c * dy
+
+
+def wrap(a):
+    return (a + math.pi) % (2 * math.pi) - math.pi
+
+
+def rotate(x, y, a):
+    c, s = math.cos(a), math.sin(a)
+    return c*x - s*y, s*x + c*y
+
+
+def polygon_at(footprint, base_world, delta_pose, padded=True):
+    """Vertices no frame do costmap (antes de converter para grid)."""
+    bx, by, heading = base_world
+    dx, dy = rotate(delta_pose.x, delta_pose.y, heading)
+    out = []
+    for x, y in footprint.vertices(padded):
+        px, py = rotate(x, y, heading + math.radians(delta_pose.yaw_deg))
+        out.append((bx + dx + px, by + dy + py))
+    return out
+
+
+def intersects(a, b):
+    """Teste SAT entre dois poligonos convexos, contato tambem conta."""
+    for polygon in (a, b):
+        for p, q in zip(polygon, polygon[1:] + polygon[:1]):
+            ax, ay = -(q[1] - p[1]), q[0] - p[0]
+            p0 = [x*ax + y*ay for x, y in a]
+            p1 = [x*ax + y*ay for x, y in b]
+            if max(p0) < min(p1) or max(p1) < min(p0):
+                return False
+    return True
+
+
+def sequence(reverse=0.0, turn_deg=0.0, max_linear_step=0.005,
+             max_yaw_step=0.5):
+    """Re primeiro, giro depois; inclui o ponto de partida."""
+    n = max(1, math.ceil(abs(reverse) / max_linear_step))
+    poses = [Pose(reverse * i / n, 0, 0) for i in range(n+1)]
+    if turn_deg:
+        n = max(1, math.ceil(abs(turn_deg) / max_yaw_step))
+        poses += [Pose(reverse, 0, turn_deg*i/n) for i in range(1, n+1)]
+    return poses
+
+
+def costmap_sweep(grid, footprint, base_world, poses):
+    hits = {253: set(), 254: set(), 255: set()}
+    inflation = set()
+    first = {}
+    outside = False
+    for pose in poses:
+        poly = [grid.to_grid_meters(x, y) for x, y in
+                polygon_at(footprint, base_world, pose)]
+        r = grid.resolution
+        xmin = min(p[0] for p in poly)
+        xmax = max(p[0] for p in poly)
+        ymin = min(p[1] for p in poly)
+        ymax = max(p[1] for p in poly)
+        if (xmin < 0 or ymin < 0 or xmax >= grid.width*r
+                or ymax >= grid.height*r):
+            outside = True
+            continue
+        i0 = max(0, math.floor(xmin/r) - 1)
+        i1 = min(grid.width-1, math.floor(xmax/r) + 1)
+        j0 = max(0, math.floor(ymin/r) - 1)
+        j1 = min(grid.height-1, math.floor(ymax/r) + 1)
+        for j in range(j0, j1+1):
+            for i in range(i0, i1+1):
+                cell = [(i*r, j*r), ((i+1)*r, j*r),
+                        ((i+1)*r, (j+1)*r), (i*r, (j+1)*r)]
+                if not intersects(poly, cell):
+                    continue
+                cost = int(grid.data[j*grid.width + i])
+                if cost in hits:
+                    hits[cost].add((i, j))
+                    first.setdefault(cost, (i, j, pose))
+                elif 0 < cost < 253:
+                    inflation.add((i, j))
+    return {'costs': {c: len(v) for c, v in hits.items()},
+            'inflation': len(inflation), 'first': first, 'outside': outside}
+
+
+def scan_points(msg, laser_tf, fp):
+    """Converte LaserScan para base_link; nao descarta ponto da borda."""
+    lx, ly, la = laser_tf
+    all_points, external, ambiguous, internal = [], [], [], []
+    for i, r in enumerate(msg.ranges):
+        if not (math.isfinite(r) and msg.range_min <= r <= msg.range_max):
+            continue
+        a = msg.angle_min + i*msg.angle_increment + la
+        p = (lx+r*math.cos(a), ly+r*math.sin(a))
+        all_points.append(p)
+        category = fp.classify(*p)
+        {'interno': internal, 'externo': external,
+         'borda_ambigua': ambiguous}[category].append(p)
+    return {'all': all_points, 'externo': external,
+            'borda_ambigua': ambiguous, 'interno': internal}
+
+
+def laser_collision(external, footprint, poses):
+    """Ponto externo em coordenadas iniciais de base_link."""
+    for pose in poses:
+        a = math.radians(pose.yaw_deg)
+        c, s = math.cos(a), math.sin(a)
+        for x, y in external:
+            px, py = x-pose.x, y-pose.y
+            bx, by = c*px + s*py, -s*px + c*py
+            if (footprint.rear - footprint.padding <= bx <=
+                    footprint.front + footprint.padding and
+                    abs(by) <= footprint.half_width + footprint.padding):
+                return (pose, x, y)
+    return None
+
+
+def sampled_boundary(footprint, pose, spacing=0.05):
+    poly = polygon_at(footprint, (0, 0, 0), pose)
+    out = []
+    for p, q in zip(poly, poly[1:] + poly[:1]):
+        d = math.hypot(q[0]-p[0], q[1]-p[1])
+        n = max(1, math.ceil(d/spacing))
+        for i in range(n+1):
+            f = i/n
+            out.append((p[0]*(1-f)+q[0]*f, p[1]*(1-f)+q[1]*f))
+    return out
+
+
+def observability(raw, laser_tf, footprint, poses, clearance=0.03):
+    """Teste conservador de LOS para borda varrida FORA do footprint inicial.
+    A ausencia de eco ou uma oclusao sao DESCONHECIDOS, nunca 'livre'.
+    Nao e garantia para movimento autonomo.
+    """
+    lx, ly, la = laser_tf
+    ranges = raw.ranges
+    increment = raw.angle_increment
+    if not ranges or increment == 0:
+        return 0, 1, [(0.0, 0.0)]
+    checked = set()
+    visible, unknown = 0, 0
+    examples = []
+    for pose in poses:
+        for x, y in sampled_boundary(footprint, pose):
+            # Pontos dentro do footprint fisico inicial nao sao nova area varrida.
+            if (footprint.rear <= x <= footprint.front
+                    and abs(y) <= footprint.half_width):
+                continue
+            key = (round(x/0.015), round(y/0.015))
+            if key in checked:
+                continue
+            checked.add(key)
+            r = math.hypot(x-lx, y-ly)
+            angle = wrap(math.atan2(y-ly, x-lx) - la)
+            idx = int(round((angle-raw.angle_min) / increment))
+            seen = False
+            # Verifica raio mais proximo em ate ~1,4 incrementos.
+            for j in (idx-1, idx, idx+1):
+                if not 0 <= j < len(ranges):
+                    continue
+                a = raw.angle_min + j*increment
+                if abs(wrap(a-angle)) > 1.4*abs(increment):
+                    continue
+                beam = ranges[j]
+                if (math.isfinite(beam)
+                        and raw.range_min <= beam <= raw.range_max
+                        and beam >= r+clearance):
+                    seen = True
+                    break
+            if seen:
+                visible += 1
+            else:
+                unknown += 1
+                if len(examples) < 3:
+                    examples.append((x, y))
+    return visible, unknown, examples

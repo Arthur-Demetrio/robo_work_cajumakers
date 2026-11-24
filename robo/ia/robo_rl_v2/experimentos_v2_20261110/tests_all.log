@@ -1,0 +1,40 @@
+/home/marcos/robo_rl_v2/.venv/lib/python3.12/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+test_noise_off_and_progression (test_arena2016.ArenaTests.test_noise_off_and_progression) ... ok
+test_raster_and_gaps (test_arena2016.ArenaTests.test_raster_and_gaps) ... ok
+test_reject_bad_geometry (test_arena2016.ArenaTests.test_reject_bad_geometry) ... ok
+test_variants_and_reproducibility (test_arena2016.ArenaTests.test_variants_and_reproducibility) ... ok
+test_complete_footprint_free_states_are_physically_clear (test_arena2016_v2_review.ReviewTests.test_complete_footprint_free_states_are_physically_clear) ... ok
+test_floor_and_provenance (test_arena2016_v2_review.ReviewTests.test_floor_and_provenance) ... ok
+test_real_heights_change_lidar_layer (test_arena2016_v2_review.ReviewTests.test_real_heights_change_lidar_layer) ... ok
+test_service_poses_and_unresolved_cases_are_reported (test_arena2016_v2_review.ReviewTests.test_service_poses_and_unresolved_cases_are_reported) ... ok
+test_api_and_reproducibility (test_arena2016v2_runtime.RuntimeTests.test_api_and_reproducibility) ... ok
+test_physical_platform_is_not_lidar_wall (test_arena2016v2_runtime.RuntimeTests.test_physical_platform_is_not_lidar_wall) ... ok
+test_separate_scene_does_not_add_random_boxes (test_arena2016v2_runtime.RuntimeTests.test_separate_scene_does_not_add_random_boxes) ... ok
+test_all_service_candidates_keep_objects_and_height (test_development_v2.DevelopmentTests.test_all_service_candidates_keep_objects_and_height) ... ok
+test_native_preserves_dynamics_and_sensors (test_development_v2.DevelopmentTests.test_native_preserves_dynamics_and_sensors) ... ok
+test_waypoints_use_estimate_not_true_pose (test_development_v2.DevelopmentTests.test_waypoints_use_estimate_not_true_pose) ... ok
+test_scalar_decodes_as_official_event_schema (test_events_schema.EventSchemaTest.test_scalar_decodes_as_official_event_schema) ... ok
+test_all_levels_deterministic_and_connected (test_v2.TestEnv.test_all_levels_deterministic_and_connected) ... ok
+test_api (test_v2.TestEnv.test_api) ... ok
+test_curriculum (test_v2.TestEnv.test_curriculum) ... ok
+test_delay_acceleration_and_mask (test_v2.TestEnv.test_delay_acceleration_and_mask) ... ok
+test_footprint_interior_cell_and_rotation (test_v2.TestEnv.test_footprint_interior_cell_and_rotation) ... ok
+test_odometry_cannot_reward_or_change_true_metrics (test_v2.TestEnv.test_odometry_cannot_reward_or_change_true_metrics) ... ok
+test_rotational_sweep (test_v2.TestEnv.test_rotational_sweep) ... ok
+test_swept_high_speed_thin_wall (test_v2.TestEnv.test_swept_high_speed_thin_wall) ... ok
+test_truncation_and_reset_required (test_v2.TestEnv.test_truncation_and_reset_required) ... ok
+test_crc_and_record (test_v2.TestEvents.test_crc_and_record) ... ok
+test_origin_rotation_and_thresholds (test_v2.TestMap.test_origin_rotation_and_thresholds) ... ok
+test_real_assets (test_v2.TestMap.test_real_assets) ... ok
+test_canvas_scene_and_rotated_map_transform (test_viewer.ViewerTests.test_canvas_scene_and_rotated_map_transform) ... ok
+test_frozen_inference_restart_and_unique_metrics (test_viewer.ViewerTests.test_frozen_inference_restart_and_unique_metrics) ... ok
+test_hot_reload_and_partial_metrics_discard (test_viewer.ViewerTests.test_hot_reload_and_partial_metrics_discard) ... ok
+test_manifest_only_complete_and_path_confinement (test_viewer.ViewerTests.test_manifest_only_complete_and_path_confinement) ... ok
+test_new_arena_and_fixed_stage (test_viewer2016.Viewer2016Tests.test_new_arena_and_fixed_stage) ... ok
+test_partial_zip_falls_back (test_viewer2016.Viewer2016Tests.test_partial_zip_falls_back) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 29.853s
+
+OK

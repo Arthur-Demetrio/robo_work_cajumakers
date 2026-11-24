@@ -1,0 +1,8 @@
+# Objetivo explicito (alternativa as anotacoes 'recebe' dos locais), por
+# exemplo convertido de uma tarefa da RefBox. So diz O QUE entregar: de
+# onde pegar, a ordem e o caminho o planejador decide.
+objetivo:
+  terminar_em: inicio            # opcional; padrao = local do tipo inicio
+  entregar:
+    - {objeto: caixa_azul, para: Z}
+    - {objeto: caixa, para: Y, quantidade: 2}   # Y e area: usa Y1 e Y2

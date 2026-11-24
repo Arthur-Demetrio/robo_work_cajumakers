@@ -1,0 +1,40 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    garra_dedos_controller:
+      type: position_controllers/GripperActionController
+
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - Revolucionar_46
+      - Revolucionar_49
+      - Revolucionar_72
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    allow_nonzero_velocity_at_trajectory_end: false
+    constraints:
+      stopped_velocity_tolerance: 0.05
+      goal_time: 1.0
+      Revolucionar_46: {trajectory: 0.1, goal: 0.03}
+      Revolucionar_49: {trajectory: 0.1, goal: 0.03}
+      Revolucionar_72: {trajectory: 0.1, goal: 0.03}
+
+# J4 (dedos). Sem sensor de forca: o estado e o comando, entao o "fechar" sempre chega ao alvo.
+garra_dedos_controller:
+  ros__parameters:
+    joint: dedos
+    goal_tolerance: 0.02
+    allow_stalling: true

@@ -1,0 +1,84 @@
+[INFO] [launch]: All log files can be found below /home/marcos/.ros/log/2026-11-11-14-48-02-998266-marcos-ThinkPad-E14-Gen-2-25
+[INFO] [launch]: Default logging verbosity is set to INFO
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+[37;1m2026-11-11 14:48:03.415 [31;1m[[37;1mTRANSPORT_UDP[31;1m Error] [37mError creating socket: Operation not permitted[34;1m -> Function [36minit[m
+[37;1m2026-11-11 14:48:03.416 [31;1m[[37;1mRTPS_PARTICIPANT[31;1m Error] [37mUser transport failed to register.[34;1m -> Function [36mRTPSParticipantImpl[m
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+[INFO] [localization_slam_toolbox_node-1]: process started with pid [40]
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] [37;1m2026-11-11 14:48:03.564 [31;1m[[37;1mTRANSPORT_UDP[31;1m Error] [37mError creating socket: Operation not permitted[34;1m -> Function [36minit[m
+[localization_slam_toolbox_node-1] [37;1m2026-11-11 14:48:03.565 [31;1m[[37;1mRTPS_PARTICIPANT[31;1m Error] [37mUser transport failed to register.[34;1m -> Function [36mRTPSParticipantImpl[m
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] getifaddrs: Operation not permitted
+[localization_slam_toolbox_node-1] [INFO] [1794419283.603094014] [slam_toolbox]: Node using stack size 40000000
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [localization_slam_toolbox_node-1]: sending signal 'SIGINT' to process[localization_slam_toolbox_node-1]
+[INFO] [localization_slam_toolbox_node-1]: process has finished cleanly [pid 40]
+[localization_slam_toolbox_node-1] [INFO] [1794419297.263437999] [rclcpp]: signal_handler(SIGINT/SIGTERM)

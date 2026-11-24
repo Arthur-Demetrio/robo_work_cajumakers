@@ -1,0 +1,10 @@
+{
+  "pid": 58802,
+  "processo_inicio_epoch": 1794422433.21,
+  "fonte_mtime_epoch": 1794422024.538903,
+  "fonte_sha256": "d628484d709f6b512ea51002832e220fa5f978742033c25e1f4498adb3e993bc",
+  "comando": "python3 /home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py --ros-args -p supervisor_modo:=observar -p nav2_principal:=true -p insistir_curva:=0 -p curva_segue_nav2:=false -r /cmd_vel_nav:=/cmd_vel_nav_especial -p modo_curva_t:=lateral -p limite_vel_angular_real_t:=-1.0 -p limite_vel_linear_real_t:=-1.0 ",
+  "codigo_corrigido_carregado_por_novo_processo": true,
+  "log": "/home/marcos/logs/11-11_153943",
+  "modo": "observar"
+}

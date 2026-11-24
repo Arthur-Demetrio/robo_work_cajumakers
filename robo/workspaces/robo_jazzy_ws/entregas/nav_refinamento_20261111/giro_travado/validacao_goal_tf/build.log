@@ -1,0 +1,6 @@
+Starting >>> robo_bt_plugins
+Starting >>> robo_navigation
+Finished <<< robo_bt_plugins [4.23s]
+Finished <<< robo_navigation [8.69s]
+
+Summary: 2 packages finished [9.31s]

@@ -1,0 +1,14 @@
+{
+  "checkpoint_steps": 60000,
+  "evaluation_steps": 30,
+  "weights_unchanged": true,
+  "checkpoint_unchanged": true,
+  "summary": {
+    "episodes": 1,
+    "collisions": 0,
+    "success_rate": 0.0
+  },
+  "reward": 0.14417396359488552,
+  "wall_seconds": 0.7122700410000107,
+  "cpu_seconds": 0.14530999700000002
+}

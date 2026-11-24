@@ -1,0 +1,150 @@
+{
+  "H": [
+    [
+      0.0009441489312533243,
+      -0.0037093625574460623,
+      7.370180441487104
+    ],
+    [
+      -0.013590018601951229,
+      -0.0006463668544804507,
+      4.677573190706738
+    ],
+    [
+      0.002427303146061625,
+      0.024314707361022068,
+      1.0
+    ]
+  ],
+  "frame_id": "base_link",
+  "units": "m",
+  "image_space": "raw",
+  "validated": true,
+  "image_size": [
+    640,
+    480
+  ],
+  "valid_pixels": [
+    [
+      451.0,
+      379.0
+    ],
+    [
+      206.0,
+      385.0
+    ],
+    [
+      242.0,
+      268.0
+    ],
+    [
+      424.0,
+      260.0
+    ]
+  ],
+  "pixels": [
+    [
+      206.0,
+      385.0
+    ],
+    [
+      451.0,
+      379.0
+    ],
+    [
+      242.0,
+      268.0
+    ],
+    [
+      424.0,
+      260.0
+    ]
+  ],
+  "metres": [
+    [
+      0.5650000029802322,
+      0.15000000596046448
+    ],
+    [
+      0.5650000029802322,
+      -0.15000000596046448
+    ],
+    [
+      0.814999988079071,
+      0.15000000596046448
+    ],
+    [
+      0.814999988079071,
+      -0.15000000596046448
+    ]
+  ],
+  "source": "User screenshot /tmp/codex-clipboard-Tuyxko.png, 2026-11-06. Estimated cross centres; native image origin (11,41), 640x480, no resizing. Assumed user-positioned crosses at X=0.20/0.45 m, Y=+/-0.15 m from front white edge. New camera pose. Verify independent measured points; camera must remain fixed.",
+  "front_offset_base_link_m": [
+    0.365,
+    0.0
+  ],
+  "validation": {
+    "method": "user_confirmed_field_screen_checks",
+    "evidence": {
+      "date": "2026-11-06",
+      "image_size": [
+        640,
+        480
+      ],
+      "user_confirmed": true,
+      "source": "User measurements and screenshots in this session; unchanged 640x480 camera calibration.",
+      "front_reference": "Centre of front white edge, x forward, y left.",
+      "base_link_front_offset_confirmed_m": [
+        0.365,
+        0.0
+      ],
+      "longitudinal_checks": [
+        {
+          "measured_m": 0.25,
+          "displayed_m": 0.245,
+          "screenshot": "codex-clipboard-iQ8Weo.png"
+        },
+        {
+          "measured_m": 0.35,
+          "displayed_m": 0.349,
+          "screenshot": "codex-clipboard-lOHlxj.png"
+        },
+        {
+          "measured_m": 0.4,
+          "displayed_m": 0.4,
+          "screenshot": "codex-clipboard-zLi870.png"
+        }
+      ],
+      "point_checks": [
+        {
+          "measured_front_xy_m": [
+            0.35,
+            -0.1
+          ],
+          "displayed_front_xy_m": [
+            0.354,
+            -0.1
+          ],
+          "screenshot": "codex-clipboard-wMXniR.png",
+          "confirmation": "User: Mas sim, conferi na trena e deu certo"
+        }
+      ]
+    },
+    "longitudinal_errors_m": [
+      -0.0050000000000000044,
+      -0.0010000000000000009,
+      0.0
+    ],
+    "point_errors_m": [
+      0.0040000000000000036
+    ],
+    "max_error_m": 0.02,
+    "scope": "initial_static_nav2_commissioning",
+    "limitations": [
+      "Screen readings, not raw pixel reprojection residuals.",
+      "Only right-side independent lateral check available.",
+      "No temporal stability or motion performance certification.",
+      "Fixed 640x480 mount and original calibrated polygon only."
+    ]
+  }
+}

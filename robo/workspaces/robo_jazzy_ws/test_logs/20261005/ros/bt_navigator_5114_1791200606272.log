@@ -1,0 +1,35 @@
+[INFO] [1791200606.290890244] [bt_navigator]: 
+	bt_navigator lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791200606.292235885] [bt_navigator]: Creating
+[INFO] [1791200606.523496655] [bt_navigator]: Configuring
+[INFO] [1791200606.526675697] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[WARN] [1791200606.529874080] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+Make sure these match your BT and there are not other sources of error codes youreported to your application
+[INFO] [1791200606.569472776] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+[INFO] [1791200607.321222870] [bt_navigator]: Activating
+[INFO] [1791200607.346348864] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[INFO] [1791200678.313339651] [bt_navigator]: Begin navigating from current location (0.00, 0.00) to (1.96, 0.44)
+[INFO] [1791200715.253918657] [bt_navigator]: Received goal preemption request
+[INFO] [1791200715.254208885] [bt_navigator]: Begin navigating from current location (1.34, -0.01) to (-0.01, 0.03)
+[INFO] [1791200719.903712013] [bt_navigator]: Received goal preemption request
+[INFO] [1791200719.903788267] [bt_navigator]: Begin navigating from current location (1.34, -0.01) to (1.26, -0.69)
+[INFO] [1791200723.284173529] [bt_navigator]: Received goal preemption request
+[INFO] [1791200723.284700078] [bt_navigator]: Begin navigating from current location (1.34, -0.01) to (0.64, -0.64)
+[INFO] [1791200735.773762120] [bt_navigator]: Received goal preemption request
+[INFO] [1791200735.773843924] [bt_navigator]: Begin navigating from current location (0.77, -0.69) to (0.06, 0.07)
+[ERROR] [1791200736.114022733] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[INFO] [1791200739.434701496] [bt_navigator]: Received goal preemption request
+[INFO] [1791200739.434788366] [bt_navigator]: Begin navigating from current location (0.77, -0.69) to (0.33, -0.03)
+[INFO] [1791200743.114731107] [bt_navigator]: Received goal preemption request
+[INFO] [1791200743.114943358] [bt_navigator]: Begin navigating from current location (0.77, -0.69) to (0.57, -0.07)
+[WARN] [1791200751.204596642] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[ERROR] [1791200751.204649523] [bt_navigator]: Goal failed
+[INFO] [1791200892.526355900] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791200892.526385937] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[INFO] [1791200892.526422940] [bt_navigator]: Deactivating
+[INFO] [1791200892.526440699] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[INFO] [1791200892.536892489] [bt_navigator]: Cleaning up
+[INFO] [1791200892.685850237] [bt_navigator]: Completed Cleaning up
+[INFO] [1791200892.685891000] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.

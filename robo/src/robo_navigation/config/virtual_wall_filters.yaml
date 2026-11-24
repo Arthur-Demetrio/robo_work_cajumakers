@@ -1,0 +1,30 @@
+# Loaded after nav2_params.yaml only with virtual_walls:=true.
+# Filters run after ordinary layers: use a dedicated inflation filter.
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      filters: [tape_keepout_filter, tape_inflation]
+      tape_keepout_filter:
+        plugin: nav2_costmap_2d::KeepoutFilter
+        enabled: true
+        filter_info_topic: /virtual_wall/filter_info
+        transform_tolerance: 0.3
+      tape_inflation:
+        plugin: nav2_costmap_2d::InflationLayer
+        enabled: true
+        inflation_radius: 0.55
+        cost_scaling_factor: 5.0
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      filters: [tape_keepout_filter, tape_inflation]
+      tape_keepout_filter:
+        plugin: nav2_costmap_2d::KeepoutFilter
+        enabled: true
+        filter_info_topic: /virtual_wall/filter_info
+        transform_tolerance: 0.3
+      tape_inflation:
+        plugin: nav2_costmap_2d::InflationLayer
+        enabled: true
+        inflation_radius: 0.55
+        cost_scaling_factor: 5.0

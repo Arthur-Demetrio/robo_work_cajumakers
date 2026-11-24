@@ -1,0 +1,125 @@
+{
+  "bag": "/home/marcos/bags/lateral_ws1_20261109_110431_391703/bag",
+  "scans_sampled": 2831,
+  "maps": {
+    "/global_costmap/costmap": {
+      "messages": 1165,
+      "tf_failures": 4,
+      "scan_endpoints_in_map": 63489,
+      "scan_endpoints_marked": 63377,
+      "scan_endpoints_newly_marked_vs_initial": 0,
+      "max_cells_newly_occupied_vs_initial": 60,
+      "publish_interval_median_s": 1.4992281198501587,
+      "publish_gap_max_s": 1.5065810680389404
+    },
+    "/local_costmap/costmap": {
+      "messages": 2539,
+      "tf_failures": 3,
+      "scan_endpoints_in_map": 41256,
+      "scan_endpoints_marked": 41072,
+      "scan_endpoints_newly_marked_vs_initial": 3,
+      "max_cells_newly_occupied_vs_initial": 75,
+      "publish_interval_median_s": 0.6000018119812012,
+      "publish_gap_max_s": 0.8666591644287109
+    }
+  },
+  "logs_sample": [
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233089.811 for reason 'discarding message because the queue is full'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233118.456 for reason 'discarding message because the queue is full'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233124.219 for reason 'discarding message because the queue is full'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233147.316 for reason 'discarding message because the queue is full'"
+    },
+    {
+      "node": "global_costmap.global_costmap",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233151.257 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "local_costmap.local_costmap",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233151.257 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233151.425 for reason 'discarding message because the queue is full'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233362.783 for reason 'discarding message because the queue is full'"
+    },
+    {
+      "node": "local_costmap.local_costmap",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233363.809 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "global_costmap.global_costmap",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233366.209 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233366.209 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "global_costmap.global_costmap",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794233482.433 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234247.403 for reason 'discarding message because the queue is full'"
+    },
+    {
+      "node": "local_costmap.local_costmap",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234247.403 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "global_costmap.global_costmap",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234247.403 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234298.449 for reason 'discarding message because the queue is full'"
+    },
+    {
+      "node": "global_costmap.global_costmap",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234298.449 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "local_costmap.local_costmap",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234298.449 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234307.479 for reason 'discarding message because the queue is full'"
+    },
+    {
+      "node": "local_costmap.local_costmap",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234307.479 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "global_costmap.global_costmap",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234307.479 for reason 'the timestamp on the message is earlier than all the data in the transform cache'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234366.519 for reason 'discarding message because the queue is full'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234378.035 for reason 'discarding message because the queue is full'"
+    },
+    {
+      "node": "slam_toolbox",
+      "message": "Message Filter dropping message: frame 'laser_raw' at time 1794234381.451 for reason 'discarding message because the queue is full'"
+    }
+  ],
+  "limits": "Historical occupancy coincidences only. New cells can reflect pose/map changes; not proof of obstacle_layer attribution, current runtime, or complete maneuver coverage."
+}

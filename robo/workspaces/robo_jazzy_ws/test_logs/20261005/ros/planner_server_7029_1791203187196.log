@@ -1,0 +1,289 @@
+[INFO] [1791203187.218911907] [planner_server]: 
+	planner_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791203187.220701492] [planner_server]: Creating
+[INFO] [1791203187.228718418] [global_costmap.global_costmap]: 
+	global_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791203187.229098575] [global_costmap.global_costmap]: Creating Costmap
+[INFO] [1791203187.365848664] [planner_server]: Configuring
+[INFO] [1791203187.365899584] [global_costmap.global_costmap]: Configuring
+[INFO] [1791203187.369741476] [global_costmap.global_costmap]: Using plugin "static_layer"
+[INFO] [1791203187.372437695] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1791203187.373449794] [global_costmap.global_costmap]: Subscribing to updates
+[INFO] [1791203187.375859234] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[INFO] [1791203187.375900554] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[INFO] [1791203187.376674051] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1791203187.383922058] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 112 X 51 at 0.050000 m/pix
+[INFO] [1791203187.384277455] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[INFO] [1791203187.384315780] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[INFO] [1791203187.384880984] [planner_server]: Planner Server has GridBased  planners available.
+[INFO] [1791203187.902444899] [planner_server]: Activating
+[INFO] [1791203187.902477774] [global_costmap.global_costmap]: Activating
+[INFO] [1791203187.902491653] [global_costmap.global_costmap]: Checking transform
+[INFO] [1791203187.902608359] [global_costmap.global_costmap]: start
+[INFO] [1791203187.952739382] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[INFO] [1791203187.953210611] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[INFO] [1791203230.402855100] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 142 X 84 at 0.050000 m/pix
+[INFO] [1791203232.402883982] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 146 X 134 at 0.050000 m/pix
+[INFO] [1791203234.402725266] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 163 X 177 at 0.050000 m/pix
+[INFO] [1791203236.402751558] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 167 X 177 at 0.050000 m/pix
+[INFO] [1791203246.402762445] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 169 X 177 at 0.050000 m/pix
+[WARN] [1791203254.179665197] [planner_server]: GridBased plugin failed to plan from (2.06, 0.49) to (2.00, 3.26): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203254.179735938] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203254.199103553] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203254.410976497] [planner_server]: GridBased plugin failed to plan from (2.06, 0.49) to (2.00, 3.26): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203254.411021574] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203254.428609799] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203254.909555849] [planner_server]: GridBased plugin failed to plan from (2.06, 0.49) to (2.00, 3.26): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203254.909599883] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203254.928477485] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203255.409435950] [planner_server]: GridBased plugin failed to plan from (2.06, 0.49) to (2.00, 3.26): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203255.409494527] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203261.350330548] [planner_server]: GridBased plugin failed to plan from (2.06, 0.49) to (2.00, 3.26): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203261.350380254] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203261.368427792] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203261.409280850] [planner_server]: GridBased plugin failed to plan from (2.06, 0.49) to (2.00, 3.26): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203261.409331624] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203266.449168437] [planner_server]: GridBased plugin failed to plan from (2.06, 0.49) to (2.00, 3.26): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203266.449224682] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203266.468835724] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203266.909771606] [planner_server]: GridBased plugin failed to plan from (2.06, 0.49) to (2.00, 3.26): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203266.909824343] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203267.949086946] [planner_server]: GridBased plugin failed to plan from (2.17, 0.22) to (2.00, 3.26): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203267.949129491] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203267.968468407] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[INFO] [1791203268.402754431] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 182 X 211 at 0.050000 m/pix
+[INFO] [1791203270.402729961] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 191 X 211 at 0.050000 m/pix
+[INFO] [1791203272.402764561] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 209 X 211 at 0.050000 m/pix
+[INFO] [1791203292.402725674] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 213 X 211 at 0.050000 m/pix
+[INFO] [1791203300.402728951] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 213 X 216 at 0.050000 m/pix
+[INFO] [1791203302.402734459] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 215 X 217 at 0.050000 m/pix
+[INFO] [1791203306.402769475] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 215 X 218 at 0.050000 m/pix
+[WARN] [1791203331.021755261] [planner_server]: GridBased plugin failed to plan from (1.46, 2.63) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203331.022050450] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203331.040639194] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203331.411189462] [planner_server]: GridBased plugin failed to plan from (1.42, 2.62) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203331.411238131] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203331.443040154] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203331.913676721] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203331.913736805] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203331.930838214] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203332.411399493] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203332.411463784] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203337.971776260] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203337.971838127] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203337.980580336] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203338.411098516] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203338.411147979] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203338.450689302] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203338.911389272] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203338.911436927] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203338.930803098] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203339.411337689] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203339.411398555] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203345.171752251] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203345.171801076] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203345.190627188] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203345.411206265] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203345.411264797] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203345.450733469] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203345.911433483] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203345.911479090] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203345.930847337] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203346.411495963] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203346.411544965] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203361.471065016] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203361.471108235] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203361.490592766] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203361.911092316] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.28, 4.44): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203361.911137636] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203368.038652505] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.39, 3.73): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203368.038713396] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203368.058178146] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203368.408671965] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.39, 3.73): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203368.408717632] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203368.428576610] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203368.909261498] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.39, 3.73): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203368.909314609] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203368.928344848] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203369.408877629] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.39, 3.73): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203369.408924995] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203384.468557557] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.39, 3.73): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203384.468611089] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203384.488306604] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203384.908989403] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.39, 3.73): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203384.909063929] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203384.950058212] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203385.411321696] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.39, 3.73): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203385.411378775] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203385.428298211] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203385.908877555] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.39, 3.73): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203385.908926179] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203400.968702864] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.87, 1.66): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203400.968760927] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203400.988252621] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203401.408850349] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.87, 1.66): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203401.408895233] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203401.448387568] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203401.909146674] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.87, 1.66): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203401.909191008] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203401.928274704] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203402.409137988] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.87, 1.66): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203402.409219706] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203417.468538226] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.87, 1.66): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203417.468580645] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203417.488217895] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203417.908896121] [planner_server]: GridBased plugin failed to plan from (1.43, 2.66) to (1.87, 1.66): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203417.908954070] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[ERROR] [1791203435.206087717] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203425.191813, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203435.706616583] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203425.671791, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203436.206499036] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203426.171766, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203436.706539018] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203426.671782, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203437.206203139] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203427.171814, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203437.706106585] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203427.671777, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203438.205972796] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203428.171761, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203438.706122168] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203428.671798, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203439.206232572] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203429.191751, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203439.706312359] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203429.671791, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203440.206351802] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203430.171792, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203440.706939762] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203430.671793, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203441.206207406] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203431.171769, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203441.706565637] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203431.692670, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203442.206020066] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203432.191756, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203442.706248899] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203432.692405, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203443.206193934] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203433.192615, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203443.706769186] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203433.671761, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203444.206340721] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203434.171772, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203444.706615265] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203434.692940, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203445.206607074] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203435.171910, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203445.706129472] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203435.692755, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203446.206275944] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203436.171752, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203446.706193294] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203436.692576, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203447.206510147] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203437.192512, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203447.706602599] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203437.671768, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203448.206674912] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203438.192397, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203448.706743325] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203438.692688, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203449.206825082] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203439.191769, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203449.706698224] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203439.692519, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203450.206306957] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203440.191726, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203450.706416252] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203440.692472, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203451.206533769] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203441.171766, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203451.706512936] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203441.691741, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203452.206708179] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203442.192423, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203452.706782870] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203442.671780, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203453.206741924] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203443.171827, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203453.706525802] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203443.692109, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203454.206717497] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203444.191804, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203454.706310317] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203444.671827, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203455.206534053] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203445.171774, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203455.706496347] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203445.671751, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203456.206527094] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203446.192064, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203456.706600482] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203446.671780, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203457.206581753] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203447.192262, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203457.706303164] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203447.691918, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203458.206094522] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203448.191774, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203458.706185224] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203448.691926, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203459.207132181] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203449.191813, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203459.706527532] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203449.691756, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203460.206547162] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203450.192056, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203460.706665138] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203450.692733, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203461.206499817] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203451.191746, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203461.706400415] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203451.692091, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203462.206396803] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203452.171799, when looking up transform from frame [base_link] to frame [map]
+
+[ERROR] [1791203462.706472109] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791203424.570044 but the earliest data is at time 1791203452.691750, when looking up transform from frame [base_link] to frame [map]
+
+[INFO] [1791205025.469124573] [planner_server]: Deactivating
+[INFO] [1791205025.469156933] [global_costmap.global_costmap]: Deactivating
+[INFO] [1791205025.902801427] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[INFO] [1791205025.902827745] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[INFO] [1791205026.603536104] [planner_server]: Cleaning up
+[INFO] [1791205026.616844279] [global_costmap.global_costmap]: Cleaning up
+[INFO] [1791205026.621519489] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[INFO] [1791205026.621550098] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[INFO] [1791205027.721766059] [planner_server]: Configuring
+[INFO] [1791205027.721784551] [global_costmap.global_costmap]: Configuring
+[INFO] [1791205027.723850883] [global_costmap.global_costmap]: Using plugin "static_layer"
+[INFO] [1791205027.723901692] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1791205027.724211749] [global_costmap.global_costmap]: Subscribing to updates
+[INFO] [1791205027.724417609] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[INFO] [1791205027.724429972] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[INFO] [1791205027.724500773] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1791205027.732778703] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[INFO] [1791205027.732862512] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[INFO] [1791205027.732891605] [planner_server]: Planner Server has GridBased GridBased  planners available.
+[INFO] [1791205027.732918888] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 215 X 218 at 0.050000 m/pix
+[INFO] [1791205028.183615446] [planner_server]: Activating
+[INFO] [1791205028.183643180] [global_costmap.global_costmap]: Activating
+[INFO] [1791205028.183651757] [global_costmap.global_costmap]: Checking transform
+[INFO] [1791205028.183749578] [global_costmap.global_costmap]: start
+[INFO] [1791205028.233878991] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[INFO] [1791205028.235849447] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[INFO] [1791206403.236698352] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791206403.236784667] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[INFO] [1791206403.236825478] [planner_server]: Deactivating
+[INFO] [1791206403.236844134] [global_costmap.global_costmap]: Deactivating
+[INFO] [1791206403.684012452] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[INFO] [1791206403.684040999] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[INFO] [1791206403.694135434] [planner_server]: Cleaning up
+[INFO] [1791206403.707987347] [global_costmap.global_costmap]: Cleaning up
+[INFO] [1791206403.713616276] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[INFO] [1791206403.713776916] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[INFO] [1791206403.731243238] [planner_server]: Destroying bond (planner_server) to lifecycle manager.

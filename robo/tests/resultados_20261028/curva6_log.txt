@@ -1,0 +1,595 @@
+11:56:00.92 rosbag2_recorder Press SPACE for pausing/resuming
+11:56:00.92 rosbag2_recorder Event publisher thread: Started
+11:56:00.92 rosbag2_recorder Starting recording to '/home/marcos/bags/curva6_20261028_115537/bag'
+11:56:00.92 rosbag2_recorder Subscribed to topic '/rosout'
+11:56:00.92 rosbag2_recorder Listening for topics...
+11:56:00.92 rosbag2_recorder Recording...
+11:56:00.92 rosbag2_recorder Topics discovery started.
+11:56:01.35 rosbag2_recorder Subscribed to topic '/clicked_point'
+11:56:01.46 rosbag2_recorder Subscribed to topic '/local_costmap/costmap'
+11:56:01.46 rosbag2_recorder Subscribed to topic '/local_costmap/published_footprint'
+11:56:01.46 rosbag2_recorder Subscribed to topic '/local_costmap/costmap_updates'
+11:56:01.46 rosbag2_recorder Subscribed to topic '/cmd_vel_nav'
+11:56:01.47 rosbag2_recorder Subscribed to topic '/evaluation'
+11:56:01.47 rosbag2_recorder Subscribed to topic '/follow_path/_action/status'
+11:56:01.47 rosbag2_recorder Subscribed to topic '/local_plan'
+11:56:01.47 rosbag2_recorder Subscribed to topic '/transformed_global_plan'
+11:56:01.47 rosbag2_recorder Subscribed to topic '/scan_raw'
+11:56:01.47 rosbag2_recorder Subscribed to topic '/imu/data'
+11:56:02.03 rosbag2_recorder Subscribed to topic '/odom'
+11:56:02.03 rosbag2_recorder Subscribed to topic '/tf'
+11:56:02.25 rosbag2_recorder Subscribed to topic '/map'
+11:56:02.25 rosbag2_recorder Subscribed to topic '/plan'
+11:56:02.25 rosbag2_recorder Subscribed to topic '/global_costmap/costmap_updates'
+11:56:02.25 rosbag2_recorder Subscribed to topic '/compute_path_to_pose/_action/status'
+11:56:02.26 rosbag2_recorder Subscribed to topic '/global_costmap/costmap'
+11:56:02.74 rosbag2_recorder Subscribed to topic '/tf_static'
+11:56:03.00 rosbag2_recorder Subscribed to topic '/scan_front'
+11:56:03.63 rosbag2_recorder Subscribed to topic '/spin/_action/status'
+11:56:03.63 rosbag2_recorder Subscribed to topic '/backup/_action/status'
+11:56:03.65 rosbag2_recorder Subscribed to topic '/navigate_to_pose/_action/feedback'
+11:56:03.65 rosbag2_recorder Subscribed to topic '/navigate_to_pose/_action/status'
+11:56:03.66 rosbag2_recorder Subscribed to topic '/cmd_vel_smoothed'
+11:56:03.66 rosbag2_recorder Subscribed to topic '/behavior_tree_log'
+11:56:03.66 rosbag2_recorder Subscribed to topic '/plan_smoothed'
+11:56:03.66 rosbag2_recorder Subscribed to topic '/cmd_vel'
+11:56:03.66 rosbag2_recorder Subscribed to topic '/collision_monitor_state'
+12:01:52.02 alinhador_passagem Novo goal: x=2.43 y=1.98 yaw=0 graus
+12:01:52.02 alinhador_passagem Passagem 1: entrada (1.17, 0.10), eixo 0 graus, largura no mapa 0.73 m, preparo a 0.60 m da entrada
+12:01:52.02 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=0.57 y=0.09 yaw=0 graus
+12:01:52.02 bt_navigator Begin navigating from current location (0.35, 0.29) to (0.57, 0.09)
+12:01:52.05 smoother_server Received a path to smooth.
+12:01:52.07 controller_server Received a goal, begin computing control effort.
+12:01:52.07 controller_server No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
+12:01:52.07 controller_server No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+12:01:52.12 collision_monitor Robot to stop due to invalid source. Either due to data not published yet, or to lack of new data received within the sensor timeout, or if impossible to transform data to base frame
+12:01:53.10 smoother_server Received a path to smooth.
+12:01:53.17 controller_server Passing new path to controller.
+12:01:54.13 smoother_server Received a path to smooth.
+12:01:54.17 controller_server Passing new path to controller.
+12:01:55.17 smoother_server Received a path to smooth.
+12:01:55.27 controller_server Passing new path to controller.
+12:01:56.20 smoother_server Received a path to smooth.
+12:01:56.27 controller_server Passing new path to controller.
+12:01:56.29 alinhador_passagem Goal substituido por um novo.
+12:01:56.29 alinhador_passagem Novo goal: x=2.58 y=1.91 yaw=0 graus
+12:01:56.30 alinhador_passagem Passagem 1: entrada (1.15, 0.10), eixo 0 graus, largura no mapa 0.73 m, preparo a 0.60 m da entrada
+12:01:56.30 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=0.55 y=0.09 yaw=0 graus
+12:01:56.32 bt_navigator_navigate_to_pose_rclcpp_node Failed to get result for follow_path in node halt!
+12:01:56.32 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:01:56.32 bt_navigator [navigate_to_pose] [ActionServer] Aborting handle.
+12:01:56.32 bt_navigator Goal canceled
+12:01:56.32 alinhador_passagem PREPARO 1 (alinhar fora da passagem): FALHOU
+12:01:56.32 alinhador_passagem Preparo 1 falhou. Parei fora da passagem; mande o goal de novo.
+12:01:56.37 controller_server Cancellation was successful. Stopping the robot.
+12:01:56.37 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:02:04.83 alinhador_passagem Novo goal: x=2.59 y=1.85 yaw=0 graus
+12:02:04.84 alinhador_passagem Passagem 1: entrada (1.17, 0.10), eixo 0 graus, largura no mapa 0.73 m, preparo a 0.60 m da entrada
+12:02:04.85 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=0.57 y=0.09 yaw=0 graus
+12:02:04.85 bt_navigator Begin navigating from current location (0.35, 0.29) to (0.57, 0.09)
+12:02:04.87 smoother_server Received a path to smooth.
+12:02:04.89 controller_server Received a goal, begin computing control effort.
+12:02:04.93 collision_monitor Robot to continue normal operation
+12:02:05.92 smoother_server Received a path to smooth.
+12:02:05.99 controller_server Passing new path to controller.
+12:02:06.96 smoother_server Received a path to smooth.
+12:02:06.99 controller_server Passing new path to controller.
+12:02:08.00 smoother_server Received a path to smooth.
+12:02:08.09 controller_server Passing new path to controller.
+12:02:09.05 smoother_server Received a path to smooth.
+12:02:09.09 controller_server Passing new path to controller.
+12:02:10.10 smoother_server Received a path to smooth.
+12:02:10.19 controller_server Passing new path to controller.
+12:02:11.14 smoother_server Received a path to smooth.
+12:02:11.19 controller_server Passing new path to controller.
+12:02:12.09 controller_server Failed to make progress
+12:02:12.09 controller_server [follow_path] [ActionServer] Aborting handle.
+12:02:12.11 local_costmap.local_costmap Received request to clear entirely the local_costmap
+12:02:12.11 controller_server Received a goal, begin computing control effort.
+12:02:12.18 smoother_server Received a path to smooth.
+12:02:12.19 controller_server Passing new path to controller.
+12:02:13.12 alinhador_passagem Novo goal: x=2.49 y=1.65 yaw=0 graus
+12:02:13.15 bt_navigator_navigate_to_pose_rclcpp_node Failed to get result for follow_path in node halt!
+12:02:13.15 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:02:13.15 bt_navigator Goal canceled
+12:02:13.15 alinhador_passagem PREPARO 1 (alinhar fora da passagem): FALHOU
+12:02:13.15 alinhador_passagem Preparo 1 falhou. Parei fora da passagem; mande o goal de novo.
+12:02:13.16 alinhador_passagem Passagem 1: entrada (1.17, 0.10), eixo 0 graus, largura no mapa 0.73 m, preparo a 0.60 m da entrada
+12:02:13.17 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=0.57 y=0.10 yaw=0 graus
+12:02:13.17 bt_navigator Begin navigating from current location (0.44, 0.34) to (0.57, 0.10)
+12:02:13.18 smoother_server Received a path to smooth.
+12:02:13.21 controller_server Passing new path to controller.
+12:02:14.22 smoother_server Received a path to smooth.
+12:02:14.31 controller_server Passing new path to controller.
+12:02:15.26 smoother_server Received a path to smooth.
+12:02:15.31 controller_server Passing new path to controller.
+12:02:16.30 smoother_server Received a path to smooth.
+12:02:16.41 controller_server Passing new path to controller.
+12:02:17.33 smoother_server Received a path to smooth.
+12:02:17.41 controller_server Passing new path to controller.
+12:02:18.38 smoother_server Received a path to smooth.
+12:02:18.41 controller_server Passing new path to controller.
+12:02:19.41 smoother_server Received a path to smooth.
+12:02:19.51 controller_server Passing new path to controller.
+12:02:20.45 smoother_server Received a path to smooth.
+12:02:20.51 controller_server Passing new path to controller.
+12:02:21.49 smoother_server Received a path to smooth.
+12:02:21.51 controller_server Passing new path to controller.
+12:02:22.53 smoother_server Received a path to smooth.
+12:02:22.61 controller_server Passing new path to controller.
+12:02:23.57 smoother_server Received a path to smooth.
+12:02:23.61 controller_server Passing new path to controller.
+12:02:24.61 smoother_server Received a path to smooth.
+12:02:24.71 controller_server Passing new path to controller.
+12:02:25.61 controller_server Failed to make progress
+12:02:25.61 controller_server [follow_path] [ActionServer] Aborting handle.
+12:02:25.62 local_costmap.local_costmap Received request to clear entirely the local_costmap
+12:02:25.62 controller_server Received a goal, begin computing control effort.
+12:02:25.64 smoother_server Received a path to smooth.
+12:02:25.79 controller_server Passing new path to controller.
+12:02:25.79 controller_server Control loop missed its desired rate of 10.0000 Hz. Current loop rate is 5.8439 Hz.
+12:02:26.67 smoother_server Received a path to smooth.
+12:02:26.69 controller_server Passing new path to controller.
+12:02:31.18 lifecycle_manager_navigation [34m[1mHave not received a heartbeat from planner_server.[0m[0m
+12:02:31.18 lifecycle_manager_navigation CRITICAL FAILURE: SERVER planner_server IS DOWN after not receiving a heartbeat for 4000 ms. Shutting down related nodes.
+12:02:31.18 lifecycle_manager_navigation [34m[1mTerminating bond timer...[0m[0m
+12:02:31.18 lifecycle_manager_navigation [34m[1mResetting managed nodes...[0m[0m
+12:02:31.18 lifecycle_manager_navigation [34m[1mDeactivating collision_monitor[0m[0m
+12:02:31.19 collision_monitor Deactivating
+12:02:31.19 collision_monitor Destroying bond (collision_monitor) to lifecycle manager.
+12:02:31.31 lifecycle_manager_navigation [34m[1mDeactivating velocity_smoother[0m[0m
+12:02:31.31 velocity_smoother Deactivating
+12:02:31.31 velocity_smoother Destroying bond (velocity_smoother) to lifecycle manager.
+12:02:31.43 lifecycle_manager_navigation [34m[1mDeactivating waypoint_follower[0m[0m
+12:02:31.43 waypoint_follower Deactivating
+12:02:31.43 waypoint_follower Destroying bond (waypoint_follower) to lifecycle manager.
+12:02:31.54 lifecycle_manager_navigation [34m[1mDeactivating bt_navigator[0m[0m
+12:02:31.54 bt_navigator Deactivating
+12:02:31.54 bt_navigator [navigate_to_pose] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+12:02:31.57 bt_navigator_navigate_to_pose_rclcpp_node Failed to get result for follow_path in node halt!
+12:02:31.57 bt_navigator [navigate_to_pose] [ActionServer] Aborting handle.
+12:02:31.57 bt_navigator Goal canceled
+12:02:31.57 bt_navigator [navigate_to_pose] [ActionServer] Stopping the thread per request.
+12:02:31.57 bt_navigator Destroying bond (bt_navigator) to lifecycle manager.
+12:02:31.58 alinhador_passagem PREPARO 1 (alinhar fora da passagem): FALHOU
+12:02:31.58 alinhador_passagem Preparo 1 falhou. Parei fora da passagem; mande o goal de novo.
+12:02:31.68 lifecycle_manager_navigation [34m[1mDeactivating behavior_server[0m[0m
+12:02:31.68 behavior_server Deactivating
+12:02:31.68 behavior_server Destroying bond (behavior_server) to lifecycle manager.
+12:02:31.80 lifecycle_manager_navigation [34m[1mDeactivating planner_server[0m[0m
+12:02:31.80 planner_server Deactivating
+12:02:31.80 global_costmap.global_costmap Deactivating
+12:02:27.70 smoother_server Received a path to smooth.
+12:02:28.74 smoother_server Received a path to smooth.
+12:02:29.78 smoother_server Received a path to smooth.
+12:02:30.82 smoother_server Received a path to smooth.
+12:02:27.79 controller_server Passing new path to controller.
+12:02:28.79 controller_server Passing new path to controller.
+12:02:29.79 controller_server Passing new path to controller.
+12:02:30.89 controller_server Passing new path to controller.
+12:02:31.59 controller_server Cancellation was successful. Stopping the robot.
+12:02:31.59 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:02:32.00 planner_server Deactivating plugin GridBased of type NavfnPlanner
+12:02:32.00 planner_server Destroying bond (planner_server) to lifecycle manager.
+12:02:32.11 lifecycle_manager_navigation [34m[1mDeactivating smoother_server[0m[0m
+12:02:32.11 smoother_server Deactivating
+12:02:32.11 smoother_server Destroying bond (smoother_server) to lifecycle manager.
+12:02:32.23 lifecycle_manager_navigation [34m[1mDeactivating controller_server[0m[0m
+12:02:32.23 controller_server Deactivating
+12:02:32.23 controller_server Deactivating controller: FollowPath of type nav2_rotation_shim_controller::RotationShimController
+12:02:32.23 local_costmap.local_costmap Deactivating
+12:02:32.38 controller_server Destroying bond (controller_server) to lifecycle manager.
+12:02:32.50 lifecycle_manager_navigation [34m[1mCleaning up collision_monitor[0m[0m
+12:02:32.50 collision_monitor Cleaning up
+12:02:32.50 collision_monitor [VelocityPolygonStop]: Destroying VelocityPolygon
+12:02:32.50 collision_monitor [VelocityPolygonStop]: Destroying Polygon
+12:02:32.50 collision_monitor [scan]: Destroying Scan
+12:02:32.50 lifecycle_manager_navigation [34m[1mCleaning up velocity_smoother[0m[0m
+12:02:32.50 velocity_smoother Cleaning up
+12:02:32.51 lifecycle_manager_navigation [34m[1mCleaning up waypoint_follower[0m[0m
+12:02:32.51 waypoint_follower Cleaning up
+12:02:32.52 lifecycle_manager_navigation [34m[1mCleaning up bt_navigator[0m[0m
+12:02:32.52 bt_navigator Cleaning up
+12:02:32.64 bt_navigator Completed Cleaning up
+12:02:32.64 lifecycle_manager_navigation [34m[1mCleaning up behavior_server[0m[0m
+12:02:32.64 behavior_server Cleaning up
+12:02:32.68 lifecycle_manager_navigation [34m[1mCleaning up planner_server[0m[0m
+12:02:32.68 planner_server Cleaning up
+12:02:32.69 global_costmap.global_costmap Cleaning up
+12:02:32.70 planner_server Cleaning up plugin GridBased of type NavfnPlanner
+12:02:32.70 planner_server Destroying plugin GridBased of type NavfnPlanner
+12:02:32.73 lifecycle_manager_navigation [34m[1mCleaning up smoother_server[0m[0m
+12:02:32.73 smoother_server Cleaning up
+12:02:32.74 lifecycle_manager_navigation [34m[1mCleaning up controller_server[0m[0m
+12:02:32.74 controller_server Cleaning up
+12:02:32.74 controller_server Cleaning up controller: FollowPath of type nav2_rotation_shim_controller::RotationShimController
+12:02:32.75 local_costmap.local_costmap Cleaning up
+12:02:32.79 lifecycle_manager_navigation [34m[1mManaged nodes have been reset[0m[0m
+12:02:33.79 lifecycle_manager_navigation [34m[1mSuccessfully re-established connections from server respawns, starting back up.[0m[0m
+12:02:33.79 lifecycle_manager_navigation [34m[1mStarting managed nodes bringup...[0m[0m
+12:02:33.79 lifecycle_manager_navigation [34m[1mConfiguring controller_server[0m[0m
+12:02:33.79 controller_server Configuring controller interface
+12:02:33.79 controller_server getting progress checker plugins..
+12:02:33.79 controller_server getting goal checker plugins..
+12:02:33.79 controller_server Controller frequency set to 10.0000Hz
+12:02:33.79 local_costmap.local_costmap Configuring
+12:02:33.80 local_costmap.local_costmap Using plugin "obstacle_layer"
+12:02:33.80 local_costmap.local_costmap Subscribed to Topics: scan
+12:02:33.80 local_costmap.local_costmap Initialized plugin "obstacle_layer"
+12:02:33.80 local_costmap.local_costmap Using plugin "inflation_layer"
+12:02:33.80 local_costmap.local_costmap Initialized plugin "inflation_layer"
+12:02:33.82 controller_server Created progress_checker : progress_checker of type nav2_controller::PoseProgressChecker
+12:02:33.82 controller_server Controller Server has progress_checker progress_checker  progress checkers available.
+12:02:33.82 controller_server Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+12:02:33.82 controller_server Controller Server has goal_checker goal_checker  goal checkers available.
+12:02:33.82 controller_server Created controller : FollowPath of type nav2_rotation_shim_controller::RotationShimController
+12:02:33.82 controller_server Created internal controller for rotation shimming: FollowPath of type dwb_core::DWBLocalPlanner
+12:02:33.82 controller_server Setting transform_tolerance to 0.300000
+12:02:33.83 controller_server Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+12:02:33.83 controller_server Critic plugin initialized
+12:02:33.83 controller_server Using critic "Oscillation" (dwb_critics::OscillationCritic)
+12:02:33.83 controller_server Critic plugin initialized
+12:02:33.83 controller_server Using critic "ObstacleFootprint" (dwb_critics::ObstacleFootprintCritic)
+12:02:33.83 controller_server Critic plugin initialized
+12:02:33.83 controller_server Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+12:02:33.83 controller_server Critic plugin initialized
+12:02:33.83 controller_server Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+12:02:33.83 controller_server Critic plugin initialized
+12:02:33.83 controller_server Using critic "PathDist" (dwb_critics::PathDistCritic)
+12:02:33.83 controller_server Critic plugin initialized
+12:02:33.83 controller_server Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+12:02:33.83 controller_server Critic plugin initialized
+12:02:33.83 controller_server Using critic "Twirling" (dwb_critics::TwirlingCritic)
+12:02:33.83 controller_server Critic plugin initialized
+12:02:33.83 controller_server Controller Server has FollowPath FollowPath  controllers available.
+12:02:33.84 lifecycle_manager_navigation [34m[1mConfiguring smoother_server[0m[0m
+12:02:33.84 smoother_server Configuring smoother server
+12:02:33.84 smoother_server Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+12:02:33.84 smoother_server Smoother Server has simple_smoother simple_smoother  smoothers available.
+12:02:33.85 lifecycle_manager_navigation [34m[1mConfiguring planner_server[0m[0m
+12:02:33.85 planner_server Configuring
+12:02:33.86 global_costmap.global_costmap Configuring
+12:02:33.86 global_costmap.global_costmap Using plugin "static_layer"
+12:02:33.86 global_costmap.global_costmap Subscribing to the map topic (/map) with transient local durability
+12:02:33.86 global_costmap.global_costmap Subscribing to updates
+12:02:33.86 global_costmap.global_costmap Initialized plugin "static_layer"
+12:02:33.86 global_costmap.global_costmap Using plugin "inflation_layer"
+12:02:33.87 global_costmap.global_costmap Initialized plugin "inflation_layer"
+12:02:33.88 planner_server Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+12:02:33.88 planner_server Configuring plugin GridBased of type NavfnPlanner
+12:02:33.88 planner_server Planner Server has GridBased GridBased  planners available.
+12:02:33.88 global_costmap.global_costmap StaticLayer: Resizing costmap to 228 X 218 at 0.050000 m/pix
+12:02:33.90 lifecycle_manager_navigation [34m[1mConfiguring behavior_server[0m[0m
+12:02:33.90 behavior_server Configuring
+12:02:33.90 behavior_server Creating behavior plugin spin of type nav2_behaviors::Spin
+12:02:33.90 behavior_server Creating behavior plugin backup of type nav2_behaviors::BackUp
+12:02:33.90 behavior_server Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+12:02:33.90 behavior_server Creating behavior plugin wait of type nav2_behaviors::Wait
+12:02:33.90 behavior_server Configuring spin
+12:02:33.91 behavior_server Configuring backup
+12:02:33.92 behavior_server Configuring drive_on_heading
+12:02:33.92 behavior_server Configuring wait
+12:02:33.93 lifecycle_manager_navigation [34m[1mConfiguring bt_navigator[0m[0m
+12:02:33.93 bt_navigator Configuring
+12:02:33.94 bt_navigator Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+12:02:33.97 bt_navigator Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+12:02:34.00 lifecycle_manager_navigation [34m[1mConfiguring waypoint_follower[0m[0m
+12:02:34.00 waypoint_follower Configuring
+12:02:34.03 waypoint_follower Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+12:02:34.03 waypoint_follower Waypoint pause duration is set to zero, disabling task executor plugin.
+12:02:34.03 lifecycle_manager_navigation [34m[1mConfiguring velocity_smoother[0m[0m
+12:02:34.03 velocity_smoother Configuring velocity smoother
+12:02:34.03 lifecycle_manager_navigation [34m[1mConfiguring collision_monitor[0m[0m
+12:02:34.04 collision_monitor Configuring
+12:02:34.04 collision_monitor [scan]: Creating Scan
+12:02:34.04 collision_monitor [VelocityPolygonStop]: Creating Polygon
+12:02:34.04 collision_monitor [VelocityPolygonStop]: Creating VelocityPolygon
+12:02:34.05 lifecycle_manager_navigation [34m[1mActivating controller_server[0m[0m
+12:02:34.05 controller_server Activating
+12:02:34.05 local_costmap.local_costmap Activating
+12:02:34.05 local_costmap.local_costmap Checking transform
+12:02:34.05 local_costmap.local_costmap start
+12:02:34.25 controller_server Activating controller: FollowPath of type nav2_rotation_shim_controller::RotationShimController
+12:02:34.25 controller_server Creating bond (controller_server) to lifecycle manager.
+12:02:34.36 lifecycle_manager_navigation Server controller_server connected with bond.
+12:02:34.36 lifecycle_manager_navigation [34m[1mActivating smoother_server[0m[0m
+12:02:34.36 smoother_server Activating
+12:02:34.36 smoother_server Creating bond (smoother_server) to lifecycle manager.
+12:02:34.47 lifecycle_manager_navigation Server smoother_server connected with bond.
+12:02:34.47 lifecycle_manager_navigation [34m[1mActivating planner_server[0m[0m
+12:02:34.47 planner_server Activating
+12:02:34.47 global_costmap.global_costmap Activating
+12:02:34.47 global_costmap.global_costmap Checking transform
+12:02:34.47 global_costmap.global_costmap start
+12:02:35.02 planner_server Activating plugin GridBased of type NavfnPlanner
+12:02:35.02 planner_server Creating bond (planner_server) to lifecycle manager.
+12:02:35.12 lifecycle_manager_navigation Server planner_server connected with bond.
+12:02:35.12 lifecycle_manager_navigation [34m[1mActivating behavior_server[0m[0m
+12:02:35.12 behavior_server Activating
+12:02:35.12 behavior_server Activating spin
+12:02:35.12 behavior_server Activating backup
+12:02:35.12 behavior_server Activating drive_on_heading
+12:02:35.12 behavior_server Activating wait
+12:02:35.12 behavior_server Creating bond (behavior_server) to lifecycle manager.
+12:02:35.23 lifecycle_manager_navigation Server behavior_server connected with bond.
+12:02:35.23 lifecycle_manager_navigation [34m[1mActivating bt_navigator[0m[0m
+12:02:35.23 bt_navigator Activating
+12:02:35.31 bt_navigator Creating bond (bt_navigator) to lifecycle manager.
+12:02:35.42 lifecycle_manager_navigation Server bt_navigator connected with bond.
+12:02:35.42 lifecycle_manager_navigation [34m[1mActivating waypoint_follower[0m[0m
+12:02:35.42 waypoint_follower Activating
+12:02:35.42 waypoint_follower Creating bond (waypoint_follower) to lifecycle manager.
+12:02:35.53 lifecycle_manager_navigation Server waypoint_follower connected with bond.
+12:02:35.53 lifecycle_manager_navigation [34m[1mActivating velocity_smoother[0m[0m
+12:02:35.53 velocity_smoother Activating
+12:02:35.53 velocity_smoother Creating bond (velocity_smoother) to lifecycle manager.
+12:02:35.64 lifecycle_manager_navigation Server velocity_smoother connected with bond.
+12:02:35.64 lifecycle_manager_navigation [34m[1mActivating collision_monitor[0m[0m
+12:02:35.64 collision_monitor Activating
+12:02:35.64 collision_monitor Creating bond (collision_monitor) to lifecycle manager.
+12:02:35.74 lifecycle_manager_navigation Server collision_monitor connected with bond.
+12:02:35.74 lifecycle_manager_navigation [34m[1mManaged nodes are active[0m[0m
+12:02:35.74 lifecycle_manager_navigation [34m[1mCreating bond timer...[0m[0m
+12:02:43.49 alinhador_passagem Novo goal: x=2.46 y=1.46 yaw=0 graus
+12:02:43.50 alinhador_passagem Passagem 1: entrada (1.14, 0.10), eixo -1 graus, largura no mapa 0.73 m, preparo a 0.60 m da entrada
+12:02:43.50 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=0.54 y=0.11 yaw=-1 graus
+12:02:43.50 bt_navigator Begin navigating from current location (0.69, 0.20) to (0.54, 0.11)
+12:02:43.52 smoother_server Received a path to smooth.
+12:02:43.53 controller_server Received a goal, begin computing control effort.
+12:02:44.55 smoother_server Received a path to smooth.
+12:02:44.63 controller_server Passing new path to controller.
+12:02:45.58 smoother_server Received a path to smooth.
+12:02:45.63 controller_server Passing new path to controller.
+12:02:46.62 smoother_server Received a path to smooth.
+12:02:46.63 controller_server Passing new path to controller.
+12:02:47.66 smoother_server Received a path to smooth.
+12:02:47.73 controller_server Passing new path to controller.
+12:02:48.70 smoother_server Received a path to smooth.
+12:02:48.73 controller_server Passing new path to controller.
+12:02:49.74 smoother_server Received a path to smooth.
+12:02:49.83 controller_server Passing new path to controller.
+12:02:50.78 smoother_server Received a path to smooth.
+12:02:50.83 controller_server Passing new path to controller.
+12:02:51.82 smoother_server Received a path to smooth.
+12:02:51.83 controller_server Passing new path to controller.
+12:02:52.86 smoother_server Received a path to smooth.
+12:02:52.93 controller_server Passing new path to controller.
+12:02:53.90 smoother_server Received a path to smooth.
+12:02:53.93 controller_server Passing new path to controller.
+12:02:54.94 smoother_server Received a path to smooth.
+12:02:55.03 controller_server Passing new path to controller.
+12:02:55.98 smoother_server Received a path to smooth.
+12:02:56.03 controller_server Passing new path to controller.
+12:02:56.56 alinhador_passagem Novo goal: x=2.59 y=1.44 yaw=0 graus
+12:02:56.56 alinhador_passagem Goal substituido por um novo.
+12:02:56.57 alinhador_passagem Passagem 1: entrada (1.16, 0.09), eixo 1 graus, largura no mapa 0.73 m, preparo a 0.60 m da entrada
+12:02:56.57 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=0.56 y=0.08 yaw=1 graus
+12:02:56.58 bt_navigator_navigate_to_pose_rclcpp_node Failed to get result for follow_path in node halt!
+12:02:56.58 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:02:56.58 bt_navigator [navigate_to_pose] [ActionServer] Aborting handle.
+12:02:56.58 bt_navigator Goal canceled
+12:02:56.59 alinhador_passagem PREPARO 1 (alinhar fora da passagem): FALHOU
+12:02:56.59 alinhador_passagem Preparo 1 falhou. Parei fora da passagem; mande o goal de novo.
+12:02:56.63 controller_server Cancellation was successful. Stopping the robot.
+12:02:56.63 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:03:01.96 alinhador_passagem Novo goal: x=0.34 y=0.26 yaw=2 graus
+12:03:01.96 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:03:01.96 alinhador_passagem GOAL FINAL: x=0.34 y=0.26 yaw=2 graus
+12:03:01.96 bt_navigator Begin navigating from current location (0.52, 0.04) to (0.34, 0.26)
+12:03:01.99 smoother_server Received a path to smooth.
+12:03:01.99 controller_server Received a goal, begin computing control effort.
+12:03:03.02 smoother_server Received a path to smooth.
+12:03:03.09 controller_server Passing new path to controller.
+12:03:04.06 smoother_server Received a path to smooth.
+12:03:04.09 controller_server Passing new path to controller.
+12:03:05.10 smoother_server Received a path to smooth.
+12:03:05.19 controller_server Passing new path to controller.
+12:03:06.14 smoother_server Received a path to smooth.
+12:03:06.19 controller_server Passing new path to controller.
+12:03:07.18 smoother_server Received a path to smooth.
+12:03:07.19 controller_server Passing new path to controller.
+12:03:08.20 smoother_server Received a path to smooth.
+12:03:08.29 controller_server Passing new path to controller.
+12:03:08.69 controller_server Failed to make progress
+12:03:08.69 controller_server [follow_path] [ActionServer] Aborting handle.
+12:03:08.71 local_costmap.local_costmap Received request to clear entirely the local_costmap
+12:03:08.71 controller_server Received a goal, begin computing control effort.
+12:03:08.86 controller_server Control loop missed its desired rate of 10.0000 Hz. Current loop rate is 6.5979 Hz.
+12:03:09.24 smoother_server Received a path to smooth.
+12:03:09.26 controller_server Passing new path to controller.
+12:03:10.27 smoother_server Received a path to smooth.
+12:03:10.36 controller_server Passing new path to controller.
+12:03:11.11 alinhador_passagem Novo goal: x=0.32 y=0.11 yaw=-6 graus
+12:03:11.11 alinhador_passagem Goal substituido por um novo.
+12:03:11.12 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:03:11.12 alinhador_passagem GOAL FINAL: x=0.32 y=0.11 yaw=-6 graus
+12:03:11.13 bt_navigator_navigate_to_pose_rclcpp_node Failed to get result for follow_path in node halt!
+12:03:11.13 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:03:11.13 bt_navigator [navigate_to_pose] [ActionServer] Aborting handle.
+12:03:11.13 bt_navigator Goal canceled
+12:03:11.13 alinhador_passagem GOAL FINAL: FALHOU
+12:03:11.16 controller_server Cancellation was successful. Stopping the robot.
+12:03:11.16 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:03:14.68 alinhador_passagem Novo goal: x=0.31 y=0.51 yaw=-6 graus
+12:03:14.68 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:03:14.68 alinhador_passagem GOAL FINAL: x=0.31 y=0.51 yaw=-6 graus
+12:03:14.68 bt_navigator Begin navigating from current location (0.52, 0.04) to (0.31, 0.51)
+12:03:14.70 smoother_server Received a path to smooth.
+12:03:14.72 controller_server Received a goal, begin computing control effort.
+12:03:15.74 smoother_server Received a path to smooth.
+12:03:15.82 controller_server Passing new path to controller.
+12:03:16.78 smoother_server Received a path to smooth.
+12:03:16.82 controller_server Passing new path to controller.
+12:03:17.83 smoother_server Received a path to smooth.
+12:03:17.92 controller_server Passing new path to controller.
+12:03:18.87 smoother_server Received a path to smooth.
+12:03:18.92 controller_server Passing new path to controller.
+12:03:19.91 smoother_server Received a path to smooth.
+12:03:19.92 controller_server Passing new path to controller.
+12:03:20.52 controller_server Could not find a legal trajectory: No valid trajectories out of 54! 
+12:03:20.54 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:03:20.62 controller_server Could not find a legal trajectory: No valid trajectories out of 54! 
+12:03:20.95 smoother_server Received a path to smooth.
+12:03:21.02 controller_server Passing new path to controller.
+12:03:22.00 smoother_server Received a path to smooth.
+12:03:22.02 controller_server Passing new path to controller.
+12:03:23.03 smoother_server Received a path to smooth.
+12:03:23.12 controller_server Passing new path to controller.
+12:03:24.01 alinhador_passagem Novo goal: x=0.30 y=0.10 yaw=-6 graus
+12:03:24.02 controller_server Cancellation was successful. Stopping the robot.
+12:03:24.02 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:03:24.02 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:03:24.02 bt_navigator Goal canceled
+12:03:24.03 alinhador_passagem GOAL FINAL: FALHOU
+12:03:24.03 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:03:24.04 alinhador_passagem GOAL FINAL: x=0.30 y=0.10 yaw=-6 graus
+12:03:24.04 bt_navigator Begin navigating from current location (0.35, 0.35) to (0.30, 0.10)
+12:03:24.06 smoother_server Received a path to smooth.
+12:03:24.07 controller_server Received a goal, begin computing control effort.
+12:03:25.10 smoother_server Received a path to smooth.
+12:03:25.17 controller_server Passing new path to controller.
+12:03:26.14 smoother_server Received a path to smooth.
+12:03:26.17 controller_server Passing new path to controller.
+12:03:27.18 smoother_server Received a path to smooth.
+12:03:27.27 controller_server Passing new path to controller.
+12:03:28.22 smoother_server Received a path to smooth.
+12:03:28.27 controller_server Passing new path to controller.
+12:03:28.74 alinhador_passagem Novo goal: x=0.38 y=-0.10 yaw=-6 graus
+12:03:28.76 alinhador_passagem Goal substituido por um novo.
+12:03:28.76 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:03:28.77 alinhador_passagem GOAL FINAL: x=0.38 y=-0.10 yaw=-6 graus
+12:03:28.77 bt_navigator_navigate_to_pose_rclcpp_node Failed to get result for follow_path in node halt!
+12:03:28.77 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:03:28.77 bt_navigator [navigate_to_pose] [ActionServer] Aborting handle.
+12:03:28.77 bt_navigator Goal canceled
+12:03:28.77 controller_server Cancellation was successful. Stopping the robot.
+12:03:28.77 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:03:28.78 alinhador_passagem GOAL FINAL: FALHOU
+12:03:31.20 alinhador_passagem Novo goal: x=0.63 y=-0.03 yaw=-6 graus
+12:03:31.20 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:03:31.20 alinhador_passagem GOAL FINAL: x=0.63 y=-0.03 yaw=-6 graus
+12:03:31.21 bt_navigator Begin navigating from current location (0.35, 0.35) to (0.63, -0.03)
+12:03:31.23 smoother_server Received a path to smooth.
+12:03:31.24 controller_server Received a goal, begin computing control effort.
+12:03:32.25 smoother_server Received a path to smooth.
+12:03:32.34 controller_server Passing new path to controller.
+12:03:33.08 alinhador_passagem Novo goal: x=2.15 y=1.66 yaw=-6 graus
+12:03:33.11 bt_navigator_navigate_to_pose_rclcpp_node Failed to get result for follow_path in node halt!
+12:03:33.11 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:03:33.11 bt_navigator Goal canceled
+12:03:33.11 alinhador_passagem GOAL FINAL: FALHOU
+12:03:33.13 alinhador_passagem Passagem 1: entrada (1.17, 0.11), eixo -1 graus, largura no mapa 0.73 m, preparo a 0.60 m da entrada
+12:03:33.13 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=0.57 y=0.11 yaw=-1 graus
+12:03:33.13 bt_navigator Begin navigating from current location (0.35, 0.35) to (0.57, 0.11)
+12:03:33.14 controller_server Cancellation was successful. Stopping the robot.
+12:03:33.14 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:03:33.15 smoother_server Received a path to smooth.
+12:03:33.16 controller_server Received a goal, begin computing control effort.
+12:03:34.19 smoother_server Received a path to smooth.
+12:03:34.26 controller_server Passing new path to controller.
+12:03:35.23 smoother_server Received a path to smooth.
+12:03:35.26 controller_server Passing new path to controller.
+12:03:36.27 smoother_server Received a path to smooth.
+12:03:36.36 controller_server Passing new path to controller.
+12:03:37.30 smoother_server Received a path to smooth.
+12:03:37.36 controller_server Passing new path to controller.
+12:03:38.34 smoother_server Received a path to smooth.
+12:03:38.36 controller_server Passing new path to controller.
+12:03:39.16 controller_server Failed to make progress
+12:03:39.16 controller_server [follow_path] [ActionServer] Aborting handle.
+12:03:39.18 local_costmap.local_costmap Received request to clear entirely the local_costmap
+12:03:39.18 controller_server Received a goal, begin computing control effort.
+12:03:39.38 smoother_server Received a path to smooth.
+12:03:39.48 controller_server Passing new path to controller.
+12:03:40.41 smoother_server Received a path to smooth.
+12:03:40.48 controller_server Passing new path to controller.
+12:03:41.44 smoother_server Received a path to smooth.
+12:03:41.48 controller_server Passing new path to controller.
+12:03:42.48 smoother_server Received a path to smooth.
+12:03:42.58 controller_server Passing new path to controller.
+12:03:43.52 smoother_server Received a path to smooth.
+12:03:43.58 controller_server Passing new path to controller.
+12:03:44.56 smoother_server Received a path to smooth.
+12:03:44.58 controller_server Passing new path to controller.
+12:03:45.28 controller_server Failed to make progress
+12:03:45.28 controller_server [follow_path] [ActionServer] Aborting handle.
+12:03:45.32 bt_navigator_navigate_to_pose_rclcpp_node Timed out while waiting for action server to acknowledge goal request for mecanum_escape
+12:03:45.32 behavior_server Running backup
+12:03:45.32 mecanum_escape_node Solicitacao de escape lateral recebida.
+12:03:45.32 mecanum_escape_node Folga lateral: esquerda=0.303 m, direita=0.312 m, necessaria=0.375 m
+12:03:45.38 mecanum_escape_node Escape lateral recusado: nenhum lado e seguro.
+12:03:45.50 collision_monitor Robot to continue normal operation
+12:03:46.22 behavior_server backup completed successfully
+12:03:46.26 smoother_server Received a path to smooth.
+12:03:46.27 controller_server Received a goal, begin computing control effort.
+12:03:47.30 smoother_server Received a path to smooth.
+12:03:47.37 controller_server Passing new path to controller.
+12:03:48.34 smoother_server Received a path to smooth.
+12:03:48.37 controller_server Passing new path to controller.
+12:03:49.38 smoother_server Received a path to smooth.
+12:03:49.47 controller_server Passing new path to controller.
+12:03:49.78 behavior_server Running Nav2 LifecycleNode rcl preshutdown (behavior_server)
+12:03:49.78 controller_server Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+12:03:49.78 waypoint_follower Running Nav2 LifecycleNode rcl preshutdown (waypoint_follower)
+12:03:49.78 controller_server Deactivating
+12:03:49.78 waypoint_follower Deactivating
+12:03:49.78 smoother_server Running Nav2 LifecycleNode rcl preshutdown (smoother_server)
+12:03:49.78 behavior_server Deactivating
+12:03:49.78 controller_server [follow_path] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+12:03:49.78 waypoint_follower Destroying bond (waypoint_follower) to lifecycle manager.
+12:03:49.78 behavior_server Destroying bond (behavior_server) to lifecycle manager.
+12:03:49.78 smoother_server Deactivating
+12:03:49.78 smoother_server Destroying bond (smoother_server) to lifecycle manager.
+12:03:49.78 lifecycle_manager_navigation Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_navigation)
+12:03:49.78 lifecycle_manager_navigation [34m[1mTerminating bond timer...[0m[0m
+12:03:49.78 velocity_smoother Running Nav2 LifecycleNode rcl preshutdown (velocity_smoother)
+12:03:49.78 bt_navigator Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+12:03:49.78 velocity_smoother Deactivating
+12:03:49.78 velocity_smoother Destroying bond (velocity_smoother) to lifecycle manager.
+12:03:49.78 bt_navigator Deactivating
+12:03:49.78 bt_navigator [navigate_to_pose] [ActionServer] Requested to deactivate server but goal is still executing. Should check if action server is running before deactivating.
+12:03:49.78 planner_server Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+12:03:49.78 planner_server Deactivating
+12:03:49.78 global_costmap.global_costmap Deactivating
+12:03:49.79 collision_monitor Running Nav2 LifecycleNode rcl preshutdown (collision_monitor)
+12:03:49.79 collision_monitor Deactivating
+12:03:49.79 collision_monitor Destroying bond (collision_monitor) to lifecycle manager.
+12:03:49.79 waypoint_follower Cleaning up
+12:03:49.79 smoother_server Cleaning up
+12:03:49.79 behavior_server Cleaning up
+12:03:49.79 velocity_smoother Cleaning up
+12:03:49.79 velocity_smoother Destroying bond (velocity_smoother) to lifecycle manager.
+12:03:49.81 collision_monitor Cleaning up
+12:03:49.81 collision_monitor [VelocityPolygonStop]: Destroying VelocityPolygon
+12:03:49.81 collision_monitor [VelocityPolygonStop]: Destroying Polygon
+12:03:49.81 collision_monitor [scan]: Destroying Scan
+12:03:49.81 bt_navigator_navigate_to_pose_rclcpp_node Failed to get result for follow_path in node halt!
+12:03:49.81 bt_navigator [navigate_to_pose] [ActionServer] Aborting handle.
+12:03:49.81 bt_navigator Goal canceled
+12:03:49.81 bt_navigator [navigate_to_pose] [ActionServer] Stopping the thread per request.
+12:03:49.81 waypoint_follower Destroying bond (waypoint_follower) to lifecycle manager.
+12:03:49.81 bt_navigator Destroying bond (bt_navigator) to lifecycle manager.
+12:03:49.82 bt_navigator Cleaning up
+12:03:49.83 collision_monitor Destroying bond (collision_monitor) to lifecycle manager.
+12:03:49.83 smoother_server Destroying bond (smoother_server) to lifecycle manager.
+12:03:49.84 alinhador_passagem PREPARO 1 (alinhar fora da passagem): FALHOU
+12:03:49.85 alinhador_passagem Preparo 1 falhou. Parei fora da passagem; mande o goal de novo.
+12:03:49.87 controller_server [follow_path] [ActionServer] Stopping the thread per request.
+12:03:49.87 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:03:49.87 controller_server Deactivating controller: FollowPath of type nav2_rotation_shim_controller::RotationShimController
+12:03:49.87 local_costmap.local_costmap Deactivating
+12:03:49.97 planner_server Deactivating plugin GridBased of type NavfnPlanner
+12:03:49.97 planner_server Destroying bond (planner_server) to lifecycle manager.
+12:03:49.98 planner_server Cleaning up
+12:03:50.00 global_costmap.global_costmap Cleaning up
+12:03:50.01 planner_server Cleaning up plugin GridBased of type NavfnPlanner
+12:03:50.01 planner_server Destroying plugin GridBased of type NavfnPlanner
+12:03:50.03 planner_server Destroying bond (planner_server) to lifecycle manager.
+12:03:50.04 bt_navigator Completed Cleaning up
+12:03:50.04 bt_navigator Destroying bond (bt_navigator) to lifecycle manager.
+12:03:50.05 controller_server Destroying bond (controller_server) to lifecycle manager.
+12:03:50.06 controller_server Cleaning up
+12:03:50.06 controller_server Cleaning up controller: FollowPath of type nav2_rotation_shim_controller::RotationShimController
+12:03:50.06 local_costmap.local_costmap Cleaning up
+12:03:50.08 controller_server Destroying bond (controller_server) to lifecycle manager.
+12:04:04.33 rosbag2_recorder Topics discovery stopped.

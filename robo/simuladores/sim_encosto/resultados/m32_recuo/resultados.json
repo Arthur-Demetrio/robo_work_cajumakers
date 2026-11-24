@@ -1,0 +1,316 @@
+[
+ {
+  "cenario": "centrado",
+  "versao": "versoes/recuo",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "WS_1 de frente, centrado, 0,60 m",
+  "esperado": "sucesso",
+  "inicio": {
+   "dist": 0.6,
+   "lado": 0.0,
+   "ang": 0.0
+  },
+  "modelo": {},
+  "disse": "WS_1 SUCESSO folga=11.0cm ang=-1.8 centro=-1.1cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 10.4,
+  "real_final": {
+   "folga_cm": 11.6,
+   "centro_cm": -2.1,
+   "ang_graus": -0.2
+  },
+  "real_inicio": {
+   "folga_cm": 25.2,
+   "centro_cm": -0.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 9.0,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 3,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "lado_m15",
+  "versao": "versoes/recuo",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "15 cm a direita (teste do relatorio)",
+  "esperado": "sucesso",
+  "inicio": {
+   "dist": 0.6,
+   "lado": -0.15,
+   "ang": 0.0
+  },
+  "modelo": {},
+  "disse": "WS_1 SUCESSO folga=10.5cm ang=-0.8 centro=+3.8cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 15.6,
+  "real_final": {
+   "folga_cm": 9.6,
+   "centro_cm": 1.6,
+   "ang_graus": -1.4
+  },
+  "real_inicio": {
+   "folga_cm": 23.5,
+   "centro_cm": 15.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 8.6,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 1,
+  "n_parcial": 0,
+  "n_sem_face": 2,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "lado_p30",
+  "versao": "versoes/recuo",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "30 cm a esquerda (limite JANELA_LARGA)",
+  "esperado": "sucesso",
+  "inicio": {
+   "dist": 0.6,
+   "lado": 0.3,
+   "ang": 0.0
+  },
+  "modelo": {},
+  "disse": "WS_1 SUCESSO folga=10.4cm ang=+0.3 centro=-2.4cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 20.9,
+  "real_final": {
+   "folga_cm": 11.1,
+   "centro_cm": -1.6,
+   "ang_graus": -2.4
+  },
+  "real_inicio": {
+   "folga_cm": 25.2,
+   "centro_cm": -30.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 8.5,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 1,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "obst_frente",
+  "versao": "versoes/recuo",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "caixa 10x10 entre o robo e a face (5,5 cm a frente do para-choque no inicio)",
+  "esperado": "falha",
+  "inicio": {
+   "dist": 0.6,
+   "lado": 0.0,
+   "ang": 0.0
+  },
+  "modelo": {},
+  "disse": "WS_1 FALHOU encosto: nao vejo a face da mesa a frente",
+  "classe": "FALHA_EXPLICITA",
+  "avaliacao": "bom",
+  "duracao": 4.8,
+  "real_final": {
+   "folga_cm": 25.2,
+   "centro_cm": -0.0,
+   "ang_graus": 0.0
+  },
+  "real_inicio": {
+   "folga_cm": 25.2,
+   "centro_cm": -0.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 22.5,
+  "menor_dist_obst_cm": 5.5,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 20,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "ponta_tapada",
+  "versao": "versoes/recuo",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "caixa tapando a ponta esquerda da face (fora do corredor do robo)",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.6,
+   "lado": 0.0,
+   "ang": 0.0
+  },
+  "modelo": {},
+  "disse": "WS_1 SUCESSO folga=10.7cm ang=-1.9 centro=-0.7cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 10.8,
+  "real_final": {
+   "folga_cm": 11.3,
+   "centro_cm": -1.8,
+   "ang_graus": -0.2
+  },
+  "real_inicio": {
+   "folga_cm": 25.2,
+   "centro_cm": -0.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 8.6,
+  "menor_dist_obst_cm": 2.6,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 1,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "m32_t3",
+  "versao": "versoes/recuo",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "missao32 T3: 32 cm de lado, deslize k 0,8",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.59,
+   "lado": -0.32,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 0.8
+  },
+  "disse": "WS_1 SUCESSO folga=10.9cm ang=+1.1 centro=+2.3cm",
+  "classe": "SUCESSO_FALSO",
+  "avaliacao": "ruim",
+  "duracao": 28.5,
+  "real_final": {
+   "folga_cm": 10.0,
+   "centro_cm": 2.1,
+   "ang_graus": -3.1
+  },
+  "real_inicio": {
+   "folga_cm": 22.5,
+   "centro_cm": 32.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 8.9,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 1,
+  "n_sem_face": 5,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "m32_t4",
+  "versao": "versoes/recuo",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "missao32 T4: 14 cm de lado, deslize k 1,3",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.58,
+   "lado": -0.14,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 1.3
+  },
+  "disse": "WS_1 SUCESSO folga=10.7cm ang=-0.7 centro=+3.8cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 21.5,
+  "real_final": {
+   "folga_cm": 9.7,
+   "centro_cm": 1.1,
+   "ang_graus": -1.3
+  },
+  "real_inicio": {
+   "folga_cm": 21.5,
+   "centro_cm": 14.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 8.7,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 2,
+  "n_sem_face": 1,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "m32_t4_k08",
+  "versao": "versoes/recuo",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "missao32 T4 com deslize k 0,8",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.58,
+   "lado": -0.14,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 0.8
+  },
+  "disse": "WS_1 SUCESSO folga=10.8cm ang=-0.8 centro=+3.7cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 18.1,
+  "real_final": {
+   "folga_cm": 9.9,
+   "centro_cm": 1.0,
+   "ang_graus": -1.3
+  },
+  "real_inicio": {
+   "folga_cm": 21.5,
+   "centro_cm": 14.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 8.9,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 1,
+  "n_sem_face": 0,
+  "n_mede_de_novo": 0
+ },
+ {
+  "cenario": "m32_lado_m20_k1",
+  "versao": "versoes/recuo",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "20 cm de lado, deslize k 1,0",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.58,
+   "lado": -0.2,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 1.0
+  },
+  "disse": "WS_1 SUCESSO folga=10.8cm ang=-0.2 centro=+2.0cm",
+  "classe": "SUCESSO_OK",
+  "avaliacao": "bom",
+  "duracao": 21.5,
+  "real_final": {
+   "folga_cm": 9.9,
+   "centro_cm": 1.6,
+   "ang_graus": -1.9
+  },
+  "real_inicio": {
+   "folga_cm": 21.5,
+   "centro_cm": 20.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 8.8,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 1,
+  "n_mede_de_novo": 0
+ }
+]

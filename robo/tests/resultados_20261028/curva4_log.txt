@@ -1,0 +1,333 @@
+09:08:49.89 rosbag2_recorder Press SPACE for pausing/resuming
+09:08:49.89 rosbag2_recorder Event publisher thread: Started
+09:08:49.90 rosbag2_recorder Starting recording to '/home/marcos/bags/curva4_20261028_090832/bag'
+09:08:49.90 rosbag2_recorder Subscribed to topic '/rosout'
+09:08:49.90 rosbag2_recorder Listening for topics...
+09:08:49.90 rosbag2_recorder Recording...
+09:08:49.90 rosbag2_recorder Topics discovery started.
+09:08:50.00 rosbag2_recorder Subscribed to topic '/clicked_point'
+09:08:50.01 rosbag2_recorder Subscribed to topic '/cmd_vel_nav'
+09:08:50.02 rosbag2_recorder Subscribed to topic '/tf'
+09:08:50.11 rosbag2_recorder Subscribed to topic '/cmd_vel_smoothed'
+09:08:50.11 rosbag2_recorder Subscribed to topic '/map'
+09:08:50.12 rosbag2_recorder Subscribed to topic '/scan_front'
+09:08:50.13 rosbag2_recorder Subscribed to topic '/plan_smoothed'
+09:08:50.13 rosbag2_recorder Subscribed to topic '/odom'
+09:08:50.24 rosbag2_recorder Subscribed to topic '/compute_path_to_pose/_action/status'
+09:08:50.24 rosbag2_recorder Subscribed to topic '/plan'
+09:08:50.24 rosbag2_recorder Subscribed to topic '/global_costmap/costmap_updates'
+09:08:50.25 rosbag2_recorder Subscribed to topic '/cmd_vel'
+09:08:50.25 rosbag2_recorder Subscribed to topic '/collision_monitor_state'
+09:08:50.25 rosbag2_recorder Subscribed to topic '/global_costmap/costmap'
+09:08:51.11 rosbag2_recorder Subscribed to topic '/local_costmap/published_footprint'
+09:08:51.12 rosbag2_recorder Subscribed to topic '/local_costmap/costmap'
+09:08:51.12 rosbag2_recorder Subscribed to topic '/evaluation'
+09:08:51.12 rosbag2_recorder Subscribed to topic '/local_costmap/costmap_updates'
+09:08:51.13 rosbag2_recorder Subscribed to topic '/imu/data'
+09:08:51.13 rosbag2_recorder Subscribed to topic '/transformed_global_plan'
+09:08:51.13 rosbag2_recorder Subscribed to topic '/follow_path/_action/status'
+09:08:51.13 rosbag2_recorder Subscribed to topic '/local_plan'
+09:08:51.13 rosbag2_recorder Subscribed to topic '/scan_raw'
+09:08:51.13 rosbag2_recorder Subscribed to topic '/tf_static'
+09:08:51.23 rosbag2_recorder Subscribed to topic '/spin/_action/status'
+09:08:51.23 rosbag2_recorder Subscribed to topic '/navigate_to_pose/_action/feedback'
+09:08:51.23 rosbag2_recorder Subscribed to topic '/navigate_to_pose/_action/status'
+09:08:51.24 rosbag2_recorder Subscribed to topic '/backup/_action/status'
+09:08:51.35 rosbag2_recorder Subscribed to topic '/behavior_tree_log'
+09:08:58.31 alinhador_passagem Novo goal: x=1.97 y=1.86 yaw=0 graus
+09:08:58.31 alinhador_passagem Passagem 1: entrada (1.00, -0.06), eixo 5 graus, largura no mapa 0.73 m, preparo a 0.60 m da entrada
+09:08:58.31 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=0.40 y=-0.11 yaw=5 graus
+09:08:58.31 bt_navigator Begin navigating from current location (0.08, 0.20) to (0.40, -0.11)
+09:08:58.33 smoother_server Received a path to smooth.
+09:08:58.35 controller_server Received a goal, begin computing control effort.
+09:08:59.38 smoother_server Received a path to smooth.
+09:08:59.45 controller_server Passing new path to controller.
+09:09:00.43 smoother_server Received a path to smooth.
+09:09:00.45 controller_server Passing new path to controller.
+09:09:01.46 smoother_server Received a path to smooth.
+09:09:01.55 controller_server Passing new path to controller.
+09:09:02.50 smoother_server Received a path to smooth.
+09:09:02.55 controller_server Passing new path to controller.
+09:09:03.54 smoother_server Received a path to smooth.
+09:09:03.55 controller_server Passing new path to controller.
+09:09:03.86 controller_server Could not find a legal trajectory: No valid trajectories out of 344! 
+09:09:03.90 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+09:09:04.56 smoother_server Received a path to smooth.
+09:09:04.65 controller_server Passing new path to controller.
+09:09:05.60 smoother_server Received a path to smooth.
+09:09:05.65 controller_server Passing new path to controller.
+09:09:06.64 smoother_server Received a path to smooth.
+09:09:06.65 controller_server Passing new path to controller.
+09:09:07.66 smoother_server Received a path to smooth.
+09:09:07.75 controller_server Passing new path to controller.
+09:09:08.70 smoother_server Received a path to smooth.
+09:09:08.75 controller_server Passing new path to controller.
+09:09:09.10 collision_monitor Robot to continue normal operation
+09:09:09.24 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+09:09:09.74 smoother_server Received a path to smooth.
+09:09:09.75 controller_server Passing new path to controller.
+09:09:09.75 controller_server Failed to make progress
+09:09:09.75 controller_server [follow_path] [ActionServer] Aborting handle.
+09:09:09.77 local_costmap.local_costmap Received request to clear entirely the local_costmap
+09:09:09.77 controller_server Received a goal, begin computing control effort.
+09:09:10.78 smoother_server Received a path to smooth.
+09:09:10.87 controller_server Passing new path to controller.
+09:09:11.82 smoother_server Received a path to smooth.
+09:09:11.87 controller_server Passing new path to controller.
+09:09:12.86 smoother_server Received a path to smooth.
+09:09:12.87 controller_server Passing new path to controller.
+09:09:13.90 smoother_server Received a path to smooth.
+09:09:13.97 controller_server Passing new path to controller.
+09:09:14.94 smoother_server Received a path to smooth.
+09:09:14.97 controller_server Passing new path to controller.
+09:09:15.87 controller_server Failed to make progress
+09:09:15.87 controller_server [follow_path] [ActionServer] Aborting handle.
+09:09:15.89 mecanum_escape_node Solicitacao de escape lateral recebida.
+09:09:15.90 mecanum_escape_node Folga lateral: esquerda=1.692 m, direita=0.315 m, necessaria=0.375 m
+09:09:15.90 mecanum_escape_node ESCAPE MECANUM: ESQUERDA | vy=0.020 m/s | alvo=0.030 m
+09:09:16.00 collision_monitor Robot to continue normal operation
+09:09:16.54 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+09:09:16.56 mecanum_escape_node Escape lateral concluido: ESQUERDA, 0.034 m.
+09:09:16.60 smoother_server Received a path to smooth.
+09:09:16.60 collision_monitor Robot to continue normal operation
+09:09:16.62 controller_server Received a goal, begin computing control effort.
+09:09:16.62 controller_server Could not find a legal trajectory: No valid trajectories out of 344! 
+09:09:17.63 smoother_server Received a path to smooth.
+09:09:17.72 controller_server Passing new path to controller.
+09:09:18.67 smoother_server Received a path to smooth.
+09:09:18.72 controller_server Passing new path to controller.
+09:09:19.71 smoother_server Received a path to smooth.
+09:09:19.72 controller_server Passing new path to controller.
+09:09:20.43 controller_server Reached the goal!
+09:09:20.45 bt_navigator Goal succeeded
+09:09:20.46 alinhador_passagem PREPARO 1 (alinhar fora da passagem): SUCESSO
+09:09:20.47 alinhador_passagem Passagem 1 termina num cruzamento em (1.76, 0.01) com curva para a ESQUERDA: paro no cruzamento e saio de lado (sem girar)
+09:09:20.47 alinhador_passagem TRAVESSIA 1: travessia pelo LiDAR ate (1.68, -0.00) + 0.00 m
+09:09:20.78 alinhador_passagem TRAVESSIA 1: Paredes vistas (largura 0.83 m): parando na boca para alinhar
+09:09:21.84 alinhador_passagem TRAVESSIA 1: Medicao 1: girar -4.2 graus, centro a +4.9 cm, largura 0.83 m
+09:09:23.37 alinhador_passagem TRAVESSIA 1: Medicao 2: girar +0.3 graus, centro a +5.4 cm, largura 0.82 m
+09:09:25.64 alinhador_passagem TRAVESSIA 1: Medicao 3: girar +4.7 graus, centro a -1.9 cm, largura 0.82 m
+09:09:27.17 alinhador_passagem TRAVESSIA 1: Medicao 4: girar -0.7 graus, centro a -3.5 cm, largura 0.82 m
+09:09:28.94 alinhador_passagem TRAVESSIA 1: Medicao 5: girar -2.7 graus, centro a +1.8 cm, largura 0.83 m
+09:09:30.31 alinhador_passagem TRAVESSIA 1: Medicao 6: girar +0.7 graus, centro a +1.9 cm, largura 0.83 m
+09:09:30.31 alinhador_passagem TRAVESSIA 1: Alinhado: atravessando
+09:09:37.88 alinhador_passagem TRAVESSIA 1: Parei no cruzamento pelo LiDAR: parede a 15 cm do para-choque (alvo 12 cm; pelo mapa faltavam +11 cm)
+09:09:38.13 alinhador_passagem TRAVESSIA 1 (LiDAR): SUCESSO
+09:09:38.13 alinhador_passagem CURVA 1: saindo de lado para a ESQUERDA ate (1.75, 0.59) + 0.40 m
+09:09:38.13 alinhador_passagem CURVA 1: Cruzamento: saindo de lado para a ESQUERDA
+09:09:39.04 alinhador_passagem CURVA 1: Medicao: girar +1.4 graus, centro -1.4 cm a frente, 1 parede(s), para-choque a 11 cm da parede
+09:09:40.46 alinhador_passagem CURVA 1: Corrigindo parado: +4.4 graus, centro +5.5 cm
+09:09:41.32 alinhador_passagem CURVA 1: Medicao: girar +4.8 graus, centro +6.5 cm a frente, 1 parede(s), para-choque a 19 cm da parede
+09:09:42.54 alinhador_passagem CURVA 1: Medicao: girar +1.7 graus, centro +6.0 cm a frente, 1 parede(s), para-choque a 18 cm da parede
+09:09:43.76 alinhador_passagem CURVA 1: Medicao: girar +0.2 graus, centro +2.1 cm a frente, 1 parede(s), para-choque a 15 cm da parede
+09:09:46.40 alinhador_passagem CURVA 1: Corrigindo parado: +3.2 graus, centro +5.4 cm
+09:09:47.31 alinhador_passagem CURVA 1: Medicao: girar +2.8 graus, centro +5.9 cm a frente, 2 parede(s), para-choque a 19 cm da parede
+09:09:48.52 alinhador_passagem CURVA 1: Medicao: girar +3.1 graus, centro +1.4 cm a frente, 1 parede(s), para-choque a 14 cm da parede
+09:09:49.58 alinhador_passagem CURVA 1: Medicao: girar +1.8 graus, centro +1.5 cm a frente, 1 parede(s), para-choque a 14 cm da parede
+09:09:51.47 alinhador_passagem CURVA 1: Corrigindo parado: +6.1 graus, centro -4.6 cm
+09:09:52.38 alinhador_passagem CURVA 1: Medicao: girar +6.4 graus, centro -5.0 cm a frente, 1 parede(s), para-choque a 8 cm da parede
+09:09:53.44 alinhador_passagem CURVA 1: Medicao: girar +4.3 graus, centro -0.8 cm a frente, 2 parede(s), para-choque a 12 cm da parede
+09:09:54.65 alinhador_passagem CURVA 1: Medicao: girar +1.9 graus, centro -1.3 cm a frente, 1 parede(s), para-choque a 11 cm da parede
+09:09:55.51 alinhador_passagem CURVA 1: Corrigindo parado: +5.5 graus, centro -2.3 cm
+09:09:56.42 alinhador_passagem CURVA 1: Medicao: girar +5.9 graus, centro -2.3 cm a frente, 1 parede(s), para-choque a 10 cm da parede
+09:09:57.64 alinhador_passagem CURVA 1: Medicao: girar +2.3 graus, centro -3.0 cm a frente, 1 parede(s), para-choque a 9 cm da parede
+09:09:58.19 alinhador_passagem CURVA 1: Rumo saiu -5.2 graus (IMU): corrigindo parado
+09:09:59.41 alinhador_passagem CURVA 1: Medicao: girar +1.6 graus, centro -2.1 cm a frente, 2 parede(s), para-choque a 10 cm da parede
+09:10:00.83 alinhador_passagem CURVA 1: Rumo saiu -5.2 graus (IMU): corrigindo parado
+09:10:02.04 alinhador_passagem CURVA 1: Medicao: girar -1.1 graus, centro -0.9 cm a frente, 1 parede(s), para-choque a 11 cm da parede
+09:10:03.05 alinhador_passagem CURVA 1: Corrigindo parado: +1.5 graus, centro -5.0 cm
+09:10:04.11 alinhador_passagem CURVA 1: Medicao: girar +3.5 graus, centro -5.8 cm a frente, 1 parede(s)
+09:10:05.17 alinhador_passagem CURVA 1: Medicao: girar +1.0 graus, centro -5.6 cm a frente, 1 parede(s)
+09:10:05.17 alinhador_passagem CURVA 1: Saida lateral abortada: nao consegui alinhar em 8 correcoes
+09:10:05.42 alinhador_passagem CURVA 1: FALHOU - nao consegui alinhar em 8 correcoes
+09:10:05.42 alinhador_passagem Nao consegui sair de lado pelo corredor novo (curva 1). Parei; ajude o robo e mande o goal de novo.
+09:10:31.23 alinhador_passagem Novo goal: x=2.08 y=1.85 yaw=0 graus
+09:10:31.23 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+09:10:31.24 alinhador_passagem GOAL FINAL: x=2.08 y=1.85 yaw=0 graus
+09:10:31.24 bt_navigator Begin navigating from current location (1.66, 0.82) to (2.08, 1.85)
+09:10:31.26 smoother_server Received a path to smooth.
+09:10:31.27 controller_server Received a goal, begin computing control effort.
+09:10:32.30 smoother_server Received a path to smooth.
+09:10:32.37 controller_server Passing new path to controller.
+09:10:33.33 smoother_server Received a path to smooth.
+09:10:33.37 controller_server Passing new path to controller.
+09:10:34.37 smoother_server Received a path to smooth.
+09:10:34.47 controller_server Passing new path to controller.
+09:10:35.40 smoother_server Received a path to smooth.
+09:10:35.47 controller_server Passing new path to controller.
+09:10:36.45 smoother_server Received a path to smooth.
+09:10:36.47 controller_server Passing new path to controller.
+09:10:37.48 smoother_server Received a path to smooth.
+09:10:37.57 controller_server Passing new path to controller.
+09:10:38.34 alinhador_passagem Novo goal: x=1.96 y=2.58 yaw=0 graus
+09:10:38.37 alinhador_passagem Goal substituido por um novo.
+09:10:38.37 bt_navigator_navigate_to_pose_rclcpp_node Failed to get result for follow_path in node halt!
+09:10:38.37 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+09:10:38.37 bt_navigator Goal canceled
+09:10:38.37 controller_server Cancellation was successful. Stopping the robot.
+09:10:38.37 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+09:10:38.37 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+09:10:38.37 alinhador_passagem GOAL FINAL: x=1.96 y=2.58 yaw=0 graus
+09:10:38.38 bt_navigator Begin navigating from current location (1.95, 1.49) to (1.96, 2.58)
+09:10:38.40 smoother_server Received a path to smooth.
+09:10:38.42 controller_server Received a goal, begin computing control effort.
+09:10:39.44 smoother_server Received a path to smooth.
+09:10:39.52 controller_server Passing new path to controller.
+09:10:40.47 smoother_server Received a path to smooth.
+09:10:40.52 controller_server Passing new path to controller.
+09:10:41.52 smoother_server Received a path to smooth.
+09:10:41.62 controller_server Passing new path to controller.
+09:10:42.55 smoother_server Received a path to smooth.
+09:10:42.62 controller_server Passing new path to controller.
+09:10:43.58 smoother_server Received a path to smooth.
+09:10:43.62 controller_server Passing new path to controller.
+09:10:44.62 smoother_server Received a path to smooth.
+09:10:44.72 controller_server Passing new path to controller.
+09:10:45.65 smoother_server Received a path to smooth.
+09:10:45.72 controller_server Passing new path to controller.
+09:10:46.69 smoother_server Received a path to smooth.
+09:10:46.72 controller_server Passing new path to controller.
+09:10:47.73 smoother_server Received a path to smooth.
+09:10:47.82 controller_server Passing new path to controller.
+09:10:48.77 smoother_server Received a path to smooth.
+09:10:48.82 controller_server Passing new path to controller.
+09:10:49.82 smoother_server Received a path to smooth.
+09:10:49.92 controller_server Passing new path to controller.
+09:10:50.85 smoother_server Received a path to smooth.
+09:10:50.92 controller_server Passing new path to controller.
+09:10:51.89 smoother_server Received a path to smooth.
+09:10:51.92 controller_server Passing new path to controller.
+09:10:52.93 smoother_server Received a path to smooth.
+09:10:53.02 controller_server Passing new path to controller.
+09:10:53.52 controller_server Reached the goal!
+09:10:53.55 bt_navigator Goal succeeded
+09:10:53.55 alinhador_passagem GOAL FINAL: SUCESSO
+09:11:51.15 alinhador_passagem Novo goal: x=0.19 y=0.02 yaw=0 graus
+09:11:51.16 alinhador_passagem Passagem 1: entrada (1.75, 0.67), eixo -89 graus, largura no mapa 0.78 m, preparo a 0.60 m da entrada
+09:11:51.16 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=1.74 y=1.27 yaw=-89 graus
+09:11:51.16 bt_navigator Begin navigating from current location (1.97, 2.59) to (1.74, 1.27)
+09:11:51.18 smoother_server Received a path to smooth.
+09:11:51.20 controller_server Received a goal, begin computing control effort.
+09:11:52.23 smoother_server Received a path to smooth.
+09:11:52.30 controller_server Passing new path to controller.
+09:11:53.28 smoother_server Received a path to smooth.
+09:11:53.30 controller_server Passing new path to controller.
+09:11:54.31 smoother_server Received a path to smooth.
+09:11:54.40 controller_server Passing new path to controller.
+09:11:55.35 smoother_server Received a path to smooth.
+09:11:55.40 controller_server Passing new path to controller.
+09:11:56.40 smoother_server Received a path to smooth.
+09:11:56.50 controller_server Passing new path to controller.
+09:11:57.43 smoother_server Received a path to smooth.
+09:11:57.50 controller_server Passing new path to controller.
+09:11:58.48 smoother_server Received a path to smooth.
+09:11:58.50 controller_server Passing new path to controller.
+09:11:59.51 smoother_server Received a path to smooth.
+09:11:59.60 controller_server Passing new path to controller.
+09:12:00.55 smoother_server Received a path to smooth.
+09:12:00.60 controller_server Passing new path to controller.
+09:12:01.59 smoother_server Received a path to smooth.
+09:12:01.60 controller_server Passing new path to controller.
+09:12:02.46 global_costmap.global_costmap StaticLayer: Resizing costmap to 217 X 225 at 0.050000 m/pix
+09:12:02.63 smoother_server Received a path to smooth.
+09:12:02.70 controller_server Passing new path to controller.
+09:12:03.67 smoother_server Received a path to smooth.
+09:12:03.70 controller_server Passing new path to controller.
+09:12:04.46 global_costmap.global_costmap StaticLayer: Resizing costmap to 218 X 225 at 0.050000 m/pix
+09:12:04.71 smoother_server Received a path to smooth.
+09:12:04.80 controller_server Passing new path to controller.
+09:12:05.75 smoother_server Received a path to smooth.
+09:12:05.80 controller_server Passing new path to controller.
+09:12:06.71 controller_server Could not find a legal trajectory: No valid trajectories out of 344! 
+09:12:06.79 smoother_server Received a path to smooth.
+09:12:06.80 controller_server Passing new path to controller.
+09:12:07.01 controller_server Could not find a legal trajectory: No valid trajectories out of 344! 
+09:12:07.83 smoother_server Received a path to smooth.
+09:12:07.90 controller_server Passing new path to controller.
+09:12:08.61 controller_server Could not find a legal trajectory: No valid trajectories out of 344! 
+09:12:08.87 smoother_server Received a path to smooth.
+09:12:08.90 controller_server Passing new path to controller.
+09:12:09.81 controller_server Reached the goal!
+09:12:09.83 bt_navigator Goal succeeded
+09:12:09.84 alinhador_passagem PREPARO 1 (alinhar fora da passagem): SUCESSO
+09:12:09.85 alinhador_passagem Refinando preparo: 15 graus e 24 cm de diferenca
+09:12:09.85 alinhador_passagem PREPARO 1 refinado: x=1.97 y=1.21 yaw=-103 graus
+09:12:09.85 bt_navigator Begin navigating from current location (1.88, 1.36) to (1.97, 1.21)
+09:12:09.87 smoother_server Received a path to smooth.
+09:12:09.89 controller_server Received a goal, begin computing control effort.
+09:12:10.20 controller_server Could not find a legal trajectory: No valid trajectories out of 344! 
+09:12:10.92 smoother_server Received a path to smooth.
+09:12:10.99 controller_server Passing new path to controller.
+09:12:11.96 smoother_server Received a path to smooth.
+09:12:11.99 controller_server Passing new path to controller.
+09:12:12.09 controller_server Reached the goal!
+09:12:12.12 bt_navigator Goal succeeded
+09:12:12.12 alinhador_passagem PREPARO 1 refinado: SUCESSO
+09:12:12.13 alinhador_passagem Passagem 1 termina num cruzamento em (1.68, -0.02) com curva para a DIREITA: paro no cruzamento e saio de lado (sem girar)
+09:12:12.13 alinhador_passagem TRAVESSIA 1: travessia pelo LiDAR ate (1.70, 0.06) + 0.00 m
+09:12:12.48 alinhador_passagem TRAVESSIA 1: Paredes vistas (largura 0.87 m): parando na boca para alinhar
+09:12:13.55 alinhador_passagem TRAVESSIA 1: Medicao 1: girar +10.9 graus, centro a -9.0 cm, largura 0.87 m
+09:12:16.03 alinhador_passagem TRAVESSIA 1: Medicao 2: girar +4.6 graus, centro a +2.5 cm, largura 0.86 m
+09:12:17.44 alinhador_passagem TRAVESSIA 1: Medicao 3: girar -0.5 graus, centro a +2.8 cm, largura 0.87 m
+09:12:19.36 alinhador_passagem TRAVESSIA 1: Medicao 4: girar +4.6 graus, centro a -1.7 cm, largura 0.86 m
+09:12:20.78 alinhador_passagem TRAVESSIA 1: Medicao 5: girar +0.5 graus, centro a -2.5 cm, largura 0.87 m
+09:12:20.78 alinhador_passagem TRAVESSIA 1: Alinhado: atravessando
+09:12:27.34 alinhador_passagem TRAVESSIA 1: Parei no cruzamento pelo LiDAR: parede a 13 cm do para-choque (alvo 12 cm; pelo mapa faltavam +12 cm)
+09:12:27.59 alinhador_passagem TRAVESSIA 1 (LiDAR): SUCESSO
+09:12:27.60 alinhador_passagem CURVA 1: saindo de lado para a DIREITA ate (0.92, 0.04) + 0.40 m
+09:12:27.60 alinhador_passagem CURVA 1: Cruzamento: saindo de lado para a DIREITA
+09:12:28.42 alinhador_passagem CURVA 1: Medicao: girar +1.2 graus, centro -4.5 cm a frente, 1 parede(s), para-choque a 8 cm da parede
+09:12:29.48 alinhador_passagem CURVA 1: Medicao: girar +0.8 graus, centro -1.6 cm a frente, 1 parede(s), para-choque a 11 cm da parede
+09:12:31.82 alinhador_passagem CURVA 1: Corrigindo parado: -1.8 graus, centro +5.6 cm
+09:12:32.68 alinhador_passagem CURVA 1: Medicao: girar -0.6 graus, centro +6.8 cm a frente, 1 parede(s), para-choque a 19 cm da parede
+09:12:33.79 alinhador_passagem CURVA 1: Medicao: girar -0.8 graus, centro +2.9 cm a frente, 1 parede(s), para-choque a 15 cm da parede
+09:12:34.65 alinhador_passagem CURVA 1: Corrigindo parado: -3.9 graus, centro +5.4 cm
+09:12:35.56 alinhador_passagem CURVA 1: Medicao: girar -3.0 graus, centro +6.2 cm a frente, 1 parede(s), para-choque a 19 cm da parede
+09:12:36.63 alinhador_passagem CURVA 1: Medicao: girar -1.8 graus, centro +6.2 cm a frente, 1 parede(s), para-choque a 19 cm da parede
+09:12:37.89 alinhador_passagem CURVA 1: Medicao: girar -1.9 graus, centro +2.0 cm a frente, 1 parede(s), para-choque a 15 cm da parede
+09:12:38.81 alinhador_passagem CURVA 1: Corrigindo parado: -3.0 graus, centro +5.3 cm
+09:12:39.67 alinhador_passagem CURVA 1: Medicao: girar -3.4 graus, centro +5.8 cm a frente, 2 parede(s), para-choque a 17 cm da parede
+09:12:40.78 alinhador_passagem CURVA 1: Medicao: girar -1.5 graus, centro +6.1 cm a frente, 2 parede(s), para-choque a 17 cm da parede
+09:12:42.00 alinhador_passagem CURVA 1: Medicao: girar -1.7 graus, centro +0.9 cm a frente, 2 parede(s), para-choque a 12 cm da parede
+09:12:42.66 alinhador_passagem CURVA 1: Rumo saiu +5.2 graus (IMU): corrigindo parado
+09:12:43.82 alinhador_passagem CURVA 1: Medicao: girar -2.3 graus, centro +0.3 cm a frente, 2 parede(s), para-choque a 11 cm da parede
+09:12:45.65 alinhador_passagem CURVA 1: Rumo saiu +5.4 graus (IMU): corrigindo parado
+09:12:46.91 alinhador_passagem CURVA 1: Medicao: girar -3.2 graus, centro +1.4 cm a frente, 2 parede(s), para-choque a 12 cm da parede
+09:12:47.98 alinhador_passagem CURVA 1: Medicao: girar -1.0 graus, centro +2.1 cm a frente, 2 parede(s), para-choque a 13 cm da parede
+09:12:51.66 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+09:12:52.00 collision_monitor Robot to continue normal operation
+09:12:55.50 alinhador_passagem CURVA 1: Saida lateral concluida
+09:12:55.76 alinhador_passagem CURVA 1: SUCESSO
+09:12:55.76 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+09:12:55.76 alinhador_passagem GOAL FINAL: x=0.19 y=0.02 yaw=0 graus
+09:12:55.76 bt_navigator Begin navigating from current location (0.50, 0.11) to (0.19, 0.02)
+09:12:55.77 smoother_server Received a path to smooth.
+09:12:55.78 controller_server Received a goal, begin computing control effort.
+09:12:56.81 smoother_server Received a path to smooth.
+09:12:56.88 controller_server Passing new path to controller.
+09:12:57.86 smoother_server Received a path to smooth.
+09:12:57.88 controller_server Passing new path to controller.
+09:12:58.89 smoother_server Received a path to smooth.
+09:12:58.98 controller_server Passing new path to controller.
+09:12:59.93 smoother_server Received a path to smooth.
+09:12:59.98 controller_server Passing new path to controller.
+09:13:00.98 smoother_server Received a path to smooth.
+09:13:01.08 controller_server Passing new path to controller.
+09:13:02.02 smoother_server Received a path to smooth.
+09:13:02.08 controller_server Passing new path to controller.
+09:13:03.06 smoother_server Received a path to smooth.
+09:13:03.18 controller_server Passing new path to controller.
+09:13:04.11 smoother_server Received a path to smooth.
+09:13:04.18 controller_server Passing new path to controller.
+09:13:05.15 smoother_server Received a path to smooth.
+09:13:05.18 controller_server Passing new path to controller.
+09:13:06.19 smoother_server Received a path to smooth.
+09:13:06.28 controller_server Passing new path to controller.
+09:13:07.22 smoother_server Received a path to smooth.
+09:13:07.28 controller_server Passing new path to controller.
+09:13:08.26 smoother_server Received a path to smooth.
+09:13:08.28 controller_server Passing new path to controller.
+09:13:09.18 controller_server Reached the goal!
+09:13:09.21 bt_navigator Goal succeeded
+09:13:09.22 alinhador_passagem GOAL FINAL: SUCESSO
+09:13:39.51 rosbag2_recorder Topics discovery stopped.

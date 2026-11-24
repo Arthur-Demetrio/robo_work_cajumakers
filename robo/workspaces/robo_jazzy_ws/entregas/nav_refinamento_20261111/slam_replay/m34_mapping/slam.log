@@ -1,0 +1,38 @@
+[INFO] [launch]: All log files can be found below /home/marcos/.ros/log/2026-11-11-11-20-03-813650-marcos-ThinkPad-E14-Gen-2-29099
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [async_slam_toolbox_node-1]: process started with pid [29132]
+[async_slam_toolbox_node-1] [INFO] [1794406804.857892945] [slam_toolbox]: Node using stack size 40000000
+[async_slam_toolbox_node-1] [INFO] [1794406804.933070900] [slam_toolbox]: Configuring
+[async_slam_toolbox_node-1] [INFO] [1794406804.951312045] [slam_toolbox]: Using solver plugin solver_plugins::CeresSolver
+[async_slam_toolbox_node-1] [INFO] [1794406804.951668706] [slam_toolbox]: CeresSolver: Using SCHUR_JACOBI preconditioner.
+[INFO] [launch.user]: [LifecycleLaunch] Slamtoolbox node is activating.
+[async_slam_toolbox_node-1] [INFO] [1794406805.003316524] [slam_toolbox]: Activating
+[async_slam_toolbox_node-1] [WARN] [1794406823.500888169] [tf2_buffer]: Detected jump back in time. Clearing TF buffer.
+[async_slam_toolbox_node-1] Load From File /home/marcos/mapas/arena_04-11_1235.posegraph 
+[async_slam_toolbox_node-1] Mapper <- Module
+[async_slam_toolbox_node-1] Mapper <- m_pSequentialScanMatcher
+[async_slam_toolbox_node-1] Mapper <- m_pGraph
+[async_slam_toolbox_node-1] MapperGraph <- Graph; Graph <- m_Edges; Graph <- m_Vertices
+[async_slam_toolbox_node-1] MapperGraph <- m_pMapper; MapperGraph <- m_pLoopScanMatcher; MapperGraph <- m_pTraversal
+[async_slam_toolbox_node-1] Mapper <- m_pMapperSensorManager
+[async_slam_toolbox_node-1] MapperSensorManager <- m_ScanManagers; MapperSensorManager <- m_Scans
+[async_slam_toolbox_node-1] Mapper <- m_Listeners
+[async_slam_toolbox_node-1] **Finished serializing Mapper**
+[async_slam_toolbox_node-1] Load From File
+[async_slam_toolbox_node-1] **Serializing Dataset**
+[async_slam_toolbox_node-1] Dataset <- m_SensorNameLookup
+[async_slam_toolbox_node-1] Dataset <- m_Data
+[async_slam_toolbox_node-1] Dataset <- m_Lasers
+[async_slam_toolbox_node-1] Dataset <- m_pDatasetInfo
+[async_slam_toolbox_node-1] **Finished serializing Dataset**
+[async_slam_toolbox_node-1] Registering sensor: [Custom Described Lidar]
+[async_slam_toolbox_node-1] WARNING: Logging before InitGoogleLogging() is written to STDERR
+[async_slam_toolbox_node-1] W20261111 11:20:23.610323 29132 preprocessor.cc:67] Specified options.num_threads: 50 exceeds maximum available from the threading model Ceres was compiled with: 8.  Bounding to maximum number available.
+[async_slam_toolbox_node-1] [INFO] [1794406825.835970608] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1794405745.130 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] Info: clipped range threshold to be within minimum and maximum range!
+[async_slam_toolbox_node-1] Registering sensor: [Custom Described Lidar]
+[async_slam_toolbox_node-1] [INFO] [1794406889.730306825] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1794405809.158 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] W20261111 11:25:44.031265 29167 preprocessor.cc:67] Specified options.num_threads: 50 exceeds maximum available from the threading model Ceres was compiled with: 8.  Bounding to maximum number available.
+[async_slam_toolbox_node-1] W20261111 11:26:42.560573 29167 preprocessor.cc:67] Specified options.num_threads: 50 exceeds maximum available from the threading model Ceres was compiled with: 8.  Bounding to maximum number available.
+[async_slam_toolbox_node-1] [INFO] [1794407203.412650116] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1794406122.656 for reason 'discarding message because the queue is full'
+[ERROR] [async_slam_toolbox_node-1]: process has died [pid 29132, exit code -9, cmd '/opt/ros/jazzy/lib/slam_toolbox/async_slam_toolbox_node --ros-args -r __node:=slam_toolbox -r __ns:=/ --params-file /home/marcos/robo_jazzy_ws/src/robo_navigation/config/slam_mapping.yaml --params-file /tmp/launch_params_qrwfbvol'].

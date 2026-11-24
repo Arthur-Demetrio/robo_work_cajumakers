@@ -1,0 +1,3 @@
+[INFO] [1794261251.980267366] [filtro_corpo_scan]: Filtro do corpo: /scan_front -> /scan_nav
+[INFO] [1794261254.210888044] [filtro_corpo_scan]: LiDAR em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[INFO] [1794261271.930755755] [filtro_corpo_scan]: MEMORIA_PERTO: 195 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (71 guardados)

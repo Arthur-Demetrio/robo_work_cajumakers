@@ -1,0 +1,243 @@
+{
+  "500000": {
+    "success": {
+      "delta": 0.015499999999999998,
+      "scenario_bootstrap_95ci": [
+        -0.0045000000000000005,
+        0.037
+      ]
+    },
+    "collision": {
+      "delta": -0.022499999999999992,
+      "scenario_bootstrap_95ci": [
+        -0.044,
+        -0.001499999999999997
+      ]
+    }
+  },
+  "1000000": {
+    "success": {
+      "delta": -0.011000000000000001,
+      "scenario_bootstrap_95ci": [
+        -0.030500000000000003,
+        0.008750000000000003
+      ]
+    },
+    "collision": {
+      "delta": 0.016499999999999994,
+      "scenario_bootstrap_95ci": [
+        -0.0037500000000000046,
+        0.036499999999999984
+      ]
+    }
+  },
+  "paired_changes": {
+    "stage0_fixed_125000_to_6025000": {
+      "success": {
+        "delta": 0.0,
+        "scenario_bootstrap_95ci": [
+          -0.1,
+          0.1
+        ]
+      },
+      "collision": {
+        "delta": 0.0,
+        "scenario_bootstrap_95ci": [
+          -0.1,
+          0.1
+        ]
+      },
+      "reward": {
+        "delta": 2.682179719332771,
+        "scenario_bootstrap_95ci": [
+          -19.28072740582665,
+          25.4810633772965
+        ]
+      }
+    },
+    "stage0_fixed_5025000_to_6025000": {
+      "success": {
+        "delta": 0.0,
+        "scenario_bootstrap_95ci": [
+          -0.1,
+          0.1
+        ]
+      },
+      "collision": {
+        "delta": 0.0,
+        "scenario_bootstrap_95ci": [
+          -0.1,
+          0.1
+        ]
+      },
+      "reward": {
+        "delta": 2.9126083282506467,
+        "scenario_bootstrap_95ci": [
+          -19.18518525949434,
+          25.27907250073026
+        ]
+      }
+    },
+    "stage0_fixed_5525000_to_6025000": {
+      "success": {
+        "delta": 0.03333333333333333,
+        "scenario_bootstrap_95ci": [
+          0.0,
+          0.1
+        ]
+      },
+      "collision": {
+        "delta": -0.03333333333333333,
+        "scenario_bootstrap_95ci": [
+          -0.1,
+          0.0
+        ]
+      },
+      "reward": {
+        "delta": 5.934205674446322,
+        "scenario_bootstrap_95ci": [
+          -3.6515924198689365,
+          21.650627736378684
+        ]
+      }
+    },
+    "stage0_holdout_125000_to_6025000": {
+      "success": {
+        "delta": 0.03333333333333333,
+        "scenario_bootstrap_95ci": [
+          -0.06666666666666667,
+          0.13333333333333333
+        ]
+      },
+      "collision": {
+        "delta": -0.03333333333333333,
+        "scenario_bootstrap_95ci": [
+          -0.13333333333333333,
+          0.06666666666666667
+        ]
+      },
+      "reward": {
+        "delta": 9.682422764672662,
+        "scenario_bootstrap_95ci": [
+          -13.744674949166406,
+          34.42766731601377
+        ]
+      }
+    },
+    "stage0_holdout_5025000_to_6025000": {
+      "success": {
+        "delta": 0.03333333333333333,
+        "scenario_bootstrap_95ci": [
+          -0.06666666666666667,
+          0.13333333333333333
+        ]
+      },
+      "collision": {
+        "delta": -0.03333333333333333,
+        "scenario_bootstrap_95ci": [
+          -0.13333333333333333,
+          0.06666666666666667
+        ]
+      },
+      "reward": {
+        "delta": 7.777312071803404,
+        "scenario_bootstrap_95ci": [
+          -15.1675440646593,
+          31.377026447195842
+        ]
+      }
+    },
+    "stage0_holdout_5525000_to_6025000": {
+      "success": {
+        "delta": 0.06666666666666667,
+        "scenario_bootstrap_95ci": [
+          0.0,
+          0.16666666666666666
+        ]
+      },
+      "collision": {
+        "delta": -0.06666666666666667,
+        "scenario_bootstrap_95ci": [
+          -0.16666666666666666,
+          0.0
+        ]
+      },
+      "reward": {
+        "delta": 17.796154986302376,
+        "scenario_bootstrap_95ci": [
+          1.7195913577031214,
+          38.90999938971588
+        ]
+      }
+    },
+    "arena_full_125000_to_6025000": {
+      "success": {
+        "delta": 0.03333333333333333,
+        "scenario_bootstrap_95ci": [
+          0.0,
+          0.1
+        ]
+      },
+      "collision": {
+        "delta": -0.03333333333333333,
+        "scenario_bootstrap_95ci": [
+          -0.1,
+          0.0
+        ]
+      },
+      "reward": {
+        "delta": 9.275423717034426,
+        "scenario_bootstrap_95ci": [
+          -1.4545460691964591,
+          26.281492084461153
+        ]
+      }
+    },
+    "arena_full_5025000_to_6025000": {
+      "success": {
+        "delta": 0.0,
+        "scenario_bootstrap_95ci": [
+          -0.1,
+          0.1
+        ]
+      },
+      "collision": {
+        "delta": 0.0,
+        "scenario_bootstrap_95ci": [
+          -0.1,
+          0.1
+        ]
+      },
+      "reward": {
+        "delta": 2.8396788886006727,
+        "scenario_bootstrap_95ci": [
+          -18.430995900789217,
+          24.704043170953426
+        ]
+      }
+    },
+    "arena_full_5525000_to_6025000": {
+      "success": {
+        "delta": 0.0,
+        "scenario_bootstrap_95ci": [
+          -0.1,
+          0.1
+        ]
+      },
+      "collision": {
+        "delta": 0.0,
+        "scenario_bootstrap_95ci": [
+          -0.1,
+          0.1
+        ]
+      },
+      "reward": {
+        "delta": -0.6426531105911555,
+        "scenario_bootstrap_95ci": [
+          -20.924490802676118,
+          20.27408376908853
+        ]
+      }
+    }
+  }
+}

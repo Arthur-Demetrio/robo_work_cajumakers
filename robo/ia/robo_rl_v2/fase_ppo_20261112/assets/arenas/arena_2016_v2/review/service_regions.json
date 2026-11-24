@@ -1,0 +1,346 @@
+[
+  {
+    "object": "P01_ao_lado_mesa",
+    "front_status": "ESTIMATED_ACCESSIBLE_FACE_NOT_OFFICIAL",
+    "face": 3,
+    "pose": [
+      2.291066173643653,
+      1.8146189591341435,
+      1.582028313604594
+    ],
+    "approach_polygon": [
+      [
+        1.8866548633793243,
+        2.2051013430265405
+      ],
+      [
+        2.686604400898769,
+        2.2140867435421985
+      ],
+      [
+        2.6955898014144273,
+        1.4141372060227537
+      ],
+      [
+        1.8956402638949825,
+        1.4051518055070957
+      ]
+    ],
+    "approach_width_m": 0.8,
+    "exact_footprint_clear": true,
+    "orientation_component": 0,
+    "accessible": true
+  },
+  {
+    "object": "P02_base_cobertura_esquerda",
+    "front_status": "UNRESOLVED",
+    "accessible": false,
+    "reason": "No tested face has a clear 0.80 m region and reachable full-footprint pose"
+  },
+  {
+    "object": "P03_fundo_esquerdo",
+    "front_status": "UNRESOLVED",
+    "accessible": false,
+    "reason": "No tested face has a clear 0.80 m region and reachable full-footprint pose"
+  },
+  {
+    "object": "P04_centro_esquerdo",
+    "front_status": "ESTIMATED_ACCESSIBLE_FACE_NOT_OFFICIAL",
+    "face": 0,
+    "pose": [
+      1.698556144792017,
+      6.18919407152607,
+      -0.006026236872554622
+    ],
+    "approach_polygon": [
+      [
+        2.0959594526556966,
+        6.586806459284557
+      ],
+      [
+        2.0911384923370653,
+        5.786820985452935
+      ],
+      [
+        1.291153018505442,
+        5.791641945771566
+      ],
+      [
+        1.2959739788240734,
+        6.5916274196031885
+      ]
+    ],
+    "approach_width_m": 0.8,
+    "exact_footprint_clear": true,
+    "orientation_component": 0,
+    "accessible": true
+  },
+  {
+    "object": "P05_espinha_fundo",
+    "front_status": "ESTIMATED_ACCESSIBLE_FACE_NOT_OFFICIAL",
+    "face": 3,
+    "pose": [
+      2.647962519158358,
+      7.639924057788033,
+      1.5113383698592306
+    ],
+    "approach_polygon": [
+      [
+        2.27214141796866,
+        8.057995223859747
+      ],
+      [
+        3.0707277350618174,
+        8.01045687984581
+      ],
+      [
+        3.023189391047881,
+        7.211870562752654
+      ],
+      [
+        2.224603073954724,
+        7.25940890676659
+      ]
+    ],
+    "approach_width_m": 0.8,
+    "exact_footprint_clear": true,
+    "orientation_component": 0,
+    "accessible": true
+  },
+  {
+    "object": "P06_fundo_direito_1",
+    "front_status": "ESTIMATED_ACCESSIBLE_FACE_NOT_OFFICIAL",
+    "face": 3,
+    "pose": [
+      3.27333069266852,
+      10.508776979886765,
+      1.509162274380513
+    ],
+    "approach_polygon": [
+      [
+        2.898420243364759,
+        10.927664978047194
+      ],
+      [
+        3.69690122175539,
+        10.878388947887082
+      ],
+      [
+        3.6476251915952793,
+        10.079907969496452
+      ],
+      [
+        2.849144213204648,
+        10.129183999656563
+      ]
+    ],
+    "approach_width_m": 0.8,
+    "exact_footprint_clear": true,
+    "orientation_component": 0,
+    "accessible": true
+  },
+  {
+    "object": "P07_fundo_direito_2",
+    "front_status": "ESTIMATED_ACCESSIBLE_FACE_NOT_OFFICIAL",
+    "face": 3,
+    "pose": [
+      4.934342244770056,
+      10.423555813104574,
+      1.5321337590318476
+    ],
+    "approach_polygon": [
+      [
+        4.549909076233533,
+        10.833721802588062
+      ],
+      [
+        5.349311233051727,
+        10.802799453479054
+      ],
+      [
+        5.318388883942717,
+        10.003397296660859
+      ],
+      [
+        4.518986727124522,
+        10.034319645769868
+      ]
+    ],
+    "approach_width_m": 0.8,
+    "exact_footprint_clear": true,
+    "orientation_component": 0,
+    "accessible": true
+  },
+  {
+    "object": "P08_base_cobertura_direita",
+    "front_status": "UNRESOLVED",
+    "accessible": false,
+    "reason": "No tested face has a clear 0.80 m region and reachable full-footprint pose"
+  },
+  {
+    "object": "P09_centro_frontal",
+    "front_status": "ESTIMATED_ACCESSIBLE_FACE_NOT_OFFICIAL",
+    "face": 0,
+    "pose": [
+      3.9887332844392454,
+      5.212681887189599,
+      0.008459773643104582
+    ],
+    "approach_polygon": [
+      [
+        4.380335280794706,
+        5.616009144451512
+      ],
+      [
+        4.387103018983194,
+        4.816037771388817
+      ],
+      [
+        3.5871316459205005,
+        4.80927003320033
+      ],
+      [
+        3.5803639077320124,
+        5.609241406263025
+      ]
+    ],
+    "approach_width_m": 0.8,
+    "exact_footprint_clear": true,
+    "orientation_component": 0,
+    "accessible": true
+  },
+  {
+    "object": "P10_nicho_lateral_direito",
+    "front_status": "ESTIMATED_ACCESSIBLE_FACE_NOT_OFFICIAL",
+    "face": 0,
+    "pose": [
+      6.688436472781563,
+      10.922463790996055,
+      0.00411675723648245
+    ],
+    "approach_polygon": [
+      [
+        7.081786427374191,
+        11.324086515978067
+      ],
+      [
+        7.085079823860782,
+        10.524093295044551
+      ],
+      [
+        6.285086602927265,
+        10.52079989855796
+      ],
+      [
+        6.281793206440675,
+        11.320793119491476
+      ]
+    ],
+    "approach_width_m": 0.8,
+    "exact_footprint_clear": true,
+    "orientation_component": 0,
+    "accessible": true
+  },
+  {
+    "object": "P11_frente_direita",
+    "front_status": "ESTIMATED_ACCESSIBLE_FACE_NOT_OFFICIAL",
+    "face": 0,
+    "pose": [
+      6.974876748874599,
+      6.275126852781407,
+      0.0008967373926009488
+    ],
+    "approach_polygon": [
+      [
+        7.369517895148397,
+        6.675480903176432
+      ],
+      [
+        7.3702352849663315,
+        5.87548122483159
+      ],
+      [
+        6.57023560662149,
+        5.874763835013657
+      ],
+      [
+        6.569518216803556,
+        6.674763513358498
+      ]
+    ],
+    "approach_width_m": 0.8,
+    "exact_footprint_clear": true,
+    "orientation_component": 0,
+    "accessible": true
+  },
+  {
+    "object": "P12_mesa_precisao",
+    "front_status": "ESTIMATED_ACCESSIBLE_FACE_NOT_OFFICIAL",
+    "face": 0,
+    "pose": [
+      6.910910374634623,
+      7.462656931481946,
+      0.004263870697266682
+    ],
+    "approach_polygon": [
+      [
+        7.30420124086195,
+        7.864337519190834
+      ],
+      [
+        7.307612327083813,
+        7.064344791417146
+      ],
+      [
+        6.507619599310125,
+        7.060933705195283
+      ],
+      [
+        6.504208513088262,
+        7.860926432968971
+      ]
+    ],
+    "approach_width_m": 0.8,
+    "exact_footprint_clear": true,
+    "orientation_component": 0,
+    "accessible": true
+  },
+  {
+    "object": "P13_nicho_frontal",
+    "front_status": "ESTIMATED_ACCESSIBLE_FACE_NOT_OFFICIAL",
+    "face": 0,
+    "pose": [
+      6.759527584563942,
+      2.5131336671564437,
+      0.015723649620184237
+    ],
+    "approach_polygon": [
+      [
+        7.14818955633058,
+        2.9192948072258367
+      ],
+      [
+        7.16076795771213,
+        2.1193936984513306
+      ],
+      [
+        6.360866848937624,
+        2.1068152970697813
+      ],
+      [
+        6.348288447556074,
+        2.9067164058442874
+      ]
+    ],
+    "approach_width_m": 0.8,
+    "exact_footprint_clear": true,
+    "orientation_component": 0,
+    "accessible": true
+  },
+  {
+    "object": "C01_plataforma_circular",
+    "front_status": "UNRESOLVED",
+    "accessible": false,
+    "reason": "No tested face has a clear 0.80 m region and reachable full-footprint pose"
+  }
+]

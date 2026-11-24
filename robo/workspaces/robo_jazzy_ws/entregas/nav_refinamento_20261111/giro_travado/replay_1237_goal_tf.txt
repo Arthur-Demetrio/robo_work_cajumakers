@@ -1,0 +1,3 @@
+modo=atual chegou=NAO t=-1.00 ciclos_dentro_xy=60
+modo=carimbo0 chegou=SIM t=19.30 ciclos_dentro_xy=144
+modo=arvore chegou=SIM t=19.30 ciclos_dentro_xy=144

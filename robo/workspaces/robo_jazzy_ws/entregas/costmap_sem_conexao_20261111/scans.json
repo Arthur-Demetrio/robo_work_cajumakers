@@ -1,0 +1,58 @@
+{
+  "/scan_front": {
+    "frame": "laser_raw",
+    "stamp": 1794422612.8315234,
+    "tf_no_stamp": true,
+    "range_min": 0.07999999821186066,
+    "range_max": 6.0,
+    "pontos": 157,
+    "tf": [
+      0.6171760678524478,
+      -0.05813438663739509,
+      0.01836513443794908
+    ]
+  },
+  "/scan_nav": {
+    "frame": "laser_raw",
+    "stamp": 1794422612.8315234,
+    "tf_no_stamp": true,
+    "range_min": 0.019999999552965164,
+    "range_max": 6.0,
+    "pontos": 120,
+    "tf": [
+      0.6171760678524478,
+      -0.05813438663739509,
+      0.01836513443794908
+    ]
+  },
+  "footprint": {
+    "frame": "map",
+    "points": [
+      [
+        0.6562919616699219,
+        0.26263803243637085
+      ],
+      [
+        0.6682286262512207,
+        -0.3872523605823517
+      ],
+      [
+        0.07832813262939453,
+        -0.39808717370033264
+      ],
+      [
+        0.0663914605975151,
+        0.2518032193183899
+      ]
+    ]
+  },
+  "parametros": {
+    "footprint": "[[0.365, 0.315], [0.365, -0.315], [-0.205, -0.315], [-0.205, 0.315]]",
+    "footprint_padding": 0.01,
+    "robot_radius": 0.1,
+    "inflation_layer.inflation_radius": 0.55,
+    "inflation_layer.cost_scaling_factor": 5.0,
+    "obstacle_layer.scan.topic": "/scan_nav",
+    "static_layer.map_topic": ""
+  }
+}

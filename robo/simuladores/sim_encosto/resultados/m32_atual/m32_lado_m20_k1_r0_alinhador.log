@@ -1,0 +1,52 @@
+[INFO] [1794262311.256934889] [alinhador_passagem]: Alinhador pronto. Envie goals em /goal_pose_alinhado.
+[INFO] [1794262311.258854068] [alinhador_passagem]: BANCADA: gatilho /sim/encostar pronto (codigo de /home/marcos/sim_encosto/versoes/atual)
+[INFO] [1794262311.902824084] [alinhador_passagem]: Laser em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[INFO] [1794262314.965840079] [alinhador_passagem]: BANCADA: encostar WS_1
+[INFO] [1794262314.974072106] [alinhador_passagem]: ENCOSTAR WS_1: medindo a face da mesa
+[INFO] [1794262315.144873136] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: fora da referencia | ref d0.58 c+0.20 a-0g | d0.58 c+0.08 a-2g w0.61 FORA:larg
+[INFO] [1794262315.306281723] [alinhador_passagem]: ENCOSTAR WS_1: aguardando segunda observacao coerente
+[INFO] [1794262315.465012958] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.582 c+0.204 a-1.7g)
+[INFO] [1794262316.034124057] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 1: face a 22 cm (para-choque), girar -1.7 graus, centro +20.1 cm
+[INFO] [1794262316.090592035] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +20.1 cm de lado
+[INFO] [1794262319.568676326] [alinhador_passagem]: ENCOSTAR WS_1: face WS partida pela zona cega (medida) (d0.468 c+0.080 a-0.9g)
+[INFO] [1794262320.534701863] [alinhador_passagem]: ENCOSTAR WS_1: face WS parcial: so distancia/angulo (d0.442 c nd a-0.7g)
+[INFO] [1794262320.908423478] [alinhador_passagem]: ENCOSTAR WS_1: face WS partida pela zona cega (medida) (d0.442 c+0.057 a-0.5g)
+[INFO] [1794262321.071052057] [alinhador_passagem]: ENCOSTAR WS_1: face WS parcial: so distancia/angulo (d0.441 c nd a-0.7g)
+[INFO] [1794262322.232495829] [alinhador_passagem]: ENCOSTAR WS_1: face WS partida pela zona cega (medida) (d0.441 c+0.060 a-0.6g)
+[INFO] [1794262322.390586055] [alinhador_passagem]: ENCOSTAR WS_1: face WS parcial: so distancia/angulo (d0.441 c nd a-0.8g)
+[INFO] [1794262322.914791658] [alinhador_passagem]: ENCOSTAR WS_1: face WS partida pela zona cega (medida) (d0.442 c+0.064 a-0.7g)
+[INFO] [1794262323.071408840] [alinhador_passagem]: ENCOSTAR WS_1: face WS parcial: so distancia/angulo (d0.442 c nd a-0.8g)
+[INFO] [1794262323.228563395] [alinhador_passagem]: ENCOSTAR WS_1: face WS partida pela zona cega (medida) (d0.442 c+0.063 a-0.6g)
+[INFO] [1794262323.447471567] [alinhador_passagem]: ENCOSTAR WS_1: face WS parcial: so distancia/angulo (d0.442 c nd a-0.8g)
+[INFO] [1794262323.550199837] [alinhador_passagem]: ENCOSTAR WS_1: Encosto abortado: centro da face nao medido (so face parcial, sem as 2 pontas): nao alinho nem avanco
+[WARN] [1794262323.806154807] [alinhador_passagem]: ENCOSTAR WS_1: FALHOU - centro da face nao medido (so face parcial, sem as 2 pontas): nao alinho nem avanco
+[INFO] [1794262323.806891716] [alinhador_passagem]: RESULTADO: WS_1 FALHOU encosto: centro da face nao medido (so face parcial, sem as 2 pontas): nao alinho nem avanco
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/versoes/atual/alinhador_passagem.py", line 4101, in main
+    executor.spin()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 359, in spin
+    self._spin_once_impl()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 991, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 781, in _wait_for_ready_callbacks
+    wait_set.wait(timeout_nsec)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/alinhador_bancada.py", line 57, in <module>
+    alinhador_passagem.main()
+  File "/home/marcos/sim_encosto/versoes/atual/alinhador_passagem.py", line 4104, in main
+    no._parar()
+  File "/home/marcos/sim_encosto/versoes/atual/alinhador_passagem.py", line 2862, in _parar
+    self._publicar_vel(0.0, 0.0, 0.0)
+  File "/home/marcos/sim_encosto/versoes/atual/alinhador_passagem.py", line 2858, in _publicar_vel
+    (self.pub_t if self.controle_t_ativo else self.pub_cmd).publish(m)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:423

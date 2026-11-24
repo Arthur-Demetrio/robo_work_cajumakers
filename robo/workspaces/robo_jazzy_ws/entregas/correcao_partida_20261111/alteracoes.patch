@@ -1,0 +1,276 @@
+--- a/CLAUDE.md
++++ b/CLAUDE.md
+@@ -150,3 +150,9 @@
+ - `LATERAL_SEM_PULSO_M35`: no novo modo, suavizador zera eixo explicitamente pedido como zero e limita modulo ao novo pedido, evitando carregar vx anterior para lateral pura. Diagonal intencional nao e apagada. Medicao bag35: primeiro inicio lateral ja tinha vx=0,08/vy=-0,053 no DWB; nos outros 10 inicios DWB avaliados vx=0. Logo nao atribuir todos os pulsos a software nem zerar vx globalmente; deriva mecanica e slew dos motores precisam de medida independente.
+ - Build isolado robo_lidar/robo_navigation aprovado; sonda DWB real: 168 amostras de re, 4 laterais puras para cada lado. Seis cenarios nativos sem colisao; aberto/curva/yaw concluiram, caixa estatica/dinamica/quina nao concluiram (limite mantido explicito). Suite inicial afetada 178 aprovados/1 teste de mascara antiga corrigido para verificar NaN como DESCONHECIDA; selecao final 70 aprovados. Testes ROS multiprocesso seguem pendentes por DDS restrito.
+ - Nao houve restart, troca de parametros ativos ou movimento pela ferramenta. Configs/processos ja abertos nao recarregam automaticamente; novas correcoes aguardam janela autorizada. Evidencias, backup e rollback: `entregas/ajustes_missao35_20261111/`.
++
++## Correcao de partida (11/11, log 12:53)
++- Causa comprovada de configuracao ausente: launch executado com resolucao do pacote pela instalacao antiga, procurando `install/robo_navigation/share/robo_navigation/config/nav2_params_principal.yaml`, arquivo inexistente. Alinhador recebia goals, mas isso nao comprovava que Nav2 estava configurado/ativo. Nao atribuir esse sintoma apenas a falta de area.
++- `ferramentas/iniciar_nav_validada.sh` carrega overlay no mesmo processo, confere prefixo e perfil/BT e passa caminhos absolutos. Usar apos encerrar a instancia Nav2 anterior; nao executar duas instancias. Para filtro, existe `ferramentas/iniciar_filtro_validado.sh`, que tambem verifica binario e configuracao.
++- Launch agora valida existencia/sintaxe YAML/XML ANTES de iniciar qualquer no, inclusive arbitro. Config ausente causa recusa explicita, em vez de subir parcialmente com defaults. Novo coordenador registra envio, aceitacao, recusa, timeout, servidor indisponivel e status/motivo terminal.
++- Build isolado aprovado; 58 testes afetados aprovados, incluindo instalacao antiga sem perfil e abortar antes de qualquer processo. Nao reiniciamos stack nem enviamos goals. Backup, evidencias e rollback em `entregas/correcao_partida_20261111/`. Desfazer primeiro esta rodada antes do rollback missao35, para preservar a verificacao de edicoes posteriores.
+--- a/src/robo_navigation/launch/navigation.launch.py
++++ b/src/robo_navigation/launch/navigation.launch.py
+@@ -4,12 +4,30 @@
+ 
+ from ament_index_python.packages import get_package_share_directory
+ from launch import LaunchDescription
+-from launch.actions import DeclareLaunchArgument, RegisterEventHandler, TimerAction, ExecuteProcess
++from launch.actions import DeclareLaunchArgument, RegisterEventHandler, TimerAction, ExecuteProcess, OpaqueFunction
+ from launch.conditions import IfCondition
+ from launch.event_handlers import OnProcessStart
+ from launch.substitutions import LaunchConfiguration, PythonExpression
+ from launch_ros.parameter_descriptions import ParameterValue
+ from launch_ros.actions import Node
++
++
++def validar_arquivos(context):
++    """PARTIDA_VALIDADA: configuracao ausente aborta ANTES de iniciar qualquer no."""
++    import yaml
++    import xml.etree.ElementTree as ET
++    for argumento in ('params_file', 'bt_xml'):
++        path = LaunchConfiguration(argumento).perform(context)
++        if not os.path.isfile(path):
++            raise RuntimeError('RECUSADO: %s ausente: %s. Use iniciar_nav_validada.sh ou carregue '
++                               'install_nav2_principal/setup.bash no mesmo terminal.' % (argumento,path))
++        if argumento == 'params_file':
++            with open(path) as f:
++                if not isinstance(yaml.safe_load(f), dict):
++                    raise RuntimeError('RECUSADO: YAML de navegacao vazio/invalido: '+path)
++        else:
++            ET.parse(path)
++    return []
+ 
+ 
+ def generate_launch_description():
+@@ -103,8 +121,6 @@
+         [
+             DeclareLaunchArgument('nav2_principal', default_value='false', choices=['true', 'false']),
+             DeclareLaunchArgument('bt_xml', default_value=PythonExpression(["'", os.path.join(get_package_share_directory('robo_navigation'), 'behavior_trees', 'navigate_to_pose_principal.xml'), "' if '", principal, "'.lower() == 'true' else '", default_nav_to_pose_bt_xml, "'"])),
+-            ExecuteProcess(cmd=['python3', os.path.expanduser('~/robo_jazzy_ws/src/robo_navigation/scripts/arbitro_nav_principal.py')],
+-                           condition=IfCondition(principal), output='screen'),
+             DeclareLaunchArgument("limite_vel_angular_real_t", default_value="-1.0"),
+             DeclareLaunchArgument("limite_vel_linear_real_t", default_value="-1.0"),
+             DeclareLaunchArgument("modo_curva_t", default_value="lateral",
+@@ -124,6 +140,9 @@
+                 default_value=PythonExpression(["'", os.path.join(get_package_share_directory('robo_navigation'), 'config', 'nav2_params_principal.yaml'), "' if '", principal, "'.lower() == 'true' else '", default_params_file, "'"]),
+                 description="Arquivo de parametros do Nav2",
+             ),
++            OpaqueFunction(function=validar_arquivos),
++            ExecuteProcess(cmd=['python3', os.path.expanduser('~/robo_jazzy_ws/src/robo_navigation/scripts/arbitro_nav_principal.py')],
++                           condition=IfCondition(principal), output='screen'),
+             Node(
+                 package="nav2_controller",
+                 executable="controller_server",
+--- a/src/robo_navigation/scripts/alinhador_passagem.py
++++ b/src/robo_navigation/scripts/alinhador_passagem.py
+@@ -4065,13 +4065,18 @@
+             self.dono_mov = dono
+             self._heartbeat_mov()
+ 
++        def _log_nav_principal(self, nivel, mensagem):
++            getattr(self.get_logger(), nivel)('NAV2_PRINCIPAL: '+mensagem)
++
+         def _navegar_principal(self, alvo, nome, vigia=None):
+             # Sem pre-giro, atalho, anti-ciscado paralelo ou reenviar falha autonoma.
+             self._autoridade_mov('nav2')
+             if not self.nav.wait_for_server(timeout_sec=5.0):
++                self._log_nav_principal('error', 'navigate_to_pose indisponivel; verifique configuracao/lifecycle do Nav2')
+                 return 'falha'
+             if self._novo_goal_chegou():
+                 raise Cancelado()
++            self._log_nav_principal('info', 'enviando goal ao Nav2')
+             req = NavigateToPose.Goal(); req.pose = alvo
+             self.nav_pendente = self.nav.send_goal_async(req)
+             def cancelar_tardio(f):
+@@ -4082,10 +4087,13 @@
+             try:
+                 h = self._esperar(self.nav_pendente, 5.0)
+                 if h is None:
++                    self._log_nav_principal('error', 'Nav2 nao confirmou recebimento do goal em 5 s')
+                     return 'falha'
+                 self.nav_pendente = None
+                 if not h.accepted:
++                    self._log_nav_principal('error', 'goal RECUSADO pelo Nav2; confira bt_navigator ativo')
+                     return 'falha'
++                self._log_nav_principal('info', 'goal aceito pelo Nav2')
+                 self.handle_ativo = h
+                 self.nav_resultado = h.get_result_async()
+                 proxima = time.monotonic() + self.p('periodo_vigia')
+@@ -4098,6 +4106,9 @@
+                         # no plano DESTE goal; cancelado/preemptado nunca aciona manobra.
+                         if r.status == GoalStatus.STATUS_ABORTED and not self._novo_goal_chegou() and vigia and vigia():
+                             return 'interrompido'
++                        payload = getattr(r, 'result', None)
++                        self._log_nav_principal('warn', 'goal terminou: status=%s codigo=%s motivo=%s' % (
++                            r.status, getattr(payload, 'error_code', '?'), getattr(payload, 'error_msg', '')))
+                         return 'falha'
+                     if vigia and time.monotonic() >= proxima:
+                         proxima = time.monotonic() + self.p('periodo_vigia')
+--- a/src/robo_navigation/test/test_nav2_principal.py
++++ b/src/robo_navigation/test/test_nav2_principal.py
+@@ -50,7 +50,7 @@
+ 
+ def fake_exec():
+     calls=[]
+-    f=NS(p=lambda k:{'max_passagens':4}[k],sem_encosto={'FINISH'},lock=threading.Lock(),dono_mov=None)
++    f=NS(_log_nav_principal=lambda *a:None,p=lambda k:{'max_passagens':4}[k],sem_encosto={'FINISH'},lock=threading.Lock(),dono_mov=None)
+     f._drenar_nav=lambda:calls.append('terminal')
+     f._parar=lambda:calls.append('zero')
+     f._autoridade_mov=lambda d:(calls.append(d),setattr(f,'dono_mov',d))
+@@ -107,7 +107,7 @@
+ def test_cancelamento_espera_terminal_antes_de_nova_autoridade():
+     calls=[];result=Future(NS(status=5),False)
+     h=NS(cancel_goal_async=lambda:(calls.append('cancel'),setattr(result,'ready',True)))
+-    f=NS(nav_pendente=None,handle_ativo=h,nav_resultado=result,dono_mov='nav2')
++    f=NS(_log_nav_principal=lambda *a:None,nav_pendente=None,handle_ativo=h,nav_resultado=result,dono_mov='nav2')
+     metodo('_drenar_nav')(f)
+     assert calls==['cancel'] and f.handle_ativo is None and f.nav_resultado is None
+ 
+@@ -115,14 +115,14 @@
+ def test_aceitacao_tardia_nao_permite_takeover(monkeypatch):
+     clock=iter([0,10]);fn=metodo('_drenar_nav')
+     fn.__globals__['time']=NS(monotonic=lambda:next(clock),sleep=lambda s:None)
+-    f=NS(nav_pendente=Future(done=False),handle_ativo=None,nav_resultado=None,dono_mov='nav2')
++    f=NS(_log_nav_principal=lambda *a:None,nav_pendente=Future(done=False),handle_ativo=None,nav_resultado=None,dono_mov='nav2')
+     with pytest.raises(RuntimeError,match='aceitacao'):fn(f)
+     assert f.dono_mov is None and f.nav_pendente is not None
+ 
+ 
+ def test_novo_goal_durante_aceitacao_cancela_e_drena():
+     calls=[];h=NS(accepted=True,cancel_goal_async=lambda:calls.append('cancel'))
+-    f=NS(_autoridade_mov=lambda d:None,nav=NS(wait_for_server=lambda **k:True,
++    f=NS(_log_nav_principal=lambda *a:None,_autoridade_mov=lambda d:None,nav=NS(wait_for_server=lambda **k:True,
+         send_goal_async=lambda req:Future(h)),_novo_goal_chegou=lambda:False,
+         dono_mov='nav2',_drenar_nav=lambda:calls.append('drenar'))
+     def espera(futuro,limite):raise InterruptedError()
+@@ -174,7 +174,7 @@
+ def test_nav2_real_metodo_sem_pre_giro_reenvio_ou_yaw_alterado():
+     calls=[];goal=object();result=Future(NS(status=4))
+     h=NS(accepted=True,get_result_async=lambda:result)
+-    f=NS(_autoridade_mov=lambda d:calls.append(('autoridade',d)),
++    f=NS(_log_nav_principal=lambda *a:None,_autoridade_mov=lambda d:calls.append(('autoridade',d)),
+         nav=NS(wait_for_server=lambda **k:True,send_goal_async=lambda req:(calls.append(('goal',req.pose)),Future(h))[1]),
+         _novo_goal_chegou=lambda:False,dono_mov='nav2',_esperar=lambda fut,t:fut.result(),
+         p=lambda k:1,_drenar_nav=lambda:calls.append('terminal'))
+@@ -192,7 +192,7 @@
+ 
+ def test_novo_goal_bloqueia_comando_especial_antes_da_publicacao():
+     calls=[]
+-    f=NS(p=lambda k:True,_novo_goal_chegou=lambda:True,
++    f=NS(_log_nav_principal=lambda *a:None,p=lambda k:True,_novo_goal_chegou=lambda:True,
+          _autoridade_mov=lambda d:calls.append('autoridade'),
+          pub_cmd=NS(publish=lambda m:calls.append('movimento')))
+     with pytest.raises(InterruptedError):metodo('_publicar_vel')(f,.03,0,0)
+@@ -205,7 +205,7 @@
+     def mono():clock[0]+=1;return clock[0]
+     fn.__globals__['time']=NS(monotonic=mono)
+     h=NS(accepted=True,get_result_async=lambda:Future(done=False))
+-    f=NS(_autoridade_mov=lambda d:calls.append(d),dono_mov='nav2',
++    f=NS(_log_nav_principal=lambda *a:None,_autoridade_mov=lambda d:calls.append(d),dono_mov='nav2',
+         nav=NS(wait_for_server=lambda **k:True,send_goal_async=lambda req:Future(h)),
+         _novo_goal_chegou=lambda:False,p=lambda k:.1,
+         _drenar_nav=lambda:calls.append('terminal'))
+--- a/src/robo_navigation/test/test_ajustes_missao35.py
++++ b/src/robo_navigation/test/test_ajustes_missao35.py
+@@ -85,7 +85,7 @@
+     def novo():
+         count[0]+=1
+         return preempt if count[0]>=3 else False
+-    f=NS(_autoridade_mov=lambda d:None,dono_mov='nav2',
++    f=NS(_log_nav_principal=lambda *a:None,_autoridade_mov=lambda d:None,dono_mov='nav2',
+          nav=NS(wait_for_server=lambda **k:True,send_goal_async=lambda req:Future(h)),
+          _novo_goal_chegou=novo,_esperar=lambda fut,t:fut.result(),p=lambda k:1,
+          _drenar_nav=lambda:calls.append('terminal'))
+@@ -99,7 +99,7 @@
+     source.angle_increment=.01;source.range_min=.146;source.range_max=5.8
+     source.ranges=[.40,1.5];source.intensities=[1.0,2.0]
+     result=[]
+-    f=NS(invert_angles=False,force_out_of_range=True,body_filter_enabled=True,
++    f=NS(_log_nav_principal=lambda *a:None,invert_angles=False,force_out_of_range=True,body_filter_enabled=True,
+          body_laser=(.33,.005,0),blocked_intervals=[],publisher=NS(publish=lambda m:result.append(m)))
+     lidar().ScanFilterNode.scan_callback(f,source)
+     assert len(result)==1
+--- /dev/null
++++ b/ferramentas/iniciar_nav_validada.sh
+@@ -0,0 +1,26 @@
++#!/usr/bin/env bash
++# Partida manual, sem goals. Encerrar a instancia anterior do Nav2 antes de executar.
++set -eo pipefail
++WS=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
++source /opt/ros/jazzy/setup.bash
++source "$WS/install_nav2_principal/setup.bash"
++ESPERADO="$WS/install_nav2_principal/robo_navigation"
++RESOLVIDO=$(ros2 pkg prefix robo_navigation)
++if [ "$(realpath "$RESOLVIDO")" != "$(realpath "$ESPERADO")" ]; then
++    echo "RECUSADO: robo_navigation veio de $RESOLVIDO, esperado $ESPERADO" >&2
++    exit 1
++fi
++SHARE="$RESOLVIDO/share/robo_navigation"
++CFG="$SHARE/config/nav2_params_principal.yaml"
++BT="$SHARE/behavior_trees/navigate_to_pose_principal.xml"
++python3 - "$CFG" "$BT" <<'PY'
++import sys,yaml,xml.etree.ElementTree as ET
++p=yaml.safe_load(open(sys.argv[1]))
++assert p['controller_server']['ros__parameters']['FollowPath']['plugin']=='dwb_core::DWBLocalPlanner'
++assert p['controller_server']['ros__parameters']['FollowPath']['min_vel_x']==-.10
++assert 'forward_veloz' not in p['collision_monitor']['ros__parameters']['VelocityPolygonStop']
++t=ET.parse(sys.argv[2]);assert t.find('.//CaminhoSemCarimbo') is not None
++assert len(list(t.iter('SmoothPath')))==2
++PY
++printf 'Nav2 validado: %s\nParametros: %s\nArvore: %s\n' "$RESOLVIDO" "$CFG" "$BT"
++exec ros2 launch "$SHARE/launch/navigation.launch.py" nav2_principal:=true "params_file:=$CFG" "bt_xml:=$BT"
+--- /dev/null
++++ b/src/robo_navigation/test/test_partida_validada.py
+@@ -0,0 +1,50 @@
++"""Partida fail-closed; resolve arquivos em memoria sem executar processos."""
++import importlib.util
++from pathlib import Path
++from types import SimpleNamespace as NS
++import pytest
++from launch import LaunchContext
++from launch.actions import DeclareLaunchArgument,OpaqueFunction,ExecuteProcess
++from launch_ros.actions import Node
++from test_nav2_principal import metodo
++NAV=Path(__file__).resolve().parents[1]
++
++
++def load(share):
++    spec=importlib.util.spec_from_file_location('partida_nav',NAV/'launch/navigation.launch.py')
++    m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
++    m.get_package_share_directory=lambda _:str(share)
++    return m
++
++
++def context(m):
++    d=m.generate_launch_description();ctx=LaunchContext();ctx.launch_configurations['nav2_principal']='true'
++    for a in d.entities:
++        if isinstance(a,DeclareLaunchArgument):a.execute(ctx)
++    return ctx,d
++
++
++def test_instalacao_antiga_sem_perfil_recusa_antes_de_subir_no(tmp_path):
++    m=load(tmp_path);ctx,d=context(m)
++    with pytest.raises(RuntimeError,match='params_file ausente'):m.validar_arquivos(ctx)
++    validator=next(i for i,a in enumerate(d.entities) if isinstance(a,OpaqueFunction))
++    assert all(not isinstance(a,(Node,ExecuteProcess)) for a in d.entities[:validator])
++
++
++def test_perfil_e_arvore_existentes_aprovam_sem_iniciar_nos():
++    m=load(NAV);ctx,d=context(m)
++    assert m.validar_arquivos(ctx)==[]
++
++
++@pytest.mark.parametrize('argumento',['params_file','bt_xml'])
++def test_override_inexistente_nao_continua_com_defaults(tmp_path,argumento):
++    m=load(NAV);ctx,d=context(m);ctx.launch_configurations[argumento]=str(tmp_path/'inexistente')
++    with pytest.raises(RuntimeError,match=argumento+' ausente'):m.validar_arquivos(ctx)
++
++
++def test_nav2_indisponivel_exibe_motivo_em_vez_de_silencio():
++    logs=[]
++    f=NS(_autoridade_mov=lambda d:None,nav=NS(wait_for_server=lambda **k:False),
++         _log_nav_principal=lambda *a:logs.append(a))
++    assert metodo('_navegar_principal')(f,object(),'goal')=='falha'
++    assert logs and logs[0][0]=='error' and 'indisponivel' in logs[0][1]

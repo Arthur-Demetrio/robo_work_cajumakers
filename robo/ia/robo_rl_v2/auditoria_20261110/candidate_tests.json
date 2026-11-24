@@ -1,0 +1,9 @@
+{
+  "reject_outside": true,
+  "reject_wall": true,
+  "valid_box": true,
+  "reject_overlapping_box": true,
+  "reversal_expected_velocity": true,
+  "reversal_velocity_value": 0.028,
+  "50_valid_resets": true
+}

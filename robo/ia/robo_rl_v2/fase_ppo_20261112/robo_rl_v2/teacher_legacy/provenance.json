@@ -1,0 +1,290 @@
+{
+  "files": {
+    "scripts/alinhador_passagem.py": {
+      "source": "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py",
+      "snapshot": "alinhador_passagem.py",
+      "sha256": "d905fb5358c327b88fa6be25576f5a3cdbc522902e64e4e0403431e16a0f0cd4"
+    },
+    "scripts/face_ws.py": {
+      "source": "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/face_ws.py",
+      "snapshot": "face_ws.py",
+      "sha256": "674eb72ad95a04bdc2547776abf1d7f9c151ef91f5a05edb834f7cae163324ec"
+    },
+    "scripts/giro_frontal.py": {
+      "source": "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/giro_frontal.py",
+      "snapshot": "giro_frontal.py",
+      "sha256": "d52f0d0ddbed4b61d2edf99678816f4fdccc5567e70036198ffac40a326768db"
+    },
+    "behavior_trees/navigate_to_pose_smooth.xml": {
+      "source": "/home/marcos/robo_jazzy_ws/src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml",
+      "snapshot": "navigate_to_pose_smooth.xml",
+      "sha256": "f14cff11e5607df265fa2fb107ff6bab72cc7cc835ff842921dbe38228fa1476"
+    },
+    "launch/navigation.launch.py": {
+      "source": "/home/marcos/robo_jazzy_ws/src/robo_navigation/launch/navigation.launch.py",
+      "snapshot": "navigation.launch.py",
+      "sha256": "e45cf573ef011a504bb26a0a32bc61f9cc23c1b5dae0b1062cb12222f9a184bf"
+    },
+    "config/nav2_params.yaml": {
+      "source": "/home/marcos/robo_jazzy_ws/src/robo_navigation/config/nav2_params.yaml",
+      "snapshot": "nav2_params.yaml",
+      "sha256": "a8c770f54f5f232298a4bd08891c481e6a370f726cd31adb8bc0ed6c305821d7"
+    }
+  },
+  "tree_nodes": [
+    {
+      "type": "root",
+      "attributes": {
+        "BTCPP_format": "4",
+        "main_tree_to_execute": "MainTree"
+      }
+    },
+    {
+      "type": "BehaviorTree",
+      "attributes": {
+        "ID": "MainTree"
+      }
+    },
+    {
+      "type": "RecoveryNode",
+      "attributes": {
+        "number_of_retries": "4",
+        "name": "NavigateRecovery"
+      }
+    },
+    {
+      "type": "PipelineSequence",
+      "attributes": {
+        "name": "NavigateWithReplanning"
+      }
+    },
+    {
+      "type": "ControllerSelector",
+      "attributes": {
+        "selected_controller": "{selected_controller}",
+        "default_controller": "FollowPath",
+        "topic_name": "controller_selector"
+      }
+    },
+    {
+      "type": "PlannerSelector",
+      "attributes": {
+        "selected_planner": "{selected_planner}",
+        "default_planner": "GridBased",
+        "topic_name": "planner_selector"
+      }
+    },
+    {
+      "type": "RateController",
+      "attributes": {
+        "hz": "1.0"
+      }
+    },
+    {
+      "type": "RecoveryNode",
+      "attributes": {
+        "number_of_retries": "1",
+        "name": "ComputePathToPose"
+      }
+    },
+    {
+      "type": "Fallback",
+      "attributes": {
+        "name": "ManterCaminho"
+      }
+    },
+    {
+      "type": "ReactiveSequence",
+      "attributes": {
+        "name": "CaminhoAtualServe"
+      }
+    },
+    {
+      "type": "Inverter",
+      "attributes": {}
+    },
+    {
+      "type": "GlobalUpdatedGoal",
+      "attributes": {}
+    },
+    {
+      "type": "Inverter",
+      "attributes": {}
+    },
+    {
+      "type": "PathExpiringTimer",
+      "attributes": {
+        "seconds": "15",
+        "path": "{path}"
+      }
+    },
+    {
+      "type": "IsPathValid",
+      "attributes": {
+        "path": "{smoothed_path}"
+      }
+    },
+    {
+      "type": "Sequence",
+      "attributes": {
+        "name": "ComputeAndSmoothPath"
+      }
+    },
+    {
+      "type": "ComputePathToPose",
+      "attributes": {
+        "goal": "{goal}",
+        "path": "{path}",
+        "planner_id": "{selected_planner}",
+        "error_code_id": "{compute_path_error_code}"
+      }
+    },
+    {
+      "type": "SmoothPath",
+      "attributes": {
+        "unsmoothed_path": "{path}",
+        "smoothed_path": "{smoothed_path}",
+        "smoother_id": "simple_smoother",
+        "max_smoothing_duration": "2.0",
+        "check_for_collisions": "false",
+        "error_code_id": "{smoothing_path_error_code}"
+      }
+    },
+    {
+      "type": "Sequence",
+      "attributes": {}
+    },
+    {
+      "type": "WouldAPlannerRecoveryHelp",
+      "attributes": {
+        "error_code": "{compute_path_error_code}"
+      }
+    },
+    {
+      "type": "ClearEntireCostmap",
+      "attributes": {
+        "name": "ClearGlobalCostmap-Context",
+        "service_name": "global_costmap/clear_entirely_global_costmap"
+      }
+    },
+    {
+      "type": "RecoveryNode",
+      "attributes": {
+        "number_of_retries": "0",
+        "name": "FollowPath"
+      }
+    },
+    {
+      "type": "FollowPath",
+      "attributes": {
+        "path": "{smoothed_path}",
+        "controller_id": "{selected_controller}",
+        "error_code_id": "{follow_path_error_code}"
+      }
+    },
+    {
+      "type": "Sequence",
+      "attributes": {}
+    },
+    {
+      "type": "WouldAControllerRecoveryHelp",
+      "attributes": {
+        "error_code": "{follow_path_error_code}"
+      }
+    },
+    {
+      "type": "ClearEntireCostmap",
+      "attributes": {
+        "name": "ClearLocalCostmap-Context",
+        "service_name": "local_costmap/clear_entirely_local_costmap"
+      }
+    },
+    {
+      "type": "Sequence",
+      "attributes": {}
+    },
+    {
+      "type": "Fallback",
+      "attributes": {}
+    },
+    {
+      "type": "WouldAControllerRecoveryHelp",
+      "attributes": {
+        "error_code": "{follow_path_error_code}"
+      }
+    },
+    {
+      "type": "WouldAPlannerRecoveryHelp",
+      "attributes": {
+        "error_code": "{compute_path_error_code}"
+      }
+    },
+    {
+      "type": "ReactiveFallback",
+      "attributes": {
+        "name": "RecoveryFallback"
+      }
+    },
+    {
+      "type": "GoalUpdated",
+      "attributes": {}
+    },
+    {
+      "type": "RoundRobin",
+      "attributes": {
+        "name": "RecoveryActions"
+      }
+    },
+    {
+      "type": "DriveOnHeading",
+      "attributes": {
+        "server_name": "destravar",
+        "dist_to_travel": "0.15",
+        "speed": "0.03",
+        "time_allowance": "8.0",
+        "error_code_id": "{destravar_code_id}"
+      }
+    },
+    {
+      "type": "Sequence",
+      "attributes": {
+        "name": "ClearingActions"
+      }
+    },
+    {
+      "type": "ClearEntireCostmap",
+      "attributes": {
+        "name": "ClearLocalCostmap-Subtree",
+        "service_name": "local_costmap/clear_entirely_local_costmap"
+      }
+    },
+    {
+      "type": "ClearEntireCostmap",
+      "attributes": {
+        "name": "ClearGlobalCostmap-Subtree",
+        "service_name": "global_costmap/clear_entirely_global_costmap"
+      }
+    },
+    {
+      "type": "DriveOnHeading",
+      "attributes": {
+        "server_name": "destravar",
+        "dist_to_travel": "0.25",
+        "speed": "0.03",
+        "time_allowance": "10.0",
+        "error_code_id": "{destravar_code_id}"
+      }
+    },
+    {
+      "type": "Spin",
+      "attributes": {
+        "server_name": "smart_spin",
+        "spin_dist": "0.70",
+        "time_allowance": "12.0",
+        "error_code_id": "{spin_error_code}"
+      }
+    }
+  ],
+  "selection_evidence": "navigation.launch.py default_nav_to_pose_bt_xml and ExecuteProcess alignment script; installed XML resolves to source",
+  "ros_runtime_overrides_verified": false
+}

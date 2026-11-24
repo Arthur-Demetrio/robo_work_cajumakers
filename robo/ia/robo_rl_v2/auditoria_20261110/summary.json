@@ -1,0 +1,344 @@
+{
+  "results": {
+    "300000": {
+      "all": {
+        "n": 120,
+        "success": 27,
+        "collision": 64,
+        "timeout": 29,
+        "success_ci95": [
+          0.1594905146581338,
+          0.3075706344226275
+        ],
+        "median_est_error": 0.38767748408525515,
+        "mean_reward": -26.97683511902653
+      },
+      "level_1": {
+        "n": 24,
+        "success": 11,
+        "collision": 0,
+        "timeout": 13,
+        "success_ci95": [
+          0.2789105835168143,
+          0.6492544644689336
+        ],
+        "median_est_error": 0.7005527367271103,
+        "mean_reward": 39.39026377046715
+      },
+      "level_2": {
+        "n": 24,
+        "success": 3,
+        "collision": 18,
+        "timeout": 3,
+        "success_ci95": [
+          0.04344255039315584,
+          0.3100428814785757
+        ],
+        "median_est_error": 0.2631034102044245,
+        "mean_reward": -41.46385439782776
+      },
+      "level_3": {
+        "n": 24,
+        "success": 8,
+        "collision": 8,
+        "timeout": 8,
+        "success_ci95": [
+          0.17971978688379642,
+          0.5329404050591954
+        ],
+        "median_est_error": 0.63731095724404,
+        "mean_reward": 6.774178937640829
+      },
+      "level_4": {
+        "n": 24,
+        "success": 3,
+        "collision": 21,
+        "timeout": 0,
+        "success_ci95": [
+          0.04344255039315584,
+          0.3100428814785757
+        ],
+        "median_est_error": 0.09348567450052966,
+        "mean_reward": -73.0388880278839
+      },
+      "level_5": {
+        "n": 24,
+        "success": 2,
+        "collision": 17,
+        "timeout": 5,
+        "success_ci95": [
+          0.023158327842973503,
+          0.258492152014506
+        ],
+        "median_est_error": 1.2326481665822908,
+        "mean_reward": -66.54587587752896
+      }
+    },
+    "1100000": {
+      "all": {
+        "n": 120,
+        "success": 23,
+        "collision": 59,
+        "timeout": 38,
+        "success_ci95": [
+          0.13124933052612614,
+          0.2712131699583638
+        ],
+        "median_est_error": 1.7486806738695662,
+        "mean_reward": -37.30992852243738
+      },
+      "level_1": {
+        "n": 24,
+        "success": 6,
+        "collision": 0,
+        "timeout": 18,
+        "success_ci95": [
+          0.1199920347934233,
+          0.4489982531210644
+        ],
+        "median_est_error": 3.2145005281530934,
+        "mean_reward": -5.159702871822027
+      },
+      "level_2": {
+        "n": 24,
+        "success": 0,
+        "collision": 16,
+        "timeout": 8,
+        "success_ci95": [
+          0.0,
+          0.13798057582897535
+        ],
+        "median_est_error": 2.5359407505479323,
+        "mean_reward": -68.1535187557538
+      },
+      "level_3": {
+        "n": 24,
+        "success": 5,
+        "collision": 12,
+        "timeout": 7,
+        "success_ci95": [
+          0.0924468910478809,
+          0.40470844485235474
+        ],
+        "median_est_error": 3.1191478957915018,
+        "mean_reward": -37.31213102817289
+      },
+      "level_4": {
+        "n": 24,
+        "success": 8,
+        "collision": 16,
+        "timeout": 0,
+        "success_ci95": [
+          0.17971978688379642,
+          0.5329404050591954
+        ],
+        "median_est_error": 0.30790965183156244,
+        "mean_reward": -31.66597623700244
+      },
+      "level_5": {
+        "n": 24,
+        "success": 4,
+        "collision": 15,
+        "timeout": 5,
+        "success_ci95": [
+          0.06678568000728924,
+          0.3585347038786943
+        ],
+        "median_est_error": 1.407278007741019,
+        "mean_reward": -44.25831371943574
+      }
+    },
+    "best_1175000": {
+      "all": {
+        "n": 120,
+        "success": 11,
+        "collision": 49,
+        "timeout": 60,
+        "success_ci95": [
+          0.0519566467894248,
+          0.15670990790625097
+        ],
+        "median_est_error": 2.749965873141103,
+        "mean_reward": -57.75764318923022
+      },
+      "level_1": {
+        "n": 24,
+        "success": 2,
+        "collision": 0,
+        "timeout": 22,
+        "success_ci95": [
+          0.023158327842973503,
+          0.258492152014506
+        ],
+        "median_est_error": 4.555471861667652,
+        "mean_reward": -39.48156440311157
+      },
+      "level_2": {
+        "n": 24,
+        "success": 0,
+        "collision": 6,
+        "timeout": 18,
+        "success_ci95": [
+          0.0,
+          0.13798057582897535
+        ],
+        "median_est_error": 4.148342624564862,
+        "mean_reward": -49.02986181075844
+      },
+      "level_3": {
+        "n": 24,
+        "success": 5,
+        "collision": 7,
+        "timeout": 12,
+        "success_ci95": [
+          0.0924468910478809,
+          0.40470844485235474
+        ],
+        "median_est_error": 2.6668081347963652,
+        "mean_reward": -34.124452371980524
+      },
+      "level_4": {
+        "n": 24,
+        "success": 4,
+        "collision": 20,
+        "timeout": 0,
+        "success_ci95": [
+          0.06678568000728924,
+          0.3585347038786943
+        ],
+        "median_est_error": 0.7354319586854687,
+        "mean_reward": -76.14441049950979
+      },
+      "level_5": {
+        "n": 24,
+        "success": 0,
+        "collision": 16,
+        "timeout": 8,
+        "success_ci95": [
+          0.0,
+          0.13798057582897535
+        ],
+        "median_est_error": 2.541285013044376,
+        "mean_reward": -90.00792686079079
+      }
+    },
+    "2000384": {
+      "all": {
+        "n": 120,
+        "success": 28,
+        "collision": 51,
+        "timeout": 41,
+        "success_ci95": [
+          0.16665469513089648,
+          0.31655611609893264
+        ],
+        "median_est_error": 2.1114941026653877,
+        "mean_reward": -27.79718460447444
+      },
+      "level_1": {
+        "n": 24,
+        "success": 10,
+        "collision": 1,
+        "timeout": 13,
+        "success_ci95": [
+          0.24467347246538232,
+          0.6116566235061137
+        ],
+        "median_est_error": 3.0914413074882265,
+        "mean_reward": 16.902619252706657
+      },
+      "level_2": {
+        "n": 24,
+        "success": 2,
+        "collision": 12,
+        "timeout": 10,
+        "success_ci95": [
+          0.023158327842973503,
+          0.258492152014506
+        ],
+        "median_est_error": 3.2259611558842796,
+        "mean_reward": -46.06878806942075
+      },
+      "level_3": {
+        "n": 24,
+        "success": 4,
+        "collision": 8,
+        "timeout": 12,
+        "success_ci95": [
+          0.06678568000728924,
+          0.3585347038786943
+        ],
+        "median_est_error": 3.1603296495107687,
+        "mean_reward": -29.821096362620565
+      },
+      "level_4": {
+        "n": 24,
+        "success": 5,
+        "collision": 19,
+        "timeout": 0,
+        "success_ci95": [
+          0.0924468910478809,
+          0.40470844485235474
+        ],
+        "median_est_error": 0.42001616602676206,
+        "mean_reward": -62.79196928911781
+      },
+      "level_5": {
+        "n": 24,
+        "success": 7,
+        "collision": 11,
+        "timeout": 6,
+        "success_ci95": [
+          0.14914460334164278,
+          0.49168063658709704
+        ],
+        "median_est_error": 1.8781907187198155,
+        "mean_reward": -17.206688553919733
+      },
+      "viewer": {
+        "n": 8,
+        "success": 2,
+        "collision": 6,
+        "timeout": 0,
+        "success_ci95": [
+          0.07147768885802763,
+          0.5907301208974108
+        ],
+        "median_est_error": 0.7429357254146974,
+        "mean_reward": -55.44200783524033
+      }
+    }
+  },
+  "paired": {
+    "300000": {
+      "success_change": 0.008333333333333333,
+      "ci95": [
+        -0.075,
+        0.09166666666666666
+      ],
+      "gained": 13,
+      "lost": 12,
+      "mcnemar_exact_p": 1.0
+    },
+    "1100000": {
+      "success_change": 0.041666666666666664,
+      "ci95": [
+        -0.025,
+        0.10833333333333334
+      ],
+      "gained": 12,
+      "lost": 7,
+      "mcnemar_exact_p": 0.359283447265625
+    },
+    "best_1175000": {
+      "success_change": 0.14166666666666666,
+      "ci95": [
+        0.058333333333333334,
+        0.225
+      ],
+      "gained": 24,
+      "lost": 7,
+      "mcnemar_exact_p": 0.003326892852783203
+    }
+  }
+}

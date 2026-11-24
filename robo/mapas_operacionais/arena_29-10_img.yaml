@@ -1,0 +1,7 @@
+image: arena_29-10_img.pgm
+mode: trinary
+resolution: 0.050
+origin: [-3.191, -4.367, 0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

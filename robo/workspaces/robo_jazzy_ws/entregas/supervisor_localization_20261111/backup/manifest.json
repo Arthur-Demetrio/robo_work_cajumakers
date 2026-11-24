@@ -1,0 +1,1 @@
+["AGENTS.md", "CLAUDE.md", "src/robo_navigation/scripts/alinhador_passagem.py", "src/robo_navigation/launch/navigation.launch.py", "src/robo_navigation/launch/localizacao_slam.launch.py", "src/robo_navigation/config/slam_localizacao.yaml", "src/robo_navigation/CMakeLists.txt", "src/robo_navigation/test/test_nav2_principal.py", "src/robo_navigation/test/test_lateral_ws.py"]

@@ -1,0 +1,78 @@
+[INFO] [1794261756.882270904] [alinhador_passagem]: Alinhador pronto. Envie goals em /goal_pose_alinhado.
+[INFO] [1794261756.884256930] [alinhador_passagem]: BANCADA: gatilho /sim/encostar pronto (codigo de /home/marcos/robo_jazzy_ws/src/robo_navigation/scripts)
+[INFO] [1794261759.985543372] [alinhador_passagem]: BANCADA: encostar WS_1
+[INFO] [1794261760.003310695] [alinhador_passagem]: ENCOSTAR WS_1: medindo a face da mesa
+[INFO] [1794261760.206740156] [alinhador_passagem]: Laser em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[WARN] [1794261760.258929884] [alinhador_passagem]: WS_1: LiDAR parado ha 99.0 s: parei
+[INFO] [1794261760.361366701] [alinhador_passagem]: WS_1: sensores voltaram depois de 0.4 s: medindo de novo
+[INFO] [1794261760.373440786] [alinhador_passagem]: ENCOSTAR WS_1: aguardando segunda observacao coerente
+[INFO] [1794261760.437301470] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.609 c+0.019 a-1.8g)
+[INFO] [1794261761.443081026] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.61 w0.58)
+[INFO] [1794261761.615040733] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.608 c+0.019 a-2.0g)
+[INFO] [1794261762.090847977] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 1: face a 24 cm (para-choque), girar -1.8 graus, centro +2.0 cm
+[INFO] [1794261762.141903582] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +2.0 cm de lado
+[INFO] [1794261763.423510765] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 2: face a 24 cm (para-choque), girar -1.9 graus, centro +1.9 cm
+[ERROR] [1794261764.168358311] [alinhador_passagem]: BANCADA: _encostar levantou InvalidHandle: cannot use Destroyable because destruction was requested
+Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+Exception in thread Thread-2 (rodar):
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/alinhador_bancada.py", line 32, in rodar
+    node._encostar(area)
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 3760, in _encostar
+    self._parar()
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 2862, in _parar
+    self._publicar_vel(0.0, 0.0, 0.0)
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 2858, in _publicar_vel
+    (self.pub_t if self.controle_t_ativo else self.pub_cmd).publish(m)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 68, in publish
+    with self.handle:
+rclpy._rclpy_pybind11.InvalidHandle: cannot use Destroyable because destruction was requested
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/marcos/sim_encosto/alinhador_bancada.py", line 36, in rodar
+    node._publicar_resultado(area, False, 'erro: %s: %s' % (type(exc).__name__, exc))
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 3782, in _publicar_resultado
+    self.pub_resultado.publish(m)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 68, in publish
+    with self.handle:
+rclpy._rclpy_pybind11.InvalidHandle: cannot use Destroyable because destruction was requested
+Traceback (most recent call last):
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 4101, in main
+    executor.spin()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 359, in spin
+    self._spin_once_impl()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 991, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 749, in _wait_for_ready_callbacks
+    entity_count += waitable.get_num_entities()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/event_handler.py", line 120, in get_num_entities
+    return NumberOfEntities(num_events=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/alinhador_bancada.py", line 57, in <module>
+    alinhador_passagem.main()
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 4104, in main
+    no._parar()
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 2862, in _parar
+    self._publicar_vel(0.0, 0.0, 0.0)
+  File "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py", line 2858, in _publicar_vel
+    (self.pub_t if self.controle_t_ativo else self.pub_cmd).publish(m)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:423
+The following exception was never retrieved: cannot use Destroyable because destruction was requested

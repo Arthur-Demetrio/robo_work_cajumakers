@@ -1,0 +1,67 @@
+[INFO] [1794261998.684989518] [alinhador_passagem]: Alinhador pronto. Envie goals em /goal_pose_alinhado.
+[INFO] [1794261998.687181519] [alinhador_passagem]: BANCADA: gatilho /sim/encostar pronto (codigo de /home/marcos/sim_encosto/versoes/bag_1409)
+[INFO] [1794261999.146355218] [alinhador_passagem]: Laser em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[INFO] [1794262002.180172953] [alinhador_passagem]: BANCADA: encostar WS_1
+[INFO] [1794262002.196670188] [alinhador_passagem]: ENCOSTAR WS_1: medindo a face da mesa
+[INFO] [1794262002.355620680] [alinhador_passagem]: ENCOSTAR WS_1: aguardando segunda observacao coerente
+[INFO] [1794262003.043847041] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: fora da referencia | ref d0.59 c+0.33 a-2g | d0.59 c+0.27 a-1g w0.75 FORA:larg
+[INFO] [1794262003.731200787] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 1: face a 22 cm (para-choque), girar -1.5 graus, centro +33.7 cm
+[INFO] [1794262003.782150673] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +33.7 cm de lado
+[INFO] [1794262004.412210815] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: fora da referencia | ref d0.59 c+0.32 a-1g | d0.58 c+0.20 a-1g w0.63 FORA:larg
+[INFO] [1794262008.827258475] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 2: face a 11 cm (para-choque), girar -0.2 graus, centro +17.7 cm
+[INFO] [1794262008.881277638] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +17.7 cm de lado
+[INFO] [1794262009.468773627] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.46 w0.49)
+[INFO] [1794262009.631124643] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.52)
+[INFO] [1794262009.732749571] [alinhador_passagem]: ENCOSTAR WS_1: PERDA_PARA: perdi a face em "lat_mover": paro e meco de novo (1/3)
+[INFO] [1794262009.847705936] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.50)
+[INFO] [1794262010.008418267] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.48)
+[INFO] [1794262010.169640156] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.48)
+[INFO] [1794262010.328900896] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.48)
+[INFO] [1794262010.492450105] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.47)
+[INFO] [1794262010.669386352] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.48)
+[INFO] [1794262010.827873830] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.47)
+[INFO] [1794262010.992599516] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.47)
+[INFO] [1794262011.164184813] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.48)
+[INFO] [1794262011.330776459] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.48)
+[INFO] [1794262011.492246028] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.48)
+[INFO] [1794262011.710997778] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.47)
+[INFO] [1794262011.883598444] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.48)
+[INFO] [1794262011.993029865] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.48)
+[INFO] [1794262012.208084350] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.49)
+[INFO] [1794262012.371441110] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.48)
+[INFO] [1794262012.530772171] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.48)
+[INFO] [1794262012.688899965] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.47)
+[INFO] [1794262012.847242368] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.41)
+[INFO] [1794262013.009393806] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.45 w0.47)
+[INFO] [1794262013.161745035] [alinhador_passagem]: ENCOSTAR WS_1: Encosto abortado: nao vejo a face da mesa a frente
+[WARN] [1794262013.417763483] [alinhador_passagem]: ENCOSTAR WS_1: FALHOU - nao vejo a face da mesa a frente
+[INFO] [1794262013.422332960] [alinhador_passagem]: RESULTADO: WS_1 FALHOU encosto: nao vejo a face da mesa a frente
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/versoes/bag_1409/alinhador_passagem.py", line 4074, in main
+    executor.spin()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 359, in spin
+    self._spin_once_impl()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 991, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 781, in _wait_for_ready_callbacks
+    wait_set.wait(timeout_nsec)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/alinhador_bancada.py", line 57, in <module>
+    alinhador_passagem.main()
+  File "/home/marcos/sim_encosto/versoes/bag_1409/alinhador_passagem.py", line 4077, in main
+    no._parar()
+  File "/home/marcos/sim_encosto/versoes/bag_1409/alinhador_passagem.py", line 2842, in _parar
+    self._publicar_vel(0.0, 0.0, 0.0)
+  File "/home/marcos/sim_encosto/versoes/bag_1409/alinhador_passagem.py", line 2838, in _publicar_vel
+    (self.pub_t if self.controle_t_ativo else self.pub_cmd).publish(m)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:423

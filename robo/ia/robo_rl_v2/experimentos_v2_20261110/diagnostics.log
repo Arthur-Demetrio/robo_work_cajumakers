@@ -1,0 +1,2 @@
+planner_estimated {'success': 0.33, 'collision': 0.35, 'timeout': 0.32, 'elapsed': 93.72800000000001, 'distance': 0.8498126014185092, 'reward': -5.356137707508529, 'max_est_error': 0.47165065922280325, 'n': 100}
+policy_true_pose {'success': 0.01, 'collision': 0.99, 'timeout': 0.0, 'elapsed': 13.310399999999998, 'distance': 2.8876843056320185, 'reward': -103.6202790166797, 'max_est_error': 0.03451397928374145, 'n': 100}

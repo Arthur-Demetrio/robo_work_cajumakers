@@ -1,0 +1,8 @@
+1794412381.1917987 [WARNING] [launch_ros.actions.node]: Parameter file path is not a file: /home/marcos/robo_jazzy_ws/install/robo_navigation/share/robo_navigation/config/nav2_params_principal.yaml
+1794412381.1948652 [WARNING] [launch_ros.actions.node]: Parameter file path is not a file: /home/marcos/robo_jazzy_ws/install/robo_navigation/share/robo_navigation/config/nav2_params_principal.yaml
+1794412381.1970532 [WARNING] [launch_ros.actions.node]: Parameter file path is not a file: /home/marcos/robo_jazzy_ws/install/robo_navigation/share/robo_navigation/config/nav2_params_principal.yaml
+1794412381.1992209 [WARNING] [launch_ros.actions.node]: Parameter file path is not a file: /home/marcos/robo_jazzy_ws/install/robo_navigation/share/robo_navigation/config/nav2_params_principal.yaml
+1794412381.2016909 [WARNING] [launch_ros.actions.node]: Parameter file path is not a file: /home/marcos/robo_jazzy_ws/install/robo_navigation/share/robo_navigation/config/nav2_params_principal.yaml
+1794412381.2059293 [WARNING] [launch_ros.actions.node]: Parameter file path is not a file: /home/marcos/robo_jazzy_ws/install/robo_navigation/share/robo_navigation/config/nav2_params_principal.yaml
+1794412381.2090547 [WARNING] [launch_ros.actions.node]: Parameter file path is not a file: /home/marcos/robo_jazzy_ws/install/robo_navigation/share/robo_navigation/config/nav2_params_principal.yaml
+1794412381.2120507 [WARNING] [launch_ros.actions.node]: Parameter file path is not a file: /home/marcos/robo_jazzy_ws/install/robo_navigation/share/robo_navigation/config/nav2_params_principal.yaml

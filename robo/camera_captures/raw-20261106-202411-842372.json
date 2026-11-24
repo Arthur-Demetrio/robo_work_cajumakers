@@ -1,0 +1,28 @@
+{
+  "hsv": {
+    "h_min": 170,
+    "h_max": 10,
+    "s_min": 45,
+    "s_max": 255,
+    "v_min": 40,
+    "v_max": 255
+  },
+  "clicked_point": {
+    "pixel": [
+      284.0,
+      346.0
+    ],
+    "predicted_m": [
+      0.26405627923295377,
+      0.05883495234599859
+    ],
+    "fitting_reference": false
+  },
+  "image_size": [
+    640,
+    480
+  ],
+  "fourcc": "MJPG",
+  "roi_top": 0.0,
+  "roi_bottom": 1.0
+}

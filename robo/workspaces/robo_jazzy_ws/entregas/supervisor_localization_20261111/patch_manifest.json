@@ -1,0 +1,77 @@
+[
+  {
+    "nome": "AGENTS.md",
+    "existia": true,
+    "sha256": "c784518a52fb639f7a283b9d3371834cef8da6d0735aefca0814f120ad452b07"
+  },
+  {
+    "nome": "CLAUDE.md",
+    "existia": true,
+    "sha256": "3bd285d2b5344d7479a5d6d32b35a78d04a685b44d6a119017e1e970166a3413"
+  },
+  {
+    "nome": "src/robo_navigation/scripts/alinhador_passagem.py",
+    "existia": true,
+    "sha256": "95540640d2a9e3be050b31f9a953816ff6e48c8b070cc16b732c00c3e3864e19"
+  },
+  {
+    "nome": "src/robo_navigation/launch/navigation.launch.py",
+    "existia": true,
+    "sha256": "9653e63bc1c27b2f4fff86a7e15f473f834b58e16fa40fb75d42af9d8b5e5b0c"
+  },
+  {
+    "nome": "src/robo_navigation/launch/localizacao_slam.launch.py",
+    "existia": true,
+    "sha256": "0086d2ef8cf7485a177cbb969a699e8127f47555b68aa385517a9ae4ab502f02"
+  },
+  {
+    "nome": "src/robo_navigation/config/slam_localizacao.yaml",
+    "existia": true,
+    "sha256": "1174a7e497c2370b3fce06ef737c186ed2153c6af11d68ee69526dcfc9b046a2"
+  },
+  {
+    "nome": "src/robo_navigation/CMakeLists.txt",
+    "existia": true,
+    "sha256": "124ef604590e39a5e7f22922531d14a5d4b42918d30b1f5b2b4026ecab2d40b7"
+  },
+  {
+    "nome": "src/robo_navigation/test/test_nav2_principal.py",
+    "existia": true,
+    "sha256": "b1626ecdcb4a65390c126cad5412d465a661eb22679415efb4ab1b5e74b13674"
+  },
+  {
+    "nome": "src/robo_navigation/test/test_lateral_ws.py",
+    "existia": true,
+    "sha256": "ff6d5764cb42ff87df3813ea02237cab2f9ae1f8283f187357fbaa91d1d0f73a"
+  },
+  {
+    "nome": "subir_robo.sh",
+    "existia": true,
+    "sha256": "9536315ee2ae701b4907f5c1e5b80d97a5786e84a22b0b3705917ba0721b5d4f"
+  },
+  {
+    "nome": "src/robo_navigation/scripts/supervisor_passagem.py",
+    "existia": false,
+    "sha256": "1b487d14cb9260921ea647c1e9c04c06b80266601676db0ba1085916dba9f391"
+  },
+  {
+    "nome": "src/robo_navigation/config/regioes_passagem.yaml",
+    "existia": false,
+    "sha256": "30c7d8b3782712125011578d467b78d0278ea4ce884cb3649ae49fe01b7aa01e"
+  },
+  {
+    "nome": "src/robo_navigation/test/test_supervisor_passagem.py",
+    "existia": false,
+    "sha256": "16abe54d35936785df34063939e863954be27a7d468cb45608fb5035d983e9bf"
+  },
+  {
+    "nome": "ferramentas/preparar_localization.py",
+    "existia": false,
+    "sha256": "dfd6cd68146369cc20ca71e62d44f72206d2694b9ca777f1645305022cf513a5"
+  },
+  {
+    "nome": "ferramentas/iniciar_supervisor_validado.sh",
+    "existia": false,
+    "sha256": "3c3ea31f1241f231d14e2b60c8a02e2dc13a54bce1d247118f5aa08245bd8b01"
+  }
+]

@@ -1,0 +1,23 @@
+Tarefa curta_19_11 (curta WS_1 WS_2 WS_1), 2 objeto(s), limite 20 min
+ 1. ir ate WS_1
+ 2. pegar 1 em WS_1
+ 3. ir ate WS_2
+ 4. soltar 1 em WS_2
+ 5. pegar 2 em WS_2
+ 6. ir ate WS_1
+ 7. soltar 2 em WS_1
+ 8. ir ate FINISH
+[INFO] [1795132281.075062460] [executor_prova]: [1/8] ir ate WS_1 (tentativa 1)
+[INFO] [1795132378.699720789] [executor_prova]: WS_1: SUCESSO folga=10.4cm ang=-0.8 centro=+2.2cm
+[INFO] [1795132378.704116785] [executor_prova]: [2/8] PEGAR objeto(s) 1 em WS_1 (simulado: sem braco)
+[INFO] [1795132383.735910927] [executor_prova]: [3/8] ir ate WS_2 (tentativa 1)
+[WARN] [1795132417.317912818] [executor_prova]: WS_2: FALHOU encosto: nao vejo a face da mesa a frente
+[INFO] [1795132417.319122439] [executor_prova]: [3/8] ir ate WS_2 (tentativa 2)
+[WARN] [1795132426.980004026] [executor_prova]: WS_2: FALHOU encosto: nao vejo a face da mesa a frente
+[ERROR] [1795132426.981997889] [executor_prova]: Prova interrompida: nao cheguei em WS_2.
+
+===== curta_19_11 curta WS_1 WS_2 WS_1 =====
+ir ate WS_1                  OK           folga=10.4cm ang=-0.8 centro=+2.2cm
+pegar 1 em WS_1              OK           simulado
+ir ate WS_2                  FALHOU       encosto: nao vejo a face da mesa a frente
+tempo total: 2 min 25 s  (limite 20 min)

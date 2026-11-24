@@ -1,0 +1,62 @@
+[INFO] [1791201969.016151312] [behavior_server]: 
+	behavior_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791201969.220102672] [behavior_server]: Configuring
+[INFO] [1791201969.222061767] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+[INFO] [1791201969.222695735] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+[INFO] [1791201969.223190408] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+[INFO] [1791201969.223687593] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+[INFO] [1791201969.227998751] [behavior_server]: Configuring spin
+[INFO] [1791201969.230458258] [behavior_server]: Configuring backup
+[INFO] [1791201969.232149251] [behavior_server]: Configuring drive_on_heading
+[INFO] [1791201969.234009868] [behavior_server]: Configuring wait
+[INFO] [1791201969.921599177] [behavior_server]: Activating
+[INFO] [1791201969.921615484] [behavior_server]: Activating spin
+[INFO] [1791201969.921622545] [behavior_server]: Activating backup
+[INFO] [1791201969.921628832] [behavior_server]: Activating drive_on_heading
+[INFO] [1791201969.921634352] [behavior_server]: Activating wait
+[INFO] [1791201969.921642957] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[INFO] [1791202107.789606886] [behavior_server]: Running spin
+[INFO] [1791202107.789744024] [behavior_server]: Turning 1.57 for spin behavior.
+[INFO] [1791202113.690048625] [behavior_server]: spin completed successfully
+[INFO] [1791202113.789587165] [behavior_server]: Running wait
+[INFO] [1791202118.789768343] [behavior_server]: wait completed successfully
+[INFO] [1791202119.289545509] [behavior_server]: Running backup
+[INFO] [1791202120.289741958] [behavior_server]: backup completed successfully
+[INFO] [1791202121.789582969] [behavior_server]: Running spin
+[INFO] [1791202121.789651538] [behavior_server]: Turning 1.57 for spin behavior.
+[INFO] [1791202127.689815185] [behavior_server]: spin completed successfully
+[INFO] [1791202133.292279975] [behavior_server]: Running spin
+[INFO] [1791202133.292396703] [behavior_server]: Turning 1.57 for spin behavior.
+[INFO] [1791202139.092755675] [behavior_server]: spin completed successfully
+[INFO] [1791202139.293602060] [behavior_server]: Running wait
+[INFO] [1791202144.294060291] [behavior_server]: wait completed successfully
+[INFO] [1791202144.791946388] [behavior_server]: Running backup
+[INFO] [1791202145.792178369] [behavior_server]: backup completed successfully
+[INFO] [1791202225.796061514] [behavior_server]: Running spin
+[INFO] [1791202225.796129716] [behavior_server]: Turning 1.57 for spin behavior.
+[INFO] [1791202231.496279907] [behavior_server]: spin completed successfully
+[INFO] [1791202231.796108170] [behavior_server]: Running wait
+[INFO] [1791202236.796246792] [behavior_server]: wait completed successfully
+[INFO] [1791202237.296172529] [behavior_server]: Running backup
+[INFO] [1791202238.296349293] [behavior_server]: backup completed successfully
+[INFO] [1791202239.796036473] [behavior_server]: Running spin
+[INFO] [1791202239.796100953] [behavior_server]: Turning 1.57 for spin behavior.
+[INFO] [1791202245.696259572] [behavior_server]: spin completed successfully
+[INFO] [1791202253.791907978] [behavior_server]: Running spin
+[INFO] [1791202253.792003677] [behavior_server]: Turning 1.57 for spin behavior.
+[INFO] [1791202259.492135169] [behavior_server]: spin completed successfully
+[INFO] [1791202259.791793406] [behavior_server]: Running wait
+[INFO] [1791202264.791991440] [behavior_server]: wait completed successfully
+[INFO] [1791202265.291789850] [behavior_server]: Running backup
+[INFO] [1791202266.292041838] [behavior_server]: backup completed successfully
+[INFO] [1791202267.791902080] [behavior_server]: Running spin
+[INFO] [1791202267.791991875] [behavior_server]: Turning 1.57 for spin behavior.
+[INFO] [1791202273.692604447] [behavior_server]: spin completed successfully
+[INFO] [1791202444.423014769] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791202444.423058198] [behavior_server]: Running Nav2 LifecycleNode rcl preshutdown (behavior_server)
+[INFO] [1791202444.423109096] [behavior_server]: Deactivating
+[INFO] [1791202444.423140092] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[INFO] [1791202444.433387465] [behavior_server]: Cleaning up
+[INFO] [1791202444.435238801] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.

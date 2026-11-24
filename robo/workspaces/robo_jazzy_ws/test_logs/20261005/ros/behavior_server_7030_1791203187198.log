@@ -1,0 +1,108 @@
+[INFO] [1791203187.217416645] [behavior_server]: 
+	behavior_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791203187.389558925] [behavior_server]: Configuring
+[INFO] [1791203187.394366609] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+[INFO] [1791203187.395506723] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+[INFO] [1791203187.396076675] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+[INFO] [1791203187.396605729] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+[INFO] [1791203187.400070701] [behavior_server]: Configuring spin
+[INFO] [1791203187.402628732] [behavior_server]: Configuring backup
+[INFO] [1791203187.404740635] [behavior_server]: Configuring drive_on_heading
+[INFO] [1791203187.406858779] [behavior_server]: Configuring wait
+[INFO] [1791203188.055572586] [behavior_server]: Activating
+[INFO] [1791203188.055599715] [behavior_server]: Activating spin
+[INFO] [1791203188.055615028] [behavior_server]: Activating backup
+[INFO] [1791203188.055628075] [behavior_server]: Activating drive_on_heading
+[INFO] [1791203188.055640757] [behavior_server]: Activating wait
+[INFO] [1791203188.055656183] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[INFO] [1791203255.428782871] [behavior_server]: Running spin
+[INFO] [1791203255.428961919] [behavior_server]: Turning 1.57 for spin behavior.
+[INFO] [1791203261.329134192] [behavior_server]: spin completed successfully
+[INFO] [1791203261.428600909] [behavior_server]: Running wait
+[INFO] [1791203266.428738555] [behavior_server]: wait completed successfully
+[INFO] [1791203266.928895568] [behavior_server]: Running backup
+[INFO] [1791203267.929125678] [behavior_server]: backup completed successfully
+[INFO] [1791203332.430924140] [behavior_server]: Running spin
+[INFO] [1791203332.430986423] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1791203332.931174649] [behavior_server]: Collision Ahead - Exiting Spin
+[WARN] [1791203332.931202280] [behavior_server]: spin failed
+[WARN] [1791203332.931216916] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1791203332.950662690] [behavior_server]: Running wait
+[INFO] [1791203337.950821552] [behavior_server]: wait completed successfully
+[INFO] [1791203338.430834212] [behavior_server]: Running backup
+[WARN] [1791203338.430972648] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[WARN] [1791203338.430990196] [behavior_server]: backup failed
+[WARN] [1791203338.431003856] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[INFO] [1791203339.431006039] [behavior_server]: Running spin
+[INFO] [1791203339.431091651] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1791203340.131281640] [behavior_server]: Collision Ahead - Exiting Spin
+[WARN] [1791203340.131316925] [behavior_server]: spin failed
+[WARN] [1791203340.131328608] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1791203340.150624737] [behavior_server]: Running wait
+[INFO] [1791203345.150780009] [behavior_server]: wait completed successfully
+[INFO] [1791203345.430949457] [behavior_server]: Running backup
+[WARN] [1791203345.431094770] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[WARN] [1791203345.431109484] [behavior_server]: backup failed
+[WARN] [1791203345.431123585] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[INFO] [1791203346.430855232] [behavior_server]: Running spin
+[INFO] [1791203346.430973823] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1791203356.431099944] [behavior_server]: Exceeded time allowance before reaching the Spin goal - Exiting Spin
+[WARN] [1791203356.431124156] [behavior_server]: spin failed
+[WARN] [1791203356.431132318] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1791203356.450639945] [behavior_server]: Running wait
+[INFO] [1791203361.451254823] [behavior_server]: wait completed successfully
+[INFO] [1791203369.428689720] [behavior_server]: Running spin
+[INFO] [1791203369.428779704] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1791203379.428933195] [behavior_server]: Exceeded time allowance before reaching the Spin goal - Exiting Spin
+[WARN] [1791203379.428976916] [behavior_server]: spin failed
+[WARN] [1791203379.428988335] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1791203379.449161250] [behavior_server]: Running wait
+[INFO] [1791203384.449525706] [behavior_server]: wait completed successfully
+[INFO] [1791203384.929940798] [behavior_server]: Running backup
+[WARN] [1791203384.930564225] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[WARN] [1791203384.930612422] [behavior_server]: backup failed
+[WARN] [1791203384.930629895] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[INFO] [1791203385.928405565] [behavior_server]: Running spin
+[INFO] [1791203385.928506204] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1791203395.928667544] [behavior_server]: Exceeded time allowance before reaching the Spin goal - Exiting Spin
+[WARN] [1791203395.928692092] [behavior_server]: spin failed
+[WARN] [1791203395.928700082] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1791203395.948302033] [behavior_server]: Running wait
+[INFO] [1791203400.948441245] [behavior_server]: wait completed successfully
+[INFO] [1791203401.428968137] [behavior_server]: Running backup
+[WARN] [1791203401.429597825] [behavior_server]: Collision Ahead - Exiting DriveOnHeading
+[WARN] [1791203401.429622708] [behavior_server]: backup failed
+[WARN] [1791203401.429638379] [behavior_server]: [backup] [ActionServer] Aborting handle.
+[INFO] [1791203402.428638373] [behavior_server]: Running spin
+[INFO] [1791203402.428998372] [behavior_server]: Turning 1.57 for spin behavior.
+[WARN] [1791203412.429381044] [behavior_server]: Exceeded time allowance before reaching the Spin goal - Exiting Spin
+[WARN] [1791203412.429565724] [behavior_server]: spin failed
+[WARN] [1791203412.429605632] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[INFO] [1791203412.448324289] [behavior_server]: Running wait
+[INFO] [1791203417.448463749] [behavior_server]: wait completed successfully
+[INFO] [1791205025.297876030] [behavior_server]: Deactivating
+[INFO] [1791205025.297906570] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[INFO] [1791205026.571930029] [behavior_server]: Cleaning up
+[INFO] [1791205027.737266029] [behavior_server]: Configuring
+[INFO] [1791205027.738314716] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+[INFO] [1791205027.738346731] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+[INFO] [1791205027.738360430] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+[INFO] [1791205027.738371110] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+[INFO] [1791205027.739079921] [behavior_server]: Configuring spin
+[INFO] [1791205027.741007075] [behavior_server]: Configuring backup
+[INFO] [1791205027.742941193] [behavior_server]: Configuring drive_on_heading
+[INFO] [1791205027.744576642] [behavior_server]: Configuring wait
+[INFO] [1791205028.337580408] [behavior_server]: Activating
+[INFO] [1791205028.337597073] [behavior_server]: Activating spin
+[INFO] [1791205028.337603990] [behavior_server]: Activating backup
+[INFO] [1791205028.337610482] [behavior_server]: Activating drive_on_heading
+[INFO] [1791205028.337614899] [behavior_server]: Activating wait
+[INFO] [1791205028.337620176] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[INFO] [1791206403.236990076] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791206403.237018046] [behavior_server]: Running Nav2 LifecycleNode rcl preshutdown (behavior_server)
+[INFO] [1791206403.237060189] [behavior_server]: Deactivating
+[INFO] [1791206403.237081345] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.
+[INFO] [1791206403.247316776] [behavior_server]: Cleaning up
+[INFO] [1791206403.250281420] [behavior_server]: Destroying bond (behavior_server) to lifecycle manager.

@@ -1,0 +1,17 @@
+{
+  "ok": false,
+  "evidencias": {
+    "servico": false,
+    "principal": null,
+    "modo": null,
+    "publicadores": [],
+    "heartbeat": []
+  },
+  "pendencias": [
+    "servico /navegacao/especial ausente",
+    "nav2_principal nao e true",
+    "supervisor_modo divergente/ausente",
+    "saida /cmd_vel_nav exige exatamente um publisher do arbitro",
+    "publisher heartbeat do alinhador ausente"
+  ]
+}

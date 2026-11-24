@@ -1,0 +1,36 @@
+test_noise_off_and_progression (test_arena2016.ArenaTests.test_noise_off_and_progression) ... ok
+test_raster_and_gaps (test_arena2016.ArenaTests.test_raster_and_gaps) ... ok
+test_reject_bad_geometry (test_arena2016.ArenaTests.test_reject_bad_geometry) ... ok
+test_variants_and_reproducibility (test_arena2016.ArenaTests.test_variants_and_reproducibility) ... FAIL
+
+======================================================================
+FAIL: test_variants_and_reproducibility (test_arena2016.ArenaTests.test_variants_and_reproducibility)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/marcos/robo_rl_v2/tests/test_arena2016.py", line 20, in test_variants_and_reproducibility
+    for a,b in [(ob,again),(cells,e.grid.cells),(pose,e.pose),(goal,e.goal)]:np.testing.assert_array_equal(a,b)
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marcos/robo_rl_v2/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 920, in assert_array_equal
+    assert_array_compare(operator.__eq__, x, y, err_msg=err_msg,
+  File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/marcos/robo_rl_v2/.venv/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 797, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 51 / 152 (33.6%)
+Max absolute difference: 1.
+Max relative difference: 1.
+ x: array([0.45942 , 0.432378, 0.410385, 0.386973, 0.      , 0.      ,
+       0.      , 0.369547, 0.      , 0.      , 0.      , 0.      ,
+       0.      , 0.      , 0.      , 0.832339, 0.755132, 0.693543,...
+ y: array([0.457573, 0.429383, 0.407424, 0.393352, 0.      , 0.      ,
+       0.      , 0.360104, 0.      , 0.      , 0.      , 0.      ,
+       0.      , 0.      , 0.      , 0.83891 , 0.754518, 0.690296,...
+
+----------------------------------------------------------------------
+Ran 4 tests in 4.987s
+
+FAILED (failures=1)

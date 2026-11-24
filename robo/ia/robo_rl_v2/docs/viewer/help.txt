@@ -1,0 +1,18 @@
+usage: viewer.py [-h] [--run RUN] [--cpus CPUS] [--cpu-budget CPU_BUDGET]
+                 [--speed SPEED] [--fps FPS] [--poll-seconds POLL_SECONDS]
+                 [--max-steps MAX_STEPS] [--seed SEED] [--scenarios SCENARIOS]
+
+Janela 2D de AVALIAÇÃO; não controla o treino.
+
+options:
+  -h, --help            show this help message and exit
+  --run RUN
+  --cpus CPUS
+  --cpu-budget CPU_BUDGET
+                        Fração de um CPU para os ticks de reprodução
+  --speed SPEED
+  --fps FPS
+  --poll-seconds POLL_SECONDS
+  --max-steps MAX_STEPS
+  --seed SEED
+  --scenarios SCENARIOS

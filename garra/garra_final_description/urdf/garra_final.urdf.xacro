@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="garra_final">
+
+  <!-- Materials (shared across all assemblies) -->
+  <material name="Laminado_vermelho_fosco">
+    <color rgba="0.769 0.208 0.153 1.0"/>
+  </material>
+  <material name="Alum_nio_prata_anodizada">
+    <color rgba="0.537 0.537 0.537 1.0"/>
+  </material>
+  <material name="A_o">
+    <color rgba="0.627 0.627 0.627 1.0"/>
+  </material>
+
+  <!-- Assembly includes -->
+  <xacro:include filename="$(find garra_final_description)/urdf/assemblies/Configura_o_1.urdf.xacro"/>
+  <xacro:include filename="$(find garra_final_description)/urdf/assemblies/garra_final.urdf.xacro"/>
+
+  <!-- Instantiate assemblies -->
+  <xacro:Configura_o_1 prefix=""/>
+  <xacro:garra_final prefix=""/>
+
+  <!-- Mount joints (cross-assembly connections) -->
+  <!-- These define how assemblies connect to each other. -->
+  <!-- When swapping a dummy assembly with a real part, -->
+  <!-- update the include + macro call above, and adjust -->
+  <!-- parent/child link names in the mount joint below. -->
+
+  <joint name="R_gido_73" type="fixed">
+    <parent link="garra_final_showder_servo_horn_3"/>
+    <child link="Base"/>
+    <origin xyz="0.001272 -0.004945 0.062500" rpy="-0.896983 -1.570796 0.386126"/>
+  </joint>
+
+</robot>

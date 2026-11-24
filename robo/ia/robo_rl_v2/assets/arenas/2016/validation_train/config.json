@@ -1,0 +1,50 @@
+{
+  "mode": "train",
+  "variant": "arena_2016_treino",
+  "output": "/home/marcos/robo_rl_v2/assets/arenas/2016/validation_train",
+  "model": null,
+  "steps": 128,
+  "episodes": 100,
+  "max_steps": 32,
+  "seed": 3000000000,
+  "progression": true,
+  "noise": "config",
+  "boxes": null,
+  "checkpoint_every": 64,
+  "n_steps": 64,
+  "layout_sha256": "1ee01c8e53c58c3612c8933ebd746b31ba45720980df205e649cf4d0c70cc7c4",
+  "settings": {
+    "mobile_boxes": 3,
+    "box_size_m": [
+      0.25,
+      0.45
+    ],
+    "noise": true,
+    "sensor_noise_m": 0.015,
+    "physical_noise_std": [
+      0.001,
+      0.002,
+      0.001
+    ],
+    "scan_dropout_probability": 0.01,
+    "friction_range": [
+      0.9,
+      1.0
+    ],
+    "slip_range": [
+      0.02,
+      0.06
+    ],
+    "odom_bias_std": [
+      0.003,
+      0.003,
+      0.002
+    ],
+    "delay_ticks": [
+      1,
+      2
+    ],
+    "pose_jitter_m": 0.08
+  },
+  "created": 1794311247.9002454
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-13",
+  "standalone_module_tests": {
+    "passed": 51,
+    "failed": 0,
+    "skipped": 0
+  },
+  "operational_suite_before_extraction": {
+    "passed": 61,
+    "gripper_only_tests_excluded": 10
+  },
+  "build": "colcon build --base-paths src --packages-select robo_virtual_wall: success",
+  "calibration_reproduction": "installed CLI reproduces H from three independent checks",
+  "real_robot_feedback": "Operator confirmed visible stationary tape removal worked in the current setup",
+  "not_performed_in_publication": [
+    "camera capture",
+    "hardware start/restart",
+    "navigation start/restart",
+    "new physical movement",
+    "new physical perception test"
+  ],
+  "experimental_gripper_masks_included": false
+}

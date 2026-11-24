@@ -1,0 +1,13 @@
+<root BTCPP_format="4" main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <PipelineSequence>
+      <RateController hz="1.0">
+        <Sequence>
+          <ComputePathToPose goal="{goal}" path="{path}" planner_id="GridBased"/>
+          <SmoothPath unsmoothed_path="{path}" smoothed_path="{smoothed_path}" smoother_id="simple_smoother" max_smoothing_duration="2.0" check_for_collisions="false"/>
+        </Sequence>
+      </RateController>
+      <FollowPath path="{smoothed_path}" controller_id="FollowPath"/>
+    </PipelineSequence>
+  </BehaviorTree>
+</root>

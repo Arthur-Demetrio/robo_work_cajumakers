@@ -1,0 +1,190 @@
+{"t": 1794410666.913397, "no": "alinhador_passagem", "msg": "TRABALHADOR RECEBEU: goal sem area"}
+{"t": 1794410666.913406, "no": "alinhador_passagem", "msg": "Novo goal: x=1.57 y=2.52 yaw=6 graus"}
+{"t": 1794410666.9134226, "no": "slam_toolbox", "msg": "Message Filter dropping message: frame 'laser_raw' at time 1794410665.768 for reason 'discarding message because the queue is full'"}
+{"t": 1794410667.6714995, "no": "bt_navigator", "msg": "Begin navigating from current location (0.25, -0.17) to (1.57, 2.52)"}
+{"t": 1794410668.452353, "no": "destravar", "msg": "DESTRAVAR: DIAGNOSTICO: nada evidente (planner indisponivel, frente 42 cm, retornos 0)"}
+{"t": 1794410669.2973058, "no": "destravar", "msg": "DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 46% observada (minimo 50%) | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 16 cm do mais perto: nao esta encostado | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP)"}
+{"t": 1794410669.3156989, "no": "destravar", "msg": "DESTRAVAR: FALHA: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 46% observada (minimo 50%) | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 16 cm do mais perto: nao esta encostado | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410669.5981247, "no": "destravar", "msg": "DESTRAVAR: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 46% observada (minimo 50%) | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 16 cm do mais perto: nao esta encostado | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410669.6348832, "no": "bt_navigator", "msg": "[navigate_to_pose] [ActionServer] Aborting handle."}
+{"t": 1794410669.6353817, "no": "bt_navigator", "msg": "Goal failed"}
+{"t": 1794410671.625129, "no": "alinhador_passagem", "msg": "Novo goal: x=1.52 y=2.28 yaw=6 graus"}
+{"t": 1794410671.6272027, "no": "alinhador_passagem", "msg": "TRABALHADOR RECEBEU: goal sem area"}
+{"t": 1794410671.6438103, "no": "bt_navigator", "msg": "Begin navigating from current location (0.25, -0.17) to (1.52, 2.28)"}
+{"t": 1794410675.1391246, "no": "destravar", "msg": "DESTRAVAR: DIAGNOSTICO: nada evidente (planner indisponivel, frente 42 cm, retornos 1)"}
+{"t": 1794410676.072569, "no": "destravar", "msg": "DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 46% observada (minimo 50%) | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 12 cm do mais perto: nao esta encostado | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP)"}
+{"t": 1794410676.07644, "no": "destravar", "msg": "DESTRAVAR: FALHA: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 46% observada (minimo 50%) | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 12 cm do mais perto: nao esta encostado | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410676.3428292, "no": "destravar", "msg": "DESTRAVAR: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 46% observada (minimo 50%) | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 12 cm do mais perto: nao esta encostado | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410676.3650773, "no": "bt_navigator", "msg": "[navigate_to_pose] [ActionServer] Aborting handle."}
+{"t": 1794410676.3657346, "no": "bt_navigator", "msg": "Goal failed"}
+{"t": 1794410712.3284779, "no": "alinhador_passagem", "msg": "TRABALHADOR RECEBEU: goal sem area"}
+{"t": 1794410712.3305495, "no": "alinhador_passagem", "msg": "Novo goal: x=1.73 y=2.05 yaw=6 graus"}
+{"t": 1794410712.3589542, "no": "bt_navigator", "msg": "Begin navigating from current location (0.25, -0.17) to (1.73, 2.05)"}
+{"t": 1794410715.9371, "no": "destravar", "msg": "DESTRAVAR: DIAGNOSTICO: nada evidente (planner indisponivel, frente 42 cm, retornos 2)"}
+{"t": 1794410716.2670696, "no": "alinhador_passagem", "msg": "Novo goal: x=0.83 y=-0.15 yaw=6 graus"}
+{"t": 1794410716.278481, "no": "bt_navigator", "msg": "[navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling."}
+{"t": 1794410716.280178, "no": "bt_navigator", "msg": "Goal canceled"}
+{"t": 1794410716.3121197, "no": "alinhador_passagem", "msg": "Goal substituido por um novo."}
+{"t": 1794410716.3366911, "no": "alinhador_passagem", "msg": "TRABALHADOR RECEBEU: goal sem area"}
+{"t": 1794410716.3579776, "no": "bt_navigator", "msg": "Begin navigating from current location (0.25, -0.17) to (0.83, -0.15)"}
+{"t": 1794410716.418605, "no": "controller_server", "msg": "Received a goal, begin computing control effort."}
+{"t": 1794410716.4186144, "no": "controller_server", "msg": "No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once."}
+{"t": 1794410716.4186738, "no": "controller_server", "msg": "No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once."}
+{"t": 1794410716.92856, "no": "destravar", "msg": "DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 45% observada (minimo 50%) | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 38 cm do mais perto: nao esta encostado | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP)"}
+{"t": 1794410716.9788125, "no": "destravar", "msg": "DESTRAVAR: FALHA: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 45% observada (minimo 50%) | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 38 cm do mais perto: nao esta encostado | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410717.0199063, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410717.256841, "no": "destravar", "msg": "DESTRAVAR: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 45% observada (minimo 50%) | giro: caminho a menos de 45 graus: giro nao ajuda | afastar: corpo a 38 cm do mais perto: nao esta encostado | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410717.5236528, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410718.1193392, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410718.619401, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410719.119603, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410719.719325, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410720.319336, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410721.1247172, "no": "controller_server", "msg": "Control loop missed its desired rate of 10.0000 Hz. Current loop rate is 5.2051 Hz."}
+{"t": 1794410725.2224216, "no": "controller_server", "msg": "Failed to make progress"}
+{"t": 1794410725.227946, "no": "controller_server", "msg": "[follow_path] [ActionServer] Aborting handle."}
+{"t": 1794410728.473639, "no": "destravar", "msg": "DESTRAVAR: caminho novo (13 pontos)"}
+{"t": 1794410728.9731138, "no": "destravar", "msg": "DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_progresso_fisico,quina_esq,frente_barrada (planner ok, frente 6 cm, retornos 0)"}
+{"t": 1794410729.7252772, "no": "destravar", "msg": "DESTRAVAR: DECISAO: lateral (10 cm para dir; depois o corpo anda 50 cm no caminho (area 52% observada)) | recusadas: retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre"}
+{"t": 1794410729.7359526, "no": "destravar", "msg": "BLOQUEIO: marquei 30 cm a frente do robo por 10 s"}
+{"t": 1794410735.3601058, "no": "destravar", "msg": "DESTRAVAR: RESULTADO lateral: ok | chegou | LiDAR: frente abriu de 6 para 17 cm (ICP: so 1 cm na direcao pedida)"}
+{"t": 1794410735.3687906, "no": "destravar", "msg": "DESTRAVAR: OK: lateral (10 cm para dir; depois o corpo anda 50 cm no caminho (area 52% observada); LiDAR: frente abriu de 6 para 17 cm (ICP: so 1 cm na direcao pedida))"}
+{"t": 1794410735.6362772, "no": "destravar", "msg": "DESTRAVAR: lateral (10 cm para dir; depois o corpo anda 50 cm no caminho (area 52% observada); LiDAR: frente abriu de 6 para 17 cm (ICP: so 1 cm na direcao pedida))"}
+{"t": 1794410735.7447062, "no": "controller_server", "msg": "Received a goal, begin computing control effort."}
+{"t": 1794410736.0694914, "no": "controller_server", "msg": "Could not find a legal trajectory: No valid trajectories out of 400! "}
+{"t": 1794410736.3474615, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410736.8480458, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410736.9764583, "no": "controller_server", "msg": "Could not find a legal trajectory: No valid trajectories out of 392! "}
+{"t": 1794410737.174981, "no": "controller_server", "msg": "Could not find a legal trajectory: No valid trajectories out of 392! "}
+{"t": 1794410737.3886611, "no": "controller_server", "msg": "Could not find a legal trajectory: No valid trajectories out of 400! "}
+{"t": 1794410737.4464188, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410737.9457388, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410738.4467845, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410739.045638, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410739.3679879, "no": "controller_server", "msg": "Could not find a legal trajectory: No valid trajectories out of 400! "}
+{"t": 1794410739.4639387, "no": "controller_server", "msg": "Could not find a legal trajectory: No valid trajectories out of 400! "}
+{"t": 1794410739.5475454, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410739.6192257, "no": "bt_navigator", "msg": "[navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling."}
+{"t": 1794410739.6196377, "no": "bt_navigator", "msg": "Goal canceled"}
+{"t": 1794410739.6342084, "no": "alinhador_passagem", "msg": "Novo goal: x=1.73 y=2.40 yaw=6 graus"}
+{"t": 1794410739.6467113, "no": "controller_server", "msg": "Cancellation was successful. Stopping the robot."}
+{"t": 1794410739.6467288, "no": "controller_server", "msg": "[follow_path] [ActionServer] Client requested to cancel the goal. Cancelling."}
+{"t": 1794410739.7019064, "no": "alinhador_passagem", "msg": "Goal substituido por um novo."}
+{"t": 1794410739.7089896, "no": "alinhador_passagem", "msg": "TRABALHADOR RECEBEU: goal sem area"}
+{"t": 1794410739.724371, "no": "bt_navigator", "msg": "Begin navigating from current location (0.50, -0.15) to (1.73, 2.40)"}
+{"t": 1794410743.0970845, "no": "destravar", "msg": "DESTRAVAR: caminho novo (13 pontos)"}
+{"t": 1794410743.7523077, "no": "destravar", "msg": "DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_progresso_fisico,oscilacao (planner ok, frente 19 cm, retornos 1)"}
+{"t": 1794410743.9048626, "no": "destravar", "msg": "DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa oscilacao,sem_progresso_fisico: o mesmo controle repetiria | lateral: ja tentado aqui sem resultado | mover: corpo nao passa 10 cm + continuacao na direcao do caminho | giro: caminho a menos de 45 graus: giro nao ajuda | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP)"}
+{"t": 1794410743.918945, "no": "destravar", "msg": "DESTRAVAR: FALHA: sem alternativa segura (retomar: causa oscilacao,sem_progresso_fisico: o mesmo controle repetiria | lateral: ja tentado aqui sem resultado | mover: corpo nao passa 10 cm + continuacao na direcao do caminho | giro: caminho a menos de 45 graus: giro nao ajuda | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410744.2041562, "no": "destravar", "msg": "DESTRAVAR: sem alternativa segura (retomar: causa oscilacao,sem_progresso_fisico: o mesmo controle repetiria | lateral: ja tentado aqui sem resultado | mover: corpo nao passa 10 cm + continuacao na direcao do caminho | giro: caminho a menos de 45 graus: giro nao ajuda | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410744.2297692, "no": "bt_navigator", "msg": "[navigate_to_pose] [ActionServer] Aborting handle."}
+{"t": 1794410744.230239, "no": "bt_navigator", "msg": "Goal failed"}
+{"t": 1794410756.2939126, "no": "alinhador_passagem", "msg": "TRABALHADOR RECEBEU: goal sem area"}
+{"t": 1794410756.296056, "no": "alinhador_passagem", "msg": "Novo goal: x=0.02 y=-0.18 yaw=6 graus"}
+{"t": 1794410756.319788, "no": "bt_navigator", "msg": "Begin navigating from current location (0.50, -0.15) to (0.02, -0.18)"}
+{"t": 1794410758.951967, "no": "destravar", "msg": "DESTRAVAR: caminho novo (13 pontos)"}
+{"t": 1794410759.4419398, "no": "destravar", "msg": "DESTRAVAR: DIAGNOSTICO: caminho_invalido,dwb_sem_trajetoria (planner ok, frente 19 cm, retornos 2)"}
+{"t": 1794410759.5389009, "no": "destravar", "msg": "DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: corpo so anda 14 cm na direcao do caminho | lateral: ja tentado aqui sem resultado | mover: corpo nao passa 10 cm + continuacao na direcao do caminho | giro: caminho a menos de 45 graus: giro nao ajuda | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP)"}
+{"t": 1794410759.549638, "no": "destravar", "msg": "DESTRAVAR: FALHA: sem alternativa segura (retomar: corpo so anda 14 cm na direcao do caminho | lateral: ja tentado aqui sem resultado | mover: corpo nao passa 10 cm + continuacao na direcao do caminho | giro: caminho a menos de 45 graus: giro nao ajuda | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410759.8738575, "no": "destravar", "msg": "DESTRAVAR: sem alternativa segura (retomar: corpo so anda 14 cm na direcao do caminho | lateral: ja tentado aqui sem resultado | mover: corpo nao passa 10 cm + continuacao na direcao do caminho | giro: caminho a menos de 45 graus: giro nao ajuda | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410759.9347053, "no": "bt_navigator", "msg": "[navigate_to_pose] [ActionServer] Aborting handle."}
+{"t": 1794410759.9348624, "no": "bt_navigator", "msg": "Goal failed"}
+{"t": 1794410762.0935764, "no": "slam_toolbox", "msg": "Message Filter dropping message: frame 'laser_raw' at time 1794410762.087 for reason 'discarding message because the queue is full'"}
+{"t": 1794410763.7190511, "no": "alinhador_passagem", "msg": "Novo goal: x=0.08 y=-0.18 yaw=6 graus"}
+{"t": 1794410763.736902, "no": "alinhador_passagem", "msg": "TRABALHADOR RECEBEU: goal sem area"}
+{"t": 1794410763.7689717, "no": "bt_navigator", "msg": "Begin navigating from current location (0.50, -0.15) to (0.08, -0.18)"}
+{"t": 1794410763.813063, "no": "controller_server", "msg": "Received a goal, begin computing control effort."}
+{"t": 1794410764.4153502, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410765.0142722, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410765.5332234, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410766.0164135, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410769.115396, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410771.7148402, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410774.3147514, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410789.3404946, "no": "controller_server", "msg": "Could not find a legal trajectory: No valid trajectories out of 392! "}
+{"t": 1794410790.1145785, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410796.715146, "no": "controller_server", "msg": "Failed to make progress"}
+{"t": 1794410796.7189093, "no": "controller_server", "msg": "[follow_path] [ActionServer] Aborting handle."}
+{"t": 1794410799.2281306, "no": "destravar", "msg": "DESTRAVAR: caminho novo (18 pontos)"}
+{"t": 1794410799.7214794, "no": "destravar", "msg": "DESTRAVAR: DIAGNOSTICO: cm_bloqueou,sem_progresso_fisico,frente_barrada (planner ok, frente 7 cm, retornos 0)"}
+{"t": 1794410800.073946, "no": "destravar", "msg": "DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa cm_bloqueou,sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Collision Monitor barraria (obstaculo a < 5 cm do corpo); dir 40 cm: 40 ponto(s) do LiDAR na area varrida; dir 30 cm: 28 ponto(s) do LiDAR na area varrida; dir 25 cm: 22 ponto(s) do LiDAR na area varrida | giro: 25 ponto(s) do LiDAR na area varrida | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP)"}
+{"t": 1794410800.090311, "no": "destravar", "msg": "DESTRAVAR: FALHA: sem alternativa segura (retomar: causa cm_bloqueou,sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Collision Monitor barraria (obstaculo a < 5 cm do corpo); dir 40 cm: 40 ponto(s) do LiDAR na area varrida; dir 30 cm: 28 ponto(s) do LiDAR na area varrida; dir 25 cm: 22 ponto(s) do LiDAR na area varrida | giro: 25 ponto(s) do LiDAR na area varrida | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410800.3619857, "no": "destravar", "msg": "DESTRAVAR: sem alternativa segura (retomar: causa cm_bloqueou,sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Collision Monitor barraria (obstaculo a < 5 cm do corpo); dir 40 cm: 40 ponto(s) do LiDAR na area varrida; dir 30 cm: 28 ponto(s) do LiDAR na area varrida; dir 25 cm: 22 ponto(s) do LiDAR na area varrida | giro: 25 ponto(s) do LiDAR na area varrida | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410800.3910406, "no": "bt_navigator", "msg": "[navigate_to_pose] [ActionServer] Aborting handle."}
+{"t": 1794410800.3911657, "no": "bt_navigator", "msg": "Goal failed"}
+{"t": 1794410801.8747914, "no": "alinhador_passagem", "msg": "TRABALHADOR RECEBEU: goal sem area"}
+{"t": 1794410801.8896813, "no": "alinhador_passagem", "msg": "Novo goal: x=0.17 y=-0.18 yaw=6 graus"}
+{"t": 1794410801.896382, "no": "bt_navigator", "msg": "Begin navigating from current location (0.29, 0.19) to (0.17, -0.18)"}
+{"t": 1794410801.93937, "no": "controller_server", "msg": "Received a goal, begin computing control effort."}
+{"t": 1794410804.4709148, "no": "controller_server", "msg": "Could not find a legal trajectory: No valid trajectories out of 392! "}
+{"t": 1794410804.5616472, "no": "controller_server", "msg": "Could not find a legal trajectory: No valid trajectories out of 392! "}
+{"t": 1794410804.6644406, "no": "controller_server", "msg": "Could not find a legal trajectory: No valid trajectories out of 392! "}
+{"t": 1794410812.141056, "no": "controller_server", "msg": "Failed to make progress"}
+{"t": 1794410812.1456633, "no": "controller_server", "msg": "[follow_path] [ActionServer] Aborting handle."}
+{"t": 1794410814.3754156, "no": "destravar", "msg": "DESTRAVAR: caminho novo (16 pontos)"}
+{"t": 1794410815.007016, "no": "destravar", "msg": "DESTRAVAR: DIAGNOSTICO: sem_progresso_fisico,quina_esq,frente_barrada (planner ok, frente 6 cm, retornos 1)"}
+{"t": 1794410815.6130567, "no": "destravar", "msg": "DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 40 cm: 40 ponto(s) do LiDAR na area varrida; dir 30 cm: 27 ponto(s) do LiDAR na area varrida; dir 25 cm: 18 ponto(s) do LiDAR na area varrida; dir 15 cm: 5 ponto(s) do LiDAR na area varrida | giro: 29 ponto(s) do LiDAR na area varrida | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP)"}
+{"t": 1794410815.617328, "no": "destravar", "msg": "DESTRAVAR: FALHA: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 40 cm: 40 ponto(s) do LiDAR na area varrida; dir 30 cm: 27 ponto(s) do LiDAR na area varrida; dir 25 cm: 18 ponto(s) do LiDAR na area varrida; dir 15 cm: 5 ponto(s) do LiDAR na area varrida | giro: 29 ponto(s) do LiDAR na area varrida | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410815.8966181, "no": "destravar", "msg": "DESTRAVAR: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 40 cm: 40 ponto(s) do LiDAR na area varrida; dir 30 cm: 27 ponto(s) do LiDAR na area varrida; dir 25 cm: 18 ponto(s) do LiDAR na area varrida; dir 15 cm: 5 ponto(s) do LiDAR na area varrida | giro: 29 ponto(s) do LiDAR na area varrida | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410815.9212105, "no": "bt_navigator", "msg": "[navigate_to_pose] [ActionServer] Aborting handle."}
+{"t": 1794410815.9230146, "no": "bt_navigator", "msg": "Goal failed"}
+{"t": 1794410824.954144, "no": "alinhador_passagem", "msg": "TRABALHADOR RECEBEU: goal sem area"}
+{"t": 1794410824.956274, "no": "alinhador_passagem", "msg": "Novo goal: x=2.65 y=-0.21 yaw=6 graus"}
+{"t": 1794410824.972494, "no": "bt_navigator", "msg": "Begin navigating from current location (0.29, 0.19) to (2.65, -0.21)"}
+{"t": 1794410825.0190287, "no": "controller_server", "msg": "Received a goal, begin computing control effort."}
+{"t": 1794410825.6203208, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410826.2195458, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410826.7196004, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410827.2207751, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410828.320759, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410828.9195602, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410829.421435, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410830.019568, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410830.523228, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410831.1199062, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410831.6234798, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410832.7197182, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410833.3196692, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410833.8196604, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410834.4240143, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410834.920814, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410835.5196245, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410836.0200574, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410836.520032, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410837.119672, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410837.6206043, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410838.2196274, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410838.7200882, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410839.3195364, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410839.8196168, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410840.3197324, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410840.92025, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410841.4196763, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410842.0195515, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410847.2199306, "no": "controller_server", "msg": "Failed to make progress"}
+{"t": 1794410847.2223876, "no": "controller_server", "msg": "[follow_path] [ActionServer] Aborting handle."}
+{"t": 1794410848.6466954, "no": "destravar", "msg": "DESTRAVAR: caminho novo (87 pontos)"}
+{"t": 1794410849.0317628, "no": "alinhador_passagem", "msg": "Novo goal: x=-0.03 y=-0.10 yaw=6 graus"}
+{"t": 1794410849.0591335, "no": "bt_navigator", "msg": "[navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling."}
+{"t": 1794410849.061337, "no": "bt_navigator", "msg": "Goal canceled"}
+{"t": 1794410849.092898, "no": "alinhador_passagem", "msg": "Goal substituido por um novo."}
+{"t": 1794410849.1037242, "no": "alinhador_passagem", "msg": "TRABALHADOR RECEBEU: goal sem area"}
+{"t": 1794410849.1180847, "no": "bt_navigator", "msg": "Begin navigating from current location (0.53, -0.16) to (-0.03, -0.10)"}
+{"t": 1794410849.1525395, "no": "controller_server", "msg": "Received a goal, begin computing control effort."}
+{"t": 1794410849.2349112, "no": "destravar", "msg": "DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_progresso_fisico,quina_dir (planner ok, frente 44 cm, retornos 0)"}
+{"t": 1794410849.2373455, "no": "destravar", "msg": "DESTRAVAR: FALHA: cancelado"}
+{"t": 1794410849.5036442, "no": "destravar", "msg": "DESTRAVAR: cancelado"}
+{"t": 1794410849.7543626, "no": "controller_server", "msg": "Passing new path to controller."}
+{"t": 1794410857.8741138, "no": "controller_server", "msg": "Could not find a legal trajectory: No valid trajectories out of 400! "}
+{"t": 1794410858.2536745, "no": "controller_server", "msg": "Cancellation was successful. Stopping the robot."}
+{"t": 1794410858.2536943, "no": "controller_server", "msg": "[follow_path] [ActionServer] Client requested to cancel the goal. Cancelling."}
+{"t": 1794410860.798129, "no": "destravar", "msg": "BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo"}
+{"t": 1794410860.8083532, "no": "destravar", "msg": "DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)"}
+{"t": 1794410864.0990663, "no": "destravar", "msg": "BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo"}
+{"t": 1794410864.106652, "no": "destravar", "msg": "DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (2/2)"}
+{"t": 1794410866.5951388, "no": "destravar", "msg": "DESTRAVAR: DIAGNOSTICO: sem_caminho_global,cm_bloqueou,frente_barrada (planner sem_caminho, frente 0 cm, retornos 0)"}
+{"t": 1794410866.6595426, "no": "destravar", "msg": "DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: planner sem caminho | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Collision Monitor barraria (obstaculo a < 5 cm do corpo); dir: o Collision Monitor barraria (obstaculo a < 5 cm do corpo) | giro: o Collision Monitor barraria (ponto a < 3 cm do corpo) | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP)"}
+{"t": 1794410866.676737, "no": "destravar", "msg": "DESTRAVAR: FALHA: sem alternativa segura (retomar: planner sem caminho | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Collision Monitor barraria (obstaculo a < 5 cm do corpo); dir: o Collision Monitor barraria (obstaculo a < 5 cm do corpo) | giro: o Collision Monitor barraria (ponto a < 3 cm do corpo) | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410866.937874, "no": "destravar", "msg": "DESTRAVAR: sem alternativa segura (retomar: planner sem caminho | contornar: nao e objeto pequeno com lado livre | lateral: esq: o Collision Monitor barraria (obstaculo a < 5 cm do corpo); dir: o Collision Monitor barraria (obstaculo a < 5 cm do corpo) | giro: o Collision Monitor barraria (ponto a < 3 cm do corpo) | re: BLOQUEADA: permitir_re=false (falta validacao fisica da cobertura traseira e do ICP))"}
+{"t": 1794410866.9607909, "no": "bt_navigator", "msg": "[navigate_to_pose] [ActionServer] Aborting handle."}
+{"t": 1794410866.961095, "no": "bt_navigator", "msg": "Goal failed"}

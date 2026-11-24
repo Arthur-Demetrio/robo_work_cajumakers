@@ -1,0 +1,24 @@
+=== centrado_r0 (WS_1 de frente, centrado, 0,60 m) ===
+  -> SUCESSO_OK / bom | disse: WS_1 SUCESSO folga=10.7cm ang=+0.1 centro=-2.4cm | real: folga 10.7 cm centro -0.0 cm ang +0.0 g | menor dist mesa 9.7 cm
+=== lado_p05_r0 (5 cm a esquerda) ===
+  -> SUCESSO_OK / bom | disse: WS_1 SUCESSO folga=10.8cm ang=+0.5 centro=-0.5cm | real: folga 10.8 cm centro -0.4 cm ang -0.4 g | menor dist mesa 9.6 cm
+=== obst_frente_r0 (caixa 10x10 entre o robo e a face (5,5 cm a frente do para-choque no inicio)) ===
+  -> FALHA_EXPLICITA / bom | disse: WS_1 FALHOU encosto: nao vejo a face da mesa a frente | real: folga 23.5 cm centro -0.0 cm ang +0.0 g | menor dist mesa 22.5 cm
+=== lado_p10_sem_deslize_r0 (controle: 10 cm de lado com motor ideal de lado) ===
+  -> SUCESSO_OK / bom | disse: WS_1 SUCESSO folga=10.5cm ang=+0.1 centro=-2.3cm | real: folga 10.5 cm centro -1.2 cm ang +0.0 g | menor dist mesa 9.5 cm
+=== imu_falhando_r0 (5 cm de lado, IMU com buracos de 0,6 s andando) ===
+  -> SUCESSO_OK / bom | disse: WS_1 SUCESSO folga=10.1cm ang=+0.5 centro=-0.7cm | real: folga 10.1 cm centro +0.5 cm ang -0.5 g | menor dist mesa 8.8 cm
+# Bancada de encosto (Gazebo) - 09/11/2026 18:57
+
+Criterio honesto: folga 6-12 cm, centro +-3 cm, angulo +-3 graus (pose real do Gazebo).
+
+| cenario | esperado | classe | avaliacao | o alinhador disse | real: folga / centro / ang | menor dist mesa | frag/parcial/sem face |
+|---|---|---|---|---|---|---|---|
+| centrado r0 | sucesso | SUCESSO_OK | bom | WS_1 SUCESSO folga=10.7cm ang=+0.1 centro=-2.4cm | 10.7 / -0.0 / +0.0 | 9.7 | 0/0/0 |
+| lado_p05 r0 | sucesso | SUCESSO_OK | bom | WS_1 SUCESSO folga=10.8cm ang=+0.5 centro=-0.5cm | 10.8 / -0.4 / -0.4 | 9.6 | 0/0/0 |
+| obst_frente r0 | falha | FALHA_EXPLICITA | bom | WS_1 FALHOU encosto: nao vejo a face da mesa a frente | 23.5 / -0.0 / +0.0 | 22.5 | 0/0/20 |
+| lado_p10_sem_deslize r0 | sucesso | SUCESSO_OK | bom | WS_1 SUCESSO folga=10.5cm ang=+0.1 centro=-2.3cm | 10.5 / -1.2 / +0.0 | 9.5 | 0/0/2 |
+| imu_falhando r0 | sucesso | SUCESSO_OK | bom | WS_1 SUCESSO folga=10.1cm ang=+0.5 centro=-0.7cm | 10.1 / +0.5 / -0.5 | 8.8 | 1/0/0 |
+
+Resumo: bom 5
+

@@ -1,0 +1,6 @@
+WS1 6.5 s 15cm/15°: 2.4 s antes do fim | 10cm/10°: 1.0 s antes do fim | 8cm/8°: 1.0 s antes do fim
+WS3 27.4 s 15cm/15°: 0.8 s antes do fim | 10cm/10°: 0.5 s antes do fim | 8cm/8°: 0.4 s antes do fim
+WS2 22.6 s 15cm/15°: 0.8 s antes do fim | 10cm/10°: 0.6 s antes do fim | 8cm/8°: 0.4 s antes do fim
+WS1b 39.6 s 15cm/15°: 0.7 s antes do fim | 10cm/10°: 0.5 s antes do fim | 8cm/8°: 0.3 s antes do fim
+PREP1 12.6 s 15cm/15°: 0.8 s antes do fim | 10cm/10°: 0.5 s antes do fim | 8cm/8°: 0.4 s antes do fim
+PREPF 13.8 s 15cm/15°: 0.8 s antes do fim | 10cm/10°: 0.5 s antes do fim | 8cm/8°: 0.4 s antes do fim

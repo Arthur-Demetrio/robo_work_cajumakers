@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-06",
+  "image_size": [
+    640,
+    480
+  ],
+  "user_confirmed": true,
+  "source": "User measurements and screenshots in this session; unchanged 640x480 camera calibration.",
+  "front_reference": "Centre of front white edge, x forward, y left.",
+  "base_link_front_offset_confirmed_m": [
+    0.365,
+    0.0
+  ],
+  "longitudinal_checks": [
+    {
+      "measured_m": 0.25,
+      "displayed_m": 0.245,
+      "screenshot": "codex-clipboard-iQ8Weo.png"
+    },
+    {
+      "measured_m": 0.35,
+      "displayed_m": 0.349,
+      "screenshot": "codex-clipboard-lOHlxj.png"
+    },
+    {
+      "measured_m": 0.4,
+      "displayed_m": 0.4,
+      "screenshot": "codex-clipboard-zLi870.png"
+    }
+  ],
+  "point_checks": [
+    {
+      "measured_front_xy_m": [
+        0.35,
+        -0.1
+      ],
+      "displayed_front_xy_m": [
+        0.354,
+        -0.1
+      ],
+      "screenshot": "codex-clipboard-wMXniR.png",
+      "confirmation": "User: Mas sim, conferi na trena e deu certo"
+    }
+  ]
+}

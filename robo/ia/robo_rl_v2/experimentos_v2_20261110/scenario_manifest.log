@@ -1,0 +1,1 @@
+{'safe_components': 10, 'largest_safe_cells': 14061, 'all_safe_cells': 29544, 'sampled_fraction_of_safe_centers': 0.47593419983753044, 'largest_safe_center_area_m2': 8.788125, 'note': 'The disk-based sampler excludes physically navigable oriented-footprint passages; evaluation does not cover all service regions.'}

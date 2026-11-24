@@ -1,0 +1,51 @@
+[INFO] [1791207244.559269576] [planner_server]: 
+	planner_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791207244.565804296] [planner_server]: Creating
+[INFO] [1791207244.576576075] [global_costmap.global_costmap]: 
+	global_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791207244.576970850] [global_costmap.global_costmap]: Creating Costmap
+[INFO] [1791207244.849042486] [planner_server]: Configuring
+[INFO] [1791207244.849064126] [global_costmap.global_costmap]: Configuring
+[INFO] [1791207244.852065900] [global_costmap.global_costmap]: Using plugin "static_layer"
+[INFO] [1791207244.854675680] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1791207244.855231208] [global_costmap.global_costmap]: Subscribing to updates
+[INFO] [1791207244.856136886] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[INFO] [1791207244.856153171] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[INFO] [1791207244.856743867] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1791207244.863875295] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 117 X 49 at 0.050000 m/pix
+[INFO] [1791207244.864169613] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[INFO] [1791207244.864189610] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[INFO] [1791207244.864697073] [planner_server]: Planner Server has GridBased  planners available.
+[INFO] [1791207245.366987676] [planner_server]: Activating
+[INFO] [1791207245.367012882] [global_costmap.global_costmap]: Activating
+[INFO] [1791207245.367018417] [global_costmap.global_costmap]: Checking transform
+[INFO] [1791207245.367102210] [global_costmap.global_costmap]: start
+[INFO] [1791207245.417256992] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[INFO] [1791207245.417718682] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[INFO] [1791208110.867239244] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 127 X 49 at 0.050000 m/pix
+[INFO] [1791208112.867216773] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 155 X 49 at 0.050000 m/pix
+[INFO] [1791208114.867211855] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 155 X 132 at 0.050000 m/pix
+[INFO] [1791208116.867211491] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 155 X 134 at 0.050000 m/pix
+[INFO] [1791208126.867217017] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 165 X 134 at 0.050000 m/pix
+[INFO] [1791208130.867212329] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 171 X 134 at 0.050000 m/pix
+[INFO] [1791208132.867214607] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 183 X 134 at 0.050000 m/pix
+[INFO] [1791208134.867245289] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 183 X 134 at 0.050000 m/pix
+[INFO] [1791208138.867213732] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 183 X 154 at 0.050000 m/pix
+[INFO] [1791208150.867211939] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 184 X 154 at 0.050000 m/pix
+[INFO] [1791208152.867212558] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 185 X 154 at 0.050000 m/pix
+[INFO] [1791208198.867219609] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 189 X 154 at 0.050000 m/pix
+[INFO] [1791208204.370465772] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791208204.370503139] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[INFO] [1791208204.370568947] [planner_server]: Deactivating
+[INFO] [1791208204.370596834] [global_costmap.global_costmap]: Deactivating
+[INFO] [1791208204.867278617] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[INFO] [1791208204.867341452] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[INFO] [1791208204.877465191] [planner_server]: Cleaning up
+[INFO] [1791208204.889701732] [global_costmap.global_costmap]: Cleaning up
+[INFO] [1791208204.894563488] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[INFO] [1791208204.894723087] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[INFO] [1791208204.916732132] [planner_server]: Destroying bond (planner_server) to lifecycle manager.

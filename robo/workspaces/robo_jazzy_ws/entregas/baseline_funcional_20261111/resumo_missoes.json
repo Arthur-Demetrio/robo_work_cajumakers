@@ -1,0 +1,1469 @@
+[
+ {
+  "missao": "missao1_20261026_082632",
+  "desc": "alinhador v3.8 + missao",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 0,
+  "destravar": 0,
+  "paradas_cm": 12,
+  "erros": 2,
+  "duracao_resultados_s": 270.4,
+  "resultados": [
+   [
+    1793014747.6,
+    "WS_1 SUCESSO folga=7.0cm ang=-1.3 centro=+0.9cm"
+   ],
+   [
+    1793014922.4,
+    "WS_2 SUCESSO folga=8.6cm ang=-0.4 centro=+3.1cm"
+   ],
+   [
+    1793014958.1,
+    "WS_3 SUCESSO folga=7.1cm ang=-2.3 centro=nd"
+   ],
+   [
+    1793015018.0,
+    "WS_1 SUCESSO folga=8.7cm ang=-2.5 centro=-0.8cm"
+   ]
+  ]
+ },
+ {
+  "missao": "missao1_20261029_090440",
+  "desc": "missao1 WS_1/WS_2 4 objetos, executor PLANO_V2",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 1,
+  "destravar": 0,
+  "paradas_cm": 33,
+  "erros": 11,
+  "duracao_resultados_s": 313.5,
+  "resultados": [
+   [
+    1793275676.8,
+    "WS_1 SUCESSO folga=6.3cm ang=+2.0 centro=-0.2cm"
+   ],
+   [
+    1793275724.7,
+    "WS_2 SUCESSO folga=7.6cm ang=-1.6 centro=+16.5cm"
+   ],
+   [
+    1793275808.0,
+    "WS_1 FALHOU encosto: nao consegui alinhar com a mesa (0.1 graus, cent"
+   ],
+   [
+    1793275844.3,
+    "WS_1 SUCESSO folga=7.6cm ang=+1.0 centro=-0.2cm"
+   ],
+   [
+    1793275990.3,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao2_20261029_094243",
+  "desc": "missao1 com alinhador v3.17",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 0,
+  "destravar": 0,
+  "paradas_cm": 8,
+  "erros": 1,
+  "duracao_resultados_s": 188.2,
+  "resultados": [
+   [
+    1793277851.6,
+    "WS_1 SUCESSO folga=8.2cm ang=-3.5 centro=-1.1cm"
+   ],
+   [
+    1793277899.0,
+    "WS_2 SUCESSO folga=9.6cm ang=-0.8 centro=+4.3cm"
+   ],
+   [
+    1793277959.7,
+    "WS_1 SUCESSO folga=7.6cm ang=-2.8 centro=-1.4cm"
+   ],
+   [
+    1793278039.7,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao3_20261029_100240",
+  "desc": "missao1 com alinhador v3.17",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 1,
+  "falhou": 1,
+  "destravar": 0,
+  "paradas_cm": 25,
+  "erros": 19,
+  "duracao_resultados_s": 110.7,
+  "resultados": [
+   [
+    1793279041.1,
+    "WS_1 SUCESSO folga=9.1cm ang=-1.0 centro=-1.1cm"
+   ],
+   [
+    1793279151.8,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ]
+  ]
+ },
+ {
+  "missao": "missao4_20261029_103632",
+  "desc": "mapa novo, v3.18, costmap global com obstaculos",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 3,
+  "falhou": 1,
+  "destravar": 0,
+  "paradas_cm": 13,
+  "erros": 8,
+  "duracao_resultados_s": 239.0,
+  "resultados": [
+   [
+    1793281143.0,
+    "WS_2 SUCESSO folga=8.4cm ang=+0.5 centro=+1.9cm"
+   ],
+   [
+    1793281206.9,
+    "WS_1 SUCESSO folga=8.4cm ang=+0.3 centro=+0.6cm"
+   ],
+   [
+    1793281284.1,
+    "WS_2 SUCESSO folga=8.0cm ang=-2.8 centro=+2.1cm"
+   ],
+   [
+    1793281382.0,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ]
+  ]
+ },
+ {
+  "missao": "missao5_20261029_105452",
+  "desc": "v3.19, mapa arena_29-10 recarregado",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 3,
+  "falhou": 2,
+  "destravar": 0,
+  "paradas_cm": 17,
+  "erros": 23,
+  "duracao_resultados_s": 277.0,
+  "resultados": [
+   [
+    1793282406.8,
+    "WS_2 SUCESSO folga=8.2cm ang=-3.1 centro=+2.7cm"
+   ],
+   [
+    1793282477.3,
+    "WS_1 SUCESSO folga=7.3cm ang=-3.2 centro=+2.9cm"
+   ],
+   [
+    1793282533.0,
+    "WS_2 SUCESSO folga=9.0cm ang=-2.3 centro=+0.6cm"
+   ],
+   [
+    1793282567.0,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ],
+   [
+    1793282683.8,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ]
+  ]
+ },
+ {
+  "missao": "missao6_20261029_114305",
+  "desc": "v3.20: giro do preparo pelo LiDAR (re/frente/lado) + larguras em varios angulos",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 0,
+  "falhou": 1,
+  "destravar": 0,
+  "paradas_cm": 6,
+  "erros": 3,
+  "duracao_resultados_s": 0.0,
+  "resultados": [
+   [
+    1793285105.5,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ]
+  ]
+ },
+ {
+  "missao": "missao6_20261103_083434",
+  "desc": "v3.20: giro do preparo pelo LiDAR (re/frente/lado) + larguras em varios angulos",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 0,
+  "falhou": 4,
+  "destravar": 0,
+  "paradas_cm": 26,
+  "erros": 10,
+  "duracao_resultados_s": 341.6,
+  "resultados": [
+   [
+    1793705763.9,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793705765.0,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793706092.3,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793706105.5,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ]
+  ]
+ },
+ {
+  "missao": "missao6_b_20261103_090441",
+  "desc": "v3.21 + fio da roda traseira direita consertado",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 4,
+  "destravar": 0,
+  "paradas_cm": 6,
+  "erros": 7,
+  "duracao_resultados_s": 352.8,
+  "resultados": [
+   [
+    1793707520.2,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793707524.7,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793707535.2,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793707539.7,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793707679.1,
+    "WS_2 SUCESSO folga=8.1cm ang=-1.7 centro=+0.7cm"
+   ],
+   [
+    1793707726.7,
+    "WS_1 SUCESSO folga=9.1cm ang=+0.5 centro=-0.7cm"
+   ],
+   [
+    1793707783.4,
+    "WS_2 SUCESSO folga=7.7cm ang=-1.8 centro=+0.3cm"
+   ],
+   [
+    1793707873.0,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao7_20261103_094605",
+  "desc": "ff lateral 0.0 + linear_scale_y 6.0, alinhador v3.21",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 0,
+  "falhou": 0,
+  "destravar": 0,
+  "paradas_cm": 0,
+  "erros": 1,
+  "duracao_resultados_s": null,
+  "resultados": []
+ },
+ {
+  "missao": "missao7_20261103_095605",
+  "desc": "ff lateral 0.0 + linear_scale_y 6.0, alinhador v3.21",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 1,
+  "destravar": 0,
+  "paradas_cm": 25,
+  "erros": 10,
+  "duracao_resultados_s": 188.0,
+  "resultados": [
+   [
+    1793710677.3,
+    "WS_2 SUCESSO folga=7.5cm ang=+2.0 centro=+0.8cm"
+   ],
+   [
+    1793710737.7,
+    "WS_1 SUCESSO folga=7.3cm ang=-1.5 centro=+2.9cm"
+   ],
+   [
+    1793710787.0,
+    "WS_2 SUCESSO folga=7.3cm ang=+0.9 centro=+1.0cm"
+   ],
+   [
+    1793710797.8,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ],
+   [
+    1793710865.3,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao8_20261103_104104",
+  "desc": "mapa arena_03-11 + suavizador do Nav2 (tau 0.5 s), PWM 150, v3.21",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 3,
+  "falhou": 4,
+  "destravar": 0,
+  "paradas_cm": 30,
+  "erros": 13,
+  "duracao_resultados_s": 526.7,
+  "resultados": [
+   [
+    1793713333.6,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793713380.5,
+    "WS_2 FALHOU cancelado por outro goal"
+   ],
+   [
+    1793713659.1,
+    "WS_2 SUCESSO folga=9.2cm ang=-1.1 centro=+2.7cm"
+   ],
+   [
+    1793713715.1,
+    "WS_1 SUCESSO folga=9.1cm ang=-2.4 centro=+1.6cm"
+   ],
+   [
+    1793713772.4,
+    "WS_2 SUCESSO folga=7.5cm ang=-0.8 centro=+1.2cm"
+   ],
+   [
+    1793713783.3,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ],
+   [
+    1793713860.4,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ]
+  ]
+ },
+ {
+  "missao": "missao9_20261104_083345",
+  "desc": "v3.22 + suavizador + occupancy 0.2, mapa novo",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 5,
+  "falhou": 0,
+  "destravar": 0,
+  "paradas_cm": 47,
+  "erros": 9,
+  "duracao_resultados_s": 925.3,
+  "resultados": [
+   [
+    1793792193.7,
+    "WS_1 SUCESSO folga=8.4cm ang=-4.3 centro=+1.0cm"
+   ],
+   [
+    1793792985.9,
+    "WS_1 SUCESSO folga=8.3cm ang=+0.6 centro=+2.5cm"
+   ],
+   [
+    1793793043.3,
+    "WS_2 SUCESSO folga=8.5cm ang=+0.2 centro=+2.6cm"
+   ],
+   [
+    1793793109.6,
+    "WS_1 SUCESSO folga=8.6cm ang=-0.1 centro=+2.0cm"
+   ],
+   [
+    1793793119.1,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao10_20261104_093054",
+  "desc": "v3.23 (trajeto curto) + shim alinhando + mapa arena_04-11_0917",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 0,
+  "destravar": 0,
+  "paradas_cm": 14,
+  "erros": 2,
+  "duracao_resultados_s": 184.5,
+  "resultados": [
+   [
+    1793795567.6,
+    "WS_2 SUCESSO folga=8.4cm ang=-2.2 centro=+0.3cm"
+   ],
+   [
+    1793795610.2,
+    "WS_1 SUCESSO folga=7.7cm ang=+0.1 centro=nd"
+   ],
+   [
+    1793795660.6,
+    "WS_2 SUCESSO folga=9.1cm ang=-1.9 centro=-0.1cm"
+   ],
+   [
+    1793795752.1,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao11_20261104_094516",
+  "desc": "MISSAO2 com obstaculos, v3.24",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 0,
+  "destravar": 0,
+  "paradas_cm": 10,
+  "erros": 1,
+  "duracao_resultados_s": 201.6,
+  "resultados": [
+   [
+    1793796444.7,
+    "WS_2 SUCESSO folga=9.2cm ang=-1.2 centro=-0.0cm"
+   ],
+   [
+    1793796499.2,
+    "WS_1 SUCESSO folga=9.0cm ang=-1.0 centro=+1.5cm"
+   ],
+   [
+    1793796548.1,
+    "WS_2 SUCESSO folga=8.0cm ang=-1.5 centro=+0.8cm"
+   ],
+   [
+    1793796646.2,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao12_20261104_102259",
+  "desc": "MISSAO2 com obstaculos, v3.25",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 0,
+  "destravar": 0,
+  "paradas_cm": 25,
+  "erros": 2,
+  "duracao_resultados_s": 249.1,
+  "resultados": [
+   [
+    1793798721.6,
+    "WS_2 SUCESSO folga=8.9cm ang=-2.6 centro=-1.1cm"
+   ],
+   [
+    1793798833.5,
+    "WS_1 SUCESSO folga=7.0cm ang=-2.8 centro=-0.8cm"
+   ],
+   [
+    1793798899.6,
+    "WS_2 SUCESSO folga=8.6cm ang=-0.6 centro=-1.9cm"
+   ],
+   [
+    1793798970.7,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao13_20261104_123804",
+  "desc": "PWM60 + ODOM_TABELA + INF_VALIDO + FILTRO_NAN, Nav2 0.08, MISSAO2 com obstaculo perto da W",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 1,
+  "destravar": 0,
+  "paradas_cm": 20,
+  "erros": 9,
+  "duracao_resultados_s": 387.5,
+  "resultados": [
+   [
+    1793806963.4,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793807103.2,
+    "WS_2 SUCESSO folga=9.0cm ang=-1.2 centro=-2.6cm"
+   ],
+   [
+    1793807155.0,
+    "WS_1 SUCESSO folga=9.2cm ang=+0.1 centro=+1.5cm"
+   ],
+   [
+    1793807217.7,
+    "WS_2 SUCESSO folga=8.5cm ang=-0.8 centro=+1.4cm"
+   ],
+   [
+    1793807350.8,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao14_20261105_081156",
+  "desc": "v3.26 (alinhador PWM60), MISSAO2 com obstaculo perto da WS_2",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 4,
+  "destravar": 0,
+  "paradas_cm": 45,
+  "erros": 21,
+  "duracao_resultados_s": 597.0,
+  "resultados": [
+   [
+    1793877280.5,
+    "WS_2 FALHOU cancelado por outro goal"
+   ],
+   [
+    1793877294.6,
+    "WS_2 FALHOU cancelado por outro goal"
+   ],
+   [
+    1793877492.2,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793877567.1,
+    "WS_2 SUCESSO folga=8.4cm ang=+1.0 centro=+0.7cm"
+   ],
+   [
+    1793877618.2,
+    "WS_1 SUCESSO folga=8.9cm ang=+3.5 centro=nd"
+   ],
+   [
+    1793877692.0,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793877774.3,
+    "WS_2 SUCESSO folga=9.2cm ang=-0.5 centro=+0.1cm"
+   ],
+   [
+    1793877877.5,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao15_20261105_085107",
+  "desc": "v3.27 (desvio) + GLOBAL_RAIO, MISSAO2 com obstaculo perto da WS_2",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 3,
+  "falhou": 2,
+  "destravar": 0,
+  "paradas_cm": 19,
+  "erros": 7,
+  "duracao_resultados_s": 301.7,
+  "resultados": [
+   [
+    1793879564.6,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793879629.3,
+    "WS_2 SUCESSO folga=8.9cm ang=-0.2 centro=-1.3cm"
+   ],
+   [
+    1793879697.1,
+    "WS_1 SUCESSO folga=9.1cm ang=-1.7 centro=+1.6cm"
+   ],
+   [
+    1793879777.3,
+    "WS_2 SUCESSO folga=9.1cm ang=-0.8 centro=-1.8cm"
+   ],
+   [
+    1793879866.3,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ]
+  ]
+ },
+ {
+  "missao": "missao16_20261105_092445",
+  "desc": "v3.28 + DWB_SEM_RE (sem GLOBAL_RAIO), MISSAO2 com obstaculo perto da WS_2",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 2,
+  "destravar": 0,
+  "paradas_cm": 39,
+  "erros": 18,
+  "duracao_resultados_s": 483.2,
+  "resultados": [
+   [
+    1793881585.7,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793881672.7,
+    "WS_2 SUCESSO folga=7.7cm ang=-0.5 centro=+0.3cm"
+   ],
+   [
+    1793881865.9,
+    "WS_1 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793881887.9,
+    "WS_1 SUCESSO folga=8.9cm ang=-1.8 centro=+5.7cm"
+   ],
+   [
+    1793881953.7,
+    "WS_2 SUCESSO folga=8.2cm ang=-1.3 centro=-0.5cm"
+   ],
+   [
+    1793882068.8,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao17_20261105_094345",
+  "desc": "arvore v3 (destravar) + chegada 10 graus + v3.29 + suavizador 0.25, MISSAO2 com obstaculo",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 0,
+  "falhou": 0,
+  "destravar": 0,
+  "paradas_cm": 0,
+  "erros": 0,
+  "duracao_resultados_s": null,
+  "resultados": []
+ },
+ {
+  "missao": "missao17_20261105_100328",
+  "desc": "descricao",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 0,
+  "falhou": 0,
+  "destravar": 0,
+  "paradas_cm": 1,
+  "erros": 0,
+  "duracao_resultados_s": null,
+  "resultados": []
+ },
+ {
+  "missao": "missao17_20261105_101159",
+  "desc": "filtro v3 (memoria do ponto cego) + CM frente 12 cm + giro PWM 50 + arvore v3 + chegada 10",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 2,
+  "falhou": 2,
+  "destravar": 0,
+  "paradas_cm": 27,
+  "erros": 21,
+  "duracao_resultados_s": 178.4,
+  "resultados": [
+   [
+    1793884484.7,
+    "WS_2 SUCESSO folga=9.1cm ang=+0.0 centro=+0.9cm"
+   ],
+   [
+    1793884528.9,
+    "WS_1 SUCESSO folga=9.1cm ang=+1.7 centro=nd"
+   ],
+   [
+    1793884609.5,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793884663.1,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ]
+  ]
+ },
+ {
+  "missao": "missao18_20261105_102816",
+  "desc": "destravar v2 (afasta + bloqueio virtual) + PWM 70 + filtro v3 + CM frente 12 cm + giro 50,",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 11,
+  "falhou": 10,
+  "destravar": 0,
+  "paradas_cm": 125,
+  "erros": 38,
+  "duracao_resultados_s": 1439.5,
+  "resultados": [
+   [
+    1793885412.5,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793885412.6,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793885543.6,
+    "WS_2 SUCESSO folga=8.3cm ang=+0.4 centro=+1.6cm"
+   ],
+   [
+    1793885588.1,
+    "WS_1 SUCESSO folga=9.0cm ang=-0.4 centro=nd"
+   ],
+   [
+    1793885659.2,
+    "WS_2 SUCESSO folga=8.3cm ang=-0.9 centro=+0.6cm"
+   ],
+   [
+    1793885758.6,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ],
+   [
+    1793885784.6,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ],
+   [
+    1793885899.2,
+    "WS_2 SUCESSO folga=8.2cm ang=+0.3 centro=-0.2cm"
+   ],
+   [
+    1793885949.3,
+    "WS_1 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793886006.8,
+    "WS_1 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793886085.7,
+    "WS_2 SUCESSO folga=9.0cm ang=+0.7 centro=+0.9cm"
+   ],
+   [
+    1793886214.2,
+    "WS_1 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793886245.3,
+    "WS_1 SUCESSO folga=9.6cm ang=-1.5 centro=+0.7cm"
+   ],
+   [
+    1793886309.8,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793886374.0,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793886551.7,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793886636.1,
+    "WS_2 SUCESSO folga=8.2cm ang=+0.2 centro=-0.4cm"
+   ],
+   [
+    1793886684.1,
+    "WS_1 SUCESSO folga=9.3cm ang=+0.2 centro=nd"
+   ],
+   [
+    1793886732.9,
+    "WS_2 SUCESSO folga=9.0cm ang=-1.0 centro=-0.9cm"
+   ],
+   [
+    1793886841.3,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ],
+   [
+    1793886852.0,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao19_20261105_112100",
+  "desc": "destravar v2 (afasta + bloqueio virtual) + PWM 70 + filtro v3 + CM frente 12 cm + giro 50,",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 7,
+  "falhou": 5,
+  "destravar": 0,
+  "paradas_cm": 107,
+  "erros": 17,
+  "duracao_resultados_s": 655.2,
+  "resultados": [
+   [
+    1793888631.1,
+    "WS_2 SUCESSO folga=9.1cm ang=+0.2 centro=+0.2cm"
+   ],
+   [
+    1793888780.3,
+    "WS_1 FALHOU encosto: tempo maximo"
+   ],
+   [
+    1793888821.3,
+    "WS_1 SUCESSO folga=6.9cm ang=+1.4 centro=nd"
+   ],
+   [
+    1793888906.5,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793888937.6,
+    "WS_2 SUCESSO folga=9.7cm ang=-0.5 centro=-0.1cm"
+   ],
+   [
+    1793889018.2,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ],
+   [
+    1793889023.9,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ],
+   [
+    1793889068.9,
+    "WS_2 SUCESSO folga=7.0cm ang=-0.4 centro=-0.9cm"
+   ],
+   [
+    1793889112.7,
+    "WS_1 SUCESSO folga=8.8cm ang=-0.3 centro=nd"
+   ],
+   [
+    1793889169.8,
+    "WS_2 SUCESSO folga=9.7cm ang=-1.1 centro=+1.9cm"
+   ],
+   [
+    1793889266.0,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ],
+   [
+    1793889286.3,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao20_20261105_120340",
+  "desc": "destravar v2 (afasta + bloqueio virtual) + PWM 70 + filtro v3 + CM frente 12 cm + giro 50,",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 8,
+  "falhou": 0,
+  "destravar": 0,
+  "paradas_cm": 77,
+  "erros": 11,
+  "duracao_resultados_s": 870.8,
+  "resultados": [
+   [
+    1793891180.3,
+    "WS_2 SUCESSO folga=8.7cm ang=+0.8 centro=+0.1cm"
+   ],
+   [
+    1793891250.5,
+    "WS_1 SUCESSO folga=9.4cm ang=-0.4 centro=+13.8cm"
+   ],
+   [
+    1793891353.4,
+    "WS_2 SUCESSO folga=8.7cm ang=-0.5 centro=-0.1cm"
+   ],
+   [
+    1793891477.0,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ],
+   [
+    1793891671.0,
+    "WS_2 SUCESSO folga=9.0cm ang=+0.1 centro=-1.7cm"
+   ],
+   [
+    1793891749.7,
+    "WS_1 SUCESSO folga=8.7cm ang=-0.9 centro=+2.1cm"
+   ],
+   [
+    1793891903.1,
+    "WS_2 SUCESSO folga=6.7cm ang=-1.9 centro=-1.3cm"
+   ],
+   [
+    1793892051.1,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao21_20261105_171908",
+  "desc": "v3.32 + MANTER_CAMINHO + NAV_FRENTE; r1 giro final do alinhador ligado, r2 desligado",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 2,
+  "destravar": 0,
+  "paradas_cm": 105,
+  "erros": 14,
+  "duracao_resultados_s": 456.3,
+  "resultados": [
+   [
+    1793910134.8,
+    "WS_2 SUCESSO folga=10.2cm ang=+8.6 centro=-1.6cm"
+   ],
+   [
+    1793910217.1,
+    "WS_1 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793910267.3,
+    "WS_1 SUCESSO folga=8.6cm ang=-0.4 centro=+2.7cm"
+   ],
+   [
+    1793910320.1,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793910470.8,
+    "WS_2 SUCESSO folga=14.5cm ang=+0.6 centro=nd"
+   ],
+   [
+    1793910591.1,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao22_20261105_181805",
+  "desc": "BLOQUEIO_LOCAL: bloqueio so no local, 10 s, solta sem caminho",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 7,
+  "falhou": 5,
+  "destravar": 0,
+  "paradas_cm": 83,
+  "erros": 24,
+  "duracao_resultados_s": 875.1,
+  "resultados": [
+   [
+    1793913621.4,
+    "WS_2 FALHOU cancelado por outro goal"
+   ],
+   [
+    1793913785.9,
+    "WS_2 SUCESSO folga=9.3cm ang=-0.5 centro=+0.3cm"
+   ],
+   [
+    1793913853.3,
+    "WS_1 SUCESSO folga=9.2cm ang=-0.4 centro=nd"
+   ],
+   [
+    1793913931.9,
+    "WS_2 SUCESSO folga=9.0cm ang=+1.1 centro=+1.4cm"
+   ],
+   [
+    1793913956.1,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ],
+   [
+    1793913965.3,
+    "FINISH FALHOU cancelado por outro goal"
+   ],
+   [
+    1793914068.3,
+    "WS_2 FALHOU encosto: Collision Monitor bloqueando em \"lat_mover\""
+   ],
+   [
+    1793914099.8,
+    "WS_2 SUCESSO folga=9.5cm ang=+0.9 centro=+2.8cm"
+   ],
+   [
+    1793914169.7,
+    "WS_1 SUCESSO folga=8.9cm ang=-0.3 centro=nd"
+   ],
+   [
+    1793914239.7,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793914389.9,
+    "WS_2 SUCESSO folga=8.9cm ang=+1.2 centro=-2.8cm"
+   ],
+   [
+    1793914496.4,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao22_20261106_082844",
+  "desc": "P1 bloqueio so no costmap local + NAV_FRENTE desfeita",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 0,
+  "falhou": 0,
+  "destravar": 0,
+  "paradas_cm": 1,
+  "erros": 0,
+  "duracao_resultados_s": null,
+  "resultados": []
+ },
+ {
+  "missao": "missao22_20261106_083214",
+  "desc": "P1 bloqueio so no costmap local + NAV_FRENTE desfeita",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 4,
+  "falhou": 4,
+  "destravar": 0,
+  "paradas_cm": 37,
+  "erros": 17,
+  "duracao_resultados_s": 678.8,
+  "resultados": [
+   [
+    1793964829.6,
+    "WS_2 FALHOU cancelado por outro goal"
+   ],
+   [
+    1793965038.8,
+    "WS_2 SUCESSO folga=9.0cm ang=+0.2 centro=+0.9cm"
+   ],
+   [
+    1793965105.7,
+    "WS_1 SUCESSO folga=9.0cm ang=+0.4 centro=+2.3cm"
+   ],
+   [
+    1793965200.4,
+    "WS_2 SUCESSO folga=9.5cm ang=-0.5 centro=-1.8cm"
+   ],
+   [
+    1793965333.6,
+    "FINISH FALHOU nao chegou na pose de aproximacao (navegacao, preparo o"
+   ],
+   [
+    1793965349.0,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ],
+   [
+    1793965459.6,
+    "WS_2 FALHOU cancelado por outro goal"
+   ],
+   [
+    1793965508.3,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ]
+  ]
+ },
+ {
+  "missao": "missao23_20261106_100713",
+  "desc": "H1 + encosto linear + fundido + entrada rapida + velocidade",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 0,
+  "falhou": 5,
+  "destravar": 0,
+  "paradas_cm": 17,
+  "erros": 7,
+  "duracao_resultados_s": 329.9,
+  "resultados": [
+   [
+    1793970677.2,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793970789.6,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793970937.8,
+    "WS_2 FALHOU erro: IMU parado ha 60 s: desisti"
+   ],
+   [
+    1793971004.0,
+    "WS_2 FALHOU cancelado por outro goal"
+   ],
+   [
+    1793971007.1,
+    "WS_2 FALHOU cancelado por outro goal"
+   ]
+  ]
+ },
+ {
+  "missao": "missao24_20261106_104812",
+  "desc": "rota mapa + freio + uma parede + deslize sem giro",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 9,
+  "falhou": 3,
+  "destravar": 0,
+  "paradas_cm": 111,
+  "erros": 23,
+  "duracao_resultados_s": 1057.8,
+  "resultados": [
+   [
+    1793972988.8,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793973034.6,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793973288.7,
+    "WS_2 SUCESSO folga=9.6cm ang=-1.1 centro=+4.7cm"
+   ],
+   [
+    1793973353.6,
+    "WS_2 SUCESSO folga=10.0cm ang=-5.1 centro=nd"
+   ],
+   [
+    1793973426.6,
+    "WS_1 SUCESSO folga=8.5cm ang=+0.5 centro=-0.2cm"
+   ],
+   [
+    1793973481.3,
+    "WS_2 SUCESSO folga=10.4cm ang=-0.3 centro=+4.9cm"
+   ],
+   [
+    1793973586.7,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ],
+   [
+    1793973636.5,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1793973830.1,
+    "WS_2 SUCESSO folga=10.8cm ang=-1.1 centro=+2.5cm"
+   ],
+   [
+    1793973897.3,
+    "WS_1 SUCESSO folga=7.0cm ang=+0.9 centro=+1.8cm"
+   ],
+   [
+    1793973963.5,
+    "WS_2 SUCESSO folga=7.3cm ang=-1.0 centro=-2.1cm"
+   ],
+   [
+    1793974046.6,
+    "FINISH SUCESSO chegou (ponto sem mesa)"
+   ]
+  ]
+ },
+ {
+  "missao": "missao25_20261109_113022_204811",
+  "desc": "",
+  "versoes": [],
+  "goals": 0,
+  "sucesso": 0,
+  "falhou": 10,
+  "destravar": 0,
+  "paradas_cm": 34,
+  "erros": 15,
+  "duracao_resultados_s": 307.2,
+  "resultados": [
+   [
+    1794234689.9,
+    "WS_2 FALHOU cancelado por outro goal"
+   ],
+   [
+    1794234756.6,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1794234843.2,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794234850.8,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794234869.1,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794234872.9,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794234956.0,
+    "WS_2 FALHOU encosto: face ausente ou desatualizada"
+   ],
+   [
+    1794234975.1,
+    "WS_2 FALHOU encosto: face ausente ou desatualizada"
+   ],
+   [
+    1794234991.2,
+    "WS_2 FALHOU encosto: face ausente ou desatualizada"
+   ],
+   [
+    1794234997.1,
+    "WS_2 FALHOU encosto: face ausente ou desatualizada"
+   ]
+  ]
+ },
+ {
+  "missao": "missao25_20261109_121118_317363",
+  "desc": "",
+  "versoes": [],
+  "goals": 9,
+  "sucesso": 0,
+  "falhou": 4,
+  "destravar": 0,
+  "paradas_cm": 48,
+  "erros": 17,
+  "duracao_resultados_s": 49.3,
+  "resultados": [
+   [
+    1794237170.2,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1794237189.4,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1794237218.9,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1794237219.5,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ]
+  ]
+ },
+ {
+  "missao": "missao26_20261109_122527_256512",
+  "desc": "",
+  "versoes": [],
+  "goals": 8,
+  "sucesso": 0,
+  "falhou": 6,
+  "destravar": 0,
+  "paradas_cm": 27,
+  "erros": 11,
+  "duracao_resultados_s": 185.4,
+  "resultados": [
+   [
+    1794238011.1,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1794238043.7,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1794238173.9,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794238181.7,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794238192.7,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794238196.5,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ]
+  ]
+ },
+ {
+  "missao": "missao27_20261109_123724_593231",
+  "desc": "",
+  "versoes": [],
+  "goals": 4,
+  "sucesso": 0,
+  "falhou": 4,
+  "destravar": 0,
+  "paradas_cm": 6,
+  "erros": 5,
+  "duracao_resultados_s": 95.9,
+  "resultados": [
+   [
+    1794238697.6,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1794238762.5,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794238781.0,
+    "WS_2 FALHOU encosto: perdi a face da mesa"
+   ],
+   [
+    1794238793.5,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ]
+  ]
+ },
+ {
+  "missao": "missao28_20261109_124224_226125",
+  "desc": "",
+  "versoes": [],
+  "goals": 6,
+  "sucesso": 0,
+  "falhou": 4,
+  "destravar": 0,
+  "paradas_cm": 2,
+  "erros": 5,
+  "duracao_resultados_s": 93.5,
+  "resultados": [
+   [
+    1794239127.4,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794239131.3,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794239207.6,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794239220.9,
+    "WS_2 FALHOU encosto: nao vejo a face da mesa a frente"
+   ]
+  ]
+ },
+ {
+  "missao": "missao29_20261109_130254_041751",
+  "desc": "",
+  "versoes": [],
+  "goals": 4,
+  "sucesso": 0,
+  "falhou": 4,
+  "destravar": 0,
+  "paradas_cm": 11,
+  "erros": 5,
+  "duracao_resultados_s": 104.4,
+  "resultados": [
+   [
+    1794240248.1,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1794240309.1,
+    "WS_2 FALHOU encosto: face ausente ou desatualizada"
+   ],
+   [
+    1794240333.3,
+    "WS_2 FALHOU encosto: face ausente ou desatualizada"
+   ],
+   [
+    1794240352.5,
+    "WS_2 FALHOU encosto: face ausente ou desatualizada"
+   ]
+  ]
+ },
+ {
+  "missao": "missao30_20261109_131402_040311",
+  "desc": "",
+  "versoes": [],
+  "goals": 4,
+  "sucesso": 1,
+  "falhou": 3,
+  "destravar": 0,
+  "paradas_cm": 12,
+  "erros": 3,
+  "duracao_resultados_s": 98.6,
+  "resultados": [
+   [
+    1794240899.2,
+    "WS_2 FALHOU nao chegou na pose de aproximacao (navegacao, preparo ou "
+   ],
+   [
+    1794240955.8,
+    "WS_2 SUCESSO folga=10.5cm ang=-0.6 centro=+3.3cm"
+   ],
+   [
+    1794240994.0,
+    "WS_1 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794240997.8,
+    "WS_1 FALHOU encosto: nao vejo a face da mesa a frente"
+   ]
+  ]
+ },
+ {
+  "missao": "missao32_20261109_140957_461078",
+  "desc": "",
+  "versoes": [],
+  "goals": 7,
+  "sucesso": 0,
+  "falhou": 4,
+  "destravar": 0,
+  "paradas_cm": 7,
+  "erros": 8,
+  "duracao_resultados_s": 102.6,
+  "resultados": [
+   [
+    1794244260.4,
+    "WS_1 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794244264.8,
+    "WS_1 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794244339.3,
+    "WS_1 FALHOU encosto: nao vejo a face da mesa a frente"
+   ],
+   [
+    1794244363.0,
+    "WS_1 FALHOU encosto: nao vejo a face da mesa a frente"
+   ]
+  ]
+ },
+ {
+  "missao": "missao33_20261111_102905_949360",
+  "desc": "",
+  "versoes": [],
+  "goals": 10,
+  "sucesso": 0,
+  "falhou": 0,
+  "destravar": 10,
+  "paradas_cm": 33,
+  "erros": 24,
+  "duracao_resultados_s": null,
+  "resultados": []
+ },
+ {
+  "missao": "missao34_20261111_110217_913450",
+  "desc": "",
+  "versoes": [],
+  "goals": 7,
+  "sucesso": 0,
+  "falhou": 0,
+  "destravar": 11,
+  "paradas_cm": 35,
+  "erros": 233,
+  "duracao_resultados_s": null,
+  "resultados": []
+ },
+ {
+  "missao": "missao35_20261111_122420_010300",
+  "desc": "",
+  "versoes": [],
+  "goals": 27,
+  "sucesso": 0,
+  "falhou": 0,
+  "destravar": 14,
+  "paradas_cm": 17,
+  "erros": 351,
+  "duracao_resultados_s": null,
+  "resultados": []
+ }
+]

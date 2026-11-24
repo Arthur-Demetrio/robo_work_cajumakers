@@ -1,0 +1,8 @@
+test_api_and_reproducibility (test_arena2016v2_runtime.RuntimeTests.test_api_and_reproducibility) ... ok
+test_physical_platform_is_not_lidar_wall (test_arena2016v2_runtime.RuntimeTests.test_physical_platform_is_not_lidar_wall) ... ok
+test_separate_scene_does_not_add_random_boxes (test_arena2016v2_runtime.RuntimeTests.test_separate_scene_does_not_add_random_boxes) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.916s
+
+OK

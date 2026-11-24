@@ -1,0 +1,31 @@
+{
+  "status": "proposta; nenhuma nova execução de treinamento iniciada",
+  "output_policy": "Cada braço e semente deve usar diretório novo, exclusivo, criado com exist_ok=false; nunca gravar na execução atual",
+  "source": "runs/treino_continuo_20261111/checkpoints/ppo_000000125000.zip",
+  "design": "fatorial 2x2: coeficiente de entropia versus limite de log_std",
+  "training_seeds": [4201, 4202, 4203],
+  "arms": {
+    "A_controle": {"ent_coef": 0.01, "log_std_bounds": null},
+    "B_sem_bonus_entropia": {"ent_coef": 0.0, "log_std_bounds": null},
+    "C_variancia_limitada": {"ent_coef": 0.01, "log_std_bounds": [-3.0, 0.0]},
+    "D_ambas_correcoes": {"ent_coef": 0.0, "log_std_bounds": [-3.0, 0.0]}
+  },
+  "variance_limit_implementation": "Projetar policy.log_std sob torch.no_grad logo após cada optimizer.step, e antes do primeiro rollout; não apenas nos callbacks de coleta. Aplicar somente nas cópias dos braços C/D. Registrar frequência de projeção e momentos do Adam.",
+  "budget": {"new_steps_per_arm_seed_pilot": 500000, "extend_winners_to_new_steps": 1000000, "parallel_training_jobs": 1},
+  "unchanged": ["checkpoint inicial e estado Adam carregados iguais", "reward", "StageEnv", "mapas", "observações", "ações", "física", "learning_rate=0.0003", "target_kl=null", "n_steps=256", "n_envs=2", "batch_size=64", "n_epochs=10", "gamma=0.995", "currículo e gate originais"],
+  "evaluation": {
+    "every_new_steps": 25000,
+    "deterministic": true,
+    "fixed_stage0_seeds": [3500000000, 3500000099],
+    "holdout_stage0_seeds": [3600000000, 3600000099],
+    "final_unseen_stage0_seeds": [3800000000, 3800000299],
+    "full_arena_seeds": [3900000000, 3900000099],
+    "compare_same_stage_at_fixed_budgets": true,
+    "holdout_not_used_for_checkpoint_selection": true,
+    "baseline_evaluate_before_learning": true
+  },
+  "logging": ["retorno total e componentes de recompensa por episódio", "sucesso, colisão, timeout e distância inicial/final", "path_length, rotações, oscilações, deriva da localização", "ação média bruta, desvio padrão e saturação por eixo", "KL, clip_fraction, policy/value losses, explained_variance", "grad_norm por actor/critic/log_std e delta de pesos", "semente, pose, destino e estágio", "hashes de código, mapas e checkpoint; versões de dependências"],
+  "primary_analysis": "Diferenças pareadas de sucesso, colisões e retorno; bootstrap por cenário dentro de cada semente e apresentação separada das 3 sementes de treino. Melhora sustentada em holdout por pelo menos 3 avaliações; não selecionar somente pelo retorno.",
+  "pilot_failure_criterion": "Marcar braço instável se std angular >10 por 3 avaliações; encerramento aplica-se apenas à nova execução. Não alterar o controle para mascarar a divergência.",
+  "later_separate_experiments": ["target_kl=0.02 e learning_rate=0.0001, uma alteração de cada vez", "potencial de progresso em distância de rota nos estágios com obstáculos", "correção sensorial de localização versus integração aberta", "currículo com amostras de estágios anteriores e promoção validada em holdout", "distribuição limitada por transformação com log_prob corrigido, se implementada e validada separadamente"]
+}

@@ -1,0 +1,831 @@
+"""Gerenciador de bancadas com preview e navegacao SUPERVISIONADA opcional.
+
+Movimento DESABILITADO por padrao. Requer allow_motion=true no launch,
+comando explicito go <ID> --confirm e preflight contra costmap.
+O no NAO publica /cmd_vel; NavigateToPose aciona o Nav2 convencional.
+"""
+
+import json
+import math
+from pathlib import Path
+import re
+import time
+
+import rclpy
+from action_msgs.msg import GoalStatus
+from geometry_msgs.msg import Point, PointStamped, PoseStamped
+from nav2_msgs.action import ComputePathToPose, SmoothPath, NavigateToPose
+from nav_msgs.msg import Path as NavPath, OccupancyGrid
+from rclpy.action import ActionClient
+from rclpy.node import Node
+from rclpy.time import Time
+from tf2_ros import Buffer, TransformListener
+from rclpy.qos import QoSProfile, DurabilityPolicy, ReliabilityPolicy
+from std_msgs.msg import String
+from visualization_msgs.msg import Marker, MarkerArray
+
+from .geometry import Station, compute_approach, path_length_xy
+from .costmap_guard import footprint_is_clear
+
+
+class StationManager(Node):
+    def __init__(self):
+        super().__init__('station_manager')
+        self.declare_parameter('map_frame', 'map')
+        self.declare_parameter('planner_id', 'GridBased')
+        self.declare_parameter('robot_front_m', 0.365)
+        self.declare_parameter('front_gap_m', 0.20)
+        self.declare_parameter('enable_smoothing', True)
+        self.declare_parameter('smoother_id', 'simple_smoother')
+        self.declare_parameter('max_smoothing_duration_s', 3.0)
+        self.declare_parameter('smoother_timeout_s', 10.0)
+        self.declare_parameter('allow_motion', False)
+        self.declare_parameter('max_single_route_m', 15.0)
+        self.declare_parameter('nav_timeout_s', 120.0)
+        self.declare_parameter('goal_margin_m', 0.05)
+
+        self.map_frame = str(self.get_parameter('map_frame').value)
+        self.stations = {}
+        self.armed_name = None
+        self.clicked = []
+        self.pending_plan = None
+        self.pending_index = 0
+        self.results = []
+        self.current_request = None
+        self.active_start = None  # Origem virtual quando planejamos entre duas bancadas
+        self.smoothing_pending = False
+        self.smoothing_token = 0
+        self.smoothing_started = 0.0
+        self.smoothing_context = None
+        self.last_message = 'Pronto. Preview: arm A, preview A, compare, between A B.'
+        self.nav_pending = False
+        self.nav_active = False
+        self.nav_goal_handle = None
+        self.nav_target = None
+        self.nav_started = 0.0
+        self.nav_request_id = 0
+        self.nav_cancel_requested = False
+        self.last_nav_feedback = 0.0
+        self.global_costmap = None
+        self.global_costmap_rx = 0.0
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
+        self.save_path = Path.home() / '.ros' / 'robo_station_manager' / 'stations_teste.json'
+
+        transient = QoSProfile(depth=1)
+        transient.durability = DurabilityPolicy.TRANSIENT_LOCAL
+        transient.reliability = ReliabilityPolicy.RELIABLE
+        self.marker_pub = self.create_publisher(MarkerArray, '/station_manager/markers', transient)
+        # Preservamos o topico original para o plano BRUTO, sem alterar displays antigos.
+        self.path_pub = self.create_publisher(NavPath, '/station_manager/route_preview', transient)
+        self.smoothed_pub = self.create_publisher(NavPath, '/station_manager/route_smoothed', transient)
+        self.goal_pub = self.create_publisher(PoseStamped, '/station_manager/approach_pose', transient)
+        self.status_pub = self.create_publisher(String, '/station_manager/status', transient)
+        self.create_subscription(PointStamped, '/clicked_point', self.clicked_cb, 10)
+        self.create_subscription(String, '/station_manager/command', self.command_cb, 10)
+        self.planner = ActionClient(self, ComputePathToPose, '/compute_path_to_pose')
+        self.smoother = ActionClient(self, SmoothPath, '/smooth_path')
+        self.navigator = ActionClient(self, NavigateToPose, '/navigate_to_pose')
+        qos_costmap = QoSProfile(depth=1)
+        qos_costmap.reliability = ReliabilityPolicy.RELIABLE
+        qos_costmap.durability = DurabilityPolicy.VOLATILE
+        self.create_subscription(OccupancyGrid, '/global_costmap/costmap',
+                                 self.costmap_cb, qos_costmap)
+        self.create_timer(0.5, self.watch_smoothing)
+        self.create_timer(1.0, self.watch_navigation)
+        self.create_timer(2.0, self.publish_display)
+        self.publish_display()
+        self.get_logger().info('Station Manager v0.4: PREVIEW e opcional go A CONFIRM; cancel.')
+        self.get_logger().warn('Movimento habilitado? ' + str(bool(self.get_parameter('allow_motion').value)))
+        self.get_logger().warn('Nao substitui sensores para alinhamento fino nem insere bancadas no costmap.')
+
+    def status(self, message):
+        self.last_message = message
+        self.get_logger().info(message)
+        self.status_pub.publish(String(data=message))
+
+    def busy(self):
+        return (self.pending_plan is not None or self.smoothing_pending
+                or self.nav_pending or self.nav_active)
+
+    def approach(self, station):
+        return compute_approach(
+            station,
+            robot_front_m=float(self.get_parameter('robot_front_m').value),
+            front_gap_m=float(self.get_parameter('front_gap_m').value),
+        )
+
+    def command_cb(self, msg):
+        words = msg.data.strip().split()
+        if not words:
+            self.status('Comando vazio: arm A | preview A | check A | compare | between A B | list | clear A | save | load')
+            return
+        cmd = words[0].lower()
+        args = words[1:]
+        if cmd in ('arm', 'preview', 'clear', 'check', 'go'):
+            if len(args) != 1 or not re.fullmatch(r'[A-Za-z0-9_-]{1,24}', args[0]):
+                self.status('Identificador invalido. Exemplo: arm A')
+                return
+            name = args[0].upper()
+        else:
+            name = None
+
+        if cmd == 'arm':
+            if self.busy():
+                self.status('Aguarde o planejamento/suavizacao terminar.')
+                return
+            self.armed_name = name
+            self.clicked = []
+            self.status(f'Cadastro {name}: marque os 2 extremos da BORDA FRONTAL e 1 ponto no LADO LIVRE, nessa ordem.')
+        elif cmd == 'preview':
+            if name not in self.stations:
+                self.status(f'Bancada {name} nao cadastrada.')
+                return
+            self.start_planning([name], mode='preview')
+        elif cmd == 'between':
+            if len(args) != 2 or any(not re.fullmatch(r'[A-Za-z0-9_-]{1,24}', value) for value in args):
+                self.status('Use: between A B (origem e destino).')
+                return
+            start_name, end_name = (value.upper() for value in args)
+            if start_name == end_name:
+                self.status('Origem e destino precisam ser diferentes.')
+                return
+            if start_name not in self.stations or end_name not in self.stations:
+                self.status('Origem ou destino ainda nao cadastrado. Execute list.')
+                return
+            self.start_between(start_name, end_name)
+        elif cmd == 'check':
+            if self.busy():
+                self.status('Existe outra operacao em andamento.')
+                return
+            if name not in self.stations:
+                self.status(f'Bancada {name} nao cadastrada.')
+                return
+            try:
+                pose = self.make_pose(self.stations[name])
+                self.current_pose()
+                ok, reason = self.check_goal_costmap(pose)
+                if not ok:
+                    self.status(f'CHECK {name}: RECUSADO: {reason}. SEM MOVIMENTO.')
+                    return
+                self.status(f'CHECK {name}: {reason}; consultando rota. SEM MOVIMENTO.')
+                self.start_planning([name], mode='check')
+            except Exception as exc:
+                self.status(f'CHECK {name}: falha de TF/preflight: {exc}. SEM MOVIMENTO.')
+        elif cmd == 'go':
+            if len(args) != 2 or args[1] != 'CONFIRM':
+                self.status('Movimento exige confirmacao explicita: station_cli go A --confirm')
+                return
+            self.start_go(name)
+        elif cmd == 'cancel' and not args:
+            self.cancel_navigation()
+        elif cmd == 'compare' and not args:
+            if len(self.stations) < 2:
+                self.status('Cadastre ao menos duas bancadas para comparar.')
+                return
+            self.start_planning(sorted(self.stations), mode='compare')
+        elif cmd == 'list' and not args:
+            if not self.stations:
+                self.status('Sem bancadas cadastradas.')
+            else:
+                resumo = []
+                for station in self.stations.values():
+                    try:
+                        a = self.approach(station)
+                        resumo.append(f'{station.name}: base=({a.base_x:.2f},{a.base_y:.2f}), yaw={math.degrees(a.yaw):.0f}°')
+                    except ValueError as exc:
+                        resumo.append(f'{station.name}: geometria invalida: {exc}')
+                self.status(' | '.join(resumo))
+        elif cmd == 'clear':
+            if self.busy():
+                self.status('Espere o calculo de rotas terminar antes de apagar bancadas.')
+                return
+            self.stations.pop(name, None)
+            self.armed_name = None
+            self.clicked = []
+            self.clear_path()
+            self.status(f'Bancada {name} retirada do cadastro desta sessao.')
+            self.publish_display()
+        elif cmd == 'save' and not args:
+            self.save()
+        elif cmd == 'load' and not args:
+            if self.busy():
+                self.status('Espere o planejamento terminar.')
+                return
+            self.load()
+        else:
+            self.status('Comando desconhecido. Use: arm A | preview A | check A | compare | between A B | list | save | load | go A CONFIRM | cancel')
+
+    def clicked_cb(self, msg):
+        if self.armed_name is None:
+            return
+        if msg.header.frame_id != self.map_frame:
+            self.status(f'Ponto ignorado: RViz deve usar Fixed Frame = {self.map_frame}, recebeu {msg.header.frame_id}.')
+            return
+        x = float(msg.point.x)
+        y = float(msg.point.y)
+        if not (math.isfinite(x) and math.isfinite(y)):
+            self.status('Ponto nao finito ignorado.')
+            return
+        self.clicked.append((x, y))
+        if len(self.clicked) < 3:
+            self.status(f'{self.armed_name}: ponto {len(self.clicked)}/3 aceito ({x:.2f},{y:.2f}).')
+            return
+        station = Station(self.armed_name, self.clicked[0], self.clicked[1], self.clicked[2])
+        self.clicked = []
+        self.armed_name = None
+        try:
+            a = self.approach(station)
+        except ValueError as exc:
+            self.status(f'Cadastro rejeitado: {exc}. Execute arm novamente.')
+            return
+        self.stations[station.name] = station
+        self.clear_path()
+        self.status(
+            f'{station.name} OK: borda={a.width:.2f}m, base_link=({a.base_x:.2f},{a.base_y:.2f}), '
+            f'yaw={math.degrees(a.yaw):.1f}°, folga_frontal={a.front_gap_m:.2f}m. SOMENTE PREVIEW.'
+        )
+        self.publish_display()
+
+    def make_pose(self, station):
+        a = self.approach(station)
+        pose = PoseStamped()
+        pose.header.frame_id = self.map_frame
+        pose.header.stamp = self.get_clock().now().to_msg()
+        pose.pose.position.x = a.base_x
+        pose.pose.position.y = a.base_y
+        pose.pose.orientation.z = math.sin(a.yaw / 2)
+        pose.pose.orientation.w = math.cos(a.yaw / 2)
+        return pose
+
+    def clear_path(self):
+        path = NavPath()
+        path.header.frame_id = self.map_frame
+        path.header.stamp = self.get_clock().now().to_msg()
+        self.path_pub.publish(path)
+        self.smoothed_pub.publish(path)
+
+    def start_planning(self, names, mode):
+        if self.busy():
+            self.status('Ja existe planejamento/suavizacao em andamento.')
+            return
+        if not self.planner.server_is_ready():
+            self.status('/compute_path_to_pose indisponivel. Confirme planner_server active [3].')
+            return
+        try:
+            for name in names:
+                self.make_pose(self.stations[name])
+        except ValueError as exc:
+            self.status(f'Geometria invalida: {exc}')
+            return
+        self.clear_path()
+        self.active_start = None
+        self.pending_plan = (mode, list(names))
+        self.pending_index = 0
+        self.results = []
+        self.plan_next()
+
+    def start_between(self, start_name, end_name):
+        # Calcula rota hipotetica start_name -> end_name, sem executar movimento.
+        # use_start=True faz o planejador usar a pose cadastrada da bancada de origem,
+        # em vez da pose atual do robo.
+        if self.busy():
+            self.status('Ja existe planejamento/suavizacao em andamento.')
+            return
+        if not self.planner.server_is_ready():
+            self.status('/compute_path_to_pose indisponivel.')
+            return
+        try:
+            self.make_pose(self.stations[start_name])
+            self.make_pose(self.stations[end_name])
+        except ValueError as exc:
+            self.status(f'Geometria invalida: {exc}')
+            return
+        self.clear_path()
+        self.active_start = start_name
+        self.pending_plan = ('between', [end_name])
+        self.pending_index = 0
+        self.results = []
+        self.plan_next()
+
+    def plan_next(self):
+        if self.pending_plan is None:
+            return
+        mode, names = self.pending_plan
+        if self.pending_index >= len(names):
+            ok = sorted(
+                ((length, name, path) for name, length, path in self.results if path is not None),
+                key=lambda x: x[0]
+            )
+            self.pending_plan = None
+            if not ok:
+                self.active_start = None
+                self.status('Nenhuma rota valida retornada pelo Nav2. NAO MOVIMENTAR.')
+                return
+            length, name, path = ok[0]
+            # Nunca substitua a rota bruta: o RViz deve poder comparar os dois resultados.
+            self.path_pub.publish(path)
+            self.goal_pub.publish(self.make_pose(self.stations[name]))
+            if mode == 'between':
+                start_name = self.active_start
+                self.active_start = None
+                summary = f'BETWEEN: {start_name} -> {name} = {length:.2f}m (BRUTA)'
+            else:
+                text_results = ', '.join(
+                    f'{n}={l:.2f}m' if p is not None else f'{n}=SEM ROTA'
+                    for n, l, p in self.results
+                )
+                summary = f'{mode.upper()}: {text_results} | melhor={name} ({length:.2f}m BRUTA)'
+            self.status(summary + '. Solicitando suavizacao, SEM MOVIMENTO...')
+            self.start_smoothing(path, length, summary)
+            return
+        name = names[self.pending_index]
+        self.pending_index += 1
+        goal = ComputePathToPose.Goal()
+        goal.goal = self.make_pose(self.stations[name])
+        goal.planner_id = str(self.get_parameter('planner_id').value)
+        if mode == 'between':
+            goal.start = self.make_pose(self.stations[self.active_start])
+            goal.use_start = True
+        else:
+            goal.use_start = False
+        self.current_request = name
+        if mode == 'between':
+            self.status(f'Calculando rota {self.active_start} -> {name} pelo Nav2, sem movimento...')
+        else:
+            self.status(f'Calculando rota para {name} pelo Nav2, sem movimento...')
+        future = self.planner.send_goal_async(goal)
+        future.add_done_callback(self.goal_response_cb)
+
+    def start_smoothing(self, raw_path, raw_length, summary):
+        if not bool(self.get_parameter('enable_smoothing').value):
+            self.status(summary + '. Suavizacao desativada; somente rota bruta. SEM MOVIMENTO.')
+            return
+        if not self.smoother.server_is_ready():
+            self.status(summary + '. /smooth_path indisponivel; somente rota bruta. SEM MOVIMENTO.')
+            return
+        try:
+            goal = SmoothPath.Goal()
+            goal.path = raw_path
+            goal.smoother_id = str(self.get_parameter('smoother_id').value)
+            duration_s = float(self.get_parameter('max_smoothing_duration_s').value)
+            if not 0.1 <= duration_s <= 30.0 or not math.isfinite(duration_s):
+                raise ValueError('max_smoothing_duration_s invalido')
+            goal.max_smoothing_duration.sec = int(duration_s)
+            goal.max_smoothing_duration.nanosec = int((duration_s - int(duration_s)) * 1e9)
+            goal.check_for_collisions = True
+            self.smoothing_pending = True
+            self.smoothing_token += 1
+            token = self.smoothing_token
+            self.smoothing_started = time.monotonic()
+            self.smoothing_context = (raw_length, summary)
+            future = self.smoother.send_goal_async(goal)
+            future.add_done_callback(lambda f, t=token: self.smooth_goal_cb(f, t))
+        except Exception as exc:
+            self.finish_smoothing_failure(f'Nao foi possivel solicitar SmoothPath: {exc}')
+
+    def smooth_goal_cb(self, future, token):
+        if not self.smoothing_pending or token != self.smoothing_token:
+            return
+        try:
+            handle = future.result()
+            if not handle.accepted:
+                self.finish_smoothing_failure('SmoothPath rejeitado pelo servidor')
+                return
+            future = handle.get_result_async()
+            future.add_done_callback(lambda f, t=token: self.smooth_result_cb(f, t))
+        except Exception as exc:
+            self.finish_smoothing_failure(f'Falha ao solicitar SmoothPath: {exc}')
+
+    def smooth_result_cb(self, future, token):
+        if not self.smoothing_pending or token != self.smoothing_token:
+            return
+        try:
+            response = future.result()
+            result = response.result
+            code = getattr(result, 'error_code', 0)
+            completed = bool(getattr(result, 'was_completed', False))
+            path = result.path
+            if response.status != GoalStatus.STATUS_SUCCEEDED or code != 0 or not completed or len(path.poses) < 2:
+                self.finish_smoothing_failure(
+                    f'SmoothPath nao validado: action_status={response.status}, erro={code}, completo={completed}'
+                )
+                return
+            points = [(p.pose.position.x, p.pose.position.y) for p in path.poses]
+            if not all(math.isfinite(x) and math.isfinite(y) for x, y in points):
+                self.finish_smoothing_failure('SmoothPath retornou coordenadas nao finitas')
+                return
+            raw_length, summary = self.smoothing_context
+            smoothed_length = path_length_xy(points)
+            self.smoothed_pub.publish(path)
+            self.smoothing_pending = False
+            self.smoothing_context = None
+            self.status(
+                f'{summary} | suavizada={smoothed_length:.2f}m, '
+                f'diferenca={smoothed_length-raw_length:+.2f}m. '
+                'BRUTA=/station_manager/route_preview; '
+                'SUAVIZADA=/station_manager/route_smoothed; SEM MOVIMENTO.'
+            )
+        except Exception as exc:
+            self.finish_smoothing_failure(f'Erro ao receber SmoothPath: {exc}')
+
+    def finish_smoothing_failure(self, reason):
+        summary = self.smoothing_context[1] if self.smoothing_context else 'Planejamento'
+        self.smoothing_pending = False
+        self.smoothing_context = None
+        self.status(f'{summary} | {reason}. Apenas rota BRUTA exibida; SEM MOVIMENTO.')
+
+    def watch_smoothing(self):
+        if not self.smoothing_pending:
+            return
+        timeout_s = float(self.get_parameter('smoother_timeout_s').value)
+        if time.monotonic() - self.smoothing_started > max(4.0, timeout_s):
+            # As callbacks atrasadas serao descartadas pelo token.
+            self.smoothing_token += 1
+            self.finish_smoothing_failure(f'Tempo limite da resposta SmoothPath ({timeout_s:.1f}s)')
+
+    def goal_response_cb(self, future):
+        try:
+            handle = future.result()
+            if not handle.accepted:
+                self.results.append((self.current_request, float('inf'), None))
+                self.status(f'Planejamento rejeitado para {self.current_request}.')
+                self.plan_next()
+                return
+            done = handle.get_result_async()
+            done.add_done_callback(self.plan_result_cb)
+        except Exception as exc:
+            self.results.append((self.current_request, float('inf'), None))
+            self.get_logger().error(f'Erro solicitando rota: {exc}')
+            self.plan_next()
+
+    def plan_result_cb(self, future):
+        name = self.current_request
+        try:
+            response = future.result()
+            result = response.result
+            path = result.path
+            error_code = getattr(result, 'error_code', 0)
+            if response.status != GoalStatus.STATUS_SUCCEEDED or error_code != 0 or not path.poses:
+                self.results.append((name, float('inf'), None))
+                self.status(f'Nav2 sem rota para {name}: status={response.status}, erro={error_code} {getattr(result, "error_msg", "")}')
+            else:
+                points = [(p.pose.position.x, p.pose.position.y) for p in path.poses]
+                length = path_length_xy(points)
+                self.results.append((name, length, path))
+        except Exception as exc:
+            self.results.append((name, float('inf'), None))
+            self.get_logger().error(f'Erro ao receber rota de {name}: {exc}')
+        self.plan_next()
+
+    def costmap_cb(self, msg):
+        self.global_costmap = msg
+        self.global_costmap_rx = time.monotonic()
+
+    def current_pose(self):
+        """TF atual map->base_link, apenas consulta; falha fechada."""
+        tf = self.tf_buffer.lookup_transform(self.map_frame, 'base_link', Time())
+        # Exige transformacao recente antes de autorizar navegacao fisica.
+        stamp_ns = int(tf.header.stamp.sec) * 1000000000 + int(tf.header.stamp.nanosec)
+        age_s = (self.get_clock().now().nanoseconds - stamp_ns) * 1e-9
+        if not math.isfinite(age_s) or age_s > 1.5 or age_s < -0.5:
+            raise ValueError(f'TF map->base_link fora do prazo: {age_s:.2f}s')
+        p = tf.transform.translation
+        q = tf.transform.rotation
+        yaw = math.atan2(2 * (q.w * q.z + q.x * q.y),
+                         1 - 2 * (q.y * q.y + q.z * q.z))
+        if not all(map(math.isfinite, (p.x, p.y, yaw))):
+            raise ValueError('TF com valores nao finitos')
+        return float(p.x), float(p.y), float(yaw)
+
+    def check_goal_costmap(self, pose):
+        cm = self.global_costmap
+        if cm is None or time.monotonic() - self.global_costmap_rx > 4.0:
+            return False, 'costmap global ausente ou desatualizado'
+        if cm.header.frame_id != self.map_frame:
+            return False, f'costmap em {cm.header.frame_id}, esperado {self.map_frame}'
+        og = cm.info.origin
+        q = og.orientation
+        origin_yaw = math.atan2(2 * (q.w * q.z + q.x * q.y),
+                                1 - 2 * (q.y * q.y + q.z * q.z))
+        pq = pose.pose.orientation
+        yaw = math.atan2(2 * (pq.w * pq.z + pq.x * pq.y),
+                         1 - 2 * (pq.y * pq.y + pq.z * pq.z))
+        # Footprint consolidado do Robo Geometry: front=+0.365 rear=-0.205, +/-0.315m
+        return footprint_is_clear(
+            cm.data, int(cm.info.width), int(cm.info.height),
+            float(cm.info.resolution), float(og.position.x), float(og.position.y),
+            origin_yaw, float(pose.pose.position.x), float(pose.pose.position.y), yaw,
+            extra_margin=float(self.get_parameter('goal_margin_m').value))
+
+    def start_go(self, name):
+        if self.busy():
+            self.status('Existe outra operacao em andamento; go recusado.')
+            return
+        if not bool(self.get_parameter('allow_motion').value):
+            self.status('MOVIMENTO BLOQUEADO: reinicie com allow_motion:=true apenas para teste supervisionado.')
+            return
+        if name not in self.stations:
+            self.status(f'Bancada {name} nao cadastrada.')
+            return
+        if not self.planner.server_is_ready() or not self.navigator.server_is_ready():
+            self.status('Planejador ou NavigateToPose indisponivel; go recusado.')
+            return
+        try:
+            pose = self.make_pose(self.stations[name])
+            self.current_pose()
+            ok, reason = self.check_goal_costmap(pose)
+            if not ok:
+                self.status(f'GO RECUSADO: {reason}. Confira ponto no RViz; sem movimento.')
+                return
+            self.clear_path()
+            self.goal_pub.publish(pose)
+            self.nav_pending = True
+            self.nav_target = name
+            self.nav_cancel_requested = False
+            self.nav_request_id += 1
+            token = self.nav_request_id
+            goal = ComputePathToPose.Goal()
+            goal.goal = pose
+            goal.planner_id = str(self.get_parameter('planner_id').value)
+            goal.use_start = False
+            self.status(f'GO {name}: validando rota atual e footprint; SEM movimento ainda...')
+            self.planner.send_goal_async(goal).add_done_callback(
+                lambda f, t=token: self.nav_plan_goal_cb(f, t))
+        except Exception as exc:
+            self.nav_pending = False
+            self.status(f'GO RECUSADO: preflight falhou: {exc}')
+
+    def nav_plan_goal_cb(self, future, token):
+        if not self.nav_pending or token != self.nav_request_id:
+            return
+        try:
+            handle = future.result()
+            if not handle.accepted:
+                raise RuntimeError('ComputePathToPose recusou preflight')
+            handle.get_result_async().add_done_callback(
+                lambda f, t=token: self.nav_plan_result_cb(f, t))
+        except Exception as exc:
+            self.fail_go(f'planejamento rejeitado: {exc}')
+
+    def nav_plan_result_cb(self, future, token):
+        if not self.nav_pending or token != self.nav_request_id:
+            return
+        try:
+            response = future.result()
+            result = response.result
+            if (response.status != GoalStatus.STATUS_SUCCEEDED
+                    or getattr(result, 'error_code', 0) != 0 or len(result.path.poses) < 2):
+                raise RuntimeError('Nav2 nao retornou caminho valido')
+            points = [(p.pose.position.x, p.pose.position.y) for p in result.path.poses]
+            if not all(math.isfinite(x) and math.isfinite(y) for x, y in points):
+                raise RuntimeError('rota com coordenadas invalidas')
+            length = path_length_xy(points)
+            max_length = float(self.get_parameter('max_single_route_m').value)
+            if not 0 < length <= max_length:
+                raise RuntimeError(f'rota {length:.2f}m fora do limite {max_length:.2f}m')
+            name = self.nav_target
+            target = self.make_pose(self.stations[name])
+            ok, reason = self.check_goal_costmap(target)
+            if not ok:
+                raise RuntimeError('footprint ao revalidar: ' + reason)
+            self.current_pose()  # TF valida antes de movimento
+            if self.nav_cancel_requested:
+                self.fail_go('cancelamento solicitado durante preflight')
+                return
+            if not bool(self.get_parameter('allow_motion').value):
+                raise RuntimeError('allow_motion desativado antes do envio')
+            self.path_pub.publish(result.path)
+            goal = NavigateToPose.Goal()
+            goal.pose = target
+            # behavior_tree vazio => BT padrao do Nav2 do proprio robo, sem alteracoes.
+            goal.behavior_tree = ''
+            self.status(f'GO {name}: rota {length:.2f}m, footprint livre no costmap global. '
+                        'Enviando NavigateToPose COM MOVIMENTO!')
+            self.navigator.send_goal_async(
+                goal, feedback_callback=self.nav_feedback_cb).add_done_callback(
+                lambda f, t=token: self.nav_goal_response_cb(f, t))
+        except Exception as exc:
+            self.fail_go(f'preflight: {exc}')
+
+    def nav_goal_response_cb(self, future, token):
+        if token != self.nav_request_id:
+            return
+        try:
+            handle = future.result()
+            if not handle.accepted:
+                raise RuntimeError('NavigateToPose nao aceitou objetivo')
+            self.nav_goal_handle = handle
+            self.nav_pending = False
+            self.nav_active = True
+            self.nav_started = time.monotonic()
+            self.status(f'GO {self.nav_target}: NavigateToPose aceitou; navegando...')
+            if self.nav_cancel_requested:
+                self.cancel_navigation()
+            handle.get_result_async().add_done_callback(
+                lambda f, t=token: self.nav_result_cb(f, t))
+        except Exception as exc:
+            self.fail_go(f'envio ao NavigateToPose: {exc}')
+
+    def nav_feedback_cb(self, msg):
+        if not self.nav_active or time.monotonic() - self.last_nav_feedback < 5.0:
+            return
+        self.last_nav_feedback = time.monotonic()
+        fb = msg.feedback
+        remaining = getattr(fb, 'distance_remaining', float('nan'))
+        if math.isfinite(remaining):
+            self.get_logger().info(f'GO {self.nav_target}: restante estimado={remaining:.2f}m')
+
+    def nav_result_cb(self, future, token):
+        if token != self.nav_request_id:
+            return
+        name = self.nav_target
+        try:
+            response = future.result()
+            if response.status == GoalStatus.STATUS_SUCCEEDED:
+                a = self.approach(self.stations[name])
+                try:
+                    x, y, yaw = self.current_pose()
+                    d = math.hypot(x-a.base_x, y-a.base_y)
+                    ad = abs(math.atan2(math.sin(yaw-a.yaw), math.cos(yaw-a.yaw)))
+                    if d <= 0.15 and ad <= 0.15:
+                        result = f'GO {name}: SUCESSO Nav2; erro TF={d:.3f}m, {math.degrees(ad):.1f}graus. Conferir fisicamente.'
+                    else:
+                        result = f'GO {name}: Nav2 SUCCEEDED, mas erro TF={d:.3f}m, {math.degrees(ad):.1f}graus; alinhamento NAO validado.'
+                except Exception as exc:
+                    result = f'GO {name}: Nav2 SUCCEEDED, mas TF final nao verificada: {exc}'
+            elif response.status == GoalStatus.STATUS_CANCELED:
+                result = f'GO {name}: CANCELADO pelo Nav2.'
+            else:
+                result = f'GO {name}: FALHOU; action_status={response.status}, erro={getattr(response.result, "error_code", "n/a")}'
+        except Exception as exc:
+            result = f'GO {name}: nao foi possivel interpretar resultado: {exc}'
+        self.nav_active = False
+        self.nav_pending = False
+        self.nav_goal_handle = None
+        self.nav_target = None
+        self.nav_cancel_requested = False
+        self.status(result)
+
+    def cancel_navigation(self):
+        if not (self.nav_pending or self.nav_active):
+            self.status('Nenhuma navegacao do station_manager para cancelar.')
+            return
+        self.nav_cancel_requested = True
+        if self.nav_goal_handle is not None:
+            self.status('Cancelamento enviado ao Nav2. Aguarde confirmacao; parada de emergencia fisica se necessario.')
+            self.nav_goal_handle.cancel_goal_async()
+        else:
+            self.status('Cancelamento registrado; aguardando retorno da acao em andamento.')
+
+    def fail_go(self, reason):
+        name = self.nav_target
+        self.nav_pending = False
+        self.nav_active = False
+        self.nav_goal_handle = None
+        self.nav_target = None
+        self.nav_cancel_requested = False
+        self.status(f'GO {name} RECUSADO/FALHOU: {reason}. Verifique estado real do Nav2 antes de novo comando.')
+
+    def watch_navigation(self):
+        if not self.nav_active or self.nav_cancel_requested:
+            return
+        tmax = float(self.get_parameter('nav_timeout_s').value)
+        if time.monotonic() - self.nav_started > max(20.0, tmax):
+            self.status(f'GO {self.nav_target}: timeout {tmax:.1f}s. Solicitando cancelamento ao Nav2.')
+            self.cancel_navigation()
+
+    def save(self):
+        try:
+            self.save_path.parent.mkdir(parents=True, exist_ok=True)
+            data = {
+                'schema': 1,
+                'training_only': True,
+                'map_frame': self.map_frame,
+                'created_at_epoch_s': time.time(),
+                'stations': [
+                    {'name': st.name, 'p1': list(st.p1), 'p2': list(st.p2), 'free_side': list(st.free_side)}
+                    for st in sorted(self.stations.values(), key=lambda s: s.name)
+                ]
+            }
+            tmp = self.save_path.with_suffix('.tmp')
+            tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False))
+            tmp.replace(self.save_path)
+            self.status(f'Cadastro de TESTE salvo em {self.save_path}; nunca carregue automaticamente em outra arena.')
+        except Exception as exc:
+            self.status(f'Nao foi possivel salvar: {exc}')
+
+    def load(self):
+        try:
+            data = json.loads(self.save_path.read_text())
+            if data['schema'] != 1 or not data.get('training_only') or data['map_frame'] != self.map_frame:
+                raise ValueError('arquivo nao compatível')
+            new = {}
+            for raw in data['stations']:
+                name = raw['name']
+                if not re.fullmatch(r'[A-Z0-9_-]{1,24}', name):
+                    raise ValueError('identificador invalido')
+                station = Station(name, tuple(raw['p1']), tuple(raw['p2']), tuple(raw['free_side']))
+                compute_approach(station)
+                new[name] = station
+            self.stations = new
+            self.armed_name = None
+            self.clicked = []
+            self.clear_path()
+            self.publish_display()
+            self.status(f'ATENCAO: {len(new)} bancadas de TESTE carregadas. Confira visualmente que o mapa e a arena sao os MESMOS.')
+        except Exception as exc:
+            self.status(f'Falha ao carregar cadastro de teste: {exc}')
+
+    def publish_display(self):
+        array = MarkerArray()
+        now = self.get_clock().now().to_msg()
+        delete = Marker()
+        delete.header.frame_id = self.map_frame
+        delete.header.stamp = now
+        delete.action = Marker.DELETEALL
+        array.markers.append(delete)
+        for index, station in enumerate(sorted(self.stations.values(), key=lambda s: s.name)):
+            try:
+                a = self.approach(station)
+            except ValueError:
+                continue
+            color = (0.1, 0.75, 0.95) if index % 2 == 0 else (0.95, 0.66, 0.2)
+            prefix = index * 5
+
+            line = Marker()
+            line.header.frame_id = self.map_frame
+            line.header.stamp = now
+            line.ns = 'station_front_edge'
+            line.id = prefix
+            line.type = Marker.LINE_STRIP
+            line.action = Marker.ADD
+            line.pose.orientation.w = 1.0
+            line.scale.x = 0.035
+            line.color.r, line.color.g, line.color.b, line.color.a = (*color, 1.0)
+            line.points = [Point(x=station.p1[0], y=station.p1[1], z=0.05),
+                           Point(x=station.p2[0], y=station.p2[1], z=0.05)]
+            array.markers.append(line)
+
+            approach = Marker()
+            approach.header.frame_id = self.map_frame
+            approach.header.stamp = now
+            approach.ns = 'station_approach'
+            approach.id = prefix + 1
+            approach.type = Marker.ARROW
+            approach.action = Marker.ADD
+            approach.pose.position.x = a.base_x
+            approach.pose.position.y = a.base_y
+            approach.pose.position.z = 0.05
+            approach.pose.orientation.z = math.sin(a.yaw / 2)
+            approach.pose.orientation.w = math.cos(a.yaw / 2)
+            approach.scale.x, approach.scale.y, approach.scale.z = 0.35, 0.065, 0.09
+            approach.color.r, approach.color.g, approach.color.b, approach.color.a = (*color, 0.95)
+            array.markers.append(approach)
+
+            text_marker = Marker()
+            text_marker.header.frame_id = self.map_frame
+            text_marker.header.stamp = now
+            text_marker.ns = 'station_labels'
+            text_marker.id = prefix + 2
+            text_marker.type = Marker.TEXT_VIEW_FACING
+            text_marker.action = Marker.ADD
+            text_marker.pose.position.x, text_marker.pose.position.y = a.center_x, a.center_y
+            text_marker.pose.position.z = 0.35
+            text_marker.pose.orientation.w = 1.0
+            text_marker.scale.z = 0.22
+            text_marker.color.r, text_marker.color.g, text_marker.color.b, text_marker.color.a = (1.,1.,1.,1.)
+            text_marker.text = f'BANCADA {station.name}'
+            array.markers.append(text_marker)
+
+            center = Marker()
+            center.header.frame_id = self.map_frame
+            center.header.stamp = now
+            center.ns = 'station_centers'
+            center.id = prefix + 3
+            center.type = Marker.SPHERE
+            center.action = Marker.ADD
+            center.pose.position.x, center.pose.position.y = a.center_x, a.center_y
+            center.pose.position.z = 0.05
+            center.pose.orientation.w = 1.0
+            center.scale.x = center.scale.y = center.scale.z = 0.095
+            center.color.r, center.color.g, center.color.b, center.color.a = (*color, 1.)
+            array.markers.append(center)
+        self.marker_pub.publish(array)
+        self.status_pub.publish(String(data=self.last_message))
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = StationManager()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.try_shutdown()
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,46 @@
+[INFO] [1794262190.700576793] [alinhador_passagem]: Alinhador pronto. Envie goals em /goal_pose_alinhado.
+[INFO] [1794262190.702587657] [alinhador_passagem]: BANCADA: gatilho /sim/encostar pronto (codigo de /home/marcos/sim_encosto/versoes/v_1423)
+[INFO] [1794262190.985134829] [alinhador_passagem]: Laser em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[INFO] [1794262196.360824400] [alinhador_passagem]: BANCADA: encostar WS_1
+[INFO] [1794262196.377277926] [alinhador_passagem]: ENCOSTAR WS_1: medindo a face da mesa
+[INFO] [1794262196.440933848] [alinhador_passagem]: ENCOSTAR WS_1: aguardando segunda observacao coerente
+[INFO] [1794262197.282270817] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: fora da referencia | ref d0.59 c+0.33 a-1g | d0.59 c+0.21 a-1g w0.65 FORA:larg
+[INFO] [1794262197.919455836] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 1: face a 22 cm (para-choque), girar -1.4 graus, centro +33.8 cm
+[INFO] [1794262197.981077829] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +33.8 cm de lado
+[INFO] [1794262198.787390649] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: fora da referencia | ref d0.58 c+0.29 a-1g | d0.57 c+0.21 a-1g w0.67 FORA:larg
+[INFO] [1794262200.640415324] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: nenhuma face com as 2 pontas (1 segmentos: d0.52 w0.56)
+[INFO] [1794262203.007364630] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 2: face a 11 cm (para-choque), girar -0.2 graus, centro +17.4 cm
+[INFO] [1794262203.060594404] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +17.4 cm de lado
+[INFO] [1794262203.539301328] [alinhador_passagem]: ENCOSTAR WS_1: FACE_PARCIAL: perto da bancada; paro a correcao para conferir o encosto
+[INFO] [1794262204.549746028] [alinhador_passagem]: ENCOSTAR WS_1: Encosto abortado: face parcial perto da bancada: alinhamento anterior insuficiente; necessario reconhecer a face completa mais longe
+[WARN] [1794262204.805637671] [alinhador_passagem]: ENCOSTAR WS_1: FALHOU - face parcial perto da bancada: alinhamento anterior insuficiente; necessario reconhecer a face completa mais longe
+[INFO] [1794262204.806351722] [alinhador_passagem]: RESULTADO: WS_1 FALHOU encosto: face parcial perto da bancada: alinhamento anterior insuficiente; necessario reconhecer a face completa mais longe
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/versoes/v_1423/alinhador_passagem.py", line 4099, in main
+    executor.spin()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 359, in spin
+    self._spin_once_impl()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 991, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 781, in _wait_for_ready_callbacks
+    wait_set.wait(timeout_nsec)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/alinhador_bancada.py", line 57, in <module>
+    alinhador_passagem.main()
+  File "/home/marcos/sim_encosto/versoes/v_1423/alinhador_passagem.py", line 4102, in main
+    no._parar()
+  File "/home/marcos/sim_encosto/versoes/v_1423/alinhador_passagem.py", line 2867, in _parar
+    self._publicar_vel(0.0, 0.0, 0.0)
+  File "/home/marcos/sim_encosto/versoes/v_1423/alinhador_passagem.py", line 2863, in _publicar_vel
+    (self.pub_t if self.controle_t_ativo else self.pub_cmd).publish(m)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:423

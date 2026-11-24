@@ -1,0 +1,1 @@
+{"amostras": {"tf": 38982, "imu": 13938, "odom": 38914}, "correcoes_slam_acima_3graus": 17, "max_correcao_slam_graus": 14.288061074399982, "max_salto_imu_graus": 85.625, "max_salto_odom_graus": 2.374999999999992}

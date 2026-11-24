@@ -1,0 +1,70 @@
+09:14:41.84 alinhador_pa TRAVESSIA 1: Travessia LiDAR concluida
+09:14:42.10 alinhador_pa TRAVESSIA 1 (LiDAR): SUCESSO
+09:14:42.11 alinhador_pa Analise: nenhuma passagem estreita no caminho.
+09:14:42.11 alinhador_pa GOAL FINAL: x=0.19 y=0.09 yaw=20 graus
+09:14:51.35 collision_mo Robot to stop due to VelocityPolygonStop polygon
+09:14:51.39 collision_mo Robot to continue normal operation
+09:14:51.60 collision_mo Robot to stop due to VelocityPolygonStop polygon
+09:15:03.35 controller_s Failed to make progress
+09:15:03.37 local_costma Received request to clear entirely the local_costmap
+09:15:07.05 collision_mo Robot to continue normal operation
+09:15:07.45 collision_mo Robot to stop due to VelocityPolygonStop polygon
+09:15:15.48 controller_s Failed to make progress
+09:15:15.50 behavior_ser Running backup
+09:15:15.50 behavior_ser Collision Ahead - Exiting DriveOnHeading
+09:15:15.50 behavior_ser backup failed
+09:15:15.52 mecanum_esca Solicitacao de escape lateral recebida.
+09:15:15.52 mecanum_esca Folga lateral: esquerda=0.317 m, direita=0.242 m, necessaria=0.375 m
+09:15:15.58 mecanum_esca Escape lateral recusado: nenhum lado e seguro.
+09:15:15.60 local_costma Received request to clear entirely the local_costmap
+09:15:15.60 global_costm Received request to clear entirely the global_costmap
+09:15:27.82 controller_s Failed to make progress
+09:15:27.84 local_costma Received request to clear entirely the local_costmap
+09:15:39.94 controller_s Failed to make progress
+09:15:39.97 progressive_ smart_spin fail: footprint atual ocupa espaço desconhecido/obstáculo
+09:15:39.98 behavior_ser Running wait
+09:15:44.98 behavior_ser wait completed successfully
+09:15:57.03 controller_s Failed to make progress
+09:15:57.05 local_costma Received request to clear entirely the local_costmap
+09:16:09.15 controller_s Failed to make progress
+09:16:09.17 behavior_ser Running backup
+09:16:09.17 behavior_ser Collision Ahead - Exiting DriveOnHeading
+09:16:09.17 behavior_ser backup failed
+09:16:09.19 mecanum_esca Solicitacao de escape lateral recebida.
+09:16:09.19 mecanum_esca Folga lateral: esquerda=0.317 m, direita=0.242 m, necessaria=0.375 m
+09:16:09.25 mecanum_esca Escape lateral recusado: nenhum lado e seguro.
+09:16:09.27 local_costma Received request to clear entirely the local_costmap
+09:16:09.27 global_costm Received request to clear entirely the global_costmap
+09:16:21.48 controller_s Failed to make progress
+09:16:21.50 local_costma Received request to clear entirely the local_costmap
+09:16:33.69 controller_s Failed to make progress
+09:16:33.70 progressive_ smart_spin fail: footprint atual ocupa espaço desconhecido/obstáculo
+09:16:33.72 behavior_ser Running wait
+09:16:38.72 behavior_ser wait completed successfully
+09:16:50.76 controller_s Failed to make progress
+09:16:50.78 local_costma Received request to clear entirely the local_costmap
+09:17:02.88 controller_s Failed to make progress
+09:17:02.90 behavior_ser Running backup
+09:17:02.90 behavior_ser Collision Ahead - Exiting DriveOnHeading
+09:17:02.90 behavior_ser backup failed
+09:17:02.92 mecanum_esca Solicitacao de escape lateral recebida.
+09:17:02.92 mecanum_esca Folga lateral: esquerda=0.323 m, direita=0.245 m, necessaria=0.375 m
+09:17:02.98 mecanum_esca Escape lateral recusado: nenhum lado e seguro.
+09:17:03.00 local_costma Received request to clear entirely the local_costmap
+09:17:03.00 global_costm Received request to clear entirely the global_costmap
+09:17:08.86 collision_mo Robot to continue normal operation
+09:17:08.99 collision_mo Robot to stop due to VelocityPolygonStop polygon
+09:17:09.69 collision_mo Robot to continue normal operation
+09:17:09.86 collision_mo Robot to stop due to VelocityPolygonStop polygon
+09:17:10.41 controller_s Controller patience exceeded
+09:17:10.43 local_costma Received request to clear entirely the local_costmap
+09:17:10.93 controller_s Controller patience exceeded
+09:17:10.95 progressive_ smart_spin fail: footprint atual ocupa espaço desconhecido/obstáculo
+09:17:10.97 behavior_ser Running wait
+09:17:15.97 behavior_ser wait completed successfully
+09:17:16.52 controller_s Controller patience exceeded
+09:17:16.54 local_costma Received request to clear entirely the local_costmap
+09:17:16.99 collision_mo Robot to continue normal operation
+09:17:22.56 alinhador_pa GOAL FINAL: SUCESSO
+09:17:22.56 executor_pro FINISH: SUCESSO chegou (ponto sem mesa)
+09:17:22.56 alinhador_pa RESULTADO: FINISH SUCESSO chegou (ponto sem mesa)

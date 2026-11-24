@@ -1,0 +1,13 @@
+
+# Arquivos gerados pelo ROS 2 / Colcon
+build/
+install/
+log/
+
+# Arquivos temporários
+*.pyc
+__pycache__/
+
+# Configurações de editores
+.vscode/
+.idea/

@@ -1,0 +1,1 @@
+{"scenario":"open","plugin":"dwb_core::DWBLocalPlanner","replanning":false,"complete":true,"first_translation_s":0,"no_translation_s":0,"rotation_rad":0,"duration_s":6.8,"failures":0,"max_vy":0,"first_lateral_x":-1,"intermediate_rotation_rad":0,"collisions":0,"plan_collision_samples":0,"plan_max_abs_y":0,"compute_p95_ms":34.9199,"x":1.148,"y":0,"yaw":0,"error":""}

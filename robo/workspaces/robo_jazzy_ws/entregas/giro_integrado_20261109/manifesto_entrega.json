@@ -1,0 +1,17 @@
+{
+  "tipo": "evidencias_de_software_sem_teste_fisico",
+  "parecer": "NAO APTO",
+  "python_aprovados": 68,
+  "cpp_casos_aprovados": 1,
+  "cpp_verificacoes_internas": 32,
+  "fracassos": 0,
+  "build_pacotes": [
+    "robo_hardware",
+    "robo_lidar",
+    "robo_navigation"
+  ],
+  "firmware_upload": false,
+  "comandos_motores_publicados": false,
+  "navegacao_iniciada": false,
+  "hardware_binary_sha256": "fddc9b81616629683e3c067a13c8102d82971d815a3b3ef1840003f8c9bd597f"
+}

@@ -1,0 +1,36 @@
+{
+  "arms": [
+    "controle",
+    "entropia_zero",
+    "variancia_angular"
+  ],
+  "training_seeds": [
+    4201,
+    4202,
+    4203
+  ],
+  "steps_per_arm_seed": 250000,
+  "max_total_steps": 2250000,
+  "evaluate_every": 25000,
+  "source": "origem.zip",
+  "source_sha256": "014847f8796d7571d47e04d6ba490ea99b8eb2b190febffcc4c7a823d20ae3ea",
+  "n_jobs": 1,
+  "nominal_rollout": 512,
+  "boundary_rollout": 424,
+  "angular_bounds": [
+    -3,
+    0
+  ],
+  "unchanged": [
+    "reward",
+    "physics",
+    "map",
+    "sampler",
+    "curriculum",
+    "learning_rate",
+    "target_kl",
+    "batch_size",
+    "n_epochs"
+  ],
+  "selection": "fixed success +5 percentage points vs paired control and baseline across last 3 evaluations of all seeds; collision no worse; independent confirmation required"
+}

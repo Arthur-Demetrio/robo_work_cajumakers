@@ -1,0 +1,40 @@
+..................................F..................................... [ 28%]
+........................................................................ [ 57%]
+........................................................................ [ 85%]
+....................................                                     [100%]
+=================================== FAILURES ===================================
+___________________ test_arvore_integrada_tem_todas_as_pecas ___________________
+
+    def test_arvore_integrada_tem_todas_as_pecas():
+        t = ET.parse(XML)
+        rc = t.find('.//RateController')
+        assert rc.get('hz') == '2.0'
+        assert t.find('.//PathExpiringTimer').get('seconds') == '15'
+        assert t.find('.//TruncatePathLocal').get('distance_backward') == '0.0'
+        assert [e.get('path') for e in t.iter('IsPathValid')][0] == '{remaining_path}'
+        assert all(e.get('check_for_collisions') == 'true' for e in t.iter('SmoothPath'))
+        sb = list(t.iter('SetBlackboard'))
+        assert len(sb) == 2 and all(e.get('output_key') == 'smoothed_path' and e.get('value') == '{path}' for e in sb)
+        assert len(list(t.iter('IsPathValid'))) == 1               # ORIGINAL_SEM_GATE: so o trecho restante
+        drv = list(t.iter('DriveOnHeading'))
+        assert len(drv) == 1 and drv[0].get('server_name') == 'destravar'
+        assert t.find('.//RoundRobin') is None and t.find('.//BackUp') is None
+        assert t.find('.//Spin') is None                     # o giro e decidido pelo destravar (via smart_spin)
+        assert t.find('.//GoalUpdated') is not None
+        assert t.find('.//FollowPath').get('path') == '{smoothed_path}'
+        # CAMINHO_DO_GOAL: zera no inicio do goal e em cada replanejamento; exigido para manter caminho
+        assert t.find('.//Sequence[@name="GoalNovo"]/Script').get('code') == 'caminho_do_goal := false'
+        assert t.find('.//ReactiveSequence/ScriptCondition').get('code') == 'caminho_do_goal'
+        for seq in [s for s in t.iter('Sequence') if s.find('ComputePathToPose') is not None]:
+            cs = [c.get('code') for c in seq.iter('Script')]
+>           assert cs[0] == 'caminho_do_goal := false' and cs[-1] == 'caminho_do_goal := true'
+E           AssertionError: assert ('caminho_do_goal := false' == 'caminho_do_goal := false'
+E               caminho_do_goal := false and 'caminho_bloqueado := false' == 'caminho_do_goal := true'
+E             - caminho_do_goal := true
+E             + caminho_bloqueado := false)
+
+test/test_config_integrada.py:111: AssertionError
+- generated xml file: /home/marcos/robo_jazzy_ws/entregas/nav_refinamento_20261111/testes/pytest_robo_navigation_patch01.xml -
+=========================== short test summary info ============================
+FAILED test/test_config_integrada.py::test_arvore_integrada_tem_todas_as_pecas
+1 failed, 251 passed in 124.99s (0:02:04)

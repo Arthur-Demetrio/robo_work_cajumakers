@@ -1,0 +1,4 @@
+[ 25%] Building CXX object CMakeFiles/dwb_probe.dir/probe.cpp.o
+[ 50%] Linking CXX executable dwb_probe
+[ 50%] Built target dwb_probe
+[100%] Built target bt_probe

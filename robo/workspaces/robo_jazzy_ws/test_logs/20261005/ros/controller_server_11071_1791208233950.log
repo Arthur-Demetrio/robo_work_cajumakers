@@ -1,0 +1,314 @@
+[INFO] [1791208233.991264103] [controller_server]: 
+	controller_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791208234.003522100] [controller_server]: Creating controller server
+[INFO] [1791208234.018590175] [local_costmap.local_costmap]: 
+	local_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791208234.019071948] [local_costmap.local_costmap]: Creating Costmap
+[INFO] [1791208234.123895000] [controller_server]: Configuring controller interface
+[INFO] [1791208234.123950089] [controller_server]: getting progress checker plugins..
+[INFO] [1791208234.124071103] [controller_server]: getting goal checker plugins..
+[INFO] [1791208234.124392333] [controller_server]: Controller frequency set to 10.0000Hz
+[INFO] [1791208234.124438888] [local_costmap.local_costmap]: Configuring
+[INFO] [1791208234.129420934] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[INFO] [1791208234.132962115] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[INFO] [1791208234.135091770] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[INFO] [1791208234.135118689] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[INFO] [1791208234.135572881] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1791208234.143666046] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[INFO] [1791208234.144109379] [controller_server]: Controller Server has progress_checker  progress checkers available.
+[INFO] [1791208234.145545373] [controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[INFO] [1791208234.146100819] [controller_server]: Controller Server has goal_checker  goal checkers available.
+[INFO] [1791208234.148155043] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[INFO] [1791208234.148931394] [controller_server]: Setting transform_tolerance to 0.300000
+[INFO] [1791208234.155133360] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[INFO] [1791208234.155588569] [controller_server]: Critic plugin initialized
+[INFO] [1791208234.155698718] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[INFO] [1791208234.156068649] [controller_server]: Critic plugin initialized
+[INFO] [1791208234.156162875] [controller_server]: Using critic "ObstacleFootprint" (dwb_critics::ObstacleFootprintCritic)
+[INFO] [1791208234.156331400] [controller_server]: Critic plugin initialized
+[INFO] [1791208234.156439408] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[INFO] [1791208234.156682471] [controller_server]: Critic plugin initialized
+[INFO] [1791208234.156779876] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[INFO] [1791208234.157011353] [controller_server]: Critic plugin initialized
+[INFO] [1791208234.157106351] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[INFO] [1791208234.157274677] [controller_server]: Critic plugin initialized
+[INFO] [1791208234.157379683] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[INFO] [1791208234.157546133] [controller_server]: Critic plugin initialized
+[INFO] [1791208234.157565957] [controller_server]: Controller Server has FollowPath  controllers available.
+[INFO] [1791208234.303170495] [controller_server]: Activating
+[INFO] [1791208234.303201277] [local_costmap.local_costmap]: Activating
+[INFO] [1791208234.303215958] [local_costmap.local_costmap]: Checking transform
+[INFO] [1791208234.303333980] [local_costmap.local_costmap]: start
+[INFO] [1791208234.503816799] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[INFO] [1791208237.795979791] [controller_server]: Received a goal, begin computing control effort.
+[WARN] [1791208237.796097050] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
+[WARN] [1791208237.796132517] [controller_server]: No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+[INFO] [1791208238.896313399] [controller_server]: Passing new path to controller.
+[INFO] [1791208239.896368821] [controller_server]: Passing new path to controller.
+[INFO] [1791208240.896352164] [controller_server]: Passing new path to controller.
+[INFO] [1791208241.996342393] [controller_server]: Passing new path to controller.
+[INFO] [1791208242.996312715] [controller_server]: Passing new path to controller.
+[INFO] [1791208243.996332574] [controller_server]: Passing new path to controller.
+[INFO] [1791208244.996349390] [controller_server]: Passing new path to controller.
+[INFO] [1791208246.096348567] [controller_server]: Passing new path to controller.
+[INFO] [1791208247.096314403] [controller_server]: Passing new path to controller.
+[INFO] [1791208248.096302576] [controller_server]: Passing new path to controller.
+[INFO] [1791208249.196345320] [controller_server]: Passing new path to controller.
+[INFO] [1791208250.196329530] [controller_server]: Passing new path to controller.
+[INFO] [1791208251.196349033] [controller_server]: Passing new path to controller.
+[INFO] [1791208252.196346572] [controller_server]: Passing new path to controller.
+[INFO] [1791208253.296328594] [controller_server]: Passing new path to controller.
+[INFO] [1791208254.296323179] [controller_server]: Passing new path to controller.
+[INFO] [1791208255.296308529] [controller_server]: Passing new path to controller.
+[INFO] [1791208256.296311440] [controller_server]: Passing new path to controller.
+[INFO] [1791208257.396306669] [controller_server]: Passing new path to controller.
+[INFO] [1791208258.396353918] [controller_server]: Passing new path to controller.
+[INFO] [1791208259.396303015] [controller_server]: Passing new path to controller.
+[INFO] [1791208260.396302701] [controller_server]: Passing new path to controller.
+[INFO] [1791208260.997716495] [controller_server]: Reached the goal!
+[INFO] [1791208266.563110917] [controller_server]: Received a goal, begin computing control effort.
+[INFO] [1791208267.663274734] [controller_server]: Passing new path to controller.
+[INFO] [1791208268.663274389] [controller_server]: Passing new path to controller.
+[INFO] [1791208269.663299942] [controller_server]: Passing new path to controller.
+[INFO] [1791208270.663273473] [controller_server]: Passing new path to controller.
+[INFO] [1791208271.763274161] [controller_server]: Passing new path to controller.
+[INFO] [1791208272.763272790] [controller_server]: Passing new path to controller.
+[INFO] [1791208273.763273217] [controller_server]: Passing new path to controller.
+[INFO] [1791208274.863302332] [controller_server]: Passing new path to controller.
+[INFO] [1791208275.863299724] [controller_server]: Passing new path to controller.
+[INFO] [1791208276.863297436] [controller_server]: Passing new path to controller.
+[INFO] [1791208277.863273177] [controller_server]: Passing new path to controller.
+[INFO] [1791208278.963307161] [controller_server]: Passing new path to controller.
+[INFO] [1791208279.963275103] [controller_server]: Passing new path to controller.
+[INFO] [1791208280.364883444] [controller_server]: Reached the goal!
+[INFO] [1791208287.713317843] [controller_server]: Received a goal, begin computing control effort.
+[INFO] [1791208288.813499332] [controller_server]: Passing new path to controller.
+[INFO] [1791208289.814121781] [controller_server]: Passing new path to controller.
+[INFO] [1791208290.813498024] [controller_server]: Passing new path to controller.
+[INFO] [1791208291.913502832] [controller_server]: Passing new path to controller.
+[INFO] [1791208292.014883955] [controller_server]: Reached the goal!
+[INFO] [1791208300.232273813] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[INFO] [1791208314.732121506] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[INFO] [1791208321.772252101] [controller_server]: Received a goal, begin computing control effort.
+[INFO] [1791208322.872482909] [controller_server]: Passing new path to controller.
+[INFO] [1791208323.872507193] [controller_server]: Passing new path to controller.
+[ERROR] [1791208324.374417324] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208324.374458985] [DWBLocalPlanner]: 0.50: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208324.374463205] [DWBLocalPlanner]: 0.50: Oscillation/Trajectory is oscillating.
+[WARN] [1791208324.374527165] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[ERROR] [1791208324.474606057] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208324.474640182] [DWBLocalPlanner]: 0.50: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208324.474646379] [DWBLocalPlanner]: 0.50: Oscillation/Trajectory is oscillating.
+[WARN] [1791208324.474713775] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208324.872508026] [controller_server]: Passing new path to controller.
+[INFO] [1791208325.972489592] [controller_server]: Passing new path to controller.
+[INFO] [1791208326.972483753] [controller_server]: Passing new path to controller.
+[INFO] [1791208327.972483046] [controller_server]: Passing new path to controller.
+[ERROR] [1791208328.774820198] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208328.774853960] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208328.774919504] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[ERROR] [1791208328.874820856] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208328.874852521] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208328.874909116] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208328.972482952] [controller_server]: Passing new path to controller.
+[INFO] [1791208330.072506213] [controller_server]: Passing new path to controller.
+[ERROR] [1791208330.075446487] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208330.075473418] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208330.075533345] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208331.072483304] [controller_server]: Passing new path to controller.
+[INFO] [1791208332.072493330] [controller_server]: Passing new path to controller.
+[INFO] [1791208333.072482451] [controller_server]: Passing new path to controller.
+[ERROR] [1791208333.075435351] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208333.075461350] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208333.075520039] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208334.072482882] [controller_server]: Passing new path to controller.
+[INFO] [1791208335.172481678] [controller_server]: Passing new path to controller.
+[INFO] [1791208336.172486894] [controller_server]: Passing new path to controller.
+[INFO] [1791208337.172485151] [controller_server]: Passing new path to controller.
+[INFO] [1791208338.172480937] [controller_server]: Passing new path to controller.
+[INFO] [1791208339.272485086] [controller_server]: Passing new path to controller.
+[INFO] [1791208340.272481834] [controller_server]: Passing new path to controller.
+[INFO] [1791208341.272481821] [controller_server]: Passing new path to controller.
+[ERROR] [1791208341.674440041] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208341.674471206] [DWBLocalPlanner]: 0.62: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208341.674487135] [DWBLocalPlanner]: 0.38: Oscillation/Trajectory is oscillating.
+[WARN] [1791208341.674540270] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208342.372484200] [controller_server]: Passing new path to controller.
+[INFO] [1791208343.372482756] [controller_server]: Passing new path to controller.
+[ERROR] [1791208343.674689417] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208343.674719767] [DWBLocalPlanner]: 0.62: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208343.674723945] [DWBLocalPlanner]: 0.38: Oscillation/Trajectory is oscillating.
+[WARN] [1791208343.674787043] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208344.372484478] [controller_server]: Passing new path to controller.
+[ERROR] [1791208344.774330126] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208344.774443985] [DWBLocalPlanner]: 0.50: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208344.774450261] [DWBLocalPlanner]: 0.50: Oscillation/Trajectory is oscillating.
+[WARN] [1791208344.774525764] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[ERROR] [1791208344.873899168] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208344.873932241] [DWBLocalPlanner]: 0.01: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208344.873937636] [DWBLocalPlanner]: 0.01: Oscillation/Trajectory is oscillating.
+[ERROR] [1791208344.873941107] [DWBLocalPlanner]: 0.98: RotateToGoal/Nonrotation command near goal.
+[WARN] [1791208344.874006995] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208345.372480853] [controller_server]: Passing new path to controller.
+[INFO] [1791208346.472486354] [controller_server]: Passing new path to controller.
+[ERROR] [1791208346.574418912] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208346.574448281] [DWBLocalPlanner]: 0.02: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208346.574452584] [DWBLocalPlanner]: 0.98: RotateToGoal/Nonrotation command near goal.
+[WARN] [1791208346.574505894] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[ERROR] [1791208346.673930977] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208346.673972061] [DWBLocalPlanner]: 0.02: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208346.673978288] [DWBLocalPlanner]: 0.98: RotateToGoal/Nonrotation command near goal.
+[WARN] [1791208346.674031440] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208347.472483685] [controller_server]: Passing new path to controller.
+[INFO] [1791208348.472487219] [controller_server]: Passing new path to controller.
+[INFO] [1791208349.472481237] [controller_server]: Passing new path to controller.
+[INFO] [1791208350.572482720] [controller_server]: Passing new path to controller.
+[INFO] [1791208351.572485003] [controller_server]: Passing new path to controller.
+[INFO] [1791208352.572478709] [controller_server]: Passing new path to controller.
+[INFO] [1791208353.572481309] [controller_server]: Passing new path to controller.
+[INFO] [1791208354.672487883] [controller_server]: Passing new path to controller.
+[INFO] [1791208355.672484170] [controller_server]: Passing new path to controller.
+[ERROR] [1791208356.274656713] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208356.274687937] [DWBLocalPlanner]: 0.68: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208356.274692213] [DWBLocalPlanner]: 0.32: Oscillation/Trajectory is oscillating.
+[WARN] [1791208356.274744415] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208356.672482763] [controller_server]: Passing new path to controller.
+[ERROR] [1791208357.074505248] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208357.074536215] [DWBLocalPlanner]: 0.62: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208357.074551837] [DWBLocalPlanner]: 0.38: Oscillation/Trajectory is oscillating.
+[WARN] [1791208357.074603310] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208357.672508225] [controller_server]: Passing new path to controller.
+[INFO] [1791208358.772483440] [controller_server]: Passing new path to controller.
+[INFO] [1791208359.772486035] [controller_server]: Passing new path to controller.
+[ERROR] [1791208359.775155723] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208359.775181797] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208359.775242369] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208360.772482390] [controller_server]: Passing new path to controller.
+[INFO] [1791208361.772481957] [controller_server]: Passing new path to controller.
+[INFO] [1791208362.872481507] [controller_server]: Passing new path to controller.
+[INFO] [1791208363.872482264] [controller_server]: Passing new path to controller.
+[ERROR] [1791208364.474757625] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208364.474789256] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208364.474846872] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208364.872485364] [controller_server]: Passing new path to controller.
+[ERROR] [1791208365.174479390] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208365.174510711] [DWBLocalPlanner]: 0.62: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208365.174514728] [DWBLocalPlanner]: 0.38: Oscillation/Trajectory is oscillating.
+[WARN] [1791208365.174564685] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[ERROR] [1791208365.274492238] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208365.274525244] [DWBLocalPlanner]: 0.62: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208365.274529270] [DWBLocalPlanner]: 0.38: Oscillation/Trajectory is oscillating.
+[WARN] [1791208365.274578775] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208365.872485793] [controller_server]: Passing new path to controller.
+[INFO] [1791208366.972487169] [controller_server]: Passing new path to controller.
+[INFO] [1791208367.972481836] [controller_server]: Passing new path to controller.
+[INFO] [1791208368.972483111] [controller_server]: Passing new path to controller.
+[INFO] [1791208369.972486530] [controller_server]: Passing new path to controller.
+[INFO] [1791208371.072484706] [controller_server]: Passing new path to controller.
+[INFO] [1791208372.072485381] [controller_server]: Passing new path to controller.
+[INFO] [1791208373.072483380] [controller_server]: Passing new path to controller.
+[INFO] [1791208374.072483699] [controller_server]: Passing new path to controller.
+[INFO] [1791208375.172483982] [controller_server]: Passing new path to controller.
+[INFO] [1791208376.172493569] [controller_server]: Passing new path to controller.
+[INFO] [1791208377.172481315] [controller_server]: Passing new path to controller.
+[INFO] [1791208378.272485633] [controller_server]: Passing new path to controller.
+[INFO] [1791208379.272491693] [controller_server]: Passing new path to controller.
+[INFO] [1791208380.272487342] [controller_server]: Passing new path to controller.
+[INFO] [1791208381.272485894] [controller_server]: Passing new path to controller.
+[INFO] [1791208382.372484213] [controller_server]: Passing new path to controller.
+[INFO] [1791208383.372493306] [controller_server]: Passing new path to controller.
+[INFO] [1791208384.372490677] [controller_server]: Passing new path to controller.
+[INFO] [1791208385.372481091] [controller_server]: Passing new path to controller.
+[INFO] [1791208386.472499177] [controller_server]: Passing new path to controller.
+[INFO] [1791208387.472488340] [controller_server]: Passing new path to controller.
+[INFO] [1791208388.472484580] [controller_server]: Passing new path to controller.
+[INFO] [1791208389.472481257] [controller_server]: Passing new path to controller.
+[ERROR] [1791208390.072662268] [controller_server]: Failed to make progress
+[WARN] [1791208390.073018447] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[INFO] [1791208390.092151149] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[INFO] [1791208390.092556595] [controller_server]: Received a goal, begin computing control effort.
+[INFO] [1791208390.492792035] [controller_server]: Passing new path to controller.
+[INFO] [1791208391.592847928] [controller_server]: Passing new path to controller.
+[INFO] [1791208392.195514884] [controller_server]: Reached the goal!
+[INFO] [1791208395.637820718] [controller_server]: Received a goal, begin computing control effort.
+[INFO] [1791208396.738003134] [controller_server]: Passing new path to controller.
+[INFO] [1791208397.738020108] [controller_server]: Passing new path to controller.
+[INFO] [1791208398.738047212] [controller_server]: Passing new path to controller.
+[INFO] [1791208399.738049327] [controller_server]: Passing new path to controller.
+[ERROR] [1791208399.738930291] [tf_help]: Transform data too old when converting from odom to map
+[ERROR] [1791208399.739124854] [tf_help]: Data time: 1791208399s 731785191ns, Transform time: 1791208399s 430021405ns
+[ERROR] [1791208399.739245298] [controller_server]: Unable to transform robot pose into global plan's frame
+[WARN] [1791208399.739385619] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[INFO] [1791208452.534968120] [local_costmap.local_costmap]: Message Filter dropping message: frame 'laser_raw' at time 1791208452.232 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[INFO] [1791208461.936452231] [controller_server]: Received a goal, begin computing control effort.
+[INFO] [1791208463.036604873] [controller_server]: Passing new path to controller.
+[INFO] [1791208464.036601596] [controller_server]: Passing new path to controller.
+[INFO] [1791208465.036600357] [controller_server]: Passing new path to controller.
+[INFO] [1791208466.136600223] [controller_server]: Passing new path to controller.
+[INFO] [1791208467.136603518] [controller_server]: Passing new path to controller.
+[ERROR] [1791208467.838690932] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208467.838731113] [DWBLocalPlanner]: 0.62: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208467.838735315] [DWBLocalPlanner]: 0.38: Oscillation/Trajectory is oscillating.
+[WARN] [1791208467.838796829] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208468.136743603] [controller_server]: Passing new path to controller.
+[ERROR] [1791208468.338830500] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208468.338861998] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208468.338908729] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208469.136599135] [controller_server]: Passing new path to controller.
+[INFO] [1791208470.236598354] [controller_server]: Passing new path to controller.
+[INFO] [1791208471.236579663] [controller_server]: Passing new path to controller.
+[ERROR] [1791208472.039036793] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208472.039068036] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208472.039118728] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208472.236603973] [controller_server]: Passing new path to controller.
+[INFO] [1791208473.236600723] [controller_server]: Passing new path to controller.
+[ERROR] [1791208473.239081877] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208473.239107809] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208473.239165874] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208474.336599198] [controller_server]: Passing new path to controller.
+[ERROR] [1791208475.238587088] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208475.238619767] [DWBLocalPlanner]: 0.50: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791208475.238623853] [DWBLocalPlanner]: 0.50: Oscillation/Trajectory is oscillating.
+[WARN] [1791208475.238668344] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208475.336600841] [controller_server]: Passing new path to controller.
+[INFO] [1791208476.336603982] [controller_server]: Passing new path to controller.
+[INFO] [1791208477.336601483] [controller_server]: Passing new path to controller.
+[ERROR] [1791208477.639040772] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208477.639163967] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208477.639220516] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208478.436598590] [controller_server]: Passing new path to controller.
+[INFO] [1791208479.436604031] [controller_server]: Passing new path to controller.
+[ERROR] [1791208479.538818503] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208479.538846148] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208479.538889909] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[ERROR] [1791208479.638851807] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791208479.638882045] [DWBLocalPlanner]: 1.00: ObstacleFootprint/Trajectory Hits Obstacle.
+[WARN] [1791208479.638929172] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791208480.436598676] [controller_server]: Passing new path to controller.
+[INFO] [1791208481.436597973] [controller_server]: Passing new path to controller.
+[INFO] [1791208482.536601970] [controller_server]: Passing new path to controller.
+[INFO] [1791208483.536600652] [controller_server]: Passing new path to controller.
+[ERROR] [1791208484.136655972] [tf_help]: Transform data too old when converting from odom to map
+[ERROR] [1791208484.136701878] [tf_help]: Data time: 1791208484s 131702912ns, Transform time: 1791208483s 801998094ns
+[ERROR] [1791208484.136736564] [controller_server]: Unable to transform robot pose into global plan's frame
+[WARN] [1791208484.136812698] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[INFO] [1791208497.235905088] [controller_server]: Received a goal, begin computing control effort.
+[INFO] [1791208498.336109415] [controller_server]: Passing new path to controller.
+[INFO] [1791208499.336110952] [controller_server]: Passing new path to controller.
+[INFO] [1791208500.336106795] [controller_server]: Passing new path to controller.
+[ERROR] [1791208501.236160147] [tf_help]: Transform data too old when converting from odom to map
+[ERROR] [1791208501.236192147] [tf_help]: Data time: 1791208501s 231754822ns, Transform time: 1791208500s 832037377ns
+[ERROR] [1791208501.236218410] [controller_server]: Unable to transform robot pose into global plan's frame
+[WARN] [1791208501.236263258] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[INFO] [1791208896.977114204] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791208896.977151259] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[INFO] [1791208896.977198026] [controller_server]: Deactivating
+[INFO] [1791208896.977241076] [local_costmap.local_costmap]: Deactivating
+[INFO] [1791208897.103736835] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[INFO] [1791208897.123974345] [controller_server]: Cleaning up
+[INFO] [1791208897.124251119] [local_costmap.local_costmap]: Cleaning up
+[INFO] [1791208897.165251295] [controller_server]: Destroying bond (controller_server) to lifecycle manager.

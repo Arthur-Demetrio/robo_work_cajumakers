@@ -1,0 +1,1 @@
+APROVADO: conferencia real sem mutacao; rollback em copia restaurou hashes originais, preservou estado removido e recusou edicao posterior.

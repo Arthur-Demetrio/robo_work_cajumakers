@@ -1,0 +1,8 @@
+{
+  "amostras_1s": 593,
+  "saltos_yaw_mapa_maior_5graus": 119,
+  "max_yaw_mapa_graus": 21.140000000000015,
+  "max_imu_graus": 20.5,
+  "max_mapa_com_imu_menor_1grau": 21.140000000000015,
+  "limite": "Comparacao original da missao34; nao e IMU realinhada aos dois replays. Amostragem 1s pode ocultar saltos."
+}

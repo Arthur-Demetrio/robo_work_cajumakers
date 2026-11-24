@@ -1,0 +1,8 @@
+scan_filter:
+  ros__parameters:
+    input_topic: /scan_raw
+    output_topic: /scan_front
+    invert_angles: false
+    blocked_intervals_deg: "-162:-146,-140:-110,100:138,142:160"
+    force_out_of_range_to_inf: true
+    use_sim_time: false

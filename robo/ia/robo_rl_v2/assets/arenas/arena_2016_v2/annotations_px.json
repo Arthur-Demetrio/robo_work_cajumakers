@@ -1,0 +1,2458 @@
+{
+  "floor_corners": [
+    [
+      117,
+      265
+    ],
+    [
+      426,
+      443
+    ],
+    [
+      890,
+      177
+    ],
+    [
+      567,
+      4
+    ]
+  ],
+  "objects": [
+    {
+      "id": "W01_nicho_lateral_mesa",
+      "kind": "wall",
+      "source_ground_polyline_px": [
+        [
+          232,
+          200
+        ],
+        [
+          257,
+          215
+        ],
+        [
+          300,
+          191
+        ]
+      ],
+      "geometry": {
+        "polyline": [
+          [
+            0.04021858051419258,
+            3.0717034339904785
+          ],
+          [
+            0.7366253733634949,
+            3.051461696624756
+          ],
+          [
+            0.7581661343574524,
+            4.186959743499756
+          ]
+        ],
+        "width_m": 0.075
+      },
+      "z_range_m": [
+        0,
+        0.28
+      ],
+      "color": "#596873",
+      "visual_screen_height_px": 17,
+      "estimated": [
+        "width_m",
+        "height_m",
+        "ground_footline_occlusions"
+      ]
+    },
+    {
+      "id": "W02_divisoria_mesa",
+      "kind": "wall",
+      "source_ground_polyline_px": [
+        [
+          274,
+          254
+        ],
+        [
+          344,
+          214
+        ]
+      ],
+      "geometry": {
+        "polyline": [
+          [
+            1.8847068548202515,
+            2.362400770187378
+          ],
+          [
+            1.8962762355804443,
+            4.227330684661865
+          ]
+        ],
+        "width_m": 0.075
+      },
+      "z_range_m": [
+        0,
+        0.28
+      ],
+      "color": "#596873",
+      "visual_screen_height_px": 17,
+      "estimated": [
+        "width_m",
+        "height_m",
+        "ground_footline_occlusions"
+      ]
+    },
+    {
+      "id": "W03_espinha_central",
+      "kind": "wall",
+      "source_ground_polyline_px": [
+        [
+          377,
+          258
+        ],
+        [
+          589,
+          137
+        ],
+        [
+          563,
+          121
+        ]
+      ],
+      "geometry": {
+        "polyline": [
+          [
+            3.3673408031463623,
+            3.6317529678344727
+          ],
+          [
+            3.399411678314209,
+            9.226319313049316
+          ],
+          [
+            2.6802306175231934,
+            9.269510269165039
+          ]
+        ],
+        "width_m": 0.075
+      },
+      "z_range_m": [
+        0,
+        0.28
+      ],
+      "color": "#596873",
+      "visual_screen_height_px": 17,
+      "estimated": [
+        "width_m",
+        "height_m",
+        "ground_footline_occlusions"
+      ]
+    },
+    {
+      "id": "W04_ramo_inferior",
+      "kind": "wall",
+      "source_ground_polyline_px": [
+        [
+          414,
+          287
+        ],
+        [
+          537,
+          216
+        ],
+        [
+          579,
+          240
+        ]
+      ],
+      "geometry": {
+        "polyline": [
+          [
+            4.533771991729736,
+            3.4421732425689697
+          ],
+          [
+            4.5312395095825195,
+            6.701866626739502
+          ],
+          [
+            5.638616561889648,
+            6.684195518493652
+          ]
+        ],
+        "width_m": 0.075
+      },
+      "z_range_m": [
+        0,
+        0.28
+      ],
+      "color": "#596873",
+      "visual_screen_height_px": 17,
+      "estimated": [
+        "width_m",
+        "height_m",
+        "ground_footline_occlusions"
+      ]
+    },
+    {
+      "id": "W05_nicho_cobertura_direita",
+      "kind": "wall",
+      "source_ground_polyline_px": [
+        [
+          604,
+          211
+        ],
+        [
+          576,
+          195
+        ],
+        [
+          634,
+          162
+        ],
+        [
+          745,
+          226
+        ]
+      ],
+      "geometry": {
+        "polyline": [
+          [
+            5.303656578063965,
+            7.682900905609131
+          ],
+          [
+            4.565263271331787,
+            7.696876049041748
+          ],
+          [
+            4.575070858001709,
+            9.21518325805664
+          ],
+          [
+            7.49294900894165,
+            9.133753776550293
+          ]
+        ],
+        "width_m": 0.075
+      },
+      "z_range_m": [
+        0,
+        0.28
+      ],
+      "color": "#596873",
+      "visual_screen_height_px": 17,
+      "estimated": [
+        "width_m",
+        "height_m",
+        "ground_footline_occlusions"
+      ]
+    },
+    {
+      "id": "W06_cotovelo_fundo",
+      "kind": "wall",
+      "source_ground_polyline_px": [
+        [
+          446,
+          99
+        ],
+        [
+          488,
+          75
+        ],
+        [
+          528,
+          99
+        ]
+      ],
+      "geometry": {
+        "polyline": [
+          [
+            0.5841115117073059,
+            8.277036666870117
+          ],
+          [
+            0.5921051502227783,
+            9.391473770141602
+          ],
+          [
+            1.6965001821517944,
+            9.338869094848633
+          ]
+        ],
+        "width_m": 0.075
+      },
+      "z_range_m": [
+        0,
+        0.28
+      ],
+      "color": "#596873",
+      "visual_screen_height_px": 17,
+      "estimated": [
+        "width_m",
+        "height_m",
+        "ground_footline_occlusions"
+      ]
+    },
+    {
+      "id": "W07_nicho_fundo",
+      "kind": "wall",
+      "source_ground_polyline_px": [
+        [
+          568,
+          25
+        ],
+        [
+          610,
+          49
+        ],
+        [
+          570,
+          72
+        ]
+      ],
+      "geometry": {
+        "polyline": [
+          [
+            0.5067867040634155,
+            11.611412048339844
+          ],
+          [
+            1.6370078325271606,
+            11.577240943908691
+          ],
+          [
+            1.633565068244934,
+            10.519121170043945
+          ]
+        ],
+        "width_m": 0.075
+      },
+      "z_range_m": [
+        0,
+        0.28
+      ],
+      "color": "#596873",
+      "visual_screen_height_px": 17,
+      "estimated": [
+        "width_m",
+        "height_m",
+        "ground_footline_occlusions"
+      ]
+    },
+    {
+      "id": "W08_nicho_direita",
+      "kind": "wall",
+      "source_ground_polyline_px": [
+        [
+          809,
+          164
+        ],
+        [
+          850,
+          188
+        ],
+        [
+          811,
+          211
+        ]
+      ],
+      "geometry": {
+        "polyline": [
+          [
+            6.920529842376709,
+            11.388313293457031
+          ],
+          [
+            7.9955949783325195,
+            11.342974662780762
+          ],
+          [
+            8.009893417358398,
+            10.317153930664062
+          ]
+        ],
+        "width_m": 0.075
+      },
+      "z_range_m": [
+        0,
+        0.28
+      ],
+      "color": "#596873",
+      "visual_screen_height_px": 17,
+      "estimated": [
+        "width_m",
+        "height_m",
+        "ground_footline_occlusions"
+      ]
+    },
+    {
+      "id": "W09_nicho_frontal",
+      "kind": "wall",
+      "source_ground_polyline_px": [
+        [
+          442,
+          376
+        ],
+        [
+          481,
+          398
+        ],
+        [
+          522,
+          375
+        ]
+      ],
+      "geometry": {
+        "polyline": [
+          [
+            6.94793701171875,
+            1.7491436004638672
+          ],
+          [
+            7.958778381347656,
+            1.7544875144958496
+          ],
+          [
+            7.970459938049316,
+            2.8188517093658447
+          ]
+        ],
+        "width_m": 0.075
+      },
+      "z_range_m": [
+        0,
+        0.28
+      ],
+      "color": "#596873",
+      "visual_screen_height_px": 17,
+      "estimated": [
+        "width_m",
+        "height_m",
+        "ground_footline_occlusions"
+      ]
+    },
+    {
+      "id": "P01_ao_lado_mesa",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          272,
+          254
+        ],
+        [
+          305,
+          235
+        ],
+        [
+          332,
+          250
+        ],
+        [
+          299,
+          269
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          272,
+          257
+        ],
+        [
+          305,
+          238
+        ],
+        [
+          332,
+          253
+        ],
+        [
+          299,
+          272
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            1.9279073476791382,
+            2.265568494796753
+          ],
+          [
+            1.9299914836883545,
+            3.148732900619507
+          ],
+          [
+            2.6456356048583984,
+            3.154895305633545
+          ],
+          [
+            2.6440041065216064,
+            2.2736120223999023
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P02_base_cobertura_esquerda",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          319,
+          153
+        ],
+        [
+          348,
+          136
+        ],
+        [
+          372,
+          150
+        ],
+        [
+          342,
+          167
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          319,
+          156
+        ],
+        [
+          348,
+          139
+        ],
+        [
+          372,
+          153
+        ],
+        [
+          342,
+          170
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            0.19266632199287415,
+            5.263962745666504
+          ],
+          [
+            0.18831516802310944,
+            6.047998905181885
+          ],
+          [
+            0.8455472588539124,
+            6.032254219055176
+          ],
+          [
+            0.8366158604621887,
+            5.23655366897583
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P03_fundo_esquerdo",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          364,
+          132
+        ],
+        [
+          395,
+          114
+        ],
+        [
+          421,
+          130
+        ],
+        [
+          392,
+          147
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          364,
+          135
+        ],
+        [
+          395,
+          117
+        ],
+        [
+          421,
+          133
+        ],
+        [
+          392,
+          150
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            0.3127327859401703,
+            6.352853298187256
+          ],
+          [
+            0.31207922101020813,
+            7.185283184051514
+          ],
+          [
+            1.0424367189407349,
+            7.146168231964111
+          ],
+          [
+            1.047230839729309,
+            6.3653035163879395
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P04_centro_esquerdo",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          413,
+          182
+        ],
+        [
+          441,
+          166
+        ],
+        [
+          469,
+          183
+        ],
+        [
+          441,
+          199
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          413,
+          185
+        ],
+        [
+          441,
+          169
+        ],
+        [
+          469,
+          186
+        ],
+        [
+          441,
+          202
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            2.151311159133911,
+            5.8152923583984375
+          ],
+          [
+            2.1557846069335938,
+            6.55761194229126
+          ],
+          [
+            2.928687334060669,
+            6.5225605964660645
+          ],
+          [
+            2.924638509750366,
+            5.781909465789795
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P05_espinha_fundo",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          508,
+          137
+        ],
+        [
+          547,
+          115
+        ],
+        [
+          568,
+          127
+        ],
+        [
+          529,
+          150
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          508,
+          140
+        ],
+        [
+          547,
+          118
+        ],
+        [
+          568,
+          130
+        ],
+        [
+          529,
+          153
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            2.382800817489624,
+            8.1115140914917
+          ],
+          [
+            2.395491123199463,
+            9.134394645690918
+          ],
+          [
+            2.956225633621216,
+            9.121461868286133
+          ],
+          [
+            2.9671990871429443,
+            8.076725959777832
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P06_fundo_direito_1",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          633,
+          83
+        ],
+        [
+          661,
+          67
+        ],
+        [
+          698,
+          88
+        ],
+        [
+          669,
+          105
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          633,
+          86
+        ],
+        [
+          661,
+          70
+        ],
+        [
+          698,
+          91
+        ],
+        [
+          669,
+          108
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            2.8066179752349854,
+            10.993444442749023
+          ],
+          [
+            2.810716390609741,
+            11.72884464263916
+          ],
+          [
+            3.789900779724121,
+            11.701969146728516
+          ],
+          [
+            3.7960948944091797,
+            10.932381629943848
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P07_fundo_direito_2",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          694,
+          120
+        ],
+        [
+          722,
+          103
+        ],
+        [
+          758,
+          124
+        ],
+        [
+          730,
+          141
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          694,
+          123
+        ],
+        [
+          722,
+          106
+        ],
+        [
+          758,
+          127
+        ],
+        [
+          730,
+          144
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            4.47346305847168,
+            10.896723747253418
+          ],
+          [
+            4.453680515289307,
+            11.652132034301758
+          ],
+          [
+            5.410212516784668,
+            11.612985610961914
+          ],
+          [
+            5.430395603179932,
+            10.859707832336426
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P08_base_cobertura_direita",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          643,
+          192
+        ],
+        [
+          669,
+          177
+        ],
+        [
+          694,
+          193
+        ],
+        [
+          668,
+          210
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          643,
+          195
+        ],
+        [
+          669,
+          180
+        ],
+        [
+          694,
+          196
+        ],
+        [
+          668,
+          213
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            5.451513767242432,
+            8.557158470153809
+          ],
+          [
+            5.4507222175598145,
+            9.240388870239258
+          ],
+          [
+            6.145063400268555,
+            9.184880256652832
+          ],
+          [
+            6.191830635070801,
+            8.456355094909668
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P09_centro_frontal",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          463,
+          252
+        ],
+        [
+          492,
+          235
+        ],
+        [
+          526,
+          254
+        ],
+        [
+          498,
+          272
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          463,
+          255
+        ],
+        [
+          492,
+          238
+        ],
+        [
+          526,
+          257
+        ],
+        [
+          498,
+          275
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            4.446993827819824,
+            4.829198360443115
+          ],
+          [
+            4.4404401779174805,
+            5.603863716125488
+          ],
+          [
+            5.328793525695801,
+            5.602456092834473
+          ],
+          [
+            5.372006893157959,
+            4.819604873657227
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P10_nicho_lateral_direito",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          781,
+          187
+        ],
+        [
+          819,
+          165
+        ],
+        [
+          838,
+          176
+        ],
+        [
+          800,
+          198
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          781,
+          190
+        ],
+        [
+          819,
+          168
+        ],
+        [
+          838,
+          179
+        ],
+        [
+          800,
+          201
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            7.145475387573242,
+            10.428131103515625
+          ],
+          [
+            7.141389846801758,
+            11.42054271697998
+          ],
+          [
+            7.637022972106934,
+            11.402307510375977
+          ],
+          [
+            7.641449928283691,
+            10.411359786987305
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P11_frente_direita",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          613,
+          296
+        ],
+        [
+          653,
+          273
+        ],
+        [
+          681,
+          290
+        ],
+        [
+          643,
+          313
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          613,
+          299
+        ],
+        [
+          653,
+          276
+        ],
+        [
+          681,
+          293
+        ],
+        [
+          643,
+          316
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            7.4303460121154785,
+            5.752030372619629
+          ],
+          [
+            7.429407119750977,
+            6.799039363861084
+          ],
+          [
+            8.178300857543945,
+            6.764002323150635
+          ],
+          [
+            8.205735206604004,
+            5.745020389556885
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P12_mesa_precisao",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          657,
+          268
+        ],
+        [
+          695,
+          246
+        ],
+        [
+          725,
+          263
+        ],
+        [
+          687,
+          285
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          657,
+          271
+        ],
+        [
+          695,
+          249
+        ],
+        [
+          725,
+          266
+        ],
+        [
+          687,
+          288
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            7.368031024932861,
+            6.9662766456604
+          ],
+          [
+            7.363781452178955,
+            7.962917327880859
+          ],
+          [
+            8.13825511932373,
+            7.95076322555542
+          ],
+          [
+            8.143037796020508,
+            6.956439018249512
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P13_nicho_frontal",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          468,
+          370
+        ],
+        [
+          495,
+          354
+        ],
+        [
+          510,
+          363
+        ],
+        [
+          482,
+          380
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          468,
+          373
+        ],
+        [
+          495,
+          357
+        ],
+        [
+          510,
+          366
+        ],
+        [
+          482,
+          383
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            7.220147609710693,
+            2.159315347671509
+          ],
+          [
+            7.208795070648193,
+            2.8812599182128906
+          ],
+          [
+            7.609628200531006,
+            2.8695876598358154
+          ],
+          [
+            7.630855083465576,
+            2.1124093532562256
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": true
+    },
+    {
+      "id": "P14_viga_baixa_frontal",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          538,
+          344
+        ],
+        [
+          586,
+          317
+        ],
+        [
+          601,
+          326
+        ],
+        [
+          552,
+          353
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          538,
+          347
+        ],
+        [
+          586,
+          320
+        ],
+        [
+          601,
+          329
+        ],
+        [
+          552,
+          356
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            7.5429606437683105,
+            3.6721742153167725
+          ],
+          [
+            7.555359363555908,
+            4.917842388153076
+          ],
+          [
+            7.95477819442749,
+            4.90376615524292
+          ],
+          [
+            7.929754257202148,
+            3.6465890407562256
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": false,
+      "role_status": "UNKNOWN_LOW_STRUCTURE_NOT_ASSUMED_WORKSTATION"
+    },
+    {
+      "id": "P15_base_circular",
+      "kind": "platform",
+      "source_visible_polygon_px": [
+        [
+          319,
+          348
+        ],
+        [
+          353,
+          329
+        ],
+        [
+          386,
+          347
+        ],
+        [
+          352,
+          367
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          319,
+          351
+        ],
+        [
+          353,
+          332
+        ],
+        [
+          386,
+          350
+        ],
+        [
+          352,
+          370
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            4.747673988342285,
+            0.7019322514533997
+          ],
+          [
+            4.761298656463623,
+            1.5929033756256104
+          ],
+          [
+            5.614241123199463,
+            1.612094521522522
+          ],
+          [
+            5.624238014221191,
+            0.7003219127655029
+          ]
+        ]
+      },
+      "z_range_m": [
+        0,
+        0.1
+      ],
+      "color": "#edf0f2",
+      "visual_screen_height_px": 3,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ],
+      "service_candidate": false,
+      "associated_with": "C01_plataforma_circular"
+    },
+    {
+      "id": "T01_mesa_vermelha_tampo",
+      "kind": "table_top",
+      "source_visible_polygon_px": [
+        [
+          167,
+          223
+        ],
+        [
+          205,
+          201
+        ],
+        [
+          298,
+          255
+        ],
+        [
+          259,
+          278
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          167,
+          259
+        ],
+        [
+          205,
+          237
+        ],
+        [
+          298,
+          291
+        ],
+        [
+          259,
+          314
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            0.5441853404045105,
+            0.8146032094955444
+          ],
+          [
+            0.5447394847869873,
+            1.8405838012695312
+          ],
+          [
+            3.0737521648406982,
+            1.8169755935668945
+          ],
+          [
+            3.084862470626831,
+            0.761997401714325
+          ]
+        ]
+      },
+      "z_range_m": [
+        0.65,
+        0.7
+      ],
+      "color": "#a2472c",
+      "visual_screen_height_px": 36,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ]
+    },
+    {
+      "id": "T01_pe_1",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          0.571574330329895,
+          0.8414860367774963
+        ],
+        "radius_m": 0.035
+      },
+      "source_ground_point_px": [
+        169,
+        259
+      ],
+      "z_range_m": [
+        0,
+        0.65
+      ],
+      "color": "#333333",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "radius_m",
+        "foot_ground_position"
+      ]
+    },
+    {
+      "id": "T01_pe_2",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          0.5584247708320618,
+          1.8539652824401855
+        ],
+        "radius_m": 0.035
+      },
+      "source_ground_point_px": [
+        206,
+        237
+      ],
+      "z_range_m": [
+        0,
+        0.65
+      ],
+      "color": "#333333",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "radius_m",
+        "rear_foot_position"
+      ]
+    },
+    {
+      "id": "T01_pe_3",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          3.0602922439575195,
+          1.8036911487579346
+        ],
+        "radius_m": 0.035
+      },
+      "source_ground_point_px": [
+        297,
+        291
+      ],
+      "z_range_m": [
+        0,
+        0.65
+      ],
+      "color": "#333333",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "radius_m",
+        "foot_ground_position"
+      ]
+    },
+    {
+      "id": "T01_pe_4",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          3.005033254623413,
+          0.8684491515159607
+        ],
+        "radius_m": 0.035
+      },
+      "source_ground_point_px": [
+        260,
+        310
+      ],
+      "z_range_m": [
+        0,
+        0.65
+      ],
+      "color": "#333333",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "radius_m",
+        "foot_ground_position"
+      ]
+    },
+    {
+      "id": "E01_cobertura_esquerda",
+      "kind": "elevated_shelf",
+      "source_visible_polygon_px": [
+        [
+          309,
+          133
+        ],
+        [
+          348,
+          109
+        ],
+        [
+          368,
+          132
+        ],
+        [
+          331,
+          155
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          309,
+          163
+        ],
+        [
+          348,
+          140
+        ],
+        [
+          368,
+          152
+        ],
+        [
+          331,
+          174
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            0.2210271954536438,
+            4.966525554656982
+          ],
+          [
+            0.21190232038497925,
+            6.024333953857422
+          ],
+          [
+            0.7675444483757019,
+            6.003373146057129
+          ],
+          [
+            0.7807873487472534,
+            4.9972333908081055
+          ]
+        ]
+      },
+      "z_range_m": [
+        0.31,
+        0.36
+      ],
+      "color": "#9b9da0",
+      "visual_screen_height_px": [
+        30,
+        31,
+        20,
+        19
+      ],
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions",
+        "sloped_roof_ground_projection_from_supports"
+      ]
+    },
+    {
+      "id": "E02_cobertura_direita",
+      "kind": "elevated_shelf",
+      "source_visible_polygon_px": [
+        [
+          647,
+          167
+        ],
+        [
+          667,
+          146
+        ],
+        [
+          705,
+          169
+        ],
+        [
+          685,
+          191
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          647,
+          199
+        ],
+        [
+          667,
+          187
+        ],
+        [
+          705,
+          209
+        ],
+        [
+          685,
+          221
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            5.595816135406494,
+            8.51481819152832
+          ],
+          [
+            5.584593296051025,
+            9.051040649414062
+          ],
+          [
+            6.585371971130371,
+            9.02147388458252
+          ],
+          [
+            6.59691047668457,
+            8.486844062805176
+          ]
+        ]
+      },
+      "z_range_m": [
+        0.31,
+        0.36
+      ],
+      "color": "#9b9da0",
+      "visual_screen_height_px": [
+        32,
+        41,
+        40,
+        30
+      ],
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions",
+        "sloped_roof_ground_projection_from_supports"
+      ]
+    },
+    {
+      "id": "E01_suporte_1",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          0.2210271954536438,
+          4.966525554656982
+        ],
+        "radius_m": 0.025
+      },
+      "source_ground_point_px": [
+        309,
+        163
+      ],
+      "z_range_m": [
+        0,
+        0.31
+      ],
+      "color": "#4b5054",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "support_visibility",
+        "support_ground_position",
+        "radius_m"
+      ]
+    },
+    {
+      "id": "E01_suporte_2",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          0.21190232038497925,
+          6.024333953857422
+        ],
+        "radius_m": 0.025
+      },
+      "source_ground_point_px": [
+        348,
+        140
+      ],
+      "z_range_m": [
+        0,
+        0.31
+      ],
+      "color": "#4b5054",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "support_visibility",
+        "support_ground_position",
+        "radius_m"
+      ]
+    },
+    {
+      "id": "E01_suporte_3",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          0.7675444483757019,
+          6.003373146057129
+        ],
+        "radius_m": 0.025
+      },
+      "source_ground_point_px": [
+        368,
+        152
+      ],
+      "z_range_m": [
+        0,
+        0.31
+      ],
+      "color": "#4b5054",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "support_visibility",
+        "support_ground_position",
+        "radius_m"
+      ]
+    },
+    {
+      "id": "E01_suporte_4",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          0.7807873487472534,
+          4.9972333908081055
+        ],
+        "radius_m": 0.025
+      },
+      "source_ground_point_px": [
+        331,
+        174
+      ],
+      "z_range_m": [
+        0,
+        0.31
+      ],
+      "color": "#4b5054",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "support_visibility",
+        "support_ground_position",
+        "radius_m"
+      ]
+    },
+    {
+      "id": "E02_suporte_1",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          5.543773174285889,
+          8.64671516418457
+        ],
+        "radius_m": 0.025
+      },
+      "source_ground_point_px": [
+        650,
+        195
+      ],
+      "z_range_m": [
+        0,
+        0.31
+      ],
+      "color": "#4b5054",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "support_visibility",
+        "support_ground_position",
+        "radius_m"
+      ]
+    },
+    {
+      "id": "E02_suporte_2",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          5.529110431671143,
+          9.134000778198242
+        ],
+        "radius_m": 0.025
+      },
+      "source_ground_point_px": [
+        668,
+        184
+      ],
+      "z_range_m": [
+        0,
+        0.31
+      ],
+      "color": "#4b5054",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "support_visibility",
+        "support_ground_position",
+        "radius_m"
+      ]
+    },
+    {
+      "id": "E02_suporte_3",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          6.481220245361328,
+          9.102063179016113
+        ],
+        "radius_m": 0.025
+      },
+      "source_ground_point_px": [
+        704,
+        205
+      ],
+      "z_range_m": [
+        0,
+        0.31
+      ],
+      "color": "#4b5054",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "support_visibility",
+        "support_ground_position",
+        "radius_m"
+      ]
+    },
+    {
+      "id": "E02_suporte_4",
+      "kind": "support",
+      "geometry": {
+        "center": [
+          6.496130466461182,
+          8.616151809692383
+        ],
+        "radius_m": 0.025
+      },
+      "source_ground_point_px": [
+        686,
+        216
+      ],
+      "z_range_m": [
+        0,
+        0.31
+      ],
+      "color": "#4b5054",
+      "visual_screen_height_px": 0,
+      "estimated": [
+        "support_visibility",
+        "support_ground_position",
+        "radius_m"
+      ]
+    },
+    {
+      "id": "C01_plataforma_circular",
+      "kind": "circular_object",
+      "source_visible_polygon_px": [
+        [
+          398.0,
+          340.0
+        ],
+        [
+          397.3082700945163,
+          343.90180644032256
+        ],
+        [
+          395.2596631704063,
+          347.6536686473018
+        ],
+        [
+          391.9329060428916,
+          351.11140466039205
+        ],
+        [
+          387.4558441227157,
+          354.14213562373095
+        ],
+        [
+          382.0005283887057,
+          356.6293922460509
+        ],
+        [
+          375.7766035651432,
+          358.47759065022575
+        ],
+        [
+          369.0232515925806,
+          359.6157056080646
+        ],
+        [
+          362.0,
+          360.0
+        ],
+        [
+          354.9767484074194,
+          359.6157056080646
+        ],
+        [
+          348.2233964348568,
+          358.47759065022575
+        ],
+        [
+          341.9994716112943,
+          356.6293922460509
+        ],
+        [
+          336.5441558772843,
+          354.14213562373095
+        ],
+        [
+          332.06709395710834,
+          351.11140466039205
+        ],
+        [
+          328.7403368295937,
+          347.6536686473018
+        ],
+        [
+          326.6917299054837,
+          343.90180644032256
+        ],
+        [
+          326.0,
+          340.0
+        ],
+        [
+          326.6917299054837,
+          336.09819355967744
+        ],
+        [
+          328.7403368295937,
+          332.3463313526982
+        ],
+        [
+          332.06709395710834,
+          328.88859533960795
+        ],
+        [
+          336.5441558772843,
+          325.85786437626905
+        ],
+        [
+          341.9994716112943,
+          323.3706077539491
+        ],
+        [
+          348.22339643485674,
+          321.52240934977425
+        ],
+        [
+          354.9767484074194,
+          320.3842943919354
+        ],
+        [
+          362.0,
+          320.0
+        ],
+        [
+          369.0232515925806,
+          320.3842943919354
+        ],
+        [
+          375.77660356514326,
+          321.52240934977425
+        ],
+        [
+          382.0005283887057,
+          323.3706077539491
+        ],
+        [
+          387.4558441227157,
+          325.85786437626905
+        ],
+        [
+          391.9329060428916,
+          328.88859533960795
+        ],
+        [
+          395.2596631704063,
+          332.3463313526982
+        ],
+        [
+          397.3082700945163,
+          336.09819355967744
+        ]
+      ],
+      "source_ground_polygon_px": [
+        [
+          398.0,
+          345.0
+        ],
+        [
+          397.3082700945163,
+          348.90180644032256
+        ],
+        [
+          395.2596631704063,
+          352.6536686473018
+        ],
+        [
+          391.9329060428916,
+          356.11140466039205
+        ],
+        [
+          387.4558441227157,
+          359.14213562373095
+        ],
+        [
+          382.0005283887057,
+          361.6293922460509
+        ],
+        [
+          375.7766035651432,
+          363.47759065022575
+        ],
+        [
+          369.0232515925806,
+          364.6157056080646
+        ],
+        [
+          362.0,
+          365.0
+        ],
+        [
+          354.9767484074194,
+          364.6157056080646
+        ],
+        [
+          348.2233964348568,
+          363.47759065022575
+        ],
+        [
+          341.9994716112943,
+          361.6293922460509
+        ],
+        [
+          336.5441558772843,
+          359.14213562373095
+        ],
+        [
+          332.06709395710834,
+          356.11140466039205
+        ],
+        [
+          328.7403368295937,
+          352.6536686473018
+        ],
+        [
+          326.6917299054837,
+          348.90180644032256
+        ],
+        [
+          326.0,
+          345.0
+        ],
+        [
+          326.6917299054837,
+          341.09819355967744
+        ],
+        [
+          328.7403368295937,
+          337.3463313526982
+        ],
+        [
+          332.06709395710834,
+          333.88859533960795
+        ],
+        [
+          336.5441558772843,
+          330.85786437626905
+        ],
+        [
+          341.9994716112943,
+          328.3706077539491
+        ],
+        [
+          348.22339643485674,
+          326.52240934977425
+        ],
+        [
+          354.9767484074194,
+          325.3842943919354
+        ],
+        [
+          362.0,
+          325.0
+        ],
+        [
+          369.0232515925806,
+          325.3842943919354
+        ],
+        [
+          375.77660356514326,
+          326.52240934977425
+        ],
+        [
+          382.0005283887057,
+          328.3706077539491
+        ],
+        [
+          387.4558441227157,
+          330.85786437626905
+        ],
+        [
+          391.9329060428916,
+          333.88859533960795
+        ],
+        [
+          395.2596631704063,
+          337.3463313526982
+        ],
+        [
+          397.3082700945163,
+          341.09819355967744
+        ]
+      ],
+      "geometry": {
+        "polygon": [
+          [
+            5.658053398132324,
+            1.8859916925430298
+          ],
+          [
+            5.738590240478516,
+            1.7866249084472656
+          ],
+          [
+            5.797720909118652,
+            1.6728696823120117
+          ],
+          [
+            5.833191871643066,
+            1.5490739345550537
+          ],
+          [
+            5.843649864196777,
+            1.419969081878662
+          ],
+          [
+            5.828690052032471,
+            1.2904853820800781
+          ],
+          [
+            5.788875102996826,
+            1.1655712127685547
+          ],
+          [
+            5.725710868835449,
+            1.0500068664550781
+          ],
+          [
+            5.641597747802734,
+            0.9482218623161316
+          ],
+          [
+            5.539736747741699,
+            0.8641300797462463
+          ],
+          [
+            5.42401647567749,
+            0.8009743094444275
+          ],
+          [
+            5.298862934112549,
+            0.7612054944038391
+          ],
+          [
+            5.169076442718506,
+            0.7463785409927368
+          ],
+          [
+            5.039646625518799,
+            0.7570948600769043
+          ],
+          [
+            4.915560245513916,
+            0.792969822883606
+          ],
+          [
+            4.801609992980957,
+            0.8526452779769897
+          ],
+          [
+            4.702202796936035,
+            0.933837890625
+          ],
+          [
+            4.621190071105957,
+            1.033427357673645
+          ],
+          [
+            4.561710834503174,
+            1.1475732326507568
+          ],
+          [
+            4.526071071624756,
+            1.271868348121643
+          ],
+          [
+            4.515651226043701,
+            1.4015049934387207
+          ],
+          [
+            4.530848979949951,
+            1.5314719676971436
+          ],
+          [
+            4.571065902709961,
+            1.656747579574585
+          ],
+          [
+            4.634734630584717,
+            1.7724961042404175
+          ],
+          [
+            4.71937894821167,
+            1.874260425567627
+          ],
+          [
+            4.821715831756592,
+            1.9581294059753418
+          ],
+          [
+            4.937784671783447,
+            2.0208945274353027
+          ],
+          [
+            5.063106536865234,
+            2.060163974761963
+          ],
+          [
+            5.192855358123779,
+            2.0744593143463135
+          ],
+          [
+            5.322047233581543,
+            2.0632596015930176
+          ],
+          [
+            5.445732116699219,
+            2.0270233154296875
+          ],
+          [
+            5.559176921844482,
+            1.9671634435653687
+          ]
+        ]
+      },
+      "z_range_m": [
+        0.07,
+        0.15
+      ],
+      "color": "#a9aaad",
+      "visual_screen_height_px": 5,
+      "estimated": [
+        "height_m",
+        "screen_height_offset_px",
+        "absolute_dimensions"
+      ]
+    }
+  ]
+}

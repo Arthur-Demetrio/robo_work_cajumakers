@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0 -- /usr/bin/python3
+rootdir: /home/marcos/robo_jazzy_ws/src/robo_navigation
+plugins: launch-testing-3.4.11, ament-xmllint-0.17.5, ament-pep257-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, launch-testing-ros-0.26.12, colcon-core-0.20.1, typeguard-4.1.5, cov-4.1.0
+collecting ... collected 6 items
+
+test/test_giro_travado.py::test_goal_checker_atual_nunca_encerra_e_com_carimbo_zero_encerra_as_12_37_29 PASSED [ 16%]
+test/test_giro_travado.py::test_replay_com_o_no_real_da_arvore_aplicada_encerra_as_12_37_29 PASSED [ 33%]
+test/test_giro_travado.py::test_dwb_girando_anti_horario_so_pode_continuar_girando PASSED [ 50%]
+test/test_giro_travado.py::test_dwb_parado_ou_horario_pode_escolher_os_dois_sentidos PASSED [ 66%]
+test/test_giro_travado.py::test_so_decel_lim_theta_menos_0_4_destravaria_a_inversao PASSED [ 83%]
+test/test_giro_travado.py::test_bag_1148_modelo_fiel_e_goal_tf_atual_sem_regressao PASSED [100%]
+
+============================== 6 passed in 2.02s ===============================

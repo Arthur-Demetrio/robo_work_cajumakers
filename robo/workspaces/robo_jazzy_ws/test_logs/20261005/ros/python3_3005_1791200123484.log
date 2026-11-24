@@ -1,0 +1,10 @@
+[INFO] [1791200123.542346169] [command_imu_odometry]: Odometria comando+BNO055 pronta: /cmd_vel + /imu/data -> /odom; TF odom -> base_link
+[INFO] [1791200123.548923359] [command_imu_odometry]: Referencia inicial de yaw capturada
+[INFO] [1791200131.682581036] [command_imu_odometry]: Odometria zerada na pose atual
+[INFO] [1791200596.409149771] [command_imu_odometry]: Odometria zerada na pose atual
+[INFO] [1791202009.638899160] [command_imu_odometry]: Odometria zerada na pose atual
+[INFO] [1791202930.330298303] [command_imu_odometry]: Odometria zerada na pose atual
+[INFO] [1791203181.679908528] [command_imu_odometry]: Odometria zerada na pose atual
+[INFO] [1791207238.301408485] [command_imu_odometry]: Odometria zerada na pose atual
+[INFO] [1791208227.323758655] [command_imu_odometry]: Odometria zerada na pose atual
+[INFO] [1791208901.741720052] [command_imu_odometry]: Odometria zerada na pose atual

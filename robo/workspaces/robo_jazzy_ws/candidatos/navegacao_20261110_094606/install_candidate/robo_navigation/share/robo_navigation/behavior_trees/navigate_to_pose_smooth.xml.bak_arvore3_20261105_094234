@@ -1,0 +1,63 @@
+<root BTCPP_format="4" main_tree_to_execute="MainTree">
+  <!--
+    RECUPERACAO_RAPIDA v1 (26/10)
+    Mudancas em relacao a arvore anterior:
+      - tentativas de recuperacao: 6 -> 4 (depois disso o alinhador decide);
+      - ordem: escape lateral (LiDAR) -> re -> limpar mapas -> smart_spin;
+      - smart_spin com no maximo 12 s (era 24 s);
+      - sem o Wait de 5 s (na arena nao ha ninguem para "sair da frente").
+    O tempo para perceber que travou vem do progress_checker do controller_server
+    (PoseProgressChecker: 6 s sem andar 3 cm nem girar 10 graus).
+  -->
+  <BehaviorTree ID="MainTree">
+    <RecoveryNode number_of_retries="4" name="NavigateRecovery">
+      <PipelineSequence name="NavigateWithReplanning">
+        <ControllerSelector selected_controller="{selected_controller}" default_controller="FollowPath" topic_name="controller_selector" />
+        <PlannerSelector selected_planner="{selected_planner}" default_planner="GridBased" topic_name="planner_selector" />
+        <RateController hz="1.0">
+          <RecoveryNode number_of_retries="1" name="ComputePathToPose">
+            <Sequence name="ComputeAndSmoothPath">
+              <ComputePathToPose goal="{goal}" path="{path}" planner_id="{selected_planner}" error_code_id="{compute_path_error_code}" />
+              <SmoothPath unsmoothed_path="{path}" smoothed_path="{smoothed_path}" smoother_id="simple_smoother" max_smoothing_duration="2.0" check_for_collisions="false" error_code_id="{smoothing_path_error_code}" />
+            </Sequence>
+            <Sequence>
+              <WouldAPlannerRecoveryHelp error_code="{compute_path_error_code}" />
+              <ClearEntireCostmap name="ClearGlobalCostmap-Context" service_name="global_costmap/clear_entirely_global_costmap" />
+            </Sequence>
+          </RecoveryNode>
+        </RateController>
+        <RecoveryNode number_of_retries="1" name="FollowPath">
+          <FollowPath path="{smoothed_path}" controller_id="{selected_controller}" error_code_id="{follow_path_error_code}" />
+          <Sequence>
+            <WouldAControllerRecoveryHelp error_code="{follow_path_error_code}" />
+            <ClearEntireCostmap name="ClearLocalCostmap-Context" service_name="local_costmap/clear_entirely_local_costmap" />
+          </Sequence>
+        </RecoveryNode>
+      </PipelineSequence>
+      <Sequence>
+        <Fallback>
+          <WouldAControllerRecoveryHelp error_code="{follow_path_error_code}" />
+          <WouldAPlannerRecoveryHelp error_code="{compute_path_error_code}" />
+        </Fallback>
+        <ReactiveFallback name="RecoveryFallback">
+          <GoalUpdated />
+          <RoundRobin name="RecoveryActions">
+            <!--
+              Recovery holonomica customizada: o servidor /mecanum_escape interpreta
+              dist_to_travel como deslocamento lateral e escolhe esquerda/direita pelo
+              /scan_front. Saida: /cmd_vel_nav -> velocity_smoother -> collision_monitor.
+              Vem primeiro porque e a mais rapida (recusa em ~0,1 s se nao ha lado livre).
+            -->
+            <DriveOnHeading server_name="mecanum_escape" dist_to_travel="0.03" speed="0.02" time_allowance="6.0" error_code_id="{mecanum_escape_code_id}" />
+            <BackUp backup_dist="0.10" backup_speed="0.03" time_allowance="6.0" error_code_id="{backup_code_id}" />
+            <Sequence name="ClearingActions">
+              <ClearEntireCostmap name="ClearLocalCostmap-Subtree" service_name="local_costmap/clear_entirely_local_costmap" />
+              <ClearEntireCostmap name="ClearGlobalCostmap-Subtree" service_name="global_costmap/clear_entirely_global_costmap" />
+            </Sequence>
+            <Spin server_name="smart_spin" spin_dist="0.70" time_allowance="12.0" error_code_id="{spin_error_code}" />
+          </RoundRobin>
+        </ReactiveFallback>
+      </Sequence>
+    </RecoveryNode>
+  </BehaviorTree>
+</root>

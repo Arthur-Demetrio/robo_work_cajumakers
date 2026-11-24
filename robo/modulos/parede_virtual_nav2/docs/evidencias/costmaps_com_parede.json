@@ -1,0 +1,14 @@
+{
+  "global": {
+    "mask_cells": 121,
+    "inside_costmap": 121,
+    "lethal": 121,
+    "lethal_fraction": 1.0
+  },
+  "local": {
+    "mask_cells": 121,
+    "inside_costmap": 121,
+    "lethal": 121,
+    "lethal_fraction": 1.0
+  }
+}

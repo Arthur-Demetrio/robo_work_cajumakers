@@ -1,0 +1,4 @@
+Reached reais: ['11:57:48.35', '11:58:11.78', '11:58:30.91', '11:58:43.54', '12:00:37.56']
+caminho 11:57:33.63 | real=11:57:48.35 | replay atual=11:57:48.35 | arvore=11:57:48.35
+caminho 12:00:06.84 | real=12:00:37.56 | replay atual=12:00:37.56 | arvore=12:00:37.56
+{'real_e_arvore': 2, 'real_sem_arvore': 0, 'arvore_a_mais': 0, 'atual_igual_real': 2, 'atual_sem_real': 0}

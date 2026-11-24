@@ -1,0 +1,44 @@
+[
+  {
+    "destino": "/home/marcos/subir_robo.sh",
+    "backup": "0_subir_robo.sh",
+    "snapshot": "0_subir_robo.sh",
+    "sha256": "c8ab2312fb184b3ceb804064d038b74177d17169beb549cbc332c6a999671a24"
+  },
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/arbitro_nav_principal.py",
+    "backup": "1_arbitro_nav_principal.py",
+    "snapshot": "1_arbitro_nav_principal.py",
+    "sha256": "f3c92693e355502a04fca9587bcdb9a6264e4e09dbe620f73192f955d7afb9fc"
+  },
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/AGENTS.md",
+    "backup": "2_AGENTS.md",
+    "snapshot": "2_AGENTS.md",
+    "sha256": "fc13de6657d7b910b2dbcea1b521c032f0bc4575bc3e729b3a5fd1424c2c03e4"
+  },
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/CLAUDE.md",
+    "backup": "3_CLAUDE.md",
+    "snapshot": "3_CLAUDE.md",
+    "sha256": "f1c56ad5a88debdcc461296dc200c18d1c3a56b14cec3255609d0e94040c8662"
+  },
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/src/robo_navigation/test/test_nav2_principal.py",
+    "backup": "4_test_nav2_principal.py",
+    "snapshot": "4_test_nav2_principal.py",
+    "sha256": "b75b21546d26444ace4f8c2fe44ccfd0d039f9ecd6547d9dd4f02772ed239d62"
+  },
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/ferramentas/conferir_supervisor_ativo.py",
+    "backup": null,
+    "snapshot": "5_conferir_supervisor_ativo.py",
+    "sha256": "3d7c2046311ceef34ff5117021bcb1a154b0d4fd847c95596f059267639b05a6"
+  },
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/ferramentas/abrir_robo_supervisor.sh",
+    "backup": null,
+    "snapshot": "6_abrir_robo_supervisor.sh",
+    "sha256": "70b35cfd11692f19639e44e02c03a06b1551e39c6f50dd073574f6a1a164262d"
+  }
+]

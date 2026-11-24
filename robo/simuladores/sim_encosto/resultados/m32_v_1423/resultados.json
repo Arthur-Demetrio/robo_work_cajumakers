@@ -1,0 +1,38 @@
+[
+ {
+  "cenario": "m32_t3",
+  "versao": "versoes/v_1423",
+  "rep": 0,
+  "ws": "WS_1",
+  "descricao": "missao32 T3: 32 cm de lado, deslize k 0,8",
+  "esperado": "seguro",
+  "inicio": {
+   "dist": 0.59,
+   "lado": -0.32,
+   "ang": 0.0
+  },
+  "modelo": {
+   "k_avanco": 0.8
+  },
+  "disse": "WS_1 FALHOU encosto: face parcial perto da bancada: alinhamento anterior insuficiente; necessario reconhecer a face completa mais longe",
+  "classe": "FALHA_EXPLICITA",
+  "avaliacao": "bom",
+  "duracao": 9.6,
+  "real_final": {
+   "folga_cm": 9.3,
+   "centro_cm": 17.1,
+   "ang_graus": -1.5
+  },
+  "real_inicio": {
+   "folga_cm": 22.5,
+   "centro_cm": 32.0,
+   "ang_graus": 0.0
+  },
+  "menor_dist_mesa_cm": 7.9,
+  "menor_dist_obst_cm": 900.0,
+  "n_fragmentada": 0,
+  "n_parcial": 0,
+  "n_sem_face": 3,
+  "n_mede_de_novo": 0
+ }
+]

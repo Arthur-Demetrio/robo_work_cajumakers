@@ -1,0 +1,121 @@
+{
+  "bag": "/home/marcos/robo_jazzy_ws/bags/teste_recovery_frontal_20261015_115935",
+  "scans_sampled": 407,
+  "maps": {
+    "/global_costmap/costmap": {
+      "messages": 164,
+      "tf_failures": 1,
+      "scan_endpoints_in_map": 9064,
+      "scan_endpoints_marked": 8415,
+      "scan_endpoints_newly_marked_vs_initial": 0,
+      "max_cells_newly_occupied_vs_initial": 0,
+      "publish_interval_median_s": 1.498098373413086,
+      "publish_gap_max_s": 1.5012965202331543
+    },
+    "/local_costmap/costmap": {
+      "messages": 363,
+      "tf_failures": 0,
+      "scan_endpoints_in_map": 7062,
+      "scan_endpoints_marked": 6990,
+      "scan_endpoints_newly_marked_vs_initial": 22,
+      "max_cells_newly_occupied_vs_initial": 0,
+      "publish_interval_median_s": 0.6000022888183594,
+      "publish_gap_max_s": 0.6011261940002441
+    }
+  },
+  "logs_sample": [
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    },
+    {
+      "node": "controller_server",
+      "message": "Could not find a legal trajectory: No valid trajectories out of 351! "
+    }
+  ],
+  "limits": "Historical occupancy coincidences only. New cells can reflect pose/map changes; not proof of obstacle_layer attribution, current runtime, or complete maneuver coverage."
+}

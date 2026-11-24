@@ -1,0 +1,122 @@
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+[37;1m2026-11-10 09:52:16.775 [31;1m[[37;1mTRANSPORT_UDP[31;1m Error] [37mError creating socket: Operation not permitted[34;1m -> Function [36minit[m
+[37;1m2026-11-10 09:52:16.775 [31;1m[[37;1mRTPS_PARTICIPANT[31;1m Error] [37mUser transport failed to register.[34;1m -> Function [36mRTPSParticipantImpl[m
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+[INFO] [1794315136.804593466] [controller_server]: 
+	controller_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+[INFO] [1794315136.812744680] [offline.fixture]: 
+	fixture lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1794315136.813729435] [offline.fixture]: Creating Costmap
+[INFO] [1794315136.826532190] [controller_server]: Setting transform_tolerance to 0.300000
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+getifaddrs: Operation not permitted
+[INFO] [1794315136.849516797] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[INFO] [1794315136.849736489] [controller_server]: Critic plugin initialized
+[INFO] [1794315136.849800356] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[INFO] [1794315136.849943503] [controller_server]: Critic plugin initialized
+[INFO] [1794315136.850023196] [controller_server]: Using critic "ObstacleFootprint" (dwb_critics::ObstacleFootprintCritic)
+[INFO] [1794315136.850129982] [controller_server]: Critic plugin initialized
+[INFO] [1794315136.850243758] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[INFO] [1794315136.851196300] [controller_server]: Critic plugin initialized
+[INFO] [1794315136.851309104] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[INFO] [1794315136.852143395] [controller_server]: Critic plugin initialized
+[INFO] [1794315136.852281776] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[INFO] [1794315136.853107677] [controller_server]: Critic plugin initialized
+[INFO] [1794315136.853203431] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[INFO] [1794315136.854019012] [controller_server]: Critic plugin initialized
+[INFO] [1794315136.854135116] [controller_server]: Using critic "Twirling" (dwb_critics::TwirlingCritic)
+[INFO] [1794315136.854202771] [controller_server]: Critic plugin initialized
+[INFO] [1794315136.855888591] [controller_server]: Configuring plugin GridBased of type NavfnPlanner
+[ERROR] [1794315139.345744944] [DWBLocalPlanner]: No valid trajectories out of 392! 
+[ERROR] [1794315139.345836233] [DWBLocalPlanner]: 0.44: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1794315139.345848972] [DWBLocalPlanner]: 0.56: Oscillation/Trajectory is oscillating.
+[ERROR] [1794315139.375464154] [DWBLocalPlanner]: No valid trajectories out of 400! 
+[ERROR] [1794315139.375517382] [DWBLocalPlanner]: 0.31: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1794315139.375527591] [DWBLocalPlanner]: 0.69: Oscillation/Trajectory is oscillating.
+[ERROR] [1794315139.403044715] [DWBLocalPlanner]: No valid trajectories out of 400! 
+[ERROR] [1794315139.403097185] [DWBLocalPlanner]: 0.31: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1794315139.403107660] [DWBLocalPlanner]: 0.69: Oscillation/Trajectory is oscillating.
+[ERROR] [1794315139.429330712] [DWBLocalPlanner]: No valid trajectories out of 400! 
+[ERROR] [1794315139.429385984] [DWBLocalPlanner]: 0.31: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1794315139.429397180] [DWBLocalPlanner]: 0.69: Oscillation/Trajectory is oscillating.
+[ERROR] [1794315139.463077550] [DWBLocalPlanner]: No valid trajectories out of 400! 
+[ERROR] [1794315139.463157732] [DWBLocalPlanner]: 0.31: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1794315139.463169577] [DWBLocalPlanner]: 0.69: Oscillation/Trajectory is oscillating.
+[INFO] [1794315139.465132422] [controller_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[INFO] [1794315139.466665307] [controller_server]: Destroying plugin GridBased of type NavfnPlanner
+[INFO] [1794315139.466905354] [offline.fixture]: Destroying
+[INFO] [1794315139.471108292] [controller_server]: Destroying

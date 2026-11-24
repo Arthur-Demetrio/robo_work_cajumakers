@@ -1,0 +1,301 @@
+#!/usr/bin/env python3
+"""Geometry: diagnostico integrado de escape. NUNCA publica cmd_vel ou goal.
+
+Roda ao lado de SLAM/Nav2, sem modificar parametros do robo.
+Requer ROS 2 Jazzy + nav2_msgs + tf2_ros.
+"""
+import argparse
+import csv
+from datetime import datetime
+import math
+from pathlib import Path
+import sys
+import time
+
+import rclpy
+from rclpy.node import Node
+from rclpy.qos import qos_profile_sensor_data
+from rclpy.time import Time
+from nav2_msgs.msg import Costmap
+from nav2_msgs.srv import GetCostmap
+from sensor_msgs.msg import LaserScan
+from tf2_ros import Buffer, TransformListener
+
+from geometry_recovery_core import (
+    Footprint, Grid, cell_center_base, costmap_sweep,
+    incremental_observability, laser_collision, scan_points, sequence,
+)
+
+
+class Guard(Node):
+    def __init__(self):
+        super().__init__('geometry_recovery_guard')
+        self.latest = {}
+        self.received = {'/scan_raw': 0, '/scan_safety': 0}
+        self._subs = []
+        for name in self.received:
+            self._subs.append(self.create_subscription(
+                LaserScan, name, lambda msg, topic=name: self.receive(topic, msg),
+                qos_profile_sensor_data))
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
+        self.costmap_client = self.create_client(
+            GetCostmap, '/local_costmap/get_costmap')
+
+    def receive(self, topic, msg):
+        self.latest[topic] = msg
+        self.received[topic] += 1
+
+    def fresh(self, msg, max_age=0.7):
+        if msg.header.stamp.sec == 0 and msg.header.stamp.nanosec == 0:
+            return False, 'timestamp zero'
+        age = (self.get_clock().now() - Time.from_msg(msg.header.stamp)).nanoseconds/1e9
+        return -0.25 <= age <= max_age, f'{age:.3f}s'
+
+    def wait_scan_and_tf(self, timeout=12.0):
+        until = time.monotonic()+timeout
+        last_error = 'Aguardando /scan_raw e TF'
+        while rclpy.ok() and time.monotonic() < until:
+            rclpy.spin_once(self, timeout_sec=0.12)
+            raw = self.latest.get('/scan_raw')
+            if raw is None:
+                continue
+            ok, age = self.fresh(raw)
+            if not ok:
+                last_error = f'Scan bruto desatualizado ({age})'
+                continue
+            if not raw.header.frame_id:
+                last_error = 'Scan bruto sem frame_id'
+                continue
+            try:
+                laser = self.tf_buffer.lookup_transform(
+                    'base_link', raw.header.frame_id, Time())
+                return raw, laser
+            except Exception as e:
+                last_error = f'TF laser_raw -> base_link indisponivel: {e}'
+        raise RuntimeError(last_error)
+
+    def get_map(self, timeout=8.0):
+        if not self.costmap_client.wait_for_service(timeout_sec=3.0):
+            raise RuntimeError('Servico /local_costmap/get_costmap indisponivel')
+        future = self.costmap_client.call_async(GetCostmap.Request())
+        until = time.monotonic()+timeout
+        while rclpy.ok() and time.monotonic() < until:
+            rclpy.spin_once(self, timeout_sec=0.12)
+            if future.done():
+                if future.exception():
+                    raise RuntimeError(f'Falha no costmap: {future.exception()}')
+                cm = future.result().map
+                if not cm.header.frame_id:
+                    raise RuntimeError('Costmap sem frame_id')
+                return cm
+        raise RuntimeError('Timeout aguardando resposta do costmap')
+
+    def get_pose(self, frame):
+        until = time.monotonic()+5
+        last = ''
+        while time.monotonic() < until:
+            rclpy.spin_once(self, timeout_sec=0.1)
+            try:
+                tf = self.tf_buffer.lookup_transform(frame, 'base_link', Time())
+                p, q = tf.transform.translation, tf.transform.rotation
+                return p.x, p.y, quat_yaw(q)
+            except Exception as e:
+                last = str(e)
+        raise RuntimeError('TF base_link -> '+frame+': '+last)
+
+
+def quat_yaw(q):
+    return math.atan2(2*(q.w*q.z + q.x*q.y),
+                      1 - 2*(q.y*q.y + q.z*q.z))
+
+
+def options():
+    parser = argparse.ArgumentParser(description='Geometry: recuperacao, modo PREVIA SOMENTE')
+    parser.add_argument('--rounds', type=int, default=1, help='1 a 10 leituras')
+    parser.add_argument('--interval', type=float, default=3.0, help='Segundos entre leituras')
+    parser.add_argument('--padding', type=float, default=0.03, help='Margem geometrica (metros)')
+    parser.add_argument('--csv', default='', help='Caminho CSV opcional para log')
+    return parser.parse_args()
+
+
+def evaluate(node, opts):
+    fp = Footprint(padding=opts.padding)
+    raw, laser_tf = node.wait_scan_and_tf()
+    cm = node.get_map()
+    base_world = node.get_pose(cm.header.frame_id)
+    # Atualiza leitura apos consulta de servico/TF; nao usa scan envelhecido.
+    raw = node.latest.get('/scan_raw', raw)
+    ok_scan, scan_age = node.fresh(raw)
+    if not ok_scan:
+        raise RuntimeError('Scan envelheceu durante consulta: '+scan_age)
+
+    # Leitura final do topico de seguranca e opcional para comparacao.
+    safety = node.latest.get('/scan_safety')
+    safety_ok = False
+    if safety is not None:
+        safety_ok, _ = node.fresh(safety)
+
+    map_age = None
+    if cm.header.stamp.sec or cm.header.stamp.nanosec:
+        map_age = (node.get_clock().now()-Time.from_msg(cm.header.stamp)).nanoseconds/1e9
+
+    l = laser_tf.transform.translation
+    laser_pose = (l.x, l.y, quat_yaw(laser_tf.transform.rotation))
+    data = tuple(int(x) for x in cm.data)
+    m = cm.metadata
+    grid = Grid(int(m.size_x), int(m.size_y), float(m.resolution),
+                float(m.origin.position.x), float(m.origin.position.y),
+                quat_yaw(m.origin.orientation), data)
+    points = scan_points(raw, laser_pose, fp)
+    external = points['externo']
+    ambiguous = points['borda_ambigua']
+    rear_external = [(fp.rear - x, x, y) for x, y in external
+                     if x < fp.rear and abs(y) <= fp.half_width+0.05]
+    nearest = min(rear_external, default=None)
+    print('\n===== GEOMETRY | RETREAT & ALIGN | APENAS DIAGNOSTICO =====')
+    print(f'Scan RAW: {scan_age}, raios externos={len(external)}, '
+          f'internos={len(points["interno"])}, '
+          f'proximos da borda/ambiguos={len(ambiguous)}')
+    print(f'SCAN SAFETY paralelo: {"OK" if safety_ok else "indisponivel/desatualizado"}')
+    print(f'TF LiDAR base_link: x={laser_pose[0]:+.3f} y={laser_pose[1]:+.3f} '
+          f'yaw={math.degrees(laser_pose[2]):+.1f} graus')
+    print(f'Costmap: {cm.header.frame_id}, {grid.width}x{grid.height}, '
+          f'{grid.resolution:.3f}m, idade={map_age if map_age is not None else "SEM TIMESTAMP"}')
+    print(f'Pose base em {cm.header.frame_id}: '
+          f'x={base_world[0]:+.3f} y={base_world[1]:+.3f} '
+          f'yaw={math.degrees(base_world[2]):+.1f}graus')
+    if nearest:
+        print(f'Retorno traseiro mais proximo (distancia longitudinal): '
+              f'{nearest[0]*100:.1f}cm em ({nearest[1]:+.3f},{nearest[2]:+.3f})')
+    else:
+        print('SEM RETORNO TRASEIRO: isto NAO comprova espaco livre')
+    if ambiguous:
+        print('Pontos na borda do robo (nao assumir que sao ruido):')
+        for x, y in ambiguous[:5]:
+            print(f'   x={x:+.3f}, y={y:+.3f}')
+
+    motions = [
+        ('giro +3', 0, +3), ('giro -3', 0, -3),
+        ('re 2cm', -0.02, 0),
+        ('re 2cm + giro +3', -0.02, +3),
+        ('re 2cm + giro -3', -0.02, -3),
+        ('re 4cm + giro +3', -0.04, +3),
+        ('re 4cm + giro -3', -0.04, -3),
+    ]
+    rows = []
+    baseline = costmap_sweep(grid, fp, base_world, sequence(0, 0))
+    print('Costos no footprint INICIAL (+padding de 3cm): '
+          f'253={baseline["costs"][253]}, 254={baseline["costs"][254]}, '
+          f'255={baseline["costs"][255]}')
+    for cost in (253, 254, 255):
+        if cost in baseline['first']:
+            i, j, _ = baseline['first'][cost]
+            px, py = cell_center_base(grid, base_world, (i, j))
+            print(f'  Celula inicial {cost}: ({i},{j}), '
+                  f'centro base_link=({px:+.3f},{py:+.3f})m')
+    print('\nMANOBRA | COSTOS 253/254/255 (total; novos) '
+          '| AREA NOVA vista/sem observacao | STATUS')
+    for name, reverse, turn in motions:
+        poses = sequence(reverse, turn)
+        cm_result = costmap_sweep(grid, fp, base_world, poses)
+        hit = laser_collision(external, fp, poses)
+        optic = incremental_observability(raw, laser_pose, fp, poses)
+        visible = optic['seen']
+        unseen = optic['unknown']
+        unknown_examples = optic['examples']
+        costs = cm_result['costs']
+        new_costs = {c: len(cm_result['cells'][c] - baseline['cells'][c])
+                     for c in (253, 254, 255)}
+        # NENHUM STATUS LIBERA MOVIMENTO. Apenas mostra causa do bloqueio.
+        blocks = []
+        if cm_result['outside']:
+            blocks.append('FORA_COSTMAP')
+        if costs[254]:
+            blocks.append('OBSTACULO_254')
+        if costs[255]:
+            blocks.append('DESCONHECIDO_255')
+        if hit is not None:
+            blocks.append('RETORNO_LIDAR')
+        if costs[253]:
+            blocks.append('INFLACAO_253_NOVA' if new_costs[253]
+                          else 'INFLACAO_253_JA_PRESENTE')
+        if unseen:
+            blocks.append('OCLUSAO/NAO_OBSERVADO')
+        if ambiguous:
+            blocks.append('RETORNO_NA_BORDA')
+        if map_age is None or not -0.25 <= map_age <= 2.0:
+            blocks.append('MAPA_TIMESTAMP_INCERTO')
+        state = ' | '.join(blocks) if blocks else 'SEM_INTERSECAO_OBSERVADA'
+        print(f'{name:22s} | '
+              f'{costs[253]:2}/{costs[254]:2}/{costs[255]:2} '
+              f'({new_costs[253]:2}/{new_costs[254]:2}/{new_costs[255]:2}) '
+              f'| {visible:3}/{unseen:3} | {state}')
+        if hit:
+            p, x, y = hit
+            print(f'     ponto: x={x:+.3f}, y={y:+.3f}; '
+                  f'no recuo={-p.x*100:.1f}cm, giro={p.yaw_deg:+.1f} graus')
+        if costs[254]:
+            i, j, p = cm_result['first'][254]
+            print(f'     custo letal: celula=({i},{j}) '
+                  f'no recuo={-p.x*100:.1f}cm, giro={p.yaw_deg:+.1f} graus')
+        if unseen and unknown_examples:
+            print(f'     novo espaco nao comprovado: '
+                  f'({unknown_examples[0][0]:+.3f},{unknown_examples[0][1]:+.3f}); '
+                  f'motivos={optic["reasons"]}')
+        rows.append({'momento': datetime.now().isoformat(timespec='seconds'),
+                     'manobra': name, 'cost253': costs[253], 'cost254': costs[254],
+                     'cost255': costs[255], 'novo253': new_costs[253],
+                     'novo254': new_costs[254], 'novo255': new_costs[255],
+                     'raios_validando': visible,
+                     'regioes_sem_observacao': unseen, 'retornos_ambiguos': len(ambiguous),
+                     'status': state})
+
+    print('\nAVISO: todos os resultados sao PREVIAS. NENHUM MOTOR FOI COMANDADO.')
+    print('Area nova observada: teste optico aproximado, nao uma garantia de seguranca.')
+    print('Custo 253 nao deve ser tratado como obstaculo fisico independente.')
+    print('Ausencia de obstaculo no costmap apos limpar nao comprova area livre.')
+    print('Para teste fisico: validar sensores traseiros, CM, tempo de parada e odometria.')
+    return rows
+
+
+def main():
+    opts = options()
+    if opts.rounds < 1 or opts.rounds > 10 or opts.padding < 0.01 or opts.padding > 0.1:
+        raise SystemExit('Use --rounds entre 1 e 10; padding entre 0.01 e 0.10m')
+    rclpy.init()
+    node = Guard()
+    all_rows = []
+    failed = False
+    try:
+        for count in range(opts.rounds):
+            if count:
+                until = time.monotonic()+max(0.0, opts.interval)
+                while time.monotonic() < until:
+                    rclpy.spin_once(node, timeout_sec=min(0.15, until-time.monotonic()))
+            print(f'\nLEITURA {count+1}/{opts.rounds}')
+            all_rows += evaluate(node, opts)
+        if opts.csv:
+            dest = Path(opts.csv).expanduser()
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            exists = dest.exists() and dest.stat().st_size > 0
+            with dest.open('a', newline='', encoding='utf-8') as file:
+                writer = csv.DictWriter(file, fieldnames=list(all_rows[0]))
+                if not exists:
+                    writer.writeheader()
+                writer.writerows(all_rows)
+            print('Relatorio CSV salvo:', dest)
+    except (Exception, KeyboardInterrupt) as exc:
+        print('DIAGNOSTICO INTERROMPIDO/BLOQUEADO:', exc)
+        if not isinstance(exc, KeyboardInterrupt):
+            failed = True
+    finally:
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+    if failed:
+        sys.exit(1)
+
+
+if __name__ == '__main__':
+    main()

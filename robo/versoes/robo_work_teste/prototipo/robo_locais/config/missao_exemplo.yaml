@@ -1,0 +1,8 @@
+# Exemplo de missao escrita a mao: alinhar no ponto A, pegar o objeto na
+# area X, levar ao ponto Z e voltar ao inicio. (O autonomo_node dispensa
+# este arquivo: monta a missao sozinho a partir do objetivo.)
+missao:
+  - {acao: ir_para, local: A}
+  - {acao: alinhar, local: A}
+  - {acao: transportar, objeto: M20, de: X, para: Z}
+  - {acao: ir_para, local: inicio}

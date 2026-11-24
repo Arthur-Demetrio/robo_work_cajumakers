@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "domain_id": 171,
+  "scope": "Actual costmap plugin only; no hardware/controllers",
+  "before": {
+    "lethal": 24,
+    "inflated": 220
+  },
+  "after": {
+    "lethal": 0,
+    "inflated": 0
+  },
+  "costmap_topic": "/retirada_isolada/costmap"
+}

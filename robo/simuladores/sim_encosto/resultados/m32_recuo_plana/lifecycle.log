@@ -1,0 +1,11 @@
+[INFO] [1794263184.067777892] [lifecycle_manager_bancada]: Creating
+[INFO] [1794263184.074713044] [lifecycle_manager_bancada]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[INFO] [1794263184.298556125] [lifecycle_manager_bancada]: [34m[1mStarting managed nodes bringup...[0m[0m
+[INFO] [1794263184.298636772] [lifecycle_manager_bancada]: [34m[1mConfiguring velocity_smoother[0m[0m
+[INFO] [1794263184.305296270] [lifecycle_manager_bancada]: [34m[1mConfiguring collision_monitor[0m[0m
+[INFO] [1794263184.342875283] [lifecycle_manager_bancada]: [34m[1mActivating velocity_smoother[0m[0m
+[INFO] [1794263184.346401929] [lifecycle_manager_bancada]: [34m[1mActivating collision_monitor[0m[0m
+[INFO] [1794263184.348943956] [lifecycle_manager_bancada]: [34m[1mManaged nodes are active[0m[0m
+[INFO] [1794263259.166391324] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1794263259.166526254] [lifecycle_manager_bancada]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager_bancada)
+[INFO] [1794263259.170603030] [lifecycle_manager_bancada]: Destroying lifecycle_manager_bancada

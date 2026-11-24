@@ -1,0 +1,26 @@
+[
+ {
+  "perfil": "original_bag",
+  "amostras": 9582,
+  "saltos_3graus": 9,
+  "maior_salto_graus": 6.54,
+  "inversoes_2s": 3,
+  "correcao_total_graus": 85.9,
+  "ajuste_dist_med_m": 0.186,
+  "ajuste_frac5cm_med": 0.141,
+  "ajuste_dist_p90_m": 0.1982,
+  "scans": 228
+ },
+ {
+  "perfil": "v0_atual",
+  "amostras": 3740,
+  "saltos_3graus": 8,
+  "maior_salto_graus": 5.89,
+  "inversoes_2s": 4,
+  "correcao_total_graus": 75.6,
+  "ajuste_dist_med_m": 0.1726,
+  "ajuste_frac5cm_med": 0.315,
+  "ajuste_dist_p90_m": 0.209,
+  "scans": 86
+ }
+]

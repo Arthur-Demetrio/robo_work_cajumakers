@@ -1,0 +1,7 @@
+1791200107.0117388 [INFO] [launch]: All log files can be found below /home/marcos/robo_jazzy_ws/test_logs/20261005/ros/2026-10-05-08-35-07-010944-marcos-ThinkPad-E14-Gen-2-2942
+1791200107.0118463 [INFO] [launch]: Default logging verbosity is set to INFO
+1791200107.0682425 [INFO] [static_transform_publisher-1]: process started with pid [2945]
+1791200107.0683517 [INFO] [scan_filter_node-2]: process started with pid [2946]
+1791210351.6743097 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1791210352.6967137 [INFO] [static_transform_publisher-1]: process has finished cleanly [pid 2945]
+1791210352.7263951 [INFO] [scan_filter_node-2]: process has finished cleanly [pid 2946]

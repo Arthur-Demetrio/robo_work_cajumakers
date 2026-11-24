@@ -1,0 +1,27 @@
+[INFO] [1794261751.085475771] [collision_monitor]: 
+	collision_monitor lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1794261751.201715100] [collision_monitor]: Configuring
+[INFO] [1794261751.207637053] [collision_monitor]: [scan]: Creating Scan
+[INFO] [1794261751.210378281] [collision_monitor]: [VelocityPolygonStop]: Creating Polygon
+[INFO] [1794261751.210417926] [collision_monitor]: [VelocityPolygonStop]: Creating VelocityPolygon
+[INFO] [1794261751.214736349] [collision_monitor]: [SweptTurnStop]: Creating Polygon
+[INFO] [1794261751.214775878] [collision_monitor]: [SweptTurnStop]: Creating VelocityPolygon
+[INFO] [1794261751.233471594] [collision_monitor]: Activating
+[INFO] [1794261751.233573921] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[ERROR] [1794261764.486622731] [getTransform]: Failed to get "laser_raw"->"base_link" frame transform: Lookup would require extrapolation into the future.  Requested time 1794261764.181882 but the latest data is at time 1794261764.150183, when looking up transform from frame [odom] to frame [base_link]
+[WARN] [1794261764.486695982] [collision_monitor]: Robot to stop due to invalid source. Either due to data not published yet, or to lack of new data received within the sensor timeout, or if impossible to transform data to base frame
+[ERROR] [1794261764.790636411] [getTransform]: Failed to get "laser_raw"->"base_link" frame transform: Lookup would require extrapolation into the future.  Requested time 1794261764.486900 but the latest data is at time 1794261764.150183, when looking up transform from frame [odom] to frame [base_link]
+[INFO] [1794261765.625507627] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1794261765.625610722] [collision_monitor]: Running Nav2 LifecycleNode rcl preshutdown (collision_monitor)
+[INFO] [1794261765.625683699] [collision_monitor]: Deactivating
+[INFO] [1794261765.625711062] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[INFO] [1794261765.635954268] [collision_monitor]: Cleaning up
+[INFO] [1794261765.636014642] [collision_monitor]: [VelocityPolygonStop]: Destroying VelocityPolygon
+[INFO] [1794261765.636035535] [collision_monitor]: [VelocityPolygonStop]: Destroying Polygon
+[INFO] [1794261765.636053206] [collision_monitor]: [SweptTurnStop]: Destroying VelocityPolygon
+[INFO] [1794261765.636065421] [collision_monitor]: [SweptTurnStop]: Destroying Polygon
+[INFO] [1794261765.636079077] [collision_monitor]: [scan]: Destroying Scan
+[INFO] [1794261765.637621636] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[INFO] [1794261765.642090832] [collision_monitor]: Destroying

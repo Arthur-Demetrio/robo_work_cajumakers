@@ -1,0 +1,30 @@
+[INFO] [1794423788.851687107] [slam_toolbox]: Node using stack size 40000000
+[INFO] [1794423799.509399211] [slam_toolbox]: Configuring
+[INFO] [1794423799.522000498] [slam_toolbox]: Using solver plugin solver_plugins::CeresSolver
+[INFO] [1794423799.522307902] [slam_toolbox]: CeresSolver: Using SCHUR_JACOBI preconditioner.
+Load From File /home/marcos/mapas/arena_04-11_1235.posegraph 
+Mapper <- Module
+Mapper <- m_pSequentialScanMatcher
+Mapper <- m_pGraph
+MapperGraph <- Graph; Graph <- m_Edges; Graph <- m_Vertices
+MapperGraph <- m_pMapper; MapperGraph <- m_pLoopScanMatcher; MapperGraph <- m_pTraversal
+Mapper <- m_pMapperSensorManager
+MapperSensorManager <- m_ScanManagers; MapperSensorManager <- m_Scans
+Mapper <- m_Listeners
+**Finished serializing Mapper**
+Load From File
+**Serializing Dataset**
+Dataset <- m_SensorNameLookup
+Dataset <- m_Data
+Dataset <- m_Lasers
+Dataset <- m_pDatasetInfo
+**Finished serializing Dataset**
+Registering sensor: [Custom Described Lidar]
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W20261111 16:03:19.623850 60969 preprocessor.cc:67] Specified options.num_threads: 50 exceeds maximum available from the threading model Ceres was compiled with: 8.  Bounding to maximum number available.
+[INFO] [1794423801.424839633] [slam_toolbox]: Activating
+[INFO] [1794423807.956676663] [slam_toolbox]: Message Filter dropping message: frame 'laser_raw' at time 1794422830.739 for reason 'discarding message because the queue is full'
+Info: clipped range threshold to be within minimum and maximum range!
+Registering sensor: [Custom Described Lidar]
+[INFO] [1794423882.981772597] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+Unregistering sensor: Custom Described Lidar

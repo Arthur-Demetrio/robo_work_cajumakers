@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>robo_lidar</name>
+  <version>0.2.2</version>
+  <description>Orientacao, recorte e mascara do LiDAR do robo mecanum.</description>
+  <maintainer email="otavio@example.com">Otavio</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

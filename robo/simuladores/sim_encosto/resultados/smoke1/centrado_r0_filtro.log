@@ -1,0 +1,2 @@
+[INFO] [1794260712.588881367] [filtro_corpo_scan]: Filtro do corpo: /scan_front -> /scan_nav
+[INFO] [1794260714.187540893] [filtro_corpo_scan]: LiDAR em base_link: x=0.330 y=0.005 yaw=0.0 graus

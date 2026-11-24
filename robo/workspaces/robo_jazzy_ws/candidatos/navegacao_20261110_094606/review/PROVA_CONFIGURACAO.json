@@ -1,0 +1,31 @@
+{
+  "plugin": "dwb_core::DWBLocalPlanner",
+  "shim_wrapper_present": false,
+  "global_plugins": [
+    "static_layer",
+    "obstacle_layer",
+    "inflation_layer"
+  ],
+  "global_scan": {
+    "topic": "/scan_nav",
+    "data_type": "LaserScan",
+    "clearing": true,
+    "marking": true,
+    "obstacle_min_range": 0.08,
+    "obstacle_max_range": 3.5,
+    "raytrace_min_range": 0.08,
+    "raytrace_max_range": 4.0,
+    "max_obstacle_height": 2.0,
+    "inf_is_valid": true
+  },
+  "validation_hz": "2.0",
+  "path_test": "{remaining_path}",
+  "smoothing_collision_checks": [
+    "true",
+    "true"
+  ],
+  "round_robin_nodes": 0,
+  "recovery_server": "supervised_escape",
+  "post_recovery_replan": true,
+  "pytest_tests": "72"
+}

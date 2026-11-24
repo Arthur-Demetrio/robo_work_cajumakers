@@ -1,0 +1,2 @@
+reference {'success': 0.0, 'collision': 1.0, 'timeout': 0.0, 'elapsed': 11.073599999999999, 'distance': 5.047487631634026, 'reward': -105.1400328593717, 'max_est_error': 0.5904089688582017, 'n': 100, 'sampler': 'full_footprint_SE2'}
+baseline {'success': 0.0, 'collision': 1.0, 'timeout': 0.0, 'elapsed': 12.273600000000002, 'distance': 5.024440947759835, 'reward': -105.07618296169771, 'max_est_error': 0.7238745466029051, 'n': 100, 'sampler': 'full_footprint_SE2'}

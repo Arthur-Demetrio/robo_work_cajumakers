@@ -1,0 +1,64 @@
+ M CLAUDE.md
+ M ferramentas/gravar_teste.sh
+ M src/robo_hardware/CMakeLists.txt
+ M src/robo_hardware/launch/hardware.launch.py
+ M src/robo_hardware/src/hardware_bridge_node.cpp
+ M src/robo_lidar/launch/lidar_filter.launch.py
+ M src/robo_lidar/package.xml
+ M src/robo_navigation/CMakeLists.txt
+ M src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml
+ M src/robo_navigation/config/nav2_params.yaml
+ M src/robo_navigation/launch/navigation.launch.py
+ M src/robo_navigation/package.xml
+ M src/robo_navigation/scripts/alinhador_passagem.py
+ M src/robo_navigation/scripts/destravar_node.py
+ M src/robo_navigation/scripts/executor_prova.py
+?? .agents/
+?? .claude/
+?? backups/giro_frontal_20261109/
+?? backups/giro_frontal_revisao2_20261109/
+?? backups/giro_integrado_20261109/
+?? backups/integracao_nav_20261110_102801/
+?? backups/integracao_teste_nav_20261110_100823/
+?? backups/nav_candidata_20261110_094606/
+?? backups/prioridade_lateral_ws_20261109/
+?? candidatos/
+?? docs/
+?? entregas/
+?? ferramentas/analise/revisao_ws_lateral.py
+?? ferramentas/compilar_firmware_temporal.py
+?? ferramentas/gravacao_qos.yaml
+?? ferramentas/gravar_teste.py
+?? ferramentas/iniciar_teste_giro_t.sh
+?? ferramentas/patches/aplicar_cm_rigido.py
+?? ferramentas/patches/aplicar_localizacao_fixa.py
+?? ferramentas/patches/aplicar_nav_integrada.py
+?? ferramentas/patches/aplicar_recuo_lateral.py
+?? ferramentas/patches/aplicar_ws1_remap.py
+?? ferramentas/patches/aplicar_ws2_remap.py
+?? ferramentas/priorizar_lateral_ws.py
+?? ferramentas/restaurar_arquivos_integrado.py
+?? ferramentas/reverter_prioridade_lateral_ws.py
+?? ferramentas/testes/comparar_nav_integrada.py
+?? ferramentas/testes/conferir_manobras_parado.py
+?? ferramentas/testes/validar_nav_integrada.sh
+?? ferramentas/trajetoria_teste.py
+?? ferramentas/verificar_giro_t.py
+?? firmware/mega_mecanum_temporal/
+?? src/robo_hardware/include/
+?? src/robo_hardware/test/
+?? src/robo_navigation/behavior_trees/navigate_to_pose_early_test.xml
+?? src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml.antes_lateral_ws
+?? src/robo_navigation/behavior_trees/navigate_to_pose_smooth_anterior_20261110.xml
+?? src/robo_navigation/config/nav2_params_dwb_test.yaml
+?? src/robo_navigation/config/nav2_params_early_test.yaml
+?? src/robo_navigation/config/slam_localizacao.yaml
+?? src/robo_navigation/launch/localizacao_slam.launch.py
+?? src/robo_navigation/launch/navigation.launch.py.antes_lateral_ws
+?? src/robo_navigation/launch/navigation_test.launch.py
+?? src/robo_navigation/scripts/alinhador_passagem.py.backup_20261109_112856
+?? src/robo_navigation/scripts/arbitro_t.py
+?? src/robo_navigation/scripts/face_ws.py
+?? src/robo_navigation/scripts/giro_frontal.py
+?? src/robo_navigation/scripts/recuperacao_avancada.py
+?? src/robo_navigation/test/

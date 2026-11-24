@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "evidencias": {
+    "servico": true,
+    "principal": true,
+    "modo": "observar",
+    "publicadores": [
+      "/arbitro_nav_principal"
+    ],
+    "heartbeat": [
+      "/alinhador_passagem"
+    ]
+  },
+  "pendencias": []
+}

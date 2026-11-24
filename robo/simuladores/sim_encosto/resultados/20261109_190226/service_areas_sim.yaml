@@ -1,0 +1,32 @@
+frame: map
+service_areas:
+  WS_1:
+    aproximacao:
+      x: 2.062
+      y: 1.804
+      yaw: 0.0534
+    face:
+      largura_medida: 0.89
+      x: 2.661
+      y: 1.836
+      yaw: 0.0534
+    table:
+      depth: 0.5
+      height: 0.1
+      width: 0.8
+    type: workstation
+  WS_2:
+    aproximacao:
+      x: 1.471
+      y: 3.908
+      yaw: -2.9825
+    face:
+      largura_medida: 0.87
+      x: 0.878
+      y: 3.813
+      yaw: -2.9825
+    table:
+      depth: 0.5
+      height: 0.1
+      width: 0.8
+    type: workstation

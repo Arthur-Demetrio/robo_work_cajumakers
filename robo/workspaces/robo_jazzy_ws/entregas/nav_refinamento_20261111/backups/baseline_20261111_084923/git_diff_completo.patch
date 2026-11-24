@@ -1,0 +1,2743 @@
+diff --git a/CLAUDE.md b/CLAUDE.md
+index e080de2..812ba9e 100644
+--- a/CLAUDE.md
++++ b/CLAUDE.md
+@@ -20,9 +20,9 @@ Usuário: Marcos (Recife). Falar sempre em **português do Brasil**.
+ | Caminho | O quê |
+ |---|---|
+ | `src/robo_navigation/scripts/` | **código que roda direto do src** (o launch chama com `python3`, sem build): `alinhador_passagem.py`, `destravar_node.py`, `filtro_corpo_scan.py`, `suavizador_nav.py` |
+-| `src/robo_navigation/config/nav2_params.yaml` | DWB, costmaps, Collision Monitor (o global tem **2 blocos `obstacle_layer`**; vale o último) |
++| `src/robo_navigation/config/nav2_params.yaml` | DWB direto, costmaps, Collision Monitor (NAV_INTEGRADA: global com 1 `obstacle_layer`, 3,5/4,0 m) |
+ | `src/robo_navigation/config/slam_mapping.yaml` | slam_toolbox (`occupancy_threshold` 0.2, `mode: mapping`) |
+-| `src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml` | árvore do Nav2 (ARVORE_V3 + MANTER_CAMINHO) |
++| `src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml` | árvore do Nav2 (NAV_INTEGRADA 10/11; a anterior em `navigate_to_pose_smooth_anterior_20261110.xml`) |
+ | `src/robo_navigation/launch/navigation.launch.py` | Nav2 + filtro + destravar + alinhador + suavizador (NAV_TUDO) |
+ | `src/robo_hardware/config/hardware.yaml` | ponte Arduino: PWM, zonas mortas |
+ | `src/robo_localization/config/localization.yaml` | odometria por tabela (ODOM_TABELA) |
+@@ -49,11 +49,11 @@ Se o Nav2 subir antes de `/odom` e do `map`, o `bt_navigator` fica inativo e rec
+   - **GIRO_FINAL:** nas mesas, o Nav2 só leva até a posição e o alinhador faz o giro final. Desliga em tempo de execução com `ros2 param set /alinhador_passagem giro_final_alinhador false`.
+   - **Giro seguro (`_girar_seguro` / `escolher_manobra`):** varre o retângulo do CM no giro. A 0,30 rad/s se o retângulo de 7 cm está livre; senão a 0,15.
+ - **Nav2:**
+-  - controle: DWB com RotationShim;
++  - controle: DWB direto (NAV_INTEGRADA 10/11; era RotationShim + DWB, giro rápido 0,40 rad/s perdido);
+   - planejamento: NavFn, que só considera o raio inscrito de 0,215 m e por isso acha que passa em vãos de ~0,43 m;
+   - Collision Monitor com polígonos por velocidade;
+-  - recuperação da árvore: destravar 15 cm → limpar costmaps → destravar 25 cm → smart_spin.
+-- **destravar** (`destravar_node.py`, v3): servidor `nav2_msgs/DriveOnHeading` "destravar".
++  - árvore (NAV_INTEGRADA): caminho conferido a 2 Hz no trecho restante; suavização com colisão (falhou → original se válido); recuperação = destravar v4, depois replaneja sempre.
++- **destravar** (`destravar_node.py`, v4 + `recuperacao_avancada.py`, 10/11): servidor `nav2_msgs/DriveOnHeading` "destravar". Diagnostica (log `DESTRAVAR: DIAGNOSTICO/DECISAO/RESULTADO`, tópico `/destravar/estado`), devolve ao Nav2 se ainda contorna, CONTORNAR/lateral com continuação e deriva, giro pelo smart_spin, **ré bloqueada** (`ros2 param set /destravar permitir_re true`); confirma por ICP do LiDAR/IMU; não repete no mesmo lugar; falha explícita. Relatório: `entregas/nav_integrada_20261110/RELATORIO.md`. O que segue é do v3 e continua valendo para bloqueio virtual e CONTORNAR:
+   - Lê o `/plan` e marca um bloqueio virtual (`/bloqueio_virtual`): só no costmap local, por 10 s.
+   - Pede um caminho novo; sem caminho, apaga o bloqueio, limpa os costmaps e planeja de novo. Então tenta, nesta ordem: girar para o caminho / andar na direção dele / ré até o giro ficar livre / de lado.
+   - **CONTORNAR:** com a frente a < 15 cm, o caminho para a frente e o destino a ≥ 60 cm, se o que barra é um objeto de até 25 cm, desliza para o lado livre até a faixa à frente ficar livre pelo LiDAR, avança 25 cm e devolve ao Nav2. Não repete no mesmo lugar por 30 s.
+@@ -79,6 +79,10 @@ Se o Nav2 subir antes de `/odom` e do `map`, o `bt_navigator` fica inativo e rec
+ 
+ ## Patches aplicados (marcas no código/config)
+ GLOBAL_OBSTACULOS, SUAVIZADOR_NAV, SHIM_ALINHAR, INF_VALIDO, PWM60 → PWM_AJUSTE (70), DWB_SEM_RE (Nav2 não dá ré), ARVORE_V3, CHEGADA_10G (yaw 0,17), NAV_TUDO, GIRO_50, SUAV_V2, CM_FRENTE, BLOQUEIO_VIRTUAL, DWB_GIRO_REAL, MANTER_CAMINHO v1.2 (replaneja só com goal novo, caminho inválido ou caminho com mais de 15 s), NAV_FRENTE (`vel_y` ±0,08, `rotate_to_heading_once` false), BLOQUEIO_LOCAL, CONTORNAR, WS2_FACE (`ferramentas/patches/`; o WS2_FACE muda as marcas em `~/mapas/`), CM_TIMEOUT (`source_timeout` 0,5), IMU_CONTINUA (yaw da odom continuo quando a IMU volta) e SENSOR_PARADO (alinhador e destravar param com scan, odom ou IMU a mais de 0,5 s) (`aplicar_h1.py`), SENSOR_IMU2, ENCOSTO_LINEAR, ANGULO_FUNDIDO, ENTRADA_RAPIDA, VEL_ZONAS, NAV_VEL20, UMA_PAREDE, DESLIZE_SEM_GIRO, FREIO_FRENTE e ROTA_MAPA (`aplicar_nav.py`; parametros `encosto_linear`, `angulo_fundido`, `entrada_rapida`, `vel_travessia`, `uma_parede`, `rota_mapa`).
++09/11 (sessao Claude): SONDA_ENTREGA (executor espera o alinhador responder antes de mandar a 1a area), FACE_ANG20 e TRAVA_ODOM (`face_ws.py`), FREIO_CRUZAMENTO, PAREDE_MAPA (parede do fim do T so vale se bater com o mapa +-15 cm), TF_TOLERA (saida lateral tolera 1 s sem TF), ENCOSTO_ESPERA e ENCOSTO_CEGO (a < 15 cm o LiDAR nao ve o meio da face: aceita pelo centro medido de longe, +-3 cm), LOCALIZACAO_FIXA (`ferramentas/patches/aplicar_localizacao_fixa.py`: com mapa o slam_toolbox roda em localizacao, match_type 3; `~/subir_robo.sh --mapeando` = modo antigo), FALHA_SCAN (1 scan com a face partida pelos raios inf nao aborta o encosto; 0,45 s sem face aborta), WS2_REMAP e WS1_REMAP (`aplicar_ws2_remap.py`, `aplicar_ws1_remap.py`: faces medidas pelo LiDAR nas missoes 29 e 30; os cadastros antigos foram marcados em modo mapping e estavam 11 graus (WS_2) e 25 cm (WS_1) fora). CM_RIGIDO (`aplicar_cm_rigido.py`: giro_esq/giro_dir 11 cm de margem (era 7), left/right frente 0,425 (era 0,385); RET_GIRO_RAPIDO acompanha). JANELA_LARGA (`face_ws.py`: janela da face +-0,95 m (era 0,70) e centro ate 35 cm do esperado (era 18): reconhece a mesa com o robo ate ~30 cm de lado e desliza ate o centro). MOTIVO_FACE (o log diz por que a face foi recusada: sem as 2 pontas / ambigua / qual limite estourou) e PERDA_PARA (face perdida num giro/deslize de correcao: para e mede de novo ate 3x; no avanco final segue abortando/ENCOSTO_CEGO). ATENCAO LOCALIZACAO_FIXA (missao31): o localization_slam_toolbox_node saltou 30-60 cm e 6-14 graus varias vezes por segundo ao girar/andar (scan no mapa 55-60%); com ele o robo bateu. Usar mapping.launch.py + match_type 2 ate ajustar.
++FACE_FRAGMENTADA (09/11, missao32, `face_ws.py` + `Encosto`): perto da mesa a zona cega do LiDAR parte a face em 2 pedacos; com a face ja reconhecida inteira, os pedacos viram uma face so se forem o mesmo plano e a lacuna for toda zona cega; face com 1 ponta so da distancia/angulo (centro None, ate 2 s); o centro projetado pela odom (versao 14:23) foi removido (dava sucesso falso); ENCOSTO_CEGO so aceita a ultima face medida com o robo parado. Relatorio e reverter: `docs/face_fragmentada_20261109/`.
++RECUO_LATERAL (09/11, `ferramentas/patches/aplicar_recuo_lateral.py`, so `Encosto`): o deslize de lado vira avanco (missao32: k 0,8-1,3) e a face entrava na zona cega com o robo fora do centro. Antes de deslizar, preve o avanco (k_lat*|centro|, k medido pelo LiDAR a cada deslize, comeca 0,5); se a folga final ficaria < 15 cm, recua reto pelo LiDAR (ate 3x, 20 cm cada, folga max 45 cm); no deslize para se a folga cair < 14 cm. Bancada Gazebo (`~/sim_encosto`): cenarios da missao32 de 0/4 para 4/4 encostos. Desfazer: `--desfazer`.
++NAV_INTEGRADA (10/11, `ferramentas/patches/aplicar_nav_integrada.py`, `--desfazer`): DWB direto (só saíram as 9 chaves do Shim), global consolidado, árvore integrada, destravar v4. Validação offline: `bash ferramentas/testes/validar_nav_integrada.sh` (237 testes); robô parado, só leitura: `ferramentas/testes/conferir_manobras_parado.py`. Ainda não rodou no robô. DWB direto sozinho não conclui a caixa no laço ideal: GoalAlign 0 (`early_test`) é o próximo passo separado.
+ Não usar: GLOBAL_RAIO (desfeito: o planner falha dentro de corredor) e NAV_VEL16 (desatualizado depois do CM_FRENTE).
+ 
+ ## Analisar uma missão
+diff --git a/ferramentas/gravar_teste.sh b/ferramentas/gravar_teste.sh
+index d75c5b6..b5de18d 100755
+--- a/ferramentas/gravar_teste.sh
++++ b/ferramentas/gravar_teste.sh
+@@ -1,38 +1,6 @@
+-#!/bin/bash
+-# Uso: ~/gravar_teste.sh nome_do_teste "descrição opcional"
++#!/usr/bin/env bash
++# Compatibilidade: ~/gravar_teste.sh nome "descricao" [--duration segundos]
++set -e
+ source /opt/ros/jazzy/setup.bash
+-source ~/robo_jazzy_ws/install/setup.bash
+-NOME=${1:-teste}
+-DESC=${2:-}
+-PASTA=~/bags/${NOME}_$(date +%Y%m%d_%H%M%S)
+-mkdir -p "$PASTA/ros_logs"
+-{ echo "teste: $NOME"; echo "descricao: $DESC"; echo "inicio: $(date '+%F %T')"; } > "$PASTA/notas.txt"
+-
+-echo ">>> Salvando os parâmetros em uso..."
+-for n in controller_server planner_server bt_navigator behavior_server smoother_server velocity_smoother collision_monitor slam_toolbox local_costmap/local_costmap global_costmap/global_costmap; do
+-  f="$PASTA/params_$(echo $n | tr '/' '_').yaml"
+-  if timeout 15 ros2 param dump /$n > "$f" 2>/dev/null && [ -s "$f" ]; then echo "   ok: $n"; else rm -f "$f"; echo "   não ativo: $n"; fi
+-done
+-
+-TOPICOS=(
+-  /rosout /tf /tf_static /scan_front /scan_raw /odom /imu/data /map /diagnostics
+-  /plan /plan_smoothed /local_plan /transformed_global_plan /evaluation
+-  /cmd_vel_nav /cmd_vel_smoothed /cmd_vel /collision_monitor_state
+-  /local_costmap/costmap /local_costmap/costmap_updates /local_costmap/published_footprint
+-  /global_costmap/costmap /global_costmap/costmap_updates
+-  /goal_pose /clicked_point /behavior_tree_log
+-  /navigate_to_pose/_action/status /navigate_to_pose/_action/feedback
+-  /follow_path/_action/status /compute_path_to_pose/_action/status
+-  /spin/_action/status /backup/_action/status
+-)
+-
+-trap ':' INT
+-echo ">>> GRAVANDO em $PASTA/bag  —  aperte Ctrl+C para parar."
+-ros2 bag record --include-hidden-topics --compression-mode file --compression-format zstd \
+-  -o "$PASTA/bag" "${TOPICOS[@]}"
+-
+-echo "fim: $(date '+%F %T')" >> "$PASTA/notas.txt"
+-cp -r /dev/shm/robo_ros_logs_* "$PASTA/ros_logs/" 2>/dev/null
+-tar -czf "$PASTA.tar.gz" -C ~/bags "$(basename "$PASTA")"
+-echo ">>> Teste salvo em: $PASTA"
+-echo ">>> Arquivo único para enviar: $PASTA.tar.gz ($(du -h "$PASTA.tar.gz" | cut -f1))"
++source "$HOME/robo_jazzy_ws/install/setup.bash"
++exec python3 "$HOME/robo_jazzy_ws/ferramentas/gravar_teste.py" "$@"
+diff --git a/src/robo_hardware/CMakeLists.txt b/src/robo_hardware/CMakeLists.txt
+index 9836fbd..28142b6 100644
+--- a/src/robo_hardware/CMakeLists.txt
++++ b/src/robo_hardware/CMakeLists.txt
+@@ -15,6 +15,7 @@ find_package(std_msgs REQUIRED)
+ 
+ add_executable(hardware_bridge_node src/hardware_bridge_node.cpp)
+ target_compile_features(hardware_bridge_node PUBLIC cxx_std_17)
++target_include_directories(hardware_bridge_node PRIVATE include)
+ ament_target_dependencies(hardware_bridge_node
+   diagnostic_msgs
+   geometry_msgs
+@@ -32,4 +33,12 @@ install(DIRECTORY config launch
+   DESTINATION share/${PROJECT_NAME}
+ )
+ 
++if(BUILD_TESTING)
++  enable_testing()
++  add_executable(test_sensor_clock test/test_sensor_clock.cpp)
++  target_include_directories(test_sensor_clock PRIVATE include)
++  target_compile_features(test_sensor_clock PRIVATE cxx_std_17)
++  add_test(NAME sensor_clock COMMAND test_sensor_clock)
++endif()
++
+ ament_package()
+diff --git a/src/robo_hardware/launch/hardware.launch.py b/src/robo_hardware/launch/hardware.launch.py
+index 8f3fc17..9f502a6 100644
+--- a/src/robo_hardware/launch/hardware.launch.py
++++ b/src/robo_hardware/launch/hardware.launch.py
+@@ -2,6 +2,9 @@ from pathlib import Path
+ 
+ from ament_index_python.packages import get_package_share_directory
+ from launch import LaunchDescription
++from launch.actions import DeclareLaunchArgument
++from launch.substitutions import LaunchConfiguration
++from launch_ros.parameter_descriptions import ParameterValue
+ from launch_ros.actions import Node
+ 
+ 
+@@ -11,12 +14,24 @@ def generate_launch_description():
+ 
+     return LaunchDescription(
+         [
++            DeclareLaunchArgument('temporal_enabled', default_value='false'),
++            DeclareLaunchArgument('command_authority', default_value=''),
++            DeclareLaunchArgument('heading_hold_enabled', default_value='true'),
++            DeclareLaunchArgument('device_clock_drift_bound_ppm', default_value='-1.0'),
++            DeclareLaunchArgument('lidar_capture_lag_bound_s', default_value='-1.0'),
++            DeclareLaunchArgument('imu_capture_lag_bound_s', default_value='-1.0'),
+             Node(
+                 package="robo_hardware",
+                 executable="hardware_bridge_node",
+                 name="robo_hardware",
+                 output="screen",
+-                parameters=[str(parameters)],
++                parameters=[str(parameters), {
++                    'temporal_enabled': ParameterValue(LaunchConfiguration('temporal_enabled'), value_type=bool),
++                    'command_authority': ParameterValue(LaunchConfiguration('command_authority'), value_type=str),
++                    'heading_hold_enabled': ParameterValue(LaunchConfiguration('heading_hold_enabled'), value_type=bool),
++                    **{k: ParameterValue(LaunchConfiguration(k), value_type=float) for k in
++                       ('device_clock_drift_bound_ppm', 'lidar_capture_lag_bound_s', 'imu_capture_lag_bound_s')}
++                }],
+             )
+         ]
+     )
+diff --git a/src/robo_hardware/src/hardware_bridge_node.cpp b/src/robo_hardware/src/hardware_bridge_node.cpp
+index e0ebc69..9f3ef17 100644
+--- a/src/robo_hardware/src/hardware_bridge_node.cpp
++++ b/src/robo_hardware/src/hardware_bridge_node.cpp
+@@ -7,6 +7,8 @@
+ #include <cstring>
+ #include <fcntl.h>
+ #include <limits>
++#include <sstream>
++#include "robo_hardware/sensor_clock.hpp"
+ #include <poll.h>
+ #include <stdexcept>
+ #include <string>
+@@ -25,6 +27,8 @@
+ #include "sensor_msgs/msg/laser_scan.hpp"
+ #include "std_msgs/msg/bool.hpp"
+ #include "std_msgs/msg/float64.hpp"
++#include "std_msgs/msg/string.hpp"
++#include "std_msgs/msg/u_int8_multi_array.hpp"
+ 
+ namespace
+ {
+@@ -184,6 +188,24 @@ public:
+     heading_hold_imu_timeout_s_ = declare_parameter<double>(
+       "heading_hold_imu_timeout_s", 0.20);
+ 
++    command_authority_ = declare_parameter<std::string>("command_authority", "");
++    temporal_enabled_ = declare_parameter<bool>("temporal_enabled", false);
++    clock_drift_ppm_ = declare_parameter<double>("device_clock_drift_bound_ppm", -1.0);
++    lidar_capture_lag_ = declare_parameter<double>("lidar_capture_lag_bound_s", -1.0);
++    imu_capture_lag_ = declare_parameter<double>("imu_capture_lag_bound_s", -1.0);
++    if (!std::isfinite(clock_drift_ppm_) || !std::isfinite(lidar_capture_lag_) || !std::isfinite(imu_capture_lag_)) {
++      throw std::invalid_argument("temporal bounds must be finite; -1 means unknown");
++    }
++    scan_temporal_publisher_ = create_publisher<sensor_msgs::msg::LaserScan>(
++      "scan_raw_temporal", rclcpp::SensorDataQoS());
++    imu_temporal_publisher_ = create_publisher<sensor_msgs::msg::Imu>(
++      "imu/data_temporal", rclcpp::SensorDataQoS());
++    timing_publisher_ = create_publisher<std_msgs::msg::String>("hardware/sensor_timing", 20);
++    tx_publisher_ = create_publisher<std_msgs::msg::UInt8MultiArray>("hardware/tx_frames", 20);
++    rx_publisher_ = create_publisher<std_msgs::msg::UInt8MultiArray>("hardware/serial_rx", 20);
++    lidar_packet_publisher_ = create_publisher<std_msgs::msg::UInt8MultiArray>("hardware/lidar_packets", 100);
++    effective_publisher_ = create_publisher<geometry_msgs::msg::TwistStamped>("cmd_vel_hardware", 20);
++    probe_timer_ = create_wall_timer(200ms, [this]() { send_clock_probe(); });
+     validate_parameters();
+ 
+     parameter_callback_handle_ = add_on_set_parameters_callback(
+@@ -202,7 +224,18 @@ public:
+ 
+     command_subscription_ = create_subscription<geometry_msgs::msg::TwistStamped>(
+       "cmd_vel", rclcpp::QoS(10).reliable(),
+-      [this](const geometry_msgs::msg::TwistStamped::SharedPtr message) {
++      [this](const geometry_msgs::msg::TwistStamped::SharedPtr message, const rclcpp::MessageInfo &info) {
++        if (!command_authority_.empty()) {
++          const auto publishers = get_publishers_info_by_topic("/cmd_vel");
++          const auto &gid = info.get_rmw_message_info().publisher_gid;
++          if (publishers.size() != 1 || publishers[0].node_name() != command_authority_ ||
++              !std::equal(publishers[0].endpoint_gid().begin(), publishers[0].endpoint_gid().end(), gid.data)) {
++            have_velocity_command_ = false;
++            reset_heading_hold();
++            queue_motor_command({0, 0, 0, 0}, 0);
++            return;
++          }
++        }
+         receive_command(*message);
+       });
+ 
+@@ -350,6 +383,11 @@ private:
+     try {
+       for (const auto & parameter : parameters) {
+         const std::string & name = parameter.get_name();
++        if (name == "command_authority" || name == "temporal_enabled" || name == "device_clock_drift_bound_ppm" ||
++          name == "lidar_capture_lag_bound_s" || name == "imu_capture_lag_bound_s") {
++          result.reason = "temporal protocol settings require process restart";
++          return result;
++        }
+         if (name == "heading_hold_enabled") {
+           enabled = parameter.as_bool();
+         } else if (name == "heading_hold_kp") {
+@@ -420,10 +458,22 @@ private:
+     if (!std::isfinite(linear_x) || !std::isfinite(linear_y) ||
+       !std::isfinite(angular_z))
+     {
+-      RCLCPP_WARN(get_logger(), "Ignoring non-finite velocity command");
++      have_velocity_command_ = false;
++      reset_heading_hold();
++      queue_motor_command({0, 0, 0, 0}, 0);
++      RCLCPP_WARN(get_logger(), "Stopping on non-finite velocity command");
+       return;
+     }
+ 
++    const int64_t source_ns = (message.header.stamp.sec >= 0 && message.header.stamp.nanosec < 1000000000U)
++      ? rclcpp::Time(message.header.stamp).nanoseconds() : 0;
++    if (!robo_hardware::valid_command_stamp(source_ns, now().nanoseconds(), command_timeout_s_)) {
++      have_velocity_command_ = false;
++      reset_heading_hold();
++      queue_motor_command({0, 0, 0, 0}, 0);
++      RCLCPP_WARN(get_logger(), "Velocity command source timestamp invalid/stale");
++      return;
++    }
+     commanded_vx_mps_ = linear_x;
+     commanded_vy_mps_ = linear_y;
+     commanded_wz_rps_ = angular_z;
+@@ -483,6 +533,8 @@ private:
+     serial_command_ready_time_ = steady_clock_.now() +
+       rclcpp::Duration::from_seconds(serial_startup_delay_s_);
+     reset_rx_parser();
++    sensor_clock_.reset();
++    probe_pending_ = false;
+     pending_tx_frame_.clear();
+     pending_tx_offset_ = 0;
+     RCLCPP_INFO(
+@@ -498,6 +550,8 @@ private:
+       serial_fd_ = -1;
+     }
+     reset_rx_parser();
++    sensor_clock_.reset();
++    probe_pending_ = false;
+     pending_tx_frame_.clear();
+     pending_tx_offset_ = 0;
+     have_latest_imu_ = false;
+@@ -567,6 +621,9 @@ private:
+             get_logger(), "First serial RX after %.3f s (%zd bytes)",
+             (steady_clock_.now() - serial_open_time_).seconds(), count);
+         }
++        std_msgs::msg::UInt8MultiArray raw;
++        raw.data.assign(read_buffer.begin(), read_buffer.begin()+count);
++        rx_publisher_->publish(raw);
+         host_rx_bytes_ += static_cast<uint64_t>(count);
+         ++host_rx_reads_;
+         for (ssize_t i = 0; i < count; ++i) {
+@@ -648,7 +705,20 @@ private:
+ 
+     const uint8_t type = rx_frame_[1];
+     const uint8_t * payload = rx_frame_.data() + 4;
+-    if (type == kTypeScan && payload_size == kScanPayloadSize) {
++    if (type == 0x16 && payload_size >= 15U && payload_size <= 164U) {
++      std_msgs::msg::UInt8MultiArray packet;
++      packet.data.assign(payload, payload+payload_size);
++      lidar_packet_publisher_->publish(packet);
++    } else if (type == 0x14 && payload_size == 8U && probe_pending_) {
++      if (read_u32_le(payload) == probe_token_) {
++        sensor_clock_.anchor(probe_sent_, steady_clock_.now().seconds(), read_u32_le(payload+4));
++        probe_pending_ = false;
++      }
++    } else if (type == 0x13 && payload_size == kScanPayloadSize+16U) {
++      publish_scan(payload, true);
++    } else if (type == 0x15 && payload_size == kImuPayloadSize+12U) {
++      publish_imu(payload, true);
++    } else if (type == kTypeScan && payload_size == kScanPayloadSize) {
+       publish_scan(payload);
+     } else if (type == kTypeStatus && payload_size == kStatusPayloadSize) {
+       publish_status(payload);
+@@ -659,7 +729,72 @@ private:
+     }
+   }
+ 
+-  void publish_scan(const uint8_t * payload)
++  void send_clock_probe()
++  {
++    if (!temporal_enabled_ || serial_fd_ < 0 || !pending_tx_frame_.empty() ||
++      steady_clock_.now() < serial_command_ready_time_) return;
++    if (probe_pending_ && steady_clock_.now().seconds()-probe_sent_ < 0.5) return;
++    // Probe nunca interrompe quadro de motor. Espera de fila entra no RTT medido.
++    probe_pending_ = true;
++    probe_sent_ = steady_clock_.now().seconds();
++    ++probe_token_;
++    std::vector<uint8_t> frame{kSof1, kSof2, kProtocolVersion, 0x02};
++    append_u16_le(frame, 4U);
++    frame.push_back(probe_token_ & 0xff);
++    frame.push_back((probe_token_ >> 8) & 0xff);
++    frame.push_back((probe_token_ >> 16) & 0xff);
++    frame.push_back((probe_token_ >> 24) & 0xff);
++    append_u16_le(frame, crc16_ccitt(frame.data()+2, frame.size()-2));
++    pending_tx_frame_ = std::move(frame);
++    pending_tx_offset_ = 0;
++    flush_serial_tx();
++  }
++
++  int64_t temporal_stamp(const char * sensor, const uint8_t * payload,
++    std::size_t offset, double lag, const builtin_interfaces::msg::Time &publication)
++  {
++    double age = 0, uncertainty = 0;
++    uint32_t begin = 0, end = 0, queued = 0;
++    if (offset) {
++      begin = read_u32_le(payload+offset);
++      end = read_u32_le(payload+offset+4);
++      queued = read_u32_le(payload+offset+8);
++    }
++    bool valid = temporal_enabled_ && offset && sensor_clock_.oldest(
++      steady_clock_.now().seconds(), begin, end, queued, clock_drift_ppm_, lag, age, uncertainty);
++    int64_t stamp_ns = 0;
++    if (valid) stamp_ns = rclcpp::Time(publication).nanoseconds()-static_cast<int64_t>(age*1e9);
++    if (stamp_ns <= 0) valid = false;
++    const uint32_t geometry = offset == kScanPayloadSize ? read_u32_le(payload+offset+12) : 0;
++    if (offset == kScanPayloadSize && (geometry & 0xffU) != 2U) valid = false;
++    const char * reason = valid ? "ok" : (!temporal_enabled_ ? "disabled" :
++      (!offset ? "legacy_frame" : (clock_drift_ppm_ < 0 || lag < 0 ? "unknown_capture_or_clock_bound" :
++        (!sensor_clock_.anchored ? "clock_unsynchronized" : "stale_or_inconsistent_window"))));
++    std::ostringstream json;
++    json.precision(17);
++    json << "{\"schema\":1,\"sensor\":\"" << sensor << "\",\"valid\":"
++      << (valid ? "true" : "false") << ",\"reason\":\"" << reason << "\",\"timed_frame\":" << (offset ? "true" : "false")
++      << ",\"capture_begin_us\":" << begin << ",\"capture_end_us\":" << end
++      << ",\"queued_us\":" << queued << ",\"age_upper_s\":" << age
++      << ",\"uncertainty_s\":" << uncertainty << ",\"stamp_ns\":" << stamp_ns
++      << ",\"publication_stamp_ns\":" << rclcpp::Time(publication).nanoseconds()
++      << ",\"probe_host_sent_s\":" << sensor_clock_.sent
++      << ",\"probe_host_received_s\":" << sensor_clock_.received
++      << ",\"probe_device_us\":" << sensor_clock_.device
++      << ",\"drift_bound_ppm\":" << clock_drift_ppm_
++      << ",\"capture_lag_bound_s\":" << lag
++      << ",\"scan_capture_schema\":" << (geometry & 0xffU)
++      << ",\"samples_per_packet_min\":" << ((geometry >> 8) & 0xffU)
++      << ",\"samples_per_packet_max\":" << ((geometry >> 16) & 0xffU)
++      << ",\"packets_in_scan\":" << ((geometry >> 24) & 0xffU)
++      << ",\"capture_kind\":\"mcu_receive_or_i2c_window\"}";
++    std_msgs::msg::String msg;
++    msg.data = json.str();
++    timing_publisher_->publish(msg);
++    return valid ? stamp_ns : 0;
++  }
++
++  void publish_scan(const uint8_t * payload, bool timed = false)
+   {
+     const uint32_t scan_time_us = read_u32_le(payload + 6);
+     const uint8_t frequency_x20 = payload[10];
+@@ -694,7 +829,15 @@ private:
+       }
+     }
+ 
+-    scan_publisher_->publish(message);
++    if (!timed) scan_publisher_->publish(message);
++    auto stamp = temporal_stamp("lidar", payload, timed ? kScanPayloadSize : 0U,
++      lidar_capture_lag_, message.header.stamp);
++    if (stamp > 0) {
++      message.header.stamp = rclcpp::Time(stamp);
++      // Bins agregados/invertidos nao possuem ordem temporal conhecida por raio.
++      message.time_increment = 0.0F;
++      scan_temporal_publisher_->publish(message);
++    }
+     ++published_scans_;
+   }
+ 
+@@ -738,7 +881,7 @@ private:
+     publish_diagnostics(status);
+   }
+ 
+-  void publish_imu(const uint8_t * payload)
++  void publish_imu(const uint8_t * payload, bool timed = false)
+   {
+     const int32_t heading_mdeg = read_i32_le(payload + 6);
+     const int16_t gyro_z_mrad_s = read_i16_le(payload + 10);
+@@ -779,6 +922,12 @@ private:
+     message.angular_velocity_covariance[8] = 0.02;
+     message.linear_acceleration_covariance[0] = -1.0;
+     imu_publisher_->publish(message);
++    auto stamp = temporal_stamp("imu", payload, timed ? kImuPayloadSize : 0U,
++      imu_capture_lag_, message.header.stamp);
++    if (stamp > 0) {
++      message.header.stamp = rclcpp::Time(stamp);
++      imu_temporal_publisher_->publish(message);
++    }
+ 
+     std_msgs::msg::Float64 yaw_message;
+     yaw_message.data = yaw_rad * 180.0 / kPi;
+@@ -1070,6 +1219,12 @@ private:
+ 
+   void queue_motor_command(const std::array<int16_t, 4> & pwm, uint8_t flags)
+   {
++    if ((flags & kFlagEnable) == 0 || std::all_of(pwm.begin(), pwm.end(), [](int16_t v) {return v == 0;})) {
++      geometry_msgs::msg::TwistStamped zero;
++      zero.header.stamp = now();
++      zero.header.frame_id = "base_link";
++      effective_publisher_->publish(zero);
++    }
+     if (serial_fd_ < 0 || steady_clock_.now() < serial_command_ready_time_) {
+       return;
+     }
+@@ -1094,6 +1249,9 @@ private:
+       host_tx_bytes_ += static_cast<uint64_t>(written);
+       pending_tx_offset_ += static_cast<std::size_t>(written);
+       if (pending_tx_offset_ == pending_tx_frame_.size()) {
++        std_msgs::msg::UInt8MultiArray bytes;
++        bytes.data = pending_tx_frame_;
++        tx_publisher_->publish(bytes);
+         pending_tx_frame_.clear();
+         pending_tx_offset_ = 0;
+       }
+@@ -1123,7 +1281,15 @@ private:
+       return;
+     }
+ 
+-    queue_motor_command(calculate_motor_pwm(controlled_angular_velocity()), kFlagEnable);
++    const double effective_wz = controlled_angular_velocity();
++    geometry_msgs::msg::TwistStamped effective;
++    effective.header.stamp = now();
++    effective.header.frame_id = "base_link";
++    effective.twist.linear.x = commanded_vx_mps_;
++    effective.twist.linear.y = commanded_vy_mps_;
++    effective.twist.angular.z = effective_wz;
++    effective_publisher_->publish(effective);
++    queue_motor_command(calculate_motor_pwm(effective_wz), kFlagEnable);
+   }
+ 
+   void send_emergency_stop_best_effort()
+@@ -1208,6 +1374,19 @@ private:
+     }
+   }
+ 
++  std::string command_authority_;
++  bool temporal_enabled_{false}, probe_pending_{false};
++  uint32_t probe_token_{0};
++  double probe_sent_{0}, clock_drift_ppm_{-1}, lidar_capture_lag_{-1}, imu_capture_lag_{-1};
++  robo_hardware::SensorClock sensor_clock_;
++  rclcpp::TimerBase::SharedPtr probe_timer_;
++  rclcpp::Publisher<sensor_msgs::msg::LaserScan>::SharedPtr scan_temporal_publisher_;
++  rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr imu_temporal_publisher_;
++  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr timing_publisher_;
++  rclcpp::Publisher<std_msgs::msg::UInt8MultiArray>::SharedPtr tx_publisher_;
++  rclcpp::Publisher<std_msgs::msg::UInt8MultiArray>::SharedPtr rx_publisher_;
++  rclcpp::Publisher<std_msgs::msg::UInt8MultiArray>::SharedPtr lidar_packet_publisher_;
++  rclcpp::Publisher<geometry_msgs::msg::TwistStamped>::SharedPtr effective_publisher_;
+   std::string serial_port_;
+   int serial_baud_{500000};
+   double serial_startup_delay_s_{5.0};
+diff --git a/src/robo_lidar/launch/lidar_filter.launch.py b/src/robo_lidar/launch/lidar_filter.launch.py
+index d11ebd2..9e36343 100644
+--- a/src/robo_lidar/launch/lidar_filter.launch.py
++++ b/src/robo_lidar/launch/lidar_filter.launch.py
+@@ -1,4 +1,5 @@
+ from pathlib import Path
++import yaml
+ 
+ from ament_index_python.packages import get_package_share_directory
+ from launch import LaunchDescription
+@@ -11,6 +12,11 @@ def generate_launch_description():
+     package_share = Path(get_package_share_directory("robo_lidar"))
+     parameters = package_share / "config" / "lidar.yaml"
+ 
++    with open(parameters) as fp:
++        temporal_parameters = yaml.safe_load(fp)['scan_filter']['ros__parameters']
++    temporal_parameters = dict(temporal_parameters, input_topic='/scan_raw_temporal',
++                               output_topic='/scan_temporal_front')
++
+     lidar_x = LaunchConfiguration("lidar_x")
+     lidar_y = LaunchConfiguration("lidar_y")
+     lidar_z = LaunchConfiguration("lidar_z")
+@@ -54,6 +60,8 @@ def generate_launch_description():
+                     "--child-frame-id", "laser_raw",
+                 ],
+             ),
++            Node(package='robo_lidar', executable='scan_filter_node',
++                 name='scan_filter_temporal', output='screen', parameters=[temporal_parameters]),
+             Node(
+                 package="robo_lidar",
+                 executable="scan_filter_node",
+diff --git a/src/robo_lidar/package.xml b/src/robo_lidar/package.xml
+index e76d5dd..4e772ed 100644
+--- a/src/robo_lidar/package.xml
++++ b/src/robo_lidar/package.xml
+@@ -13,6 +13,7 @@
+   <exec_depend>launch</exec_depend>
+   <exec_depend>launch_ros</exec_depend>
+   <exec_depend>rclpy</exec_depend>
++  <exec_depend>python3-yaml</exec_depend>
+   <exec_depend>sensor_msgs</exec_depend>
+   <exec_depend>tf2_ros</exec_depend>
+ 
+diff --git a/src/robo_navigation/CMakeLists.txt b/src/robo_navigation/CMakeLists.txt
+index 3c0f4d3..2f66298 100644
+--- a/src/robo_navigation/CMakeLists.txt
++++ b/src/robo_navigation/CMakeLists.txt
+@@ -8,4 +8,17 @@ install(
+   DESTINATION share/${PROJECT_NAME}
+ )
+ 
++if(BUILD_TESTING)
++  find_package(ament_cmake_pytest REQUIRED)
++  ament_add_pytest_test(lateral_ws test/test_lateral_ws.py)
++  ament_add_pytest_test(face_proxima test/test_face_proxima.py)
++  ament_add_pytest_test(giro_frontal test/test_giro_frontal.py)
++  ament_add_pytest_test(giro_integrado test/test_integrado_t.py TIMEOUT 120)
++  # NAV_INTEGRADA (10/11): recuperacao avancada e arvore integrada (offline)
++  ament_add_pytest_test(recuperacao_avancada test/test_recuperacao_avancada.py TIMEOUT 600)
++  ament_add_pytest_test(arvore_integrada test/test_arvore_integrada.py TIMEOUT 120)
++  ament_add_pytest_test(config_integrada test/test_config_integrada.py TIMEOUT 120)
++  ament_add_pytest_test(destravar_ros_isolado test/test_destravar_ros_isolado.py TIMEOUT 300)
++endif()
++
+ ament_package()
+diff --git a/src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml b/src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml
+index 306add4..35da785 100644
+--- a/src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml
++++ b/src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml
+@@ -1,35 +1,61 @@
+ <root BTCPP_format="4" main_tree_to_execute="MainTree">
+   <!--
+-    RECUPERACAO_RAPIDA v1 (26/10)
+-    Mudancas em relacao a arvore anterior:
+-      - tentativas de recuperacao: 6 -> 4 (depois disso o alinhador decide);
+-      - ordem: escape lateral (LiDAR) -> re -> limpar mapas -> smart_spin;
+-      - smart_spin com no maximo 12 s (era 24 s);
+-      - sem o Wait de 5 s (na arena nao ha ninguem para "sair da frente").
+-    O tempo para perceber que travou vem do progress_checker do controller_server
+-    (PoseProgressChecker: 6 s sem andar 3 cm nem girar 10 graus).
++    NAV_INTEGRADA (10/11/2026): arvore principal. A anterior ficou em
++    navigate_to_pose_smooth.xml.bak_navintegrada_<data> (RECUPERACAO_RAPIDA + ARVORE_V3 + MANTER_CAMINHO).
++
++    Planejamento (da candidata, sem perder o que funcionava):
++      - consulta a 2 Hz (era 1 Hz);
++      - MANTER_CAMINHO: so replaneja com goal novo, caminho com mais de 15 s ou caminho INVALIDO;
++        a validade e conferida no TRECHO RESTANTE do caminho executado (TruncatePathLocal), entao um
++        obstaculo num pedaco ja percorrido nao forca replanejamento;
++      - suavizacao COM checagem de colisao; se ela falhar, usa o caminho original do planner se ele for
++        do planner (ORIGINAL_SEM_GATE, 10/11);
++      - planner sem caminho: limpa o costmap global uma vez (como antes) e tenta de novo.
++    Controle: FollowPath (DWB direto, sem RotationShim: nav2_params.yaml).
++    Recuperacao (RECUPERACAO_AVANCADA): o RoundRobin cego foi trocado pelo destravar v4, que diagnostica
++      o bloqueio e escolhe UMA manobra segura (devolver ao Nav2 sem mexer / CONTORNAR / lateral com
++      continuacao / andar no caminho / giro pelo smart_spin / re so se liberada), confirma pelo LiDAR (ICP)
++      ou IMU, nao repete o que nao resolveu no mesmo lugar e FALHA explicitamente quando nao ha
++      alternativa. Depois de cada recuperacao o caminho e sempre recalculado e conferido.
++      Limpeza de costmaps continua: no planner sem caminho (aqui) e no destravar (BLOQUEIO_LOCAL).
+   -->
+   <BehaviorTree ID="MainTree">
+-    <RecoveryNode number_of_retries="4" name="NavigateRecovery">
++    <!-- CAMINHO_DO_GOAL (10/11, bag nav_integrada_corredor_aberta): o blackboard sobrevive entre goals;
++         sem esta flag, um replanejamento que falhava deixava o FollowPath seguir o caminho do goal
++         ANTERIOR e o Nav2 declarava sucesso falso (4 de 5 no bag). Zera no inicio de cada goal e em cada
++         tentativa de replanejar; so volta a true com um caminho novo para o goal atual. -->
++    <Sequence name="GoalNovo">
++    <Script name="CaminhoAindaNao" code="caminho_do_goal := false" />
++    <RecoveryNode number_of_retries="6" name="NavigateRecovery">
+       <PipelineSequence name="NavigateWithReplanning">
+         <ControllerSelector selected_controller="{selected_controller}" default_controller="FollowPath" topic_name="controller_selector" />
+         <PlannerSelector selected_planner="{selected_planner}" default_planner="GridBased" topic_name="planner_selector" />
+-        <RateController hz="1.0">
++        <RateController hz="2.0">
+           <RecoveryNode number_of_retries="1" name="ComputePathToPose">
+-            <Fallback name="ManterCaminho"><!-- MANTER_CAMINHO (05/11): so planeja de novo se o caminho atual nao serve -->
++            <Fallback name="ManterCaminho">
+               <ReactiveSequence name="CaminhoAtualServe">
+                 <Inverter>
+-                  <GlobalUpdatedGoal/>
++                  <GlobalUpdatedGoal />
+                 </Inverter>
+                 <Inverter>
+-                  <PathExpiringTimer seconds="15" path="{path}"/>
++                  <PathExpiringTimer seconds="15" path="{path}" />
+                 </Inverter>
+-                <IsPathValid path="{path}"/>
++                <ScriptCondition name="CaminhoEDesteGoal" code="caminho_do_goal" />
++                <TruncatePathLocal input_path="{smoothed_path}" output_path="{remaining_path}" distance_forward="1000000.0" distance_backward="0.0" robot_frame="base_link" transform_tolerance="0.3" />
++                <IsPathValid path="{remaining_path}" />
+               </ReactiveSequence>
+-              <Sequence name="ComputeAndSmoothPath">
+-              <ComputePathToPose goal="{goal}" path="{path}" planner_id="{selected_planner}" error_code_id="{compute_path_error_code}" />
+-              <SmoothPath unsmoothed_path="{path}" smoothed_path="{smoothed_path}" smoother_id="simple_smoother" max_smoothing_duration="2.0" check_for_collisions="false" error_code_id="{smoothing_path_error_code}" />
+-            </Sequence>
++              <Sequence name="PlanejarESuavizar">
++                <Script name="InvalidarCaminho" code="caminho_do_goal := false" />
++                <ComputePathToPose goal="{goal}" path="{path}" planner_id="{selected_planner}" error_code_id="{compute_path_error_code}" />
++                <!-- ORIGINAL_SEM_GATE (10/11): suavizado que colide -> caminho do planner (feito agora no costmap
++                     atual, raio inscrito). O IsPathValid reprovava esses caminhos pelo trecho do goal, que fica
++                     na zona inflada perto de mesa/parede, e parava o robo no meio do trajeto. -->
++                <Fallback name="SuavizadoOuOriginal">
++                  <SmoothPath unsmoothed_path="{path}" smoothed_path="{smoothed_path}" smoother_id="simple_smoother" max_smoothing_duration="2.0" check_for_collisions="true" error_code_id="{smoothing_path_error_code}" />
++                  <SetBlackboard name="UsarOriginalDoPlanner" output_key="smoothed_path" value="{path}" />
++                </Fallback>
++                <Script name="CaminhoDesteGoal" code="caminho_do_goal := true" />
++              </Sequence>
+             </Fallback>
+             <Sequence>
+               <WouldAPlannerRecoveryHelp error_code="{compute_path_error_code}" />
+@@ -37,33 +63,34 @@
+             </Sequence>
+           </RecoveryNode>
+         </RateController>
+-        <RecoveryNode number_of_retries="0" name="FollowPath"><!-- ARVORE_V3: era 1 -->
+-          <FollowPath path="{smoothed_path}" controller_id="{selected_controller}" error_code_id="{follow_path_error_code}" />
+-          <Sequence>
+-            <WouldAControllerRecoveryHelp error_code="{follow_path_error_code}" />
+-            <ClearEntireCostmap name="ClearLocalCostmap-Context" service_name="local_costmap/clear_entirely_local_costmap" />
+-          </Sequence>
+-        </RecoveryNode>
++        <FollowPath path="{smoothed_path}" controller_id="{selected_controller}" error_code_id="{follow_path_error_code}" />
+       </PipelineSequence>
+-      <Sequence>
++      <Sequence name="RecuperacaoAvaliada">
+         <Fallback>
+           <WouldAControllerRecoveryHelp error_code="{follow_path_error_code}" />
+           <WouldAPlannerRecoveryHelp error_code="{compute_path_error_code}" />
++          <WouldASmootherRecoveryHelp error_code="{smoothing_path_error_code}" />
+         </Fallback>
+         <ReactiveFallback name="RecoveryFallback">
+           <GoalUpdated />
+-          <RoundRobin name="RecoveryActions">
+-            <!-- ARVORE_V3 (05/11): destravar anda para a direcao com mais espaco (LiDAR) -->
+-            <DriveOnHeading server_name="destravar" dist_to_travel="0.15" speed="0.03" time_allowance="8.0" error_code_id="{destravar_code_id}" />
+-            <Sequence name="ClearingActions">
+-              <ClearEntireCostmap name="ClearLocalCostmap-Subtree" service_name="local_costmap/clear_entirely_local_costmap" />
+-              <ClearEntireCostmap name="ClearGlobalCostmap-Subtree" service_name="global_costmap/clear_entirely_global_costmap" />
+-            </Sequence>
+-            <DriveOnHeading server_name="destravar" dist_to_travel="0.25" speed="0.03" time_allowance="10.0" error_code_id="{destravar_code_id}" />
+-            <Spin server_name="smart_spin" spin_dist="0.70" time_allowance="12.0" error_code_id="{spin_error_code}" />
+-          </RoundRobin>
++          <Sequence name="DestravarEReplanejar">
++            <DriveOnHeading server_name="destravar" dist_to_travel="0.40" speed="0.03" time_allowance="30.0" error_code_id="{destravar_code_id}" />
++            <Fallback name="CaminhoDepoisDaRecuperacao">
++              <Sequence>
++                <Script name="InvalidarCaminhoRecuperacao" code="caminho_do_goal := false" />
++                <ComputePathToPose name="ReplanAfterRecovery" goal="{goal}" path="{path}" planner_id="{selected_planner}" error_code_id="{compute_path_error_code}" />
++                <Fallback>
++                  <SmoothPath name="CheckRecoveredPath" unsmoothed_path="{path}" smoothed_path="{smoothed_path}" smoother_id="simple_smoother" max_smoothing_duration="2.0" check_for_collisions="true" error_code_id="{smoothing_path_error_code}" />
++                  <SetBlackboard output_key="smoothed_path" value="{path}" />
++                </Fallback>
++                <Script name="CaminhoDesteGoalRecuperacao" code="caminho_do_goal := true" />
++              </Sequence>
++              <AlwaysSuccess name="PlanejamentoFicaComAPipeline" />
++            </Fallback>
++          </Sequence>
+         </ReactiveFallback>
+       </Sequence>
+     </RecoveryNode>
++    </Sequence>
+   </BehaviorTree>
+ </root>
+diff --git a/src/robo_navigation/config/nav2_params.yaml b/src/robo_navigation/config/nav2_params.yaml
+index 2265ab1..ba76209 100644
+--- a/src/robo_navigation/config/nav2_params.yaml
++++ b/src/robo_navigation/config/nav2_params.yaml
+@@ -24,16 +24,7 @@ controller_server:
+       xy_goal_tolerance: 0.06
+       yaw_goal_tolerance: 0.17  # CHEGADA_10G (05/11): era 0.035; o encosto acerta o angulo
+     FollowPath:
+-      plugin: "nav2_rotation_shim_controller::RotationShimController"  # ROTATION_SHIM
+-      primary_controller: "dwb_core::DWBLocalPlanner"
+-      angular_dist_threshold: 0.44        # SHIM_ALINHAR (04/11): gira antes se o caminho estiver a mais de 25 graus (era 0.785)
+-      angular_disengage_threshold: 0.10   # SHIM_ALINHAR: gira ate ~6 graus do caminho (padrao 0.3925)
+-      forward_sampling_distance: 0.5       # direcao do caminho medida 0.5 m a frente
+-      rotate_to_heading_angular_vel: 0.40  # GIRO_RAPIDO: ~25 graus/s real (teste 26/10)
+-      max_angular_accel: 0.8
+-      simulate_ahead_time: 1.0             # confere colisao do giro
+-      closed_loop: false                   # usa o ultimo comando (a odom nao mede bem o giro)
+-      rotate_to_heading_once: false  # NAV_FRENTE (05/11): era true
++      plugin: "dwb_core::DWBLocalPlanner"  # NAV_INTEGRADA (10/11): DWB direto; era RotationShim (backup .bak_navintegrada_*)
+       debug_trajectory_details: true
+       min_vel_x: 0.0  # DWB_SEM_RE (05/11): era -0.16; re so pelo BackUp e pelo alinhador
+       max_vel_x: 0.20  # NAV_VEL20 (06/11): era 0.16
+@@ -150,30 +141,7 @@ global_costmap:
+         plugin: nav2_costmap_2d::StaticLayer
+         map_subscribe_transient_local: true
+         subscribe_to_updates: true
+-      obstacle_layer:
+-        plugin: nav2_costmap_2d::ObstacleLayer
+-        enabled: true
+-        observation_sources: scan  # BLOQUEIO_LOCAL (05/11): era "scan bloqueio"; no global fechava a passagem
+-        scan:
+-          topic: /scan_nav  # FILTRO_CORPO: sem os pontos de dentro do robo
+-          data_type: LaserScan
+-          clearing: true
+-          marking: true
+-          obstacle_min_range: 0.08
+-          obstacle_max_range: 5.0
+-          raytrace_min_range: 0.08
+-          raytrace_max_range: 5.5
+-          max_obstacle_height: 2.0
+-          inf_is_valid: true  # INF_VALIDO: raio sem retorno limpa o costmap
+-        bloqueio:  # BLOQUEIO_VIRTUAL: faixa onde o robo empacou (destravar v2)
+-          topic: /bloqueio_virtual
+-          data_type: PointCloud2
+-          marking: true
+-          clearing: false
+-          obstacle_min_range: 0.0
+-          obstacle_max_range: 8.0
+-          min_obstacle_height: 0.0
+-          max_obstacle_height: 2.0
++      # NAV_INTEGRADA (10/11): tirado o 1o bloco obstacle_layer duplicado (5,0/5,5 m); valia o ultimo
+       obstacle_layer:  # GLOBAL_OBSTACULOS (29/10): obstaculos novos pelo LiDAR
+         plugin: nav2_costmap_2d::ObstacleLayer
+         enabled: true
+@@ -328,6 +296,7 @@ collision_monitor:
+ 
+     polygons:
+     - VelocityPolygonStop
++    - SweptTurnStop
+ 
+     VelocityPolygonStop:
+       type: velocity_polygon
+@@ -372,7 +341,7 @@ collision_monitor:
+       # Movimento para a esquerda:
+       # +45 graus ate +135 graus.
+       left:
+-        points: "[[0.385, 0.375], [0.385, -0.050], [-0.225, -0.050], [-0.225, 0.375]]"
++        points: "[[0.425, 0.375], [0.425, -0.050], [-0.225, -0.050], [-0.225, 0.375]]"  # CM_RIGIDO (09/11): frente 0.385 -> 0.425
+         linear_min: 0.005
+         linear_max: 0.35  # NAV_VEL16 (era 0.20)
+         direction_start_angle: 0.785
+@@ -394,7 +363,7 @@ collision_monitor:
+       # Movimento para a direita:
+       # -135 graus ate -45 graus.
+       right:
+-        points: "[[0.385, 0.050], [0.385, -0.375], [-0.225, -0.375], [-0.225, 0.050]]"
++        points: "[[0.425, 0.050], [0.425, -0.375], [-0.225, -0.375], [-0.225, 0.050]]"  # CM_RIGIDO (09/11): frente 0.385 -> 0.425
+         linear_min: 0.005
+         linear_max: 0.35  # NAV_VEL16 (era 0.20)
+         direction_start_angle: -2.356
+@@ -416,7 +385,7 @@ collision_monitor:
+       # GIRO_RAPIDO: giro parado acima de 0.20 rad/s (RotationShim a 0.40).
+       # 7 cm de margem em volta do footprint (o stopped tem 4 cm).
+       giro_esq:
+-        points: "[[0.435, 0.385], [0.435, -0.385], [-0.275, -0.385], [-0.275, 0.385]]"
++        points: "[[0.475, 0.425], [0.475, -0.425], [-0.315, -0.425], [-0.315, 0.425]]"  # CM_RIGIDO (09/11): margem 11 cm (era 7)
+         linear_min: 0.0
+         linear_max: 0.005
+         direction_start_angle: -3.1415
+@@ -425,7 +394,7 @@ collision_monitor:
+         theta_max: 0.60
+ 
+       giro_dir:
+-        points: "[[0.435, 0.385], [0.435, -0.385], [-0.275, -0.385], [-0.275, 0.385]]"
++        points: "[[0.475, 0.425], [0.475, -0.425], [-0.315, -0.425], [-0.315, 0.425]]"  # CM_RIGIDO (09/11): margem 11 cm (era 7)
+         linear_min: 0.0
+         linear_max: 0.005
+         direction_start_angle: -3.1415
+@@ -433,6 +402,42 @@ collision_monitor:
+         theta_min: -0.60
+         theta_max: -0.20
+ 
++    # Envelope circunscrito (nao inscrito) aos cantos + 5 cm.
++    # Ativado pelo launch SOMENTE no modo experimental. Inclui giros combinados.
++    SweptTurnStop:
++      type: velocity_polygon
++      action_type: stop
++      min_points: 1
++      visualize: true
++      polygon_pub_topic: collision_monitor_swept_turn
++      enabled: false
++      holonomic: true
++      velocity_polygons: [left_turn, right_turn, quiet]
++      left_turn:
++        points: "[[0.532131, 0.105847], [0.451119, 0.301428], [0.301428, 0.451119], [0.105847, 0.532131], [-0.105847, 0.532131], [-0.301428, 0.451119], [-0.451119, 0.301428], [-0.532131, 0.105847], [-0.532131, -0.105847], [-0.451119, -0.301428], [-0.301428, -0.451119], [-0.105847, -0.532131], [0.105847, -0.532131], [0.301428, -0.451119], [0.451119, -0.301428], [0.532131, -0.105847]]"
++        linear_min: 0.0
++        linear_max: 0.35
++        direction_start_angle: -3.141592653589793
++        direction_end_angle: 3.141592653589793
++        theta_min: 0.015
++        theta_max: 0.6
++      right_turn:
++        points: "[[0.532131, 0.105847], [0.451119, 0.301428], [0.301428, 0.451119], [0.105847, 0.532131], [-0.105847, 0.532131], [-0.301428, 0.451119], [-0.451119, 0.301428], [-0.532131, 0.105847], [-0.532131, -0.105847], [-0.451119, -0.301428], [-0.301428, -0.451119], [-0.105847, -0.532131], [0.105847, -0.532131], [0.301428, -0.451119], [0.451119, -0.301428], [0.532131, -0.105847]]"
++        linear_min: 0.0
++        linear_max: 0.35
++        direction_start_angle: -3.141592653589793
++        direction_end_angle: 3.141592653589793
++        theta_min: -0.6
++        theta_max: -0.015
++      quiet:
++        points: "[[0.375, 0.325], [0.375, -0.325], [-0.215, -0.325], [-0.215, 0.325]]"
++        linear_min: 0.0
++        linear_max: 0.35
++        direction_start_angle: -3.141592653589793
++        direction_end_angle: 3.141592653589793
++        theta_min: -0.6
++        theta_max: 0.6
++
+     observation_sources:
+     - scan
+     scan:
+diff --git a/src/robo_navigation/launch/navigation.launch.py b/src/robo_navigation/launch/navigation.launch.py
+index d1bda3a..601a4c1 100644
+--- a/src/robo_navigation/launch/navigation.launch.py
++++ b/src/robo_navigation/launch/navigation.launch.py
+@@ -6,7 +6,8 @@ from ament_index_python.packages import get_package_share_directory
+ from launch import LaunchDescription
+ from launch.actions import DeclareLaunchArgument, RegisterEventHandler, TimerAction, ExecuteProcess
+ from launch.event_handlers import OnProcessStart
+-from launch.substitutions import LaunchConfiguration
++from launch.substitutions import LaunchConfiguration, PythonExpression
++from launch_ros.parameter_descriptions import ParameterValue
+ from launch_ros.actions import Node
+ 
+ 
+@@ -14,6 +15,7 @@ def generate_launch_description():
+     use_sim_time = LaunchConfiguration("use_sim_time")
+     autostart = LaunchConfiguration("autostart")
+     params_file = LaunchConfiguration("params_file")
++    modo_curva_t = LaunchConfiguration("modo_curva_t")
+ 
+     navigation_share = get_package_share_directory("robo_navigation")
+     default_params_file = os.path.join(
+@@ -93,6 +95,10 @@ def generate_launch_description():
+ 
+     return LaunchDescription(
+         [
++            DeclareLaunchArgument("limite_vel_angular_real_t", default_value="-1.0"),
++            DeclareLaunchArgument("limite_vel_linear_real_t", default_value="-1.0"),
++            DeclareLaunchArgument("modo_curva_t", default_value="lateral",
++                                  choices=["lateral"]),
+             DeclareLaunchArgument(
+                 "use_sim_time",
+                 default_value="false",
+@@ -167,7 +173,7 @@ def generate_launch_description():
+                 name="velocity_smoother",
+                 output="screen",
+                 parameters=common_parameters,
+-                # Entrada: /cmd_vel_nav; saida preservada em /cmd_vel_smoothed.
++                # PRIORIDADE_LATERAL_WS_20261109: caminho lateral original; giro suspenso.
+                 remappings=common_remappings + [("cmd_vel", "cmd_vel_nav")],
+             ),
+             Node(
+@@ -175,7 +181,11 @@ def generate_launch_description():
+                 executable="collision_monitor",
+                 name="collision_monitor",
+                 output="screen",
+-                parameters=common_parameters,
++                parameters=common_parameters + [{
++                    "stop_pub_timeout": ParameterValue(PythonExpression([
++                        "86400.0 if '", modo_curva_t, "' == 'giro_frontal' else 2.0"]), value_type=float),
++                    "SweptTurnStop.enabled": ParameterValue(
++                        PythonExpression(["'", modo_curva_t, "' == 'giro_frontal'"]), value_type=bool)}],
+                 # Parametros fazem /cmd_vel_smoothed -> /cmd_vel.
+                 remappings=common_remappings,
+             ),
+@@ -191,7 +201,10 @@ def generate_launch_description():
+             ),
+             ExecuteProcess(  # NAV_TUDO: alinhador: passagens, mesas, START/FINISH
+                 cmd=["python3", os.path.expanduser(
+-                    "~/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py")],
++                    "~/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py"),
++                     "--ros-args", "-p", ["modo_curva_t:=", modo_curva_t],
++                     "-p", ["limite_vel_angular_real_t:=", LaunchConfiguration("limite_vel_angular_real_t")],
++                     "-p", ["limite_vel_linear_real_t:=", LaunchConfiguration("limite_vel_linear_real_t")]],
+                 output="screen",
+             ),
+             ExecuteProcess(  # SUAVIZADOR_NAV: /cmd_vel_ctrl -> /cmd_vel_nav
+diff --git a/src/robo_navigation/package.xml b/src/robo_navigation/package.xml
+index ca6d94d..1a0d475 100644
+--- a/src/robo_navigation/package.xml
++++ b/src/robo_navigation/package.xml
+@@ -27,8 +27,24 @@
+   <exec_depend>nav2_velocity_smoother</exec_depend>
+   <exec_depend>nav2_collision_monitor</exec_depend>
+ 
++  <test_depend>ament_cmake_pytest</test_depend>
++
+   <export>
+     <build_type>ament_cmake</build_type>
+   </export>
+   <exec_depend>robo_recovery</exec_depend>
++  <exec_depend>std_srvs</exec_depend>
++  <exec_depend>std_msgs</exec_depend>
++  <exec_depend>geometry_msgs</exec_depend>
++  <exec_depend>rcl_interfaces</exec_depend>
++  <exec_depend>lifecycle_msgs</exec_depend>
++  <exec_depend>python3-yaml</exec_depend>
++  <!-- NAV_INTEGRADA (10/11): destravar v4 -->
++  <exec_depend>python3-numpy</exec_depend>
++  <exec_depend>nav2_msgs</exec_depend>
++  <exec_depend>nav_msgs</exec_depend>
++  <exec_depend>sensor_msgs</exec_depend>
++  <exec_depend>sensor_msgs_py</exec_depend>
++  <exec_depend>tf2_ros</exec_depend>
++  <test_depend>python3-pytest</test_depend>
+ </package>
+diff --git a/src/robo_navigation/scripts/alinhador_passagem.py b/src/robo_navigation/scripts/alinhador_passagem.py
+index eec1c78..5878749 100644
+--- a/src/robo_navigation/scripts/alinhador_passagem.py
++++ b/src/robo_navigation/scripts/alinhador_passagem.py
+@@ -182,12 +182,16 @@ Uso:
+     python3 alinhador_passagem.py
+     python3 alinhador_passagem.py --ros-args -p modo_travessia:=nav2   (comportamento v2)
+ """
++from face_ws import selecionar_face, RastreioFaceWS, pose_mapa_no_scan, obstaculo_antes_da_face
++import json
+ import collections
+ import heapq  # ROTA_MAPA
+ import math
+ import os
+ import threading
+ import time
++from giro_frontal import (GiroFrontal, TempoSensor, Observacao, avaliar_varredura,
++                          devolver_controle, envolve_disco)
+ 
+ # ---------------------------------------------------------------------------
+ # Nucleo geometrico (sem ROS: pode ser testado fora do robo)
+@@ -799,6 +803,7 @@ class Travessia:
+         # corredor: SLAM em corredor nao "ve" bem o avanco; teste curva1 de 27/10)
+         self.parada_lidar = parada_lidar
+         self.transv = None         # (t, x da parede em base_link, pose do odom no scan)
++        self.transv_fora = None    # PAREDE_MAPA: (t, diferenca medida - esperada pelo mapa)
+         self.ult_transv = None
+         self.parede_parada = None  # folga do para-choque quando parou
+         self.largura_b = None      # v3.22: largura (mapa) do corredor novo, onde o corpo fica
+@@ -810,9 +815,16 @@ class Travessia:
+     def nova_folgas(self, t, esq, dir_):
+         self.folgas = (t, esq, dir_)
+ 
+-    def nova_transversal(self, t, x_parede, pose):
+-        if x_parede is not None:
+-            self.transv = (t, x_parede, pose)
++    def nova_transversal(self, t, x_parede, pose, x_esp=None):
++        if x_parede is None:
++            return
++        # PAREDE_MAPA (09/11, missao26): so vale a parede onde o mapa a espera (+-15 cm). A parede
++        # certa bateu em +-5 cm; o bloco entre corredores (-0,9 m) parou o robo na boca do corredor
++        # e o obstaculo da prova alem do T aberto (+0,22..0,27 m) o fez passar 24 cm do ponto.
++        if x_esp is not None and abs(x_parede - x_esp) > 0.15:
++            self.transv_fora = (t, x_parede - x_esp)
++            return
++        self.transv = (t, x_parede, pose)
+ 
+     def gap_alvo(self):
+         """Folga para-choque -> parede para o corpo (0,57 m) ficar centrado no corredor novo.
+@@ -1037,6 +1049,14 @@ class Travessia:
+             # parada pelo LiDAR, e encostou (10:11:03): quem parou foi o CM, ja com a frente a 0 cm.
+             fc = self.f_corpo
+             if fc is not None and t - fc[0] < 0.5 and fc[1] < 0.10:
++                # FREIO_CRUZAMENTO (09/11): missao25 12:11, obstaculo da prova alem de um T aberto.
++                # O robo ja estava 23 cm alem do ponto do cruzamento e abortava (re de 1,8 m e
++                # nova tentativa). Ja no cruzamento: para aqui e segue para a saida lateral.
++                if self.parada_lidar and restante <= 0.0:
++                    self.estado = 'fim'
++                    self.log('FREIO_CRUZAMENTO: algo a %.0f cm do para-choque, ja %.0f cm alem do '
++                             'ponto do cruzamento: paro aqui e sigo a saida' % (fc[1] * 100, -restante * 100))
++                    return 0.0, 0.0, 0.0
+                 self.abortar('algo a %.0f cm do para-choque' % (fc[1] * 100))
+                 return 0.0, 0.0, 0.0
+             if self.parada_lidar:
+@@ -1052,6 +1072,14 @@ class Travessia:
+                                  '(alvo %.0f cm; pelo mapa faltavam %+.0f cm)' % (
+                                      gap * 100, self.gap_alvo() * 100, restante * 100))
+                         return 0.0, 0.0, 0.0
++                elif (self.transv_fora is not None and t - self.transv_fora[0] < 0.8
++                      and restante <= 0.0):
++                    # PAREDE_MAPA: o que esta a frente nao e a parede do mapa: para no ponto do cruzamento
++                    self.estado = 'fim'
++                    self.log('PAREDE_MAPA: parede/obstaculo a frente fora do mapa (%+.0f cm do esperado): '
++                             'parei pelo mapa (%.0f cm alem do ponto)' % (
++                                 self.transv_fora[1] * 100, -restante * 100))
++                    return 0.0, 0.0, 0.0
+                 elif restante <= -0.30:
+                     self.estado = 'fim'
+                     self.log('Sem parede a frente: parei pelo mapa (%.0f cm alem do ponto)' % (-restante * 100))
+@@ -1234,7 +1262,7 @@ def folgas_lateral(pts, lado, alcance=0.40):
+ # ([-0,275, 0,435] x +-0,385), por isso o giro aqui e sempre devagar.
+ RET_GIRO = (-0.255, 0.415, 0.365)
+ WZ_GIRO = 0.15
+-RET_GIRO_RAPIDO = (-0.285, 0.445, 0.395)   # v3.32: poligono giro_esq/giro_dir do CM (7 cm) + 1 cm
++RET_GIRO_RAPIDO = (-0.325, 0.485, 0.435)   # CM_RIGIDO (09/11): giro_esq/giro_dir do CM (11 cm) + 1 cm; era (-0.285, 0.445, 0.395)
+ WZ_GIRO_RAPIDO = 0.30
+ FOLGA_MOV = 0.07   # o Collision Monitor para o robo a 6 cm do lado para onde ele anda
+ DIRECOES = {'frente': (1.0, 0.0), 'tras': (-1.0, 0.0), 'esq': (0.0, 1.0), 'dir': (0.0, -1.0)}
+@@ -1452,6 +1480,9 @@ class TravessiaLateral:
+             if novo is None or velho is None or velho < novo + 0.03:
+                 return novo
+             return velho
++        if any(v is not None and v < 0 for v in (frente, tras)):
++            self.abortar('folga negativa medida no corpo')
++            return
+         ult = self._folga_crua
+         self._folga_crua = (frente, tras)
+         if ult is not None:
+@@ -1593,13 +1624,7 @@ class TravessiaLateral:
+         self._mudar('assentar', t, pose)
+ 
+     def abortar(self, motivo):
+-        # v3.18: com o corpo inteiro ja fora do corredor (>= 35 cm alem da saida, meia
+-        # largura 31,5 cm) o problema nao e mais do corredor: da a saida por concluida e o
+-        # Nav2 segue dali
+-        if self.restante <= self.restante_fora:
+-            self.estado = 'fim'
+-            self.log('Saida lateral concluida (corpo ja fora do corredor; parei por: %s)' % motivo)
+-            return
++        # Falha nao e prova de saida: sucesso so pelo criterio normal de passo().
+         self.estado, self.motivo = 'abortar', motivo
+         self.log('Saida lateral abortada: %s' % motivo)
+ 
+@@ -1614,6 +1639,8 @@ class TravessiaLateral:
+ 
+     def passo(self, t, pose, restante):
+         """Devolve (vx, vy, wz). restante: metros (no eixo do corredor novo) ate sair dele."""
++        if self.estado in ('fim', 'abortar'):
++            return 0.0, 0.0, 0.0
+         if self.t0 is None:
+             self.t0 = t
+             self.p_inicio = pose
+@@ -1827,62 +1854,9 @@ class TravessiaLateral:
+ # ---------------------------------------------------------------------------
+ # Encostar de frente numa Service Area pelo LiDAR (sem ROS)
+ # ---------------------------------------------------------------------------
+-def medir_face(pts, x_min=0.30, x_max=1.30, y_lim=0.70, tol=0.02):
+-    """Face da mesa a frente do robo (pontos em base_link).
+-
+-    Devolve dict(dist, ang, centro, span) ou None:
+-      dist   = distancia (m) da origem do base_link ate a face, no eixo x do robo
+-      ang    = quanto girar (rad, + = anti-horario) para ficar de frente (perpendicular)
+-      centro = y do centro da face (m, + = a esquerda) ou None se uma ponta nao aparece
+-    """
+-    sel = [p for p in pts if x_min <= p[0] <= x_max and abs(p[1]) <= y_lim]
+-    if len(sel) < 6:
+-        return None
+-    # reta x = a + b*y (face quase perpendicular ao robo): varre angulos de -25 a +25 graus
+-    melhor = None
+-    for k in range(-50, 51):
+-        th = math.radians(k * 0.5)
+-        c, s = math.cos(th), math.sin(th)
+-        offs = sorted((p[0] * c - p[1] * s, p) for p in sel)
+-        j = 0
+-        for i in range(len(offs)):
+-            while offs[i][0] - offs[j][0] > 0.03:
+-                j += 1
+-            n = i - j + 1
+-            # empate: prefere a reta mais proxima (a face, nao a parede atras da mesa)
+-            if melhor is None or n > melhor[0] or (n == melhor[0] and offs[j][0] < melhor[2]):
+-                melhor = (n, th, offs[j][0], (offs[i][0] + offs[j][0]) / 2.0)
+-    n, th, _, centro_off = melhor
+-    c, s = math.cos(th), math.sin(th)
+-    inl = [p for p in sel if abs(p[0] * c - p[1] * s - centro_off) <= 0.02]
+-    for _ in range(2):
+-        m = len(inl)
+-        if m < 6:
+-            return None
+-        my = sum(p[1] for p in inl) / m
+-        mx = sum(p[0] for p in inl) / m
+-        syy = sum((p[1] - my) ** 2 for p in inl)
+-        if syy < 1e-4:
+-            return None
+-        b = sum((p[1] - my) * (p[0] - mx) for p in inl) / syy
+-        a = mx - b * my
+-        inl = [p for p in sel if abs(p[0] - (a + b * p[1])) < tol]
+-    if len(inl) < 6:
+-        return None
+-    ys = sorted(p[1] for p in inl)
+-    span = ys[-1] - ys[0]
+-    if span < 0.25:
+-        return None
+-    # centro so vale se as duas pontas da face aparecem (nao foram cortadas pela janela)
+-    centro = None
+-    if 0.60 <= span <= 0.98 and ys[0] > -y_lim + 0.05 and ys[-1] < y_lim - 0.05:
+-        yc = (ys[0] + ys[-1]) / 2.0
+-        xc = a + b * yc
+-        # deslocamento do robo ao longo da face (nao muda quando o robo gira no lugar;
+-        # o y puro do centro mudava ~1 cm por grau de giro: teste de 22/10 09:36)
+-        centro = (yc + xc * b) / math.sqrt(1.0 + b * b)
+-    # normal da face no robo: (1, -b) -> girar -atan(b) para ficar perpendicular
+-    return dict(dist=a, ang=-math.atan(b), centro=centro, span=span, n=len(inl))
++def medir_face(pts, x_min=0.30, x_max=1.30, y_lim=0.70, tol=0.02, referencia=None):
++    """Face segmentada; quando ha WS conhecida seleciona pela referencia, nao por densidade."""
++    return selecionar_face(pts,referencia,x_min=x_min,x_max=x_max,y_lim=y_lim,tol=tol)
+ 
+ 
+ class Encosto:
+@@ -1909,6 +1883,7 @@ class Encosto:
+         self.avancos = 0
+         self.alvo_giro = self.alvo_lat = self.yaw_ref = None
+         self.resultado = None
++        self.obstaculo = None
+         self.p_dur = 0.15      # duracao do pulso de avanco final (s), ajustada sozinha
+         self.p_ult = None
+         self.n_pulsos = 0
+@@ -1919,11 +1894,44 @@ class Encosto:
+         self.l_final = False           # correcao lateral feita ja encostado
+         self.n_lat_final = 0
+         self.g_final = False           # giro de acerto feito ja encostado
++        # ENCOSTO_CEGO (09/11, missao28): a menos de ~15 cm da mesa o meio da face cai na zona
++        # cega do LiDAR (< 0,146 m): a face aparece partida, sem centro. Perto, nao corrige de lado
++        # nem gira; aceita pelo centro medido de longe (face inteira) e pela ultima medicao valida.
++        self.folga_cega = 0.15
++        self.tol_centro_final = 0.03
++        self.tol_ang_cego = math.radians(4.0)
++        self.centro_longe = None       # centro (m) medido ao decidir avancar, face inteira
++        self.ult_valida = None         # (t, med) da ultima face valida
++        self.n_perda = 0               # PERDA_PARA: vezes que parou para medir de novo
++        self.t_parado = None           # FACE_FRAGMENTADA: inicio do ultimo assentar
++        # RECUO_LATERAL (09/11, missao32): o deslize de lado vira avanco (k 0,3-1,3); antes de deslizar,
++        # recua reto ate sobrar folga para o avanco previsto e a face continuar inteira (>= 15 cm)
++        self.folga_min_lat = 0.15      # folga minima no fim do deslize (face inteira fora da zona cega)
++        self.folga_max_recuo = 0.45    # nao recua alem disso
++        self.recuo_max = 0.20          # por recuo
++        self.k_lat = 0.5               # avanco por metro de lado (medido a cada deslize)
++        self.n_recuo = 0
++        self.recuo_alvo = None
++        self.lat_ini = None            # (folga, |centro|) no inicio do ultimo deslize
+ 
+     def nova_medicao(self, t, med, pose):
++        if med is None:
++            # FALHA_SCAN (09/11, missao29): um scan ruim nao apaga as medicoes; a guarda abaixo
++            # (ultima face valida com mais de 0,45 s) para o robo se a falha continuar.
++            return
++        if not all(math.isfinite(med[k]) for k in ('dist', 'ang')):
++            self.meds.clear()
++            return
++        if med['centro'] is not None and not math.isfinite(med['centro']):
++            self.meds.clear()
++            return
++        if med['dist'] < self.pc:
++            self.abortar('folga negativa')
++            return
+         if med is not None:
+             self.meds.append((t, med, pose))
+             self.meds = self.meds[-12:]
++            self.ult_valida = (t, med)   # ENCOSTO_CEGO
+ 
+     def retomar(self, pausa, t, pose):
+         """SENSOR_PARADO: sensores voltaram. O tempo parado nao conta e mede tudo de novo."""
+@@ -1939,6 +1947,23 @@ class Encosto:
+         self.estado, self.motivo = 'abortar', motivo
+         self.log('Encosto abortado: %s' % motivo)
+ 
++    def _final_cego(self, folga, ang, centro_agora=None):
++        """ENCOSTO_CEGO: decide o fim do encosto com a face na zona cega do LiDAR."""
++        # sem centro medido de longe (nao passou por "Alinhado"), vale o medido agora
++        c = self.centro_longe if self.centro_longe is not None else centro_agora
++        if not (0 <= folga and abs(folga - self.alvo) <= 0.025):
++            self.abortar('ENCOSTO_CEGO: folga %.1f cm fora do alvo %.0f cm' % (folga * 100, self.alvo * 100))
++        elif abs(ang) > self.tol_ang_cego:
++            self.abortar('ENCOSTO_CEGO: torto %.1f graus encostado' % math.degrees(ang))
++        elif c is None or abs(c) > self.tol_centro_final:
++            self.abortar('ENCOSTO_CEGO: centro medido de longe %s fora de +-%.0f cm' % (
++                'nao medido' if c is None else '%+.1f cm' % (c * 100), self.tol_centro_final * 100))
++        else:
++            self.estado = 'fim'
++            self.log('ENCOSTO_CEGO: encostado a %.1f cm, %.1f graus; centro medido de longe %+.1f cm '
++                     '(perto o LiDAR nao ve o meio da face)' % (folga * 100, math.degrees(ang), c * 100))
++        return 0.0, 0.0, 0.0
++
+     def bloqueio(self, t, pose):
+         """Collision Monitor segurando: perto da mesa e esperado no avanco final."""
+         if self.estado in ('avancar', 'pulso'):
+@@ -1949,6 +1974,8 @@ class Encosto:
+ 
+     def _mudar(self, e, t, pose):
+         self.estado, self.t_estado, self.ini = e, t, pose
++        if e in ('assentar', 'assentar_final'):
++            self.t_parado = t   # FACE_FRAGMENTADA: hora em que o robo parou para medir
+ 
+     def _novas(self, desde):
+         return [m for m in self.meds if m[0] >= desde]
+@@ -1960,6 +1987,8 @@ class Encosto:
+         return c * dx + s * dy, -s * dx + c * dy
+ 
+     def passo(self, t, pose):
++        if self.estado in ('fim', 'abortar'):
++            return 0.0, 0.0, 0.0
+         if self.t0 is None:
+             self.t0 = t
+             self._mudar('assentar', t, pose)
+@@ -1969,6 +1998,36 @@ class Encosto:
+             self.abortar('tempo maximo')
+             return 0.0, 0.0, 0.0
+         e = self.estado
++        # Nenhum movimento pode continuar usando uma face perdida ou antiga.
++        # FACE_FRAGMENTADA (09/11): uma face parcial (so distancia/angulo, medidos agora) mantem o
++        # avanco RETO ja autorizado com o centro medido de longe; nunca autoriza girar ou deslizar.
++        sem_centro = bool(self.meds) and self.meds[-1][1]['centro'] is None and not (
++            e in ('avancar', 'pulso') and self.meds[-1][1].get('parcial', False)
++            and self.centro_longe is not None)
++        if e in ('avancar', 'pulso', 'girar', 'deslocar', 'lat_mover', 'lat_pulso') and (
++                not self.meds or not 0 <= t-self.meds[-1][0] <= 0.45   # FALHA_SCAN: era 0.3
++                or sem_centro):
++            uv = self.ult_valida
++            if e in ('avancar', 'pulso') and uv is not None and 0 <= t - uv[0] <= 1.0 \
++                    and uv[1]['dist'] - self.pc < self.folga_cega:
++                # ENCOSTO_CEGO: a face entrou na zona cega no fim do avanco: para e mede o final
++                self.log('ENCOSTO_CEGO: face na zona cega a %.1f cm: paro e confiro o encosto' % (
++                    (uv[1]['dist'] - self.pc) * 100))
++                self._mudar('assentar_final', t, pose)
++                return 0.0, 0.0, 0.0
++            if e in ('girar', 'deslocar', 'lat_mover', 'lat_pulso') and self.n_perda < 3:
++                # PERDA_PARA (09/11): a face sumiu numa correcao (giro/deslize): para e mede de novo,
++                # parado, em vez de abortar o encosto inteiro (missao de 09/11 13:58: 4 abortos assim)
++                self.n_perda += 1
++                self.log('PERDA_PARA: perdi a face em "%s": paro e meco de novo (%d/3)' % (e, self.n_perda))
++                self._mudar('assentar_final' if self.l_final or self.g_final else 'assentar', t, pose)
++                return 0.0, 0.0, 0.0
++            self.abortar('face ausente ou desatualizada')
++            return 0.0, 0.0, 0.0
++
++        if e in ('avancar', 'pulso') and self.obstaculo is not None:
++            self.abortar('obstaculo antes da face WS no corredor de avanco')
++            return 0.0, 0.0, 0.0
+ 
+         if e in ('assentar', 'assentar_final'):
+             if t - self.t_estado >= 0.4:
+@@ -1976,10 +2035,27 @@ class Encosto:
+             return 0.0, 0.0, 0.0
+ 
+         if e in ('medir', 'medir_final'):
+-            novas = self._novas(self.t_estado)
++            novas = [m for m in self._novas(self.t_estado) if 0 <= t-m[0] <= 0.6]
++            if e == 'medir':
++                # FACE_FRAGMENTADA (09/11): alinhar (girar/deslizar/decidir avancar) so com centro
++                # medido; face so plano (parcial) conta apenas na conferencia final (distancia)
++                novas = [m for m in novas if m[1]['centro'] is not None]
+             if len(novas) < 4 and t - self.t_estado < 3.0:
+                 return 0.0, 0.0, 0.0
+             if len(novas) < 2:
++                uv = self.ult_valida
++                # FACE_FRAGMENTADA (09/11): so vale a ultima face medida com o robo ja parado
++                # (0,3 s depois de parar); medida andando nao autoriza sucesso quando a face some.
++                if e == 'medir_final' and uv is not None and 0 <= t - uv[0] <= 5.0 \
++                        and self.t_parado is not None and uv[0] >= self.t_parado + 0.3 \
++                        and uv[1]['dist'] - self.pc < self.folga_cega:
++                    # ENCOSTO_CEGO: encostado, a face sumiu na zona cega: vale a ultima medicao
++                    return self._final_cego(uv[1]['dist'] - self.pc, uv[1]['ang'])
++                if e == 'medir' and any(m[1]['centro'] is None for m in self._novas(self.t_estado)):
++                    # FACE_FRAGMENTADA (09/11): so o plano (parcial) nao alinha nem autoriza avancar
++                    self.abortar('centro da face nao medido (so face parcial, sem as 2 pontas): '
++                                 'nao alinho nem avanco')
++                    return 0.0, 0.0, 0.0
+                 self.abortar('nao vejo a face da mesa a frente')
+                 return 0.0, 0.0, 0.0
+             med = lambda k: sorted(m[1][k] for m in novas)[len(novas) // 2]
+@@ -1998,6 +2074,9 @@ class Encosto:
+                     self.yaw_ref = _ang(yaw_scan + ang)
+                     self._mudar('avancar', t, pose)
+                     return 0.0, 0.0, 0.0
++                if folga < self.folga_cega:
++                    # ENCOSTO_CEGO: perto demais para medir o centro/corrigir de lado
++                    return self._final_cego(folga, ang, centro)
+                 # v3.17: encostado mas fora do centro (missao1 29/10: WS_2 ficou a +16,5 cm,
+                 # porque de longe uma ponta da face nao aparecia). De lado o robo corre
+                 # paralelo a face, entao da para corrigir aqui mesmo.
+@@ -2015,6 +2094,11 @@ class Encosto:
+                     self.log('Encostado fora do centro (%+.1f cm): corrigindo de lado' % (centro * 100))
+                     self._mudar('deslocar', t, pose)
+                     return 0.0, 0.0, 0.0
++                if not (0 <= folga and abs(folga-self.alvo) <= 0.025
++                        and abs(ang) <= self.tol_giro
++                        and centro is not None and abs(centro) <= self.tol_lat):
++                    self.abortar('medicao final fora dos limites de folga/alinhamento')
++                    return 0.0, 0.0, 0.0
+                 self.estado = 'fim'
+                 return 0.0, 0.0, 0.0
+             self.ciclos += 1
+@@ -2024,19 +2108,42 @@ class Encosto:
+             if folga < 0.03:
+                 self.abortar('ja esta perto demais da mesa (%.0f cm)' % (folga * 100))
+                 return 0.0, 0.0, 0.0
++            if self.lat_ini is not None and centro is not None:
++                # RECUO_LATERAL: k medido pelo LiDAR no ultimo deslize
++                dc = self.lat_ini[1] - abs(centro)
++                if dc > 0.03:
++                    self.k_lat = min(1.5, max(0.2, (self.lat_ini[0] - folga) / dc))
++                    self.log('RECUO_LATERAL: o deslize de %.1f cm avancou %.1f cm (k %.2f)' % (
++                        dc * 100, (self.lat_ini[0] - folga) * 100, self.k_lat))
++                self.lat_ini = None
+             pode = self.ciclos <= 10
+             if pode and abs(ang) > self.tol_giro:
+                 self.alvo_giro = _ang(yaw_scan + ang)
+                 self._mudar('girar', t, pose)
++            elif (pode and centro is not None and abs(centro) > self.tol_lat and self.n_lat < 5
++                  and self.n_recuo < 3 and folga < self.folga_max_recuo - 0.03
++                  and folga - self.k_lat * abs(centro) < self.folga_min_lat):
++                # RECUO_LATERAL: o deslize ia levar a face para a zona cega: recua reto antes
++                self.n_recuo += 1
++                precisa = self.folga_min_lat + self.k_lat * abs(centro) + 0.02
++                self.recuo_alvo = min(precisa, self.folga_max_recuo, folga + self.recuo_max)
++                self.yaw_ref = _ang(yaw_scan + ang)
++                self.log('RECUO_LATERAL: centro %+.1f cm com a face a %.0f cm: o deslize avanca ~%.0f cm '
++                         '(k %.2f); recuo reto ate %.0f cm (%d/3)' % (
++                             centro * 100, folga * 100, self.k_lat * abs(centro) * 100, self.k_lat,
++                             self.recuo_alvo * 100, self.n_recuo))
++                self._mudar('recuar', t, pose)
+             elif pode and centro is not None and abs(centro) > self.tol_lat and self.n_lat < 5:
+                 self.n_lat += 1
+                 self.alvo_lat = centro
++                self.lat_ini = (folga, abs(centro))   # RECUO_LATERAL
+                 self._mudar('deslocar', t, pose)
+             elif abs(ang) > math.radians(3.0) or (centro is not None and abs(centro) > 0.04):
+                 self.abortar('nao consegui alinhar com a mesa (%.1f graus, centro %+.1f cm)' % (
+                     math.degrees(ang), (centro or 0.0) * 100))
+             else:
+                 self.yaw_ref = _ang(yaw_scan + ang)
++                self.centro_longe = centro   # ENCOSTO_CEGO
+                 self.log('Alinhado com a mesa: avancando ate %.0f cm' % (self.alvo * 100))
+                 self._mudar('avancar', t, pose)
+             return 0.0, 0.0, 0.0
+@@ -2080,6 +2187,13 @@ class Encosto:
+                 if c * self.l_falta <= 0 or previsto <= 0.5 * self.tol_lat:
+                     self._mudar(fim_lat, t, pose)
+                     return 0.0, 0.0, 0.0
++                if (not self.l_final and self.n_recuo < 3
++                        and med_l['dist'] - self.pc < self.folga_min_lat - 0.01):
++                    # RECUO_LATERAL: o deslize trouxe a face para perto: para e mede (pode recuar)
++                    self.log('RECUO_LATERAL: face a %.1f cm no deslize, centro %+.1f cm: paro e meco' % (
++                        (med_l['dist'] - self.pc) * 100, c * 100))
++                    self._mudar(fim_lat, t, pose)
++                    return 0.0, 0.0, 0.0
+             elif t - self.t_estado > abs(self.l_falta) / self.v_lat_real:
+                 # sem ver as pontas da face: para pelo tempo (velocidade real conhecida)
+                 self._mudar(fim_lat, t, pose)
+@@ -2125,6 +2239,29 @@ class Encosto:
+             self._mudar('lat_pulso', t, pose)
+             return 0.0, 0.0, 0.0
+ 
++        if e == 'recuar':
++            # RECUO_LATERAL: re reta segurando o rumo da face; para pelo LiDAR (folga prevista)
++            novas = self._novas(self.t_estado)
++            if novas:
++                tl, med_r, _ = novas[-1]
++                folga = med_r['dist'] - self.pc
++                v = 0.0
++                if len(novas) >= 2 and tl - novas[-2][0] > 0.05:
++                    v = max(0.0, (folga - (novas[-2][1]['dist'] - self.pc)) / (tl - novas[-2][0]))
++                if folga + v * (t - tl + 0.35) >= self.recuo_alvo:
++                    self._mudar('assentar', t, pose)
++                    return 0.0, 0.0, 0.0
++            elif t - self.t_estado > 1.0:
++                self._mudar('assentar', t, pose)   # sem face: para e o 'medir' decide
++                return 0.0, 0.0, 0.0
++            dx, _ = self._desloc(self.ini, pose)
++            if t - self.t_estado > 6.0 or -dx > self.recuo_max + 0.10:
++                self._mudar('assentar', t, pose)   # guarda pela odom/tempo
++                return 0.0, 0.0, 0.0
++            err = _ang(self.yaw_ref - pose[2])
++            wz = _sat(0.4 * err, 0.016, 0.03) if abs(err) > math.radians(1.0) else 0.0
++            return -self.v_aprox, 0.0, wz
++
+         if e == 'avancar':
+             # Avanco continuo ate ~6 cm antes do alvo, freando pelo LiDAR (o odom nao serve:
+             # com comando pequeno o robo anda ate 2x o que o odom diz - teste de 22/10 08:45).
+@@ -2138,8 +2275,13 @@ class Encosto:
+                     if tl - t0_ > 0.05:
+                         v = max(0.0, ((m0['dist'] - self.pc) - folga) / (tl - t0_))
+                 previsto = folga - v * (t - tl + 0.35)  # 0.35 s = atraso + parada
++            elif t - self.t_estado < 1.0:
++                # ENCOSTO_ESPERA (09/11, missao27): no 1o passo do avanco o scan novo ainda nao
++                # chegou (5,9 Hz) e abortava 50 ms depois de alinhar. Espera parado ate 1 s.
++                return 0.0, 0.0, 0.0
+             else:
+-                folga = previsto = 9.0
++                self.abortar('perdi a face da mesa')
++                return 0.0, 0.0, 0.0
+             # ENCOSTO_LINEAR: vai direto ao alvo (0,10 m/s reais; a previsao para ~1 cm depois do alvo)
+             if previsto <= self.alvo + (0.0 if self.linear else 0.08) or t - self.t_estado > 15.0:
+                 self.p_ult = None
+@@ -2205,7 +2347,9 @@ def main():
+     from nav2_msgs.action import ComputePathToPose, DriveOnHeading, NavigateToPose
+     from nav2_msgs.msg import CollisionMonitorState
+     from sensor_msgs.msg import Imu, LaserScan  # SENSOR_PARADO
+-    from std_msgs.msg import String
++    from std_msgs.msg import String, Bool
++    from std_srvs.srv import SetBool, Trigger
++    from rcl_interfaces.srv import GetParameters
+     from tf2_ros import Buffer, TransformListener
+ 
+     def yaw_de(q):
+@@ -2229,6 +2373,13 @@ def main():
+             self.declare_parameter('periodo_vigia', 1.0)
+             # v3: travessia pelo LiDAR ('lidar') ou pelo Nav2 como na v2 ('nav2')
+             self.declare_parameter('modo_travessia', 'lidar')
++            self.declare_parameter('modo_curva_t', 'lateral')
++            self.declare_parameter('limite_vel_angular_real_t', -1.0)
++            self.declare_parameter('limite_vel_linear_real_t', -1.0)
++            self.declare_parameter('topico_scan_temporal_t', '/scan_temporal_front')
++            self.declare_parameter('topico_imu_temporal_t', '/imu/data_temporal')
++            if self.get_parameter('modo_curva_t').value != 'lateral':
++                raise ValueError('Giro frontal suspenso: use modo_curva_t:=lateral')
+             self.declare_parameter('sensor_idade_max', 0.5)     # SENSOR_PARADO
+             self.declare_parameter('sensor_espera_max', 60.0)
+             self.declare_parameter('sensor_espera_ponte', 6.0)
+@@ -2283,8 +2434,22 @@ def main():
+             self.tf_buffer = Buffer()
+             self.tf_listener = TransformListener(self.tf_buffer, self)
+             self.rota_tent = {}   # ROTA_MAPA
++            self.tempos_t = {}
++            self.ultimos_stamps_t = {}
++            self.odom_t_valido = False
++            self.imu_t = None
++            self.scan_t_raw = None
++            self.controle_t_ativo = False
++            self.cancelamento_t = threading.Event()
++            self.conflito_t = (0.0, True)
+             self.t_imu = None   # SENSOR_PARADO
+             self.gyro_z = 0.0
++            self.create_subscription(Imu, self.p('topico_imu_temporal_t'),
++                                     lambda msg: self.ao_imu(msg, experimental=True),
++                                     qos_profile_sensor_data, callback_group=grupo)
++            self.create_subscription(LaserScan, self.p('topico_scan_temporal_t'),
++                                     lambda msg: self.ao_scan(msg, experimental=True),
++                                     qos_profile_sensor_data, callback_group=grupo)
+             self.create_subscription(Imu, '/imu/data', self.ao_imu, qos_profile_sensor_data,
+                                      callback_group=grupo)
+             self.create_subscription(Odometry, '/odom', self.ao_odom, 20, callback_group=grupo)
+@@ -2295,6 +2460,15 @@ def main():
+             self.create_subscription(CollisionMonitorState, '/collision_monitor_state',
+                                      self.ao_cm, 10, callback_group=grupo)
+             self.pub_cmd = self.create_publisher(TwistStamped, '/cmd_vel_nav', 10)
++            self.pub_t = self.create_publisher(TwistStamped, '/cmd_vel_nav_t', 10)
++            self.controle_t = self.create_client(SetBool, '/alinhador/controle_t', callback_group=grupo)
++            self.cm_params_t = self.create_client(GetParameters, '/collision_monitor/get_parameters', callback_group=grupo)
++            self.hw_params_t = self.create_client(GetParameters, '/robo_hardware/get_parameters', callback_group=grupo)
++            self.pub_estado_t = self.create_publisher(String, '/alinhador/estado_t', 20)
++            self.create_subscription(String, '/hardware/sensor_timing', self.ao_timing_t, 20, callback_group=grupo)
++            self.create_service(Trigger, '/alinhador/cancelar_t', self.cancelar_t, callback_group=grupo)
++            self.create_subscription(Bool, '/alinhador/conflito_t', self.ao_conflito_t, 10,
++                                     callback_group=grupo)
+             # v3.31 ANTI_CISCADO: historico do comando do Nav2 e da odom; cliente do destravar
+             self.hist_cmd = collections.deque(maxlen=300)
+             self.hist_odom = collections.deque(maxlen=600)
+@@ -2337,9 +2511,79 @@ def main():
+             with self.lock:
+                 self.mapa_msg = msg
+ 
+-        def ao_imu(self, msg):   # SENSOR_PARADO
+-            self.t_imu = time.monotonic()
+-            self.gyro_z = msg.angular_velocity.z   # ANGULO_FUNDIDO
++        def ao_conflito_t(self, msg):
++            with self.lock:
++                self.conflito_t = (time.monotonic(), msg.data)
++
++        def _stamp_recente(self, stamp):
++            return TempoSensor.receber(stamp, self.get_clock().now().nanoseconds,
++                                       time.monotonic()) is not None
++
++        def _tempo_sensor_t(self, msg, sensor, atraso=0.0):
++            with self.lock:
++                ros_ns, mono = self.get_clock().now().nanoseconds, time.monotonic()
++                # Janela LiDAR deslizante pode manter o mesmo raio mais antigo.
++                # Reutiliza exatamente o prazo original; nunca renova na recepcao.
++                anterior = self.tempos_t.get(sensor)
++                stamp_ns = msg.header.stamp.sec*1000000000+msg.header.stamp.nanosec
++                if sensor == 'lidar' and anterior is not None and anterior.stamp_ns == stamp_ns:
++                    amostra = anterior if anterior.recente(ros_ns, mono) else None
++                    self.tempos_t[sensor] = amostra
++                    return amostra
++                amostra = TempoSensor.receber(msg.header.stamp,
++                    ros_ns, mono, atraso,
++                    self.ultimos_stamps_t.get(sensor))
++                self.tempos_t[sensor] = amostra
++                if amostra is not None:
++                    self.ultimos_stamps_t[sensor] = amostra.stamp_ns
++            return amostra
++
++        def ao_timing_t(self, msg):
++            try:
++                item = json.loads(msg.data)
++                if not isinstance(item, dict):
++                    raise ValueError('metadata temporal sem objeto')
++                if not item.get('timed_frame') or item.get('valid'):
++                    return
++                sensors = [item.get('sensor')]
++            except (ValueError, TypeError):
++                sensors = ['lidar', 'imu']
++            with self.lock:
++                for sensor in sensors:
++                    if sensor in ('lidar', 'imu'):
++                        self.tempos_t[sensor] = None
++                        if sensor == 'lidar':
++                            self.scan_t_raw = None
++                        else:
++                            self.imu_t = None
++
++        def cancelar_t(self, req, res):
++            self.cancelamento_t.set()
++            self._cancelar_nav()
++            res.success, res.message = True, 'cancelamento solicitado; aguarde estado parado'
++            return res
++
++        def _estado_t(self, estado, motivo='', observacao=None):
++            m = String()
++            m.data = json.dumps(dict(estado=estado, motivo=motivo,
++                                    observacao=observacao, stamp_ns=self.get_clock().now().nanoseconds))
++            self.pub_estado_t.publish(m)
++
++        def ao_imu(self, msg, experimental=False):   # SENSOR_PARADO
++            if not experimental:
++                self.t_imu = time.monotonic()
++                self.gyro_z = msg.angular_velocity.z
++                return
++            q = msg.orientation
++            valores = (q.x, q.y, q.z, q.w, msg.angular_velocity.z)
++            amostra = self._tempo_sensor_t(msg, 'imu', 0.0)
++            valida = (amostra is not None
++                      and msg.orientation_covariance[0] != -1
++                      and all(math.isfinite(v) for v in valores)
++                      and abs(sum(v*v for v in valores[:4])-1.0) < 0.05)
++            with self.lock:
++                self.imu_t = (amostra.aquisicao_mono, yaw_de(q), msg.angular_velocity.z) if valida else None
++
+ 
+         def ao_plano(self, msg):
+             with self.lock:
+@@ -2361,13 +2605,20 @@ def main():
+ 
+         def ao_ir_area(self, msg):
+             nome = msg.data.strip().upper()
++            # DIAGNOSTICO_ENTRADA_MISSAO_20261109: prova que callback foi executado.
++            self.get_logger().info('PEDIDO RECEBIDO /ir_para_area: %s' % nome)
+             caminho = self.p('arquivo_areas')
+             try:
+                 import yaml
+                 with open(caminho) as fa:
+                     areas = (yaml.safe_load(fa) or {}).get('service_areas') or {}
+             except Exception as exc:
++                motivo = 'falha ao ler cadastro: %s' % exc
+                 self.get_logger().error('Nao consegui ler %s: %s' % (caminho, exc))
++                if nome:
++                    msg_erro = String()
++                    msg_erro.data = '%s FALHOU %s' % (nome, motivo)
++                    self.pub_resultado.publish(msg_erro)
+                 return
+             area = areas.get(nome) or areas.get(nome.replace('_', ''))
+             # v3.9: pontos sem mesa (START, FINISH...) ficam em ~/mapas/pontos.yaml:
+@@ -2406,6 +2657,7 @@ def main():
+                 nome, ap['x'], ap['y'], math.degrees(ap['yaw'])))
+ 
+         def ao_odom(self, msg):
++            self.odom_t_valido = self._tempo_sensor_t(msg, 'odom') is not None
+             p = msg.pose.pose
+             with self.lock:
+                 self.odom = (time.monotonic(), p.position.x, p.position.y, yaw_de(p.orientation))
+@@ -2417,6 +2669,7 @@ def main():
+                 self.hist_cmd.append((time.monotonic(), tw.linear.x, tw.linear.y, tw.angular.z))
+ 
+         def ao_cmd_final(self, msg):
++            self._tempo_sensor_t(msg, 'saida')
+             tw = msg.twist
+             zerado = abs(tw.linear.x) < 1e-4 and abs(tw.linear.y) < 1e-4 and abs(tw.angular.z) < 1e-4
+             with self.lock:
+@@ -2425,7 +2678,15 @@ def main():
+         def ao_cm(self, msg):
+             self.cm_stop = msg.action_type == 1  # STOP
+ 
+-        def ao_scan(self, msg):
++        def ao_scan(self, msg, experimental=False):
++            # Fluxo temporal ja carrega limite inferior de aquisicao na ponte.
++            # Nao somar scan_time novamente; bins agregados tem time_increment=0.
++            amostra = self._tempo_sensor_t(msg, 'lidar', 0.0) if experimental else None
++            if not self._stamp_recente(msg.header.stamp):
++                if experimental:
++                    with self.lock:
++                        self.scan_t_raw = None
++                return
+             if self.laser_tf is None:
+                 try:
+                     tr = self.tf_buffer.lookup_transform('base_link', msg.header.frame_id, Time())
+@@ -2446,12 +2707,17 @@ def main():
+             frente = min([p[0] - 0.365 for p in pts if p[0] > 0.30 and abs(p[1]) < 0.33] or [9.0])
+             with self.lock:
+                 od = self.odom
+-                self.scan = (time.monotonic(), pts, od[1:] if od else None, frente)
+-                self.scan_seq += 1
++                if experimental:
++                    self.scan_t_raw = ((amostra.aquisicao_mono, tuple(msg.ranges), msg.angle_min,
++                                       msg.angle_increment, msg.range_min, msg.range_max, self.laser_tf)
++                                       if amostra is not None else None)
++                else:
++                    self.scan = (time.monotonic(), pts, od[1:] if od else None, frente)
++                    self.scan_seq += 1
+ 
+         def _novo_goal_chegou(self):
+             with self.lock:
+-                return self.goal_pendente is not None
++                return self.goal_pendente is not None or self.cancelamento_t.is_set()
+ 
+         # ---------------- utilidades ----------------
+         def _esperar(self, futuro, timeout):
+@@ -2650,7 +2916,7 @@ def main():
+             m.header.stamp = self.get_clock().now().to_msg()
+             m.header.frame_id = 'base_link'
+             m.twist.linear.x, m.twist.linear.y, m.twist.angular.z = float(vx), float(vy), float(wz)
+-            self.pub_cmd.publish(m)
++            (self.pub_t if self.controle_t_ativo else self.pub_cmd).publish(m)
+ 
+         def _parar(self):
+             for _ in range(5):
+@@ -2664,11 +2930,13 @@ def main():
+                 return None
+             return tr.transform.translation.x, tr.transform.translation.y
+ 
+-        def _pose_mapa_yaw(self):
++        def _pose_mapa_yaw(self, idade_max=None):
+             try:
+                 tr = self.tf_buffer.lookup_transform('map', 'base_link', Time())
+             except Exception:
+                 return None
++            if idade_max is not None and not self._stamp_recente(tr.header.stamp):
++                return None
+             return (tr.transform.translation.x, tr.transform.translation.y,
+                     yaw_de(tr.transform.rotation))
+ 
+@@ -3130,7 +3398,14 @@ def main():
+                         od, sc, sq, cf = self.odom, self.scan, self.scan_seq, self.cmd_final
+                     trav.entrada_rapida = self.p('entrada_rapida')
+                     trav.uma_parede = self.p('uma_parede')
+-                    pausa = self._esperar_sensores(nome)   # SENSOR_PARADO
++                    if self.controle_t_ativo:
++                        if (not self._precondicoes_t() or self.cm_stop or self.conflito_t[1]
++                                or agora-self.conflito_t[0] > 0.3 or agora-cf[0] > 0.3):
++                            trav.abortar('aproximacao experimental sem sensores/protecao/conflito')
++                            break
++                        pausa = 0.0
++                    else:
++                        pausa = self._esperar_sensores(nome)   # SENSOR_PARADO
+                     if pausa > 0.0:
+                         with self.lock:
+                             od = self.odom
+@@ -3158,8 +3433,11 @@ def main():
+                             # parede esperada (pelo mapa) a restante + centro_corpo + meia largura
+                             x_esp = restante + self.p('centro_corpo') + (trav.largura_b or trav.largura or 0.82) / 2.0
+                             trav.nova_transversal(sc[0], medir_parede_a_frente(
+-                                sc[1], lado, x_max=max(0.6, x_esp + 0.35)), sc[2])
+-                    pm = self._pose_mapa()
++                                sc[1], lado, x_max=max(0.6, x_esp + 0.35)), sc[2], x_esp)
++                    pm = (self._pose_mapa_yaw(idade_max=0.3) if self.controle_t_ativo else self._pose_mapa())
++                    if pm is None and self.controle_t_ativo:
++                        trav.abortar('TF ausente/desatualizada na aproximacao experimental')
++                        break
+                     if pm is None:
+                         sem_tf_desde = sem_tf_desde or agora
+                         if agora - sem_tf_desde > 1.0:
+@@ -3189,7 +3467,7 @@ def main():
+             finally:
+                 self._parar()
+             ok = trav.estado == 'fim'
+-            if not ok and trav.p_aprox_odom is not None:
++            if not ok and not self.controle_t_ativo and trav.p_aprox_odom is not None:
+                 # se entrou na passagem, sai de re reto (mesmo eixo) antes de qualquer outra coisa
+                 with self.lock:
+                     od = self.odom
+@@ -3201,6 +3479,195 @@ def main():
+             self.get_logger().info('%s (LiDAR): %s' % (nome, 'SUCESSO' if ok else 'FALHOU - ' + trav.motivo))
+             return 'ok' if ok else 'falha'
+ 
++        def _precondicoes_t(self):
++            # Recusa antes de iniciar o preparo de uma curva experimental.
++            with self.lock:
++                tempos, raw = dict(self.tempos_t), self.scan_t_raw
++            agora, ros_ns = time.monotonic(), self.get_clock().now().nanoseconds
++            return (math.isfinite(self.p('limite_vel_angular_real_t'))
++                    and self.p('limite_vel_angular_real_t') >= 0.10
++                    and math.isfinite(self.p('limite_vel_linear_real_t'))
++                    and self.p('limite_vel_linear_real_t') >= 0.03
++                    and all(tempos.get(sensor) is not None
++                        and tempos[sensor].recente(ros_ns, agora)
++                        for sensor in ('lidar', 'imu', 'odom'))
++                    and raw is not None and len(raw[1]) >= 3
++                    and all(math.isfinite(r) and raw[4] <= r <= raw[5] for r in raw[1])
++                    and 0 < abs(raw[3]) < math.pi/2
++                    and (math.hypot(0.365, 0.315)+0.05+math.hypot(*raw[6][:2]))
++                        *math.sin(abs(raw[3])) <= 0.05
++                    and abs(abs(raw[3])*len(raw[1])-2*math.pi) <= 1e-5)
++
++        def _verificar_cm_t(self):
++            # Nao permitir correcao angular adicional DEPOIS do Collision Monitor.
++            if not self.hw_params_t.wait_for_service(timeout_sec=1.0):
++                return False
++            hw_req = GetParameters.Request()
++            hw_req.names = ['heading_hold_enabled', 'command_authority']
++            hw = self._esperar(self.hw_params_t.call_async(hw_req), 1.0)
++            if (hw is None or len(hw.values) != 2 or hw.values[0].type != 1 or hw.values[0].bool_value
++                    or hw.values[1].string_value != 'collision_monitor'):
++                return False
++            if not self.cm_params_t.wait_for_service(timeout_sec=1.0):
++                return False
++            req = GetParameters.Request()
++            req.names = ['polygons', 'SweptTurnStop.enabled', 'SweptTurnStop.min_points',
++                         'cmd_vel_in_topic', 'cmd_vel_out_topic']
++            for name in ('left_turn', 'right_turn'):
++                req.names += ['SweptTurnStop.'+name+'.'+key for key in
++                    ('points', 'linear_min', 'linear_max', 'theta_min', 'theta_max',
++                     'direction_start_angle', 'direction_end_angle')]
++            r = self._esperar(self.cm_params_t.call_async(req), 1.0)
++            if r is None or len(r.values) != len(req.names):
++                return False
++            try:
++                for i, direction in ((5, 1), (12, -1)):
++                    v = r.values[i:i+7]
++                    if (not envolve_disco(json.loads(v[0].string_value), math.hypot(.365,.315)+.05)
++                            or v[1].double_value > 0 or v[2].double_value < math.hypot(.2,.16)
++                            or v[3].double_value > (0.015 if direction > 0 else -0.6)
++                            or v[4].double_value < (0.6 if direction > 0 else -0.015)
++                            or v[5].double_value > -math.pi or v[6].double_value < math.pi):
++                        return False
++            except (ValueError, TypeError):
++                return False
++            return ('SweptTurnStop' in r.values[0].string_array_value
++                    and r.values[1].bool_value and r.values[2].integer_value == 1
++                    and r.values[3].string_value.lstrip('/') == 'cmd_vel_smoothed'
++                    and r.values[4].string_value.lstrip('/') == 'cmd_vel')
++
++        def _arbitro_exclusivo(self):
++            saidas = self.get_publishers_info_by_topic('/cmd_vel_nav_seguro')
++            entradas = self.get_publishers_info_by_topic('/cmd_vel_nav_t')
++            return (len(saidas) == 1 and saidas[0].node_name == 'arbitro_t'
++                    and len(entradas) == 1 and entradas[0].node_name == self.get_name()
++                    and all(len(pubs) == 1 and pubs[0].node_name == esperado
++                        for pubs, esperado in ((self.get_publishers_info_by_topic('/cmd_vel_smoothed'), 'velocity_smoother'),
++                                               (self.get_publishers_info_by_topic('/cmd_vel'), 'collision_monitor'))))
++
++        def _adquirir_t(self, gf):
++            if not self.controle_t.wait_for_service(timeout_sec=1.0):
++                gf.abortar('arbitro_t indisponivel; use navigation.launch.py atualizado')
++                return False
++            if not self._arbitro_exclusivo():
++                gf.abortar('topologia de comandos sem exclusividade')
++                return False
++            if not self._verificar_cm_t():
++                gf.abortar('protecao CM/autoridade do hardware/heading_hold nao confirmada')
++                return False
++            # Antes do lease: cancelar e confirmar o resultado terminal do Nav2.
++            h = self.handle_ativo
++            if h is not None:
++                self._esperar(h.cancel_goal_async(), 2.0)
++                r = self._esperar(h.get_result_async(), 3.0)
++                if r is None or r.status not in (4, 5, 6):
++                    gf.abortar('Nav2 nao confirmou parada')
++                    return False
++            req = SetBool.Request()
++            req.data = True
++            # Nao abandonar um futuro de aquisicao pendente por cancelamento:
++            # a resposta deve ser consumida; falhas mantem o bloqueio seguro.
++            f = self.controle_t.call_async(req)
++            limite = time.monotonic()+2.0
++            while not f.done() and time.monotonic() < limite:
++                time.sleep(0.02)
++            if not f.done():
++                gf.abortar('timeout do arbitro')
++                # Aquisicao tardia fica bloqueada pelo watchdog ate reset manual.
++                return False
++            adquirido = f.result().success
++            if not adquirido:
++                gf.abortar('outro controlador ativo')
++                return False
++            self.controle_t_ativo = True
++            return True
++
++        def _aproximar_t(self, info, curva, nome, parada, largura_b):
++            guarda = GiroFrontal(curva['juncao'], curva['eixo_b'], curva['saida_b'])
++            ok = False
++            try:
++                if not self._adquirir_t(guarda):
++                    return 'falha'
++                self._estado_t('aproximar_centro')
++                r = self._travessia_lidar(info, nome, parada, None, largura_b)
++                ok = r == 'ok'
++                return r
++            finally:
++                if not ok:
++                    self._parar()
++                    self.controle_t_ativo = False
++                    self._estado_t('abortar', guarda.motivo or 'aproximacao interrompida; watchdog estaciona')
++
++        def _travessia_giro_frontal(self, curva, nome):
++            """Lease exclusivo; todas as falhas terminam em zero, sem fallback lateral."""
++            gf = GiroFrontal(curva['juncao'], curva['eixo_b'], curva['saida_b'],
++                             margem=self.p('margem_saida_lateral'))
++            adquirido = False
++            try:
++                adquirido = getattr(self, 'controle_t_ativo', False) or self._adquirir_t(gf)
++                if not adquirido:
++                    return 'falha'
++                self._estado_t('parar')
++                self._parar()
++                while rclpy.ok():
++                    with self.lock:
++                        od, raw, imu, cf, conflito = (self.odom, self.scan_t_raw, self.imu_t,
++                                                     self.cmd_final, self.conflito_t)
++                        tempos = dict(self.tempos_t)
++                    agora = time.monotonic()
++                    pm = self._pose_mapa_yaw(idade_max=0.3)
++                    if not self.odom_t_valido or od is None or not 0 <= agora-od[0] <= 0.3:
++                        pm = None
++                    # Giro: disco dos cantos + 5 cm. Avanco: footprint dilatado
++                    # em 5 cm e mais 12 cm a frente para latencia/frenagem.
++                    raio = math.hypot(0.365, 0.315)+0.05
++                    caixa = (-0.255, 0.535, -0.365, 0.365) if gf.estado == 'avancar' else None
++                    omega_max = self.p('limite_vel_angular_real_t')
++                    v_max = self.p('limite_vel_linear_real_t')
++                    idade = max(0.0, time.monotonic()-raw[0]) if raw else math.inf
++                    dentro_limites = (math.isfinite(omega_max) and omega_max >= 0.10
++                                      and math.isfinite(v_max) and v_max >= 0.03
++                                      and imu is not None and abs(imu[2]) <= omega_max)
++                    observacao = (avaliar_varredura(*raw[1:], raio, caixa=caixa,
++                                      movimento_angular=omega_max*idade,
++                                      movimento_linear=v_max*idade)
++                                  if raw is not None and dentro_limites else Observacao.DESCONHECIDA)
++                    agora = time.monotonic()
++                    ros_ns = self.get_clock().now().nanoseconds
++                    recentes = all(tempos.get(nome_sensor) is not None
++                                   and tempos[nome_sensor].recente(ros_ns, agora)
++                                   for nome_sensor in ('lidar', 'imu', 'odom', 'saida'))
++                    if not recentes:
++                        gf.abortar('idade total invalida/atraso de aquisicao desconhecido')
++                    elif observacao is not Observacao.LIVRE:
++                        gf.abortar('area varrida: '+observacao.value)
++                    cmd = gf.passo(agora, pm, imu, raw[0] if raw else None,
++                                   observacao is Observacao.LIVRE,
++                                   agora-cf[0] <= 0.3 and cf[1],
++                                   cancelado=self._novo_goal_chegou(),
++                                   bloqueado=(self.cm_stop or conflito[1] or agora-conflito[0] > 0.3
++                                              or agora-cf[0] > 0.3 or not self._arbitro_exclusivo()))
++                    self._estado_t(gf.estado, gf.motivo, observacao.value)
++                    self._publicar_vel(*cmd)
++                    if gf.estado in ('fim', 'abortar'):
++                        break
++                    time.sleep(0.05)
++            finally:
++                self._parar()
++                if adquirido and gf.estado == 'fim':
++                    req = SetBool.Request()
++                    req.data = False
++                    self._estado_t('devolvendo')
++                    confirmado, motivo = devolver_controle(self.controle_t, req,
++                        lambda: self._publicar_vel(0.0, 0.0, 0.0))
++                    if not confirmado:
++                        gf.abortar(motivo)
++                # Em falha, watchdog estaciona o arbitro sem liberar fontes normais.
++                self.controle_t_ativo = False
++                self._estado_t(gf.estado, gf.motivo)
++                self.get_logger().info('%s giro frontal: %s %s' % (nome, gf.estado, gf.motivo))
++            return 'ok' if gf.estado == 'fim' else 'falha'
++
+         def _travessia_lateral(self, curva, nome):
+             """v3.11: do cruzamento, sai de lado pelo corredor novo. Devolve 'ok' ou 'falha'."""
+             bx, by = curva['eixo_b']
+@@ -3245,13 +3712,22 @@ def main():
+                         tl.nova_medicao(sc[0], medir_corredor_lateral(
+                             sc[1], tl.lado, tl.largura, self.p('centro_corpo')), sc[2])
+                         tl.nova_folga(sc[0], *folgas_lateral(sc[1], tl.lado))
+-                    pm = self._pose_mapa()
++                    pm = self._pose_mapa_yaw(idade_max=0.3)
+                     if pm is None:
++                        # TF_TOLERA (09/11, missao27): abortava na 1a leitura falha (em 06/11 tolerava
++                        # 1 s). Agora para e espera ate 1 s; se voltar, retoma medindo de novo.
+                         sem_tf_desde = sem_tf_desde or agora
+                         if agora - sem_tf_desde > 1.0:
+-                            tl.abortar('sem TF map->base_link')
++                            tl.abortar('TF map->base_link ausente/desatualizada; restante desconhecido')
+                             break
++                        self._publicar_vel(0.0, 0.0, 0.0)
++                        time.sleep(0.05)
++                        continue
+                     else:
++                        if sem_tf_desde is not None:
++                            tl.retomar(agora - sem_tf_desde, agora, od[1:])
++                            self.get_logger().info('%s: TF_TOLERA: TF voltou apos %.2f s parado' % (
++                                nome, agora - sem_tf_desde))
+                         sem_tf_desde = None
+                         restante = margem - ((pm[0] - sx) * bx + (pm[1] - sy) * by)
+                     tl.gyro = self.gyro_z
+@@ -3278,12 +3754,22 @@ def main():
+ 
+         def _encostar(self, nome):
+             """Da pose de aproximacao: alinha com a face pelo LiDAR e avanca ate a distancia."""
++            try:
++                import yaml
++                with open(self.p('arquivo_areas')) as fp:
++                    face = (yaml.safe_load(fp) or {})['service_areas'][nome]['face']
++                rastreio = RastreioFaceWS(face)
++            except (OSError, KeyError, TypeError, ValueError) as exc:
++                self._parar()
++                self._publicar_resultado(nome, False, 'referencia WS indisponivel: '+str(exc))
++                return
+             enc = Encosto(linear=self.p('encosto_linear'),
+                           distancia_alvo=self.p('distancia_encosto'), para_choque=self.p('para_choque'),
+                           log=lambda m: self.get_logger().info('ENCOSTAR %s: %s' % (nome, m)))
+             self.get_logger().info('ENCOSTAR %s: medindo a face da mesa' % nome)
+             seq = self.scan_seq
+             bloqueado_desde = None
++            motivo_ant = ''
+             try:
+                 while rclpy.ok():
+                     if self._novo_goal_chegou():
+@@ -3303,7 +3789,19 @@ def main():
+                         break
+                     if sq != seq and sc is not None and sc[2] is not None:
+                         seq = sq
+-                        enc.nova_medicao(sc[0], medir_face(sc[1]), sc[2])
++                        pm = self._pose_mapa_yaw(idade_max=0.3)
++                        pose_scan = pose_mapa_no_scan(pm,od[1:],sc[2]) if pm is not None else None
++                        med = rastreio.medir(sc[1],sc[0],sc[2],pose_scan)
++                        enc.nova_medicao(sc[0], med, sc[2])
++                        enc.obstaculo = obstaculo_antes_da_face(sc[1],med,enc.pc)
++                        if med is None:
++                            self.get_logger().info('ENCOSTAR %s: %s' % (nome,rastreio.motivo))
++                        elif rastreio.motivo != motivo_ant:   # FACE_FRAGMENTADA: loga a troca de modo
++                            self.get_logger().info('ENCOSTAR %s: %s (d%.3f c%s a%+.1fg)' % (
++                                nome, rastreio.motivo, med['dist'],
++                                '%+.3f' % med['centro'] if med['centro'] is not None else ' nd',
++                                math.degrees(med['ang'])))
++                        motivo_ant = rastreio.motivo
+                     vx, vy, wz = enc.passo(agora, od[1:])
+                     if enc.estado in ('fim', 'abortar'):
+                         break
+@@ -3408,6 +3906,8 @@ def main():
+                     self.evento.clear()
+                 if goal is None:
+                     continue
++                self.get_logger().info('TRABALHADOR RECEBEU: %s' % (area or 'goal sem area'))
++                self.cancelamento_t.clear()
+                 try:
+                     if self.encostado:
+                         # de frente para a mesa a 8 cm, girar bate a quina: sai de re reto antes
+@@ -3500,6 +4000,12 @@ def main():
+                             info['eixo_graus'], info['largura_mapa'], info['distancia_preparo']))
+                     self._publicar_etapas(etapas)
+                     e = etapas[0]
++                    if (info.get('curva') is not None and self.p('modo_curva_t') == 'giro_frontal'
++                            and not self._precondicoes_t()):
++                        self._parar()
++                        self.get_logger().error('Curva experimental recusada antes do preparo: '
++                            'temporalidade, limites reais de movimento ou cobertura angular insuficientes')
++                        return
+                     ok = self._chegar_preparo(e, 'PREPARO %d (alinhar fora da passagem)' % len(tratadas)) == 'ok'
+                     if ok:
+                         # De perto o mapa da passagem fica melhor: refina uma vez.
+@@ -3535,11 +4041,12 @@ def main():
+                             ax_ = math.cos(math.radians(info['eixo_graus']))
+                             ay_ = math.sin(math.radians(info['eixo_graus']))
+                             jx, jy = curva['juncao']
+-                            parada = (jx - self.p('centro_corpo') * ax_, jy - self.p('centro_corpo') * ay_)
++                            parada = ((jx, jy) if self.p('modo_curva_t') == 'giro_frontal' else
++                                      (jx - self.p('centro_corpo') * ax_, jy - self.p('centro_corpo') * ay_))
+                             self.get_logger().info(
+                                 'Passagem %d termina num cruzamento em (%.2f, %.2f) com curva para a %s: '
+-                                'paro no cruzamento e saio de lado (sem girar)' % (
+-                                    n, jx, jy, 'ESQUERDA' if curva['lado'] > 0 else 'DIREITA'))
++                                'modo de curva: %s' % (
++                                    n, jx, jy, 'ESQUERDA' if curva['lado'] > 0 else 'DIREITA', self.p('modo_curva_t')))
+                         elif info.get('cruzamentos'):
+                             self.get_logger().info('Passagem %d atravessa %d cruzamento(s) reto(s): '
+                                                    'uma travessia so ate (%.2f, %.2f)' % (
+@@ -3547,15 +4054,34 @@ def main():
+                                                        info['saida'][1]))
+                         lado_c = curva['lado'] if curva is not None else None
+                         larg_b = curva.get('largura_b') if curva is not None else None
+-                        r = self._travessia_lidar(info, 'TRAVESSIA %d' % n, parada, lado_c, larg_b)
++                        lado_parada = None if self.p('modo_curva_t') == 'giro_frontal' else lado_c
++                        experimental_t = curva is not None and self.p('modo_curva_t') == 'giro_frontal'
++                        if experimental_t:
++                            r = self._aproximar_t(info, curva, 'TRAVESSIA %d' % n, parada, larg_b)
++                            if r != 'ok':
++                                self.get_logger().error('Aproximacao experimental interrompida, sem retentativa automatica')
++                                return
++                        else:
++                            r = self._travessia_lidar(info, 'TRAVESSIA %d' % n, parada, lado_parada, larg_b)
+                         if r != 'ok':
+                             self.get_logger().warn('Travessia pelo LiDAR falhou: voltando ao preparo '
+                                                    'para tentar de novo.')
+                             if self._chegar_preparo(e, 'PREPARO %d (2a tentativa)' % n) == 'ok':
+-                                r = self._travessia_lidar(info, 'TRAVESSIA %d (2a tentativa)' % n, parada, lado_c, larg_b)
++                                r = self._travessia_lidar(info, 'TRAVESSIA %d (2a tentativa)' % n,
++                                                          parada, lado_parada, larg_b)
+                         if r == 'ok' and curva is not None:
+-                            r = self._travessia_lateral(curva, 'CURVA %d' % n)
++                            if self.p('modo_curva_t') == 'giro_frontal':
++                                r = self._travessia_giro_frontal(curva, 'CURVA %d' % n)
++                            else:
++                                r = self._travessia_lateral(curva, 'CURVA %d' % n)
+                             if r == 'ok':
++                                if self.p('modo_curva_t') == 'giro_frontal':
++                                    self.get_logger().info('Curva concluida e devolucao confirmada: '
++                                        'arbitro parado. Retome explicitamente apos conferir a area.')
++                                    if area is not None:
++                                        self._publicar_resultado(area, False,
++                                            'curva concluida; missao interrompida para retomada supervisionada')
++                                    return
+                                 tratadas.append(curva['entrada_b'])
+                                 continue  # reanalisa o caminho a partir da saida do corredor novo
+                             self.get_logger().error(
+diff --git a/src/robo_navigation/scripts/destravar_node.py b/src/robo_navigation/scripts/destravar_node.py
+index 9c8cc1e..a4f5354 100644
+--- a/src/robo_navigation/scripts/destravar_node.py
++++ b/src/robo_navigation/scripts/destravar_node.py
+@@ -1,31 +1,24 @@
+ #!/usr/bin/env python3
+-"""Recuperacao "destravar" do Nav2 (DESTRAVAR v3, 05/11/2026).
+-
+-v3 (missao18): olha o CAMINHO. Na missao18 o robo empacou com o caminho atras dele (+115-125
+-graus), a frente e a quina esquerda a 1-3 cm de uma peca. O v2 dava re 10 cm; o Nav2 (que nao
+-anda de re e nao conseguia girar ali) voltava a avancar para a frente e o robo voltava para o
+-mesmo lugar, 6 vezes. Agora, a cada chamada (ate 3 passos):
+-  1) se o giro para a direcao do caminho esta livre (corpo + 4,5 cm varrido pelo LiDAR), GIRA
+-     para o caminho (ai o Nav2 segue para a frente);
+-  2) senao, anda direto na direcao do caminho (mecanum anda em qualquer direcao) se o corpo
+-     passa livre (20-25 cm);
+-  3) senao, da re ate 30 cm, o quanto for preciso para o giro ficar livre, e gira;
+-  4) senao, de lado (o lado do caminho primeiro);
+-  e depois de andar confere de novo se ja da para girar.
+-Sem caminho conhecido, faz como o v2: afasta do que encosta e vai para onde tem mais espaco.
+-Com a frente a < 15 cm marca o BLOQUEIO virtual a frente. BLOQUEIO_LOCAL (05/11): vale so no costmap
+-local e por 10 s (era global e local, 30 s). Toda chamada pede um caminho novo; se o planner responder
+-sem caminho, apaga os bloqueios, limpa os costmaps e planeja de novo.
+-
+-CONTORNAR (05/11): com a frente barrada por um objeto pequeno, ve o fim dele, desliza ate vence-lo pelo
+-LiDAR, avanca e so entao devolve ao Nav2 (antes dava re e o Nav2 voltava ao mesmo lugar).
+-
+-v2 (missao17): (1) encostado (folga < 5 cm de um lado): primeiro se afasta para o lado oposto;
+-(2) BLOQUEIO VIRTUAL no /bloqueio_virtual; (3) corrigido o erro do Logger.
+-
+-v1: servidor de acao nav2_msgs/DriveOnHeading "destravar" (dist_to_travel = quanto andar);
+-pelo LiDAR (/scan_nav) escolhe a direcao com mais espaco. Comandos em /cmd_vel_nav (velocity
+-smoother e Collision Monitor depois).
++"""Recuperacao "destravar" do Nav2 (DESTRAVAR v4 / RECUPERACAO_AVANCADA / NAV_INTEGRADA, 10/11/2026).
++
++v4: a DECISAO sai de recuperacao_avancada.py (mesmo diretorio, sem ROS, testado em simulacao):
++  diagnostico (caminho invalido / DWB sem trajetoria / CM / sem progresso fisico / oscilacao / quina) ->
++  contorno normal (devolve ao Nav2 sem mexer) -> CONTORNAR -> lateral com continuacao -> andar no caminho ->
++  giro pelo smart_spin -> re (BLOQUEADA por padrao: permitir_re) -> falha explicita.
++  Cada manobra: para, foto nova do LiDAR, confirma o deslocamento pelo ICP (giro: IMU) e registra no
++  historico; o que falhou ou nao resolveu no mesmo lugar nao se repete. Depois de uma re o no SEMPRE
++  reavalia com foto nova antes de outra manobra. Comando estrangeiro em /cmd_vel_nav, controlador ativo,
++  CM inativo ou sensor parado: para e nao autoriza manobra.
++  Parametros (ros2 param set /destravar ...): permitir_lateral (true), permitir_giro (true),
++  permitir_re (false), cobertura_lateral/giro/re (0.5/0.5/0.9), deriva_lateral (0.4).
++  O servidor continua o mesmo (nav2_msgs/DriveOnHeading "destravar"): a arvore e o ANTI_CISCADO do
++  alinhador chamam do mesmo jeito.
++
++v3 (missao18): girar para o caminho / andar na direcao dele / re ate o giro ficar livre / de lado.
++  No v4 o "re_girar" (re seguida de giro sem nova avaliacao) deixou de existir.
++BLOQUEIO_LOCAL e CONTORNAR (05/11): mantidos (bloqueio virtual 10 s so no local; CONTORNAR agora
++  confere tambem a deriva para a frente do deslize e o poligono do CM).
++v2 (missao17): afastar do que encosta; BLOQUEIO VIRTUAL.  v1: servidor DriveOnHeading "destravar".
+ 
+ Uso:
+     python3 destravar_node.py      # o NAV_TUDO sobe junto com o Nav2
+@@ -213,7 +206,12 @@ def plano_contornar(pts, ang_plano):
+     return {'uy': uy, 's': s, 'ymin': min(ys), 'ymax': max(ys)}
+ 
+ 
++
+ def main():
++    import json
++    import os
++    import sys
++    from collections import deque
+     import rclpy
+     from rclpy.action import ActionClient, ActionServer, CancelResponse
+     from rclpy.callback_groups import ReentrantCallbackGroup
+@@ -223,51 +221,79 @@ def main():
+     from rclpy.time import Time
+     from builtin_interfaces.msg import Duration
+     from geometry_msgs.msg import TwistStamped
++    from lifecycle_msgs.srv import GetState
+     from nav_msgs.msg import Odometry, Path
+-    from nav2_msgs.action import ComputePathToPose, DriveOnHeading
+-    from nav2_msgs.srv import ClearEntireCostmap  # BLOQUEIO_LOCAL
++    from nav2_msgs.action import ComputePathToPose, DriveOnHeading, Spin
++    from nav2_msgs.srv import ClearEntireCostmap, IsPathValid  # BLOQUEIO_LOCAL
+     from nav2_msgs.msg import CollisionMonitorState
+     from sensor_msgs.msg import LaserScan, PointCloud2
+     from sensor_msgs_py import point_cloud2
+-    from std_msgs.msg import Header
++    from std_msgs.msg import Header, String
+     from tf2_ros import Buffer, TransformListener
+ 
++    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
++    import recuperacao_avancada as ra
++
+     def yaw_q(q):
+         return math.atan2(2 * (q.w * q.z + q.x * q.y), 1 - 2 * (q.y * q.y + q.z * q.z))
+ 
++    geo = sys.modules[__name__]
++
+     class Destravar(Node):
+         def __init__(self):
+             super().__init__('destravar')
+             g = ReentrantCallbackGroup()
++            self.g = g
+             self.lock = threading.Lock()
++            for nome, valor in (('permitir_lateral', True), ('permitir_giro', True), ('permitir_re', False),
++                                ('cobertura_lateral', 0.5), ('cobertura_giro', 0.5), ('cobertura_re', 0.9),
++                                ('deriva_lateral', 0.4)):
++                self.declare_parameter(nome, valor)
+             self.pts = None
++            self.raios = None
+             self.odom = None
+             self.plano = None      # (t, [(x, y)] no map)
++            self.plano_msg = None
+             self.goal_plano = None # ultima pose do /plan (o destino do Nav2)
+             self.cm_stop = False
++            self.cm_stop_t = None
++            self.meus = deque(maxlen=400)   # stamps (ns) que eu publiquei em /cmd_vel_nav
++            self.estrangeiro_t = None       # ultimo comando nao nulo de OUTRO no em /cmd_vel_nav
++            self.ctrl_t = None              # ultimo comando nao nulo do controlador (/cmd_vel_ctrl)
++            self.ctrl_hist = deque(maxlen=200)  # (t, vx, vy, wz)
++            self.scans = deque(maxlen=60)   # (t, pontos) para o ICP da janela
++            self.yaws = deque(maxlen=300)   # (t, yaw imu)
++            self.em_spin = False
++            self.gh_atual = None
+             self.create_subscription(LaserScan, '/scan_nav', self.ao_scan, qos_profile_sensor_data, callback_group=g)
+             self.create_subscription(Odometry, '/odom', self.ao_odom, 20, callback_group=g)
+             self.create_subscription(Path, '/plan', self.ao_plano, 5, callback_group=g)
+             self.create_subscription(CollisionMonitorState, '/collision_monitor_state', self.ao_cm, 10, callback_group=g)
++            self.create_subscription(TwistStamped, '/cmd_vel_nav', self.ao_cmd_nav, 20, callback_group=g)
++            self.create_subscription(TwistStamped, '/cmd_vel_ctrl', self.ao_ctrl, 20, callback_group=g)
+             self.pub = self.create_publisher(TwistStamped, '/cmd_vel_nav', 10)
++            self.pub_estado = self.create_publisher(String, '/destravar/estado', 10)
+             self.tf_buffer = Buffer()
+             self.tf_listener = TransformListener(self.tf_buffer, self)
+             self.bloqueios = []
+             self.pub_bloq = self.create_publisher(PointCloud2, '/bloqueio_virtual', 1)
+             self.create_timer(0.5, self.publicar_bloqueio, callback_group=g)
+             self.cli_plano = ActionClient(self, ComputePathToPose, 'compute_path_to_pose', callback_group=g)
+-            # BLOQUEIO_LOCAL: limpar as marcas quando o bloqueio vence ou e apagado
++            self.cli_spin = ActionClient(self, Spin, 'smart_spin', callback_group=g)
++            self.cli_valido = self.create_client(IsPathValid, 'is_path_valid', callback_group=g)
++            self.cli_cm = self.create_client(GetState, 'collision_monitor/get_state', callback_group=g)
+             self.limpar_local_pendente = False
+-            self.ult_contorno = None  # CONTORNAR: (t, x, y) na odom
+             self.t_aviso_sensor = 0.0  # SENSOR_PARADO
+             self.cli_limpar_global = self.create_client(
+                 ClearEntireCostmap, 'global_costmap/clear_entirely_global_costmap', callback_group=g)
+             self.cli_limpar_local = self.create_client(
+                 ClearEntireCostmap, 'local_costmap/clear_entirely_local_costmap', callback_group=g)
++            self.hist = ra.Historico()
+             ActionServer(self, DriveOnHeading, 'destravar', self.executar, callback_group=g,
+                          cancel_callback=lambda _: CancelResponse.ACCEPT)
+-            self.get_logger().info('Destravar v3 pronto (acao /destravar): gira para o caminho, anda para ele, '
+-                                   're ate poder girar, ou vai para onde tem mais espaco.')
++            self.get_logger().info('Destravar v4 pronto (acao /destravar): diagnostica, devolve ao Nav2 se ainda '
++                                   'contorna, desliza com continuacao, gira pelo smart_spin; re %s.' % (
++                                       'LIBERADA' if self.get_parameter('permitir_re').value else 'BLOQUEADA'))
+ 
+         # ---------------- entradas ----------------
+         def ao_scan(self, m):
+@@ -279,20 +305,54 @@ def main():
+                     a = m.angle_min + i * m.angle_increment
+                     px, py = r * math.cos(a), r * math.sin(a)
+                     pts.append((lx + c * px - s * py, ly + s * px + c * py))
++            agora = time.monotonic()
++            raios = ra.Raios(m.angle_min, m.angle_increment, tuple(m.ranges), max(m.range_min, 0.146),
++                             m.range_max, LASER, agora)
+             with self.lock:
+-                self.pts = (time.monotonic(), pts)
++                self.pts = (agora, pts)
++                self.raios = raios
++                self.scans.append((agora, pts))
+ 
+         def ao_odom(self, m):
+             with self.lock:
+                 self.odom = (time.monotonic(), m.pose.pose.position.x, m.pose.pose.position.y,
+                              yaw_q(m.pose.pose.orientation))
++                self.yaws.append((self.odom[0], self.odom[3]))
+ 
+         def ao_plano(self, m):
+             with self.lock:
+                 self.plano = (time.monotonic(), [(p.pose.position.x, p.pose.position.y) for p in m.poses])
++                self.plano_msg = m
+                 if m.poses:
+                     self.goal_plano = m.poses[-1]
+ 
++        def ao_cm(self, m):
++            self.cm_stop = m.action_type == 1
++            if self.cm_stop:
++                self.cm_stop_t = time.monotonic()
++
++        def ao_cmd_nav(self, m):
++            st = m.header.stamp.sec * 1000000000 + m.header.stamp.nanosec
++            t = m.twist
++            if st in self.meus or not (abs(t.linear.x) > 1e-3 or abs(t.linear.y) > 1e-3 or abs(t.angular.z) > 1e-3):
++                return
++            if self.em_spin:      # o smart_spin (behavior_server) comanda por mim durante o giro
++                return
++            self.estrangeiro_t = time.monotonic()
++
++        def ao_ctrl(self, m):
++            t = m.twist
++            agora = time.monotonic()
++            self.ctrl_hist.append((agora, t.linear.x, t.linear.y, t.angular.z))
++            if abs(t.linear.x) > 1e-3 or abs(t.linear.y) > 1e-3 or abs(t.angular.z) > 1e-3:
++                self.ctrl_t = agora
++
++        def _esperar(self, fut, timeout):
++            t1 = time.monotonic() + timeout
++            while not fut.done() and time.monotonic() < t1:
++                time.sleep(0.02)
++            return fut.result() if fut.done() else None
++
+         def replanejar(self, timeout=5.0):
+             """Pede um caminho novo ao planner. True: veio; False: o planner respondeu sem caminho;
+             None: nao deu para perguntar (sem goal, sem servidor ou sem resposta a tempo)."""
+@@ -304,29 +364,39 @@ def main():
+             req.goal = goal
+             req.planner_id = 'GridBased'
+             req.use_start = False
+-            fut = self.cli_plano.send_goal_async(req)
+-            t1 = time.monotonic() + timeout
+-            while not fut.done() and time.monotonic() < t1:
+-                time.sleep(0.05)
+-            if not fut.done() or not fut.result().accepted:
++            h = self._esperar(self.cli_plano.send_goal_async(req), timeout)
++            if h is None or not h.accepted:
+                 return None
+-            fr = fut.result().get_result_async()
+-            while not fr.done() and time.monotonic() < t1:
+-                time.sleep(0.05)
+-            if not fr.done():
++            r = self._esperar(h.get_result_async(), timeout)
++            if r is None:
+                 return None
+-            if not fr.result().result.path.poses:
++            if not r.result.path.poses:
+                 return False
+-            pts = [(p.pose.position.x, p.pose.position.y) for p in fr.result().result.path.poses]
++            pts = [(p.pose.position.x, p.pose.position.y) for p in r.result.path.poses]
+             with self.lock:
+                 self.plano = (time.monotonic(), pts)
++                self.plano_msg = r.result.path
+             self.get_logger().info('DESTRAVAR: caminho novo (%d pontos)' % len(pts))
+             return True
+ 
+-        def ao_cm(self, m):
+-            self.cm_stop = m.action_type == 1
++        def caminho_valido(self):
++            with self.lock:
++                m = self.plano_msg
++            if m is None or not m.poses or not self.cli_valido.wait_for_service(timeout_sec=0.5):
++                return None
++            req = IsPathValid.Request()
++            req.path = m
++            r = self._esperar(self.cli_valido.call_async(req), 2.0)
++            return None if r is None else bool(r.is_valid)
++
++        def cm_ativo(self):
++            """Collision Monitor no estado 'active' do ciclo de vida (3)."""
++            if not self.cli_cm.wait_for_service(timeout_sec=0.5):
++                return False
++            r = self._esperar(self.cli_cm.call_async(GetState.Request()), 1.0)
++            return r is not None and r.current_state.id == 3
+ 
+-        # ---------------- bloqueio virtual ----------------
++        # ---------------- bloqueio virtual (v3, igual) ----------------
+         def pose_map(self):
+             try:
+                 tr = self.tf_buffer.lookup_transform('map', 'base_link', Time())
+@@ -376,10 +446,7 @@ def main():
+             time.sleep(0.6)  # o costmap guarda a ultima nuvem: limpar antes marcaria tudo de novo
+             for cli in (self.cli_limpar_global, self.cli_limpar_local):
+                 if cli.service_is_ready():
+-                    fut = cli.call_async(ClearEntireCostmap.Request())
+-                    t1 = time.monotonic() + 1.0
+-                    while not fut.done() and time.monotonic() < t1:
+-                        time.sleep(0.05)
++                    self._esperar(cli.call_async(ClearEntireCostmap.Request()), 1.0)
+             time.sleep(0.6)  # o costmap global atualiza a 2 Hz
+             self.get_logger().info('BLOQUEIO: sem caminho: apaguei %d bloqueio(s), limpei os costmaps e planejo de novo' % n)
+ 
+@@ -397,6 +464,7 @@ def main():
+             t.header.stamp = self.get_clock().now().to_msg()
+             t.header.frame_id = 'base_link'
+             t.twist.linear.x, t.twist.linear.y, t.twist.angular.z = float(vx), float(vy), float(wz)
++            self.meus.append(t.header.stamp.sec * 1000000000 + t.header.stamp.nanosec)
+             self.pub.publish(t)
+ 
+         def parar(self):
+@@ -404,60 +472,6 @@ def main():
+                 self.vel(0.0, 0.0, 0.0)
+                 time.sleep(0.05)
+ 
+-        def andar(self, gh, ux, uy, d, vcmd, t_fim):
+-            """Anda d m na direcao (ux, uy) do base_link. Devolve quanto andou."""
+-            with self.lock:
+-                od0 = self.odom
+-            c0, s0 = math.cos(od0[3]), math.sin(od0[3])
+-            feito, cm_desde = 0.0, None
+-            while rclpy.ok() and not gh.is_cancel_requested and time.monotonic() < t_fim:
+-                with self.lock:
+-                    pts, od = self.pts, self.odom
+-                dx, dy = od[1] - od0[1], od[2] - od0[2]
+-                feito = (c0 * dx + s0 * dy) * ux + (-s0 * dx + c0 * dy) * uy
+-                if feito >= d - 0.01 or not translacao_livre(pts[1], ux, uy, 0.04):
+-                    break
+-                if self.cm_stop:
+-                    cm_desde = cm_desde or time.monotonic()
+-                    if time.monotonic() - cm_desde > 1.0:
+-                        break
+-                else:
+-                    cm_desde = None
+-                self.vel(vcmd * ux, vcmd * uy)
+-                time.sleep(0.05)
+-            self.parar()
+-            time.sleep(0.3)
+-            with self.lock:
+-                od = self.odom
+-            dx, dy = od[1] - od0[1], od[2] - od0[2]
+-            return (c0 * dx + s0 * dy) * ux + (-s0 * dx + c0 * dy) * uy
+-
+-        def girar(self, gh, ang, t_fim, wz=0.15):
+-            """Gira ang rad no lugar (pela odom/IMU). Devolve quanto girou (rad, com sinal)."""
+-            with self.lock:
+-                y0 = self.odom[3]
+-            girado, ant, cm_desde = 0.0, y0, None
+-            while rclpy.ok() and not gh.is_cancel_requested and time.monotonic() < t_fim:
+-                with self.lock:
+-                    y = self.odom[3]
+-                girado += math.atan2(math.sin(y - ant), math.cos(y - ant))
+-                ant = y
+-                if abs(girado) >= abs(ang) - math.radians(4):
+-                    break
+-                if self.cm_stop:
+-                    cm_desde = cm_desde or time.monotonic()
+-                    if time.monotonic() - cm_desde > 1.0:
+-                        break
+-                else:
+-                    cm_desde = None
+-                self.vel(0.0, 0.0, math.copysign(wz, ang))
+-                time.sleep(0.05)
+-            self.parar()
+-            time.sleep(0.3)
+-            with self.lock:
+-                y = self.odom[3]
+-            return girado + math.atan2(math.sin(y - ant), math.cos(y - ant))
+-
+         def direcao_caminho(self):
+             """Angulo (base_link) do ponto do /plan a ~0,45 m do robo, ou None."""
+             with self.lock:
+@@ -472,67 +486,60 @@ def main():
+             a = math.atan2(alvo[1] - y, alvo[0] - x) - yaw
+             return math.atan2(math.sin(a), math.cos(a))
+ 
+-        # ---------------- CONTORNAR ----------------
+-        def plano_contorno(self, pts):
+-            """Decide se contorna: fora do destino e sem repetir no mesmo lugar."""
+-            with self.lock:
+-                pl, od = self.plano, self.odom
+-            p = self.pose_map()
+-            if pl is None or p is None or not pl[1] or od is None:
+-                return None
+-            if math.hypot(pl[1][-1][0] - p[0], pl[1][-1][1] - p[1]) < DESTINO_MIN:
+-                return None
+-            if self.ult_contorno is not None and time.monotonic() - self.ult_contorno[0] < 30.0 \
+-                    and math.hypot(od[1] - self.ult_contorno[1], od[2] - self.ult_contorno[2]) < 0.10:
+-                return None
+-            return plano_contornar(pts, self.direcao_caminho())
+-
+-        def contornar(self, gh, pl, t_fim):
+-            """Desliza ate vencer o obstaculo e avanca. Devolve a mensagem, ou None se nao venceu."""
+-            uy = pl['uy']
+-            lado = 'esq' if uy > 0 else 'dir'
+-            with self.lock:
+-                pts, od = self.pts, self.odom
+-            self.ult_contorno = (time.monotonic(), od[1], od[2])
+-            self.get_logger().info('CONTORNAR: obstaculo de y %+.0f a %+.0f cm: deslizo %.0f cm para %s' % (
+-                100 * pl['ymin'], 100 * pl['ymax'], 100 * pl['s'], lado))
+-            if folga(pts[1], 'frente') < 0.04 and translacao_livre(pts[1], -1.0, 0.0, 0.05):
+-                self.andar(gh, -1.0, 0.0, 0.04, 0.05, t_fim)
+-            with self.lock:
+-                od0 = self.odom
+-            c0, s0 = math.cos(od0[3]), math.sin(od0[3])
+-            _, _, y1 = FOOTPRINT
+-            lat, livres, ult_scan, cm_desde, venci = 0.0, 0, None, None, False
+-            while rclpy.ok() and not gh.is_cancel_requested and time.monotonic() < t_fim:
+-                with self.lock:
+-                    pts, od = self.pts, self.odom
+-                dx, dy = od[1] - od0[1], od[2] - od0[2]
+-                lat = (-s0 * dx + c0 * dy) * uy
+-                if pts[0] != ult_scan:  # scan novo: a faixa esta livre? 2 seguidos, um raio pode falhar
+-                    ult_scan = pts[0]
+-                    livres = 0 if barrando(pts[1], y1 + MARGEM_LADO) else livres + 1
+-                if livres >= 2 and lat >= 0.5 * pl['s']:  # a odom de lado superestima
+-                    venci = True
+-                    break
+-                # so olha o lado para onde vai: o obstaculo que fica para tras nao barra o deslize
+-                if lat >= pl['s'] + 0.10 or not translacao_livre([p for p in pts[1] if p[1] * uy > 0], 0.0, uy, 0.04):
+-                    break
+-                if self.cm_stop:
+-                    cm_desde = cm_desde or time.monotonic()
+-                    if time.monotonic() - cm_desde > 1.0:
+-                        break
+-                else:
+-                    cm_desde = None
+-                self.vel(0.0, 0.08 * uy)
+-                time.sleep(0.05)
+-            self.parar()
+-            time.sleep(0.3)
+-            if not venci:
+-                self.get_logger().warn('CONTORNAR: nao venci depois de %.0f cm para %s' % (100 * lat, lado))
+-                return None
+-            f = self.andar(gh, 1.0, 0.0, AVANCO, 0.10, t_fim)
+-            self.get_logger().info('CONTORNAR: venci: %.0f cm para %s e %.0f cm para frente' % (100 * lat, lado, 100 * f))
+-            return 'contornei: %.0f cm para %s + %.0f cm para frente' % (100 * lat, lado, 100 * f)
++        def smart_spin(self, ang, tmax):
++            """Giro pelo smart_spin (micro-giros do Spin nativo, arco conferido no costmap, yaw por TF)."""
++            if not self.cli_spin.wait_for_server(timeout_sec=1.0):
++                return False, 'smart_spin indisponivel'
++            req = Spin.Goal()
++            req.target_yaw = float(ang)
++            req.time_allowance.sec = int(tmax)
++            self.em_spin = True
++            try:
++                h = self._esperar(self.cli_spin.send_goal_async(req), 2.0)
++                if h is None or not h.accepted:
++                    return False, 'smart_spin recusou'
++                fr = h.get_result_async()
++                t1 = time.monotonic() + tmax + 2.0
++                while not fr.done() and time.monotonic() < t1:
++                    if self.gh_atual is not None and self.gh_atual.is_cancel_requested:
++                        h.cancel_goal_async()
++                        return False, 'cancelado'
++                    time.sleep(0.05)
++                if not fr.done():
++                    h.cancel_goal_async()
++                    return False, 'smart_spin sem resposta'
++                r = fr.result()
++                ok = r.status == 4 and r.result.error_code == 0   # STATUS_SUCCEEDED
++                msg = getattr(r.result, 'error_msg', '') or ('ok' if ok else 'falhou (%d)' % r.result.error_code)
++                return ok, msg
++            finally:
++                time.sleep(0.3)
++                self.em_spin = False
++
++        def janela(self, seg=4.0):
++            """Evidencias dos ultimos seg: controlador, CM, inversoes, deslocamento fisico (ICP) e giro (IMU)."""
++            agora = time.monotonic()
++            hist = [h for h in list(self.ctrl_hist) if agora - h[0] <= seg]
++            ativos = [h for h in hist if abs(h[1]) > 1e-3 or abs(h[2]) > 1e-3 or abs(h[3]) > 1e-3]
++            ativo_s = 0.0
++            if ativos:
++                ativo_s = min(seg, ativos[-1][0] - ativos[0][0])
++            inv = 0
++            for k in (2, 3):
++                sinais = [math.copysign(1, h[k]) for h in ativos if abs(h[k]) > 0.02]
++                inv += sum(1 for a, b in zip(sinais, sinais[1:]) if a != b)
++            scans = [s for s in list(self.scans) if agora - s[0] <= seg + 0.5]
++            desloc = None
++            if len(scans) >= 2 and agora - scans[0][0] >= seg * 0.6:
++                m = ra.medir_deslocamento(scans[0][1], scans[-1][1], res_max=0.04, amb_max=0.06)
++                if m.ok:
++                    desloc = math.hypot(m.dx, m.dy)
++            ys = [y for y in list(self.yaws) if agora - y[0] <= seg]
++            giro = ra.ang_norm(ys[-1][1] - ys[0][1]) if len(ys) >= 2 else None
++            return {'ctrl_parado_s': None if self.ctrl_t is None else agora - self.ctrl_t,
++                    'ctrl_ativo_s': ativo_s,
++                    'cm_stop_s': None if self.cm_stop_t is None else agora - self.cm_stop_t,
++                    'desloc_janela': desloc, 'giro_janela': giro, 'inversoes': inv}
+ 
+         # ---------------- a acao ----------------
+         def executar(self, gh):
+@@ -541,104 +548,138 @@ def main():
+             dist = max(0.10, min(0.40, abs(req.target.x) or 0.15))
+             vcmd = max(0.02, min(0.06, abs(req.speed) or 0.03))
+             tmax = (req.time_allowance.sec + req.time_allowance.nanosec * 1e-9) or 10.0
+-            t_fim = t0 + max(tmax, 12.0)
++            tmax = max(tmax, 12.0)
++            cfg = ra.Config(permitir_lateral=bool(self.get_parameter('permitir_lateral').value),
++                            permitir_giro=bool(self.get_parameter('permitir_giro').value),
++                            permitir_re=bool(self.get_parameter('permitir_re').value),
++                            cobertura_lateral=float(self.get_parameter('cobertura_lateral').value),
++                            cobertura_giro=float(self.get_parameter('cobertura_giro').value),
++                            cobertura_re=float(self.get_parameter('cobertura_re').value),
++                            deriva_lateral=float(self.get_parameter('deriva_lateral').value))
++            self.gh_atual = gh
+             res = DriveOnHeading.Result()
+-
+-            def fim(ok, msg):
++            try:
++                ok, msg, _ = ra.Recuperador(IoRos(self), geo, cfg, self.hist).executar(dist, vcmd, tmax)
++            except Exception as exc:  # nunca deixa o robo andando
++                ok, msg = False, 'erro interno: %r' % (exc,)
++                self.get_logger().error('DESTRAVAR: ' + msg)
++            finally:
+                 self.parar()
+-                dt = time.monotonic() - t0
+-                res.total_elapsed_time = Duration(sec=int(dt), nanosec=int(dt % 1 * 1e9))
+-                res.error_code = 0 if ok else 1
+-                try:
+-                    res.error_msg = msg
+-                except Exception:
+-                    pass
+-                if ok:
+-                    self.get_logger().info('DESTRAVAR: ' + msg)
+-                    gh.succeed()
++                self.gh_atual = None
++            dt = time.monotonic() - t0
++            res.total_elapsed_time = Duration(sec=int(dt), nanosec=int(dt % 1 * 1e9))
++            res.error_code = 0 if ok else 1
++            try:
++                res.error_msg = msg[:250]
++            except Exception:
++                pass
++            if ok:
++                self.get_logger().info('DESTRAVAR: ' + msg)
++                gh.succeed()
++            else:
++                self.get_logger().warn('DESTRAVAR: ' + msg)
++                if gh.is_cancel_requested:
++                    gh.canceled()
+                 else:
+-                    self.get_logger().warn('DESTRAVAR: ' + msg)
+-                    if gh.is_cancel_requested:
+-                        gh.canceled()
+-                    else:
+-                        gh.abort()
+-                return res
++                    gh.abort()
++            return res
+ 
+-            with self.lock:
+-                pts, od = self.pts, self.odom
+-            if pts is None or od is None or time.monotonic() - pts[0] > 0.5 or time.monotonic() - od[0] > 0.5:  # SENSOR_PARADO: era 1,0
+-                return fim(False, 'sem scan ou odom recente')
+-            sem_caminho = self.replanejar() is False
+-            if sem_caminho:              # BLOQUEIO_LOCAL: sem caminho: apaga, limpa e planeja sem ele
+-                self.soltar_bloqueio()
+-                self.replanejar()
+-            with self.lock:
+-                pts = self.pts
+-            if folga(pts[1], 'frente') < 0.15:
+-                pl_cont = self.plano_contorno(pts[1])   # CONTORNAR: vence o obstaculo antes de tudo
+-                if pl_cont is not None:
+-                    msg_cont = self.contornar(gh, pl_cont, t_fim)
+-                    if msg_cont is not None:
+-                        return fim(True, msg_cont)
+-                if not sem_caminho:
+-                    self.marcar_frente()
+-                    time.sleep(0.4)      # BLOQUEIO_LOCAL: o costmap local atualiza a 5 Hz
+-            feitos = []
+-            for passo in range(3):
+-                with self.lock:
+-                    pts = self.pts
+-                ang = self.direcao_caminho()
+-                txt = ', '.join('%s %s' % (d, '-' if f >= 9 else '%.0f cm' % (100 * f))
+-                                for d, f in ((d, folga(pts[1], d)) for d in DIRECOES))
+-                dec = plano_destravar(pts[1], ang, dist=max(dist, 0.25)) if ang is not None else None
+-                self.get_logger().info('DESTRAVAR passo %d: caminho %s | folgas %s -> %s' % (
+-                    passo + 1, '-' if ang is None else '%+.0f graus' % math.degrees(ang), txt,
+-                    'sem caminho: mais espaco' if dec is None and ang is None else (dec[0] if dec else 'nada livre')))
+-                if dec is None:
+-                    if feitos:
+-                        break
+-                    direcao, quanto, _ = escolher(pts[1], dist)
+-                    if direcao is None:
+-                        return fim(False, 'sem espaco em nenhuma direcao (%s)' % txt)
+-                    ux, uy = DIRECOES[direcao]
+-                    f = self.andar(gh, ux, uy, quanto, vcmd, t_fim)
+-                    feitos.append('%.0f cm para %s' % (100 * f, direcao))
+-                    break
+-                if dec[0] == 'girar':
+-                    g = self.girar(gh, dec[1], t_fim)
+-                    feitos.append('girei %+.0f graus' % math.degrees(g))
+-                    break
+-                if dec[0] == 're_girar':
+-                    f = self.andar(gh, -1.0, 0.0, dec[1], vcmd, t_fim)
+-                    g = self.girar(gh, dec[2], t_fim)
+-                    feitos.append('re %.0f cm e girei %+.0f graus' % (100 * f, math.degrees(g)))
+-                    break
+-                _, ux, uy, d, motivo = dec
+-                f = self.andar(gh, ux, uy, d, vcmd, t_fim)
+-                feitos.append('%.0f cm %s (%+.0f graus)' % (100 * f, motivo, math.degrees(math.atan2(uy, ux))))
+-                if f < 0.03 or time.monotonic() > t_fim - 3.0:
+-                    break
+-            if not feitos:
+-                return fim(False, 'nao consegui me mexer')
+-            with self.lock:
+-                od2 = self.odom
+-            moveu = math.hypot(od2[1] - od[1], od2[2] - od[2])
+-            girou = abs(math.atan2(math.sin(od2[3] - od[3]), math.cos(od2[3] - od[3])))
+-            msg = ' + '.join(feitos)
+-            if moveu >= 0.03 or girou >= math.radians(10):
+-                return fim(True, msg)
+-            return fim(False, 'quase nao saiu do lugar (%s)' % msg)
++    class IoRos:
++        """Interface do Recuperador sobre o no ROS."""
++
++        def __init__(self, no):
++            self.no = no
++
++        def agora(self):
++            return time.monotonic()
++
++        def dormir(self, s):
++            time.sleep(s)
++
++        def scan(self):
++            return self.no.raios
++
++        def odom(self):
++            return self.no.odom
++
++        def pose_ref(self):
++            p = self.no.pose_map()
++            return None if p is None else (p[0], p[1])
++
++        def goal(self):
++            g = self.no.goal_plano
++            return None if g is None else (g.pose.position.x, g.pose.position.y)
++
++        def enviar(self, vx, vy, wz):
++            self.no.vel(vx, vy, wz)
++
++        def parar(self):
++            self.no.vel(0.0, 0.0, 0.0)
++
++        def cancelado(self):
++            h = self.no.gh_atual
++            return h is not None and h.is_cancel_requested
++
++        def cm_stop(self):
++            return self.no.cm_stop
++
++        def cm_ativo(self):
++            return self.no.cm_ativo()
++
++        def ultimo_estrangeiro(self):
++            return self.no.estrangeiro_t
++
++        def ultimo_ctrl(self):
++            return self.no.ctrl_t
++
++        def replanejar(self):
++            return self.no.replanejar()
++
++        def soltar_bloqueio(self):
++            self.no.soltar_bloqueio()
++
++        def marcar_frente(self):
++            self.no.marcar_frente()
++            time.sleep(0.4)      # BLOQUEIO_LOCAL: o costmap local atualiza a 5 Hz
++
++        def caminho_valido(self):
++            return self.no.caminho_valido()
++
++        def direcao_caminho(self):
++            return self.no.direcao_caminho()
++
++        def janela(self):
++            return self.no.janela()
++
++        def smart_spin(self, ang, tmax):
++            return self.no.smart_spin(ang, tmax)
++
++        def log(self, nivel, txt):
++            # o rclpy nao aceita a mesma linha de log com severidades diferentes: uma chamada por nivel
++            if nivel == 'warn':
++                self.no.get_logger().warn('DESTRAVAR: ' + txt)
++            else:
++                self.no.get_logger().info('DESTRAVAR: ' + txt)
++
++        def estado(self, rel):
++            try:
++                self.no.pub_estado.publish(String(data=json.dumps(rel, ensure_ascii=False, default=str)))
++            except Exception:
++                pass
+ 
+     rclpy.init()
+     no = Destravar()
+-    ex = MultiThreadedExecutor(num_threads=4)
++    ex = MultiThreadedExecutor(num_threads=6)
+     ex.add_node(no)
+     try:
+         ex.spin()
+     except KeyboardInterrupt:
+         pass
+     finally:
+-        no.parar()
++        try:
++            no.parar()          # pode falhar se o SIGINT ja fechou o contexto
++        except Exception:
++            pass
+         no.destroy_node()
+         rclpy.try_shutdown()
+ 
+diff --git a/src/robo_navigation/scripts/executor_prova.py b/src/robo_navigation/scripts/executor_prova.py
+index 75bf535..239160e 100644
+--- a/src/robo_navigation/scripts/executor_prova.py
++++ b/src/robo_navigation/scripts/executor_prova.py
+@@ -236,9 +236,26 @@ def executar(tarefa, passos, args):
+                     return True
+             return cond()
+ 
++        # SONDA_ENTREGA (09/11): get_subscription_count() > 0 nao garante que o
++        # alinhador ja descobriu este publicador; a 1a mensagem se perdia (medido:
++        # 5/10 perdidas sem espera, 3/10 com 1 s). Manda um nome invalido ate o
++        # alinhador responder "FALHOU area desconhecida" (nao mexe no robo):
++        # so entao o caminho esta ligado nos dois sentidos.
++        def sondar(self, limite=20.0):
++            sonda = '_SONDA_EXECUTOR'
++            fim = time.monotonic() + limite
++            while rclpy.ok() and time.monotonic() < fim:
++                self.pub.publish(String(data=sonda))
++                if self.esperar(0.5, lambda: any(r.split()[:1] == [sonda] for r in self.res)):
++                    self.ligado = True
++                    return True
++            return False
++
+         def ir(self, area, timeout):
+             if not self.esperar(10.0, lambda: self.pub.get_subscription_count() > 0):
+                 return None, 'ninguem escutando /ir_para_area (alinhador v3.9 rodando?)'
++            if not getattr(self, 'ligado', False) and not self.sondar():
++                return None, 'alinhador nao respondeu a sonda em 20 s (SONDA_ENTREGA)'
+             self.res.clear()
+             m = String()
+             m.data = area

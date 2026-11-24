@@ -1,0 +1,8 @@
+test_all_service_candidates_keep_objects_and_height (test_development_v2.DevelopmentTests.test_all_service_candidates_keep_objects_and_height) ... ok
+test_native_preserves_dynamics_and_sensors (test_development_v2.DevelopmentTests.test_native_preserves_dynamics_and_sensors) ... ok
+test_waypoints_use_estimate_not_true_pose (test_development_v2.DevelopmentTests.test_waypoints_use_estimate_not_true_pose) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.860s
+
+OK

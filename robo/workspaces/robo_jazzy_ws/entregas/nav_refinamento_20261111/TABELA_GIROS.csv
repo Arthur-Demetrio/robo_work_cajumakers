@@ -1,0 +1,12 @@
+hora,t_rel,duracao_s,delta_imu_graus,origem,yaw_atual_mapa,yaw_goal,heading_plano_0_5m,goal_novo_ate_20s,obstaculo_ou_quina,resultado,log
+12:35:00.54,100.3,5.5,74,alinhador VIRAR_CAMINHO (pre-giro),1,5,79,True,True,SUCESSO,GOAL FINAL (virar para o caminho): andei 20 cm para dir
+12:36:21.07,180.8,6.5,-69,DWB (Nav2 controller),89,5,126,False,False,,
+12:36:28.24,188.0,6.1,-115,alinhador VIRAR_CAMINHO (pre-giro),16,5,-104,True,False,SUCESSO,GOAL FINAL (virar para o caminho): o caminho sai a -119 graus da frente: viro antes do Nav2
+12:36:51.60,211.3,3.9,52,alinhador VIRAR_CAMINHO (pre-giro),-110,5,-55,False,True,SUCESSO,GOAL FINAL (virar para o caminho): andei 9 cm para tras
+12:37:22.71,242.5,3.9,57,DWB (Nav2 controller),-85,5,-90,False,False,,
+12:37:27.82,247.6,14.0,151,DWB (Nav2 controller),-19,5,,False,True,,
+12:37:43.87,263.6,4.5,-61,alinhador VIRAR_CAMINHO (pre-giro),120,5,63,True,True,SUCESSO,GOAL FINAL (virar para o caminho): andei 3 cm para dir
+12:38:20.78,300.5,3.5,48,alinhador VIRAR_CAMINHO (pre-giro),72,5,129,True,True,SUCESSO,GOAL FINAL (virar para o caminho): andei 3 cm para tras
+12:38:40.79,320.5,4.0,-54,DWB (Nav2 controller),111,5,104,False,False,,
+12:38:45.80,325.5,5.6,-106,alinhador VIRAR_CAMINHO (pre-giro),49,5,-61,True,False,SUCESSO,PREPARO 1 (alinhar fora da passagem) (posicao) (virar para o caminho): o caminho sai a -110 graus da frente: viro antes 
+12:42:41.60,561.3,4.8,92,alinhador TRAJETO_CURTO (yaw final),-103,-2,-68,False,True,,TRAJETO CURTO: andei 36 cm para esq

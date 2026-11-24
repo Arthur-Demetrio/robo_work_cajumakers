@@ -1,0 +1,26 @@
+command_imu_odometry:
+  ros__parameters:
+    use_sim_time: false
+    cmd_vel_topic: /cmd_vel
+    imu_topic: /imu/data
+    odom_topic: /odom
+
+    odom_frame: odom
+    base_frame: base_link
+    publish_tf: true
+    publish_rate_hz: 50.0
+
+    # Iguais ao watchdog do hardware. Um comando antigo nao e integrado.
+    command_timeout_s: 0.25
+    imu_timeout_s: 0.20
+    maximum_integration_step_s: 0.10
+
+    # Escalas registradas antes dos testes de centralizacao de 01/10.
+    linear_scale_x: 5.0
+    linear_scale_y: 3.4
+
+    # Covariancias deliberadamente conservadoras, pois nao ha encoders.
+    position_variance: 0.25
+    yaw_variance: 0.02
+    linear_velocity_variance: 0.10
+    angular_velocity_variance: 0.02

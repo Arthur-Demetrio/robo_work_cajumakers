@@ -1,0 +1,164 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_________________ test_subida_real_com_ros_simulado[-erro0-0] __________________
+
+tmp_path = PosixPath('/tmp/pytest-of-marcos/pytest-24/test_subida_real_com_ros_simul0')
+flag = '', erro = {}, esperado = 0
+
+    @pytest.mark.parametrize('flag,erro,esperado', [('',{},0),('',{'BAD_PARAM':'1'},1),('',{'MISSING_ARBITER':'1'},1),('--legado',{},0)])
+    def test_subida_real_com_ros_simulado(tmp_path,flag,erro,esperado):
+        startup,env,home=preparar(tmp_path);env.update(erro)
+        args=['bash',str(startup),'--mapeando','arena']+([flag] if flag else [])
+>       r=subprocess.run(args,env=env,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=25)
+
+robo_jazzy_ws/entregas/correcao_subida_supervisor_20261111/test_subida.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.12/subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+/usr/lib/python3.12/subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+/usr/lib/python3.12/subprocess.py:2116: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Popen: returncode: -9 args: ['bash', '/tmp/pytest-of-marcos/pytest-24/test_...>
+endtime = 24799.292174837, orig_timeout = 25
+stdout_seq = [b'SUBIDA_SUPERVISOR_20261111: nav2_principal=true supervisor_modo=observar overlay=/tmp/pytest-of-marcos/pytest-24/te..., b'    ok: /imu/data\n', b'>>> lidar: ros2 launch robo_lidar lidar_filter.launch.py\n', b'    ok: /scan_front\n', ...]
+stderr_seq = None, skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() > endtime:
+>           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['bash', '/tmp/pytest-of-marcos/pytest-24/test_subida_real_com_ros_simul0/subir_robo.sh', '--mapeando', 'arena']' timed out after 25 seconds
+
+/usr/lib/python3.12/subprocess.py:1253: TimeoutExpired
+_________________ test_subida_real_com_ros_simulado[-erro1-1] __________________
+
+tmp_path = PosixPath('/tmp/pytest-of-marcos/pytest-24/test_subida_real_com_ros_simul1')
+flag = '', erro = {'BAD_PARAM': '1'}, esperado = 1
+
+    @pytest.mark.parametrize('flag,erro,esperado', [('',{},0),('',{'BAD_PARAM':'1'},1),('',{'MISSING_ARBITER':'1'},1),('--legado',{},0)])
+    def test_subida_real_com_ros_simulado(tmp_path,flag,erro,esperado):
+        startup,env,home=preparar(tmp_path);env.update(erro)
+        args=['bash',str(startup),'--mapeando','arena']+([flag] if flag else [])
+>       r=subprocess.run(args,env=env,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=25)
+
+robo_jazzy_ws/entregas/correcao_subida_supervisor_20261111/test_subida.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.12/subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+/usr/lib/python3.12/subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+/usr/lib/python3.12/subprocess.py:2116: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Popen: returncode: -9 args: ['bash', '/tmp/pytest-of-marcos/pytest-24/test_...>
+endtime = 24824.569285832, orig_timeout = 25
+stdout_seq = [b'SUBIDA_SUPERVISOR_20261111: nav2_principal=true supervisor_modo=observar overlay=/tmp/pytest-of-marcos/pytest-24/te...aunch.py\n', b'    ok: /scan_front\n', b'>>> localizacao: ros2 launch robo_localization localization.launch.py\n', ...]
+stderr_seq = None, skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() > endtime:
+>           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['bash', '/tmp/pytest-of-marcos/pytest-24/test_subida_real_com_ros_simul1/subir_robo.sh', '--mapeando', 'arena']' timed out after 25 seconds
+
+/usr/lib/python3.12/subprocess.py:1253: TimeoutExpired
+_________________ test_subida_real_com_ros_simulado[-erro2-1] __________________
+
+tmp_path = PosixPath('/tmp/pytest-of-marcos/pytest-24/test_subida_real_com_ros_simul2')
+flag = '', erro = {'MISSING_ARBITER': '1'}, esperado = 1
+
+    @pytest.mark.parametrize('flag,erro,esperado', [('',{},0),('',{'BAD_PARAM':'1'},1),('',{'MISSING_ARBITER':'1'},1),('--legado',{},0)])
+    def test_subida_real_com_ros_simulado(tmp_path,flag,erro,esperado):
+        startup,env,home=preparar(tmp_path);env.update(erro)
+        args=['bash',str(startup),'--mapeando','arena']+([flag] if flag else [])
+>       r=subprocess.run(args,env=env,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=25)
+
+robo_jazzy_ws/entregas/correcao_subida_supervisor_20261111/test_subida.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.12/subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+/usr/lib/python3.12/subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+/usr/lib/python3.12/subprocess.py:2116: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Popen: returncode: -9 args: ['bash', '/tmp/pytest-of-marcos/pytest-24/test_...>
+endtime = 24849.786924133, orig_timeout = 25
+stdout_seq = [b'SUBIDA_SUPERVISOR_20261111: nav2_principal=true supervisor_modo=observar overlay=/tmp/pytest-of-marcos/pytest-24/te...aunch.py\n', b'    ok: /scan_front\n', b'>>> localizacao: ros2 launch robo_localization localization.launch.py\n', ...]
+stderr_seq = None, skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() > endtime:
+>           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['bash', '/tmp/pytest-of-marcos/pytest-24/test_subida_real_com_ros_simul2/subir_robo.sh', '--mapeando', 'arena']' timed out after 25 seconds
+
+/usr/lib/python3.12/subprocess.py:1253: TimeoutExpired
+_____________ test_subida_real_com_ros_simulado[--legado-erro3-0] ______________
+
+tmp_path = PosixPath('/tmp/pytest-of-marcos/pytest-24/test_subida_real_com_ros_simul3')
+flag = '--legado', erro = {}, esperado = 0
+
+    @pytest.mark.parametrize('flag,erro,esperado', [('',{},0),('',{'BAD_PARAM':'1'},1),('',{'MISSING_ARBITER':'1'},1),('--legado',{},0)])
+    def test_subida_real_com_ros_simulado(tmp_path,flag,erro,esperado):
+        startup,env,home=preparar(tmp_path);env.update(erro)
+        args=['bash',str(startup),'--mapeando','arena']+([flag] if flag else [])
+>       r=subprocess.run(args,env=env,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=25)
+
+robo_jazzy_ws/entregas/correcao_subida_supervisor_20261111/test_subida.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.12/subprocess.py:550: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+/usr/lib/python3.12/subprocess.py:1209: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+/usr/lib/python3.12/subprocess.py:2116: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Popen: returncode: -9 args: ['bash', '/tmp/pytest-of-marcos/pytest-24/test_...>
+endtime = 24875.039196444, orig_timeout = 25
+stdout_seq = [b'>>> Mapa: /tmp/pytest-of-marcos/pytest-24/test_subida_real_com_ros_simul3/mapas/arena (4.0K)\n', b'>>> ponte: ros2 ...k: /scan_front\n', b'>>> localizacao: ros2 launch robo_localization localization.launch.py\n', b'    ok: /odom\n', ...]
+stderr_seq = None, skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() > endtime:
+>           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['bash', '/tmp/pytest-of-marcos/pytest-24/test_subida_real_com_ros_simul3/subir_robo.sh', '--mapeando', 'arena', '--legado']' timed out after 25 seconds
+
+/usr/lib/python3.12/subprocess.py:1253: TimeoutExpired
+=========================== short test summary info ============================
+FAILED robo_jazzy_ws/entregas/correcao_subida_supervisor_20261111/test_subida.py::test_subida_real_com_ros_simulado[-erro0-0]
+FAILED robo_jazzy_ws/entregas/correcao_subida_supervisor_20261111/test_subida.py::test_subida_real_com_ros_simulado[-erro1-1]
+FAILED robo_jazzy_ws/entregas/correcao_subida_supervisor_20261111/test_subida.py::test_subida_real_com_ros_simulado[-erro2-1]
+FAILED robo_jazzy_ws/entregas/correcao_subida_supervisor_20261111/test_subida.py::test_subida_real_com_ros_simulado[--legado-erro3-0]
+4 failed in 100.99s (0:01:40)

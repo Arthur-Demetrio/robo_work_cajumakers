@@ -1,0 +1,9 @@
+build/
+install/
+log/
+.venv
+*.txt
+*.csv
+*.bin
+*.gv
+*.pdf

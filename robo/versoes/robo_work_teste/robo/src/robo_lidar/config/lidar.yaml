@@ -1,0 +1,33 @@
+scan_filter:
+  ros__parameters:
+    # ETAPA DE MIGRACAO:
+    # Se a ponte ainda publica /scan, use /scan e mude output_topic
+    # para /scan_filtered para evitar ciclo.
+    input_topic: /scan_raw
+    output_topic: /scan
+    front_topic: /scan_front
+    clearing_topic: /scan_front_clear
+
+    # O LiDAR fornece poucos raios para uma grade de 5 cm. Cada setor e
+    # dividido em quatro, mas um sub-raio sintetico somente limpa quando os
+    # dois raios originais vizinhos sao +inf. Retorno finito ou NaN conserva
+    # o setor e impede apagar a borda de um obstaculo verdadeiro.
+    clearing_upsample_factor: 4
+
+    # O firmware ja alinha a frente fisica em 270 graus. Repetir o mesmo
+    # offset aqui aplicaria a rotacao duas vezes.
+    front_offset_deg: 0.0
+
+    # Espelhamento validado no RViz para que a esquerda fisica apareca em +Y.
+    invert_angles: false
+
+    # 90 graus de cada lado = campo frontal total de 180 graus.
+    front_half_angle_deg: 90.0
+
+    # /scan completo e apenas diagnostico. Nav2 e SLAM usam /scan_front.
+    publish_full_filtered: true
+
+    # Pares [inicio, fim] em graus no referencial do robo.
+    # Exemplo futuro para mascarar duas rodas:
+    # mask_intervals_deg: [-135.0, -115.0, 115.0, 135.0]
+    mask_intervals_deg: []

@@ -1,0 +1,6 @@
+{
+  "script_pid": 56660,
+  "grupo": 56658,
+  "cmd": "bash /home/marcos/subir_robo.sh --localization arena_04-11_1235 ",
+  "codigo_logger": "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py"
+}

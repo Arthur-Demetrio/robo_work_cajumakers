@@ -1,0 +1,8 @@
+collecting ... collected 4 items
+
+test/test_giro_travado.py::test_goal_checker_atual_nunca_encerra_e_com_carimbo_zero_encerra_as_12_37_29 PASSED [ 25%]
+test/test_giro_travado.py::test_dwb_girando_anti_horario_so_pode_continuar_girando PASSED [ 50%]
+test/test_giro_travado.py::test_dwb_parado_ou_horario_pode_escolher_os_dois_sentidos PASSED [ 75%]
+test/test_giro_travado.py::test_so_decel_lim_theta_menos_0_4_destravaria_a_inversao PASSED [100%]
+
+============================== 4 passed in 1.22s ===============================

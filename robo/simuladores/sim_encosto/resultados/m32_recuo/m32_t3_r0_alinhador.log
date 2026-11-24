@@ -1,0 +1,74 @@
+[INFO] [1794262869.164640959] [alinhador_passagem]: Alinhador pronto. Envie goals em /goal_pose_alinhado.
+[INFO] [1794262869.493164296] [alinhador_passagem]: BANCADA: gatilho /sim/encostar pronto (codigo de /home/marcos/sim_encosto/versoes/recuo)
+[INFO] [1794262872.197733906] [alinhador_passagem]: Laser em base_link: x=0.330 y=0.005 yaw=0.0 graus
+[INFO] [1794262874.083333834] [alinhador_passagem]: BANCADA: encostar WS_1
+[INFO] [1794262874.095889106] [alinhador_passagem]: ENCOSTAR WS_1: medindo a face da mesa
+[INFO] [1794262874.263545446] [alinhador_passagem]: ENCOSTAR WS_1: aguardando segunda observacao coerente
+[INFO] [1794262874.422232825] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.589 c+0.339 a-1.5g)
+[INFO] [1794262875.102000953] [alinhador_passagem]: ENCOSTAR WS_1: face WS parcial: so distancia/angulo (d0.590 c nd a-1.2g)
+[INFO] [1794262875.259452430] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.589 c+0.338 a-1.7g)
+[INFO] [1794262875.785318661] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 1: face a 22 cm (para-choque), girar -1.4 graus, centro +33.8 cm
+[INFO] [1794262875.786124230] [alinhador_passagem]: ENCOSTAR WS_1: RECUO_LATERAL: centro +33.8 cm com a face a 22 cm: o deslize avanca ~17 cm (k 0.50); recuo reto ate 34 cm (1/3)
+[INFO] [1794262877.992879717] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 2: face a 33 cm (para-choque), girar -1.6 graus, centro +32.6 cm
+[INFO] [1794262878.044051329] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +32.6 cm de lado
+[INFO] [1794262878.986664551] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: fora da referencia | ref d0.69 c+0.28 a-1g | d0.68 c+0.23 a-1g w0.67 FORA:larg
+[INFO] [1794262879.147593968] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: fora da referencia | ref d0.69 c+0.27 a-1g | d0.67 c+0.41 a-2g w0.69 FORA:larg
+[INFO] [1794262879.254641060] [alinhador_passagem]: ENCOSTAR WS_1: PERDA_PARA: perdi a face em "lat_mover": paro e meco de novo (1/3)
+[INFO] [1794262879.311566595] [alinhador_passagem]: ENCOSTAR WS_1: aguardando segunda observacao coerente
+[INFO] [1794262879.487630526] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: fora da referencia | ref d0.67 c+0.30 a-1g | d0.67 c+0.20 a-1g w0.66 FORA:larg
+[INFO] [1794262879.656604455] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.668 c+0.299 a-1.2g)
+[INFO] [1794262880.336779646] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 3: face a 30 cm (para-choque), girar -1.1 graus, centro +29.6 cm
+[INFO] [1794262880.342303462] [alinhador_passagem]: ENCOSTAR WS_1: RECUO_LATERAL: o deslize de 3.1 cm avancou 3.1 cm (k 1.00)
+[INFO] [1794262880.342907351] [alinhador_passagem]: ENCOSTAR WS_1: RECUO_LATERAL: centro +29.6 cm com a face a 30 cm: o deslize avanca ~29 cm (k 1.00); recuo reto ate 45 cm (2/3)
+[INFO] [1794262882.706276463] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: fora da referencia | ref d0.79 c+0.30 a-1g | d0.79 c+0.21 a-1g w0.68 FORA:larg
+[INFO] [1794262882.868091899] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.790 c+0.298 a-1.3g)
+[INFO] [1794262883.388073321] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 4: face a 43 cm (para-choque), girar -1.3 graus, centro +29.8 cm
+[INFO] [1794262883.390387648] [alinhador_passagem]: ENCOSTAR WS_1: RECUO_LATERAL: centro +29.8 cm com a face a 43 cm: o deslize avanca ~30 cm (k 1.00); recuo reto ate 45 cm (3/3)
+[INFO] [1794262884.896414708] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 5: face a 46 cm (para-choque), girar -1.3 graus, centro +29.7 cm
+[INFO] [1794262884.947407562] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +29.7 cm de lado
+[INFO] [1794262887.927924253] [alinhador_passagem]: ENCOSTAR WS_1: face ausente, ambigua ou fora da referencia WS: fora da referencia | ref d0.75 c+0.19 a-0g | d0.75 c+0.14 a-0g w0.75 FORA:larg
+[INFO] [1794262888.088292946] [alinhador_passagem]: ENCOSTAR WS_1: face WS consistente (d0.744 c+0.186 a-0.3g)
+[INFO] [1794262889.965983280] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 6: face a 35 cm (para-choque), girar +0.0 graus, centro +14.1 cm
+[INFO] [1794262889.966720324] [alinhador_passagem]: ENCOSTAR WS_1: RECUO_LATERAL: o deslize de 15.6 cm avancou 11.7 cm (k 0.75)
+[INFO] [1794262890.031565984] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +14.1 cm de lado
+[INFO] [1794262894.708274593] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 7: face a 24 cm (para-choque), girar +1.1 graus, centro +4.1 cm
+[INFO] [1794262894.711005560] [alinhador_passagem]: ENCOSTAR WS_1: RECUO_LATERAL: o deslize de 10.0 cm avancou 10.6 cm (k 1.06)
+[INFO] [1794262894.768507825] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +4.1 cm de lado
+[INFO] [1794262896.205409688] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 8: face a 23 cm (para-choque), girar +1.3 graus, centro +2.2 cm
+[INFO] [1794262896.256464313] [alinhador_passagem]: ENCOSTAR WS_1: Deslizando +2.2 cm de lado
+[INFO] [1794262897.580515031] [alinhador_passagem]: ENCOSTAR WS_1: Medicao 9: face a 23 cm (para-choque), girar +1.3 graus, centro +1.9 cm
+[INFO] [1794262897.581244761] [alinhador_passagem]: ENCOSTAR WS_1: Alinhado com a mesa: avancando ate 9 cm
+[INFO] [1794262899.440482076] [alinhador_passagem]: ENCOSTAR WS_1: Folga 11.3 cm: pulso 1 de 0.15 s
+[INFO] [1794262901.140979776] [alinhador_passagem]: ENCOSTAR WS_1: Encostado: frente a 10.9 cm da mesa, 1.1 graus, centro +2.3 cm
+[INFO] [1794262901.141648474] [alinhador_passagem]: ENCOSTAR WS_1: ENCOSTO_CEGO: encostado a 10.9 cm, 1.1 graus; centro medido de longe +1.9 cm (perto o LiDAR nao ve o meio da face)
+[INFO] [1794262901.404704414] [alinhador_passagem]: ENCOSTAR WS_1: SUCESSO
+[INFO] [1794262901.405466140] [alinhador_passagem]: RESULTADO: WS_1 SUCESSO folga=10.9cm ang=+1.1 centro=+2.3cm
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/versoes/recuo/alinhador_passagem.py", line 4162, in main
+    executor.spin()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 359, in spin
+    self._spin_once_impl()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 991, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 781, in _wait_for_ready_callbacks
+    wait_set.wait(timeout_nsec)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/alinhador_bancada.py", line 57, in <module>
+    alinhador_passagem.main()
+  File "/home/marcos/sim_encosto/versoes/recuo/alinhador_passagem.py", line 4165, in main
+    no._parar()
+  File "/home/marcos/sim_encosto/versoes/recuo/alinhador_passagem.py", line 2923, in _parar
+    self._publicar_vel(0.0, 0.0, 0.0)
+  File "/home/marcos/sim_encosto/versoes/recuo/alinhador_passagem.py", line 2919, in _publicar_vel
+    (self.pub_t if self.controle_t_ativo else self.pub_cmd).publish(m)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:423

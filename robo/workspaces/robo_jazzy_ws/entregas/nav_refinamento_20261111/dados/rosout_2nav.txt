@@ -1,0 +1,834 @@
+12:33:20.26 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:33:20.31 rosbag2_recorder Press SPACE for pausing/resuming
+12:33:20.31 rosbag2_recorder Event publisher thread: Started
+12:33:20.31 rosbag2_recorder Starting recording to '/home/marcos/bags/2nav_integrada_corredor_aberta_20261110_123314_041073/bag'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/smart_spin/_action/status'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/velocity_smoother/transition_event'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/slam_toolbox/update'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/slam_toolbox/transition_event'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/slam_toolbox/graph_visualization'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/scan_raw_temporal'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/scan_raw'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/scan_nav'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/follow_path/_action/status'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/diagnostics'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/cmd_vel_nav'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/controller_server/transition_event'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/tf'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/bond'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/events/write_split'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/follow_path/_action/feedback'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/cmd_vel_hardware'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/initialpose'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/cmd_vel_smoothed'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/goal_pose_alinhado'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/hardware/sensor_timing'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/hardware/serial_rx'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/hardware/tx_frames'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/scan_front'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/cmd_vel_nav_t'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/imu/data'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/clicked_point'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/alinhador/estado_t'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/imu/data_temporal'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/imu/yaw_deg'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/rosout'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/map_metadata'
+12:33:20.31 rosbag2_recorder Subscribed to topic '/smart_spin/_action/feedback'
+12:33:20.32 rosbag2_recorder Subscribed to topic '/slam_toolbox/scan_visualization'
+12:33:20.35 rosbag2_recorder Subscribed to topic '/ir_para_area/resultado'
+12:33:20.35 rosbag2_recorder Overriding subscription profile for /map
+12:33:20.35 rosbag2_recorder Subscribed to topic '/map'
+12:33:20.36 rosbag2_recorder Subscribed to topic '/alinhador/etapas'
+12:33:20.37 rosbag2_recorder Subscribed to topic '/parameter_events'
+12:33:20.37 rosbag2_recorder Subscribed to topic '/hardware/lidar_packets'
+12:33:20.38 rosbag2_recorder Subscribed to topic '/pose'
+12:33:20.38 rosbag2_recorder Listening for topics...
+12:33:20.38 rosbag2_recorder Recording...
+12:33:20.38 rosbag2_recorder Topics discovery started.
+12:33:20.43 rosbag2_recorder Subscribed to topic '/local_costmap/costmap_raw_updates'
+12:33:20.44 rosbag2_recorder Subscribed to topic '/teste/trajetoria_estimada'
+12:33:20.46 rosbag2_recorder Subscribed to topic '/local_costmap/published_footprint'
+12:33:20.47 rosbag2_recorder Subscribed to topic '/local_costmap/obstacle_layer_raw'
+12:33:20.48 rosbag2_recorder Subscribed to topic '/local_costmap/obstacle_layer_updates'
+12:33:20.50 rosbag2_recorder Subscribed to topic '/cmd_vel'
+12:33:20.50 rosbag2_recorder Subscribed to topic '/local_costmap/costmap_raw'
+12:33:20.51 rosbag2_recorder Subscribed to topic '/mecanum_escape/_action/status'
+12:33:20.51 rosbag2_recorder Overriding subscription profile for /local_costmap/costmap
+12:33:20.51 rosbag2_recorder Subscribed to topic '/local_costmap/costmap'
+12:33:20.52 rosbag2_recorder Subscribed to topic '/collision_monitor/transition_event'
+12:33:20.53 rosbag2_recorder Subscribed to topic '/scan_temporal_front'
+12:33:20.54 rosbag2_recorder Subscribed to topic '/local_plan'
+12:33:20.55 rosbag2_recorder Subscribed to topic '/collision_monitor_swept_turn'
+12:33:20.57 rosbag2_recorder Subscribed to topic '/collision_monitor_velocity_polygon'
+12:33:20.58 rosbag2_recorder Subscribed to topic '/local_costmap/obstacle_layer'
+12:33:20.58 rosbag2_recorder Subscribed to topic '/received_global_plan'
+12:33:20.59 rosbag2_recorder Subscribed to topic '/local_costmap/local_costmap/transition_event'
+12:33:20.61 rosbag2_recorder Subscribed to topic '/evaluation'
+12:33:20.62 rosbag2_recorder Subscribed to topic '/marker'
+12:33:20.64 rosbag2_recorder Subscribed to topic '/cost_cloud'
+12:33:20.66 rosbag2_recorder Subscribed to topic '/transformed_global_plan'
+12:33:20.68 rosbag2_recorder Subscribed to topic '/cmd_vel_ctrl'
+12:33:20.68 rosbag2_recorder Subscribed to topic '/collision_monitor/collision_points_marker'
+12:33:20.69 rosbag2_recorder Subscribed to topic '/local_costmap/costmap_updates'
+12:33:20.69 rosbag2_recorder Subscribed to topic '/mecanum_escape/_action/feedback'
+12:33:20.70 rosbag2_recorder Subscribed to topic '/collision_monitor_state'
+12:33:20.70 rosbag2_recorder Subscribed to topic '/local_costmap/obstacle_layer_raw_updates'
+12:33:21.13 rosbag2_recorder Subscribed to topic '/behavior_server/transition_event'
+12:33:21.19 rosbag2_recorder Subscribed to topic '/wait/_action/feedback'
+12:33:21.20 rosbag2_recorder Subscribed to topic '/wait/_action/status'
+12:33:21.20 rosbag2_recorder Subscribed to topic '/backup/_action/status'
+12:33:21.22 rosbag2_recorder Subscribed to topic '/spin/_action/feedback'
+12:33:21.24 rosbag2_recorder Subscribed to topic '/backup/_action/feedback'
+12:33:21.25 rosbag2_recorder Subscribed to topic '/spin/_action/status'
+12:33:21.30 rosbag2_recorder Subscribed to topic '/destravar/_action/feedback'
+12:33:21.30 rosbag2_recorder Subscribed to topic '/follow_waypoints/_action/status'
+12:33:21.31 rosbag2_recorder Subscribed to topic '/smooth_path/_action/status'
+12:33:21.32 rosbag2_recorder Subscribed to topic '/drive_on_heading/_action/status'
+12:33:21.32 rosbag2_recorder Overriding subscription profile for /tf_static
+12:33:21.32 rosbag2_recorder Subscribed to topic '/tf_static'
+12:33:21.32 rosbag2_recorder Subscribed to topic '/follow_waypoints/_action/feedback'
+12:33:21.33 rosbag2_recorder Subscribed to topic '/bt_navigator/transition_event'
+12:33:21.34 rosbag2_recorder Subscribed to topic '/waypoint_follower/transition_event'
+12:33:21.35 rosbag2_recorder Subscribed to topic '/follow_gps_waypoints/_action/feedback'
+12:33:21.37 rosbag2_recorder Subscribed to topic '/follow_gps_waypoints/_action/status'
+12:33:21.37 rosbag2_recorder Subscribed to topic '/destravar/_action/status'
+12:33:21.39 rosbag2_recorder Subscribed to topic '/bloqueio_virtual'
+12:33:21.40 rosbag2_recorder Subscribed to topic '/drive_on_heading/_action/feedback'
+12:33:21.41 rosbag2_recorder Subscribed to topic '/smooth_path/_action/feedback'
+12:33:21.42 rosbag2_recorder Subscribed to topic '/navigate_to_pose/_action/feedback'
+12:33:21.43 rosbag2_recorder Subscribed to topic '/navigate_to_pose/_action/status'
+12:33:21.44 rosbag2_recorder Subscribed to topic '/plan_smoothed'
+12:33:21.45 rosbag2_recorder Subscribed to topic '/destravar/estado'
+12:33:21.45 rosbag2_recorder Subscribed to topic '/smoother_server/transition_event'
+12:33:21.49 rosbag2_recorder Subscribed to topic '/global_costmap/static_layer_raw_updates'
+12:33:21.50 rosbag2_recorder Subscribed to topic '/global_costmap/obstacle_layer_raw'
+12:33:21.50 rosbag2_recorder Subscribed to topic '/global_costmap/obstacle_layer'
+12:33:21.50 rosbag2_recorder Subscribed to topic '/navigate_through_poses/_action/status'
+12:33:21.51 rosbag2_recorder Subscribed to topic '/global_costmap/global_costmap/transition_event'
+12:33:21.51 rosbag2_recorder Subscribed to topic '/global_costmap/costmap_raw'
+12:33:21.51 rosbag2_recorder Overriding subscription profile for /global_costmap/costmap
+12:33:21.52 rosbag2_recorder Subscribed to topic '/global_costmap/costmap'
+12:33:21.52 rosbag2_recorder Subscribed to topic '/compute_path_to_pose/_action/feedback'
+12:33:21.53 rosbag2_recorder Subscribed to topic '/compute_path_through_poses/_action/status'
+12:33:21.53 rosbag2_recorder Subscribed to topic '/plan'
+12:33:21.54 rosbag2_recorder Subscribed to topic '/global_costmap/published_footprint'
+12:33:21.54 rosbag2_recorder Subscribed to topic '/compute_path_through_poses/_action/feedback'
+12:33:21.55 rosbag2_recorder Subscribed to topic '/compute_path_to_pose/_action/status'
+12:33:21.55 rosbag2_recorder Subscribed to topic '/global_costmap/obstacle_layer_updates'
+12:33:21.56 rosbag2_recorder Subscribed to topic '/global_costmap/obstacle_layer_raw_updates'
+12:33:21.56 rosbag2_recorder Subscribed to topic '/planner_server/transition_event'
+12:33:21.57 rosbag2_recorder Subscribed to topic '/global_costmap/costmap_raw_updates'
+12:33:21.57 rosbag2_recorder Subscribed to topic '/behavior_tree_log'
+12:33:21.58 rosbag2_recorder Subscribed to topic '/global_costmap/static_layer_raw'
+12:33:21.58 rosbag2_recorder Subscribed to topic '/global_costmap/costmap_updates'
+12:33:21.59 rosbag2_recorder Subscribed to topic '/global_costmap/static_layer_updates'
+12:33:21.59 rosbag2_recorder Subscribed to topic '/global_costmap/static_layer'
+12:33:21.60 rosbag2_recorder Subscribed to topic '/navigate_through_poses/_action/feedback'
+12:33:22.04 rosbag2_recorder Subscribed to topic '/odom'
+12:33:23.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:33:31.46 alinhador_passagem Novo goal: x=1.57 y=4.49 yaw=5 graus
+12:33:31.46 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+12:33:32.19 alinhador_passagem Passagem 1: entrada (0.75, -0.18), eixo 0 graus, largura no mapa 0.75 m, preparo a 0.60 m da entrada
+12:33:32.20 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=0.15 y=-0.18 yaw=0 graus
+12:33:32.23 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:33:32.29 collision_monitor Robot to continue normal operation
+12:33:32.93 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:33:33.10 collision_monitor Robot to continue normal operation
+12:33:33.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:33:36.59 robo_hardware Velocity command source timestamp invalid/stale
+12:33:36.63 robo_hardware Velocity command source timestamp invalid/stale
+12:33:36.68 alinhador_passagem PREPARO 1 (alinhar fora da passagem): andei 22 cm para dir
+12:33:37.69 robo_hardware Velocity command source timestamp invalid/stale
+12:33:37.78 alinhador_passagem PREPARO 1 (alinhar fora da passagem): andei 5 cm para frente
+12:33:38.30 robo_hardware Velocity command source timestamp invalid/stale
+12:33:38.44 alinhador_passagem PREPARO 1 (alinhar fora da passagem): angulo 0 graus (erro 5.0)
+12:33:38.71 alinhador_passagem PREPARO 1 (alinhar fora da passagem): SUCESSO (11 cm e 5 graus do preparo)
+12:33:38.93 robo_hardware Velocity command source timestamp invalid/stale
+12:33:39.34 alinhador_passagem Planner: 10.5 m; mapa: 6.1 m: sigo a rota do mapa
+12:33:39.45 alinhador_passagem Passagem 1 termina num cruzamento em (1.50, -0.18) com curva para a ESQUERDA: modo de curva: lateral
+12:33:39.46 alinhador_passagem TRAVESSIA 1: travessia pelo LiDAR ate (1.42, -0.18) + 0.00 m
+12:33:40.24 alinhador_passagem TRAVESSIA 1: Paredes vistas (largura 0.91 m): parando na boca para alinhar
+12:33:41.19 alinhador_passagem TRAVESSIA 1: Medicao 1: girar +2.7 graus, centro a -11.9 cm, largura 0.89 m
+12:33:43.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:33:50.27 slam_toolbox Message Filter dropping message: frame 'laser_raw' at time 1794324830.089 for reason 'discarding message because the queue is full'
+12:33:53.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:33:57.38 alinhador_passagem TRAVESSIA 1: So vejo uma parede: usando a largura de 0.90 m para achar o centro
+12:33:57.38 alinhador_passagem TRAVESSIA 1: Medicao 2: girar +0.0 graus, centro a +10.2 cm, largura 0.90 m
+12:34:03.00 alinhador_passagem TRAVESSIA 1: Medicao 3: girar +4.8 graus, centro a -0.7 cm, largura 0.82 m
+12:34:03.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:34:04.66 alinhador_passagem TRAVESSIA 1: Medicao 4: girar +0.4 graus, centro a -1.9 cm, largura 0.82 m
+12:34:04.66 alinhador_passagem TRAVESSIA 1: Alinhado: atravessando
+12:34:13.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:34:18.22 alinhador_passagem TRAVESSIA 1: Parei no cruzamento pelo LiDAR: parede a 14 cm do para-choque (alvo 12 cm; pelo mapa faltavam +4 cm)
+12:34:18.48 alinhador_passagem TRAVESSIA 1 (LiDAR): SUCESSO
+12:34:18.49 alinhador_passagem CURVA 1: saindo de lado para a ESQUERDA ate (1.63, 1.06) + 0.60 m
+12:34:18.49 alinhador_passagem CURVA 1: Cruzamento: saindo de lado para a ESQUERDA
+12:34:21.01 alinhador_passagem CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual
+12:34:23.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:34:25.20 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:34:25.35 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 17 cm
+12:34:26.22 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -6.2 cm a frente (1 parede(s)), folga frente 4 / tras 18 cm
+12:34:26.22 alinhador_passagem CURVA 1: Perto da parede: afastando -4.0 cm
+12:34:26.39 collision_monitor Robot to continue normal operation
+12:34:27.51 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -4.4 cm a frente (1 parede(s)), folga frente 6 / tras 15 cm
+12:34:27.63 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:34:29.09 alinhador_passagem CURVA 1: Collision Monitor segurando em "deslizar": parando para medir de novo
+12:34:29.29 collision_monitor Robot to continue normal operation
+12:34:30.02 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -4.3 cm a frente (1 parede(s)), folga frente 6 / tras 15 cm
+12:34:30.19 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:34:31.63 alinhador_passagem CURVA 1: Collision Monitor segurando em "deslizar": parando para medir de novo
+12:34:31.83 collision_monitor Robot to continue normal operation
+12:34:32.45 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -4.5 cm a frente (1 parede(s)), folga frente 6 / tras 15 cm
+12:34:32.60 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:34:33.40 filtro_corpo_scan MEMORIA_PERTO: 158 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (106 guardados)
+12:34:33.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:34:34.05 alinhador_passagem CURVA 1: Collision Monitor segurando em "deslizar": parando para medir de novo
+12:34:34.23 collision_monitor Robot to continue normal operation
+12:34:34.97 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -4.3 cm a frente (1 parede(s)), folga frente 6 / tras 15 cm
+12:34:35.13 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:34:36.58 alinhador_passagem CURVA 1: Saida lateral abortada: Collision Monitor bloqueou 4 vezes
+12:34:36.73 collision_monitor Robot to continue normal operation
+12:34:36.84 alinhador_passagem CURVA 1: FALHOU - Collision Monitor bloqueou 4 vezes
+12:34:36.84 alinhador_passagem Nao consegui sair de lado pelo corredor novo (curva 1). Parei; ajude o robo e mande o goal de novo.
+12:34:43.40 filtro_corpo_scan MEMORIA_PERTO: 154 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (47 guardados)
+12:34:43.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:34:53.40 filtro_corpo_scan MEMORIA_PERTO: 150 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (47 guardados)
+12:34:53.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:34:56.10 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+12:34:56.11 alinhador_passagem Novo goal: x=1.49 y=1.95 yaw=5 graus
+12:34:56.53 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:34:56.58 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +76 graus da frente: viro antes do Nav2
+12:34:56.84 alinhador_passagem GOAL FINAL (virar para o caminho): girando 76 graus a quina pegaria: primeiro 20 cm para dir
+12:35:00.49 robo_hardware Velocity command source timestamp invalid/stale
+12:35:00.54 alinhador_passagem GOAL FINAL (virar para o caminho): andei 20 cm para dir
+12:35:03.41 filtro_corpo_scan MEMORIA_PERTO: 59 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (56 guardados)
+12:35:03.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:35:06.79 robo_hardware Velocity command source timestamp invalid/stale
+12:35:06.96 alinhador_passagem GOAL FINAL (virar para o caminho): angulo 77 graus (erro 1.8)
+12:35:07.22 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+12:35:07.23 alinhador_passagem GOAL FINAL: x=1.49 y=1.95 yaw=5 graus
+12:35:07.23 bt_navigator Begin navigating from current location (1.42, -0.08) to (1.49, 1.95)
+12:35:07.25 smoother_server Received a path to smooth.
+12:35:07.26 smoother_server Smoothed path leads to a collision at x: 1.395654, y: -0.090190, theta: 1.331000
+12:35:07.26 smoother_server Smoothed Path collided atX: 1.395654Y: -0.090190Theta: 1.331000
+12:35:07.26 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:35:07.26 controller_server Received a goal, begin computing control effort.
+12:35:07.26 controller_server No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
+12:35:07.26 controller_server No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+12:35:07.78 smoother_server Received a path to smooth.
+12:35:07.78 smoother_server Smoothed path leads to a collision at x: 1.445654, y: -0.040190, theta: 1.542549
+12:35:07.78 smoother_server Smoothed Path collided atX: 1.445654Y: -0.040190Theta: 1.542549
+12:35:07.78 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:35:08.34 smoother_server Received a path to smooth.
+12:35:08.34 smoother_server Smoothed path leads to a collision at x: 1.533747, y: 0.112991, theta: -1.521427
+12:35:08.34 smoother_server Smoothed Path collided atX: 1.533747Y: 0.112991Theta: -1.521427
+12:35:08.34 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:35:08.48 controller_server Could not find a legal trajectory: No valid trajectories out of 352! 
+12:35:08.53 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:35:08.90 smoother_server Received a path to smooth.
+12:35:08.90 smoother_server Smoothed path leads to a collision at x: 1.521600, y: 0.134990, theta: -1.545326
+12:35:08.90 smoother_server Smoothed Path collided atX: 1.521600Y: 0.134990Theta: -1.545326
+12:35:08.90 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:35:09.44 smoother_server Received a path to smooth.
+12:35:09.44 smoother_server Smoothed path leads to a collision at x: 1.514658, y: 0.111566, theta: -1.572060
+12:35:09.44 smoother_server Smoothed Path collided atX: 1.514658Y: 0.111566Theta: -1.572060
+12:35:09.44 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:35:09.98 smoother_server Received a path to smooth.
+12:35:09.99 smoother_server Smoothed path leads to a collision at x: 1.519928, y: 0.103392, theta: -1.566297
+12:35:09.99 smoother_server Smoothed Path collided atX: 1.519928Y: 0.103392Theta: -1.566297
+12:35:09.99 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:35:10.53 collision_monitor Robot to continue normal operation
+12:35:10.53 smoother_server Received a path to smooth.
+12:35:10.53 smoother_server Smoothed path leads to a collision at x: 1.517472, y: 0.103649, theta: -1.546236
+12:35:10.53 smoother_server Smoothed Path collided atX: 1.517472Y: 0.103649Theta: -1.546236
+12:35:10.54 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:35:10.63 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:35:10.66 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:35:10.66 bt_navigator Goal canceled
+12:35:10.66 controller_server Cancellation was successful. Stopping the robot.
+12:35:10.66 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:35:10.70 alinhador_passagem GOAL FINAL: interrompido para alinhar
+12:35:10.71 alinhador_passagem Passagem 1: entrada (1.56, 0.30), eixo 86 graus, largura no mapa 0.80 m, preparo a 0.50 m da entrada
+12:35:10.71 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=1.52 y=-0.20 yaw=86 graus
+12:35:10.73 collision_monitor Robot to continue normal operation
+12:35:10.83 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:35:11.96 alinhador_passagem PREPARO 1 (alinhar fora da passagem): Collision Monitor travou o giro
+12:35:12.24 alinhador_passagem PREPARO 1 (alinhar fora da passagem): girando 7 graus a quina pegaria: primeiro 10 cm para tras
+12:35:12.33 collision_monitor Robot to continue normal operation
+12:35:13.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:35:13.63 robo_hardware Velocity command source timestamp invalid/stale
+12:35:13.70 alinhador_passagem PREPARO 1 (alinhar fora da passagem): andei 9 cm para tras
+12:35:14.80 robo_hardware Velocity command source timestamp invalid/stale
+12:35:14.83 robo_hardware Velocity command source timestamp invalid/stale
+12:35:14.99 alinhador_passagem PREPARO 1 (alinhar fora da passagem): angulo 86 graus (erro 2.3)
+12:35:15.74 robo_hardware Velocity command source timestamp invalid/stale
+12:35:15.81 alinhador_passagem PREPARO 1 (alinhar fora da passagem): andei 0 cm para esq
+12:35:17.83 robo_hardware Velocity command source timestamp invalid/stale
+12:35:17.92 alinhador_passagem PREPARO 1 (alinhar fora da passagem): andei 16 cm para tras
+12:35:17.92 alinhador_passagem PREPARO 1 (alinhar fora da passagem): SUCESSO (4 cm e 3 graus do preparo)
+12:35:18.31 alinhador_passagem TRAVESSIA 1: travessia pelo LiDAR ate (1.62, 1.03) + 0.30 m
+12:35:18.81 alinhador_passagem TRAVESSIA 1: Paredes vistas (largura 0.78 m): parando na boca para alinhar
+12:35:19.78 alinhador_passagem TRAVESSIA 1: Medicao 1: girar +10.6 graus, centro a -7.5 cm, largura 0.79 m
+12:35:23.33 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:35:23.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:35:24.45 alinhador_passagem TRAVESSIA 1: Medicao 2: girar +9.9 graus, centro a -5.3 cm, largura 0.79 m
+12:35:26.06 alinhador_passagem TRAVESSIA 1: Collision Monitor segurando em "girar": parando para medir de novo
+12:35:27.12 alinhador_passagem TRAVESSIA 1: Medicao 3: girar +10.0 graus, centro a -5.3 cm, largura 0.79 m
+12:35:27.29 collision_monitor Robot to continue normal operation
+12:35:28.09 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:35:29.66 alinhador_passagem TRAVESSIA 1: Collision Monitor segurando em "deslocar": parando para medir de novo
+12:35:30.72 alinhador_passagem TRAVESSIA 1: Medicao 4: girar +8.4 graus, centro a -4.1 cm, largura 0.78 m
+12:35:32.33 alinhador_passagem TRAVESSIA 1: Collision Monitor segurando em "girar": parando para medir de novo
+12:35:33.39 alinhador_passagem TRAVESSIA 1: Medicao 5: girar +8.4 graus, centro a -4.1 cm, largura 0.78 m
+12:35:33.40 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:35:35.00 alinhador_passagem TRAVESSIA 1: Collision Monitor segurando em "deslocar": parando para medir de novo
+12:35:36.03 alinhador_passagem TRAVESSIA 1: Medicao 6: girar +8.8 graus, centro a -4.4 cm, largura 0.78 m
+12:35:37.60 alinhador_passagem TRAVESSIA 1: Travessia LiDAR abortada: Collision Monitor bloqueou 5 vezes
+12:35:37.88 alinhador_passagem TRAVESSIA 1 (LiDAR): FALHOU - Collision Monitor bloqueou 5 vezes
+12:35:37.88 alinhador_passagem Travessia pelo LiDAR falhou: voltando ao preparo para tentar de novo.
+12:35:37.89 alinhador_passagem PREPARO 1 (2a tentativa): x=1.52 y=-0.20 yaw=86 graus
+12:35:37.99 collision_monitor Robot to continue normal operation
+12:35:39.89 robo_hardware Velocity command source timestamp invalid/stale
+12:35:39.97 alinhador_passagem PREPARO 1 (2a tentativa): andei 15 cm para frente
+12:35:39.98 alinhador_passagem PREPARO 1 (2a tentativa): SUCESSO (9 cm e 3 graus do preparo)
+12:35:39.98 alinhador_passagem TRAVESSIA 1 (2a tentativa): travessia pelo LiDAR ate (1.62, 1.03) + 0.30 m
+12:35:40.31 alinhador_passagem TRAVESSIA 1 (2a tentativa): Paredes vistas (largura 0.78 m): parando na boca para alinhar
+12:35:41.34 alinhador_passagem TRAVESSIA 1 (2a tentativa): Medicao 1: girar +9.3 graus, centro a -1.8 cm, largura 0.78 m
+12:35:43.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:35:43.48 alinhador_passagem TRAVESSIA 1 (2a tentativa): Medicao 2: girar +0.6 graus, centro a -2.7 cm, largura 0.77 m
+12:35:45.30 alinhador_passagem TRAVESSIA 1 (2a tentativa): Medicao 3: girar +0.1 graus, centro a -1.1 cm, largura 0.77 m
+12:35:45.30 alinhador_passagem TRAVESSIA 1 (2a tentativa): Alinhado: atravessando
+12:35:53.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:35:57.09 alinhador_passagem Novo goal: x=1.69 y=4.71 yaw=5 graus
+12:35:57.36 alinhador_passagem Goal substituido por um novo.
+12:35:57.36 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+12:35:57.59 robo_hardware Velocity command source timestamp invalid/stale
+12:35:57.94 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:35:58.02 alinhador_passagem GOAL FINAL: x=1.69 y=4.71 yaw=5 graus
+12:35:58.02 bt_navigator Begin navigating from current location (1.58, 0.79) to (1.69, 4.71)
+12:35:58.04 smoother_server Received a path to smooth.
+12:35:58.04 smoother_server Smoothed path leads to a collision at x: 1.619527, y: 1.120162, theta: -1.881240
+12:35:58.04 smoother_server Smoothed Path collided atX: 1.619527Y: 1.120162Theta: -1.881240
+12:35:58.04 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:35:58.06 controller_server Received a goal, begin computing control effort.
+12:35:58.59 smoother_server Received a path to smooth.
+12:35:58.59 smoother_server Smoothed path leads to a collision at x: 1.605077, y: 1.060610, theta: 1.382600
+12:35:58.59 smoother_server Smoothed Path collided atX: 1.605077Y: 1.060610Theta: 1.382600
+12:35:58.59 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:35:59.14 smoother_server Received a path to smooth.
+12:35:59.14 smoother_server Smoothed path leads to a collision at x: 1.602842, y: 1.054018, theta: 1.386381
+12:35:59.14 smoother_server Smoothed Path collided atX: 1.602842Y: 1.054018Theta: 1.386381
+12:35:59.14 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:35:59.68 smoother_server Received a path to smooth.
+12:35:59.69 smoother_server Smoothed path leads to a collision at x: 1.645654, y: 0.909810, theta: -1.462318
+12:35:59.69 smoother_server Smoothed Path collided atX: 1.645654Y: 0.909810Theta: -1.462318
+12:35:59.69 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:36:00.22 smoother_server Received a path to smooth.
+12:36:00.22 smoother_server Smoothed path leads to a collision at x: 1.695654, y: 1.059810, theta: 1.588850
+12:36:00.22 smoother_server Smoothed Path collided atX: 1.695654Y: 1.059810Theta: 1.588850
+12:36:00.22 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:36:00.77 smoother_server Received a path to smooth.
+12:36:00.77 smoother_server Smoothed path leads to a collision at x: 1.695654, y: 1.059810, theta: -1.470704
+12:36:00.77 smoother_server Smoothed Path collided atX: 1.695654Y: 1.059810Theta: -1.470704
+12:36:00.77 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:36:01.31 smoother_server Received a path to smooth.
+12:36:01.32 smoother_server Smoothed path leads to a collision at x: 1.745654, y: 1.159810, theta: -1.524111
+12:36:01.32 smoother_server Smoothed Path collided atX: 1.745654Y: 1.159810Theta: -1.524111
+12:36:01.32 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:36:01.77 global_costmap.glo StaticLayer: Resizing costmap to 215 X 219 at 0.050000 m/pix
+12:36:02.38 smoother_server Received a path to smooth.
+12:36:02.92 smoother_server Received a path to smooth.
+12:36:03.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:36:03.77 global_costmap.glo StaticLayer: Resizing costmap to 216 X 219 at 0.050000 m/pix
+12:36:12.14 smoother_server Received a path to smooth.
+12:36:13.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:36:13.72 smoother_server Received a path to smooth.
+12:36:14.24 smoother_server Received a path to smooth.
+12:36:14.24 smoother_server Smoothed path leads to a collision at x: 1.811410, y: 3.509810, theta: 0.001786
+12:36:14.24 smoother_server Smoothed Path collided atX: 1.811410Y: 3.509810Theta: 0.001786
+12:36:14.24 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:36:14.80 smoother_server Received a path to smooth.
+12:36:14.80 smoother_server Smoothed path leads to a collision at x: 1.803094, y: 3.430937, theta: -0.362538
+12:36:14.80 smoother_server Smoothed Path collided atX: 1.803094Y: 3.430937Theta: -0.362538
+12:36:14.80 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:36:23.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:36:27.64 alinhador_passagem Novo goal: x=1.67 y=1.39 yaw=5 graus
+12:36:27.65 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:36:27.65 bt_navigator Goal canceled
+12:36:27.66 controller_server Cancellation was successful. Stopping the robot.
+12:36:27.66 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:36:27.68 alinhador_passagem Goal substituido por um novo.
+12:36:27.70 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+12:36:27.93 robo_hardware Velocity command source timestamp invalid/stale
+12:36:28.18 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:36:28.24 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a -119 graus da frente: viro antes do Nav2
+12:36:33.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:36:35.13 robo_hardware Velocity command source timestamp invalid/stale
+12:36:35.19 robo_hardware Velocity command source timestamp invalid/stale
+12:36:35.34 alinhador_passagem GOAL FINAL (virar para o caminho): angulo -104 graus (erro -2.6)
+12:36:35.60 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+12:36:35.60 alinhador_passagem GOAL FINAL: x=1.67 y=1.39 yaw=5 graus
+12:36:35.60 bt_navigator Begin navigating from current location (1.71, 4.77) to (1.67, 1.39)
+12:36:35.62 smoother_server Received a path to smooth.
+12:36:35.62 smoother_server Smoothed path leads to a collision at x: 1.610330, y: 1.699050, theta: 2.329930
+12:36:35.62 smoother_server Smoothed Path collided atX: 1.610330Y: 1.699050Theta: 2.329930
+12:36:35.62 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:36:35.63 controller_server Received a goal, begin computing control effort.
+12:36:43.40 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:36:43.69 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:36:43.80 smoother_server Received a path to smooth.
+12:36:43.81 smoother_server Smoothed path leads to a collision at x: 1.717838, y: 1.469030, theta: -2.058599
+12:36:43.81 smoother_server Smoothed Path collided atX: 1.717838Y: 1.469030Theta: -2.058599
+12:36:43.81 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:36:44.86 smoother_server Received a path to smooth.
+12:36:44.87 smoother_server Smoothed path leads to a collision at x: 1.717439, y: 1.468859, theta: -2.053000
+12:36:44.87 smoother_server Smoothed Path collided atX: 1.717439Y: 1.468859Theta: -2.053000
+12:36:44.87 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:36:45.53 collision_monitor Robot to continue normal operation
+12:36:45.70 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:36:46.19 collision_monitor Robot to continue normal operation
+12:36:46.23 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:36:47.73 controller_server Cancellation was successful. Stopping the robot.
+12:36:47.73 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:36:47.73 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:36:47.73 bt_navigator Goal canceled
+12:36:47.79 collision_monitor Robot to continue normal operation
+12:36:48.02 alinhador_passagem ANTI_CISCADO 1: GOAL FINAL: 4 inversoes em 4 s sem sair do lugar (2 cm, 0 graus): paro, destravo e mando o goal de novo
+12:36:48.23 robo_hardware Velocity command source timestamp invalid/stale
+12:36:48.76 destravar DESTRAVAR: caminho novo (108 pontos)
+12:36:49.36 destravar DESTRAVAR: DIAGNOSTICO: cm_bloqueou,oscilacao,frente_barrada (planner ok, frente 3 cm, retornos 0)
+12:36:49.53 robo_hardware Velocity command source timestamp invalid/stale
+12:36:49.56 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa cm_bloqueou,oscilacao: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq 25 cm: 8 ponto(s) do LiDAR na area v
+12:36:49.57 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: causa cm_bloqueou,oscilacao: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq 25 cm: 8 ponto(s) do LiDAR na area varrida; esq 15 cm: 7 po
+12:36:49.84 destravar DESTRAVAR: sem alternativa segura (retomar: causa cm_bloqueou,oscilacao: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq 25 cm: 8 ponto(s) do LiDAR na area varrida; esq 15 cm: 7 ponto(s) 
+12:36:49.85 alinhador_passagem ANTI_CISCADO 1: destravar falhou
+12:36:49.90 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +56 graus da frente: viro antes do Nav2
+12:36:50.16 alinhador_passagem GOAL FINAL (virar para o caminho): girando 56 graus a quina pegaria: primeiro 10 cm para tras
+12:36:51.53 robo_hardware Velocity command source timestamp invalid/stale
+12:36:51.60 alinhador_passagem GOAL FINAL (virar para o caminho): andei 9 cm para tras
+12:36:53.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:36:56.29 robo_hardware Velocity command source timestamp invalid/stale
+12:36:56.33 robo_hardware Velocity command source timestamp invalid/stale
+12:36:56.50 alinhador_passagem GOAL FINAL (virar para o caminho): angulo -54 graus (erro 2.4)
+12:36:56.76 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+12:36:56.76 alinhador_passagem GOAL FINAL: x=1.67 y=1.39 yaw=5 graus
+12:36:56.76 bt_navigator Begin navigating from current location (1.43, 3.83) to (1.67, 1.39)
+12:36:56.78 smoother_server Received a path to smooth.
+12:36:56.79 smoother_server Smoothed path leads to a collision at x: 1.718759, y: 1.467959, theta: -2.073710
+12:36:56.79 smoother_server Smoothed Path collided atX: 1.718759Y: 1.467959Theta: -2.073710
+12:36:56.79 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:36:56.80 controller_server Received a goal, begin computing control effort.
+12:36:58.86 smoother_server Received a path to smooth.
+12:36:58.87 smoother_server Smoothed path leads to a collision at x: 1.717179, y: 1.469002, theta: -2.049139
+12:36:58.87 smoother_server Smoothed Path collided atX: 1.717179Y: 1.469002Theta: -2.049139
+12:36:58.87 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:37:00.92 smoother_server Received a path to smooth.
+12:37:01.47 smoother_server Received a path to smooth.
+12:37:02.02 smoother_server Received a path to smooth.
+12:37:03.41 filtro_corpo_scan MEMORIA_PERTO: 9 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (16 guardados)
+12:37:03.41 filtro_corpo_scan 60 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:37:09.69 smoother_server Received a path to smooth.
+12:37:10.95 global_costmap.glo Message Filter dropping message: frame 'laser_raw' at time 1794325030.647 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+12:37:11.78 smoother_server Received a path to smooth.
+12:37:13.41 filtro_corpo_scan MEMORIA_PERTO: 5 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (0 guardados)
+12:37:13.41 filtro_corpo_scan 59 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:37:23.40 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:37:26.60 smoother_server Received a path to smooth.
+12:37:33.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:37:38.82 controller_server Could not find a legal trajectory: No valid trajectories out of 392! 
+12:37:38.91 controller_server Could not find a legal trajectory: No valid trajectories out of 392! 
+12:37:38.99 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:37:41.83 alinhador_passagem Novo goal: x=1.68 y=4.90 yaw=5 graus
+12:37:41.84 alinhador_passagem Goal substituido por um novo.
+12:37:41.85 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+12:37:41.85 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:37:41.85 bt_navigator Goal canceled
+12:37:41.90 controller_server Cancellation was successful. Stopping the robot.
+12:37:41.90 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:37:42.36 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:37:42.41 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a -65 graus da frente: viro antes do Nav2
+12:37:42.68 alinhador_passagem GOAL FINAL (virar para o caminho): girando -65 graus a quina pegaria: primeiro 4 cm para dir
+12:37:42.79 collision_monitor Robot to continue normal operation
+12:37:43.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:37:43.79 robo_hardware Velocity command source timestamp invalid/stale
+12:37:43.87 alinhador_passagem GOAL FINAL (virar para o caminho): andei 3 cm para dir
+12:37:49.19 robo_hardware Velocity command source timestamp invalid/stale
+12:37:49.23 robo_hardware Velocity command source timestamp invalid/stale
+12:37:49.38 alinhador_passagem GOAL FINAL (virar para o caminho): angulo 66 graus (erro -2.2)
+12:37:49.65 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+12:37:49.66 alinhador_passagem GOAL FINAL: x=1.68 y=4.90 yaw=5 graus
+12:37:49.66 bt_navigator Begin navigating from current location (1.63, 1.32) to (1.68, 4.90)
+12:37:49.68 smoother_server Received a path to smooth.
+12:37:49.68 smoother_server Smoothed path leads to a collision at x: 2.006242, y: 3.311019, theta: 1.567924
+12:37:49.68 smoother_server Smoothed Path collided atX: 2.006242Y: 3.311019Theta: 1.567924
+12:37:49.68 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:37:49.70 controller_server Received a goal, begin computing control effort.
+12:37:50.23 smoother_server Received a path to smooth.
+12:37:50.23 smoother_server Smoothed path leads to a collision at x: 2.001518, y: 3.210526, theta: 1.492342
+12:37:50.23 smoother_server Smoothed Path collided atX: 2.001518Y: 3.210526Theta: 1.492342
+12:37:50.23 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:37:50.78 smoother_server Received a path to smooth.
+12:37:50.79 smoother_server Smoothed path leads to a collision at x: 2.042742, y: 3.263762, theta: 1.621143
+12:37:50.79 smoother_server Smoothed Path collided atX: 2.042742Y: 3.263762Theta: 1.621143
+12:37:50.79 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:37:51.32 smoother_server Received a path to smooth.
+12:37:53.40 filtro_corpo_scan 60 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:37:57.23 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:37:57.53 collision_monitor Robot to continue normal operation
+12:37:58.09 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:37:58.21 controller_server Could not find a legal trajectory: No valid trajectories out of 392! 
+12:37:58.23 collision_monitor Robot to continue normal operation
+12:37:58.31 controller_server Could not find a legal trajectory: No valid trajectories out of 352! 
+12:37:58.49 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:37:58.54 collision_monitor Robot to continue normal operation
+12:37:58.59 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:38:03.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:38:04.20 controller_server Failed to make progress
+12:38:04.20 controller_server [follow_path] [ActionServer] Aborting handle.
+12:38:04.29 collision_monitor Robot to continue normal operation
+12:38:04.92 destravar DESTRAVAR: caminho novo (106 pontos)
+12:38:05.56 destravar DESTRAVAR: DIAGNOSTICO: sem_progresso_fisico,quina_dir,frente_barrada (planner ok, frente 2 cm, retornos 0)
+12:38:05.84 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: 3 ponto(s) do LiDAR na area varrida | lateral: esq 40 cm: 3 ponto(s) do LiDAR na area va
+12:38:05.84 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: 3 ponto(s) do LiDAR na area varrida | lateral: esq 40 cm: 3 ponto(s) do LiDAR na area varrida; esq 30 cm: 3 pon
+12:38:06.10 destravar DESTRAVAR: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: 3 ponto(s) do LiDAR na area varrida | lateral: esq 40 cm: 3 ponto(s) do LiDAR na area varrida; esq 30 cm: 3 ponto(s) d
+12:38:06.12 bt_navigator [navigate_to_pose] [ActionServer] Aborting handle.
+12:38:06.12 bt_navigator Goal failed
+12:38:06.14 alinhador_passagem GOAL FINAL: FALHOU
+12:38:13.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:38:17.70 alinhador_passagem Novo goal: x=1.32 y=4.59 yaw=5 graus
+12:38:17.72 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+12:38:18.09 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:38:18.14 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +51 graus da frente: viro antes do Nav2
+12:38:18.40 alinhador_passagem GOAL FINAL (virar para o caminho): girando 51 graus a quina pegaria: primeiro 7 cm para tras
+12:38:19.13 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:38:19.29 collision_monitor Robot to continue normal operation
+12:38:19.49 robo_hardware Velocity command source timestamp invalid/stale
+12:38:19.53 robo_hardware Velocity command source timestamp invalid/stale
+12:38:19.59 alinhador_passagem GOAL FINAL (virar para o caminho): andei 6 cm para tras
+12:38:19.86 alinhador_passagem GOAL FINAL (virar para o caminho): girando 51 graus a quina pegaria: primeiro 4 cm para tras
+12:38:20.29 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:38:20.43 collision_monitor Robot to continue normal operation
+12:38:20.69 robo_hardware Velocity command source timestamp invalid/stale
+12:38:20.74 robo_hardware Velocity command source timestamp invalid/stale
+12:38:20.78 alinhador_passagem GOAL FINAL (virar para o caminho): andei 3 cm para tras
+12:38:23.40 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:38:25.09 robo_hardware Velocity command source timestamp invalid/stale
+12:38:25.27 alinhador_passagem GOAL FINAL (virar para o caminho): angulo 123 graus (erro 2.0)
+12:38:25.53 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+12:38:25.54 alinhador_passagem GOAL FINAL: x=1.32 y=4.59 yaw=5 graus
+12:38:25.54 bt_navigator Begin navigating from current location (2.05, 2.46) to (1.32, 4.59)
+12:38:25.56 smoother_server Received a path to smooth.
+12:38:25.58 controller_server Received a goal, begin computing control effort.
+12:38:27.64 smoother_server Received a path to smooth.
+12:38:28.19 smoother_server Received a path to smooth.
+12:38:28.20 smoother_server Smoothed path leads to a collision at x: 1.315193, y: 4.586587, theta: 0.095528
+12:38:28.20 smoother_server Smoothed Path collided atX: 1.315193Y: 4.586587Theta: 0.095528
+12:38:28.20 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:38:31.67 local_costmap.loca Message Filter dropping message: frame 'laser_raw' at time 1794325111.367 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+12:38:33.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:38:43.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:38:44.02 smoother_server Received a path to smooth.
+12:38:44.87 alinhador_passagem Novo goal: x=-0.30 y=-0.12 yaw=5 graus
+12:38:44.88 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:38:44.88 controller_server Cancellation was successful. Stopping the robot.
+12:38:44.88 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:38:44.88 bt_navigator Goal canceled
+12:38:44.91 alinhador_passagem Goal substituido por um novo.
+12:38:44.92 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+12:38:45.19 robo_hardware Velocity command source timestamp invalid/stale
+12:38:45.68 alinhador_passagem Passagem 1: entrada (1.60, 1.03), eixo -91 graus, largura no mapa 0.78 m, preparo a 0.60 m da entrada
+12:38:45.70 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=1.62 y=1.63 yaw=-91 graus
+12:38:45.80 alinhador_passagem PREPARO 1 (alinhar fora da passagem) (posicao) (virar para o caminho): o caminho sai a -110 graus da frente: viro antes do Nav2
+12:38:52.13 robo_hardware Velocity command source timestamp invalid/stale
+12:38:52.19 robo_hardware Velocity command source timestamp invalid/stale
+12:38:52.34 alinhador_passagem PREPARO 1 (alinhar fora da passagem) (posicao) (virar para o caminho): angulo -61 graus (erro -3.0)
+12:38:52.60 alinhador_passagem PREPARO 1 (alinhar fora da passagem) (posicao) (virar para o caminho): SUCESSO
+12:38:52.60 alinhador_passagem PREPARO 1 (alinhar fora da passagem) (posicao): x=1.62 y=1.63 yaw=-63 graus
+12:38:52.61 bt_navigator Begin navigating from current location (1.20, 4.62) to (1.62, 1.63)
+12:38:52.63 smoother_server Received a path to smooth.
+12:38:52.63 smoother_server Smoothed path leads to a collision at x: 1.607910, y: 2.532711, theta: -1.069349
+12:38:52.63 smoother_server Smoothed Path collided atX: 1.607910Y: 2.532711Theta: -1.069349
+12:38:52.63 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:38:52.64 controller_server Received a goal, begin computing control effort.
+12:38:53.17 smoother_server Received a path to smooth.
+12:38:53.17 smoother_server Smoothed path leads to a collision at x: 1.510457, y: 2.466063, theta: -1.605990
+12:38:53.17 smoother_server Smoothed Path collided atX: 1.510457Y: 2.466063Theta: -1.605990
+12:38:53.17 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:38:53.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:38:53.71 smoother_server Received a path to smooth.
+12:38:53.71 smoother_server Smoothed path leads to a collision at x: 1.621226, y: 2.072434, theta: -1.439518
+12:38:53.71 smoother_server Smoothed Path collided atX: 1.621226Y: 2.072434Theta: -1.439518
+12:38:53.71 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:38:54.24 planner_server GridBased plugin failed to plan from (1.45, 4.47) to (1.62, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:38:54.24 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:38:54.28 planner_server GridBased plugin failed to plan from (1.45, 4.47) to (1.62, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:38:54.28 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:38:54.34 controller_server Cancellation was successful. Stopping the robot.
+12:38:54.34 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:38:54.60 robo_hardware Velocity command source timestamp invalid/stale
+12:38:54.63 robo_hardware Velocity command source timestamp invalid/stale
+12:38:55.31 planner_server GridBased plugin failed to plan from (1.47, 4.54) to (1.67, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:38:55.31 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:38:56.60 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+12:38:56.60 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)
+12:38:58.61 planner_server GridBased plugin failed to plan from (1.47, 4.54) to (1.67, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:38:58.61 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:38:59.90 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+12:38:59.90 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (2/2)
+12:39:01.90 planner_server GridBased plugin failed to plan from (1.47, 4.54) to (1.67, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:39:01.90 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:39:02.42 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_caminho_global,oscilacao (planner sem_caminho, frente 45 cm, retornos 0)
+12:39:02.72 destravar DESTRAVAR: DECISAO: lateral (40 cm para dir; depois o corpo anda 18 cm no caminho (area 63% observada)) | recusadas: retomar: planner sem caminho
+12:39:03.40 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:39:09.59 robo_hardware Velocity command source timestamp invalid/stale
+12:39:10.18 destravar DESTRAVAR: RESULTADO lateral: ok | chegou | ICP: 27 cm na direcao pedida (dx -16, dy -27 cm)
+12:39:10.19 destravar DESTRAVAR: OK: lateral (40 cm para dir; depois o corpo anda 18 cm no caminho (area 63% observada); ICP: 27 cm na direcao pedida (dx -16, dy -27 cm))
+12:39:10.44 destravar DESTRAVAR: lateral (40 cm para dir; depois o corpo anda 18 cm no caminho (area 63% observada); ICP: 27 cm na direcao pedida (dx -16, dy -27 cm))
+12:39:10.45 planner_server GridBased plugin failed to plan from (1.20, 4.50) to (1.62, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:39:10.45 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:39:10.56 planner_server GridBased plugin failed to plan from (1.20, 4.50) to (1.62, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:39:10.56 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:39:10.69 robo_hardware Velocity command source timestamp invalid/stale
+12:39:10.79 smoother_server Received a path to smooth.
+12:39:10.79 smoother_server Smoothed path leads to a collision at x: 1.711346, y: 2.690038, theta: -1.271760
+12:39:10.79 smoother_server Smoothed Path collided atX: 1.711346Y: 2.690038Theta: -1.271760
+12:39:10.79 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:39:10.81 controller_server Received a goal, begin computing control effort.
+12:39:11.84 planner_server GridBased plugin failed to plan from (1.27, 4.43) to (1.62, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:39:11.84 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:39:12.28 planner_server GridBased plugin failed to plan from (1.29, 4.37) to (1.62, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:39:12.28 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:39:12.32 controller_server Cancellation was successful. Stopping the robot.
+12:39:12.32 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:39:12.59 robo_hardware Velocity command source timestamp invalid/stale
+12:39:12.64 robo_hardware Velocity command source timestamp invalid/stale
+12:39:13.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:39:13.50 destravar DESTRAVAR: caminho novo (122 pontos)
+12:39:14.00 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido (planner ok, frente 126 cm, retornos 0)
+12:39:14.04 destravar DESTRAVAR: DECISAO: retomar (caminho novo e corpo passa 50 cm na direcao dele) | recusadas: -
+12:39:14.06 destravar DESTRAVAR: OK: contorno normal: caminho novo e corpo passa 50 cm na direcao dele
+12:39:14.32 destravar DESTRAVAR: contorno normal: caminho novo e corpo passa 50 cm na direcao dele
+12:39:14.36 smoother_server Received a path to smooth.
+12:39:14.36 smoother_server Smoothed path leads to a collision at x: 1.841293, y: 2.797842, theta: -1.025238
+12:39:14.36 smoother_server Smoothed Path collided atX: 1.841293Y: 2.797842Theta: -1.025238
+12:39:14.36 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:39:14.41 smoother_server Received a path to smooth.
+12:39:14.42 smoother_server Smoothed path leads to a collision at x: 1.841293, y: 2.797842, theta: -1.025238
+12:39:14.42 smoother_server Smoothed Path collided atX: 1.841293Y: 2.797842Theta: -1.025238
+12:39:14.42 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:39:14.43 controller_server Received a goal, begin computing control effort.
+12:39:14.96 smoother_server Received a path to smooth.
+12:39:14.96 smoother_server Smoothed path leads to a collision at x: 1.841536, y: 2.797945, theta: -1.025787
+12:39:14.96 smoother_server Smoothed Path collided atX: 1.841536Y: 2.797945Theta: -1.025787
+12:39:14.96 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:39:15.50 smoother_server Received a path to smooth.
+12:39:15.50 smoother_server Smoothed path leads to a collision at x: 1.721483, y: 2.739596, theta: 1.784358
+12:39:15.50 smoother_server Smoothed Path collided atX: 1.721483Y: 2.739596Theta: 1.784358
+12:39:15.50 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:39:15.94 slam_toolbox Message Filter dropping message: frame 'laser_raw' at time 1794325155.762 for reason 'discarding message because the queue is full'
+12:39:16.55 planner_server GridBased plugin failed to plan from (1.47, 4.14) to (1.62, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:39:16.55 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:39:16.80 smoother_server Received a path to smooth.
+12:39:16.80 smoother_server Smoothed path leads to a collision at x: 1.644599, y: 1.647830, theta: -2.597279
+12:39:16.80 smoother_server Smoothed Path collided atX: 1.644599Y: 1.647830Theta: -2.597279
+12:39:16.80 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:39:17.35 smoother_server Received a path to smooth.
+12:39:17.35 smoother_server Smoothed path leads to a collision at x: 1.740941, y: 1.715153, theta: -2.517643
+12:39:17.35 smoother_server Smoothed Path collided atX: 1.740941Y: 1.715153Theta: -2.517643
+12:39:17.35 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:39:20.96 smoother_server Received a path to smooth.
+12:39:22.50 smoother_server Received a path to smooth.
+12:39:23.05 smoother_server Received a path to smooth.
+12:39:23.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:39:25.13 smoother_server Received a path to smooth.
+12:39:25.13 smoother_server Smoothed path leads to a collision at x: 1.811268, y: 2.773297, theta: -1.126760
+12:39:25.13 smoother_server Smoothed Path collided atX: 1.811268Y: 2.773297Theta: -1.126760
+12:39:25.13 smoother_server [smooth_path] [ActionServer] Aborting handle.
+12:39:33.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:39:34.33 planner_server GridBased plugin failed to plan from (1.90, 2.17) to (1.62, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:39:34.33 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:39:34.80 planner_server GridBased plugin failed to plan from (1.90, 2.15) to (1.62, 1.63): "Failed to create plan with tolerance of: 0.100000"
+12:39:34.80 planner_server [compute_path_to_pose] [ActionServer] Aborting handle.
+12:39:34.84 controller_server Cancellation was successful. Stopping the robot.
+12:39:34.84 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:39:35.09 robo_hardware Velocity command source timestamp invalid/stale
+12:39:35.13 robo_hardware Velocity command source timestamp invalid/stale
+12:39:35.80 destravar DESTRAVAR: caminho novo (24 pontos)
+12:39:36.29 destravar DESTRAVAR: DIAGNOSTICO: nada evidente (planner ok, frente 94 cm, retornos 0)
+12:39:36.33 destravar DESTRAVAR: DECISAO: retomar (caminho novo e corpo passa 50 cm na direcao dele) | recusadas: -
+12:39:36.34 destravar DESTRAVAR: OK: contorno normal: caminho novo e corpo passa 50 cm na direcao dele
+12:39:36.60 destravar DESTRAVAR: contorno normal: caminho novo e corpo passa 50 cm na direcao dele
+12:39:36.63 smoother_server Received a path to smooth.
+12:39:36.65 controller_server Received a goal, begin computing control effort.
+12:39:38.42 slam_toolbox Message Filter dropping message: frame 'laser_raw' at time 1794325178.235 for reason 'discarding message because the queue is full'
+12:39:43.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:39:43.52 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:39:43.52 bt_navigator Goal canceled
+12:39:43.56 controller_server Cancellation was successful. Stopping the robot.
+12:39:43.56 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+12:39:43.85 alinhador_passagem PREPARO 1 (alinhar fora da passagem) (posicao): SUCESSO (aceito a 1 cm do ponto, sem exigir angulo)
+12:39:43.88 alinhador_passagem PREPARO 1 (alinhar fora da passagem): SUCESSO (2 cm e 1 graus do preparo)
+12:39:44.09 robo_hardware Velocity command source timestamp invalid/stale
+12:39:44.42 alinhador_passagem Passagem 1 termina num cruzamento em (1.58, -0.17) com curva para a DIREITA: modo de curva: lateral
+12:39:44.42 alinhador_passagem TRAVESSIA 1: travessia pelo LiDAR ate (1.58, -0.09) + 0.00 m
+12:39:44.76 alinhador_passagem TRAVESSIA 1: Paredes vistas (largura 0.73 m): parando na boca para alinhar
+12:39:45.73 alinhador_passagem TRAVESSIA 1: Medicao 1: girar -5.7 graus, centro a -5.2 cm, largura 0.73 m
+12:39:47.36 alinhador_passagem TRAVESSIA 1: Medicao 2: girar -1.0 graus, centro a -4.2 cm, largura 0.74 m
+12:39:49.02 alinhador_passagem TRAVESSIA 1: Medicao 3: girar -0.9 graus, centro a -0.6 cm, largura 0.75 m
+12:39:49.02 alinhador_passagem TRAVESSIA 1: Alinhado: atravessando
+12:39:53.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:39:53.77 global_costmap.glo StaticLayer: Resizing costmap to 216 X 221 at 0.050000 m/pix
+12:39:57.77 global_costmap.glo StaticLayer: Resizing costmap to 216 X 223 at 0.050000 m/pix
+12:40:02.94 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:40:03.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:40:04.52 alinhador_passagem TRAVESSIA 1: Travessia LiDAR abortada: Collision Monitor bloqueando dentro da passagem
+12:40:04.78 alinhador_passagem TRAVESSIA 1: saindo de re 1.28 m (odom) para tentar de novo
+12:40:04.89 collision_monitor Robot to continue normal operation
+12:40:13.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:40:16.76 alinhador_passagem TRAVESSIA 1 (LiDAR): FALHOU - Collision Monitor bloqueando dentro da passagem
+12:40:16.76 alinhador_passagem Travessia pelo LiDAR falhou: voltando ao preparo para tentar de novo.
+12:40:16.77 alinhador_passagem PREPARO 1 (2a tentativa): x=1.62 y=1.63 yaw=-91 graus
+12:40:18.23 robo_hardware Velocity command source timestamp invalid/stale
+12:40:18.42 alinhador_passagem PREPARO 1 (2a tentativa): angulo -91 graus (erro 2.5)
+12:40:22.43 robo_hardware Velocity command source timestamp invalid/stale
+12:40:22.49 robo_hardware Velocity command source timestamp invalid/stale
+12:40:22.53 alinhador_passagem PREPARO 1 (2a tentativa): andei 21 cm para dir
+12:40:23.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:40:23.73 robo_hardware Velocity command source timestamp invalid/stale
+12:40:23.82 alinhador_passagem PREPARO 1 (2a tentativa): andei 7 cm para tras
+12:40:23.82 alinhador_passagem PREPARO 1 (2a tentativa): SUCESSO (17 cm e 0 graus do preparo)
+12:40:23.82 alinhador_passagem TRAVESSIA 1 (2a tentativa): travessia pelo LiDAR ate (1.58, -0.09) + 0.00 m
+12:40:24.11 alinhador_passagem TRAVESSIA 1 (2a tentativa): Paredes vistas: entrando sem parar (-4.8 graus, centro -7.8 cm)
+12:40:25.89 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:40:25.93 collision_monitor Robot to continue normal operation
+12:40:33.40 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:40:38.83 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:40:38.99 collision_monitor Robot to continue normal operation
+12:40:39.39 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:40:40.94 alinhador_passagem TRAVESSIA 1 (2a tentativa): Travessia LiDAR abortada: Collision Monitor bloqueando dentro da passagem
+12:40:41.21 alinhador_passagem TRAVESSIA 1 (2a tentativa): saindo de re 1.30 m (odom) para tentar de novo
+12:40:41.29 collision_monitor Robot to continue normal operation
+12:40:43.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:40:53.34 alinhador_passagem TRAVESSIA 1 (2a tentativa) (LiDAR): FALHOU - Collision Monitor bloqueando dentro da passagem
+12:40:53.35 alinhador_passagem Nao consegui atravessar a passagem 1. Parei fora dela; mande o goal de novo (ou ajude o robo).
+12:40:53.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:40:53.59 robo_hardware Velocity command source timestamp invalid/stale
+12:41:03.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:41:07.55 alinhador_passagem Novo goal: x=0.35 y=0.06 yaw=-2 graus
+12:41:07.56 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+12:41:08.01 alinhador_passagem Passagem 1: entrada (1.61, 1.03), eixo -95 graus, largura no mapa 0.78 m, preparo a 0.60 m da entrada
+12:41:08.03 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=1.66 y=1.63 yaw=-95 graus
+12:41:09.29 robo_hardware Velocity command source timestamp invalid/stale
+12:41:09.38 alinhador_passagem PREPARO 1 (alinhar fora da passagem): andei 4 cm para dir
+12:41:10.79 robo_hardware Velocity command source timestamp invalid/stale
+12:41:10.88 alinhador_passagem PREPARO 1 (alinhar fora da passagem): andei 9 cm para frente
+12:41:10.88 alinhador_passagem PREPARO 1 (alinhar fora da passagem): SUCESSO (9 cm e 3 graus do preparo)
+12:41:11.30 alinhador_passagem Passagem 1 termina num cruzamento em (1.52, -0.12) com curva para a DIREITA: modo de curva: lateral
+12:41:11.31 alinhador_passagem TRAVESSIA 1: travessia pelo LiDAR ate (1.52, -0.04) + 0.00 m
+12:41:11.59 alinhador_passagem TRAVESSIA 1: Paredes vistas: entrando sem parar (+5.3 graus, centro -7.5 cm)
+12:41:13.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:41:23.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:41:23.77 global_costmap.glo StaticLayer: Resizing costmap to 216 X 223 at 0.050000 m/pix
+12:41:33.32 alinhador_passagem TRAVESSIA 1: FREIO_CRUZAMENTO: algo a 9 cm do para-choque, ja 5 cm alem do ponto do cruzamento: paro aqui e sigo a saida
+12:41:33.40 filtro_corpo_scan MEMORIA_PERTO: 3 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (84 guardados)
+12:41:33.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:41:33.59 alinhador_passagem TRAVESSIA 1 (LiDAR): SUCESSO
+12:41:33.60 alinhador_passagem CURVA 1: saindo de lado para a DIREITA ate (0.84, -0.18) + 0.60 m
+12:41:33.60 alinhador_passagem CURVA 1: Cruzamento: saindo de lado para a DIREITA
+12:41:34.43 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -0.6 cm a frente (1 parede(s)), folga frente 7 / tras - cm
+12:41:37.40 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 14 / tras 3 cm
+12:41:38.23 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:41:38.27 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +6.4 cm a frente (1 parede(s)), folga frente 14 / tras 3 cm
+12:41:38.27 alinhador_passagem CURVA 1: Perto da parede: afastando +4.0 cm
+12:41:38.39 collision_monitor Robot to continue normal operation
+12:41:39.56 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +4.0 cm a frente (1 parede(s)), folga frente 11 / tras 5 cm
+12:41:40.21 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 13 / tras 4 cm
+12:41:41.06 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +5.5 cm a frente (1 parede(s)), folga frente 14 / tras 4 cm
+12:41:41.07 alinhador_passagem CURVA 1: Perto da parede: afastando +4.0 cm
+12:41:42.40 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +3.0 cm a frente (1 parede(s)), folga frente 11 / tras 6 cm
+12:41:43.20 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 14 / tras 4 cm
+12:41:43.40 filtro_corpo_scan MEMORIA_PERTO: 172 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (150 guardados)
+12:41:43.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:41:44.06 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +6.0 cm a frente (1 parede(s)), folga frente 17 / tras 4 cm
+12:41:44.06 alinhador_passagem CURVA 1: Perto da parede: afastando +4.0 cm
+12:41:45.33 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +3.8 cm a frente (1 parede(s)), folga frente 12 / tras 6 cm
+12:41:46.79 slam_toolbox Message Filter dropping message: frame 'laser_raw' at time 1794325306.631 for reason 'discarding message because the queue is full'
+12:41:48.32 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 13 / tras 4 cm
+12:41:49.12 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +5.1 cm a frente (1 parede(s)), folga frente 13 / tras 2 cm
+12:41:49.12 alinhador_passagem CURVA 1: Perto da parede: afastando +4.0 cm
+12:41:50.48 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +2.0 cm a frente (folgas), folga frente 10 / tras 6 cm
+12:41:51.61 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 14 / tras 4 cm
+12:41:52.47 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +5.1 cm a frente (folgas), folga frente 14 / tras 4 cm
+12:41:52.49 alinhador_passagem CURVA 1: Perto da parede: afastando +5.1 cm
+12:41:53.41 filtro_corpo_scan MEMORIA_PERTO: 56 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (59 guardados)
+12:41:53.41 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:41:53.92 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +0.5 cm a frente (folgas), folga frente 9 / tras 8 cm
+12:41:55.24 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 14 / tras 4 cm
+12:41:55.43 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:41:55.59 collision_monitor Robot to continue normal operation
+12:41:56.11 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +5.2 cm a frente (folgas), folga frente 14 / tras 4 cm
+12:41:56.11 alinhador_passagem CURVA 1: Perto da parede: afastando +5.2 cm
+12:41:57.60 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +0.9 cm a frente (folgas), folga frente 9 / tras 8 cm
+12:41:58.73 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 14 / tras 4 cm
+12:41:58.93 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:41:59.54 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +6.1 cm a frente (folgas), folga frente 15 / tras 3 cm
+12:41:59.55 alinhador_passagem CURVA 1: Perto da parede: afastando +6.1 cm
+12:41:59.69 collision_monitor Robot to continue normal operation
+12:42:01.08 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +0.6 cm a frente (folgas), folga frente 9 / tras 8 cm
+12:42:02.04 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 15 / tras 4 cm
+12:42:02.23 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:42:02.91 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +7.1 cm a frente (folgas), folga frente 16 / tras 2 cm
+12:42:02.91 alinhador_passagem CURVA 1: Perto da parede: afastando +7.1 cm
+12:42:03.03 collision_monitor Robot to continue normal operation
+12:42:03.41 filtro_corpo_scan MEMORIA_PERTO: 146 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (60 guardados)
+12:42:03.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:42:04.56 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +1.8 cm a frente (folgas), folga frente 11 / tras 7 cm
+12:42:06.68 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 16 / tras 4 cm
+12:42:06.89 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:42:07.54 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +8.5 cm a frente (folgas), folga frente 18 / tras 1 cm
+12:42:07.54 alinhador_passagem CURVA 1: Perto da parede: afastando +8.5 cm
+12:42:07.69 collision_monitor Robot to continue normal operation
+12:42:09.19 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +3.1 cm a frente (folgas), folga frente 13 / tras 6 cm
+12:42:11.32 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 16 / tras 4 cm
+12:42:11.83 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:42:13.41 filtro_corpo_scan MEMORIA_PERTO: 24 pontos no ponto cego do LiDAR devolvidos ao /scan_nav (23 guardados)
+12:42:13.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:42:13.80 alinhador_passagem CURVA 1: Perto da parede (sem medicao): afastando +4.0 cm
+12:42:13.93 collision_monitor Robot to continue normal operation
+12:42:16.68 alinhador_passagem CURVA 1: Paredes acabaram perto da saida: terminando de sair
+12:42:23.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:42:28.49 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:42:30.10 alinhador_passagem CURVA 1: Collision Monitor segurando em "deslizar": parando para medir de novo
+12:42:30.29 collision_monitor Robot to continue normal operation
+12:42:32.55 alinhador_passagem CURVA 1: Paredes acabaram perto da saida: terminando de sair
+12:42:33.40 filtro_corpo_scan 61 de 61 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:42:34.62 alinhador_passagem CURVA 1: Saida lateral concluida
+12:42:34.63 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+12:42:34.88 alinhador_passagem CURVA 1: SUCESSO
+12:42:35.09 robo_hardware Velocity command source timestamp invalid/stale
+12:42:35.13 robo_hardware Velocity command source timestamp invalid/stale
+12:42:35.13 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+12:42:35.17 alinhador_passagem TRAJETO CURTO: 36 cm em linha reta, sem Nav2 (angulo -2 graus)
+12:42:35.45 alinhador_passagem TRAJETO CURTO: girando 96 graus a quina pegaria: primeiro 36 cm para esq
+12:42:35.53 collision_monitor Robot to continue normal operation
+12:42:41.49 robo_hardware Velocity command source timestamp invalid/stale
+12:42:41.53 robo_hardware Velocity command source timestamp invalid/stale
+12:42:41.60 alinhador_passagem TRAJETO CURTO: andei 36 cm para esq
+12:42:43.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:42:47.23 robo_hardware Velocity command source timestamp invalid/stale
+12:42:47.42 alinhador_passagem TRAJETO CURTO: angulo -2 graus (erro 3.2)
+12:42:49.19 robo_hardware Velocity command source timestamp invalid/stale
+12:42:49.27 alinhador_passagem TRAJETO CURTO: andei 6 cm para dir
+12:42:51.03 robo_hardware Velocity command source timestamp invalid/stale
+12:42:51.12 alinhador_passagem TRAJETO CURTO: andei 13 cm para frente
+12:42:52.13 robo_hardware Velocity command source timestamp invalid/stale
+12:42:52.20 alinhador_passagem TRAJETO CURTO: andei 3 cm para dir
+12:42:53.39 robo_hardware Velocity command source timestamp invalid/stale
+12:42:53.40 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?
+12:42:53.44 alinhador_passagem TRAJETO CURTO: andei 7 cm para frente
+12:42:54.99 robo_hardware Velocity command source timestamp invalid/stale
+12:42:55.14 alinhador_passagem TRAJETO CURTO: angulo -2 graus (erro 2.8)
+12:42:55.42 alinhador_passagem TRAJETO CURTO: SUCESSO (3 cm do ponto)
+12:42:55.63 robo_hardware Velocity command source timestamp invalid/stale
+12:43:03.41 filtro_corpo_scan 60 de 60 scans com objeto EMBAIXO do robo (removido do CM/costmap). Cabo no chao?

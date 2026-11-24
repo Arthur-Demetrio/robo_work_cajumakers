@@ -1,0 +1,44 @@
+[INFO] [1791203187.243716484] [bt_navigator]: 
+	bt_navigator lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791203187.245232246] [bt_navigator]: Creating
+[INFO] [1791203187.410858960] [bt_navigator]: Configuring
+[INFO] [1791203187.414160598] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[WARN] [1791203187.417408846] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+Make sure these match your BT and there are not other sources of error codes youreported to your application
+[INFO] [1791203187.456223993] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+[INFO] [1791203188.157808363] [bt_navigator]: Activating
+[INFO] [1791203188.185509240] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[INFO] [1791203228.546659042] [bt_navigator]: Begin navigating from current location (0.00, 0.00) to (2.06, 0.49)
+[INFO] [1791203250.996922623] [bt_navigator]: Goal succeeded
+[INFO] [1791203254.178018145] [bt_navigator]: Begin navigating from current location (2.06, 0.49) to (2.00, 3.26)
+[INFO] [1791203290.908551715] [bt_navigator]: Received goal preemption request
+[INFO] [1791203290.908649781] [bt_navigator]: Begin navigating from current location (2.21, -0.40) to (1.96, 1.58)
+[INFO] [1791203312.128279835] [bt_navigator]: Goal succeeded
+[INFO] [1791203315.620225156] [bt_navigator]: Begin navigating from current location (1.97, 1.61) to (1.28, 4.44)
+[WARN] [1791203361.940409248] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[ERROR] [1791203361.940485442] [bt_navigator]: Goal failed
+[INFO] [1791203368.037753989] [bt_navigator]: Begin navigating from current location (1.43, 2.66) to (1.39, 3.73)
+[INFO] [1791203392.438135644] [bt_navigator]: Received goal preemption request
+[INFO] [1791203392.438219043] [bt_navigator]: Begin navigating from current location (1.43, 2.66) to (1.81, 1.15)
+[INFO] [1791203395.108168572] [bt_navigator]: Received goal preemption request
+[INFO] [1791203395.108291143] [bt_navigator]: Begin navigating from current location (1.43, 2.66) to (1.87, 1.66)
+[WARN] [1791203417.938023852] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[ERROR] [1791203417.938087006] [bt_navigator]: Goal failed
+[INFO] [1791205025.100343905] [bt_navigator]: Deactivating
+[INFO] [1791205025.100372078] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[INFO] [1791205026.436944154] [bt_navigator]: Cleaning up
+[INFO] [1791205026.571582709] [bt_navigator]: Completed Cleaning up
+[INFO] [1791205027.746597656] [bt_navigator]: Configuring
+[INFO] [1791205027.747656381] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[INFO] [1791205027.756544291] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+[INFO] [1791205028.439527876] [bt_navigator]: Activating
+[INFO] [1791205028.459398893] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[INFO] [1791206403.236703194] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791206403.236742881] [bt_navigator]: Running Nav2 LifecycleNode rcl preshutdown (bt_navigator)
+[INFO] [1791206403.236796893] [bt_navigator]: Deactivating
+[INFO] [1791206403.236815000] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.
+[INFO] [1791206403.247036310] [bt_navigator]: Cleaning up
+[INFO] [1791206403.401892488] [bt_navigator]: Completed Cleaning up
+[INFO] [1791206403.401941841] [bt_navigator]: Destroying bond (bt_navigator) to lifecycle manager.

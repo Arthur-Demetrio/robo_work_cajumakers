@@ -1,0 +1,29 @@
+# Poses do sistema de slots, em juntas (q1, q2, q3) em radianos (ordem de JUNTAS do cliente_garra).
+# null = ainda nao calibrado. O sequenciador recusa rodar enquanto faltar alguma pose.
+# Para calibrar: python3 -m garra_coleta.ajustar_poses (move pelo terminal e grava aqui).
+
+# Os 3 pontos comuns a todos os slots.
+pontos:
+  # Espera da coleta (= PRONTA do cliente_garra.py).
+  pronta: [0.12, -0.95, 0.87]
+  # Cubo preso nos dedos com o AprilTag virado para a camera, de perto e de frente.
+  mostrar_apriltag: [2.090, 0.293, -1.400]
+  # Transito acima da fileira de slots, alto o bastante para nao bater nos cubos guardados.
+  acima_slots: null
+
+# Busca na pose mostrar_apriltag: se o tag nao for lido, soma estes desvios (graus) a J3, um por
+# vez, na ordem. J1 e J2 nao mudam. Limite +-30. Lista vazia = sem busca.
+# Ajustar depois de ver ate quantos graus a camera ainda le o tag.
+busca_j3_graus: [8, -8, 15, -15]
+
+# Distancia (m) da reta vertical de entrada/saida em cada slot: o braco vai por juntas ate
+# 'subida_m' acima do slot e so entao desce reto (e sobe reto ao sair).
+subida_m: 0.04
+
+# Uma pose por slot: o cubo assentado no slot, dedos ainda fechados.
+# y_cm (cm, robo_base, + = esquerda): onde a plataforma Y fica para alcancar o slot;
+# null = nao mexe na plataforma. Curso util: -10,3 (direita) a +11,7 (esquerda).
+slots:
+  0: {juntas: null, y_cm: null}   # limite da esquerda
+  1: {juntas: null, y_cm: null}   # meio
+  2: {juntas: null, y_cm: null}   # limite da direita

@@ -1,0 +1,967 @@
+[INFO] [1789156681.148729901] [bridge_node]: robo_bridge iniciado!
+[INFO] [1789156681.150164802] [bridge_node]: Porta serial aberta com sucesso: /dev/ttyUSB0
+[INFO] [1789156681.150190337] [bridge_node]: Serial configurada em 500000 8n1
+[WARN] [1789156681.150195327] [bridge_node]: TESTE SEM TX DE MOTOR
+[INFO] [1789156681.160342230] [bridge_node]: read_serial chamado
+[INFO] [1789156681.160406989] [bridge_node]: RX HEX: 02 a0 02 a9 02 b7 02 95 02 9b 02 13 02 ff 01 ed 01 eb 01 f1 01 07 02 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156681.160418489] [bridge_node]: Recebidos 32 bytes | Buffer acumulado: 5 bytes
+[INFO] [1789156681.170526427] [bridge_node]: read_serial chamado
+[INFO] [1789156681.180392275] [bridge_node]: read_serial chamado
+[INFO] [1789156681.190389454] [bridge_node]: read_serial chamado
+[INFO] [1789156681.200332233] [bridge_node]: read_serial chamado
+[INFO] [1789156681.210437287] [bridge_node]: read_serial chamado
+[INFO] [1789156681.220306181] [bridge_node]: read_serial chamado
+[INFO] [1789156681.230527350] [bridge_node]: read_serial chamado
+[INFO] [1789156681.240428668] [bridge_node]: read_serial chamado
+[INFO] [1789156681.250379333] [bridge_node]: read_serial chamado
+[INFO] [1789156681.260435703] [bridge_node]: read_serial chamado
+[INFO] [1789156681.270297125] [bridge_node]: read_serial chamado
+[INFO] [1789156681.280306511] [bridge_node]: read_serial chamado
+[INFO] [1789156681.290418393] [bridge_node]: read_serial chamado
+[INFO] [1789156681.300485316] [bridge_node]: read_serial chamado
+[INFO] [1789156681.310450115] [bridge_node]: read_serial chamado
+[INFO] [1789156681.320294220] [bridge_node]: read_serial chamado
+[INFO] [1789156681.330301629] [bridge_node]: read_serial chamado
+[INFO] [1789156681.340305962] [bridge_node]: read_serial chamado
+[INFO] [1789156681.350527455] [bridge_node]: read_serial chamado
+[INFO] [1789156681.360438077] [bridge_node]: read_serial chamado
+[INFO] [1789156681.370331350] [bridge_node]: read_serial chamado
+[INFO] [1789156681.380411562] [bridge_node]: read_serial chamado
+[INFO] [1789156681.390299960] [bridge_node]: read_serial chamado
+[INFO] [1789156681.400358085] [bridge_node]: read_serial chamado
+[INFO] [1789156681.410406031] [bridge_node]: read_serial chamado
+[INFO] [1789156681.420365043] [bridge_node]: read_serial chamado
+[INFO] [1789156681.430313700] [bridge_node]: read_serial chamado
+[INFO] [1789156681.440425120] [bridge_node]: read_serial chamado
+[INFO] [1789156681.450404784] [bridge_node]: read_serial chamado
+[INFO] [1789156681.460465468] [bridge_node]: read_serial chamado
+[INFO] [1789156681.470307440] [bridge_node]: read_serial chamado
+[INFO] [1789156681.480310656] [bridge_node]: read_serial chamado
+[INFO] [1789156681.490296137] [bridge_node]: read_serial chamado
+[INFO] [1789156681.500463659] [bridge_node]: read_serial chamado
+[INFO] [1789156681.510474562] [bridge_node]: read_serial chamado
+[INFO] [1789156681.520387830] [bridge_node]: read_serial chamado
+[INFO] [1789156681.530319910] [bridge_node]: read_serial chamado
+[INFO] [1789156681.540427085] [bridge_node]: read_serial chamado
+[INFO] [1789156681.550641176] [bridge_node]: read_serial chamado
+[INFO] [1789156681.560495364] [bridge_node]: read_serial chamado
+[INFO] [1789156681.570295387] [bridge_node]: read_serial chamado
+[INFO] [1789156681.580364054] [bridge_node]: read_serial chamado
+[INFO] [1789156681.590403861] [bridge_node]: read_serial chamado
+[INFO] [1789156681.600609721] [bridge_node]: read_serial chamado
+[INFO] [1789156681.610447173] [bridge_node]: read_serial chamado
+[INFO] [1789156681.620399669] [bridge_node]: read_serial chamado
+[INFO] [1789156681.630308229] [bridge_node]: read_serial chamado
+[INFO] [1789156681.640298106] [bridge_node]: read_serial chamado
+[INFO] [1789156681.650344124] [bridge_node]: read_serial chamado
+[INFO] [1789156681.660434746] [bridge_node]: read_serial chamado
+[INFO] [1789156681.670343308] [bridge_node]: read_serial chamado
+[INFO] [1789156681.680359049] [bridge_node]: read_serial chamado
+[INFO] [1789156681.690426410] [bridge_node]: read_serial chamado
+[INFO] [1789156681.700340294] [bridge_node]: read_serial chamado
+[INFO] [1789156681.710438272] [bridge_node]: read_serial chamado
+[INFO] [1789156681.720335475] [bridge_node]: read_serial chamado
+[INFO] [1789156681.730315716] [bridge_node]: read_serial chamado
+[INFO] [1789156681.740319229] [bridge_node]: read_serial chamado
+[INFO] [1789156681.750313265] [bridge_node]: read_serial chamado
+[INFO] [1789156681.760359230] [bridge_node]: read_serial chamado
+[INFO] [1789156681.770332485] [bridge_node]: read_serial chamado
+[INFO] [1789156681.780335464] [bridge_node]: read_serial chamado
+[INFO] [1789156681.790409279] [bridge_node]: read_serial chamado
+[INFO] [1789156681.800577492] [bridge_node]: read_serial chamado
+[INFO] [1789156681.810332075] [bridge_node]: read_serial chamado
+[INFO] [1789156681.820410577] [bridge_node]: read_serial chamado
+[INFO] [1789156681.830320852] [bridge_node]: read_serial chamado
+[INFO] [1789156681.840446098] [bridge_node]: read_serial chamado
+[INFO] [1789156681.850399998] [bridge_node]: read_serial chamado
+[INFO] [1789156681.860480280] [bridge_node]: read_serial chamado
+[INFO] [1789156681.870310874] [bridge_node]: read_serial chamado
+[INFO] [1789156681.880308090] [bridge_node]: read_serial chamado
+[INFO] [1789156681.890319721] [bridge_node]: read_serial chamado
+[INFO] [1789156681.900345226] [bridge_node]: read_serial chamado
+[INFO] [1789156681.910336508] [bridge_node]: read_serial chamado
+[INFO] [1789156681.920332608] [bridge_node]: read_serial chamado
+[INFO] [1789156681.930429132] [bridge_node]: read_serial chamado
+[INFO] [1789156681.940404852] [bridge_node]: read_serial chamado
+[INFO] [1789156681.950537782] [bridge_node]: read_serial chamado
+[INFO] [1789156681.960417508] [bridge_node]: read_serial chamado
+[INFO] [1789156681.970423145] [bridge_node]: read_serial chamado
+[INFO] [1789156681.980409910] [bridge_node]: read_serial chamado
+[INFO] [1789156681.990387343] [bridge_node]: read_serial chamado
+[INFO] [1789156682.000586604] [bridge_node]: read_serial chamado
+[INFO] [1789156682.010452622] [bridge_node]: read_serial chamado
+[INFO] [1789156682.020321140] [bridge_node]: read_serial chamado
+[INFO] [1789156682.030402900] [bridge_node]: read_serial chamado
+[INFO] [1789156682.040422088] [bridge_node]: read_serial chamado
+[INFO] [1789156682.050336237] [bridge_node]: read_serial chamado
+[INFO] [1789156682.060432396] [bridge_node]: read_serial chamado
+[INFO] [1789156682.070396420] [bridge_node]: read_serial chamado
+[INFO] [1789156682.080632191] [bridge_node]: read_serial chamado
+[INFO] [1789156682.090431728] [bridge_node]: read_serial chamado
+[INFO] [1789156682.100304328] [bridge_node]: read_serial chamado
+[INFO] [1789156682.110420360] [bridge_node]: read_serial chamado
+[INFO] [1789156682.120311530] [bridge_node]: read_serial chamado
+[INFO] [1789156682.130508849] [bridge_node]: read_serial chamado
+[INFO] [1789156682.140412978] [bridge_node]: read_serial chamado
+[INFO] [1789156682.150289915] [bridge_node]: read_serial chamado
+[INFO] [1789156682.160402517] [bridge_node]: read_serial chamado
+[INFO] [1789156682.170324378] [bridge_node]: read_serial chamado
+[INFO] [1789156682.180310385] [bridge_node]: read_serial chamado
+[INFO] [1789156682.190297328] [bridge_node]: read_serial chamado
+[INFO] [1789156682.190360615] [bridge_node]: RX HEX: a5 5a 01 10 75 01 00 00 71 00 00 00 5c 83 01 00 7d 22 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 a0 00 00 00 9d 00 aa 00 ae 00 b2 00 b0 00 b8 00 ce 00 d0 00 d5 00 e7 00 18 12 9f 12 00 00 3d 0f 00 00 00 00 f3 16 c0 15 d8 08 6b 08 54 08 42 08 37 08 1f 08 1e 08 25 08 2e 08 91 
+[INFO] [1789156682.190385393] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156682.200416847] [bridge_node]: read_serial chamado
+[INFO] [1789156682.200655569] [bridge_node]: RX HEX: 08 66 07 2e 04 00 00 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c4 1c 
+[INFO] [1789156682.200747334] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156682.200774048] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156682.210428909] [bridge_node]: read_serial chamado
+[INFO] [1789156682.220304056] [bridge_node]: read_serial chamado
+[INFO] [1789156682.230421621] [bridge_node]: read_serial chamado
+[INFO] [1789156682.240414665] [bridge_node]: read_serial chamado
+[INFO] [1789156682.250310420] [bridge_node]: read_serial chamado
+[INFO] [1789156682.260432567] [bridge_node]: read_serial chamado
+[INFO] [1789156682.270417777] [bridge_node]: read_serial chamado
+[INFO] [1789156682.280460824] [bridge_node]: read_serial chamado
+[INFO] [1789156682.290440882] [bridge_node]: read_serial chamado
+[INFO] [1789156682.300307833] [bridge_node]: read_serial chamado
+[INFO] [1789156682.310427213] [bridge_node]: read_serial chamado
+[INFO] [1789156682.320310499] [bridge_node]: read_serial chamado
+[INFO] [1789156682.330509337] [bridge_node]: read_serial chamado
+[INFO] [1789156682.340443440] [bridge_node]: read_serial chamado
+[INFO] [1789156682.350449115] [bridge_node]: read_serial chamado
+[INFO] [1789156682.350538022] [bridge_node]: RX HEX: a5 5a 01 10 75 01 01 00 0f 01 00 00 f0 6a 02 00 7d 40 00 61 02 61 02 00 00 7b 01 00 00 b3 02 a4 02 a0 02 a9 02 b7 02 95 02 9d 02 27 02 ff 01 ee 01 f5 01 f9 01 fd 01 01 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a1 00 00 00 a2 00 a8 00 ab 00 a2 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e7 00 1e 12 ce 12 00 00 3d 0f 00 00 00 00 fc 16 c0 15 d8 08 6b 08 54 08 3d 08 37 08 1f 08 1d 08 25 08 30 08 92 
+[INFO] [1789156682.350561352] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156682.360421629] [bridge_node]: read_serial chamado
+[INFO] [1789156682.360494975] [bridge_node]: RX HEX: 08 64 07 2d 04 00 00 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 00 00 00 00 0c 02 05 02 0b 02 08 02 2e 02 2a 09 2f 08 81 08 fa 07 95 08 00 00 00 00 00 00 7f 01 83 01 81 b4 
+[INFO] [1789156682.360526094] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156682.360532240] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156682.370305647] [bridge_node]: read_serial chamado
+[INFO] [1789156682.380336198] [bridge_node]: read_serial chamado
+[INFO] [1789156682.390450623] [bridge_node]: read_serial chamado
+[INFO] [1789156682.400540138] [bridge_node]: read_serial chamado
+[INFO] [1789156682.410444528] [bridge_node]: read_serial chamado
+[INFO] [1789156682.420390127] [bridge_node]: read_serial chamado
+[INFO] [1789156682.430440115] [bridge_node]: read_serial chamado
+[INFO] [1789156682.440413941] [bridge_node]: read_serial chamado
+[INFO] [1789156682.450336607] [bridge_node]: read_serial chamado
+[INFO] [1789156682.460476990] [bridge_node]: read_serial chamado
+[INFO] [1789156682.470295958] [bridge_node]: read_serial chamado
+[INFO] [1789156682.480487145] [bridge_node]: read_serial chamado
+[INFO] [1789156682.490430436] [bridge_node]: read_serial chamado
+[INFO] [1789156682.500314892] [bridge_node]: read_serial chamado
+[INFO] [1789156682.510479244] [bridge_node]: read_serial chamado
+[INFO] [1789156682.510523810] [bridge_node]: RX HEX: a5 5a 01 10 75 01 02 00 ae 01 00 00 84 6b 02 00 7d 43 00 61 02 61 02 80 01 7b 01 00 00 b2 02 a4 02 a0 02 a9 02 b7 02 95 02 9d 02 26 02 fe 01 ed 01 f5 01 fa 01 fd 01 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 a0 00 00 00 9e 00 aa 00 ae 00 b2 00 af 00 b8 00 ce 00 d0 00 d5 00 e7 00 1e 12 c8 12 00 00 39 0f 00 00 00 00 05 17 c0 15 d8 08 69 08 54 08 43 08 38 08 21 08 1e 08 25 08 31 08 92 
+[INFO] [1789156682.510536869] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156682.520402154] [bridge_node]: read_serial chamado
+[INFO] [1789156682.520450744] [bridge_node]: RX HEX: 08 64 07 2d 04 00 00 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 98 00 9b 00 00 00 00 00 0b 02 05 02 0b 02 09 02 2e 02 3f 09 2f 08 ee 08 fb 07 97 08 aa 08 00 00 00 00 7f 01 83 01 ae a0 
+[INFO] [1789156682.520481935] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156682.520487958] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156682.530618369] [bridge_node]: read_serial chamado
+[INFO] [1789156682.540410535] [bridge_node]: read_serial chamado
+[INFO] [1789156682.550317042] [bridge_node]: read_serial chamado
+[INFO] [1789156682.560469199] [bridge_node]: read_serial chamado
+[INFO] [1789156682.570341004] [bridge_node]: read_serial chamado
+[INFO] [1789156682.570386655] [bridge_node]: RX HEX: a5 5a 01 11 29 00 00 00 f4 01 00 00 ff ff 00 00 00 00 00 00 00 00 7d 43 00 32 00 00 00 00 00 00 
+[INFO] [1789156682.570398192] [bridge_node]: Recebidos 32 bytes | Buffer acumulado: 32 bytes
+[INFO] [1789156682.580313586] [bridge_node]: read_serial chamado
+[INFO] [1789156682.580385784] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 01 ff 08 6c 
+[INFO] [1789156682.580395581] [bridge_node]: Frame completo: version=1 type=0x11 payload=41 total=49
+[INFO] [1789156682.580406276] [bridge_node]: STATUS | seq=0 | uptime=500 ms | age=65535 | target L=0 R=0 | current L=0 R=0 | watchdog=ON | lidar_pwm=255
+[INFO] [1789156682.580415932] [bridge_node]: LiDAR | freq_x20=125 | valid_bins=67 | good=50 | bad_crc=0 | bad_frames=0 | usb_bad=0 | tx_drop=0
+[INFO] [1789156682.580426579] [bridge_node]: Recebidos 17 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156682.590422599] [bridge_node]: read_serial chamado
+[INFO] [1789156682.600397566] [bridge_node]: read_serial chamado
+[INFO] [1789156682.610440545] [bridge_node]: read_serial chamado
+[INFO] [1789156682.620411557] [bridge_node]: read_serial chamado
+[INFO] [1789156682.630402126] [bridge_node]: read_serial chamado
+[INFO] [1789156682.640427577] [bridge_node]: read_serial chamado
+[INFO] [1789156682.650326032] [bridge_node]: read_serial chamado
+[WARN] [1789156682.650457950] [bridge_node]: FIRMWARE INICIALIZADO - INICIANDO TESTE CONTINUO
+[INFO] [1789156682.660415163] [bridge_node]: read_serial chamado
+[INFO] [1789156682.670324444] [bridge_node]: read_serial chamado
+[INFO] [1789156682.670378375] [bridge_node]: RX HEX: a5 5a 01 10 75 01 03 00 4c 02 00 00 7c 6b 02 00 7d 41 00 61 02 61 02 7f 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 9c 02 9d 02 26 02 fd 01 ed 01 f5 01 fa 01 fd 01 04 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a1 00 00 00 a2 00 a8 00 ab 00 b0 00 00 00 b3 00 b9 00 cf 00 d0 00 d5 00 e7 00 23 12 ce 12 00 00 39 0f 00 00 00 00 fc 16 c0 15 d8 08 6b 08 54 08 43 08 38 08 21 08 1e 08 25 08 30 08 92 
+[INFO] [1789156682.670425853] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156682.680318054] [bridge_node]: read_serial chamado
+[INFO] [1789156682.680447713] [bridge_node]: RX HEX: 08 65 07 2e 04 00 00 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 00 00 00 00 0c 02 05 02 0a 02 0a 02 2d 02 14 09 2f 08 c1 08 03 08 92 08 00 00 00 00 00 00 7f 01 83 01 dc 1e 
+[INFO] [1789156682.680505435] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156682.680517561] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156682.690326385] [bridge_node]: read_serial chamado
+[INFO] [1789156682.700354106] [bridge_node]: read_serial chamado
+[INFO] [1789156682.710329439] [bridge_node]: read_serial chamado
+[INFO] [1789156682.720302855] [bridge_node]: read_serial chamado
+[INFO] [1789156682.730311369] [bridge_node]: read_serial chamado
+[INFO] [1789156682.740352665] [bridge_node]: read_serial chamado
+[INFO] [1789156682.750334344] [bridge_node]: read_serial chamado
+[INFO] [1789156682.750585520] [bridge_node]: TX HEX: a5 5a 01 01 07 00 01 00 96 00 96 00 01 7e 5b 
+[INFO] [1789156682.750608590] [bridge_node]: Motor TX | seq=1 | left=150 | right=150 | bytes=15
+[INFO] [1789156682.760416366] [bridge_node]: read_serial chamado
+[INFO] [1789156682.770393388] [bridge_node]: read_serial chamado
+[INFO] [1789156682.780340387] [bridge_node]: read_serial chamado
+[INFO] [1789156682.790313525] [bridge_node]: read_serial chamado
+[INFO] [1789156682.800360618] [bridge_node]: read_serial chamado
+[INFO] [1789156682.810331124] [bridge_node]: read_serial chamado
+[INFO] [1789156682.820417781] [bridge_node]: read_serial chamado
+[INFO] [1789156682.830337079] [bridge_node]: read_serial chamado
+[INFO] [1789156682.830403916] [bridge_node]: RX HEX: a5 5a 01 10 75 01 04 00 eb 02 00 00 70 6b 02 00 7d 43 00 61 02 61 02 80 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 a0 02 9c 02 27 02 fe 01 ed 01 f5 01 fa 01 fd 01 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 a0 00 00 00 9e 00 a9 00 ae 00 b2 00 b0 00 b8 00 ce 00 d0 00 d5 00 e7 00 1e 12 c8 12 00 00 3d 0f 00 00 00 00 fc 16 c0 15 d9 08 6c 08 54 08 42 08 37 08 1f 08 1e 08 25 08 30 08 92 
+[INFO] [1789156682.830419210] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156682.840313712] [bridge_node]: read_serial chamado
+[INFO] [1789156682.840384021] [bridge_node]: RX HEX: 08 65 07 2d 04 dd 02 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 98 00 9b 00 00 00 00 00 0c 02 05 02 0a 02 0a 02 2d 02 14 09 3b 08 c1 08 04 08 91 08 00 00 00 00 00 00 7f 01 83 01 d1 2a 
+[INFO] [1789156682.840413856] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156682.840419297] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156682.850429961] [bridge_node]: read_serial chamado
+[INFO] [1789156682.850897414] [bridge_node]: TX HEX: a5 5a 01 01 07 00 02 00 96 00 96 00 01 fc 83 
+[INFO] [1789156682.851154663] [bridge_node]: Motor TX | seq=2 | left=150 | right=150 | bytes=15
+[INFO] [1789156682.860319340] [bridge_node]: read_serial chamado
+[INFO] [1789156682.870306405] [bridge_node]: read_serial chamado
+[INFO] [1789156682.880307842] [bridge_node]: read_serial chamado
+[INFO] [1789156682.890320858] [bridge_node]: read_serial chamado
+[INFO] [1789156682.900390387] [bridge_node]: read_serial chamado
+[INFO] [1789156682.910414760] [bridge_node]: read_serial chamado
+[INFO] [1789156682.920334819] [bridge_node]: read_serial chamado
+[INFO] [1789156682.930347585] [bridge_node]: read_serial chamado
+[INFO] [1789156682.940320675] [bridge_node]: read_serial chamado
+[INFO] [1789156682.950309814] [bridge_node]: read_serial chamado
+[INFO] [1789156682.950575395] [bridge_node]: TX HEX: a5 5a 01 01 07 00 03 00 96 00 96 00 01 9d 3b 
+[INFO] [1789156682.950596667] [bridge_node]: Motor TX | seq=3 | left=150 | right=150 | bytes=15
+[INFO] [1789156682.960418128] [bridge_node]: read_serial chamado
+[INFO] [1789156682.970295643] [bridge_node]: read_serial chamado
+[INFO] [1789156682.980309465] [bridge_node]: read_serial chamado
+[INFO] [1789156682.990298723] [bridge_node]: read_serial chamado
+[INFO] [1789156682.990357553] [bridge_node]: RX HEX: a5 5a 01 10 75 01 05 00 8a 03 00 00 a8 6b 02 00 7d 43 00 61 02 61 02 80 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 a0 02 9b 02 27 02 ff 01 ee 01 f6 01 fa 01 fd 01 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a1 00 00 00 a2 00 a8 00 ab 00 b0 00 00 00 b3 00 b9 00 cf 00 d0 00 d5 00 e7 00 18 12 99 12 00 00 3d 0f 00 00 00 00 f3 16 8e 16 d9 08 6b 08 54 08 41 08 37 08 1f 08 1e 08 24 08 2a 08 95 
+[INFO] [1789156682.990379487] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156683.000297752] [bridge_node]: read_serial chamado
+[INFO] [1789156683.000345435] [bridge_node]: RX HEX: 08 68 07 2e 04 dd 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 00 00 00 00 0b 02 05 02 0b 02 0a 02 2d 02 15 09 2f 08 db 08 03 08 93 08 95 08 00 00 00 00 7f 01 83 01 7c 2a 
+[INFO] [1789156683.000376599] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156683.000382888] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156683.010424567] [bridge_node]: read_serial chamado
+[INFO] [1789156683.020309193] [bridge_node]: read_serial chamado
+[INFO] [1789156683.030382646] [bridge_node]: read_serial chamado
+[INFO] [1789156683.040295945] [bridge_node]: read_serial chamado
+[INFO] [1789156683.050601337] [bridge_node]: read_serial chamado
+[INFO] [1789156683.051059006] [bridge_node]: TX HEX: a5 5a 01 01 07 00 04 00 96 00 96 00 01 d9 22 
+[INFO] [1789156683.051151155] [bridge_node]: Motor TX | seq=4 | left=150 | right=150 | bytes=15
+[INFO] [1789156683.060337056] [bridge_node]: read_serial chamado
+[INFO] [1789156683.070327289] [bridge_node]: read_serial chamado
+[INFO] [1789156683.080312859] [bridge_node]: read_serial chamado
+[INFO] [1789156683.080365423] [bridge_node]: RX HEX: a5 5a 01 11 29 00 04 00 e8 03 00 00 15 00 96 00 96 00 40 00 40 00 7d 43 00 64 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff 1a da 
+[INFO] [1789156683.080393379] [bridge_node]: Frame completo: version=1 type=0x11 payload=41 total=49
+[INFO] [1789156683.080399409] [bridge_node]: STATUS | seq=4 | uptime=1000 ms | age=21 | target L=150 R=150 | current L=64 R=64 | watchdog=OFF | lidar_pwm=255
+[INFO] [1789156683.080404690] [bridge_node]: LiDAR | freq_x20=125 | valid_bins=67 | good=100 | bad_crc=0 | bad_frames=0 | usb_bad=0 | tx_drop=0
+[INFO] [1789156683.080427143] [bridge_node]: Recebidos 49 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156683.090324752] [bridge_node]: read_serial chamado
+[INFO] [1789156683.100309341] [bridge_node]: read_serial chamado
+[INFO] [1789156683.110504504] [bridge_node]: read_serial chamado
+[INFO] [1789156683.120302879] [bridge_node]: read_serial chamado
+[INFO] [1789156683.130364697] [bridge_node]: read_serial chamado
+[INFO] [1789156683.140412143] [bridge_node]: read_serial chamado
+[INFO] [1789156683.150333714] [bridge_node]: read_serial chamado
+[INFO] [1789156683.150409030] [bridge_node]: RX HEX: a5 5a 01 10 75 01 06 00 28 04 00 00 a0 6b 02 00 7d 43 00 61 02 61 02 81 01 7b 01 00 00 b2 02 a3 02 a0 02 a9 02 b7 02 a0 02 9c 02 28 02 ff 01 ee 01 f7 01 fa 01 fc 01 07 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 a0 00 00 00 9d 00 aa 00 ae 00 b2 00 af 00 b8 00 ce 00 d0 00 d5 00 e7 00 18 12 99 12 00 00 3d 0f 00 00 00 00 f3 16 86 16 d8 08 6b 08 54 08 40 08 37 08 1f 08 1e 08 1e 08 23 08 9a 
+[INFO] [1789156683.150424778] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156683.150539872] [bridge_node]: TX HEX: a5 5a 01 01 07 00 05 00 96 00 96 00 01 b8 9a 
+[INFO] [1789156683.150558069] [bridge_node]: Motor TX | seq=5 | left=150 | right=150 | bytes=15
+[INFO] [1789156683.160338945] [bridge_node]: read_serial chamado
+[INFO] [1789156683.160409468] [bridge_node]: RX HEX: 08 69 07 2d 04 e4 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 9b 00 00 00 00 00 0b 02 04 02 0f 02 08 02 2b 02 2a 09 2f 08 6d 08 03 08 92 08 00 00 00 00 00 00 7f 01 83 01 09 80 
+[INFO] [1789156683.160445962] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156683.160452679] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156683.170295615] [bridge_node]: read_serial chamado
+[INFO] [1789156683.180318606] [bridge_node]: read_serial chamado
+[INFO] [1789156683.190321027] [bridge_node]: read_serial chamado
+[INFO] [1789156683.200372686] [bridge_node]: read_serial chamado
+[INFO] [1789156683.210330057] [bridge_node]: read_serial chamado
+[INFO] [1789156683.220296050] [bridge_node]: read_serial chamado
+[INFO] [1789156683.230311893] [bridge_node]: read_serial chamado
+[INFO] [1789156683.240309298] [bridge_node]: read_serial chamado
+[INFO] [1789156683.250548765] [bridge_node]: read_serial chamado
+[INFO] [1789156683.251265014] [bridge_node]: TX HEX: a5 5a 01 01 07 00 06 00 96 00 96 00 01 3a 42 
+[INFO] [1789156683.251392332] [bridge_node]: Motor TX | seq=6 | left=150 | right=150 | bytes=15
+[INFO] [1789156683.260312058] [bridge_node]: read_serial chamado
+[INFO] [1789156683.270338093] [bridge_node]: read_serial chamado
+[INFO] [1789156683.280330811] [bridge_node]: read_serial chamado
+[INFO] [1789156683.290314506] [bridge_node]: read_serial chamado
+[INFO] [1789156683.300337509] [bridge_node]: read_serial chamado
+[INFO] [1789156683.310338055] [bridge_node]: read_serial chamado
+[INFO] [1789156683.310378529] [bridge_node]: RX HEX: a5 5a 01 10 75 01 07 00 c7 04 00 00 9c 6b 02 00 7d 41 00 61 02 61 02 00 00 7b 01 00 00 b2 02 a4 02 a0 02 a8 02 b7 02 95 02 9d 02 29 02 00 02 ef 01 f9 01 f5 01 fc 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a0 00 00 00 a1 00 a8 00 ac 00 b1 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e7 00 1e 12 99 12 00 00 3d 0f 00 00 00 00 f3 16 86 16 d9 08 69 08 54 08 3c 08 37 08 1e 08 1d 08 24 08 2b 08 96 
+[INFO] [1789156683.310412441] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156683.320292517] [bridge_node]: read_serial chamado
+[INFO] [1789156683.320333377] [bridge_node]: RX HEX: 08 67 07 2d 04 00 00 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 06 0a 00 00 0a 02 05 02 fe 01 03 02 24 02 42 09 2f 08 f0 08 01 08 a6 08 97 08 00 00 00 00 7f 01 83 01 5b 6c 
+[WARN] [1789156683.320364715] [bridge_node]: CRC invalido | type=0x10 | seq=7 | payload=373 | recebido=0x6C5B | calculado=0x5306 | xor=0x3F5D
+[WARN] [1789156683.320411095] [bridge_node]: SCAN COMPLETO HEX: a5 5a 01 10 75 01 07 00 c7 04 00 00 9c 6b 02 00 7d 41 00 61 02 61 02 00 00 7b 01 00 00 b2 02 a4 02 a0 02 a8 02 b7 02 95 02 9d 02 29 02 00 02 ef 01 f9 01 f5 01 fc 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a0 00 00 00 a1 00 a8 00 ac 00 b1 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e7 00 1e 12 99 12 00 00 3d 0f 00 00 00 00 f3 16 86 16 d9 08 69 08 54 08 3c 08 37 08 1e 08 1d 08 24 08 2b 08 96 08 67 07 2d 04 00 00 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 06 0a 00 00 0a 02 05 02 fe 01 03 02 24 02 42 09 2f 08 f0 08 01 08 a6 08 97 08 00 00 00 00 7f 01 83 01 5b 6c 
+[INFO] [1789156683.320458468] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 5 bytes
+[INFO] [1789156683.330331531] [bridge_node]: read_serial chamado
+[INFO] [1789156683.340435907] [bridge_node]: read_serial chamado
+[INFO] [1789156683.350310665] [bridge_node]: read_serial chamado
+[INFO] [1789156683.350554779] [bridge_node]: TX HEX: a5 5a 01 01 07 00 07 00 96 00 96 00 01 5b fa 
+[INFO] [1789156683.350586923] [bridge_node]: Motor TX | seq=7 | left=150 | right=150 | bytes=15
+[INFO] [1789156683.360436543] [bridge_node]: read_serial chamado
+[INFO] [1789156683.370337504] [bridge_node]: read_serial chamado
+[INFO] [1789156683.380397403] [bridge_node]: read_serial chamado
+[INFO] [1789156683.390414238] [bridge_node]: read_serial chamado
+[INFO] [1789156683.400326946] [bridge_node]: read_serial chamado
+[INFO] [1789156683.410319276] [bridge_node]: read_serial chamado
+[INFO] [1789156683.420307595] [bridge_node]: read_serial chamado
+[INFO] [1789156683.430339640] [bridge_node]: read_serial chamado
+[INFO] [1789156683.440320554] [bridge_node]: read_serial chamado
+[INFO] [1789156683.450318248] [bridge_node]: read_serial chamado
+[INFO] [1789156683.450561510] [bridge_node]: TX HEX: a5 5a 01 01 07 00 08 00 96 00 96 00 01 b2 70 
+[INFO] [1789156683.450596427] [bridge_node]: Motor TX | seq=8 | left=150 | right=150 | bytes=15
+[INFO] [1789156683.460418503] [bridge_node]: read_serial chamado
+[INFO] [1789156683.470326890] [bridge_node]: read_serial chamado
+[INFO] [1789156683.470396637] [bridge_node]: RX HEX: a5 5a 01 10 75 01 08 00 66 05 00 00 34 6c 02 00 7c 43 00 61 02 61 02 81 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 99 02 9d 02 12 02 00 00 ed 01 02 02 f3 01 00 00 1d 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 a0 00 00 00 9d 00 aa 00 ae 00 b3 00 af 00 b8 00 ce 00 d0 00 d5 00 e7 00 1e 12 99 12 00 00 3d 0f 00 00 00 00 fc 16 c0 15 d8 08 6b 08 54 08 43 08 37 08 1f 08 1d 08 24 08 2e 08 92 
+[INFO] [1789156683.470431832] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156683.480362433] [bridge_node]: read_serial chamado
+[INFO] [1789156683.480403479] [bridge_node]: RX HEX: 08 66 07 2d 04 dd 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 98 00 9b 00 1b 0a 00 00 0e 02 09 02 f7 01 01 02 23 02 45 09 2e 08 f1 08 00 08 aa 08 aa 08 00 00 00 00 7f 01 83 01 20 c1 
+[INFO] [1789156683.480434409] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156683.480440345] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156683.490350917] [bridge_node]: read_serial chamado
+[INFO] [1789156683.500529886] [bridge_node]: read_serial chamado
+[INFO] [1789156683.510314810] [bridge_node]: read_serial chamado
+[INFO] [1789156683.520304967] [bridge_node]: read_serial chamado
+[INFO] [1789156683.530315112] [bridge_node]: read_serial chamado
+[INFO] [1789156683.540412015] [bridge_node]: read_serial chamado
+[INFO] [1789156683.550331467] [bridge_node]: read_serial chamado
+[INFO] [1789156683.550547111] [bridge_node]: TX HEX: a5 5a 01 01 07 00 09 00 96 00 96 00 01 d3 c8 
+[INFO] [1789156683.550568242] [bridge_node]: Motor TX | seq=9 | left=150 | right=150 | bytes=15
+[INFO] [1789156683.560379241] [bridge_node]: read_serial chamado
+[INFO] [1789156683.570381576] [bridge_node]: read_serial chamado
+[INFO] [1789156683.580397844] [bridge_node]: read_serial chamado
+[INFO] [1789156683.580457781] [bridge_node]: RX HEX: a5 5a 01 11 29 00 09 00 dc 05 00 00 19 00 96 00 96 00 96 00 96 00 7d 43 00 96 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff 82 73 
+[INFO] [1789156683.580468612] [bridge_node]: Frame completo: version=1 type=0x11 payload=41 total=49
+[INFO] [1789156683.580473993] [bridge_node]: STATUS | seq=9 | uptime=1500 ms | age=25 | target L=150 R=150 | current L=150 R=150 | watchdog=OFF | lidar_pwm=255
+[INFO] [1789156683.580478769] [bridge_node]: LiDAR | freq_x20=125 | valid_bins=67 | good=150 | bad_crc=0 | bad_frames=0 | usb_bad=0 | tx_drop=0
+[INFO] [1789156683.580483557] [bridge_node]: Recebidos 49 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156683.590400866] [bridge_node]: read_serial chamado
+[INFO] [1789156683.600314973] [bridge_node]: read_serial chamado
+[INFO] [1789156683.610423147] [bridge_node]: read_serial chamado
+[INFO] [1789156683.620429804] [bridge_node]: read_serial chamado
+[INFO] [1789156683.630410982] [bridge_node]: read_serial chamado
+[INFO] [1789156683.630485566] [bridge_node]: RX HEX: a5 5a 01 10 75 01 09 00 05 06 00 00 a4 6b 02 00 7c 40 00 61 02 61 02 80 01 7b 01 00 00 b2 02 a3 02 a0 02 a8 02 b7 02 9e 02 9d 02 15 02 ff 01 ee 01 ee 01 f4 01 fe 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a5 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a1 00 00 00 a2 00 a8 00 ab 00 b0 00 00 00 b3 00 b9 00 cf 00 d0 00 d5 00 e7 00 1e 12 ce 12 00 00 3d 0f 00 00 00 00 fc 16 c0 15 d7 08 6b 08 54 08 42 08 37 08 21 08 1e 08 25 08 2c 08 95 
+[INFO] [1789156683.630538468] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156683.640422143] [bridge_node]: read_serial chamado
+[INFO] [1789156683.640483544] [bridge_node]: RX HEX: 08 66 07 2e 04 00 00 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 99 00 00 00 00 00 0a 02 03 02 01 02 0b 02 24 02 14 09 30 08 7f 08 f8 07 7f 08 00 00 00 00 00 00 7f 01 83 01 6e 8f 
+[INFO] [1789156683.640529401] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156683.640534916] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156683.650316601] [bridge_node]: read_serial chamado
+[INFO] [1789156683.650571950] [bridge_node]: TX HEX: a5 5a 01 01 07 00 0a 00 96 00 96 00 01 51 10 
+[INFO] [1789156683.650622368] [bridge_node]: Motor TX | seq=10 | left=150 | right=150 | bytes=15
+[INFO] [1789156683.660302174] [bridge_node]: read_serial chamado
+[INFO] [1789156683.670296277] [bridge_node]: read_serial chamado
+[INFO] [1789156683.680412131] [bridge_node]: read_serial chamado
+[INFO] [1789156683.690388472] [bridge_node]: read_serial chamado
+[INFO] [1789156683.700547029] [bridge_node]: read_serial chamado
+[INFO] [1789156683.710444896] [bridge_node]: read_serial chamado
+[INFO] [1789156683.720382342] [bridge_node]: read_serial chamado
+[INFO] [1789156683.730317488] [bridge_node]: read_serial chamado
+[INFO] [1789156683.740415464] [bridge_node]: read_serial chamado
+[INFO] [1789156683.750308912] [bridge_node]: read_serial chamado
+[INFO] [1789156683.750551722] [bridge_node]: TX HEX: a5 5a 01 01 07 00 0b 00 96 00 96 00 01 30 a8 
+[INFO] [1789156683.750581952] [bridge_node]: Motor TX | seq=11 | left=150 | right=150 | bytes=15
+[INFO] [1789156683.760304604] [bridge_node]: read_serial chamado
+[INFO] [1789156683.770307817] [bridge_node]: read_serial chamado
+[INFO] [1789156683.780404313] [bridge_node]: read_serial chamado
+[INFO] [1789156683.790410913] [bridge_node]: read_serial chamado
+[INFO] [1789156683.790464114] [bridge_node]: RX HEX: a5 5a 01 10 75 01 0a 00 a3 06 00 00 e4 6b 02 00 7d 42 00 61 02 61 02 7f 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 a0 02 9c 02 28 02 ff 01 ed 01 03 02 f2 01 00 00 19 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 a0 00 00 00 9e 00 a9 00 ae 00 b2 00 b0 00 b8 00 ce 00 d0 00 d5 00 e7 00 1e 12 ce 12 00 00 3d 0f 00 00 00 00 fc 16 c0 15 d8 08 6c 08 54 08 43 08 37 08 21 08 1e 08 25 08 31 08 92 
+[INFO] [1789156683.790479773] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156683.800384506] [bridge_node]: read_serial chamado
+[INFO] [1789156683.800445982] [bridge_node]: RX HEX: 08 64 07 2e 04 00 00 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 9a 00 e8 09 00 00 14 02 06 02 fb 01 02 02 2d 02 15 09 2f 08 bf 08 03 08 92 08 00 00 00 00 00 00 7f 01 83 01 d9 76 
+[INFO] [1789156683.800478065] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156683.800483858] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156683.810305637] [bridge_node]: read_serial chamado
+[INFO] [1789156683.820332962] [bridge_node]: read_serial chamado
+[INFO] [1789156683.830331100] [bridge_node]: read_serial chamado
+[INFO] [1789156683.840422328] [bridge_node]: read_serial chamado
+[INFO] [1789156683.850416897] [bridge_node]: read_serial chamado
+[INFO] [1789156683.850562712] [bridge_node]: TX HEX: a5 5a 01 01 07 00 0c 00 96 00 96 00 01 74 b1 
+[INFO] [1789156683.850584436] [bridge_node]: Motor TX | seq=12 | left=150 | right=150 | bytes=15
+[INFO] [1789156683.860404487] [bridge_node]: read_serial chamado
+[INFO] [1789156683.870305355] [bridge_node]: read_serial chamado
+[INFO] [1789156683.880298117] [bridge_node]: read_serial chamado
+[INFO] [1789156683.890316769] [bridge_node]: read_serial chamado
+[INFO] [1789156683.900527585] [bridge_node]: read_serial chamado
+[INFO] [1789156683.910406478] [bridge_node]: read_serial chamado
+[INFO] [1789156683.920319554] [bridge_node]: read_serial chamado
+[INFO] [1789156683.930315164] [bridge_node]: read_serial chamado
+[INFO] [1789156683.940291406] [bridge_node]: read_serial chamado
+[INFO] [1789156683.950296828] [bridge_node]: read_serial chamado
+[INFO] [1789156683.950352498] [bridge_node]: RX HEX: a5 5a 01 10 75 01 0b 00 42 07 00 00 30 6c 02 00 7d 43 00 61 02 61 02 7f 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 a0 02 9c 02 14 02 fe 01 ed 01 f3 01 fe 01 fb 01 07 02 ac 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a0 00 00 00 a2 00 a8 00 ab 00 b0 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e7 00 1e 12 99 12 00 00 39 0f 00 00 00 00 fc 16 c0 15 d7 08 6c 08 54 08 41 08 35 08 1f 08 1d 08 26 08 2f 08 93 
+[INFO] [1789156683.950367854] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156683.950539236] [bridge_node]: TX HEX: a5 5a 01 01 07 00 0d 00 96 00 96 00 01 15 09 
+[INFO] [1789156683.950554594] [bridge_node]: Motor TX | seq=13 | left=150 | right=150 | bytes=15
+[INFO] [1789156683.960403668] [bridge_node]: read_serial chamado
+[INFO] [1789156683.960470067] [bridge_node]: RX HEX: 08 60 07 2e 04 e9 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 00 00 00 00 09 02 03 02 0a 02 09 02 27 02 0e 09 2f 08 c3 08 01 08 80 08 00 00 00 00 00 00 7f 01 83 01 1d 79 
+[WARN] [1789156683.960511329] [bridge_node]: CRC invalido | type=0x10 | seq=11 | payload=373 | recebido=0x791D | calculado=0x0C59 | xor=0x7544
+[INFO] [1789156683.960546311] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 5 bytes
+[INFO] [1789156683.970287002] [bridge_node]: read_serial chamado
+[INFO] [1789156683.980396229] [bridge_node]: read_serial chamado
+[INFO] [1789156683.990419879] [bridge_node]: read_serial chamado
+[INFO] [1789156684.000335363] [bridge_node]: read_serial chamado
+[INFO] [1789156684.010432133] [bridge_node]: read_serial chamado
+[INFO] [1789156684.020306683] [bridge_node]: read_serial chamado
+[INFO] [1789156684.030399521] [bridge_node]: read_serial chamado
+[INFO] [1789156684.040390073] [bridge_node]: read_serial chamado
+[INFO] [1789156684.050327305] [bridge_node]: read_serial chamado
+[INFO] [1789156684.050553226] [bridge_node]: TX HEX: a5 5a 01 01 07 00 0e 00 96 00 96 00 01 97 d1 
+[INFO] [1789156684.050584296] [bridge_node]: Motor TX | seq=14 | left=150 | right=150 | bytes=15
+[INFO] [1789156684.060368641] [bridge_node]: read_serial chamado
+[INFO] [1789156684.070295538] [bridge_node]: read_serial chamado
+[INFO] [1789156684.080398027] [bridge_node]: read_serial chamado
+[INFO] [1789156684.080451872] [bridge_node]: RX HEX: a5 5a 01 11 29 00 0e 00 d0 07 00 00 1c 00 96 00 96 00 96 00 96 00 7d 43 00 c9 00 00 00 00 00 00 
+[INFO] [1789156684.080462406] [bridge_node]: Recebidos 32 bytes | Buffer acumulado: 32 bytes
+[INFO] [1789156684.090306513] [bridge_node]: read_serial chamado
+[INFO] [1789156684.090366471] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c8 6d 85 
+[INFO] [1789156684.090378162] [bridge_node]: Frame completo: version=1 type=0x11 payload=41 total=49
+[INFO] [1789156684.090383702] [bridge_node]: STATUS | seq=14 | uptime=2000 ms | age=28 | target L=150 R=150 | current L=150 R=150 | watchdog=OFF | lidar_pwm=200
+[INFO] [1789156684.090407831] [bridge_node]: LiDAR | freq_x20=125 | valid_bins=67 | good=201 | bad_crc=0 | bad_frames=0 | usb_bad=0 | tx_drop=0
+[INFO] [1789156684.090413741] [bridge_node]: Recebidos 17 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156684.100584946] [bridge_node]: read_serial chamado
+[INFO] [1789156684.101056370] [bridge_node]: RX HEX: a5 5a 01 10 75 01 0c 00 e1 07 00 00 f8 6b 02 00 7d 41 00 61 02 61 02 7f 01 7b 01 00 00 b1 02 a3 
+[INFO] [1789156684.101105237] [bridge_node]: Recebidos 32 bytes | Buffer acumulado: 32 bytes
+[INFO] [1789156684.110311554] [bridge_node]: read_serial chamado
+[INFO] [1789156684.110375896] [bridge_node]: RX HEX: 02 a0 02 a9 02 b7 02 a0 02 9c 02 29 02 fe 01 ed 01 f5 01 f1 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 a0 00 00 00 9e 00 a9 00 ae 00 b2 00 b0 00 b8 00 ce 00 d0 00 d5 00 e7 00 1e 12 99 12 00 00 3d 0f 00 00 00 00 f3 16 c0 15 d7 08 6b 08 54 08 41 08 36 08 1f 08 1e 08 25 08 2e 08 92 08 66 07 2e 04 00 00 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156684.110399421] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 288 bytes
+[INFO] [1789156684.120336205] [bridge_node]: read_serial chamado
+[INFO] [1789156684.120391828] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 9a 00 e9 09 00 00 13 02 05 02 fa 01 03 02 28 02 11 09 2f 08 c1 08 03 08 93 08 00 00 00 00 00 00 7f 01 83 01 a6 fd 
+[INFO] [1789156684.120421672] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156684.120428667] [bridge_node]: Recebidos 93 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156684.130407287] [bridge_node]: read_serial chamado
+[INFO] [1789156684.140427464] [bridge_node]: read_serial chamado
+[INFO] [1789156684.150342589] [bridge_node]: read_serial chamado
+[INFO] [1789156684.150606536] [bridge_node]: TX HEX: a5 5a 01 01 07 00 0f 00 96 00 96 00 01 f6 69 
+[INFO] [1789156684.150632167] [bridge_node]: Motor TX | seq=15 | left=150 | right=150 | bytes=15
+[INFO] [1789156684.160409222] [bridge_node]: read_serial chamado
+[INFO] [1789156684.170388863] [bridge_node]: read_serial chamado
+[INFO] [1789156684.180403440] [bridge_node]: read_serial chamado
+[INFO] [1789156684.190425313] [bridge_node]: read_serial chamado
+[INFO] [1789156684.200309787] [bridge_node]: read_serial chamado
+[INFO] [1789156684.210321433] [bridge_node]: read_serial chamado
+[INFO] [1789156684.220407003] [bridge_node]: read_serial chamado
+[INFO] [1789156684.230353058] [bridge_node]: read_serial chamado
+[INFO] [1789156684.240415046] [bridge_node]: read_serial chamado
+[INFO] [1789156684.250337166] [bridge_node]: read_serial chamado
+[INFO] [1789156684.250580875] [bridge_node]: TX HEX: a5 5a 01 01 07 00 10 00 96 00 96 00 01 64 d4 
+[INFO] [1789156684.250605622] [bridge_node]: Motor TX | seq=16 | left=150 | right=150 | bytes=15
+[INFO] [1789156684.260400440] [bridge_node]: read_serial chamado
+[INFO] [1789156684.260477823] [bridge_node]: RX HEX: a5 5a 01 10 75 01 0a 00 80 08 00 00 f8 6b 02 00 7d 42 00 61 02 61 02 80 01 7b 01 00 00 b1 02 a3 
+[INFO] [1789156684.260488343] [bridge_node]: Recebidos 32 bytes | Buffer acumulado: 32 bytes
+[INFO] [1789156684.270294918] [bridge_node]: read_serial chamado
+[INFO] [1789156684.270349279] [bridge_node]: RX HEX: 02 a0 02 a8 02 b7 02 a0 02 9d 02 14 02 ff 01 ee 01 fa 01 f7 01 fc 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a1 00 00 00 a2 00 a8 00 ab 00 b0 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e7 00 18 12 99 12 00 00 39 0f 00 00 00 00 f3 16 8e 16 d8 08 6b 08 54 08 40 08 37 08 1e 08 1d 08 24 08 22 08 97 08 66 07 2d 04 e4 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156684.270388967] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 288 bytes
+[INFO] [1789156684.280408464] [bridge_node]: read_serial chamado
+[INFO] [1789156684.280476134] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 99 00 00 00 00 00 08 02 03 02 fe 01 10 02 27 02 14 09 30 08 a9 08 03 08 93 08 95 08 00 00 00 00 7f 01 83 01 fe fa 
+[WARN] [1789156684.280522218] [bridge_node]: CRC invalido | type=0x10 | seq=10 | payload=373 | recebido=0xFAFE | calculado=0xF1AE | xor=0x0B50
+[INFO] [1789156684.280563177] [bridge_node]: Recebidos 93 bytes | Buffer acumulado: 5 bytes
+[INFO] [1789156684.290309015] [bridge_node]: read_serial chamado
+[INFO] [1789156684.300597984] [bridge_node]: read_serial chamado
+[INFO] [1789156684.310365991] [bridge_node]: read_serial chamado
+[INFO] [1789156684.320344905] [bridge_node]: read_serial chamado
+[INFO] [1789156684.330418929] [bridge_node]: read_serial chamado
+[INFO] [1789156684.340405813] [bridge_node]: read_serial chamado
+[INFO] [1789156684.350360887] [bridge_node]: read_serial chamado
+[INFO] [1789156684.350545179] [bridge_node]: TX HEX: a5 5a 01 01 07 00 11 00 96 00 96 00 01 05 6c 
+[INFO] [1789156684.350567719] [bridge_node]: Motor TX | seq=17 | left=150 | right=150 | bytes=15
+[INFO] [1789156684.360359681] [bridge_node]: read_serial chamado
+[INFO] [1789156684.370294977] [bridge_node]: read_serial chamado
+[INFO] [1789156684.380309064] [bridge_node]: read_serial chamado
+[INFO] [1789156684.390308618] [bridge_node]: read_serial chamado
+[INFO] [1789156684.400304270] [bridge_node]: read_serial chamado
+[INFO] [1789156684.410424772] [bridge_node]: read_serial chamado
+[INFO] [1789156684.420311981] [bridge_node]: read_serial chamado
+[INFO] [1789156684.420373301] [bridge_node]: RX HEX: a5 5a 01 10 75 01 0e 00 1d 09 00 00 a0 6b 02 00 7d 42 00 61 02 61 02 00 00 7b 01 00 00 b2 02 a4 
+[INFO] [1789156684.420389340] [bridge_node]: Recebidos 32 bytes | Buffer acumulado: 32 bytes
+[INFO] [1789156684.430478879] [bridge_node]: read_serial chamado
+[INFO] [1789156684.430567792] [bridge_node]: RX HEX: 02 a0 02 a8 02 b7 02 95 02 9d 02 16 02 fe 01 ed 01 ef 01 f2 01 02 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 a0 00 00 00 9d 00 aa 00 ae 00 b2 00 ae 00 b8 00 ce 00 d0 00 d5 00 e7 00 18 12 94 12 00 00 3d 0f 00 00 00 00 fc 16 86 16 d8 08 6b 08 54 08 41 08 37 08 1f 08 1f 08 24 08 2b 08 96 08 68 07 2e 04 dd 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156684.430595251] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 288 bytes
+[INFO] [1789156684.440442616] [bridge_node]: read_serial chamado
+[INFO] [1789156684.440510668] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 9a 00 00 0a 00 00 17 02 04 02 f8 01 02 02 23 02 2a 09 30 08 6d 08 fa 07 90 08 00 00 00 00 00 00 7f 01 83 01 63 87 
+[INFO] [1789156684.440538311] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156684.440544042] [bridge_node]: Recebidos 93 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156684.450311373] [bridge_node]: read_serial chamado
+[INFO] [1789156684.450555891] [bridge_node]: TX HEX: a5 5a 01 01 07 00 12 00 96 00 96 00 01 87 b4 
+[INFO] [1789156684.450604989] [bridge_node]: Motor TX | seq=18 | left=150 | right=150 | bytes=15
+[INFO] [1789156684.460419070] [bridge_node]: read_serial chamado
+[INFO] [1789156684.470415685] [bridge_node]: read_serial chamado
+[INFO] [1789156684.480312398] [bridge_node]: read_serial chamado
+[INFO] [1789156684.490309666] [bridge_node]: read_serial chamado
+[INFO] [1789156684.500350904] [bridge_node]: read_serial chamado
+[INFO] [1789156684.510317926] [bridge_node]: read_serial chamado
+[INFO] [1789156684.520399362] [bridge_node]: read_serial chamado
+[INFO] [1789156684.530383738] [bridge_node]: read_serial chamado
+[INFO] [1789156684.540389954] [bridge_node]: read_serial chamado
+[INFO] [1789156684.550541074] [bridge_node]: read_serial chamado
+[INFO] [1789156684.551167287] [bridge_node]: TX HEX: a5 5a 01 01 07 00 13 00 96 00 96 00 01 e6 0c 
+[INFO] [1789156684.551282687] [bridge_node]: Motor TX | seq=19 | left=150 | right=150 | bytes=15
+[INFO] [1789156684.560313932] [bridge_node]: read_serial chamado
+[INFO] [1789156684.570306090] [bridge_node]: read_serial chamado
+[INFO] [1789156684.580395420] [bridge_node]: read_serial chamado
+[INFO] [1789156684.580485213] [bridge_node]: RX HEX: a5 5a 01 10 75 01 0f 00 bc 09 00 00 28 6c 02 00 7d 42 00 61 02 61 02 81 01 7b 01 00 00 b2 02 a4 
+[INFO] [1789156684.580500748] [bridge_node]: Recebidos 32 bytes | Buffer acumulado: 32 bytes
+[INFO] [1789156684.590398021] [bridge_node]: read_serial chamado
+[INFO] [1789156684.590457732] [bridge_node]: RX HEX: 02 a0 02 a9 02 b7 02 95 02 9d 02 14 02 00 00 ed 01 34 02 f5 01 03 02 1b 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a5 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a0 00 00 00 a1 00 a8 00 ac 00 b1 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e8 00 18 12 99 12 00 00 3d 0f 00 00 00 00 f3 16 86 16 db 08 6b 08 55 08 3b 08 37 08 1f 08 1d 08 1f 08 2a 08 96 08 68 07 2d 04 e3 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156684.590504010] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 288 bytes
+[INFO] [1789156684.600312902] [bridge_node]: read_serial chamado
+[INFO] [1789156684.600388624] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 00 00 00 00 09 02 00 02 06 02 09 02 2c 02 43 09 2f 08 ec 08 fb 07 96 08 aa 08 00 00 00 00 80 01 83 01 b4 a5 a5 5a 01 11 29 00 13 00 c4 09 00 00 1f 00 96 00 96 00 96 00 96 00 7d 42 00 fb 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c8 eb 3b 
+[INFO] [1789156684.600428030] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156684.600439608] [bridge_node]: Frame completo: version=1 type=0x11 payload=41 total=49
+[INFO] [1789156684.600447600] [bridge_node]: STATUS | seq=19 | uptime=2500 ms | age=31 | target L=150 R=150 | current L=150 R=150 | watchdog=OFF | lidar_pwm=200
+[INFO] [1789156684.600457720] [bridge_node]: LiDAR | freq_x20=125 | valid_bins=66 | good=251 | bad_crc=0 | bad_frames=0 | usb_bad=0 | tx_drop=0
+[INFO] [1789156684.600467389] [bridge_node]: Recebidos 142 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156684.610436219] [bridge_node]: read_serial chamado
+[INFO] [1789156684.620392143] [bridge_node]: read_serial chamado
+[INFO] [1789156684.630334285] [bridge_node]: read_serial chamado
+[INFO] [1789156684.640339980] [bridge_node]: read_serial chamado
+[INFO] [1789156684.650310541] [bridge_node]: read_serial chamado
+[INFO] [1789156684.650548886] [bridge_node]: TX HEX: a5 5a 01 01 07 00 14 00 96 00 96 00 01 a2 15 
+[INFO] [1789156684.650596594] [bridge_node]: Motor TX | seq=20 | left=150 | right=150 | bytes=15
+[INFO] [1789156684.660416533] [bridge_node]: read_serial chamado
+[INFO] [1789156684.670417600] [bridge_node]: read_serial chamado
+[INFO] [1789156684.680359703] [bridge_node]: read_serial chamado
+[INFO] [1789156684.690416213] [bridge_node]: read_serial chamado
+[INFO] [1789156684.700335189] [bridge_node]: read_serial chamado
+[INFO] [1789156684.710399804] [bridge_node]: read_serial chamado
+[INFO] [1789156684.720309114] [bridge_node]: read_serial chamado
+[INFO] [1789156684.730354320] [bridge_node]: read_serial chamado
+[INFO] [1789156684.740302399] [bridge_node]: read_serial chamado
+[INFO] [1789156684.740366305] [bridge_node]: RX HEX: a5 5a 01 10 75 01 10 00 5b 0a 00 00 e4 6b 02 00 7d 43 00 61 02 61 02 80 01 7b 01 00 00 b2 02 a4 
+[INFO] [1789156684.740380399] [bridge_node]: Recebidos 32 bytes | Buffer acumulado: 32 bytes
+[INFO] [1789156684.750418862] [bridge_node]: read_serial chamado
+[INFO] [1789156684.750732966] [bridge_node]: RX HEX: 02 a0 02 a9 02 b7 02 95 02 9d 02 15 02 fd 01 ec 01 f6 01 fc 01 fb 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 a0 00 00 00 9e 00 aa 00 ae 00 b2 00 b0 00 b8 00 cf 00 d0 00 d5 00 e8 00 23 12 c8 12 00 00 3d 0f 00 00 00 00 fc 16 c0 15 d8 08 6b 08 54 08 3d 08 37 08 21 08 1e 08 24 08 2f 08 93 08 65 07 2d 04 00 00 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156684.750787315] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 288 bytes
+[INFO] [1789156684.750946716] [bridge_node]: TX HEX: a5 5a 01 01 07 00 15 00 96 00 96 00 01 c3 ad 
+[INFO] [1789156684.751030281] [bridge_node]: Motor TX | seq=21 | left=150 | right=150 | bytes=15
+[INFO] [1789156684.760284134] [bridge_node]: read_serial chamado
+[INFO] [1789156684.760319646] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 9a 00 04 0a 00 00 0e 02 04 02 f6 01 03 02 25 02 2a 09 2e 08 6e 08 fa 07 95 08 95 08 00 00 00 00 7f 01 83 01 5f 18 
+[INFO] [1789156684.760354603] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156684.760363505] [bridge_node]: Recebidos 93 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156684.770497964] [bridge_node]: read_serial chamado
+[INFO] [1789156684.780311229] [bridge_node]: read_serial chamado
+[INFO] [1789156684.790429311] [bridge_node]: read_serial chamado
+[INFO] [1789156684.800338613] [bridge_node]: read_serial chamado
+[INFO] [1789156684.810316924] [bridge_node]: read_serial chamado
+[INFO] [1789156684.820334126] [bridge_node]: read_serial chamado
+[INFO] [1789156684.830350551] [bridge_node]: read_serial chamado
+[INFO] [1789156684.840399252] [bridge_node]: read_serial chamado
+[INFO] [1789156684.850309774] [bridge_node]: read_serial chamado
+[INFO] [1789156684.850548672] [bridge_node]: TX HEX: a5 5a 01 01 07 00 16 00 96 00 96 00 01 41 75 
+[INFO] [1789156684.850576571] [bridge_node]: Motor TX | seq=22 | left=150 | right=150 | bytes=15
+[INFO] [1789156684.860402090] [bridge_node]: read_serial chamado
+[INFO] [1789156684.870412649] [bridge_node]: read_serial chamado
+[INFO] [1789156684.880378335] [bridge_node]: read_serial chamado
+[INFO] [1789156684.890409709] [bridge_node]: read_serial chamado
+[INFO] [1789156684.900311765] [bridge_node]: read_serial chamado
+[INFO] [1789156684.900371634] [bridge_node]: RX HEX: a5 5a 01 10 75 01 11 00 f9 0a 00 00 7c 6b 02 00 7c 3e 00 61 02 61 02 81 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 9e 02 9d 02 12 02 00 00 ec 01 f0 01 f0 01 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156684.900402933] [bridge_node]: Recebidos 64 bytes | Buffer acumulado: 64 bytes
+[INFO] [1789156684.910377754] [bridge_node]: read_serial chamado
+[INFO] [1789156684.910413937] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a1 00 00 00 a2 00 a8 00 ab 00 b0 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e8 00 23 12 c8 12 00 00 3d 0f 00 00 00 00 05 17 c0 15 d8 08 6b 08 54 08 42 08 37 08 21 08 1e 08 25 08 2f 08 92 08 65 07 2d 04 00 00 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156684.910439719] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 320 bytes
+[INFO] [1789156684.920296571] [bridge_node]: read_serial chamado
+[INFO] [1789156684.920339630] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 99 00 00 00 00 00 09 02 01 02 0b 02 08 02 26 02 15 09 2f 08 81 08 03 08 92 08 00 00 00 00 00 00 7f 01 83 01 e0 ec 
+[INFO] [1789156684.920382831] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156684.920389272] [bridge_node]: Recebidos 61 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156684.930428035] [bridge_node]: read_serial chamado
+[INFO] [1789156684.940304978] [bridge_node]: read_serial chamado
+[INFO] [1789156684.950540238] [bridge_node]: read_serial chamado
+[INFO] [1789156684.951177728] [bridge_node]: TX HEX: a5 5a 01 01 07 00 17 00 96 00 96 00 01 20 cd 
+[INFO] [1789156684.951420027] [bridge_node]: Motor TX | seq=23 | left=150 | right=150 | bytes=15
+[INFO] [1789156684.960287860] [bridge_node]: read_serial chamado
+[INFO] [1789156684.970403773] [bridge_node]: read_serial chamado
+[INFO] [1789156684.980405872] [bridge_node]: read_serial chamado
+[INFO] [1789156684.990404336] [bridge_node]: read_serial chamado
+[INFO] [1789156685.000385315] [bridge_node]: read_serial chamado
+[INFO] [1789156685.010311833] [bridge_node]: read_serial chamado
+[INFO] [1789156685.020289995] [bridge_node]: read_serial chamado
+[INFO] [1789156685.030337345] [bridge_node]: read_serial chamado
+[INFO] [1789156685.040291483] [bridge_node]: read_serial chamado
+[INFO] [1789156685.050334789] [bridge_node]: read_serial chamado
+[INFO] [1789156685.050566123] [bridge_node]: TX HEX: a5 5a 01 01 07 00 18 00 96 00 96 00 01 c9 47 
+[INFO] [1789156685.050588181] [bridge_node]: Motor TX | seq=24 | left=150 | right=150 | bytes=15
+[INFO] [1789156685.060307961] [bridge_node]: read_serial chamado
+[INFO] [1789156685.060372261] [bridge_node]: RX HEX: a5 5a 01 10 75 01 12 00 98 0b 00 00 a0 6b 02 00 7d 43 00 61 02 61 02 7f 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 9e 02 9c 02 14 02 fc 01 ec 01 02 02 f5 01 fb 01 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156685.060382860] [bridge_node]: Recebidos 64 bytes | Buffer acumulado: 64 bytes
+[INFO] [1789156685.070403266] [bridge_node]: read_serial chamado
+[INFO] [1789156685.070457731] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 a0 00 00 00 9e 00 a9 00 ae 00 b2 00 b0 00 b8 00 ce 00 d0 00 d5 00 e7 00 1e 12 ce 12 00 00 3d 0f 00 00 00 00 05 17 c0 15 d7 08 69 08 54 08 42 08 37 08 21 08 1e 08 25 08 30 08 92 08 65 07 2e 04 00 00 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156685.070506093] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 320 bytes
+[INFO] [1789156685.080405910] [bridge_node]: read_serial chamado
+[INFO] [1789156685.080487391] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 9a 00 04 0a 00 00 0a 02 06 02 f4 01 02 02 28 02 15 09 2f 08 a3 08 fb 07 97 08 aa 08 00 00 00 00 7f 01 83 01 c6 1b 
+[WARN] [1789156685.080516771] [bridge_node]: CRC invalido | type=0x10 | seq=18 | payload=373 | recebido=0x1BC6 | calculado=0x249B | xor=0x3F5D
+[INFO] [1789156685.080546284] [bridge_node]: Recebidos 61 bytes | Buffer acumulado: 5 bytes
+[INFO] [1789156685.090293655] [bridge_node]: read_serial chamado
+[INFO] [1789156685.090338240] [bridge_node]: RX HEX: a5 5a 01 11 29 00 18 00 b8 0b 00 00 23 00 96 00 96 00 96 00 96 00 7c 43 00 2e 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c8 db f9 
+[INFO] [1789156685.090351087] [bridge_node]: Frame completo: version=1 type=0x11 payload=41 total=49
+[INFO] [1789156685.090357029] [bridge_node]: STATUS | seq=24 | uptime=3000 ms | age=35 | target L=150 R=150 | current L=150 R=150 | watchdog=OFF | lidar_pwm=200
+[INFO] [1789156685.090363261] [bridge_node]: LiDAR | freq_x20=124 | valid_bins=67 | good=302 | bad_crc=0 | bad_frames=0 | usb_bad=0 | tx_drop=0
+[INFO] [1789156685.090369063] [bridge_node]: Recebidos 49 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156685.100300503] [bridge_node]: read_serial chamado
+[INFO] [1789156685.110367521] [bridge_node]: read_serial chamado
+[INFO] [1789156685.120299564] [bridge_node]: read_serial chamado
+[INFO] [1789156685.130404770] [bridge_node]: read_serial chamado
+[INFO] [1789156685.140306095] [bridge_node]: read_serial chamado
+[INFO] [1789156685.150317821] [bridge_node]: read_serial chamado
+[INFO] [1789156685.150559306] [bridge_node]: TX HEX: a5 5a 01 01 07 00 19 00 96 00 96 00 01 a8 ff 
+[INFO] [1789156685.150609775] [bridge_node]: Motor TX | seq=25 | left=150 | right=150 | bytes=15
+[INFO] [1789156685.160311340] [bridge_node]: read_serial chamado
+[INFO] [1789156685.170310137] [bridge_node]: read_serial chamado
+[INFO] [1789156685.180296803] [bridge_node]: read_serial chamado
+[INFO] [1789156685.190313618] [bridge_node]: read_serial chamado
+[INFO] [1789156685.200567649] [bridge_node]: read_serial chamado
+[INFO] [1789156685.210345764] [bridge_node]: read_serial chamado
+[INFO] [1789156685.220297557] [bridge_node]: read_serial chamado
+[INFO] [1789156685.220355894] [bridge_node]: RX HEX: a5 5a 01 10 75 01 13 00 37 0c 00 00 88 6b 02 00 7d 42 00 61 02 61 02 7e 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 a0 02 9c 02 11 02 ff 01 ec 01 ed 01 f3 01 05 02 ff 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156685.220377752] [bridge_node]: Recebidos 96 bytes | Buffer acumulado: 96 bytes
+[INFO] [1789156685.230382188] [bridge_node]: read_serial chamado
+[INFO] [1789156685.230443982] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a1 00 00 00 a2 00 a8 00 ab 00 b0 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e7 00 1e 12 c8 12 00 00 3d 0f 00 00 00 00 fc 16 c0 15 d8 08 6b 08 54 08 42 08 37 08 1f 08 1e 08 24 08 2e 08 93 08 82 07 2d 04 dd 02 e0 02 fa 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 00 00 00 00 09 02 03 
+[INFO] [1789156685.230476455] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 352 bytes
+[INFO] [1789156685.240420056] [bridge_node]: read_serial chamado
+[INFO] [1789156685.240492994] [bridge_node]: RX HEX: 02 0e 02 08 02 24 02 11 09 2f 08 c1 08 03 08 92 08 00 00 00 00 00 00 7f 01 83 01 39 5e 
+[INFO] [1789156685.240525075] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156685.240556813] [bridge_node]: Recebidos 29 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156685.250332129] [bridge_node]: read_serial chamado
+[INFO] [1789156685.250544478] [bridge_node]: TX HEX: a5 5a 01 01 07 00 1a 00 96 00 96 00 01 2a 27 
+[INFO] [1789156685.250568819] [bridge_node]: Motor TX | seq=26 | left=150 | right=150 | bytes=15
+[INFO] [1789156685.260309316] [bridge_node]: read_serial chamado
+[INFO] [1789156685.270290813] [bridge_node]: read_serial chamado
+[INFO] [1789156685.280309687] [bridge_node]: read_serial chamado
+[INFO] [1789156685.290394270] [bridge_node]: read_serial chamado
+[INFO] [1789156685.300358197] [bridge_node]: read_serial chamado
+[INFO] [1789156685.310408173] [bridge_node]: read_serial chamado
+[INFO] [1789156685.320298445] [bridge_node]: read_serial chamado
+[INFO] [1789156685.330312090] [bridge_node]: read_serial chamado
+[INFO] [1789156685.340430783] [bridge_node]: read_serial chamado
+[INFO] [1789156685.350339784] [bridge_node]: read_serial chamado
+[INFO] [1789156685.350571956] [bridge_node]: TX HEX: a5 5a 01 01 07 00 1b 00 96 00 96 00 01 4b 9f 
+[INFO] [1789156685.350595397] [bridge_node]: Motor TX | seq=27 | left=150 | right=150 | bytes=15
+[INFO] [1789156685.360312231] [bridge_node]: read_serial chamado
+[INFO] [1789156685.370334123] [bridge_node]: read_serial chamado
+[INFO] [1789156685.380309730] [bridge_node]: read_serial chamado
+[INFO] [1789156685.380391611] [bridge_node]: RX HEX: a5 5a 01 10 75 01 14 00 d6 0c 00 00 b8 6b 02 00 7d 43 00 61 02 61 02 7f 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 95 02 9d 02 14 02 fe 01 ed 01 36 02 f4 01 04 02 1f 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156685.380404431] [bridge_node]: Recebidos 96 bytes | Buffer acumulado: 96 bytes
+[INFO] [1789156685.390300211] [bridge_node]: read_serial chamado
+[INFO] [1789156685.390360393] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 a0 00 00 00 9e 00 a9 00 ae 00 b2 00 af 00 b8 00 ce 00 d0 00 d5 00 e7 00 2e 12 94 12 00 00 3d 0f 00 00 00 00 fc 16 c0 15 d9 08 6b 08 54 08 43 08 37 08 21 08 1e 08 25 08 2f 08 91 08 64 07 2e 04 00 00 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 98 00 9b 00 00 00 00 00 11 02 06 
+[INFO] [1789156685.390387691] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 352 bytes
+[INFO] [1789156685.400483551] [bridge_node]: read_serial chamado
+[INFO] [1789156685.400821699] [bridge_node]: RX HEX: 02 f3 01 01 02 e3 08 27 09 2f 08 e6 08 01 08 a7 08 aa 08 00 00 00 00 80 01 83 01 c9 d5 
+[INFO] [1789156685.400880118] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156685.400905105] [bridge_node]: Recebidos 29 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156685.410406598] [bridge_node]: read_serial chamado
+[INFO] [1789156685.420317159] [bridge_node]: read_serial chamado
+[INFO] [1789156685.430312504] [bridge_node]: read_serial chamado
+[INFO] [1789156685.440298837] [bridge_node]: read_serial chamado
+[INFO] [1789156685.450373849] [bridge_node]: read_serial chamado
+[INFO] [1789156685.450547541] [bridge_node]: TX HEX: a5 5a 01 01 07 00 1c 00 96 00 96 00 01 0f 86 
+[INFO] [1789156685.450570559] [bridge_node]: Motor TX | seq=28 | left=150 | right=150 | bytes=15
+[INFO] [1789156685.460326473] [bridge_node]: read_serial chamado
+[INFO] [1789156685.470317680] [bridge_node]: read_serial chamado
+[INFO] [1789156685.480314557] [bridge_node]: read_serial chamado
+[INFO] [1789156685.490317496] [bridge_node]: read_serial chamado
+[INFO] [1789156685.500358354] [bridge_node]: read_serial chamado
+[INFO] [1789156685.510329540] [bridge_node]: read_serial chamado
+[INFO] [1789156685.520320537] [bridge_node]: read_serial chamado
+[INFO] [1789156685.530310087] [bridge_node]: read_serial chamado
+[INFO] [1789156685.540347199] [bridge_node]: read_serial chamado
+[INFO] [1789156685.540417511] [bridge_node]: RX HEX: a5 5a 01 10 75 01 15 00 74 0a 00 00 38 6c 02 00 7d 42 00 61 02 61 02 80 01 7b 01 00 00 b1 02 a3 02 a0 02 a8 02 b7 02 97 02 9d 02 28 02 fe 01 ee 01 f5 01 fe 01 fc 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156685.540432543] [bridge_node]: Recebidos 128 bytes | Buffer acumulado: 128 bytes
+[INFO] [1789156685.550314684] [bridge_node]: read_serial chamado
+[INFO] [1789156685.550381150] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a1 00 00 00 a2 00 a8 00 ab 00 b0 00 00 00 b3 00 b9 00 cf 00 d0 00 d5 00 e7 00 23 12 39 12 00 00 39 0f 00 00 00 00 f3 16 86 16 d8 08 6b 08 54 08 3b 08 37 08 1f 08 1e 08 1e 08 23 08 99 08 67 07 2d 04 dd 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 00 00 00 00 0c 02 03 02 07 02 05 02 24 02 2d 09 2f 08 f0 08 00 08 b6 08 aa 08 00 00 00 00 80 01 83 01 ec 26 
+[WARN] [1789156685.550415341] [bridge_node]: CRC invalido | type=0x10 | seq=21 | payload=373 | recebido=0x26EC | calculado=0x41D3 | xor=0x673F
+[INFO] [1789156685.550446960] [bridge_node]: Recebidos 253 bytes | Buffer acumulado: 5 bytes
+[INFO] [1789156685.550553320] [bridge_node]: TX HEX: a5 5a 01 01 07 00 1d 00 96 00 96 00 01 6e 3e 
+[INFO] [1789156685.550591734] [bridge_node]: Motor TX | seq=29 | left=150 | right=150 | bytes=15
+[INFO] [1789156685.560312332] [bridge_node]: read_serial chamado
+[INFO] [1789156685.570311797] [bridge_node]: read_serial chamado
+[INFO] [1789156685.580311223] [bridge_node]: read_serial chamado
+[INFO] [1789156685.590308658] [bridge_node]: read_serial chamado
+[INFO] [1789156685.590373174] [bridge_node]: RX HEX: a5 5a 01 11 29 00 1d 00 ac 0a 00 00 26 00 96 00 96 00 96 00 96 00 7d 42 00 60 01 00 00 00 00 00 
+[INFO] [1789156685.590385570] [bridge_node]: Recebidos 32 bytes | Buffer acumulado: 32 bytes
+[INFO] [1789156685.600403494] [bridge_node]: read_serial chamado
+[INFO] [1789156685.600632007] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c8 d4 47 
+[WARN] [1789156685.600667999] [bridge_node]: CRC invalido | type=0x11 | seq=0 | payload=41 | recebido=0x47D4 | calculado=0xD857 | xor=0x9F83
+[INFO] [1789156685.600693151] [bridge_node]: Recebidos 17 bytes | Buffer acumulado: 5 bytes
+[INFO] [1789156685.610362712] [bridge_node]: read_serial chamado
+[INFO] [1789156685.620302850] [bridge_node]: read_serial chamado
+[INFO] [1789156685.630373811] [bridge_node]: read_serial chamado
+[INFO] [1789156685.640379278] [bridge_node]: read_serial chamado
+[INFO] [1789156685.650323652] [bridge_node]: read_serial chamado
+[INFO] [1789156685.650553340] [bridge_node]: TX HEX: a5 5a 01 01 07 00 1e 00 96 00 96 00 01 ec e6 
+[INFO] [1789156685.650576555] [bridge_node]: Motor TX | seq=30 | left=150 | right=150 | bytes=15
+[INFO] [1789156685.660438618] [bridge_node]: read_serial chamado
+[INFO] [1789156685.670318943] [bridge_node]: read_serial chamado
+[INFO] [1789156685.680518657] [bridge_node]: read_serial chamado
+[INFO] [1789156685.690311895] [bridge_node]: read_serial chamado
+[INFO] [1789156685.700334299] [bridge_node]: read_serial chamado
+[INFO] [1789156685.700403780] [bridge_node]: RX HEX: a5 5a 01 10 75 01 16 00 13 0e 00 00 ac 6b 02 00 7d 41 00 61 02 61 02 80 01 7b 01 00 00 b2 02 a4 02 a0 02 a8 02 b7 02 9e 02 9c 02 14 02 00 02 ee 01 f3 01 f1 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156685.700442155] [bridge_node]: Recebidos 128 bytes | Buffer acumulado: 128 bytes
+[INFO] [1789156685.710426698] [bridge_node]: read_serial chamado
+[INFO] [1789156685.710509928] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 9d 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 a0 00 00 00 9e 00 aa 00 ae 00 b2 00 b0 00 b8 00 ce 00 d0 00 d5 00 e7 00 1e 12 99 12 00 00 39 0f 00 00 00 00 f3 16 c0 15 d8 08 6b 08 54 08 40 08 37 08 1f 08 1e 08 1f 08 23 08 97 08 67 07 2e 04 dd 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 98 00 9b 00 00 00 00 00 02 02 0a 02 ff 01 02 02 23 02 27 09 30 08 6d 08 00 08 7f 08 00 00 00 00 00 00 7f 01 84 01 d5 85 
+[INFO] [1789156685.710571261] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156685.710580259] [bridge_node]: Recebidos 253 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156685.720319395] [bridge_node]: read_serial chamado
+[INFO] [1789156685.730312808] [bridge_node]: read_serial chamado
+[INFO] [1789156685.740413468] [bridge_node]: read_serial chamado
+[INFO] [1789156685.750340662] [bridge_node]: read_serial chamado
+[INFO] [1789156685.750550247] [bridge_node]: TX HEX: a5 5a 01 01 07 00 1f 00 96 00 96 00 01 8d 5e 
+[INFO] [1789156685.750583123] [bridge_node]: Motor TX | seq=31 | left=150 | right=150 | bytes=15
+
+[INFO] [1789156685.760402780] [bridge_node]: read_serial chamado
+[INFO] [1789156685.770412713] [bridge_node]: read_serial chamado
+[INFO] [1789156685.780405307] [bridge_node]: read_serial chamado
+[INFO] [1789156685.790304994] [bridge_node]: read_serial chamado
+[INFO] [1789156685.800562049] [bridge_node]: read_serial chamado
+[INFO] [1789156685.810340905] [bridge_node]: read_serial chamado
+[INFO] [1789156685.820344177] [bridge_node]: read_serial chamado
+[INFO] [1789156685.830318929] [bridge_node]: read_serial chamado
+[INFO] [1789156685.840319920] [bridge_node]: read_serial chamado
+[INFO] [1789156685.850334680] [bridge_node]: read_serial chamado
+[INFO] [1789156685.850545966] [bridge_node]: TX HEX: a5 5a 01 01 07 00 20 00 96 00 96 00 01 e9 8d 
+[INFO] [1789156685.850569700] [bridge_node]: Motor TX | seq=32 | left=150 | right=150 | bytes=15
+[INFO] [1789156685.860307295] [bridge_node]: read_serial chamado
+[INFO] [1789156685.860372943] [bridge_node]: RX HEX: a5 5a 01 10 75 01 17 00 b2 0e 00 00 18 6c 02 00 7d 41 00 61 02 61 02 00 00 7b 01 00 00 b2 02 a3 02 a0 02 a8 02 b7 02 a0 02 9c 02 16 02 ff 01 ee 01 fb 01 f4 01 fe 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156685.860387947] [bridge_node]: Recebidos 128 bytes | Buffer acumulado: 128 bytes
+[INFO] [1789156685.870332015] [bridge_node]: read_serial chamado
+[INFO] [1789156685.870389977] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a0 00 00 00 a1 00 a8 00 ac 00 b1 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e8 00 1e 12 99 12 00 00 39 0f 00 00 00 00 f3 16 86 16 db 08 6b 08 55 08 3b 08 37 08 1e 08 1e 08 23 08 2a 08 95 08 65 07 2e 04 e4 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 00 00 00 00 0b 02 04 02 0f 02 09 02 2b 02 27 09 2f 08 80 08 03 08 95 08 95 08 00 00 00 00 7f 01 83 01 22 63 
+[INFO] [1789156685.870446627] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156685.870455647] [bridge_node]: Recebidos 253 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156685.880355638] [bridge_node]: read_serial chamado
+[INFO] [1789156685.890412046] [bridge_node]: read_serial chamado
+[INFO] [1789156685.900290841] [bridge_node]: read_serial chamado
+[INFO] [1789156685.910320377] [bridge_node]: read_serial chamado
+[INFO] [1789156685.920365313] [bridge_node]: read_serial chamado
+[INFO] [1789156685.930324134] [bridge_node]: read_serial chamado
+[INFO] [1789156685.940436794] [bridge_node]: read_serial chamado
+[INFO] [1789156685.950351758] [bridge_node]: read_serial chamado
+[INFO] [1789156685.950555986] [bridge_node]: TX HEX: a5 5a 01 01 07 00 21 00 96 00 96 00 01 88 35 
+[INFO] [1789156685.950588472] [bridge_node]: Motor TX | seq=33 | left=150 | right=150 | bytes=15
+[INFO] [1789156685.960393034] [bridge_node]: read_serial chamado
+[INFO] [1789156685.970332594] [bridge_node]: read_serial chamado
+[INFO] [1789156685.980329504] [bridge_node]: read_serial chamado
+[INFO] [1789156685.990405534] [bridge_node]: read_serial chamado
+[INFO] [1789156686.000309576] [bridge_node]: read_serial chamado
+[INFO] [1789156686.010306667] [bridge_node]: read_serial chamado
+[INFO] [1789156686.020359711] [bridge_node]: read_serial chamado
+[INFO] [1789156686.020414023] [bridge_node]: RX HEX: a5 5a 01 10 75 01 18 00 50 0f 00 00 24 6c 02 00 7c 43 00 61 02 61 02 80 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 a0 02 9c 02 13 02 00 02 ee 01 ed 01 f3 01 00 02 00 00 a4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156686.020436723] [bridge_node]: Recebidos 160 bytes | Buffer acumulado: 160 bytes
+[INFO] [1789156686.030398163] [bridge_node]: read_serial chamado
+[INFO] [1789156686.030477689] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 a0 00 00 00 9e 00 a9 00 ae 00 b2 00 b0 00 b8 00 ce 00 d0 00 d5 00 e7 00 23 12 99 12 00 00 39 0f 00 00 00 00 fc 16 c0 15 d8 08 6b 08 54 08 41 08 36 08 1f 08 1d 08 25 08 30 08 92 08 60 07 2d 04 e9 02 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 98 00 9b 00 00 00 00 00 06 02 0a 02 01 02 02 02 24 02 17 09 30 08 6d 08 00 08 80 08 00 00 00 00 00 00 7f 01 83 01 0a 7e 
+[WARN] [1789156686.030528118] [bridge_node]: CRC invalido | type=0x10 | seq=24 | payload=373 | recebido=0x7E0A | calculado=0x7E0D | xor=0x0007
+[INFO] [1789156686.030559968] [bridge_node]: Recebidos 221 bytes | Buffer acumulado: 5 bytes
+[INFO] [1789156686.040350369] [bridge_node]: read_serial chamado
+[INFO] [1789156686.050578248] [bridge_node]: read_serial chamado
+[INFO] [1789156686.051252166] [bridge_node]: TX HEX: a5 5a 01 01 07 00 22 00 96 00 96 00 01 0a ed 
+[INFO] [1789156686.051328384] [bridge_node]: Motor TX | seq=34 | left=150 | right=150 | bytes=15
+[INFO] [1789156686.060381819] [bridge_node]: read_serial chamado
+[INFO] [1789156686.070318639] [bridge_node]: read_serial chamado
+[INFO] [1789156686.080327766] [bridge_node]: read_serial chamado
+[INFO] [1789156686.090354386] [bridge_node]: read_serial chamado
+[INFO] [1789156686.100341468] [bridge_node]: read_serial chamado
+[INFO] [1789156686.100449627] [bridge_node]: RX HEX: a5 5a 01 11 29 00 22 00 a0 0f 00 00 29 00 96 00 96 00 96 00 96 00 7d 43 00 93 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c8 ef f8 
+[INFO] [1789156686.100467684] [bridge_node]: Frame completo: version=1 type=0x11 payload=41 total=49
+[INFO] [1789156686.100477955] [bridge_node]: STATUS | seq=34 | uptime=4000 ms | age=41 | target L=150 R=150 | current L=150 R=150 | watchdog=OFF | lidar_pwm=200
+[INFO] [1789156686.100541719] [bridge_node]: LiDAR | freq_x20=125 | valid_bins=67 | good=403 | bad_crc=0 | bad_frames=0 | usb_bad=0 | tx_drop=0
+[INFO] [1789156686.100553058] [bridge_node]: Recebidos 49 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156686.110355623] [bridge_node]: read_serial chamado
+[INFO] [1789156686.120399338] [bridge_node]: read_serial chamado
+[INFO] [1789156686.130418371] [bridge_node]: read_serial chamado
+[INFO] [1789156686.140292602] [bridge_node]: read_serial chamado
+[INFO] [1789156686.150344533] [bridge_node]: read_serial chamado
+[INFO] [1789156686.150564416] [bridge_node]: TX HEX: a5 5a 01 01 07 00 23 00 96 00 96 00 01 6b 55 
+[INFO] [1789156686.150589102] [bridge_node]: Motor TX | seq=35 | left=150 | right=150 | bytes=15
+[INFO] [1789156686.160313573] [bridge_node]: read_serial chamado
+[INFO] [1789156686.170297231] [bridge_node]: read_serial chamado
+[INFO] [1789156686.180337453] [bridge_node]: read_serial chamado
+[INFO] [1789156686.180425107] [bridge_node]: RX HEX: a5 5a 01 10 75 01 19 00 ef 0f 00 00 b8 6b 02 00 7c 42 00 61 02 61 02 80 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 a0 02 9d 02 16 02 ff 01 ed 01 01 02 f2 01 00 00 21 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a5 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156686.180448117] [bridge_node]: Recebidos 160 bytes | Buffer acumulado: 160 bytes
+[INFO] [1789156686.190417451] [bridge_node]: read_serial chamado
+[INFO] [1789156686.190473772] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a1 00 00 00 a2 00 a8 00 ab 00 b0 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e7 00 1e 12 9f 12 00 00 3d 0f 00 00 00 00 fc 16 c0 15 d7 08 6b 08 54 08 41 08 37 08 21 08 1e 08 25 08 2a 08 92 08 67 07 2d 04 00 00 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 00 00 18 02 0a 02 05 02 11 02 0b 02 28 02 14 09 30 08 80 08 01 08 93 08 95 08 00 00 00 00 80 01 83 01 0e 60 
+[WARN] [1789156686.190507234] [bridge_node]: CRC invalido | type=0x10 | seq=25 | payload=373 | recebido=0x600E | calculado=0x5F53 | xor=0x3F5D
+[INFO] [1789156686.190533007] [bridge_node]: Recebidos 221 bytes | Buffer acumulado: 5 bytes
+[INFO] [1789156686.200298424] [bridge_node]: read_serial chamado
+[INFO] [1789156686.210404424] [bridge_node]: read_serial chamado
+[INFO] [1789156686.220324017] [bridge_node]: read_serial chamado
+[INFO] [1789156686.230431374] [bridge_node]: read_serial chamado
+[INFO] [1789156686.240405976] [bridge_node]: read_serial chamado
+[INFO] [1789156686.250664528] [bridge_node]: read_serial chamado
+[INFO] [1789156686.251186489] [bridge_node]: TX HEX: a5 5a 01 01 07 00 24 00 96 00 96 00 01 2f 4c 
+[INFO] [1789156686.251303190] [bridge_node]: Motor TX | seq=36 | left=150 | right=150 | bytes=15
+[INFO] [1789156686.260419363] [bridge_node]: read_serial chamado
+[INFO] [1789156686.270426869] [bridge_node]: read_serial chamado
+[INFO] [1789156686.280319299] [bridge_node]: read_serial chamado
+[INFO] [1789156686.290420242] [bridge_node]: read_serial chamado
+[INFO] [1789156686.300338635] [bridge_node]: read_serial chamado
+[INFO] [1789156686.310311923] [bridge_node]: read_serial chamado
+[INFO] [1789156686.320305429] [bridge_node]: read_serial chamado
+[INFO] [1789156686.330342218] [bridge_node]: read_serial chamado
+[INFO] [1789156686.340313374] [bridge_node]: read_serial chamado
+[INFO] [1789156686.340384594] [bridge_node]: RX HEX: a5 5a 01 10 75 01 1a 00 8e 10 00 00 c4 6b 02 00 7d 41 00 61 02 61 02 80 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 9b 02 9d 02 12 02 00 00 ed 01 f8 01 fe 01 fc 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156686.340401351] [bridge_node]: Recebidos 160 bytes | Buffer acumulado: 160 bytes
+[INFO] [1789156686.350356584] [bridge_node]: read_serial chamado
+[INFO] [1789156686.350414521] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 a0 00 00 00 9d 00 aa 00 ae 00 b2 00 af 00 b8 00 ce 00 d0 00 d5 00 e7 00 1e 12 94 12 00 00 39 0f 00 00 00 00 fc 16 c0 15 d7 08 69 08 54 08 41 08 37 08 21 08 1e 08 25 08 31 08 92 08 64 07 2e 04 df 02 e0 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 98 00 9b 00 00 00 00 00 0a 02 0b 02 f7 01 02 02 26 02 12 09 2f 08 81 08 03 08 93 08 00 00 00 00 00 00 7f 01 83 01 63 57 
+[INFO] [1789156686.350464291] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156686.350470431] [bridge_node]: Recebidos 221 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156686.350550577] [bridge_node]: TX HEX: a5 5a 01 01 07 00 25 00 96 00 96 00 01 4e f4 
+[INFO] [1789156686.350567009] [bridge_node]: Motor TX | seq=37 | left=150 | right=150 | bytes=15
+[INFO] [1789156686.360397158] [bridge_node]: read_serial chamado
+[INFO] [1789156686.370301763] [bridge_node]: read_serial chamado
+[INFO] [1789156686.380314228] [bridge_node]: read_serial chamado
+[INFO] [1789156686.390309454] [bridge_node]: read_serial chamado
+[INFO] [1789156686.400332080] [bridge_node]: read_serial chamado
+[INFO] [1789156686.410311379] [bridge_node]: read_serial chamado
+[INFO] [1789156686.420323064] [bridge_node]: read_serial chamado
+[INFO] [1789156686.430327420] [bridge_node]: read_serial chamado
+[INFO] [1789156686.440307611] [bridge_node]: read_serial chamado
+[INFO] [1789156686.450589058] [bridge_node]: read_serial chamado
+[INFO] [1789156686.451097810] [bridge_node]: TX HEX: a5 5a 01 01 07 00 26 00 96 00 96 00 01 cc 2c 
+[INFO] [1789156686.451202172] [bridge_node]: Motor TX | seq=38 | left=150 | right=150 | bytes=15
+[INFO] [1789156686.460425227] [bridge_node]: read_serial chamado
+[INFO] [1789156686.470297344] [bridge_node]: read_serial chamado
+[INFO] [1789156686.480298088] [bridge_node]: read_serial chamado
+[INFO] [1789156686.490318316] [bridge_node]: read_serial chamado
+[INFO] [1789156686.500307776] [bridge_node]: read_serial chamado
+[INFO] [1789156686.500392610] [bridge_node]: RX HEX: a5 5a 01 10 75 01 1b 00 2d 11 00 00 60 6b 02 00 7d 40 00 61 02 61 02 80 01 7b 01 00 00 b2 02 a4 02 a0 02 a9 02 b7 02 97 02 9d 02 15 02 fd 01 ed 01 f4 01 f1 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156686.500418143] [bridge_node]: Recebidos 192 bytes | Buffer acumulado: 192 bytes
+[INFO] [1789156686.510406913] [bridge_node]: read_serial chamado
+[INFO] [1789156686.510480122] [bridge_node]: RX HEX: 00 00 00 a1 00 00 00 a2 00 a8 00 ab 00 b0 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e7 00 23 12 99 12 00 00 39 0f 00 00 00 00 f3 16 c0 15 d7 08 6b 08 54 08 42 08 37 08 21 08 1d 08 25 08 30 08 92 08 63 07 2d 04 df 02 e0 02 fa 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 00 00 00 00 0e 02 03 02 12 02 0c 02 26 02 22 09 30 08 ca 08 fb 07 93 08 00 00 00 00 00 00 7f 01 83 01 80 32 
+[INFO] [1789156686.510519490] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156686.510529501] [bridge_node]: Recebidos 189 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156686.520293981] [bridge_node]: read_serial chamado
+[INFO] [1789156686.530343702] [bridge_node]: read_serial chamado
+[INFO] [1789156686.540320237] [bridge_node]: read_serial chamado
+[INFO] [1789156686.550311193] [bridge_node]: read_serial chamado
+[INFO] [1789156686.550547919] [bridge_node]: TX HEX: a5 5a 01 01 07 00 27 00 96 00 96 00 01 ad 94 
+[INFO] [1789156686.550591869] [bridge_node]: Motor TX | seq=39 | left=150 | right=150 | bytes=15
+[INFO] [1789156686.560313900] [bridge_node]: read_serial chamado
+[INFO] [1789156686.570299572] [bridge_node]: read_serial chamado
+[INFO] [1789156686.580330519] [bridge_node]: read_serial chamado
+[INFO] [1789156686.590313766] [bridge_node]: read_serial chamado
+[INFO] [1789156686.600338129] [bridge_node]: read_serial chamado
+[INFO] [1789156686.600484290] [bridge_node]: RX HEX: a5 5a 01 11 29 00 27 00 94 11 00 00 2d 00 96 00 96 00 96 00 96 00 7d 40 00 c5 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c8 07 80 
+[INFO] [1789156686.600497187] [bridge_node]: Frame completo: version=1 type=0x11 payload=41 total=49
+[INFO] [1789156686.600503287] [bridge_node]: STATUS | seq=39 | uptime=4500 ms | age=45 | target L=150 R=150 | current L=150 R=150 | watchdog=OFF | lidar_pwm=200
+[INFO] [1789156686.600509252] [bridge_node]: LiDAR | freq_x20=125 | valid_bins=64 | good=453 | bad_crc=0 | bad_frames=0 | usb_bad=0 | tx_drop=0
+[INFO] [1789156686.600514971] [bridge_node]: Recebidos 49 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156686.610368043] [bridge_node]: read_serial chamado
+[INFO] [1789156686.620294545] [bridge_node]: read_serial chamado
+[INFO] [1789156686.630312654] [bridge_node]: read_serial chamado
+[INFO] [1789156686.640324858] [bridge_node]: read_serial chamado
+[INFO] [1789156686.650327161] [bridge_node]: read_serial chamado
+[INFO] [1789156686.650563567] [bridge_node]: TX HEX: a5 5a 01 01 07 00 28 00 96 00 96 00 01 44 1e 
+[INFO] [1789156686.650603299] [bridge_node]: Motor TX | seq=40 | left=150 | right=150 | bytes=15
+[INFO] [1789156686.660292260] [bridge_node]: read_serial chamado
+[INFO] [1789156686.660339700] [bridge_node]: RX HEX: a5 5a 01 10 75 01 1c 00 cb 11 00 00 f4 6b 02 00 7d 42 00 61 02 61 02 80 01 7b 01 00 00 b2 02 a4 02 a0 02 a9 02 b7 02 95 02 9d 02 12 02 00 00 ec 01 01 02 f2 01 ff 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+[INFO] [1789156686.660362085] [bridge_node]: Recebidos 192 bytes | Buffer acumulado: 192 bytes
+[INFO] [1789156686.670290911] [bridge_node]: read_serial chamado
+[INFO] [1789156686.670332881] [bridge_node]: RX HEX: 00 00 00 9d 00 a0 00 00 00 9e 00 a9 00 ae 00 b2 00 af 00 b8 00 ce 00 d0 00 d5 00 e7 00 1e 12 9f 12 00 00 39 0f 00 00 00 00 f3 16 c0 15 dc 08 6b 08 55 08 3c 08 37 08 1f 08 1d 08 25 08 2e 08 92 08 63 07 2e 04 df 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 98 00 9b 00 00 00 00 00 0a 02 0b 02 02 02 00 02 2c 02 4d 09 2e 08 ee 08 fa 07 a3 08 aa 08 00 00 00 00 7f 01 83 01 28 5a 
+[INFO] [1789156686.670381273] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156686.670387827] [bridge_node]: Recebidos 189 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156686.680318355] [bridge_node]: read_serial chamado
+[INFO] [1789156686.690313290] [bridge_node]: read_serial chamado
+[INFO] [1789156686.700482708] [bridge_node]: read_serial chamado
+[INFO] [1789156686.710375839] [bridge_node]: read_serial chamado
+[INFO] [1789156686.720349416] [bridge_node]: read_serial chamado
+[INFO] [1789156686.730322037] [bridge_node]: read_serial chamado
+[INFO] [1789156686.740422992] [bridge_node]: read_serial chamado
+[INFO] [1789156686.750310469] [bridge_node]: read_serial chamado
+[INFO] [1789156686.750594762] [bridge_node]: TX HEX: a5 5a 01 01 07 00 29 00 96 00 96 00 01 25 a6 
+[INFO] [1789156686.750657538] [bridge_node]: Motor TX | seq=41 | left=150 | right=150 | bytes=15
+[INFO] [1789156686.760396782] [bridge_node]: read_serial chamado
+[INFO] [1789156686.770393529] [bridge_node]: read_serial chamado
+[INFO] [1789156686.780335685] [bridge_node]: read_serial chamado
+[INFO] [1789156686.790429068] [bridge_node]: read_serial chamado
+[INFO] [1789156686.800370075] [bridge_node]: read_serial chamado
+[INFO] [1789156686.810311937] [bridge_node]: read_serial chamado
+[INFO] [1789156686.820360211] [bridge_node]: read_serial chamado
+[INFO] [1789156686.820419478] [bridge_node]: RX HEX: a5 5a 01 10 75 01 1d 00 6a 12 00 00 10 6c 02 00 7d 42 00 61 02 61 02 80 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 a0 02 9d 02 16 02 fe 01 ec 01 f0 01 f4 01 f9 01 0b 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a6 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a1 00 00 00 a2 00 a8 00 ab 00 b0 00 00 00 b3 00 b9 00 ce 00 d0 00 d5 00 e7 00 18 12 99 
+[INFO] [1789156686.820435978] [bridge_node]: Recebidos 224 bytes | Buffer acumulado: 224 bytes
+[INFO] [1789156686.830311405] [bridge_node]: read_serial chamado
+[INFO] [1789156686.830400298] [bridge_node]: RX HEX: 12 00 00 39 0f 00 00 00 00 f3 16 7d 16 d8 08 6b 08 55 08 41 08 37 08 1f 08 1f 08 24 08 2a 08 96 08 67 07 2e 04 dd 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 9a 00 00 00 00 00 0b 02 02 02 01 02 06 02 26 02 14 09 30 08 80 08 01 08 8e 08 00 00 00 00 00 00 7f 01 83 01 a6 8b 
+[INFO] [1789156686.830445686] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156686.830455845] [bridge_node]: Recebidos 157 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156686.840324428] [bridge_node]: read_serial chamado
+[INFO] [1789156686.850323018] [bridge_node]: read_serial chamado
+[INFO] [1789156686.850559167] [bridge_node]: TX HEX: a5 5a 01 01 07 00 2a 00 96 00 96 00 01 a7 7e 
+[INFO] [1789156686.850597224] [bridge_node]: Motor TX | seq=42 | left=150 | right=150 | bytes=15
+[INFO] [1789156686.860309510] [bridge_node]: read_serial chamado
+[INFO] [1789156686.870334692] [bridge_node]: read_serial chamado
+[INFO] [1789156686.880314199] [bridge_node]: read_serial chamado
+[INFO] [1789156686.890431242] [bridge_node]: read_serial chamado
+[INFO] [1789156686.900563359] [bridge_node]: read_serial chamado
+[INFO] [1789156686.910351998] [bridge_node]: read_serial chamado
+[INFO] [1789156686.920308691] [bridge_node]: read_serial chamado
+[INFO] [1789156686.930341905] [bridge_node]: read_serial chamado
+[INFO] [1789156686.940395374] [bridge_node]: read_serial chamado
+[INFO] [1789156686.950315847] [bridge_node]: read_serial chamado
+[INFO] [1789156686.950603833] [bridge_node]: TX HEX: a5 5a 01 01 07 00 2b 00 96 00 96 00 01 c6 c6 
+[INFO] [1789156686.950633647] [bridge_node]: Motor TX | seq=43 | left=150 | right=150 | bytes=15
+[INFO] [1789156686.960394684] [bridge_node]: read_serial chamado
+[INFO] [1789156686.970407648] [bridge_node]: read_serial chamado
+[INFO] [1789156686.980329900] [bridge_node]: read_serial chamado
+[INFO] [1789156686.980425301] [bridge_node]: RX HEX: a5 5a 01 10 75 01 1e 00 09 13 00 00 d8 6b 02 00 7d 41 00 61 02 61 02 80 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 a0 02 9c 02 14 02 00 02 ed 01 fb 01 f1 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 a0 00 00 00 9d 00 aa 00 ae 00 b2 00 af 00 b8 00 cf 00 d0 00 d5 00 e7 00 18 12 99 
+[INFO] [1789156686.980480811] [bridge_node]: Recebidos 224 bytes | Buffer acumulado: 224 bytes
+[INFO] [1789156686.990345885] [bridge_node]: read_serial chamado
+[INFO] [1789156686.990396460] [bridge_node]: RX HEX: 12 00 00 39 0f 00 00 00 00 f3 16 7d 16 d8 08 6b 08 54 08 40 08 37 08 1f 08 1e 08 24 08 29 08 99 08 69 07 2d 04 df 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 9a 00 00 00 00 00 05 02 0a 02 f9 01 03 02 26 02 15 09 30 08 6d 08 01 08 91 08 00 00 00 00 00 00 7f 01 83 01 39 f2 
+[WARN] [1789156686.990429629] [bridge_node]: CRC invalido | type=0x10 | seq=30 | payload=373 | recebido=0xF239 | calculado=0x0DD5 | xor=0xFFEC
+[INFO] [1789156686.990459706] [bridge_node]: Recebidos 157 bytes | Buffer acumulado: 5 bytes
+[INFO] [1789156687.000309198] [bridge_node]: read_serial chamado
+[INFO] [1789156687.010398719] [bridge_node]: read_serial chamado
+[INFO] [1789156687.020359508] [bridge_node]: read_serial chamado
+[INFO] [1789156687.030324752] [bridge_node]: read_serial chamado
+[INFO] [1789156687.040309533] [bridge_node]: read_serial chamado
+[INFO] [1789156687.050300905] [bridge_node]: read_serial chamado
+[INFO] [1789156687.050547527] [bridge_node]: TX HEX: a5 5a 01 01 07 00 2c 00 96 00 96 00 01 82 df 
+[INFO] [1789156687.050573709] [bridge_node]: Motor TX | seq=44 | left=150 | right=150 | bytes=15
+[INFO] [1789156687.060300235] [bridge_node]: read_serial chamado
+[INFO] [1789156687.070313320] [bridge_node]: read_serial chamado
+[INFO] [1789156687.080397356] [bridge_node]: read_serial chamado
+[INFO] [1789156687.090402371] [bridge_node]: read_serial chamado
+[INFO] [1789156687.100513100] [bridge_node]: read_serial chamado
+[INFO] [1789156687.100905478] [bridge_node]: RX HEX: a5 5a 01 11 29 00 2c 00 88 13 00 00 30 00 96 00 96 00 96 00 96 00 7d 41 00 f7 01 00 00 00 00 00 
+[INFO] [1789156687.100953507] [bridge_node]: Recebidos 32 bytes | Buffer acumulado: 32 bytes
+[INFO] [1789156687.110328157] [bridge_node]: read_serial chamado
+[INFO] [1789156687.110391720] [bridge_node]: RX HEX: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c8 4a 28 
+[INFO] [1789156687.110404265] [bridge_node]: Frame completo: version=1 type=0x11 payload=41 total=49
+[INFO] [1789156687.110410395] [bridge_node]: STATUS | seq=44 | uptime=5000 ms | age=48 | target L=150 R=150 | current L=150 R=150 | watchdog=OFF | lidar_pwm=200
+[INFO] [1789156687.110416673] [bridge_node]: LiDAR | freq_x20=125 | valid_bins=65 | good=503 | bad_crc=0 | bad_frames=0 | usb_bad=0 | tx_drop=0
+[INFO] [1789156687.110422458] [bridge_node]: Recebidos 17 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156687.120395197] [bridge_node]: read_serial chamado
+[INFO] [1789156687.130393345] [bridge_node]: read_serial chamado
+[INFO] [1789156687.140333059] [bridge_node]: read_serial chamado
+[INFO] [1789156687.140389241] [bridge_node]: RX HEX: a5 5a 01 10 75 01 1f 00 a7 13 00 00 10 6c 02 00 7d 42 00 61 02 61 02 81 01 7b 01 00 00 b1 02 a3 02 a0 02 a9 02 b7 02 9e 02 9c 02 15 02 fe 01 ed 01 f7 01 f7 01 f9 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a5 00 9e 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a0 00 00 00 a1 00 a8 00 ac 00 b1 00 00 00 b3 00 b9 00 cf 00 d0 00 d5 00 e7 00 18 12 99 
+[INFO] [1789156687.140404260] [bridge_node]: Recebidos 224 bytes | Buffer acumulado: 224 bytes
+[INFO] [1789156687.150303328] [bridge_node]: read_serial chamado
+[INFO] [1789156687.150373296] [bridge_node]: RX HEX: 12 00 00 3d 0f 00 00 00 00 fc 16 86 16 d8 08 6b 08 55 08 41 08 37 08 1f 08 1f 08 25 08 2b 08 95 08 67 07 2e 04 e2 02 df 02 fc 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9c 00 99 00 00 00 00 00 09 02 02 02 fd 01 05 02 28 02 27 09 2f 08 6d 08 03 08 93 08 95 08 00 00 00 00 7f 01 83 01 c9 ce 
+[INFO] [1789156687.150438089] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156687.150445460] [bridge_node]: Recebidos 157 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156687.150540125] [bridge_node]: TX HEX: a5 5a 01 01 07 00 2d 00 96 00 96 00 01 e3 67 
+[INFO] [1789156687.150556487] [bridge_node]: Motor TX | seq=45 | left=150 | right=150 | bytes=15
+[INFO] [1789156687.160391178] [bridge_node]: read_serial chamado
+[INFO] [1789156687.170394899] [bridge_node]: read_serial chamado
+[INFO] [1789156687.180410206] [bridge_node]: read_serial chamado
+[INFO] [1789156687.190318483] [bridge_node]: read_serial chamado
+[INFO] [1789156687.200309214] [bridge_node]: read_serial chamado
+[INFO] [1789156687.210313368] [bridge_node]: read_serial chamado
+[INFO] [1789156687.220295064] [bridge_node]: read_serial chamado
+[INFO] [1789156687.230338130] [bridge_node]: read_serial chamado
+[INFO] [1789156687.240313731] [bridge_node]: read_serial chamado
+[INFO] [1789156687.250306537] [bridge_node]: read_serial chamado
+[INFO] [1789156687.250546103] [bridge_node]: TX HEX: a5 5a 01 01 07 00 2e 00 96 00 96 00 01 61 bf 
+[INFO] [1789156687.250570206] [bridge_node]: Motor TX | seq=46 | left=150 | right=150 | bytes=15
+[INFO] [1789156687.260308904] [bridge_node]: read_serial chamado
+[INFO] [1789156687.270306070] [bridge_node]: read_serial chamado
+[INFO] [1789156687.280334027] [bridge_node]: read_serial chamado
+[INFO] [1789156687.290297486] [bridge_node]: read_serial chamado
+[INFO] [1789156687.300546217] [bridge_node]: read_serial chamado
+[INFO] [1789156687.301048437] [bridge_node]: RX HEX: a5 5a 01 10 75 01 20 00 46 14 00 00 9c 6b 02 00 7d 43 00 61 02 61 02 80 01 7b 01 00 00 b2 02 a3 02 a0 02 a9 02 b7 02 a0 02 9c 02 29 02 ff 01 ed 01 eb 01 ef 01 06 02 1a 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9e 00 9d 00 9b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 9d 00 a0 00 00 00 9e 00 a9 00 ae 00 b2 00 b0 00 b8 00 ce 00 d0 00 d5 00 e7 00 23 12 9f 12 00 00 3d 0f 00 00 00 00 f3 16 c0 15 d8 08 6c 08 54 08 42 08 36 08 1e 08 1d 08 24 08 2c 08 95 
+[INFO] [1789156687.301106010] [bridge_node]: Recebidos 256 bytes | Buffer acumulado: 256 bytes
+[INFO] [1789156687.310294684] [bridge_node]: read_serial chamado
+[INFO] [1789156687.310320503] [bridge_node]: RX HEX: 08 65 07 2d 04 e2 02 df 02 fa 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 97 00 9b 00 00 00 00 00 07 02 10 02 f8 01 05 02 22 02 18 09 30 08 6d 08 01 08 92 08 00 00 00 00 00 00 7f 01 83 01 4e 41 
+[INFO] [1789156687.310352983] [bridge_node]: Frame completo: version=1 type=0x10 payload=373 total=381
+[INFO] [1789156687.310360729] [bridge_node]: Recebidos 125 bytes | Buffer acumulado: 0 bytes
+[INFO] [1789156687.320320074] [bridge_node]: read_serial chamado
+[INFO] [1789156687.330303395] [bridge_node]: read_serial chamado
+[INFO] [1789156687.340316862] [bridge_node]: read_serial chamado
+[INFO] [1789156687.350308855] [bridge_node]: read_serial chamado
+[INFO] [1789156687.350546723] [bridge_node]: TX HEX: a5 5a 01 01 07 00 2f 00 96 00 96 00 01 00 07 
+[INFO] [1789156687.350568456] [bridge_node]: Motor TX | seq=47 | left=150 | right=150 | bytes=15
+[INFO] [1789156687.360312833] [bridge_node]: read_serial chamado
+[INFO] [1789156687.370328714] [bridge_node]: read_serial chamado
+[INFO] [1789156687.380315180] [bridge_node]: read_serial chamado
+[INFO] [1789156687.390327586] [bridge_node]: read_serial chamado
+^C[INFO] [1789156687.396629412] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1789156687.397454549] [bridge_node]: Porta serial fechada
+

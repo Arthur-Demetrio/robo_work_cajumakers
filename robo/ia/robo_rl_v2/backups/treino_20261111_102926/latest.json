@@ -1,0 +1,4 @@
+{
+  "model": "/home/marcos/robo_rl_v2/runs/treino_v2_nativo_gated_20261110_102312/checkpoints/ppo_000000125000.zip",
+  "steps": 125000
+}

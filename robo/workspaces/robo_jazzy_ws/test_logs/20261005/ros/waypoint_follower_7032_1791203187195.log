@@ -1,0 +1,24 @@
+[INFO] [1791203187.216282767] [waypoint_follower]: 
+	waypoint_follower lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791203187.216728301] [waypoint_follower]: Creating
+[INFO] [1791203187.469733850] [waypoint_follower]: Configuring
+[INFO] [1791203187.480986656] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[INFO] [1791203187.481355969] [waypoint_follower]: Waypoint pause duration is set to zero, disabling task executor plugin.
+[INFO] [1791203188.287507217] [waypoint_follower]: Activating
+[INFO] [1791203188.287541143] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[INFO] [1791205024.919627222] [waypoint_follower]: Deactivating
+[INFO] [1791205024.919657999] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[INFO] [1791205026.417782274] [waypoint_follower]: Cleaning up
+[INFO] [1791205027.766199293] [waypoint_follower]: Configuring
+[INFO] [1791205027.772067246] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[INFO] [1791205027.772098049] [waypoint_follower]: Waypoint pause duration is set to zero, disabling task executor plugin.
+[INFO] [1791205028.561046422] [waypoint_follower]: Activating
+[INFO] [1791205028.561067798] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[INFO] [1791206403.236686854] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791206403.236786013] [waypoint_follower]: Running Nav2 LifecycleNode rcl preshutdown (waypoint_follower)
+[INFO] [1791206403.236827595] [waypoint_follower]: Deactivating
+[INFO] [1791206403.236840801] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.
+[INFO] [1791206403.247035968] [waypoint_follower]: Cleaning up
+[INFO] [1791206403.260357937] [waypoint_follower]: Destroying bond (waypoint_follower) to lifecycle manager.

@@ -1,0 +1,441 @@
+10:30:06.54 alinhador_passagem Novo goal: x=1.70 y=2.40 yaw=0 graus
+10:30:06.55 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+10:30:07.06 alinhador_passagem Passagem 1: entrada (0.77, -0.17), eixo -1 graus, largura no mapa 0.75 m, preparo a 0.60 m da entrada
+10:30:07.07 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=0.17 y=-0.16 yaw=-1 graus
+10:30:10.20 alinhador_passagem PREPARO 1 (alinhar fora da passagem): andei 16 cm para dir
+10:30:11.39 alinhador_passagem PREPARO 1 (alinhar fora da passagem): andei 6 cm para frente
+10:30:11.39 alinhador_passagem PREPARO 1 (alinhar fora da passagem): SUCESSO (11 cm e 0 graus do preparo)
+10:30:11.40 planner_server GridBased plugin failed to plan from (0.09, -0.08) to (1.70, 2.40): "Failed to create plan with tolerance of: 0.100000"
+10:30:11.74 alinhador_passagem Planner: sem caminho; mapa: 4.0 m: sigo a rota do mapa
+10:30:11.80 alinhador_passagem Passagem 1 termina num cruzamento em (1.53, -0.19) com curva para a ESQUERDA: modo de curva: lateral
+10:30:11.82 alinhador_passagem TRAVESSIA 1: travessia pelo LiDAR ate (1.45, -0.19) + 0.00 m
+10:30:13.18 alinhador_passagem TRAVESSIA 1: Paredes vistas (largura 0.83 m): parando na boca para alinhar
+10:30:14.19 alinhador_passagem TRAVESSIA 1: Medicao 1: girar -2.5 graus, centro a -11.2 cm, largura 0.82 m
+10:30:18.02 alinhador_passagem TRAVESSIA 1: Medicao 2: girar -1.6 graus, centro a +0.3 cm, largura 0.86 m
+10:30:18.03 alinhador_passagem TRAVESSIA 1: Alinhado: atravessando
+10:30:35.24 alinhador_passagem TRAVESSIA 1: Parei no cruzamento pelo LiDAR: parede a 14 cm do para-choque (alvo 12 cm; pelo mapa faltavam +12 cm)
+10:30:35.53 alinhador_passagem TRAVESSIA 1 (LiDAR): SUCESSO
+10:30:35.54 alinhador_passagem CURVA 1: saindo de lado para a ESQUERDA ate (1.62, 1.07) + 0.60 m
+10:30:35.55 alinhador_passagem CURVA 1: Cruzamento: saindo de lado para a ESQUERDA
+10:30:36.38 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -1.3 cm a frente (1 parede(s)), folga frente 10 / tras - cm
+10:30:41.19 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:30:41.36 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 3 / tras 18 cm
+10:30:42.16 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -8.1 cm a frente (folgas), folga frente 3 / tras 19 cm
+10:30:42.16 alinhador_passagem CURVA 1: Perto da parede: afastando -8.1 cm
+10:30:42.28 collision_monitor Robot to continue normal operation
+10:30:42.99 global_costmap.glo StaticLayer: Resizing costmap to 217 X 219 at 0.050000 m/pix
+10:30:43.69 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -3.1 cm a frente (1 parede(s)), folga frente 8 / tras 14 cm
+10:30:44.67 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:30:44.74 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 17 cm
+10:30:45.50 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -8.3 cm a frente (folgas), folga frente 3 / tras 19 cm
+10:30:45.50 alinhador_passagem CURVA 1: Perto da parede: afastando -8.3 cm
+10:30:45.63 collision_monitor Robot to continue normal operation
+10:30:47.02 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -3.4 cm a frente (folgas), folga frente 8 / tras 15 cm
+10:30:47.72 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:30:47.85 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 18 cm
+10:30:47.98 collision_monitor Robot to continue normal operation
+10:30:48.76 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -7.1 cm a frente (folgas), folga frente 4 / tras 18 cm
+10:30:48.77 alinhador_passagem CURVA 1: Perto da parede: afastando -7.1 cm
+10:30:50.26 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -2.9 cm a frente (folgas), folga frente 8 / tras 14 cm
+10:30:51.24 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:30:51.40 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 3 / tras 18 cm
+10:30:52.26 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -8.3 cm a frente (folgas), folga frente 3 / tras 19 cm
+10:30:52.26 alinhador_passagem CURVA 1: Perto da parede: afastando -8.3 cm
+10:30:52.39 collision_monitor Robot to continue normal operation
+10:30:53.74 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -2.8 cm a frente (folgas), folga frente 8 / tras 14 cm
+10:30:54.80 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:30:54.94 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 3 / tras 18 cm
+10:30:55.75 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -8.3 cm a frente (folgas), folga frente 3 / tras 19 cm
+10:30:55.76 alinhador_passagem CURVA 1: Perto da parede: afastando -8.3 cm
+10:30:55.88 collision_monitor Robot to continue normal operation
+10:30:57.31 alinhador_passagem CURVA 1: Medicao: girar +1.5 graus, centro -2.8 cm a frente (folgas), folga frente 8 / tras 14 cm
+10:30:58.63 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:30:58.77 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 17 cm
+10:30:58.92 collision_monitor Robot to continue normal operation
+10:30:59.62 alinhador_passagem CURVA 1: Medicao: girar +2.3 graus, centro -6.7 cm a frente (folgas), folga frente 5 / tras 18 cm
+10:31:01.27 alinhador_passagem CURVA 1: Medicao: girar +2.0 graus, centro -1.6 cm a frente (folgas), folga frente 9 / tras 13 cm
+10:31:03.14 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:03.38 collision_monitor Robot to continue normal operation
+10:31:03.63 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:05.20 alinhador_passagem CURVA 1: Collision Monitor segurando em "deslizar": parando para medir de novo
+10:31:05.39 collision_monitor Robot to continue normal operation
+10:31:06.16 alinhador_passagem CURVA 1: Medicao: girar +4.3 graus, centro -5.4 cm a frente (2 parede(s)), folga frente 5 / tras 18 cm
+10:31:07.64 alinhador_passagem CURVA 1: Medicao: girar +1.9 graus, centro -3.3 cm a frente (folgas), folga frente 7 / tras 13 cm
+10:31:08.49 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:08.52 collision_monitor Robot to continue normal operation
+10:31:08.69 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:08.83 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 18 cm
+10:31:08.98 collision_monitor Robot to continue normal operation
+10:31:09.64 alinhador_passagem CURVA 1: Medicao: girar +3.4 graus, centro -6.8 cm a frente (2 parede(s)), folga frente 4 / tras 19 cm
+10:31:09.64 alinhador_passagem CURVA 1: Perto da parede: afastando -4.0 cm
+10:31:10.97 alinhador_passagem CURVA 1: Medicao: girar +1.1 graus, centro -5.0 cm a frente (folgas), folga frente 5 / tras 15 cm
+10:31:12.48 alinhador_passagem CURVA 1: Medicao: girar -2.5 graus, centro -1.0 cm a frente (folgas), folga frente 9 / tras 11 cm
+10:31:13.67 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 3 / tras 16 cm
+10:31:13.91 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:14.21 slam_toolbox Message Filter dropping message: frame 'laser_raw' at time 1794403873.968 for reason 'discarding message because the queue is full'
+10:31:16.11 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -8.7 cm a frente (folgas), folga frente 1 / tras 19 cm
+10:31:16.11 alinhador_passagem CURVA 1: Perto da parede: afastando -8.7 cm
+10:31:16.28 collision_monitor Robot to continue normal operation
+10:31:17.69 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -4.2 cm a frente (folgas), folga frente 6 / tras 14 cm
+10:31:19.02 alinhador_passagem CURVA 1: Medicao: girar -2.8 graus, centro -0.2 cm a frente (folgas), folga frente 10 / tras 10 cm
+10:31:20.21 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 15 cm
+10:31:20.53 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:22.67 alinhador_passagem CURVA 1: Perto da parede (sem medicao): afastando -7.2 cm
+10:31:22.83 collision_monitor Robot to continue normal operation
+10:31:24.21 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -2.6 cm a frente (folgas), folga frente 7 / tras 13 cm
+10:31:25.02 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 16 cm
+10:31:25.39 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:27.49 alinhador_passagem CURVA 1: Perto da parede (sem medicao): afastando -4.0 cm
+10:31:27.62 collision_monitor Robot to continue normal operation
+10:31:28.86 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -4.4 cm a frente (folgas), folga frente 6 / tras 15 cm
+10:31:30.36 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -1.5 cm a frente (folgas), folga frente 9 / tras 12 cm
+10:31:31.37 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 15 cm
+10:31:31.52 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:33.82 alinhador_passagem CURVA 1: Perto da parede (sem medicao): afastando -4.0 cm
+10:31:33.98 collision_monitor Robot to continue normal operation
+10:31:34.38 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:34.53 collision_monitor Robot to continue normal operation
+10:31:36.77 alinhador_passagem CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual
+10:31:37.36 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 15 cm
+10:31:37.53 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:39.84 alinhador_passagem CURVA 1: Perto da parede (sem medicao): afastando -4.0 cm
+10:31:39.98 collision_monitor Robot to continue normal operation
+10:31:40.38 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:40.53 collision_monitor Robot to continue normal operation
+10:31:42.78 alinhador_passagem CURVA 1: Perto da parede (sem medicao): afastando -4.0 cm
+10:31:44.20 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -2.9 cm a frente (folgas), folga frente 7 / tras 13 cm
+10:31:45.01 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 16 cm
+10:31:45.20 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:47.48 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -8.4 cm a frente (1 parede(s)), folga frente 2 / tras 18 cm
+10:31:47.48 alinhador_passagem CURVA 1: Perto da parede: afastando -4.0 cm
+10:31:47.63 collision_monitor Robot to continue normal operation
+10:31:47.98 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:48.73 collision_monitor Robot to continue normal operation
+10:31:48.86 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -6.4 cm a frente (1 parede(s)), folga frente 5 / tras 15 cm
+10:31:50.35 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro +0.4 cm a frente (folgas), folga frente 11 / tras 10 cm
+10:31:52.71 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 16 cm
+10:31:52.88 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:31:55.17 alinhador_passagem CURVA 1: Perto da parede (sem medicao): afastando -7.6 cm
+10:31:55.33 collision_monitor Robot to continue normal operation
+10:31:56.72 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -3.0 cm a frente (folgas), folga frente 7 / tras 13 cm
+10:31:58.23 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 17 cm
+10:31:58.39 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:32:00.56 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -12.2 cm a frente (1 parede(s)), folga frente 2 / tras 19 cm
+10:32:00.57 alinhador_passagem CURVA 1: Perto da parede: afastando -4.0 cm
+10:32:00.73 collision_monitor Robot to continue normal operation
+10:32:01.09 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:32:01.72 collision_monitor Robot to continue normal operation
+10:32:02.06 alinhador_passagem CURVA 1: Medicao: girar +2.7 graus, centro -7.0 cm a frente (2 parede(s)), folga frente 5 / tras 16 cm
+10:32:03.63 alinhador_passagem CURVA 1: Medicao: girar -0.0 graus, centro -2.6 cm a frente (2 parede(s)), folga frente 10 / tras 11 cm
+10:32:04.92 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 16 cm
+10:32:04.99 global_costmap.glo StaticLayer: Resizing costmap to 218 X 219 at 0.050000 m/pix
+10:32:05.22 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:32:05.72 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -10.9 cm a frente (1 parede(s)), folga frente 3 / tras 18 cm
+10:32:05.73 alinhador_passagem CURVA 1: Perto da parede: afastando -4.0 cm
+10:32:05.88 collision_monitor Robot to continue normal operation
+10:32:06.19 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:32:06.43 collision_monitor Robot to continue normal operation
+10:32:07.05 alinhador_passagem CURVA 1: Medicao: girar +1.4 graus, centro -7.7 cm a frente (2 parede(s)), folga frente 5 / tras 16 cm
+10:32:08.59 alinhador_passagem CURVA 1: Medicao: girar +1.5 graus, centro -2.6 cm a frente (1 parede(s)), folga frente 10 / tras 13 cm
+10:32:09.91 alinhador_passagem CURVA 1: PARADA DE SEGURANCA: folga frente 3 / tras 20 cm
+10:32:10.08 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:32:10.76 alinhador_passagem CURVA 1: Medicao: girar +0.0 graus, centro -10.7 cm a frente (1 parede(s)), folga frente 3 / tras 23 cm
+10:32:10.76 alinhador_passagem CURVA 1: Perto da parede: afastando -4.0 cm
+10:32:10.88 collision_monitor Robot to continue normal operation
+10:32:12.06 alinhador_passagem CURVA 1: Medicao: girar +1.8 graus, centro -7.3 cm a frente (2 parede(s)), folga frente 6 / tras 20 cm
+10:32:13.44 alinhador_passagem CURVA 1: Saida lateral abortada: tempo maximo
+10:32:13.70 alinhador_passagem CURVA 1: FALHOU - tempo maximo
+10:32:13.70 alinhador_passagem Nao consegui sair de lado pelo corredor novo (curva 1). Parei; ajude o robo e mande o goal de novo.
+10:32:40.76 alinhador_passagem Novo goal: x=1.49 y=2.32 yaw=0 graus
+10:32:40.76 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+10:32:41.06 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+10:32:41.10 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +66 graus da frente: viro antes do Nav2
+10:32:41.35 alinhador_passagem GOAL FINAL (virar para o caminho): girando 66 graus a quina pegaria: primeiro 28 cm para esq
+10:32:45.72 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:32:46.26 alinhador_passagem GOAL FINAL (virar para o caminho): andei 28 cm para esq
+10:32:47.34 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+10:32:48.43 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+10:32:49.51 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+10:32:50.59 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+10:32:50.60 alinhador_passagem GOAL FINAL (virar para o caminho): o giro trava sempre
+10:32:50.62 collision_monitor Robot to continue normal operation
+10:32:50.85 alinhador_passagem GOAL FINAL (virar para o caminho): nao consegui virar; sigo pelo Nav2
+10:32:50.86 alinhador_passagem GOAL FINAL: x=1.49 y=2.32 yaw=0 graus
+10:32:50.86 bt_navigator Begin navigating from current location (1.69, 0.83) to (1.49, 2.32)
+10:32:50.88 smoother_server Smoothed path leads to a collision at x: 1.695654, y: 0.809810, theta: -1.410803
+10:32:50.90 controller_server Received a goal, begin computing control effort.
+10:32:50.90 controller_server No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
+10:32:50.90 controller_server No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+10:32:51.51 bt_navigator_navig failed to send response to /bt_navigator_navigate_to_pose_rclcpp_node/list_parameters (timeout): client will not receive response, at ./src/rmw_response.cpp:153, at ./src/rcl/service.c:400
+10:32:51.52 smoother_server Smoothed path leads to a collision at x: 1.695654, y: 0.859810, theta: -1.460306
+10:32:56.99 global_costmap.glo StaticLayer: Resizing costmap to 218 X 220 at 0.050000 m/pix
+10:32:58.99 global_costmap.glo StaticLayer: Resizing costmap to 225 X 220 at 0.050000 m/pix
+10:33:02.48 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:33:07.89 smoother_server Smoothed path leads to a collision at x: 2.195654, y: 1.259810, theta: -0.116621
+10:33:08.51 controller_server Failed to make progress
+10:33:08.63 collision_monitor Robot to continue normal operation
+10:33:09.49 destravar DESTRAVAR: caminho novo (52 pontos)
+10:33:09.97 destravar DESTRAVAR: DIAGNOSTICO: sem_progresso_fisico,quina_esq,frente_barrada (planner ok, frente 3 cm, retornos 0)
+10:33:10.18 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 40 cm: 5 ponto(s) do LiDAR na area va
+10:33:10.19 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 40 cm: 5 ponto(s) do LiDAR na area varrida; dir 30 cm: 5 pon
+10:33:10.45 destravar DESTRAVAR: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: dir 40 cm: 5 ponto(s) do LiDAR na area varrida; dir 30 cm: 5 ponto(s) d
+10:33:10.47 bt_navigator Goal failed
+10:33:10.49 alinhador_passagem GOAL FINAL: FALHOU
+10:33:14.74 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+10:33:14.76 alinhador_passagem Novo goal: x=1.48 y=2.38 yaw=0 graus
+10:33:15.05 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+10:33:15.10 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +120 graus da frente: viro antes do Nav2
+10:33:15.36 alinhador_passagem GOAL FINAL (virar para o caminho): girando 120 graus a quina pegaria: primeiro 7 cm para tras
+10:33:16.54 alinhador_passagem GOAL FINAL (virar para o caminho): andei 6 cm para tras
+10:33:16.81 alinhador_passagem GOAL FINAL (virar para o caminho): girando 120 graus a quina pegaria: primeiro 4 cm para dir
+10:33:17.94 alinhador_passagem GOAL FINAL (virar para o caminho): andei 3 cm para dir
+10:33:27.65 alinhador_passagem GOAL FINAL (virar para o caminho): angulo 120 graus (erro 2.4)
+10:33:27.91 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+10:33:27.91 alinhador_passagem GOAL FINAL: x=1.48 y=2.38 yaw=0 graus
+10:33:27.91 bt_navigator Begin navigating from current location (2.21, 1.25) to (1.48, 2.38)
+10:33:27.95 controller_server Received a goal, begin computing control effort.
+10:33:43.66 controller_server Reached the goal!
+10:33:43.69 bt_navigator Goal succeeded
+10:33:43.72 alinhador_passagem GOAL FINAL: SUCESSO
+10:33:46.06 local_costmap.loca Message Filter dropping message: frame 'laser_raw' at time 1794404025.764 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+10:33:51.65 alinhador_passagem Novo goal: x=1.34 y=4.79 yaw=0 graus
+10:33:51.65 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+10:33:52.13 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+10:33:52.17 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a +64 graus da frente: viro antes do Nav2
+10:33:56.61 alinhador_passagem GOAL FINAL (virar para o caminho): angulo 68 graus (erro 3.0)
+10:33:56.87 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+10:33:56.87 alinhador_passagem GOAL FINAL: x=1.34 y=4.79 yaw=0 graus
+10:33:56.87 bt_navigator Begin navigating from current location (1.47, 2.44) to (1.34, 4.79)
+10:33:56.91 controller_server Received a goal, begin computing control effort.
+10:34:00.99 global_costmap.glo StaticLayer: Resizing costmap to 232 X 221 at 0.050000 m/pix
+10:34:03.42 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:34:09.41 controller_server Failed to make progress
+10:34:09.62 collision_monitor Robot to continue normal operation
+10:34:09.68 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:34:10.45 destravar DESTRAVAR: caminho novo (65 pontos)
+10:34:10.99 destravar DESTRAVAR: DIAGNOSTICO: cm_bloqueou,sem_progresso_fisico,quina_dir,frente_barrada (planner ok, frente 0 cm, retornos 0)
+10:34:11.24 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa cm_bloqueou,sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq 40 cm: 1 ponto(s) do LiDA
+10:34:11.25 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: causa cm_bloqueou,sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq 40 cm: 1 ponto(s) do LiDAR na area varrida; esq 
+10:34:11.51 destravar DESTRAVAR: sem alternativa segura (retomar: causa cm_bloqueou,sem_progresso_fisico: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq 40 cm: 1 ponto(s) do LiDAR na area varrida; esq 30 cm: 
+10:34:11.54 bt_navigator Goal failed
+10:34:11.56 alinhador_passagem GOAL FINAL: FALHOU
+10:35:30.54 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+10:35:30.54 alinhador_passagem Novo goal: x=0.83 y=4.64 yaw=0 graus
+10:35:30.87 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+10:35:30.91 alinhador_passagem GOAL FINAL: x=0.83 y=4.64 yaw=0 graus
+10:35:30.91 bt_navigator Begin navigating from current location (1.31, 3.36) to (0.83, 4.64)
+10:35:30.95 controller_server Received a goal, begin computing control effort.
+10:35:31.09 collision_monitor Robot to continue normal operation
+10:35:31.23 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:35:31.42 collision_monitor Robot to continue normal operation
+10:35:31.57 controller_server Could not find a legal trajectory: No valid trajectories out of 344! 
+10:35:32.26 controller_server Could not find a legal trajectory: No valid trajectories out of 376! 
+10:35:33.77 controller_server Could not find a legal trajectory: No valid trajectories out of 352! 
+10:35:57.96 controller_server Could not find a legal trajectory: No valid trajectories out of 400! 
+10:36:14.07 controller_server Could not find a legal trajectory: No valid trajectories out of 392! 
+10:36:14.17 controller_server Could not find a legal trajectory: No valid trajectories out of 392! 
+10:36:16.72 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:36:16.92 collision_monitor Robot to continue normal operation
+10:36:16.99 global_costmap.glo StaticLayer: Resizing costmap to 232 X 225 at 0.050000 m/pix
+10:36:17.23 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:36:17.28 collision_monitor Robot to continue normal operation
+10:36:18.99 global_costmap.glo StaticLayer: Resizing costmap to 232 X 226 at 0.050000 m/pix
+10:36:20.52 smoother_server Smoothed path leads to a collision at x: 0.752328, y: 4.728196, theta: -0.836098
+10:36:20.99 global_costmap.glo StaticLayer: Resizing costmap to 232 X 269 at 0.050000 m/pix
+10:36:21.06 smoother_server Smoothed path leads to a collision at x: 0.745796, y: 4.814209, theta: -1.166437
+10:36:21.59 planner_server GridBased plugin failed to plan from (0.42, 5.00) to (0.83, 4.64): "Failed to create plan with tolerance of: 0.100000"
+10:36:21.61 global_costmap.glo Received request to clear entirely the global_costmap
+10:36:22.01 planner_server GridBased plugin failed to plan from (0.45, 5.01) to (0.83, 4.64): "Failed to create plan with tolerance of: 0.100000"
+10:36:22.05 controller_server Cancellation was successful. Stopping the robot.
+10:36:22.05 controller_server [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+10:36:22.33 planner_server GridBased plugin failed to plan from (0.42, 4.99) to (0.83, 4.64): "Failed to create plan with tolerance of: 0.100000"
+10:36:22.97 global_costmap.glo Received request to clear entirely the global_costmap
+10:36:22.99 global_costmap.glo StaticLayer: Resizing costmap to 232 X 272 at 0.050000 m/pix
+10:36:22.99 local_costmap.loca Received request to clear entirely the local_costmap
+10:36:23.62 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+10:36:23.62 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)
+10:36:25.63 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (0.83, 4.64): "Failed to create plan with tolerance of: 0.100000"
+10:36:26.27 global_costmap.glo Received request to clear entirely the global_costmap
+10:36:26.29 local_costmap.loca Received request to clear entirely the local_costmap
+10:36:26.92 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+10:36:26.92 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (2/2)
+10:36:28.52 alinhador_passagem Novo goal: x=0.02 y=0.05 yaw=0 graus
+10:36:28.53 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+10:36:28.53 bt_navigator Goal canceled
+10:36:28.57 alinhador_passagem Goal substituido por um novo.
+10:36:28.58 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+10:36:28.58 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (0.02, 0.05): "Failed to create plan with tolerance of: 0.100000"
+10:36:28.92 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (0.83, 4.64): "Failed to create plan with tolerance of: 0.100000"
+10:36:29.20 alinhador_passagem Planner: sem caminho; mapa: 7.2 m: sigo a rota do mapa
+10:36:29.28 alinhador_passagem Passagem 1: entrada (1.54, 0.97), eixo -83 graus, largura no mapa 0.78 m, preparo a 0.60 m da entrada
+10:36:29.29 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=1.46 y=1.56 yaw=-83 graus
+10:36:29.30 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.46, 1.56): "Failed to create plan with tolerance of: 0.100000"
+10:36:29.31 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.46, 1.56): "Failed to create plan with tolerance of: 0.100000"
+10:36:29.34 alinhador_passagem PREPARO 1 (alinhar fora da passagem) (posicao): x=1.46 y=1.56 yaw=-73 graus
+10:36:29.35 bt_navigator Begin navigating from current location (0.42, 4.96) to (1.46, 1.56)
+10:36:29.35 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.46, 1.56): "Failed to create plan with tolerance of: 0.100000"
+10:36:29.37 global_costmap.glo Received request to clear entirely the global_costmap
+10:36:29.50 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.46, 1.56): "Failed to create plan with tolerance of: 0.100000"
+10:36:29.56 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_caminho_global,oscilacao (planner sem_caminho, frente 89 cm, retornos 0)
+10:36:29.98 destravar DESTRAVAR: DECISAO: giro (gira -40 graus para o caminho (-162); area 52% observada) | recusadas: retomar: planner sem caminho | lateral: dir 40 cm: depois o caminho so anda 0 cm; dir 30 cm: depois o caminho so anda 0 cm; dir 25 cm
+10:36:30.51 progressive_spin spin avaliacao: sentido=+1 arco_livre=20.6 graus folga_extra=0.04 m abertura=0.20 m folga_giro=0.208 m
+10:36:30.51 progressive_spin spin avaliacao: sentido=-1 arco_livre=20.6 graus folga_extra=0.04 m abertura=0.20 m folga_giro=0.199 m
+10:36:30.53 progressive_spin micro-giro +6.9 graus (acumulado 0.0 / max 40.1)
+10:36:30.53 behavior_server Running spin
+10:36:30.53 behavior_server Turning 0.12 for spin behavior.
+10:36:30.93 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (0.83, 4.64): "Failed to create plan with tolerance of: 0.100000"
+10:36:31.33 behavior_server spin completed successfully
+10:36:31.41 progressive_spin smart_spin ok: abertura frontal verificada após 7.7 graus; BT pode replanejar
+10:36:31.57 global_costmap.glo Received request to clear entirely the global_costmap
+10:36:31.60 local_costmap.loca Received request to clear entirely the local_costmap
+10:36:32.20 destravar DESTRAVAR: RESULTADO giro: nao_verificado | smart_spin: abertura frontal verificada após 7.7 graus; BT pode replanejar | IMU: girou +9 graus
+10:36:32.22 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+10:36:32.22 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)
+10:36:32.57 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: planner sem caminho | lateral: dir 40 cm: depois o caminho so anda 0 cm; dir 30 cm: depois o caminho so anda 0 cm; dir 25 cm: depois o caminho so anda 0 cm;
+10:36:32.58 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: planner sem caminho | lateral: dir 40 cm: depois o caminho so anda 0 cm; dir 30 cm: depois o caminho so anda 0 cm; dir 25 cm: depois o caminho so anda 0 cm; dir 15 cm: depois o ca
+10:36:32.84 destravar DESTRAVAR: sem alternativa segura (retomar: planner sem caminho | lateral: dir 40 cm: depois o caminho so anda 0 cm; dir 30 cm: depois o caminho so anda 0 cm; dir 25 cm: depois o caminho so anda 0 cm; dir 15 cm: depois o caminho s
+10:36:34.27 destravar DESTRAVAR: caminho novo (18 pontos)
+10:36:34.86 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,dwb_sem_trajetoria (planner ok, frente 93 cm, retornos 1)
+10:36:35.25 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: caminho para tras (-176 graus): o DWB nao da re | lateral: dir 40 cm: depois o caminho so anda 0 cm; dir 30 cm: depois o caminho so anda 0 cm; dir 25 cm: de
+10:36:35.25 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: caminho para tras (-176 graus): o DWB nao da re | lateral: dir 40 cm: depois o caminho so anda 0 cm; dir 30 cm: depois o caminho so anda 0 cm; dir 25 cm: depois o caminho so anda 
+10:36:35.51 destravar DESTRAVAR: sem alternativa segura (retomar: caminho para tras (-176 graus): o DWB nao da re | lateral: dir 40 cm: depois o caminho so anda 0 cm; dir 30 cm: depois o caminho so anda 0 cm; dir 25 cm: depois o caminho so anda 0 cm; d
+10:36:35.54 bt_navigator Goal failed
+10:36:35.55 alinhador_passagem PREPARO 1 (alinhar fora da passagem) (posicao): FALHOU
+10:36:35.56 alinhador_passagem Preparo 1 falhou. Parei fora da passagem; mande o goal de novo.
+10:36:42.46 alinhador_passagem Novo goal: x=0.07 y=-0.26 yaw=0 graus
+10:36:42.46 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+10:36:42.46 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (0.07, -0.26): "Failed to create plan with tolerance of: 0.100000"
+10:36:43.15 alinhador_passagem Planner: sem caminho; mapa: 7.1 m: sigo a rota do mapa
+10:36:43.22 alinhador_passagem Passagem 1: entrada (1.54, 0.97), eixo -83 graus, largura no mapa 0.78 m, preparo a 0.60 m da entrada
+10:36:43.23 alinhador_passagem PREPARO 1 (alinhar fora da passagem): x=1.46 y=1.56 yaw=-83 graus
+10:36:43.23 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.46, 1.56): "Failed to create plan with tolerance of: 0.100000"
+10:36:43.25 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.46, 1.56): "Failed to create plan with tolerance of: 0.100000"
+10:36:43.29 alinhador_passagem PREPARO 1 (alinhar fora da passagem) (posicao): x=1.46 y=1.56 yaw=-73 graus
+10:36:43.29 bt_navigator Begin navigating from current location (0.42, 4.96) to (1.46, 1.56)
+10:36:43.29 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.46, 1.56): "Failed to create plan with tolerance of: 0.100000"
+10:36:43.31 global_costmap.glo Received request to clear entirely the global_costmap
+10:36:43.50 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.46, 1.56): "Failed to create plan with tolerance of: 0.100000"
+10:36:44.43 destravar DESTRAVAR: caminho novo (18 pontos)
+10:36:44.97 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,dwb_sem_trajetoria (planner ok, frente 93 cm, retornos 2)
+10:36:45.37 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: caminho para tras (-176 graus): o DWB nao da re | lateral: dir 40 cm: depois o caminho so anda 0 cm; dir 30 cm: depois o caminho so anda 0 cm; dir 25 cm: de
+10:36:45.39 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: caminho para tras (-176 graus): o DWB nao da re | lateral: dir 40 cm: depois o caminho so anda 0 cm; dir 30 cm: depois o caminho so anda 0 cm; dir 25 cm: depois o caminho so anda 
+10:36:45.65 destravar DESTRAVAR: sem alternativa segura (retomar: caminho para tras (-176 graus): o DWB nao da re | lateral: dir 40 cm: depois o caminho so anda 0 cm; dir 30 cm: depois o caminho so anda 0 cm; dir 25 cm: depois o caminho so anda 0 cm; d
+10:36:45.68 bt_navigator Goal failed
+10:36:45.69 alinhador_passagem PREPARO 1 (alinhar fora da passagem) (posicao): FALHOU
+10:36:45.69 alinhador_passagem Preparo 1 falhou. Parei fora da passagem; mande o goal de novo.
+10:36:47.80 alinhador_passagem Novo goal: x=1.25 y=2.22 yaw=0 graus
+10:36:47.80 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+10:36:48.28 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+10:36:48.32 alinhador_passagem GOAL FINAL (virar para o caminho): o caminho sai a -116 graus da frente: viro antes do Nav2
+10:36:53.58 collision_monitor Robot to stop due to VelocityPolygonStop polygon
+10:36:54.53 collision_monitor Robot to continue normal operation
+10:36:54.71 alinhador_passagem GOAL FINAL (virar para o caminho): Collision Monitor travou o giro
+10:36:56.40 alinhador_passagem GOAL FINAL (virar para o caminho): angulo 19 graus (erro -2.3)
+10:36:56.67 alinhador_passagem GOAL FINAL (virar para o caminho): SUCESSO
+10:36:56.67 alinhador_passagem GOAL FINAL: x=1.25 y=2.22 yaw=0 graus
+10:36:56.67 bt_navigator Begin navigating from current location (0.42, 4.96) to (1.25, 2.22)
+10:36:56.67 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:36:56.69 global_costmap.glo Received request to clear entirely the global_costmap
+10:36:57.00 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:36:58.05 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:36:58.69 global_costmap.glo Received request to clear entirely the global_costmap
+10:36:58.72 local_costmap.loca Received request to clear entirely the local_costmap
+10:36:59.34 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+10:36:59.35 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)
+10:37:01.35 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:01.99 global_costmap.glo Received request to clear entirely the global_costmap
+10:37:02.02 local_costmap.loca Received request to clear entirely the local_costmap
+10:37:02.64 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+10:37:02.65 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (2/2)
+10:37:04.66 planner_server GridBased plugin failed to plan from (0.42, 4.96) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:05.24 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_caminho_global (planner sem_caminho, frente 87 cm, retornos 0)
+10:37:05.50 destravar DESTRAVAR: DECISAO: lateral (15 cm para dir; depois o corpo anda 50 cm no caminho (area 50% observada)) | recusadas: retomar: planner sem caminho
+10:37:09.08 destravar DESTRAVAR: RESULTADO lateral: ok | chegou | ICP: 12 cm na direcao pedida (dx -5, dy -12 cm)
+10:37:09.09 destravar DESTRAVAR: OK: lateral (15 cm para dir; depois o corpo anda 50 cm no caminho (area 50% observada); ICP: 12 cm na direcao pedida (dx -5, dy -12 cm))
+10:37:09.12 local_costmap.loca Message Filter dropping message: frame 'laser_raw' at time 1794404228.822 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+10:37:09.35 destravar DESTRAVAR: lateral (15 cm para dir; depois o corpo anda 50 cm no caminho (area 50% observada); ICP: 12 cm na direcao pedida (dx -5, dy -12 cm))
+10:37:09.36 planner_server GridBased plugin failed to plan from (0.39, 5.08) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:09.39 planner_server GridBased plugin failed to plan from (0.39, 5.08) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:09.40 global_costmap.glo Received request to clear entirely the global_costmap
+10:37:09.50 planner_server GridBased plugin failed to plan from (0.39, 5.08) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:10.47 planner_server GridBased plugin failed to plan from (0.39, 5.08) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:11.12 global_costmap.glo Received request to clear entirely the global_costmap
+10:37:11.14 local_costmap.loca Received request to clear entirely the local_costmap
+10:37:11.76 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+10:37:11.76 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)
+10:37:13.76 planner_server GridBased plugin failed to plan from (0.39, 5.08) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:14.41 global_costmap.glo Received request to clear entirely the global_costmap
+10:37:14.43 local_costmap.loca Received request to clear entirely the local_costmap
+10:37:15.06 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+10:37:15.07 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (2/2)
+10:37:17.07 planner_server GridBased plugin failed to plan from (0.39, 5.08) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:17.69 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_caminho_global (planner sem_caminho, frente 71 cm, retornos 1)
+10:37:17.73 destravar DESTRAVAR: DECISAO: mover (15 cm na direcao do caminho (-7 graus)) | recusadas: retomar: planner sem caminho | lateral: ja tentado aqui sem resultado
+10:37:20.57 destravar DESTRAVAR: RESULTADO mover: ok | chegou | ICP: 14 cm na direcao pedida (dx +14, dy -1 cm)
+10:37:20.58 destravar DESTRAVAR: OK: mover (15 cm na direcao do caminho (-7 graus); ICP: 14 cm na direcao pedida (dx +14, dy -1 cm))
+10:37:20.84 destravar DESTRAVAR: mover (15 cm na direcao do caminho (-7 graus); ICP: 14 cm na direcao pedida (dx +14, dy -1 cm))
+10:37:20.85 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:20.87 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:20.89 global_costmap.glo Received request to clear entirely the global_costmap
+10:37:21.00 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:22.02 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:22.66 global_costmap.glo Received request to clear entirely the global_costmap
+10:37:22.68 local_costmap.loca Received request to clear entirely the local_costmap
+10:37:23.30 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+10:37:23.31 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)
+10:37:25.31 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:25.96 global_costmap.glo Received request to clear entirely the global_costmap
+10:37:25.98 local_costmap.loca Received request to clear entirely the local_costmap
+10:37:26.60 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+10:37:26.60 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (2/2)
+10:37:28.61 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:37:29.16 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_caminho_global (planner sem_caminho, frente 81 cm, retornos 1)
+10:37:29.61 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm;
+10:37:29.62 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrid
+10:37:29.88 destravar DESTRAVAR: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: depois o caminho so anda 0 cm; esq 25 cm: depois o caminho so anda 0 cm; esq 15 cm: area varrida 46% o
+10:37:29.90 bt_navigator Goal failed
+10:37:29.94 alinhador_passagem GOAL FINAL: FALHOU
+10:38:46.05 alinhador_passagem Novo goal: x=1.73 y=1.72 yaw=0 graus
+10:38:46.05 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+10:38:46.05 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.73, 1.72): "Failed to create plan with tolerance of: 0.100000"
+10:38:46.51 alinhador_passagem Planner: sem caminho; mapa: 3.9 m: sigo a rota do mapa
+10:38:46.56 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+10:38:46.57 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.73, 1.72): "Failed to create plan with tolerance of: 0.100000"
+10:38:46.59 alinhador_passagem GOAL FINAL: x=1.73 y=1.72 yaw=0 graus
+10:38:46.59 bt_navigator Begin navigating from current location (0.50, 5.16) to (1.73, 1.72)
+10:38:46.59 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.73, 1.72): "Failed to create plan with tolerance of: 0.100000"
+10:38:46.61 global_costmap.glo Received request to clear entirely the global_costmap
+10:38:47.00 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.73, 1.72): "Failed to create plan with tolerance of: 0.100000"
+10:38:48.14 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:38:48.78 global_costmap.glo Received request to clear entirely the global_costmap
+10:38:48.80 local_costmap.loca Received request to clear entirely the local_costmap
+10:38:49.14 alinhador_passagem Novo goal: x=1.33 y=2.06 yaw=0 graus
+10:38:49.15 bt_navigator [navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.
+10:38:49.15 bt_navigator Goal canceled
+10:38:49.18 alinhador_passagem GOAL FINAL: FALHOU
+10:38:49.18 alinhador_passagem TRABALHADOR RECEBEU: goal sem area
+10:38:49.18 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.33, 2.06): "Failed to create plan with tolerance of: 0.100000"
+10:38:49.42 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+10:38:49.42 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2)
+10:38:49.61 alinhador_passagem Planner: sem caminho; mapa: 3.4 m: sigo a rota do mapa
+10:38:49.66 alinhador_passagem Analise: nenhuma passagem estreita no caminho.
+10:38:49.66 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.33, 2.06): "Failed to create plan with tolerance of: 0.100000"
+10:38:49.69 alinhador_passagem GOAL FINAL: x=1.33 y=2.06 yaw=0 graus
+10:38:49.69 bt_navigator Begin navigating from current location (0.50, 5.16) to (1.33, 2.06)
+10:38:49.69 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.33, 2.06): "Failed to create plan with tolerance of: 0.100000"
+10:38:49.71 global_costmap.glo Received request to clear entirely the global_costmap
+10:38:50.01 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.33, 2.06): "Failed to create plan with tolerance of: 0.100000"
+10:38:50.04 destravar DESTRAVAR: FALHA: mesmo bloqueio pela 4a vez: alternativas esgotadas
+10:38:50.29 destravar DESTRAVAR: mesmo bloqueio pela 4a vez: alternativas esgotadas
+10:38:50.31 bt_navigator Goal failed
+10:38:50.34 alinhador_passagem GOAL FINAL: FALHOU
+10:38:51.43 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:38:52.07 global_costmap.glo Received request to clear entirely the global_costmap
+10:38:52.09 local_costmap.loca Received request to clear entirely the local_costmap
+10:38:52.72 destravar BLOQUEIO: sem caminho: apaguei 0 bloqueio(s), limpei os costmaps e planejo de novo
+10:38:52.73 destravar DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (2/2)
+10:38:54.73 planner_server GridBased plugin failed to plan from (0.50, 5.16) to (1.25, 2.22): "Failed to create plan with tolerance of: 0.100000"
+10:38:55.36 destravar DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_caminho_global (planner sem_caminho, frente 97 cm, retornos 2)
+10:38:55.78 destravar DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: area varrida 49% observada (minimo 50%); esq 25 cm: area varrida 50% obs
+10:38:55.79 destravar DESTRAVAR: FALHA: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: area varrida 49% observada (minimo 50%); esq 25 cm: area varrida 50% observada (minimo 50%); es
+10:38:56.05 destravar DESTRAVAR: sem alternativa segura (retomar: planner sem caminho | lateral: esq 40 cm: depois o caminho so anda 0 cm; esq 30 cm: area varrida 49% observada (minimo 50%); esq 25 cm: area varrida 50% observada (minimo 50%); esq 15 cm

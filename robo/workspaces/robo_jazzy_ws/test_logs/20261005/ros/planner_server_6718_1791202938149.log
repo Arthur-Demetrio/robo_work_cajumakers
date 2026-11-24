@@ -1,0 +1,195 @@
+[INFO] [1791202938.165070157] [planner_server]: 
+	planner_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791202938.167208994] [planner_server]: Creating
+[INFO] [1791202938.210108368] [global_costmap.global_costmap]: 
+	global_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791202938.210772375] [global_costmap.global_costmap]: Creating Costmap
+[INFO] [1791202938.256316374] [planner_server]: Configuring
+[INFO] [1791202938.256337838] [global_costmap.global_costmap]: Configuring
+[INFO] [1791202938.259898557] [global_costmap.global_costmap]: Using plugin "static_layer"
+[INFO] [1791202938.262977114] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[INFO] [1791202938.263631380] [global_costmap.global_costmap]: Subscribing to updates
+[INFO] [1791202938.264565781] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[INFO] [1791202938.264583198] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[INFO] [1791202938.264955522] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1791202938.271660401] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 150 X 53 at 0.050000 m/pix
+[INFO] [1791202938.272055347] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[INFO] [1791202938.272078403] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[INFO] [1791202938.272729445] [planner_server]: Planner Server has GridBased  planners available.
+[INFO] [1791202938.838208854] [planner_server]: Activating
+[INFO] [1791202938.838234943] [global_costmap.global_costmap]: Activating
+[INFO] [1791202938.838242024] [global_costmap.global_costmap]: Checking transform
+[INFO] [1791202938.838349575] [global_costmap.global_costmap]: start
+[INFO] [1791202938.888474885] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[INFO] [1791202938.889171180] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[WARN] [1791203067.460479787] [planner_server]: GridBased plugin failed to plan from (0.00, 0.00) to (2.01, 2.37): "Goal Coordinates of(2.012500, 2.368750) was outside bounds"
+[WARN] [1791203067.460573406] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[ERROR] [1791203095.545874555] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203095.545996573] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203095.546019414] [planner_server]: worldToMap failed: mx,my: 71,53, size_x,size_y: 150,53
+[ERROR] [1791203095.546033966] [planner_server]: worldToMap failed: mx,my: 72,53, size_x,size_y: 150,53
+[ERROR] [1791203095.546046386] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203095.546058982] [planner_server]: worldToMap failed: mx,my: 74,53, size_x,size_y: 150,53
+[ERROR] [1791203095.546072135] [planner_server]: worldToMap failed: mx,my: 71,54, size_x,size_y: 150,53
+[ERROR] [1791203095.546085196] [planner_server]: worldToMap failed: mx,my: 72,54, size_x,size_y: 150,53
+[ERROR] [1791203095.546098015] [planner_server]: worldToMap failed: mx,my: 73,54, size_x,size_y: 150,53
+[ERROR] [1791203095.546127457] [planner_server]: worldToMap failed: mx,my: 74,54, size_x,size_y: 150,53
+[WARN] [1791203095.546178877] [planner_server]: GridBased plugin failed to plan from (0.00, 0.00) to (2.14, 1.34): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203095.546199182] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203095.565754717] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[ERROR] [1791203095.846246922] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203095.846329733] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203095.846352370] [planner_server]: worldToMap failed: mx,my: 71,53, size_x,size_y: 150,53
+[ERROR] [1791203095.846361309] [planner_server]: worldToMap failed: mx,my: 72,53, size_x,size_y: 150,53
+[ERROR] [1791203095.846369824] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203095.846381352] [planner_server]: worldToMap failed: mx,my: 74,53, size_x,size_y: 150,53
+[ERROR] [1791203095.846392205] [planner_server]: worldToMap failed: mx,my: 71,54, size_x,size_y: 150,53
+[ERROR] [1791203095.846400939] [planner_server]: worldToMap failed: mx,my: 72,54, size_x,size_y: 150,53
+[ERROR] [1791203095.846410110] [planner_server]: worldToMap failed: mx,my: 73,54, size_x,size_y: 150,53
+[ERROR] [1791203095.846419402] [planner_server]: worldToMap failed: mx,my: 74,54, size_x,size_y: 150,53
+[WARN] [1791203095.846448058] [planner_server]: GridBased plugin failed to plan from (0.00, 0.00) to (2.14, 1.34): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203095.846462785] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203095.865968920] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[ERROR] [1791203096.346473364] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203096.346540568] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203096.346550772] [planner_server]: worldToMap failed: mx,my: 71,53, size_x,size_y: 150,53
+[ERROR] [1791203096.346557360] [planner_server]: worldToMap failed: mx,my: 72,53, size_x,size_y: 150,53
+[ERROR] [1791203096.346563933] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203096.346571443] [planner_server]: worldToMap failed: mx,my: 74,53, size_x,size_y: 150,53
+[ERROR] [1791203096.346577626] [planner_server]: worldToMap failed: mx,my: 71,54, size_x,size_y: 150,53
+[ERROR] [1791203096.346584800] [planner_server]: worldToMap failed: mx,my: 72,54, size_x,size_y: 150,53
+[ERROR] [1791203096.346591146] [planner_server]: worldToMap failed: mx,my: 73,54, size_x,size_y: 150,53
+[ERROR] [1791203096.346598167] [planner_server]: worldToMap failed: mx,my: 74,54, size_x,size_y: 150,53
+[WARN] [1791203096.346635986] [planner_server]: GridBased plugin failed to plan from (0.00, 0.00) to (2.14, 1.34): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203096.346646680] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203096.365674235] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[ERROR] [1791203096.846058387] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203096.846134586] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203096.846145366] [planner_server]: worldToMap failed: mx,my: 71,53, size_x,size_y: 150,53
+[ERROR] [1791203096.846154020] [planner_server]: worldToMap failed: mx,my: 72,53, size_x,size_y: 150,53
+[ERROR] [1791203096.846163910] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203096.846171759] [planner_server]: worldToMap failed: mx,my: 74,53, size_x,size_y: 150,53
+[ERROR] [1791203096.846178799] [planner_server]: worldToMap failed: mx,my: 71,54, size_x,size_y: 150,53
+[ERROR] [1791203096.846188874] [planner_server]: worldToMap failed: mx,my: 72,54, size_x,size_y: 150,53
+[ERROR] [1791203096.846195987] [planner_server]: worldToMap failed: mx,my: 73,54, size_x,size_y: 150,53
+[ERROR] [1791203096.846205143] [planner_server]: worldToMap failed: mx,my: 74,54, size_x,size_y: 150,53
+[WARN] [1791203096.846232554] [planner_server]: GridBased plugin failed to plan from (0.00, 0.00) to (2.14, 1.34): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203096.846246778] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[ERROR] [1791203102.785901406] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203102.786192141] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203102.786222173] [planner_server]: worldToMap failed: mx,my: 71,53, size_x,size_y: 150,53
+[ERROR] [1791203102.786243002] [planner_server]: worldToMap failed: mx,my: 72,53, size_x,size_y: 150,53
+[ERROR] [1791203102.786258813] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203102.786273727] [planner_server]: worldToMap failed: mx,my: 74,53, size_x,size_y: 150,53
+[ERROR] [1791203102.786305696] [planner_server]: worldToMap failed: mx,my: 71,54, size_x,size_y: 150,53
+[ERROR] [1791203102.786334187] [planner_server]: worldToMap failed: mx,my: 72,54, size_x,size_y: 150,53
+[ERROR] [1791203102.786349584] [planner_server]: worldToMap failed: mx,my: 73,54, size_x,size_y: 150,53
+[ERROR] [1791203102.786365492] [planner_server]: worldToMap failed: mx,my: 74,54, size_x,size_y: 150,53
+[WARN] [1791203102.786471283] [planner_server]: GridBased plugin failed to plan from (0.00, 0.00) to (2.14, 1.34): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203102.786541723] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203102.805681640] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[ERROR] [1791203102.846077216] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203102.846152883] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203102.846166985] [planner_server]: worldToMap failed: mx,my: 71,53, size_x,size_y: 150,53
+[ERROR] [1791203102.846174431] [planner_server]: worldToMap failed: mx,my: 72,53, size_x,size_y: 150,53
+[ERROR] [1791203102.846180899] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203102.846192751] [planner_server]: worldToMap failed: mx,my: 74,53, size_x,size_y: 150,53
+[ERROR] [1791203102.846199686] [planner_server]: worldToMap failed: mx,my: 71,54, size_x,size_y: 150,53
+[ERROR] [1791203102.846209882] [planner_server]: worldToMap failed: mx,my: 72,54, size_x,size_y: 150,53
+[ERROR] [1791203102.846217477] [planner_server]: worldToMap failed: mx,my: 73,54, size_x,size_y: 150,53
+[ERROR] [1791203102.846226773] [planner_server]: worldToMap failed: mx,my: 74,54, size_x,size_y: 150,53
+[WARN] [1791203102.846252270] [planner_server]: GridBased plugin failed to plan from (0.00, 0.00) to (2.14, 1.34): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203102.846265308] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[ERROR] [1791203107.885893294] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203107.885966061] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203107.885980956] [planner_server]: worldToMap failed: mx,my: 71,53, size_x,size_y: 150,53
+[ERROR] [1791203107.885992178] [planner_server]: worldToMap failed: mx,my: 72,53, size_x,size_y: 150,53
+[ERROR] [1791203107.886003043] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203107.886013653] [planner_server]: worldToMap failed: mx,my: 74,53, size_x,size_y: 150,53
+[ERROR] [1791203107.886024722] [planner_server]: worldToMap failed: mx,my: 71,54, size_x,size_y: 150,53
+[ERROR] [1791203107.886035920] [planner_server]: worldToMap failed: mx,my: 72,54, size_x,size_y: 150,53
+[ERROR] [1791203107.886046194] [planner_server]: worldToMap failed: mx,my: 73,54, size_x,size_y: 150,53
+[ERROR] [1791203107.886056755] [planner_server]: worldToMap failed: mx,my: 74,54, size_x,size_y: 150,53
+[WARN] [1791203107.886084727] [planner_server]: GridBased plugin failed to plan from (0.00, 0.00) to (2.14, 1.34): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203107.886097343] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203107.905761534] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[ERROR] [1791203108.346724384] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203108.346792427] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203108.346806810] [planner_server]: worldToMap failed: mx,my: 71,53, size_x,size_y: 150,53
+[ERROR] [1791203108.346816655] [planner_server]: worldToMap failed: mx,my: 72,53, size_x,size_y: 150,53
+[ERROR] [1791203108.346823639] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203108.346829895] [planner_server]: worldToMap failed: mx,my: 74,53, size_x,size_y: 150,53
+[ERROR] [1791203108.346836304] [planner_server]: worldToMap failed: mx,my: 71,54, size_x,size_y: 150,53
+[ERROR] [1791203108.346842961] [planner_server]: worldToMap failed: mx,my: 72,54, size_x,size_y: 150,53
+[ERROR] [1791203108.346849947] [planner_server]: worldToMap failed: mx,my: 73,54, size_x,size_y: 150,53
+[ERROR] [1791203108.346855917] [planner_server]: worldToMap failed: mx,my: 74,54, size_x,size_y: 150,53
+[WARN] [1791203108.346879525] [planner_server]: GridBased plugin failed to plan from (0.00, 0.00) to (2.14, 1.34): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203108.346889915] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[ERROR] [1791203109.385853041] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203109.385940506] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203109.385955602] [planner_server]: worldToMap failed: mx,my: 71,53, size_x,size_y: 150,53
+[ERROR] [1791203109.385965421] [planner_server]: worldToMap failed: mx,my: 72,53, size_x,size_y: 150,53
+[ERROR] [1791203109.385975530] [planner_server]: worldToMap failed: mx,my: 73,53, size_x,size_y: 150,53
+[ERROR] [1791203109.385985261] [planner_server]: worldToMap failed: mx,my: 74,53, size_x,size_y: 150,53
+[ERROR] [1791203109.385994711] [planner_server]: worldToMap failed: mx,my: 71,54, size_x,size_y: 150,53
+[ERROR] [1791203109.386004174] [planner_server]: worldToMap failed: mx,my: 72,54, size_x,size_y: 150,53
+[ERROR] [1791203109.386013471] [planner_server]: worldToMap failed: mx,my: 73,54, size_x,size_y: 150,53
+[ERROR] [1791203109.386023342] [planner_server]: worldToMap failed: mx,my: 74,54, size_x,size_y: 150,53
+[WARN] [1791203109.386066405] [planner_server]: GridBased plugin failed to plan from (0.06, -0.26) to (2.14, 1.34): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203109.386081627] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203109.405725108] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[INFO] [1791203109.838462833] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 180 X 53 at 0.050000 m/pix
+[WARN] [1791203109.846392993] [planner_server]: GridBased plugin failed to plan from (0.05, -0.24) to (2.14, 1.34): "Goal Coordinates of(2.143845, 1.342411) was outside bounds"
+[WARN] [1791203109.846505639] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203111.838469931] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 182 X 55 at 0.050000 m/pix
+[INFO] [1791203121.838464080] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 182 X 62 at 0.050000 m/pix
+[INFO] [1791203123.838464032] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 185 X 71 at 0.050000 m/pix
+[INFO] [1791203125.838462851] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 185 X 78 at 0.050000 m/pix
+[WARN] [1791203126.661682104] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (2.00, 0.98): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203126.661725832] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203126.681455878] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203126.841918939] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (2.00, 0.98): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203126.841977645] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203126.882367906] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203127.343199193] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (2.00, 0.98): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203127.343243245] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203127.353937038] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203127.844750297] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (2.00, 0.98): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203127.844806214] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203142.903995717] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (2.00, 0.98): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203142.904037826] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203142.913778809] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203143.344297962] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (2.00, 0.98): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203143.344357245] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203143.383880773] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203143.844479171] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (2.00, 0.98): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203143.844655613] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203143.863961751] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203144.344524388] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (0.08, 0.13): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203144.344565781] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[WARN] [1791203159.404095696] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (0.34, 0.17): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203159.404142394] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203159.423803064] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203159.844785772] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (0.34, 0.17): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203159.844965280] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203159.883888540] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203160.344433500] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (0.34, 0.17): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203160.344479837] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203160.363792714] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[WARN] [1791203160.844403982] [planner_server]: GridBased plugin failed to plan from (0.07, -0.57) to (0.34, 0.17): "Failed to create plan with tolerance of: 0.100000"
+[WARN] [1791203160.844602778] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[INFO] [1791203165.012357586] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791203165.012390137] [planner_server]: Running Nav2 LifecycleNode rcl preshutdown (planner_server)
+[INFO] [1791203165.012439179] [planner_server]: Deactivating
+[INFO] [1791203165.012467484] [global_costmap.global_costmap]: Deactivating
+[INFO] [1791203165.338487614] [planner_server]: Deactivating plugin GridBased of type NavfnPlanner
+[INFO] [1791203165.338527074] [planner_server]: Destroying bond (planner_server) to lifecycle manager.
+[INFO] [1791203165.348682592] [planner_server]: Cleaning up
+[INFO] [1791203165.363720367] [global_costmap.global_costmap]: Cleaning up
+[INFO] [1791203165.368994611] [planner_server]: Cleaning up plugin GridBased of type NavfnPlanner
+[INFO] [1791203165.369150132] [planner_server]: Destroying plugin GridBased of type NavfnPlanner
+[INFO] [1791203165.390633148] [planner_server]: Destroying bond (planner_server) to lifecycle manager.

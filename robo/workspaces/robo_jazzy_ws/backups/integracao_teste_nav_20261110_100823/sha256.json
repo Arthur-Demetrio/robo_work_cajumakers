@@ -1,0 +1,6 @@
+{
+  "/home/marcos/robo_jazzy_ws/src/robo_navigation/launch/navigation.launch.py": "e45cf573ef011a504bb26a0a32bc61f9cc23c1b5dae0b1062cb12222f9a184bf",
+  "/home/marcos/robo_jazzy_ws/src/robo_navigation/config/nav2_params.yaml": "a8c770f54f5f232298a4bd08891c481e6a370f726cd31adb8bc0ed6c305821d7",
+  "/home/marcos/robo_jazzy_ws/src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml": "f14cff11e5607df265fa2fb107ff6bab72cc7cc835ff842921dbe38228fa1476",
+  "/home/marcos/robo_jazzy_ws/src/robo_navigation/scripts/alinhador_passagem.py": "d905fb5358c327b88fa6be25576f5a3cdbc522902e64e4e0403431e16a0f0cd4"
+}

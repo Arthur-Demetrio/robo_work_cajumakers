@@ -1,0 +1,21 @@
+{
+  "mode": "evaluate",
+  "variant": "arena_2016_limpa",
+  "output": "/home/marcos/robo_rl_v2/assets/arenas/2016/validation_eval",
+  "model": "/home/marcos/robo_rl_v2/assets/arenas/2016/validation_train/final.zip",
+  "steps": 2000000,
+  "episodes": 3,
+  "max_steps": 32,
+  "seed": 3000000000,
+  "progression": false,
+  "noise": "config",
+  "boxes": null,
+  "checkpoint_every": 10000,
+  "n_steps": 512,
+  "layout_sha256": "1ee01c8e53c58c3612c8933ebd746b31ba45720980df205e649cf4d0c70cc7c4",
+  "settings": {
+    "mobile_boxes": 0,
+    "noise": false
+  },
+  "created": 1794311272.018683
+}

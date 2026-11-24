@@ -1,0 +1,1 @@
+APROVADO: hashes atuais conferidos, rollback em copia restaura originais e preserva removidos; edicao posterior e recusada.

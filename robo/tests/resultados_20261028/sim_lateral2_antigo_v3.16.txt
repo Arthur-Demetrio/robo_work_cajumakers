@@ -1,0 +1,9 @@
+L esquerda                         ok 15/15  tempo medio 38.9 s  folga minima  3.6 cm
+L direita                          ok 15/15  tempo medio 33.8 s  folga minima  3.1 cm
+T (vem da haste) esquerda          ok 15/15  tempo medio 37.9 s  folga minima  3.9 cm
+T (vem da haste) direita           ok 15/15  tempo medio 34.3 s  folga minima  4.2 cm
+T (na barra) entra na haste esq    ok 15/15  tempo medio 50.3 s  folga minima  2.7 cm
+T (na barra) entra na haste dir    ok 15/15  tempo medio 37.2 s  folga minima  3.1 cm
++ esquerda                         ok 15/15  tempo medio 48.2 s  folga minima  3.4 cm
++ direita                          ok 15/15  tempo medio 36.0 s  folga minima  3.2 cm
+TOTAL 120 / 120

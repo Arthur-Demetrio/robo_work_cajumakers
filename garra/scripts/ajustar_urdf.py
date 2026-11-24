@@ -1,0 +1,106 @@
+"""Ajusta o URDF exportado do Fusion (fusion2URDF) para o MoveIt. Rode depois de cada exportacao.
+
+    python3 scripts/ajustar_urdf.py [garra_final_description/urdf/garra_final.urdf]
+
+O exportador gera todas as juntas como continuous, sem limites, e com um bloco <ros2_control>
+proprio (hardware simulado, 11 juntas). Este script, sem alterar malhas nem origens:
+  - torna J1, J2 e J3 revolute com os limites de LIMITES e corrige os eixos de EIXOS;
+  - prende as juntas dos dedos (fixed) na pose do CAD, ate o J4 ser integrado;
+  - remove o <ros2_control> exportado: o sistema real fica em garra_moveit_config;
+  - renomeia o link raiz base_link -> garra_base: no robo, base_link e o chassi (odom -> base_link),
+    e dois base_link quebrariam a arvore TF. A malha continua base_link.dae.
+E idempotente: rodar duas vezes nao muda nada. O TCP (tool0) fica em garra_moveit_config,
+para sobreviver a uma nova exportacao.
+"""
+
+import os
+import sys
+import xml.etree.ElementTree as ET
+
+PADRAO = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..',
+                      'garra_final_description', 'urdf', 'garra_final.urdf')
+
+# J1, J2, J3. Faixa medida em calibracao_servos.yaml (2026-11-10; J1 em 2026-11-13; escala medida com
+# medir_escala.py), convertida para q e com ~0.02 rad de margem: o driver corta o pulso nos limites e, sem realimentacao, o ROS nao perceberia.
+# Refaca estes valores se recalibrar.
+# effort: torque do DS3218MG (~1.86 N.m). A velocidade real fica em joint_limits.yaml.
+LIMITES = {
+    'Revolucionar_46': (-0.69, 2.29),  # 2026-11-20: zeros = pose do modelo em q=0
+    'Revolucionar_49': (-1.55, 1.79),
+    'Revolucionar_72': (-1.99, 1.22),
+}
+# Eixo de cada junta no frame dela, quando a exportacao erra o sentido. Fixo (nao inverte), para o
+# script continuar idempotente. J3: positivo dobra a garra para a frente (-X do garra_base), como J1.
+# Confira depois de cada exportacao: o validar_garra.py testa esse sentido.
+EIXOS = {
+    'Revolucionar_72': '0 0 -1',
+}
+# Link raiz exportado e o nome que ele recebe (veja a docstring).
+RENOMEAR = {'base_link': 'garra_base'}
+EFFORT = '1.86'
+VELOCIDADE = '1.30'
+
+
+def main():
+    caminho = sys.argv[1] if len(sys.argv) > 1 else PADRAO
+    parser = ET.XMLParser(target=ET.TreeBuilder(insert_comments=True))
+    arvore = ET.parse(caminho, parser)
+    robo = arvore.getroot()
+
+    renomeados = 0
+    for link in robo.findall('link'):
+        if link.get('name') in RENOMEAR:
+            link.set('name', RENOMEAR[link.get('name')])
+            renomeados += 1
+    for junta in robo.findall('joint'):
+        for tag in ('parent', 'child'):
+            ref = junta.find(tag)
+            if ref is not None and ref.get('link') in RENOMEAR:
+                ref.set('link', RENOMEAR[ref.get('link')])
+
+    faltam = set(LIMITES)
+    presos = []
+    for junta in robo.findall('joint'):
+        nome = junta.get('name')
+        if nome in LIMITES:
+            faltam.discard(nome)
+            junta.set('type', 'revolute')
+            limite = junta.find('limit')
+            if limite is None:
+                limite = ET.SubElement(junta, 'limit')
+            limite.attrib.clear()
+            baixo, alto = LIMITES[nome]
+            limite.set('lower', str(baixo))
+            limite.set('upper', str(alto))
+            limite.set('effort', EFFORT)
+            limite.set('velocity', VELOCIDADE)
+            if nome in EIXOS:
+                eixo = junta.find('axis')
+                if eixo is None:
+                    eixo = ET.SubElement(junta, 'axis')
+                eixo.set('xyz', EIXOS[nome])
+        elif junta.get('type') in ('continuous', 'revolute', 'prismatic'):
+            junta.set('type', 'fixed')
+            for tag in ('axis', 'limit', 'dynamics', 'mimic'):
+                for filho in junta.findall(tag):
+                    junta.remove(filho)
+            presos.append(nome)
+
+    if faltam:
+        print(f'ERRO: juntas do braco ausentes no URDF: {sorted(faltam)}. '
+              'A exportacao mudou os nomes? Atualize LIMITES e as configs do MoveIt.')
+        return 1
+
+    removidos = robo.findall('ros2_control')
+    for bloco in removidos:
+        robo.remove(bloco)
+
+    ET.indent(arvore, space='  ')
+    arvore.write(caminho, encoding='unicode', xml_declaration=True)
+    print(f'{caminho}: braco revolute {sorted(LIMITES)}; dedos fixos {presos or "(ja estavam)"}; '
+          f'{len(removidos)} bloco(s) ros2_control removido(s); {renomeados} link(s) renomeado(s).')
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

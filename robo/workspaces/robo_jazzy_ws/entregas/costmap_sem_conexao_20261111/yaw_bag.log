@@ -1,0 +1,110 @@
+{
+  "tf_amostras": 9582,
+  "imu_amostras": 4662,
+  "correcoes": 58,
+  "saltos_yaw_acima3graus": 9,
+  "max_delta_yaw_graus": 6.535018962196688,
+  "maiores_correcoes": [
+    {
+      "t": 1794422880.7067473,
+      "delta_yaw_graus": 6.535018962196688,
+      "delta_translacao_map_odom_m": 0.17288215336630053,
+      "delta_imu_entre_amostras": 0.0,
+      "dt": 0.019979238510131836,
+      "imu_variacao_janela_05s_graus": 0.0,
+      "imu_amostras_janela_05s": 12
+    },
+    {
+      "t": 1794422833.7104268,
+      "delta_yaw_graus": 5.717459924283077,
+      "delta_translacao_map_odom_m": 0.04627826844533957,
+      "delta_imu_entre_amostras": 0.0,
+      "dt": 0.0179901123046875,
+      "imu_variacao_janela_05s_graus": 0.5620000000000118,
+      "imu_amostras_janela_05s": 12
+    },
+    {
+      "t": 1794422879.2067652,
+      "delta_yaw_graus": 4.4358953156316545,
+      "delta_translacao_map_odom_m": 0.1125500828031623,
+      "delta_imu_entre_amostras": 0.0,
+      "dt": 0.01927971839904785,
+      "imu_variacao_janela_05s_graus": 0.06299999999998818,
+      "imu_amostras_janela_05s": 12
+    },
+    {
+      "t": 1794422835.0704634,
+      "delta_yaw_graus": 4.320254408130637,
+      "delta_translacao_map_odom_m": 0.08868610858192245,
+      "delta_imu_entre_amostras": 0.0,
+      "dt": 0.016069412231445312,
+      "imu_variacao_janela_05s_graus": 1.0,
+      "imu_amostras_janela_05s": 12
+    },
+    {
+      "t": 1794422878.5268087,
+      "delta_yaw_graus": 3.8329085569482118,
+      "delta_translacao_map_odom_m": 0.10385371178499236,
+      "delta_imu_entre_amostras": 0.0,
+      "dt": 0.01763153076171875,
+      "imu_variacao_janela_05s_graus": 0.9379999999999595,
+      "imu_amostras_janela_05s": 12
+    },
+    {
+      "t": 1794422836.5904639,
+      "delta_yaw_graus": 3.6395025665324567,
+      "delta_translacao_map_odom_m": 0.08713340451996822,
+      "delta_imu_entre_amostras": 0.125,
+      "dt": 0.018579721450805664,
+      "imu_variacao_janela_05s_graus": 0.6870000000000118,
+      "imu_amostras_janela_05s": 12
+    },
+    {
+      "t": 1794422861.270424,
+      "delta_yaw_graus": 3.1582843881759857,
+      "delta_translacao_map_odom_m": 0.14765251638629992,
+      "delta_imu_entre_amostras": 0.0,
+      "dt": 0.019991159439086914,
+      "imu_variacao_janela_05s_graus": 1.062999999999989,
+      "imu_amostras_janela_05s": 13
+    },
+    {
+      "t": 1794422862.2707102,
+      "delta_yaw_graus": 3.1497932567655766,
+      "delta_translacao_map_odom_m": 0.06381554050397273,
+      "delta_imu_entre_amostras": 0.06299999999998818,
+      "dt": 0.01879119873046875,
+      "imu_variacao_janela_05s_graus": 0.6880000000000166,
+      "imu_amostras_janela_05s": 13
+    }
+  ],
+  "comandos_finais": 489,
+  "comandos_finais_nao_zero": 363,
+  "goals_recebidos": [
+    [
+      1794422832.725823,
+      "Novo goal: x=1.62 y=-0.14 yaw=0 graus"
+    ],
+    [
+      1794422855.421437,
+      "Novo goal: x=-0.03 y=0.06 yaw=0 graus"
+    ],
+    [
+      1794422868.709773,
+      "Novo goal: x=1.68 y=1.66 yaw=0 graus"
+    ],
+    [
+      1794422872.0193865,
+      "Novo goal: x=-0.17 y=-0.16 yaw=0 graus"
+    ],
+    [
+      1794422875.8100991,
+      "Novo goal: x=1.72 y=1.81 yaw=0 graus"
+    ],
+    [
+      1794422889.478848,
+      "Novo goal: x=-0.25 y=-0.11 yaw=0 graus"
+    ]
+  ],
+  "limite": "TF map->odom mede correcao do referencial, nao deslocamento fisico do robo; IMU mais proxima e comparacao por intervalo curto, nao validacao absoluta."
+}

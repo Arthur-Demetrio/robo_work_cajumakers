@@ -1,0 +1,14 @@
+[INFO] [1794260707.756174901] [velocity_smoother]: 
+	velocity_smoother lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1794260707.943381700] [velocity_smoother]: Configuring velocity smoother
+[INFO] [1794260708.127568651] [velocity_smoother]: Activating
+[INFO] [1794260708.127655232] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[INFO] [1794260730.580299597] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1794260730.580473681] [velocity_smoother]: Running Nav2 LifecycleNode rcl preshutdown (velocity_smoother)
+[INFO] [1794260730.580572377] [velocity_smoother]: Deactivating
+[INFO] [1794260730.580608166] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[INFO] [1794260730.590828813] [velocity_smoother]: Cleaning up
+[INFO] [1794260730.590892389] [velocity_smoother]: Destroying bond (velocity_smoother) to lifecycle manager.
+[INFO] [1794260730.593194114] [velocity_smoother]: Destroying

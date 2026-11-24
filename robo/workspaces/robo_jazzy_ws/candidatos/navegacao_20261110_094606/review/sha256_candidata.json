@@ -1,0 +1,7 @@
+{
+  "src/robo_navigation/config/nav2_params.yaml": "e7024211d4405d9421cef7455185ceae4cce5fea9fa4882cb792b7c5ac7a685f",
+  "src/robo_navigation/behavior_trees/navigate_to_pose_candidate.xml": "4fea89f6bd1da3f044ac795108540e99e1cd9788b58af038fa4c1ce59494312f",
+  "src/robo_navigation/launch/navigation_candidate.launch.py": "2ee4b4762a147a61b46846d93daa47382d7e120cbc434f98ea83143988e58623",
+  "src/robo_recovery/robo_recovery/supervised.py": "82d9299b5d24f81771cd259fe27cc30a912a8f7a1c6695dd001334e0f304ba1b",
+  "src/robo_recovery/robo_recovery/supervised_node.py": "b2312721680933d7742d425ac046348e0ac8613941bcf5cc8b66fe84aeb622e6"
+}

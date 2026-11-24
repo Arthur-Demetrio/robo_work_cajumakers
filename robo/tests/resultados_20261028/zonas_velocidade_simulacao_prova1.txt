@@ -1,0 +1,29 @@
+# padrao (reta>=1.0 m, fim>=0.8 m, rumo<=15, frente>=0.6, lado>=0.15)
+preparo1      12.6 s  RAPIDO  0.0 s ( 0%)  ganho ~0.0 s | NORMAL por: perto do fim 12s, curva 0s
+nav_WS1        6.6 s  RAPIDO  0.0 s ( 0%)  ganho ~0.0 s | NORMAL por: perto do fim 7s
+nav_WS3       27.4 s  RAPIDO  2.2 s ( 8%)  ganho ~0.4 s | NORMAL por: curva 10s, perto do fim 9s, virando 5s
+nav_WS2       22.8 s  RAPIDO  2.2 s (10%)  ganho ~0.8 s | NORMAL por: perto do fim 10s, virando 7s, curva 3s
+nav_WS1b      39.6 s  RAPIDO  0.8 s ( 2%)  ganho ~0.3 s | NORMAL por: curva 14s, perto do fim 13s, virando 10s
+nav_preparoF  13.8 s  RAPIDO  0.0 s ( 0%)  ganho ~0.0 s | NORMAL por: perto do fim 12s, sem caminho 2s
+nav_FINISH     9.2 s  RAPIDO  0.0 s ( 0%)  ganho ~0.0 s | NORMAL por: perto do fim 9s
+TOTAL nav 132 s, RAPIDO 5 s, ganho estimado ~2 s
+
+# reta_min=0.6,fim_min=0.5,rumo_max=20,frente_min=0.4,lado_min=0.10
+preparo1      12.6 s  RAPIDO  0.0 s ( 0%)  ganho ~0.0 s | NORMAL por: perto do fim 12s, curva 0s
+nav_WS1        6.6 s  RAPIDO  0.0 s ( 0%)  ganho ~0.0 s | NORMAL por: perto do fim 5s, curva 2s
+nav_WS3       27.4 s  RAPIDO  7.6 s (28%)  ganho ~1.5 s | NORMAL por: perto do fim 7s, curva 7s, virando 5s
+nav_WS2       22.8 s  RAPIDO  3.6 s (16%)  ganho ~1.4 s | NORMAL por: perto do fim 8s, virando 7s, curva 3s
+nav_WS1b      39.6 s  RAPIDO  3.2 s ( 8%)  ganho ~1.0 s | NORMAL por: virando 17s, perto do fim 11s, curva 7s
+nav_preparoF  13.8 s  RAPIDO  0.0 s ( 0%)  ganho ~0.0 s | NORMAL por: perto do fim 12s, sem caminho 2s
+nav_FINISH     9.2 s  RAPIDO  0.0 s ( 0%)  ganho ~0.0 s | NORMAL por: perto do fim 6s, curva 3s
+TOTAL nav 132 s, RAPIDO 14 s, ganho estimado ~4 s
+
+# reta_min=0.5,fim_min=0.4,rumo_max=30,frente_min=0.3,lado_min=0.08,tol_reta=0.08
+preparo1      12.6 s  RAPIDO  0.0 s ( 0%)  ganho ~0.0 s | NORMAL por: perto do fim 12s, curva 0s
+nav_WS1        6.6 s  RAPIDO  1.4 s (21%)  ganho ~0.1 s | NORMAL por: perto do fim 4s, reta livre 1s, curva 0s
+nav_WS3       27.4 s  RAPIDO 11.2 s (41%)  ganho ~2.2 s | NORMAL por: virando 8s, perto do fim 6s, reta livre 1s
+nav_WS2       22.8 s  RAPIDO  7.0 s (31%)  ganho ~2.5 s | NORMAL por: perto do fim 8s, virando 5s, reta livre 1s
+nav_WS1b      39.6 s  RAPIDO 14.4 s (36%)  ganho ~4.3 s | NORMAL por: perto do fim 10s, virando 9s, curva 4s
+nav_preparoF  13.8 s  RAPIDO  0.0 s ( 0%)  ganho ~0.0 s | NORMAL por: perto do fim 12s, sem caminho 2s
+nav_FINISH     9.2 s  RAPIDO  0.0 s ( 0%)  ganho ~0.0 s | NORMAL por: perto do fim 5s, curva 4s
+TOTAL nav 132 s, RAPIDO 34 s, ganho estimado ~9 s

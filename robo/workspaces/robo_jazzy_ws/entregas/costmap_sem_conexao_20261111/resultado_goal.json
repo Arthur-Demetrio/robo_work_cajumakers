@@ -1,0 +1,180 @@
+{
+  "goal": [
+    1.72,
+    1.81,
+    0
+  ],
+  "interface": "/goal_pose_alinhado",
+  "envios": 1,
+  "resultado": {
+    "id": "1450321b4d50434db3b1dffa4ce02280",
+    "status": 6,
+    "stamp": 1794422875.9926136
+  },
+  "estados": [
+    {
+      "id": "1450321b4d50434db3b1dffa4ce02280",
+      "status": 2,
+      "stamp": 1794422875.9926136
+    },
+    {
+      "id": "1450321b4d50434db3b1dffa4ce02280",
+      "status": 6,
+      "stamp": 1794422875.9926136
+    }
+  ],
+  "eventos": [
+    {
+      "stamp": 1794422875.8086412,
+      "no": "bt_navigator",
+      "texto": "[navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling."
+    },
+    {
+      "stamp": 1794422875.8100991,
+      "no": "alinhador_passagem",
+      "texto": "Novo goal: x=1.72 y=1.81 yaw=0 graus"
+    },
+    {
+      "stamp": 1794422875.8141797,
+      "no": "bt_navigator",
+      "texto": "Goal canceled"
+    },
+    {
+      "stamp": 1794422875.8675096,
+      "no": "alinhador_passagem",
+      "texto": "SUPERVISOR goal=22ef9631-ed7c-455e-b409-9b57bb1c337c modo=observar NAV2 -> FALHA: "
+    },
+    {
+      "stamp": 1794422875.8687134,
+      "no": "alinhador_passagem",
+      "texto": "SUPERVISOR goal=22ef9631-ed7c-455e-b409-9b57bb1c337c modo=observar FALHA -> FALHA: interrupcao/cancelamento ou manobra sem confirmacao"
+    },
+    {
+      "stamp": 1794422875.9038928,
+      "no": "alinhador_passagem",
+      "texto": "Goal substituido por um novo."
+    },
+    {
+      "stamp": 1794422875.9530933,
+      "no": "alinhador_passagem",
+      "texto": "TRABALHADOR RECEBEU: goal sem area"
+    },
+    {
+      "stamp": 1794422875.9603,
+      "no": "alinhador_passagem",
+      "texto": "SUPERVISOR goal=188c072c-bce2-48c7-b316-29c8e96a169e modo=observar None -> NAV2: novo pedido"
+    },
+    {
+      "stamp": 1794422875.990907,
+      "no": "alinhador_passagem",
+      "texto": "NAV2_PRINCIPAL: enviando goal ao Nav2"
+    },
+    {
+      "stamp": 1794422875.9948626,
+      "no": "bt_navigator",
+      "texto": "Begin navigating from current location (0.92, -0.09) to (1.72, 1.81)"
+    },
+    {
+      "stamp": 1794422875.9987154,
+      "no": "planner_server",
+      "texto": "GridBased plugin failed to plan from (0.92, -0.09) to (1.72, 1.81): \"Failed to create plan with tolerance of: 0.100000\""
+    },
+    {
+      "stamp": 1794422875.9988625,
+      "no": "planner_server",
+      "texto": "[compute_path_to_pose] [ActionServer] Aborting handle."
+    },
+    {
+      "stamp": 1794422876.017848,
+      "no": "alinhador_passagem",
+      "texto": "NAV2_PRINCIPAL: goal aceito pelo Nav2"
+    },
+    {
+      "stamp": 1794422876.1096408,
+      "no": "planner_server",
+      "texto": "GridBased plugin failed to plan from (0.93, -0.09) to (1.72, 1.81): \"Failed to create plan with tolerance of: 0.100000\""
+    },
+    {
+      "stamp": 1794422876.1098127,
+      "no": "planner_server",
+      "texto": "[compute_path_to_pose] [ActionServer] Aborting handle."
+    },
+    {
+      "stamp": 1794422878.4342496,
+      "no": "destravar",
+      "texto": "DESTRAVAR: caminho novo (43 pontos)"
+    },
+    {
+      "stamp": 1794422878.7630193,
+      "no": "destravar",
+      "texto": "DESTRAVAR: caminho novo (36 pontos)"
+    },
+    {
+      "stamp": 1794422878.956666,
+      "no": "destravar",
+      "texto": "DESTRAVAR: DIAGNOSTICO: cm_bloqueou,oscilacao,quina_dir (planner ok, frente 62 cm, retornos 0)"
+    },
+    {
+      "stamp": 1794422878.9794145,
+      "no": "destravar",
+      "texto": "DESTRAVAR: DECISAO: falhar (outro no comandando /cmd_vel_nav: sem controle exclusivo) | recusadas: -"
+    },
+    {
+      "stamp": 1794422878.9816172,
+      "no": "destravar",
+      "texto": "DESTRAVAR: FALHA: outro no comandando /cmd_vel_nav: sem controle exclusivo ()"
+    },
+    {
+      "stamp": 1794422879.239898,
+      "no": "destravar",
+      "texto": "DESTRAVAR: outro no comandando /cmd_vel_nav: sem controle exclusivo ()"
+    },
+    {
+      "stamp": 1794422879.3031104,
+      "no": "destravar",
+      "texto": "DESTRAVAR: DIAGNOSTICO: cm_bloqueou,oscilacao,quina_dir (planner ok, frente 62 cm, retornos 1)"
+    },
+    {
+      "stamp": 1794422879.3251526,
+      "no": "destravar",
+      "texto": "DESTRAVAR: DECISAO: falhar (outro no comandando /cmd_vel_nav: sem controle exclusivo) | recusadas: -"
+    },
+    {
+      "stamp": 1794422879.3358917,
+      "no": "destravar",
+      "texto": "DESTRAVAR: FALHA: outro no comandando /cmd_vel_nav: sem controle exclusivo ()"
+    },
+    {
+      "stamp": 1794422879.5964713,
+      "no": "destravar",
+      "texto": "DESTRAVAR: outro no comandando /cmd_vel_nav: sem controle exclusivo ()"
+    },
+    {
+      "stamp": 1794422879.62531,
+      "no": "bt_navigator",
+      "texto": "[navigate_to_pose] [ActionServer] Aborting handle."
+    },
+    {
+      "stamp": 1794422879.6259947,
+      "no": "bt_navigator",
+      "texto": "Goal failed"
+    },
+    {
+      "stamp": 1794422879.6615758,
+      "no": "alinhador_passagem",
+      "texto": "NAV2_PRINCIPAL: goal terminou: status=6 codigo=208 motivo="
+    },
+    {
+      "stamp": 1794422879.663538,
+      "no": "alinhador_passagem",
+      "texto": "SUPERVISOR goal=188c072c-bce2-48c7-b316-29c8e96a169e modo=observar NAV2 -> FALHA: Nav2 terminou sem sucesso"
+    },
+    {
+      "stamp": 1794422879.6649117,
+      "no": "alinhador_passagem",
+      "texto": "SUPERVISOR goal=188c072c-bce2-48c7-b316-29c8e96a169e modo=observar FALHA -> FALHA: interrupcao/cancelamento ou manobra sem confirmacao"
+    }
+  ],
+  "comandos_finais_observados": 118,
+  "comandos_finais_nao_zero": 73
+}

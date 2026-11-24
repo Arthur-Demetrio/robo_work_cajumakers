@@ -1,0 +1,15 @@
+robo_station_detector:
+  ros__parameters:
+    scan_topic: /scan_front
+    target_frame: map
+    target_width: 0.90
+    width_tolerance: 0.15
+    max_distance: 3.0
+    max_bearing_deg: 65.0
+    max_gap: 0.13
+    min_points: 6
+    line_residual: 0.035
+    front_offset: 0.365
+    clearance: 0.20
+    require_stable_scans: 5
+    stable_center_tolerance: 0.13

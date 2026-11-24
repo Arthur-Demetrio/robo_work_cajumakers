@@ -1,0 +1,21 @@
+GIRO PARADO (comando -> real)
+  cmd 0.02 rad/s -> real 0.08 rad/s (5 graus/s)  n=83
+  cmd 0.03 rad/s -> real 0.25 rad/s (14 graus/s)  n=146
+  cmd 0.04 rad/s -> real 0.27 rad/s (15 graus/s)  n=39
+  cmd 0.05 rad/s -> real 0.26 rad/s (15 graus/s)  n=36
+  cmd 0.06 rad/s -> real 0.23 rad/s (13 graus/s)  n=24
+  cmd 0.07 rad/s -> real 0.26 rad/s (15 graus/s)  n=33
+  cmd 0.08 rad/s -> real 0.25 rad/s (14 graus/s)  n=16
+  cmd 0.09 rad/s -> real 0.26 rad/s (15 graus/s)  n=30
+  cmd 0.10 rad/s -> real 0.27 rad/s (16 graus/s)  n=18
+  cmd 0.11 rad/s -> real 0.27 rad/s (15 graus/s)  n=17
+  cmd 0.12 rad/s -> real 0.30 rad/s (17 graus/s)  n=35
+  cmd 0.13 rad/s -> real 0.29 rad/s (17 graus/s)  n=18
+  cmd 0.14 rad/s -> real 0.32 rad/s (18 graus/s)  n=776
+LINEAR (comando -> real no mapa / odom)
+  cmd 0.02 m/s -> real 0.074  odom 0.068  n=15
+  cmd 0.03 m/s -> real 0.120  odom 0.150  n=109
+  cmd 0.04 m/s -> real 0.214  odom 0.175  n=219
+  cmd 0.06 m/s -> real 0.182  odom 0.253  n=32
+  cmd 0.07 m/s -> real 0.151  odom 0.272  n=84
+  cmd 0.08 m/s -> real 0.174  odom 0.286  n=22

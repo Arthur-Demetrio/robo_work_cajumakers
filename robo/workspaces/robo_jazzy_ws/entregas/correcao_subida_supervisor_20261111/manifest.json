@@ -1,0 +1,22 @@
+[
+  {
+    "destino": "/home/marcos/subir_robo.sh",
+    "backup": "0_subir_robo.sh",
+    "sha256": "8772ad2d5eb954dbf0d6002ebcb218e27f4ba2687c46903ad0810fee01e6dce1"
+  },
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/ferramentas/iniciar_supervisor_validado.sh",
+    "backup": "1_iniciar_supervisor_validado.sh",
+    "sha256": "0b99ae39dff1dae50faa5e5e12154edaf838f15602f082fb6e06854c90c92d5b"
+  },
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/AGENTS.md",
+    "backup": "2_AGENTS.md",
+    "sha256": "d71e5c2c56e3f213c749c0b4fe8a2e4bd675dce1c61acde39b3239cd0f169848"
+  },
+  {
+    "destino": "/home/marcos/robo_jazzy_ws/CLAUDE.md",
+    "backup": "3_CLAUDE.md",
+    "sha256": "15905ee10fa307411b8a82c705fbabd90d3bcd3c0d27e02d629728f443fdc2d6"
+  }
+]

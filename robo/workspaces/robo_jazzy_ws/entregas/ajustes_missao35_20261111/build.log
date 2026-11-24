@@ -1,0 +1,12 @@
+Starting >>> robo_lidar
+Finished <<< robo_lidar [3.11s]
+Starting >>> robo_navigation
+[4.687s] WARNING:colcon.colcon_core.shell:The following packages are in the workspace but haven't been built:
+- robo_recovery
+They are being used from the following locations instead:
+- /home/marcos/robo_jazzy_ws/install/robo_recovery
+To suppress this warning ignore these packages in the workspace:
+--packages-ignore robo_recovery
+Finished <<< robo_navigation [15.1s]
+
+Summary: 2 packages finished [19.3s]

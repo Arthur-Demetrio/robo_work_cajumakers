@@ -1,0 +1,15 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______________________ test_cm_inativo_aborta_sem_mover _______________________
+src/robo_navigation/test/test_destravar_ros_isolado.py:44: in test_cm_inativo_aborta_sem_mover
+    r, log = rodar('cm_inativo', 166)
+src/robo_navigation/test/test_destravar_ros_isolado.py:39: in rodar
+    assert r.returncode == 0 and 'erro' not in resultado, (resultado, r.stderr[-3000:], log[-3000:])
+E   AssertionError: ({'erro': 'destravar nao apareceu', 'modo': 'cm_inativo'}, 'getifaddrs: Operation not permitted
+E     getifaddrs: Operation...avar): diagnostica, devolve ao Nav2 se ainda contorna, desliza com continuacao, gira pelo smart_spin; re BLOQUEADA.
+E     ')
+E   assert (0 == 0 and 'erro' not in {'erro': 'destravar nao apareceu', 'modo': 'cm_inativo'})
+E    +  where 0 = CompletedProcess(args=['/usr/bin/python3', '/home/marcos/robo_jazzy_ws/src/robo_navigation/test/ros_cenario_destravar....tted\ngetifaddrs: Operation not permitted\ngetifaddrs: Operation not permitted\ngetifaddrs: Operation not permitted\n').returncode
+=========================== short test summary info ============================
+FAILED src/robo_navigation/test/test_destravar_ros_isolado.py::test_cm_inativo_aborta_sem_mover
+1 failed in 23.79s

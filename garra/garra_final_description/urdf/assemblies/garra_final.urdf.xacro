@@ -1,0 +1,299 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="garra_final_macro">
+
+  <xacro:macro name="garra_final" params="prefix">
+
+    <!-- Links -->
+    <link name="${prefix}garra_base">
+      <inertial>
+        <origin xyz="0.000333 0.000000 0.041536" rpy="0 0 0"/>
+        <mass value="0.122493"/>
+        <inertia ixx="1.488707e-04" ixy="0.000000e+00" ixz="3.196556e-05"
+                 iyy="1.961067e-04" iyz="0.000000e+00" izz="8.370648e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/base_link.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="Laminado_vermelho_fosco"/>
+      </visual>
+      <collision>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/base_link.dae" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}shoulder_motor">
+      <inertial>
+        <origin xyz="-0.016764 -0.000763 0.079997" rpy="0 0 0"/>
+        <mass value="0.089211"/>
+        <inertia ixx="1.929411e-05" ixy="-4.785893e-08" ixz="4.449074e-06"
+                 iyy="1.495797e-05" iyz="4.048953e-08" izz="2.086252e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/shoulder_motor.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="Alum_nio_prata_anodizada"/>
+      </visual>
+      <collision>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/shoulder_motor.dae" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}garra_final_showder_servo_horn">
+      <inertial>
+        <origin xyz="-0.006829 0.005264 -0.001500" rpy="0 0 0"/>
+        <mass value="0.007175"/>
+        <inertia ixx="1.000000e-06" ixy="2.998637e-07" ixz="0.000000e+00"
+                 iyy="1.000000e-06" iyz="0.000000e+00" izz="1.000000e-06"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.015787 -0.085385 -0.003000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/garra_final_showder_servo_horn.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="A_o"/>
+      </visual>
+      <collision>
+        <origin xyz="0.015787 -0.085385 -0.003000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/garra_final_showder_servo_horn.dae" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}M_dulo_1">
+      <inertial>
+        <origin xyz="0.018424 -0.033973 0.129529" rpy="0 0 0"/>
+        <mass value="0.096143"/>
+        <inertia ixx="1.195199e-04" ixy="-1.450615e-07" ixz="-1.036412e-04"
+                 iyy="2.332425e-04" iyz="-1.168777e-07" izz="1.209736e-04"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/M_dulo_1.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="Laminado_vermelho_fosco"/>
+      </visual>
+      <collision>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/M_dulo_1.dae" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}MOTOR_1">
+      <inertial>
+        <origin xyz="0.053925 -0.033237 0.166019" rpy="0 0 0"/>
+        <mass value="0.089211"/>
+        <inertia ixx="2.086308e-05" ixy="-4.010090e-08" ixz="-4.448976e-06"
+                 iyy="1.495797e-05" iyz="-4.818499e-08" izz="1.929356e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/MOTOR_1.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="Alum_nio_prata_anodizada"/>
+      </visual>
+      <collision>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/MOTOR_1.dae" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}garra_final_showder_servo_horn_2">
+      <inertial>
+        <origin xyz="-0.006829 0.005264 0.001500" rpy="0 0 0"/>
+        <mass value="0.007175"/>
+        <inertia ixx="1.000000e-06" ixy="2.998637e-07" ixz="0.000000e+00"
+                 iyy="1.000000e-06" iyz="0.000000e+00" izz="1.000000e-06"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.015787 -0.085385 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/garra_final_showder_servo_horn_2.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="A_o"/>
+      </visual>
+      <collision>
+        <origin xyz="0.015787 -0.085385 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/garra_final_showder_servo_horn_2.dae" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}M_dulo_2">
+      <inertial>
+        <origin xyz="0.104698 0.000412 0.173614" rpy="0 0 0"/>
+        <mass value="0.070749"/>
+        <inertia ixx="1.156834e-05" ixy="1.910002e-07" ixz="-1.551575e-08"
+                 iyy="9.825746e-05" iyz="7.836475e-10" izz="9.164356e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/M_dulo_2.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="Laminado_vermelho_fosco"/>
+      </visual>
+      <collision>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/M_dulo_2.dae" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}MOTOR_1_1">
+      <inertial>
+        <origin xyz="0.137478 0.000880 0.173458" rpy="0 0 0"/>
+        <mass value="0.089211"/>
+        <inertia ixx="1.556066e-05" ixy="-6.268823e-08" ixz="-2.821390e-10"
+                 iyy="1.495797e-05" iyz="-2.536528e-10" izz="2.459598e-05"/>
+      </inertial>
+      <visual>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/MOTOR_1_1.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="Alum_nio_prata_anodizada"/>
+      </visual>
+      <collision>
+        <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/MOTOR_1_1.dae" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="${prefix}garra_final_showder_servo_horn_3">
+      <inertial>
+        <origin xyz="-0.000294 -0.008617 0.001500" rpy="0 0 0"/>
+        <mass value="0.007175"/>
+        <inertia ixx="1.000000e-06" ixy="-2.116718e-08" ixz="0.000000e+00"
+                 iyy="1.000000e-06" iyz="0.000000e+00" izz="1.000000e-06"/>
+      </inertial>
+      <visual>
+        <origin xyz="-0.055746 0.066574 0.003000" rpy="-3.141593 0.000000 0.879928"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/garra_final_showder_servo_horn_3.dae" scale="1 1 1"/>
+        </geometry>
+        <material name="A_o"/>
+      </visual>
+      <collision>
+        <origin xyz="-0.055746 0.066574 0.003000" rpy="-3.141593 0.000000 0.879928"/>
+        <geometry>
+          <mesh filename="package://garra_final_description/meshes/garra_final/garra_final_showder_servo_horn_3.dae" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Joints (internal to assembly) -->
+    <joint name="${prefix}R_gido" type="fixed">
+      <parent link="${prefix}garra_base"/>
+      <child link="${prefix}shoulder_motor"/>
+      <origin xyz="-0.002399 0.000644 0.000258" rpy="0.000000 0.011578 0.000000"/>
+    </joint>
+
+    <joint name="${prefix}Revolucionar_46" type="continuous">
+      <parent link="${prefix}shoulder_motor"/>
+      <child link="${prefix}garra_final_showder_servo_horn"/>
+      <origin xyz="-0.023838 -0.025144 0.086064" rpy="1.570796 1.131260 0.000000"/>
+      <axis xyz="0.000000 0.000000 1.000000"/>
+      <limit effort="100.0" velocity="1.00"/>
+    </joint>
+
+    <joint name="${prefix}R_gido_47" type="fixed">
+      <parent link="${prefix}garra_final_showder_servo_horn"/>
+      <child link="${prefix}M_dulo_1"/>
+      <origin xyz="0.074914 0.050317 -0.030000" rpy="-1.570796 0.000000 1.832596"/>
+    </joint>
+
+    <joint name="${prefix}R_gido_48" type="fixed">
+      <parent link="${prefix}M_dulo_1"/>
+      <child link="${prefix}MOTOR_1"/>
+      <origin xyz="0.002592 -0.000644 0.004103" rpy="0.000000 0.000000 0.000000"/>
+    </joint>
+
+    <joint name="${prefix}Revolucionar_49" type="continuous">
+      <parent link="${prefix}MOTOR_1"/>
+      <child link="${prefix}garra_final_showder_servo_horn_2"/>
+      <origin xyz="0.059838 -0.008856 0.173222" rpy="1.570796 1.536874 0.000000"/>
+      <axis xyz="0.000000 0.000000 -1.000000"/>
+      <limit effort="100.0" velocity="1.00"/>
+    </joint>
+
+    <joint name="${prefix}R_gido_50" type="fixed">
+      <parent link="${prefix}garra_final_showder_servo_horn_2"/>
+      <child link="${prefix}M_dulo_2"/>
+      <origin xyz="0.160854 0.091479 -0.006666" rpy="-1.570796 0.000000 2.443461"/>
+    </joint>
+
+    <joint name="${prefix}R_gido_65" type="fixed">
+      <parent link="${prefix}M_dulo_2"/>
+      <child link="${prefix}MOTOR_1_1"/>
+      <origin xyz="-0.000300 -0.000428 0.000662" rpy="0.000000 0.000000 0.000000"/>
+    </joint>
+
+    <joint name="${prefix}Revolucionar_72" type="continuous">
+      <parent link="${prefix}MOTOR_1_1"/>
+      <child link="${prefix}garra_final_showder_servo_horn_3"/>
+      <origin xyz="0.146796 0.022261 0.173559" rpy="1.570796 1.545249 3.141593"/>
+      <axis xyz="0.000000 0.000000 1.000000"/>
+      <limit effort="100.0" velocity="1.00"/>
+    </joint>
+
+    <!-- ROS 2 control: generated generic system -->
+    <ros2_control name="${prefix}garra_final_system" type="system">
+      <hardware>
+        <plugin>mock_components/GenericSystem</plugin>
+        <param name="cmd_topic">sim/garra_final_system/cmd</param>
+        <param name="state_topic">sim/garra_final_system/state</param>
+      </hardware>
+
+      <joint name="${prefix}Revolucionar_46">
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="${prefix}Revolucionar_49">
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="${prefix}Revolucionar_72">
+        <command_interface name="position"/>
+        <command_interface name="velocity"/>
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+    </ros2_control>
+
+  </xacro:macro>
+
+</robot>

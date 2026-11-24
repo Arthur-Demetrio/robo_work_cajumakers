@@ -1,0 +1,332 @@
+"""A Spin action server which delegates every increment to Nav2's native Spin.
+
+IMPORTANT: This node never publishes raw motor velocities, never bypasses the
+Collision Monitor, and is NOT an emergency-stop/safety-rated system.
+"""
+import math
+import threading
+import time
+
+import rclpy
+from rclpy.action import ActionClient, ActionServer, CancelResponse, GoalResponse
+from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.duration import Duration
+from rclpy.executors import MultiThreadedExecutor
+from rclpy.node import Node
+from rclpy.time import Time
+from nav2_msgs.action import Spin
+from nav_msgs.msg import OccupancyGrid
+from action_msgs.msg import GoalStatus
+from tf2_ros import Buffer, TransformListener
+
+from .geometry import (arc_clear, footprint_clear, movement_clear,
+                       yaw_of_quat, spin_options, select_spin)
+
+
+class ProgressiveSpin(Node):
+    def __init__(self):
+        super().__init__('progressive_spin')
+        self.declare_parameter('action_name', 'smart_spin')
+        self.declare_parameter('native_spin_action', 'spin')
+        self.declare_parameter('costmap_topic', '/local_costmap/costmap')
+        self.declare_parameter('base_frame', 'base_link')
+        self.declare_parameter('max_angle', 0.70)
+        self.declare_parameter('step_angle', 0.12)
+        self.declare_parameter('lookahead_angle', 0.36)
+        self.declare_parameter('opening_distance', 0.20)
+        self.declare_parameter('min_success_angle', 0.10)
+        self.declare_parameter('map_timeout', 2.5)
+        self.declare_parameter('step_timeout', 5.0)
+        self.declare_parameter('stagnation_timeout', 2.8)
+        self.declare_parameter('footprint_extra', 0.03)
+        self.declare_parameter('front', 0.365)
+        self.declare_parameter('rear', -0.205)
+        self.declare_parameter('left', 0.315)
+        self.declare_parameter('right', -0.315)
+
+        self.lock = threading.Lock()
+        self.busy_lock = threading.Lock()
+        self.busy = False
+        self.latest_map = None
+        self.map_received_at = 0.0
+        self.feedback_at = 0.0
+        self.last_step_progress = 0.0
+        self.active_native_goal = None
+        group = ReentrantCallbackGroup()
+        self.tf_buffer = Buffer(cache_time=Duration(seconds=10.0))
+        self.tf_listener = TransformListener(self.tf_buffer, self, spin_thread=False)
+        topic = self.get_parameter('costmap_topic').value
+        self.create_subscription(OccupancyGrid, topic, self.on_map, 10,
+                                 callback_group=group)
+        native_name = self.get_parameter('native_spin_action').value
+        self.native = ActionClient(self, Spin, native_name, callback_group=group)
+        self.server = ActionServer(
+            self, Spin, self.get_parameter('action_name').value,
+            execute_callback=self.execute, goal_callback=self.accept_goal,
+            cancel_callback=self.accept_cancel, callback_group=group)
+        self.get_logger().info('smart_spin pronto; micro-giros usam %s. CM continua ativo.' % native_name)
+
+    def p(self, name):
+        return self.get_parameter(name).value
+
+    def on_map(self, message):
+        with self.lock:
+            self.latest_map = message
+            self.map_received_at = time.monotonic()
+
+    def get_map(self):
+        with self.lock:
+            snapshot, timestamp = self.latest_map, self.map_received_at
+        if snapshot is None or time.monotonic() - timestamp > self.p('map_timeout'):
+            return None
+        return snapshot
+
+    def pose_in_grid(self, grid):
+        if not grid.header.frame_id:
+            raise ValueError('costmap sem frame_id')
+        transform = self.tf_buffer.lookup_transform(
+            grid.header.frame_id, self.p('base_frame'), Time(),
+            timeout=Duration(seconds=0.25))
+        t = transform.transform.translation
+        q = transform.transform.rotation
+        return (t.x, t.y, yaw_of_quat(q))
+
+    def footprint(self):
+        pad = self.p('footprint_extra')
+        front, rear = self.p('front') + pad, self.p('rear') - pad
+        left, right = self.p('left') + pad, self.p('right') - pad
+        return [(front, left), (front, right), (rear, right), (rear, left)]
+
+    def accept_goal(self, goal_request):
+        if not math.isfinite(goal_request.target_yaw) or abs(goal_request.target_yaw) < 0.01:
+            return GoalResponse.REJECT
+        with self.busy_lock:
+            if self.busy:
+                return GoalResponse.REJECT
+            self.busy = True
+        return GoalResponse.ACCEPT
+
+    def accept_cancel(self, _goal_handle):
+        return CancelResponse.ACCEPT
+
+    def _wait_future(self, future, timeout):
+        event = threading.Event()
+        future.add_done_callback(lambda _: event.set())
+        if not event.wait(max(0., timeout)):
+            return None
+        return future.result()
+
+    def _cancel_native(self):
+        goal = self.active_native_goal
+        if goal is not None:
+            try:
+                goal.cancel_goal_async()
+            except Exception as exc:
+                self.get_logger().warn('Cancelamento do Spin nativo: %s' % exc)
+
+    def _native_feedback(self, message):
+        progress = float(message.feedback.angular_distance_traveled)
+        with self.lock:
+            if abs(progress - self.last_step_progress) > 0.005:
+                self.feedback_at = time.monotonic()
+            self.last_step_progress = progress
+
+    def _spin_step(self, handle, direction, amount, seconds):
+        if not self.native.wait_for_server(timeout_sec=0.8):
+            return False, 'servidor /spin ausente'
+        req = Spin.Goal()
+        req.target_yaw = float(direction * amount)
+        req.time_allowance = Duration(seconds=seconds).to_msg()
+        with self.lock:
+            self.feedback_at = time.monotonic()
+            self.last_step_progress = 0.0
+        pending = self.native.send_goal_async(req, feedback_callback=self._native_feedback)
+        native_goal = self._wait_future(pending, 1.5)
+        if native_goal is None or not native_goal.accepted:
+            if native_goal is None:
+                # If the async request is accepted late, cancel it immediately.
+                def cancel_late(future):
+                    try:
+                        late = future.result()
+                        if late is not None and late.accepted:
+                            late.cancel_goal_async()
+                    except Exception:
+                        pass
+                pending.add_done_callback(cancel_late)
+            return False, 'micro-spin recusado ou sem resposta'
+        self.active_native_goal = native_goal
+        result_future = native_goal.get_result_async()
+        deadline = time.monotonic() + seconds + 1.0
+        while not result_future.done():
+            if handle.is_cancel_requested:
+                self._cancel_native()
+                return False, 'cancelado'
+            with self.lock:
+                stagnant_for = time.monotonic() - self.feedback_at
+            if stagnant_for > self.p('stagnation_timeout'):
+                self._cancel_native()
+                return False, 'nenhum progresso angular (CM, TF ou motor bloqueado)'
+            if time.monotonic() > deadline:
+                self._cancel_native()
+                return False, 'timeout do micro-spin'
+            time.sleep(0.05)
+        try:
+            final = result_future.result()
+            if final.status == GoalStatus.STATUS_SUCCEEDED:
+                return True, ''
+            return False, 'spin nativo status=%s error_code=%s' % (
+                final.status, final.result.error_code)
+        finally:
+            self.active_native_goal = None
+
+    def _finish(self, goal_handle, status, code, info):
+        result = Spin.Result()
+        result.total_elapsed_time = Duration(
+            seconds=max(0.0, time.monotonic() - self.execute_start)).to_msg()
+        result.error_code = code
+        result.error_msg = info
+        if status == 'ok':
+            goal_handle.succeed()
+        elif status == 'cancel':
+            goal_handle.canceled()
+        else:
+            goal_handle.abort()
+        self.get_logger().info('smart_spin %s: %s' % (status, info))
+        return result
+
+    def execute(self, handle):
+        total_turn = 0.0
+        try:
+            t0 = time.monotonic()
+            self.execute_start = t0
+            g = handle.request
+            requested = abs(g.target_yaw)
+            max_angle = min(requested, self.p('max_angle'))
+            time_limit = g.time_allowance.sec + g.time_allowance.nanosec * 1e-9
+            if time_limit <= 0:
+                time_limit = 20.0
+            deadline = t0 + time_limit
+            footprint = self.footprint()
+            step = self.p('step_angle')
+            if not (0.03 <= step <= 0.30) or max_angle < 0.03 - 1e-6:
+                return self._finish(handle, 'fail', Spin.Result.UNKNOWN,
+                                    'step_angle invalido ou giro solicitado menor que 0.03 rad')
+            # Aceita pequenas diferencas de precisao do float32.
+            # O incremento final pode ser menor que step_angle.
+            step = min(step, max_angle)
+            grid = self.get_map()
+            if grid is None:
+                return self._finish(handle, 'fail', Spin.Result.COLLISION_AHEAD,
+                                    'costmap local ausente ou vencido; rotação negada')
+            pose = self.pose_in_grid(grid)
+            if not footprint_clear(grid, pose, footprint):
+                return self._finish(handle, 'fail', Spin.Result.COLLISION_AHEAD,
+                                    'footprint atual ocupa espaço desconhecido/obstáculo')
+            direction = 0
+            while total_turn + 1e-4 < max_angle:
+                if handle.is_cancel_requested:
+                    self._cancel_native()
+                    return self._finish(handle, 'cancel', Spin.Result.NONE, 'cancelado pelo BT')
+                if time.monotonic() >= deadline:
+                    return self._finish(handle, 'fail', Spin.Result.TIMEOUT, 'tempo de recovery esgotado')
+                grid = self.get_map()
+                if grid is None:
+                    return self._finish(handle, 'fail', Spin.Result.COLLISION_AHEAD,
+                                        'costmap expirou durante recuperação')
+                pose = self.pose_in_grid(grid)
+                if (total_turn >= self.p('min_success_angle') and
+                        movement_clear(grid, pose, footprint, self.p('opening_distance'), 0)):
+                    return self._finish(handle, 'ok', Spin.Result.NONE,
+                                        'abertura frontal verificada após %.1f graus; BT pode replanejar' %
+                                        math.degrees(total_turn))
+                amount = min(step, max_angle - total_turn)
+                options = spin_options(
+                    grid, pose, footprint, amount,
+                    min(self.p('lookahead_angle'), max_angle - total_turn),
+                    self.p('opening_distance'))
+                for candidate in options:
+                    self.get_logger().info(
+                        'spin avaliacao: sentido=%+d arco_livre=%.1f graus '
+                        'folga_extra=%.2f m abertura=%.2f m' % (
+                            candidate['sign'], math.degrees(candidate['safe_angle']),
+                            candidate['clearance'], candidate['opening']))
+                chosen = select_spin(options, direction, 1 if g.target_yaw > 0 else -1)
+                if chosen is None:
+                    return self._finish(handle, 'fail', Spin.Result.COLLISION_AHEAD,
+                                        'sentido bloqueado; sem inverter giro; BT deve reposicionar')
+                direction = chosen['sign']
+                # Planning can be expensive: use fresh geometry before moving.
+                fresh = self.get_map()
+                if fresh is None:
+                    return self._finish(handle, 'fail', Spin.Result.COLLISION_AHEAD,
+                                        'costmap expirou durante avaliacao')
+                pose = self.pose_in_grid(fresh)
+                if not arc_clear(fresh, pose, footprint, direction * amount):
+                    return self._finish(handle, 'fail', Spin.Result.COLLISION_AHEAD,
+                                        'micro-giro deixou de estar livre')
+                if handle.is_cancel_requested:
+                    return self._finish(handle, 'cancel', Spin.Result.NONE, 'cancelado')
+                if time.monotonic() >= deadline - 0.25:
+                    return self._finish(handle, 'fail', Spin.Result.TIMEOUT,
+                                        'tempo esgotado na avaliacao geometrica')
+                remaining = deadline - time.monotonic()
+                allowed = min(self.p('step_timeout'), remaining - 0.25)
+                self.get_logger().info('micro-giro %+.1f graus (acumulado %.1f / max %.1f)' %
+                                       (math.degrees(direction * amount), math.degrees(total_turn),
+                                        math.degrees(max_angle)))
+                ok, why = self._spin_step(handle, direction, amount, allowed)
+                if not ok:
+                    st = 'cancel' if handle.is_cancel_requested else 'fail'
+                    return self._finish(handle, st, Spin.Result.COLLISION_AHEAD, why)
+                # Verify real TF yaw, not just the requested angle.
+                after_map = self.get_map()
+                if after_map is None:
+                    return self._finish(handle, 'fail', Spin.Result.COLLISION_AHEAD,
+                                        'costmap expirou apos micro-spin')
+                after_pose = self.pose_in_grid(after_map)
+                measured = ((after_pose[2] - pose[2] + math.pi) % (2 * math.pi)) - math.pi
+                if direction * measured < amount * 0.65:
+                    return self._finish(handle, 'fail', Spin.Result.TF_ERROR,
+                                        'yaw real insuficiente: pedido %.3f, observado %.3f rad' %
+                                        (direction * amount, measured))
+                total_turn += abs(measured)
+                feedback = Spin.Feedback()
+                feedback.angular_distance_traveled = float(total_turn)
+                handle.publish_feedback(feedback)
+            grid = self.get_map()
+            if grid is not None:
+                pose = self.pose_in_grid(grid)
+                if movement_clear(grid, pose, footprint, self.p('opening_distance'), 0):
+                    return self._finish(handle, 'ok', Spin.Result.NONE,
+                                        'abertura verificada no limite angular de %.1f graus' %
+                                        math.degrees(total_turn))
+            return self._finish(handle, 'fail', Spin.Result.COLLISION_AHEAD,
+                                'limite de %.1f graus atingido sem abertura frontal' %
+                                math.degrees(total_turn))
+        except Exception as exc:
+            self.get_logger().error('smart_spin: %s' % exc)
+            return self._finish(handle, 'fail', Spin.Result.UNKNOWN, str(exc))
+        finally:
+            self._cancel_native()
+            self.active_native_goal = None
+            with self.busy_lock:
+                self.busy = False
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = ProgressiveSpin()
+    executor = MultiThreadedExecutor(num_threads=4)
+    executor.add_node(node)
+    try:
+        executor.spin()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        executor.shutdown()
+        node.destroy_node()
+        rclpy.try_shutdown()
+
+
+if __name__ == '__main__':
+    main()

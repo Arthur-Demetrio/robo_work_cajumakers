@@ -1,0 +1,5 @@
+[INFO] [1794263180.523842130] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sim/scan (gz.msgs.LaserScan) -> /sim/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[INFO] [1794263180.528527148] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sim/verdade (gz.msgs.Odometry) -> /sim/verdade (nav_msgs/msg/Odometry)] (Lazy 0)
+[INFO] [1794263180.531121671] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/sim/vel_real (geometry_msgs/msg/Twist) -> /sim/vel_real (gz.msgs.Twist)] (Lazy 0)
+[INFO] [1794263189.030509557] [ros_gz_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[INFO] [1794263259.166365361] [rclcpp]: signal_handler(SIGINT/SIGTERM)

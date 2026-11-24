@@ -1,0 +1,865 @@
+[INFO] [launch]: All log files can be found below /home/marcos/robo_jazzy_ws/test_logs/20261005/ros/2026-10-05-08-43-26-182162-marcos-ThinkPad-E14-Gen-2-5106
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [controller_server-1]: process started with pid [5110]
+[INFO] [smoother_server-2]: process started with pid [5111]
+[INFO] [planner_server-3]: process started with pid [5112]
+[INFO] [behavior_server-4]: process started with pid [5113]
+[INFO] [bt_navigator-5]: process started with pid [5114]
+[INFO] [waypoint_follower-6]: process started with pid [5115]
+[INFO] [velocity_smoother-7]: process started with pid [5116]
+[INFO] [collision_monitor-8]: process started with pid [5117]
+[INFO] [lifecycle_manager-9]: process started with pid [5118]
+[velocity_smoother-7] [INFO] [1791200606.279676072] [velocity_smoother]: 
+[velocity_smoother-7] 	velocity_smoother lifecycle node launched. 
+[velocity_smoother-7] 	Waiting on external lifecycle transitions to activate
+[velocity_smoother-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-6] [INFO] [1791200606.280263307] [waypoint_follower]: 
+[waypoint_follower-6] 	waypoint_follower lifecycle node launched. 
+[waypoint_follower-6] 	Waiting on external lifecycle transitions to activate
+[waypoint_follower-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-6] [INFO] [1791200606.280710735] [waypoint_follower]: Creating
+[behavior_server-4] [INFO] [1791200606.288910874] [behavior_server]: 
+[behavior_server-4] 	behavior_server lifecycle node launched. 
+[behavior_server-4] 	Waiting on external lifecycle transitions to activate
+[behavior_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-3] [INFO] [1791200606.290852773] [planner_server]: 
+[planner_server-3] 	planner_server lifecycle node launched. 
+[planner_server-3] 	Waiting on external lifecycle transitions to activate
+[planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-5] [INFO] [1791200606.290890244] [bt_navigator]: 
+[bt_navigator-5] 	bt_navigator lifecycle node launched. 
+[bt_navigator-5] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-5] [INFO] [1791200606.292235885] [bt_navigator]: Creating
+[planner_server-3] [INFO] [1791200606.293009537] [planner_server]: Creating
+[lifecycle_manager-9] [INFO] [1791200606.300193707] [lifecycle_manager_navigation]: Creating
+[collision_monitor-8] [INFO] [1791200606.308621443] [collision_monitor]: 
+[collision_monitor-8] 	collision_monitor lifecycle node launched. 
+[collision_monitor-8] 	Waiting on external lifecycle transitions to activate
+[collision_monitor-8] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[lifecycle_manager-9] [INFO] [1791200606.311650255] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[smoother_server-2] [INFO] [1791200606.315307351] [smoother_server]: 
+[smoother_server-2] 	smoother_server lifecycle node launched. 
+[smoother_server-2] 	Waiting on external lifecycle transitions to activate
+[smoother_server-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-1] [INFO] [1791200606.323428120] [controller_server]: 
+[controller_server-1] 	controller_server lifecycle node launched. 
+[controller_server-1] 	Waiting on external lifecycle transitions to activate
+[controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[smoother_server-2] [INFO] [1791200606.323783048] [smoother_server]: Creating smoother server
+[controller_server-1] [INFO] [1791200606.327269684] [controller_server]: Creating controller server
+[planner_server-3] [INFO] [1791200606.329853574] [global_costmap.global_costmap]: 
+[planner_server-3] 	global_costmap lifecycle node launched. 
+[planner_server-3] 	Waiting on external lifecycle transitions to activate
+[planner_server-3] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-3] [INFO] [1791200606.332003771] [global_costmap.global_costmap]: Creating Costmap
+[controller_server-1] [INFO] [1791200606.339401191] [local_costmap.local_costmap]: 
+[controller_server-1] 	local_costmap lifecycle node launched. 
+[controller_server-1] 	Waiting on external lifecycle transitions to activate
+[controller_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-1] [INFO] [1791200606.339980479] [local_costmap.local_costmap]: Creating Costmap
+[lifecycle_manager-9] [INFO] [1791200606.428834089] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-9] [INFO] [1791200606.428876207] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[controller_server-1] [INFO] [1791200606.429033341] [controller_server]: Configuring controller interface
+[controller_server-1] [INFO] [1791200606.429050453] [controller_server]: getting progress checker plugins..
+[controller_server-1] [INFO] [1791200606.429188525] [controller_server]: getting goal checker plugins..
+[controller_server-1] [INFO] [1791200606.429391150] [controller_server]: Controller frequency set to 10.0000Hz
+[controller_server-1] [INFO] [1791200606.429422696] [local_costmap.local_costmap]: Configuring
+[controller_server-1] [INFO] [1791200606.435778995] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[controller_server-1] [INFO] [1791200606.438519283] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[controller_server-1] [INFO] [1791200606.441187017] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[controller_server-1] [INFO] [1791200606.441211118] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-1] [INFO] [1791200606.441635456] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[controller_server-1] [INFO] [1791200606.449089492] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-1] [INFO] [1791200606.449267965] [controller_server]: Controller Server has progress_checker  progress checkers available.
+[controller_server-1] [INFO] [1791200606.449568801] [controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-1] [INFO] [1791200606.449839624] [controller_server]: Controller Server has goal_checker  goal checkers available.
+[controller_server-1] [INFO] [1791200606.453222841] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[controller_server-1] [INFO] [1791200606.454204512] [controller_server]: Setting transform_tolerance to 0.300000
+[controller_server-1] [INFO] [1791200606.459648962] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[controller_server-1] [INFO] [1791200606.460038689] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1791200606.460136009] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[controller_server-1] [INFO] [1791200606.460475223] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1791200606.460562383] [controller_server]: Using critic "ObstacleFootprint" (dwb_critics::ObstacleFootprintCritic)
+[controller_server-1] [INFO] [1791200606.460703151] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1791200606.460791988] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[controller_server-1] [INFO] [1791200606.461011870] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1791200606.461098563] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[controller_server-1] [INFO] [1791200606.461313597] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1791200606.461390353] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[controller_server-1] [INFO] [1791200606.461526810] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1791200606.461594662] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[controller_server-1] [INFO] [1791200606.461713167] [controller_server]: Critic plugin initialized
+[controller_server-1] [INFO] [1791200606.461725420] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-9] [INFO] [1791200606.465046207] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[smoother_server-2] [INFO] [1791200606.465176859] [smoother_server]: Configuring smoother server
+[smoother_server-2] [INFO] [1791200606.474202985] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[smoother_server-2] [INFO] [1791200606.474631812] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[lifecycle_manager-9] [INFO] [1791200606.477110796] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-3] [INFO] [1791200606.477245940] [planner_server]: Configuring
+[planner_server-3] [INFO] [1791200606.477268284] [global_costmap.global_costmap]: Configuring
+[planner_server-3] [INFO] [1791200606.480207483] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-3] [INFO] [1791200606.483043475] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-3] [INFO] [1791200606.484720109] [global_costmap.global_costmap]: Subscribing to updates
+[planner_server-3] [INFO] [1791200606.487053940] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-3] [INFO] [1791200606.487071321] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-3] [INFO] [1791200606.487631719] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-3] [INFO] [1791200606.495722370] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 110 X 46 at 0.050000 m/pix
+[planner_server-3] [INFO] [1791200606.496208954] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[planner_server-3] [INFO] [1791200606.496231932] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-3] [INFO] [1791200606.496625715] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-9] [INFO] [1791200606.502676174] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[behavior_server-4] [INFO] [1791200606.503354797] [behavior_server]: Configuring
+[behavior_server-4] [INFO] [1791200606.506682671] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+[behavior_server-4] [INFO] [1791200606.507342662] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+[behavior_server-4] [INFO] [1791200606.507854439] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+[behavior_server-4] [INFO] [1791200606.508364062] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+[behavior_server-4] [INFO] [1791200606.511958894] [behavior_server]: Configuring spin
+[behavior_server-4] [INFO] [1791200606.514877868] [behavior_server]: Configuring backup
+[behavior_server-4] [INFO] [1791200606.516567438] [behavior_server]: Configuring drive_on_heading
+[behavior_server-4] [INFO] [1791200606.520682740] [behavior_server]: Configuring wait
+[lifecycle_manager-9] [INFO] [1791200606.523378138] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-5] [INFO] [1791200606.523496655] [bt_navigator]: Configuring
+[bt_navigator-5] [INFO] [1791200606.526675697] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-5] [WARN] [1791200606.529874080] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+[bt_navigator-5] Make sure these match your BT and there are not other sources of error codes youreported to your application
+[bt_navigator-5] [INFO] [1791200606.569472776] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+[lifecycle_manager-9] [INFO] [1791200606.580215984] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[waypoint_follower-6] [INFO] [1791200606.580337711] [waypoint_follower]: Configuring
+[waypoint_follower-6] [INFO] [1791200606.592819049] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[waypoint_follower-6] [INFO] [1791200606.593044639] [waypoint_follower]: Waypoint pause duration is set to zero, disabling task executor plugin.
+[lifecycle_manager-9] [INFO] [1791200606.593354141] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[velocity_smoother-7] [INFO] [1791200606.593477713] [velocity_smoother]: Configuring velocity smoother
+[lifecycle_manager-9] [INFO] [1791200606.595650494] [lifecycle_manager_navigation]: [34m[1mConfiguring collision_monitor[0m[0m
+[collision_monitor-8] [INFO] [1791200606.595774051] [collision_monitor]: Configuring
+[collision_monitor-8] [INFO] [1791200606.598683975] [collision_monitor]: [scan]: Creating Scan
+[collision_monitor-8] [INFO] [1791200606.600001181] [collision_monitor]: [FootprintApproach]: Creating Polygon
+[collision_monitor-8] [INFO] [1791200606.600244799] [collision_monitor]: [FootprintApproach]: Polygon points are not defined. Using dynamic subscription instead.
+[collision_monitor-8] [INFO] [1791200606.601128704] [collision_monitor]: [FootprintApproach]: Making footprint subscriber on /local_costmap/published_footprint topic
+[lifecycle_manager-9] [INFO] [1791200606.608542634] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[controller_server-1] [INFO] [1791200606.608653901] [controller_server]: Activating
+[controller_server-1] [INFO] [1791200606.608675557] [local_costmap.local_costmap]: Activating
+[controller_server-1] [INFO] [1791200606.608682222] [local_costmap.local_costmap]: Checking transform
+[controller_server-1] [INFO] [1791200606.608768917] [local_costmap.local_costmap]: start
+[controller_server-1] [INFO] [1791200606.859251372] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1791200606.961647325] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-9] [INFO] [1791200606.961676769] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[smoother_server-2] [INFO] [1791200606.961825368] [smoother_server]: Activating
+[smoother_server-2] [INFO] [1791200606.961849465] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1791200607.063393035] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[lifecycle_manager-9] [INFO] [1791200607.063419975] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-3] [INFO] [1791200607.063553313] [planner_server]: Activating
+[planner_server-3] [INFO] [1791200607.063575260] [global_costmap.global_costmap]: Activating
+[planner_server-3] [INFO] [1791200607.063581128] [global_costmap.global_costmap]: Checking transform
+[planner_server-3] [INFO] [1791200607.063667732] [global_costmap.global_costmap]: start
+[planner_server-3] [INFO] [1791200607.113819496] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[planner_server-3] [INFO] [1791200607.114327222] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1791200607.216293762] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-9] [INFO] [1791200607.216344532] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[behavior_server-4] [INFO] [1791200607.216844879] [behavior_server]: Activating
+[behavior_server-4] [INFO] [1791200607.216953154] [behavior_server]: Activating spin
+[behavior_server-4] [INFO] [1791200607.216996540] [behavior_server]: Activating backup
+[behavior_server-4] [INFO] [1791200607.217026106] [behavior_server]: Activating drive_on_heading
+[behavior_server-4] [INFO] [1791200607.217054535] [behavior_server]: Activating wait
+[behavior_server-4] [INFO] [1791200607.217100372] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1791200607.321030108] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-9] [INFO] [1791200607.321062211] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-5] [INFO] [1791200607.321222870] [bt_navigator]: Activating
+[bt_navigator-5] [INFO] [1791200607.346348864] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1791200607.447915499] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-9] [INFO] [1791200607.447942694] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[waypoint_follower-6] [INFO] [1791200607.448144633] [waypoint_follower]: Activating
+[waypoint_follower-6] [INFO] [1791200607.448170060] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1791200607.550090045] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[lifecycle_manager-9] [INFO] [1791200607.550164535] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[velocity_smoother-7] [INFO] [1791200607.550691181] [velocity_smoother]: Activating
+[velocity_smoother-7] [INFO] [1791200607.550746734] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1791200607.655496333] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[lifecycle_manager-9] [INFO] [1791200607.655524918] [lifecycle_manager_navigation]: [34m[1mActivating collision_monitor[0m[0m
+[collision_monitor-8] [INFO] [1791200607.655712920] [collision_monitor]: Activating
+[collision_monitor-8] [INFO] [1791200607.655753213] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[lifecycle_manager-9] [INFO] [1791200607.758012306] [lifecycle_manager_navigation]: Server collision_monitor connected with bond.
+[lifecycle_manager-9] [INFO] [1791200607.758049628] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-9] [INFO] [1791200607.758058799] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[bt_navigator-5] [INFO] [1791200678.313339651] [bt_navigator]: Begin navigating from current location (0.00, 0.00) to (1.96, 0.44)
+[controller_server-1] [INFO] [1791200678.334023786] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-1] [WARN] [1791200678.334070496] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
+[controller_server-1] [WARN] [1791200678.334085826] [controller_server]: No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+[controller_server-1] [INFO] [1791200679.434279896] [controller_server]: Passing new path to controller.
+[planner_server-3] [INFO] [1791200679.563786673] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 150 X 49 at 0.050000 m/pix
+[controller_server-1] [INFO] [1791200680.434266708] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200681.434268972] [controller_server]: Passing new path to controller.
+[planner_server-3] [INFO] [1791200681.563790897] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 156 X 55 at 0.050000 m/pix
+[controller_server-1] [INFO] [1791200682.534264563] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200683.534263147] [controller_server]: Passing new path to controller.
+[planner_server-3] [INFO] [1791200683.563786521] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 156 X 137 at 0.050000 m/pix
+[controller_server-1] [INFO] [1791200684.534265244] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200685.534300103] [controller_server]: Passing new path to controller.
+[planner_server-3] [INFO] [1791200685.563788592] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 171 X 192 at 0.050000 m/pix
+[controller_server-1] [INFO] [1791200686.634262598] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200687.634262867] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200688.634295447] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200689.634301943] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200690.734292099] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200691.734266791] [controller_server]: Passing new path to controller.
+[controller_server-1] [ERROR] [1791200691.936473431] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[controller_server-1] [ERROR] [1791200691.936519324] [DWBLocalPlanner]: 0.62: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1791200691.936523231] [DWBLocalPlanner]: 0.38: Oscillation/Trajectory is oscillating.
+[controller_server-1] [WARN] [1791200691.937096329] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[controller_server-1] [INFO] [1791200692.734376642] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200693.734293382] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200694.834299670] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200695.834296801] [controller_server]: Passing new path to controller.
+[controller_server-1] [ERROR] [1791200696.636369577] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[controller_server-1] [ERROR] [1791200696.636627246] [DWBLocalPlanner]: 0.28: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1791200696.636646784] [DWBLocalPlanner]: 0.72: Oscillation/Trajectory is oscillating.
+[controller_server-1] [WARN] [1791200696.637876110] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[controller_server-1] [ERROR] [1791200696.736385785] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[controller_server-1] [ERROR] [1791200696.736601651] [DWBLocalPlanner]: 0.28: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1791200696.736614732] [DWBLocalPlanner]: 0.72: Oscillation/Trajectory is oscillating.
+[controller_server-1] [WARN] [1791200696.737875638] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[controller_server-1] [INFO] [1791200696.834301459] [controller_server]: Passing new path to controller.
+[controller_server-1] [ERROR] [1791200697.536413443] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[controller_server-1] [ERROR] [1791200697.536595122] [DWBLocalPlanner]: 0.50: ObstacleFootprint/Trajectory Hits Obstacle.
+[controller_server-1] [ERROR] [1791200697.536600766] [DWBLocalPlanner]: 0.50: Oscillation/Trajectory is oscillating.
+[controller_server-1] [WARN] [1791200697.537202588] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[controller_server-1] [INFO] [1791200697.834294733] [controller_server]: Passing new path to controller.
+[collision_monitor-8] [INFO] [1791200698.921699203] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[controller_server-1] [INFO] [1791200698.934301357] [controller_server]: Passing new path to controller.
+[collision_monitor-8] [INFO] [1791200699.121181849] [collision_monitor]: Robot to continue normal operation
+[collision_monitor-8] [INFO] [1791200699.521512450] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[planner_server-3] [INFO] [1791200699.563789113] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 177 X 192 at 0.050000 m/pix
+[controller_server-1] [INFO] [1791200699.934293659] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200700.934272629] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200702.034266351] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200703.034310848] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200704.034266566] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200705.034262461] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200706.134271726] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200707.134295344] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200708.134300260] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200709.234305227] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200710.234307079] [controller_server]: Passing new path to controller.
+[controller_server-1] [ERROR] [1791200710.334588455] [controller_server]: Failed to make progress
+[controller_server-1] [WARN] [1791200710.334976981] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-1] [INFO] [1791200710.354218628] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-1] [INFO] [1791200710.354704205] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-1] [INFO] [1791200711.254895809] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200712.254913621] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200713.254918692] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200714.354910424] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [INFO] [1791200715.253918657] [bt_navigator]: Received goal preemption request
+[bt_navigator-5] [INFO] [1791200715.254208885] [bt_navigator]: Begin navigating from current location (1.34, -0.01) to (-0.01, 0.03)
+[controller_server-1] [INFO] [1791200715.354895916] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200716.354894041] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200717.354896165] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200718.454950831] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200719.454893987] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [INFO] [1791200719.903712013] [bt_navigator]: Received goal preemption request
+[bt_navigator-5] [INFO] [1791200719.903788267] [bt_navigator]: Begin navigating from current location (1.34, -0.01) to (1.26, -0.69)
+[controller_server-1] [INFO] [1791200720.454893193] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200721.454892738] [controller_server]: Passing new path to controller.
+[controller_server-1] [ERROR] [1791200722.454988978] [controller_server]: Failed to make progress
+[controller_server-1] [WARN] [1791200722.455131906] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-1] [INFO] [1791200722.473790280] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[planner_server-3] [INFO] [1791200722.473975962] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[controller_server-1] [INFO] [1791200722.584701848] [controller_server]: Received a goal, begin computing control effort.
+[collision_monitor-8] [INFO] [1791200722.621538431] [collision_monitor]: Robot to continue normal operation
+[collision_monitor-8] [INFO] [1791200722.721547737] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[bt_navigator-5] [INFO] [1791200723.284173529] [bt_navigator]: Received goal preemption request
+[bt_navigator-5] [INFO] [1791200723.284700078] [bt_navigator]: Begin navigating from current location (1.34, -0.01) to (0.64, -0.64)
+[controller_server-1] [INFO] [1791200723.684918448] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200724.684901301] [controller_server]: Passing new path to controller.
+[collision_monitor-8] [INFO] [1791200725.261161063] [collision_monitor]: Robot to continue normal operation
+[collision_monitor-8] [INFO] [1791200725.422009016] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[controller_server-1] [INFO] [1791200725.684942465] [controller_server]: Passing new path to controller.
+[collision_monitor-8] [INFO] [1791200725.961203262] [collision_monitor]: Robot to continue normal operation
+[controller_server-1] [INFO] [1791200726.684896434] [controller_server]: Passing new path to controller.
+[planner_server-3] [INFO] [1791200727.563783038] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 183 X 192 at 0.050000 m/pix
+[controller_server-1] [INFO] [1791200727.784928143] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200728.784940903] [controller_server]: Passing new path to controller.
+[planner_server-3] [INFO] [1791200729.563787960] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 202 X 192 at 0.050000 m/pix
+[controller_server-1] [INFO] [1791200729.784969520] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200730.884945129] [controller_server]: Passing new path to controller.
+[planner_server-3] [INFO] [1791200731.563807447] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 205 X 192 at 0.050000 m/pix
+[controller_server-1] [INFO] [1791200731.884936764] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200732.884937599] [controller_server]: Passing new path to controller.
+[collision_monitor-8] [INFO] [1791200733.021285091] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[controller_server-1] [INFO] [1791200733.884936875] [controller_server]: Passing new path to controller.
+[controller_server-1] [INFO] [1791200734.984940166] [controller_server]: Passing new path to controller.
+[bt_navigator-5] [INFO] [1791200735.773762120] [bt_navigator]: Received goal preemption request
+[bt_navigator-5] [INFO] [1791200735.773843924] [bt_navigator]: Begin navigating from current location (0.77, -0.69) to (0.06, 0.07)
+[planner_server-3] [WARN] [1791200735.895130666] [planner_server]: GridBased plugin failed to plan from (0.77, -0.69) to (0.06, 0.07): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1791200735.895219642] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[planner_server-3] [INFO] [1791200735.913802359] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
+[planner_server-3] [WARN] [1791200736.075181931] [planner_server]: GridBased plugin failed to plan from (0.77, -0.69) to (0.06, 0.07): "Failed to create plan with tolerance of: 0.100000"
+[planner_server-3] [WARN] [1791200736.075217464] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
+[bt_navigator-5] [ERROR] [1791200736.114022733] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[behavior_server-4] [INFO] [1791200736.114425457] [behavior_server]: Running spin
+[behavior_server-4] [INFO] [1791200736.114528570] [behavior_server]: Turning 1.57 for spin behavior.
+[controller_server-1] [INFO] [1791200736.184937734] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-1] [INFO] [1791200736.184972018] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[collision_monitor-8] [INFO] [1791200736.261051245] [collision_monitor]: Robot to continue normal operation
+[collision_monitor-8] [INFO] [1791200736.321617712] [collision_monitor]: Robot to approach for 1.200000 seconds away from collision
+[bt_navigator-5] [INFO] [1791200739.434701496] [bt_navigator]: Received goal preemption request
+[bt_navigator-5] [INFO] [1791200739.434788366] [bt_navigator]: Begin navigating from current location (0.77, -0.69) to (0.33, -0.03)
+[bt_navigator-5] [INFO] [1791200743.114731107] [bt_navigator]: Received goal preemption request
+[bt_navigator-5] [INFO] [1791200743.114943358] [bt_navigator]: Begin navigating from current location (0.77, -0.69) to (0.57, -0.07)
+[behavior_server-4] [WARN] [1791200746.114791068] [behavior_server]: Exceeded time allowance before reaching the Spin goal - Exiting Spin
+[behavior_server-4] [WARN] [1791200746.114918159] [behavior_server]: spin failed
+[behavior_server-4] [WARN] [1791200746.114954751] [behavior_server]: [spin] [ActionServer] Aborting handle.
+[behavior_server-4] [INFO] [1791200746.134862739] [behavior_server]: Running wait
+[collision_monitor-8] [INFO] [1791200746.261061472] [collision_monitor]: Robot to continue normal operation
+[behavior_server-4] [INFO] [1791200751.135003992] [behavior_server]: wait completed successfully
+[controller_server-1] [INFO] [1791200751.175033692] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-1] [ERROR] [1791200751.175220336] [tf_help]: Transform data too old when converting from odom to map
+[controller_server-1] [ERROR] [1791200751.175243332] [tf_help]: Data time: 1791200751s 171776673ns, Transform time: 1791200747s 786037352ns
+[controller_server-1] [ERROR] [1791200751.175267989] [controller_server]: Unable to transform robot pose into global plan's frame
+[controller_server-1] [WARN] [1791200751.175304980] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[collision_monitor-8] [WARN] [1791200751.200910386] [collision_monitor]: [scan]: Latest source and current collision monitor node timestamps differ on 3.714870 seconds. Ignoring the source.
+[collision_monitor-8] [WARN] [1791200751.200941453] [collision_monitor]: Robot to stop due to invalid source. Either due to data not published yet, or to lack of new data received within the sensor timeout, or if impossible to transform data to base frame
+[bt_navigator-5] [WARN] [1791200751.204596642] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[bt_navigator-5] [ERROR] [1791200751.204649523] [bt_navigator]: Goal failed
+[collision_monitor-8] [WARN] [1791200751.250825186] [collision_monitor]: [scan]: Latest source and current collision monitor node timestamps differ on 3.764785 seconds. Ignoring the source.
+[collision_monitor-8] [WARN] [1791200751.300945037] [collision_monitor]: [scan]: Latest source and current collision monitor node timestamps differ on 3.814905 seconds. Ignoring the source.
+[collision_monitor-8] [WARN] [1791200751.350979053] [collision_monitor]: [scan]: Latest source and current collision monitor node timestamps differ on 3.864914 seconds. Ignoring the source.
+[collision_monitor-8] [WARN] [1791200751.400911000] [collision_monitor]: [scan]: Latest source and current collision monitor node timestamps differ on 3.914871 seconds. Ignoring the source.
+[collision_monitor-8] [WARN] [1791200751.450838985] [collision_monitor]: [scan]: Latest source and current collision monitor node timestamps differ on 3.964799 seconds. Ignoring the source.
+[planner_server-3] [ERROR] [1791200758.367266831] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200748.351809, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200758.867814515] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200748.832210, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200759.367536790] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200749.331739, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200759.867497392] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200749.851779, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200760.367159546] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200750.331844, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200760.867302985] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200750.831715, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200761.367022278] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200751.331763, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200761.867545480] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200751.832602, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200762.366860319] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200752.351744, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200762.867929535] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200752.832159, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200763.367661934] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200753.351771, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200763.867497238] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200753.831744, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200764.367829523] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200754.351777, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200764.867156493] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200754.851704, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200765.367213206] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200755.331748, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200765.867079200] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200755.832640, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200766.366857588] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200756.351784, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200766.867123190] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200756.851792, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200767.368786458] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200757.351694, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200767.867717212] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200757.851779, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200768.367347346] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200758.351741, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200768.867624959] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200758.851756, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200769.368085667] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200759.352597, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200769.868402843] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200759.832455, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200770.366770984] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200760.351826, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200770.866963851] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200760.831712, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200771.367962568] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200761.351790, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200771.867358002] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200761.831747, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200772.367215139] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200762.351887, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200772.867503334] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200762.852521, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200773.366973302] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200763.331880, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200773.867376735] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200763.851774, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200774.366924452] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200764.332903, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200774.866832781] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200764.832374, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200775.366932744] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200765.351786, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200775.867145550] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200765.832305, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200776.367182595] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200766.351770, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200776.867179515] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200766.851741, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200777.366837694] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200767.331805, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200777.867216378] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200767.851788, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200778.367051493] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200768.352645, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200778.867064904] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200768.832300, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200779.366603684] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200769.332193, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200779.866926245] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200769.852230, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200780.366967583] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200770.331764, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200780.866997050] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200770.851788, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200781.366921146] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200771.332007, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200781.866897497] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200771.851786, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200782.367057908] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200772.332058, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200782.867610526] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200772.831780, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200783.366794435] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200773.351767, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200783.866900785] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200773.832387, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200784.367181150] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200774.351748, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200784.867786389] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200774.851800, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200785.366996319] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200775.351723, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200785.867838166] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200775.851793, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200786.366754347] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200776.332854, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200786.866979075] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200776.832513, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200787.367046521] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200777.351700, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200787.866964544] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200777.831759, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200788.367211848] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200778.331830, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200788.866906268] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200778.832267, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200789.366739811] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200779.331752, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200789.866804588] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200779.831772, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200790.367146134] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200780.351793, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200790.867317234] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200780.851792, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200791.367371416] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200781.351752, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200791.866799810] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200781.831738, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200792.367470464] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200782.331763, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200792.867321099] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200782.851793, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200793.366728975] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200783.331745, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200793.867120571] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200783.851765, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200794.367030538] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200784.331820, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200794.866898459] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200784.831748, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200795.366939011] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200785.351757, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200795.866989101] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200785.831748, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200796.367077893] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200786.351793, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200796.867181659] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200786.851795, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200797.367305199] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200787.351787, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200797.867333815] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200787.851796, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200798.366957595] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200788.331767, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200798.866780788] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200788.831750, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200799.367001779] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200789.351714, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200799.866891712] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200789.831736, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200800.367268621] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200790.331846, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200800.866824030] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200790.831755, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200801.367019815] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200791.332660, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200801.866779722] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200791.851731, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200802.366839371] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200792.351774, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200802.867573631] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200792.831764, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200803.366699893] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200793.351798, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200803.866969684] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200793.831788, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200804.367049074] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200794.331794, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200804.866973829] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200794.851752, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200805.366889446] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200795.331968, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200805.867167098] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200795.851789, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200806.366749303] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200796.331825, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200806.867127426] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200796.831794, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200807.367218379] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200797.351772, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200807.867028533] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200797.832282, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200808.367236240] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200798.351780, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200808.867499634] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200798.831722, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200809.367331243] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200799.351766, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200809.866859672] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200799.851698, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200810.366907857] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200800.331798, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200810.866820863] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200800.851795, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200811.367032692] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200801.331706, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200811.867004295] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200801.831775, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200812.367207386] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200802.331841, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200812.867105427] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200802.851784, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200813.367107818] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200803.331761, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200813.867103570] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200803.851767, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200814.366987963] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200804.331793, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200814.867402270] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200804.831752, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200815.367081479] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200805.351793, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200815.866700680] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200805.831784, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200816.367467128] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200806.331776, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200816.866972408] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200806.851782, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200817.367455571] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200807.332290, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200817.868500433] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200807.851798, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200818.368281318] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200808.351780, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200818.867144910] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200808.851781, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200819.367087244] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200809.351707, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200819.867059766] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200809.832530, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200820.367134979] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200810.351736, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200820.866898830] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200810.831775, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200821.367275619] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200811.351802, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200821.866785004] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200811.831710, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200822.366635762] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200812.351778, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200822.866682305] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200812.832127, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200823.366854632] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200813.351786, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200823.866806932] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200813.831802, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200824.367325450] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200814.331773, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200824.866999765] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200814.851792, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200825.367117677] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200815.331790, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200825.866915269] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200815.851802, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200826.366784595] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200816.351755, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200826.867405784] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200816.831798, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200827.366706515] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200817.331830, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200827.866825459] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200817.832120, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200828.366665803] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200818.332408, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200828.866996839] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200818.831777, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200829.367048974] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200819.331788, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200829.866715060] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200819.851802, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200830.367411508] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200820.351802, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200830.866818140] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200820.851775, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200831.366621784] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200821.331763, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200831.866858425] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200821.851820, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200832.367168348] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200822.331854, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200832.866949071] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200822.851793, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200833.367016563] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200823.331818, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200833.867063127] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200823.851731, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200834.366763871] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200824.351814, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200834.866840044] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200824.831785, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200835.367120414] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200825.351799, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200835.866978435] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200825.851782, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200836.366727388] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200826.331822, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200836.867206585] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200826.851798, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200837.367041523] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200827.331794, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200837.867088655] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200827.851779, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200838.366866996] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200828.351760, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200838.866867500] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200828.851827, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200839.367139522] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200829.351778, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200839.867363807] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200829.831782, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200840.367175832] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200830.351738, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200840.867074444] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200830.831796, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200841.367037865] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200831.351768, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200841.867201646] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200831.831786, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200842.367407198] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200832.351787, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200842.866982663] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200832.851790, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200843.367042288] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200833.331797, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200843.867431376] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200833.851930, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200844.367314864] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200834.331787, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200844.867375908] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200834.851794, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200845.368886066] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200835.331796, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200845.867628705] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200835.851774, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200846.367377667] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200836.351799, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200846.867696093] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200836.831799, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200847.367340868] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200837.351793, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200847.867042523] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200837.831762, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200848.367789078] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200838.331847, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200848.867749733] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200838.851796, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200849.368595921] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200839.331803, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200849.867979395] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200839.851788, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200850.367923211] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200840.331783, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200850.868034306] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200840.851769, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200851.367221318] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200841.351750, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200851.867818953] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200841.851783, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200852.367560078] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200842.351786, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200852.868320366] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200842.831796, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200853.367586991] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200843.351753, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200853.868324380] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200843.831784, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200854.366867703] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200844.351799, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200854.868162223] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200844.851763, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200855.367668973] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200845.351791, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200855.867861115] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200845.831791, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200856.367689486] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200846.331803, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200856.868537869] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200846.851803, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200857.368539263] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200847.331804, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200857.867681551] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200847.851796, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200858.367430465] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200848.351815, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200858.867834355] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200848.832312, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200859.367720552] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200849.351788, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200859.867423910] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200849.831788, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200860.366677071] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200850.351790, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200860.867610758] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200850.831800, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200861.366953038] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200851.331774, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200861.866987329] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200851.851796, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200862.367061466] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200852.351798, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200862.867423740] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200852.831783, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200863.367056171] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200853.331787, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200863.867098637] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200853.831755, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200864.367338241] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200854.331822, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200864.866934510] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200854.831865, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200865.366937358] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200855.331794, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200865.867232425] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200855.831773, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200866.367165237] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200856.331783, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200866.867042436] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200856.831751, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200867.367198112] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200857.351758, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200867.867202542] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200857.831784, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200868.367343824] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200858.331812, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200868.867375365] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200858.831758, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200869.366950253] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200859.331808, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200869.866996283] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200859.852198, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200870.366866265] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200860.331787, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200870.866825626] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200860.831744, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200871.367143495] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200861.351912, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200871.866844089] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200861.831804, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200872.367376293] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200862.331830, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200872.867094047] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200862.831761, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200873.366802708] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200863.351789, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200873.867534154] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200863.831729, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200874.367334616] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200864.351772, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200874.867118251] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200864.831741, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200875.368103195] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200865.351759, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200875.867233867] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200865.851818, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200876.367372724] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200866.331752, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200876.867302591] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200866.852662, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200877.366984538] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200867.351696, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200877.867326414] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200867.851789, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200878.367095297] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200868.331790, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200878.867243524] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200868.831750, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200879.366727854] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200869.351795, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200879.867549318] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200869.831771, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200880.367516451] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200870.351813, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200880.867407994] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200870.851791, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200881.366706124] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200871.331761, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200881.867304460] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200871.851763, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200882.366975704] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200872.331796, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200882.866963245] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200872.851798, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200883.367248407] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200873.331727, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200883.867133273] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200873.831715, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200884.367323977] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200874.331805, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200884.867073820] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200874.851741, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200885.367251416] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200875.331780, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200885.867535139] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200875.831779, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200886.367017201] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200876.351799, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200886.867479354] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200876.831775, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200887.367064981] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200877.351784, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200887.866838876] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200877.831790, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200888.367411996] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200878.331769, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200888.867384231] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200878.851785, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200889.366777866] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200879.331783, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200889.867742999] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200879.851790, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200890.367138037] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200880.351707, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200890.867360189] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200880.831774, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200891.367105682] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200881.351788, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200891.867336103] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200881.831754, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 
+[planner_server-3] [ERROR] [1791200892.367376347] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1791200747.786037 but the earliest data is at time 1791200882.331753, when looking up transform from frame [base_link] to frame [map]
+[planner_server-3] 

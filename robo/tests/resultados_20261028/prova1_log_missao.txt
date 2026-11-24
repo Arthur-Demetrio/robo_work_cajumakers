@@ -1,0 +1,126 @@
+09:10:17.80 alinhador_pa Indo para WS_1: aproximacao em x=2.28 y=0.01 yaw=-3 graus
+09:10:17.82 alinhador_pa Passagem 1: entrada (0.82, -0.26), eixo 0 graus, largura no mapa 0.68 m, preparo a 0.60 m da entrada
+09:10:17.82 alinhador_pa PREPARO 1 (alinhar fora da passagem): x=0.22 y=-0.26 yaw=0 graus
+09:10:17.88 executor_pro [1/11] ir ate WS_1 (tentativa 1)
+09:10:30.42 alinhador_pa PREPARO 1 (alinhar fora da passagem): SUCESSO
+09:10:30.43 alinhador_pa Refinando preparo: 1 graus e 4 cm de diferenca
+09:10:30.43 alinhador_pa PREPARO 1 refinado: x=0.20 y=-0.23 yaw=-1 graus
+09:10:30.51 alinhador_pa PREPARO 1 refinado: SUCESSO
+09:10:30.51 alinhador_pa TRAVESSIA 1: travessia pelo LiDAR ate (1.39, -0.25) + 0.30 m
+09:10:30.87 alinhador_pa TRAVESSIA 1: Paredes vistas (largura 0.84 m): parando na boca para alinhar
+09:10:31.88 alinhador_pa TRAVESSIA 1: Medicao 1: girar -4.7 graus, centro a +6.9 cm, largura 0.84 m
+09:10:34.06 alinhador_pa TRAVESSIA 1: Medicao 2: girar -0.7 graus, centro a -2.0 cm, largura 0.83 m
+09:10:36.04 alinhador_pa TRAVESSIA 1: Medicao 3: girar -4.3 graus, centro a +2.1 cm, largura 0.84 m
+09:10:37.56 alinhador_pa TRAVESSIA 1: Medicao 4: girar +1.5 graus, centro a +2.2 cm, largura 0.84 m
+09:10:37.56 alinhador_pa TRAVESSIA 1: Alinhado: atravessando
+09:10:45.16 alinhador_pa TRAVESSIA 1: Travessia LiDAR concluida
+09:10:45.41 alinhador_pa TRAVESSIA 1 (LiDAR): SUCESSO
+09:10:45.42 alinhador_pa Analise: nenhuma passagem estreita no caminho.
+09:10:45.42 alinhador_pa GOAL FINAL: x=2.28 y=0.01 yaw=-3 graus
+09:10:51.91 alinhador_pa GOAL FINAL: SUCESSO
+09:10:51.91 alinhador_pa ENCOSTAR WS_1: medindo a face da mesa
+09:10:52.98 alinhador_pa ENCOSTAR WS_1: Medicao 1: face a 17 cm (para-choque), girar -1.5 graus, centro -6.6 cm
+09:10:57.61 alinhador_pa ENCOSTAR WS_1: Medicao 2: face a 18 cm (para-choque), girar -2.8 graus, centro -0.5 cm
+09:10:58.89 alinhador_pa ENCOSTAR WS_1: Medicao 3: face a 18 cm (para-choque), girar +1.0 graus, centro -3.4 cm
+09:11:01.29 alinhador_pa ENCOSTAR WS_1: Medicao 4: face a 18 cm (para-choque), girar -0.7 graus, centro -0.3 cm
+09:11:01.29 alinhador_pa ENCOSTAR WS_1: Alinhado com a mesa: avancando ate 8 cm
+09:11:03.32 alinhador_pa ENCOSTAR WS_1: Encostado: frente a 8.7 cm da mesa, -0.1 graus, centro -0.5 cm
+09:11:03.58 alinhador_pa ENCOSTAR WS_1: SUCESSO
+09:11:03.58 alinhador_pa RESULTADO: WS_1 SUCESSO folga=8.7cm ang=-0.1 centro=-0.5cm
+09:11:03.58 executor_pro WS_1: SUCESSO folga=8.7cm ang=-0.1 centro=-0.5cm
+09:11:03.58 executor_pro [2/11] PEGAR objeto(s) 4, 9 em WS_1 (simulado: sem braco)
+09:11:08.59 executor_pro [3/11] ir ate WS_3 (tentativa 1)
+09:11:08.70 alinhador_pa Indo para WS_3: aproximacao em x=1.34 y=1.88 yaw=-177 graus
+09:11:08.70 alinhador_pa SAIR DA MESA: saindo de re 0.25 m (odom) para tentar de novo
+09:11:10.77 alinhador_pa Analise: nenhuma passagem estreita no caminho.
+09:11:10.77 alinhador_pa GOAL FINAL: x=1.34 y=1.88 yaw=-177 graus
+09:11:38.16 alinhador_pa GOAL FINAL: SUCESSO
+09:11:38.16 alinhador_pa ENCOSTAR WS_3: medindo a face da mesa
+09:11:39.18 alinhador_pa ENCOSTAR WS_3: Medicao 1: face a 28 cm (para-choque), girar -5.1 graus, centro +17.5 cm
+09:11:40.70 alinhador_pa ENCOSTAR WS_3: Medicao 2: face a 27 cm (para-choque), girar +0.9 graus, centro +16.1 cm
+09:11:44.88 alinhador_pa ENCOSTAR WS_3: Medicao 3: face a 27 cm (para-choque), girar +1.9 graus, centro nao visto
+09:11:44.88 alinhador_pa ENCOSTAR WS_3: Alinhado com a mesa: avancando ate 8 cm
+09:11:46.04 alinhador_pa ENCOSTAR WS_3: Folga 14.6 cm: pulso 1 de 0.15 s
+09:11:46.71 alinhador_pa ENCOSTAR WS_3: Folga 14.0 cm: pulso 2 de 0.21 s
+09:11:47.47 alinhador_pa ENCOSTAR WS_3: Folga 10.8 cm: pulso 3 de 0.10 s
+09:11:48.08 alinhador_pa ENCOSTAR WS_3: Folga 10.5 cm: pulso 4 de 0.14 s
+09:11:48.73 alinhador_pa ENCOSTAR WS_3: Folga 9.8 cm: pulso 5 de 0.19 s
+09:11:50.40 alinhador_pa ENCOSTAR WS_3: Encostado: frente a 7.1 cm da mesa, 2.5 graus, centro nao medido
+09:11:50.65 alinhador_pa ENCOSTAR WS_3: SUCESSO
+09:11:50.65 alinhador_pa RESULTADO: WS_3 SUCESSO folga=7.1cm ang=+2.5 centro=nd
+09:11:50.65 executor_pro WS_3: SUCESSO folga=7.1cm ang=+2.5 centro=nd
+09:11:50.65 executor_pro [4/11] SOLTAR objeto(s) 9 em WS_3 (simulado: sem braco)
+09:11:55.67 executor_pro [5/11] PEGAR objeto(s) 21 em WS_3 (simulado: sem braco)
+09:12:00.68 executor_pro [6/11] ir ate WS_2 (tentativa 1)
+09:12:00.78 alinhador_pa SAIR DA MESA: saindo de re 0.25 m (odom) para tentar de novo
+09:12:00.78 alinhador_pa Indo para WS_2: aproximacao em x=1.57 y=3.86 yaw=-171 graus
+09:12:02.86 alinhador_pa Analise: nenhuma passagem estreita no caminho.
+09:12:02.86 alinhador_pa GOAL FINAL: x=1.57 y=3.86 yaw=-171 graus
+09:12:25.47 alinhador_pa GOAL FINAL: SUCESSO
+09:12:25.47 alinhador_pa ENCOSTAR WS_2: medindo a face da mesa
+09:12:26.53 alinhador_pa ENCOSTAR WS_2: Medicao 1: face a 37 cm (para-choque), girar -15.2 graus, centro +12.6 cm
+09:12:28.87 alinhador_pa ENCOSTAR WS_2: Medicao 2: face a 34 cm (para-choque), girar +1.6 graus, centro +10.9 cm
+09:12:36.29 alinhador_pa ENCOSTAR WS_2: Medicao 3: face a 36 cm (para-choque), girar +2.8 graus, centro +3.5 cm
+09:12:37.62 alinhador_pa ENCOSTAR WS_2: Medicao 4: face a 36 cm (para-choque), girar -0.3 graus, centro +4.1 cm
+09:12:42.74 alinhador_pa ENCOSTAR WS_2: Medicao 5: face a 37 cm (para-choque), girar +4.1 graus, centro +0.8 cm
+09:12:44.21 alinhador_pa ENCOSTAR WS_2: Medicao 6: face a 37 cm (para-choque), girar -0.5 graus, centro +1.2 cm
+09:12:44.21 alinhador_pa ENCOSTAR WS_2: Alinhado com a mesa: avancando ate 8 cm
+09:12:45.68 alinhador_pa ENCOSTAR WS_2: Folga 19.3 cm: pulso 1 de 0.15 s
+09:12:46.34 alinhador_pa ENCOSTAR WS_2: Folga 18.8 cm: pulso 2 de 0.21 s
+09:12:47.15 alinhador_pa ENCOSTAR WS_2: Folga 15.7 cm: pulso 3 de 0.27 s
+09:12:47.97 alinhador_pa ENCOSTAR WS_2: Folga 11.2 cm: pulso 4 de 0.10 s
+09:12:48.63 alinhador_pa ENCOSTAR WS_2: Folga 11.2 cm: pulso 5 de 0.14 s
+09:12:49.29 alinhador_pa ENCOSTAR WS_2: Folga 10.9 cm: pulso 6 de 0.20 s
+09:12:50.01 alinhador_pa ENCOSTAR WS_2: Folga 9.3 cm: pulso 7 de 0.10 s
+09:12:51.58 alinhador_pa ENCOSTAR WS_2: Encostado: frente a 8.9 cm da mesa, -3.7 graus, centro +4.1 cm
+09:12:51.83 alinhador_pa ENCOSTAR WS_2: SUCESSO
+09:12:51.83 alinhador_pa RESULTADO: WS_2 SUCESSO folga=8.9cm ang=-3.7 centro=+4.1cm
+09:12:51.83 executor_pro WS_2: SUCESSO folga=8.9cm ang=-3.7 centro=+4.1cm
+09:12:51.83 executor_pro [7/11] SOLTAR objeto(s) 4, 21 em WS_2 (simulado: sem braco)
+09:12:56.84 executor_pro [8/11] PEGAR objeto(s) 17 em WS_2 (simulado: sem braco)
+09:13:01.85 executor_pro [9/11] ir ate WS_1 (tentativa 1)
+09:13:01.96 alinhador_pa SAIR DA MESA: saindo de re 0.25 m (odom) para tentar de novo
+09:13:01.96 alinhador_pa Indo para WS_1: aproximacao em x=2.28 y=0.01 yaw=-3 graus
+09:13:04.05 alinhador_pa Analise: nenhuma passagem estreita no caminho.
+09:13:04.05 alinhador_pa GOAL FINAL: x=2.28 y=0.01 yaw=-3 graus
+09:13:43.64 alinhador_pa GOAL FINAL: SUCESSO
+09:13:43.64 alinhador_pa ENCOSTAR WS_1: medindo a face da mesa
+09:13:44.65 alinhador_pa ENCOSTAR WS_1: Medicao 1: face a 29 cm (para-choque), girar -12.2 graus, centro -6.7 cm
+09:13:46.69 alinhador_pa ENCOSTAR WS_1: Medicao 2: face a 27 cm (para-choque), girar +0.7 graus, centro -9.0 cm
+09:13:54.14 alinhador_pa ENCOSTAR WS_1: Medicao 3: face a 29 cm (para-choque), girar -1.8 graus, centro -2.1 cm
+09:13:57.49 alinhador_pa ENCOSTAR WS_1: Medicao 4: face a 30 cm (para-choque), girar -3.9 graus, centro +0.7 cm
+09:13:59.02 alinhador_pa ENCOSTAR WS_1: Medicao 5: face a 29 cm (para-choque), girar +0.8 graus, centro -0.0 cm
+09:13:59.02 alinhador_pa ENCOSTAR WS_1: Alinhado com a mesa: avancando ate 8 cm
+09:14:00.14 alinhador_pa ENCOSTAR WS_1: Folga 18.3 cm: pulso 1 de 0.15 s
+09:14:00.81 alinhador_pa ENCOSTAR WS_1: Folga 17.6 cm: pulso 2 de 0.21 s
+09:14:01.58 alinhador_pa ENCOSTAR WS_1: Folga 16.1 cm: pulso 3 de 0.29 s
+09:14:02.40 alinhador_pa ENCOSTAR WS_1: Folga 12.0 cm: pulso 4 de 0.15 s
+09:14:03.06 alinhador_pa ENCOSTAR WS_1: Folga 11.4 cm: pulso 5 de 0.20 s
+09:14:03.78 alinhador_pa ENCOSTAR WS_1: Folga 9.4 cm: pulso 6 de 0.10 s
+09:14:04.44 alinhador_pa ENCOSTAR WS_1: Folga 9.4 cm: pulso 7 de 0.14 s
+09:14:06.12 alinhador_pa ENCOSTAR WS_1: Encostado: frente a 8.2 cm da mesa, 1.5 graus, centro +2.3 cm
+09:14:06.37 alinhador_pa ENCOSTAR WS_1: SUCESSO
+09:14:06.37 alinhador_pa RESULTADO: WS_1 SUCESSO folga=8.2cm ang=+1.5 centro=+2.3cm
+09:14:06.37 executor_pro WS_1: SUCESSO folga=8.2cm ang=+1.5 centro=+2.3cm
+09:14:06.37 executor_pro [10/11] SOLTAR objeto(s) 17 em WS_1 (simulado: sem braco)
+09:14:11.38 executor_pro [11/11] ir ate FINISH (tentativa 1)
+09:14:11.49 alinhador_pa Indo para FINISH: aproximacao em x=0.19 y=0.09 yaw=20 graus
+09:14:11.49 alinhador_pa SAIR DA MESA: saindo de re 0.25 m (odom) para tentar de novo
+09:14:13.57 alinhador_pa Passagem 1: entrada (1.45, -0.24), eixo 180 graus, largura no mapa 0.68 m, preparo a 0.60 m da entrada
+09:14:13.57 alinhador_pa PREPARO 1 (alinhar fora da passagem): x=2.05 y=-0.24 yaw=180 graus
+09:14:25.25 alinhador_pa PREPARO 1 (alinhar fora da passagem): SUCESSO
+09:14:25.26 alinhador_pa TRAVESSIA 1: travessia pelo LiDAR ate (0.80, -0.24) + 0.30 m
+09:14:25.52 alinhador_pa TRAVESSIA 1: Paredes vistas (largura 0.83 m): parando na boca para alinhar
+09:14:26.53 alinhador_pa TRAVESSIA 1: Medicao 1: girar +7.6 graus, centro a +2.5 cm, largura 0.83 m
+09:14:28.41 alinhador_pa TRAVESSIA 1: Medicao 2: girar -1.2 graus, centro a +2.2 cm, largura 0.82 m
+09:14:30.24 alinhador_pa TRAVESSIA 1: Medicao 3: girar +0.8 graus, centro a -2.2 cm, largura 0.82 m
+09:14:31.91 alinhador_pa TRAVESSIA 1: Medicao 4: girar -2.6 graus, centro a +2.9 cm, largura 0.83 m
+09:14:33.29 alinhador_pa TRAVESSIA 1: Medicao 5: girar +1.2 graus, centro a +2.0 cm, largura 0.85 m
+09:14:33.29 alinhador_pa TRAVESSIA 1: Alinhado: atravessando
+09:14:41.84 alinhador_pa TRAVESSIA 1: Travessia LiDAR concluida
+09:14:42.10 alinhador_pa TRAVESSIA 1 (LiDAR): SUCESSO
+09:14:42.11 alinhador_pa Analise: nenhuma passagem estreita no caminho.
+09:14:42.11 alinhador_pa GOAL FINAL: x=0.19 y=0.09 yaw=20 graus
+09:17:22.56 alinhador_pa GOAL FINAL: SUCESSO
+09:17:22.56 executor_pro FINISH: SUCESSO chegou (ponto sem mesa)
+09:17:22.56 alinhador_pa RESULTADO: FINISH SUCESSO chegou (ponto sem mesa)

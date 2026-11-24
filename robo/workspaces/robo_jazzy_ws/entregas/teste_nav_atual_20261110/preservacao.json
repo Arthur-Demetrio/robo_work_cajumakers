@@ -1,0 +1,11 @@
+{
+  "backup": "/home/marcos/robo_jazzy_ws/backups/integracao_teste_nav_20261110_100823",
+  "arquivos_preexistentes_modificados": [],
+  "novos_arquivos": [
+    "src/robo_navigation/launch/navigation_test.launch.py",
+    "src/robo_navigation/config/nav2_params_early_test.yaml",
+    "src/robo_navigation/config/nav2_params_dwb_test.yaml",
+    "src/robo_navigation/test/test_navigation_profiles.py",
+    "src/robo_navigation/behavior_trees/navigate_to_pose_early_test.xml"
+  ]
+}

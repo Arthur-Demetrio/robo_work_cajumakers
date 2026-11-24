@@ -1,0 +1,95 @@
+Starting >>> robo_navigation
+UpdateCTestConfiguration  from :/home/marcos/robo_jazzy_ws/build/robo_navigation/CTestConfiguration.ini
+Parse Config file:/home/marcos/robo_jazzy_ws/build/robo_navigation/CTestConfiguration.ini
+   Site: marcos-ThinkPad-E14-Gen-2
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20261109-1346 - Experimental
+UpdateCTestConfiguration  from :/home/marcos/robo_jazzy_ws/build/robo_navigation/CTestConfiguration.ini
+Parse Config file:/home/marcos/robo_jazzy_ws/build/robo_navigation/CTestConfiguration.ini
+Test project /home/marcos/robo_jazzy_ws/build/robo_navigation
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: lateral_ws
+
+1: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/lateral_ws.xunit.xml" "--package-name" "robo_navigation" "--output-file" "/home/marcos/robo_jazzy_ws/build/robo_navigation/ament_cmake_pytest/lateral_ws.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/marcos/robo_jazzy_ws/src/robo_navigation/test/test_lateral_ws.py" "-o" "cache_dir=/home/marcos/robo_jazzy_ws/build/robo_navigation/ament_cmake_pytest/lateral_ws/.cache" "--junit-xml=/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/lateral_ws.xunit.xml" "--junit-prefix=robo_navigation"
+1: Working Directory: /home/marcos/robo_jazzy_ws/build/robo_navigation
+1: Test timeout computed to be: 60
+1: -- run_test.py: invoking following command in '/home/marcos/robo_jazzy_ws/build/robo_navigation':
+1:  - /usr/bin/python3 -u -m pytest /home/marcos/robo_jazzy_ws/src/robo_navigation/test/test_lateral_ws.py -o cache_dir=/home/marcos/robo_jazzy_ws/build/robo_navigation/ament_cmake_pytest/lateral_ws/.cache --junit-xml=/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/lateral_ws.xunit.xml --junit-prefix=robo_navigation
+1: ============================= test session starts ==============================
+1: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+1: cachedir: build/robo_navigation/ament_cmake_pytest/lateral_ws/.cache
+1: rootdir: /home/marcos/robo_jazzy_ws
+1: plugins: launch-testing-3.4.11, ament-xmllint-0.17.5, ament-pep257-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, launch-testing-ros-0.26.12, colcon-core-0.20.1, typeguard-4.1.5, cov-4.1.0
+1: collected 25 items
+1: 
+1: ../../src/robo_navigation/test/test_lateral_ws.py ...................... [ 88%]
+1: ...                                                                      [100%]
+1: 
+1: - generated xml file: /home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/lateral_ws.xunit.xml -
+1: ============================== 25 passed in 0.38s ==============================
+1: -- run_test.py: return code 0
+1: -- run_test.py: verify result file '/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/lateral_ws.xunit.xml'
+1/3 Test #1: lateral_ws .......................   Passed    0.80 sec
+test 2
+    Start 2: giro_frontal
+
+2: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/giro_frontal.xunit.xml" "--package-name" "robo_navigation" "--output-file" "/home/marcos/robo_jazzy_ws/build/robo_navigation/ament_cmake_pytest/giro_frontal.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/marcos/robo_jazzy_ws/src/robo_navigation/test/test_giro_frontal.py" "-o" "cache_dir=/home/marcos/robo_jazzy_ws/build/robo_navigation/ament_cmake_pytest/giro_frontal/.cache" "--junit-xml=/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/giro_frontal.xunit.xml" "--junit-prefix=robo_navigation"
+2: Working Directory: /home/marcos/robo_jazzy_ws/build/robo_navigation
+2: Test timeout computed to be: 60
+2: -- run_test.py: invoking following command in '/home/marcos/robo_jazzy_ws/build/robo_navigation':
+2:  - /usr/bin/python3 -u -m pytest /home/marcos/robo_jazzy_ws/src/robo_navigation/test/test_giro_frontal.py -o cache_dir=/home/marcos/robo_jazzy_ws/build/robo_navigation/ament_cmake_pytest/giro_frontal/.cache --junit-xml=/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/giro_frontal.xunit.xml --junit-prefix=robo_navigation
+2: ============================= test session starts ==============================
+2: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+2: cachedir: build/robo_navigation/ament_cmake_pytest/giro_frontal/.cache
+2: rootdir: /home/marcos/robo_jazzy_ws
+2: plugins: launch-testing-3.4.11, ament-xmllint-0.17.5, ament-pep257-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, launch-testing-ros-0.26.12, colcon-core-0.20.1, typeguard-4.1.5, cov-4.1.0
+2: collected 46 items
+2: 
+2: ../../src/robo_navigation/test/test_giro_frontal.py .................... [ 43%]
+2: ..........................                                               [100%]
+2: 
+2: - generated xml file: /home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/giro_frontal.xunit.xml -
+2: ============================== 46 passed in 0.57s ==============================
+2: -- run_test.py: return code 0
+2: -- run_test.py: verify result file '/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/giro_frontal.xunit.xml'
+2/3 Test #2: giro_frontal .....................   Passed    0.99 sec
+test 3
+    Start 3: giro_integrado
+
+3: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/giro_integrado.xunit.xml" "--package-name" "robo_navigation" "--output-file" "/home/marcos/robo_jazzy_ws/build/robo_navigation/ament_cmake_pytest/giro_integrado.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/marcos/robo_jazzy_ws/src/robo_navigation/test/test_integrado_t.py" "-o" "cache_dir=/home/marcos/robo_jazzy_ws/build/robo_navigation/ament_cmake_pytest/giro_integrado/.cache" "--junit-xml=/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/giro_integrado.xunit.xml" "--junit-prefix=robo_navigation"
+3: Working Directory: /home/marcos/robo_jazzy_ws/build/robo_navigation
+3: Test timeout computed to be: 120
+3: -- run_test.py: invoking following command in '/home/marcos/robo_jazzy_ws/build/robo_navigation':
+3:  - /usr/bin/python3 -u -m pytest /home/marcos/robo_jazzy_ws/src/robo_navigation/test/test_integrado_t.py -o cache_dir=/home/marcos/robo_jazzy_ws/build/robo_navigation/ament_cmake_pytest/giro_integrado/.cache --junit-xml=/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/giro_integrado.xunit.xml --junit-prefix=robo_navigation
+3: ============================= test session starts ==============================
+3: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+3: cachedir: build/robo_navigation/ament_cmake_pytest/giro_integrado/.cache
+3: rootdir: /home/marcos/robo_jazzy_ws
+3: plugins: launch-testing-3.4.11, ament-xmllint-0.17.5, ament-pep257-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, launch-testing-ros-0.26.12, colcon-core-0.20.1, typeguard-4.1.5, cov-4.1.0
+3: collected 22 items
+3: 
+3: ../../src/robo_navigation/test/test_integrado_t.py ..................... [ 95%]
+3: .                                                                        [100%]
+3: 
+3: - generated xml file: /home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/giro_integrado.xunit.xml -
+3: ============================== 22 passed in 1.52s ==============================
+3: -- run_test.py: return code 0
+3: -- run_test.py: verify result file '/home/marcos/robo_jazzy_ws/build/robo_navigation/test_results/robo_navigation/giro_integrado.xunit.xml'
+3/3 Test #3: giro_integrado ...................   Passed    1.94 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Label Time Summary:
+pytest    =   3.72 sec*proc (3 tests)
+
+Total Test time (real) =   3.73 sec
+Finished <<< robo_navigation [3.75s]
+
+Summary: 1 package finished [3.94s]

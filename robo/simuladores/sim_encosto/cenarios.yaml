@@ -1,0 +1,54 @@
+# Cenarios da bancada de encosto.
+#   dist: base_link -> face no inicio (m; a pose de aproximacao do cadastro fica a 0,60)
+#   lado: robo a esquerda (+) / direita (-) do centro da face (m)
+#   ang:  rumo do robo - rumo da face (graus)
+#   obstaculos: lista de [n, t] no quadro da face (n < 0 = na frente da face), caixa 10x10 cm
+#   modelo: sobrescreve MODELO_PADRAO da ponte_sim.py
+#   esperado: sucesso | falha (deve parar/abortar) | seguro (qualquer desfecho sem colisao/sucesso falso)
+degrau: 0.017   # metade esquerda da WS 1,7 cm mais funda (degraus medidos na WS_1)
+
+cenarios:
+  - {nome: centrado,      descricao: "WS_1 de frente, centrado, 0,60 m"}
+  - {nome: lado_p05,      lado: 0.05,  descricao: "5 cm a esquerda"}
+  - {nome: lado_m05,      lado: -0.05, descricao: "5 cm a direita"}
+  - {nome: lado_p10,      lado: 0.10,  descricao: "10 cm a esquerda (precisa deslizar)"}
+  - {nome: lado_m10,      lado: -0.10, descricao: "10 cm a direita (precisa deslizar)"}
+  - {nome: lado_m15,      lado: -0.15, descricao: "15 cm a direita (teste do relatorio)"}
+  - {nome: lado_p30,      lado: 0.30,  descricao: "30 cm a esquerda (limite JANELA_LARGA)"}
+  - {nome: ang_p10,       ang: 10,     descricao: "girado +10 graus"}
+  - {nome: ang_m10,       ang: -10,    descricao: "girado -10 graus"}
+  - {nome: lado_p10_ang_m8, lado: 0.10, ang: -8, descricao: "10 cm de lado e -8 graus"}
+  - {nome: perto_045,     dist: 0.45,  esperado: seguro,
+     descricao: "comeca a 0,45 m: a face ja chega partida pela zona cega (fase A nao reconhece)"}
+  - {nome: obst_frente,   obstaculos: [[-0.12, 0.0]], esperado: falha,
+     descricao: "caixa 10x10 entre o robo e a face (5,5 cm a frente do para-choque no inicio)"}
+  - {nome: ponta_tapada,  obstaculos: [[-0.12, 0.42]], esperado: seguro,
+     descricao: "caixa tapando a ponta esquerda da face (fora do corredor do robo)"}
+  - {nome: lado_p10_sem_deslize, lado: 0.10, modelo: {k_avanco: 0.0, fator_lado: 1.0, deriva_lado: 0.0},
+     descricao: "controle: 10 cm de lado com motor ideal de lado"}
+  - {nome: lado_p10_deslize_re, lado: 0.10, modelo: {sinal_avanco: -1.0},
+     descricao: "10 cm de lado, o lado vira re em vez de avanco"}
+  - {nome: lado_m10_k05,  lado: -0.10, modelo: {k_avanco: 0.5},
+     descricao: "10 cm de lado, deslize pior (k 0,5)"}
+  - {nome: raios_perdidos, modelo: {perda_raio: 0.15, perda_rajada: 0.4},
+     descricao: "centrado, 15% dos raios inf + rajadas"}
+  - {nome: imu_falhando,  lado: 0.05, modelo: {imu_falha_andando: 0.5},
+     descricao: "5 cm de lado, IMU com buracos de 0,6 s andando"}
+  - {nome: mapa_10g,      modelo: {erro_mapa: [0.0, 0.0, 0.1745]}, esperado: seguro,
+     descricao: "localizacao 10 graus fora (mesa centrada de verdade)"}
+  - {nome: mapa_y15,      modelo: {erro_mapa: [0.0, 0.15, 0.0]}, esperado: seguro,
+     descricao: "localizacao 15 cm de lado fora"}
+  - {nome: ws2_centrado,  ws: WS_2,    descricao: "WS_2 centrado"}
+  - {nome: ws2_lado_m10,  ws: WS_2, lado: -0.10, descricao: "WS_2 10 cm a direita"}
+
+  # --- reproducao da missao32 (14:09), medida nos scans reais: deslize lateral virando avanco forte ---
+  # T3: centro +32 cm (robo a direita), andou 17 cm de lado e avancou 13 cm (k ~0,8)
+  # T4: centro +14 cm, andou 9 cm de lado e avancou 12 cm (k ~1,3); ambos chegaram a ~0,46 m da face
+  - {nome: m32_t3, lado: -0.32, dist: 0.59, modelo: {k_avanco: 0.8}, esperado: seguro,
+     descricao: "missao32 T3: 32 cm de lado, deslize k 0,8"}
+  - {nome: m32_t4, lado: -0.14, dist: 0.58, modelo: {k_avanco: 1.3}, esperado: seguro,
+     descricao: "missao32 T4: 14 cm de lado, deslize k 1,3"}
+  - {nome: m32_t4_k08, lado: -0.14, dist: 0.58, modelo: {k_avanco: 0.8}, esperado: seguro,
+     descricao: "missao32 T4 com deslize k 0,8"}
+  - {nome: m32_lado_m20_k1, lado: -0.20, dist: 0.58, modelo: {k_avanco: 1.0}, esperado: seguro,
+     descricao: "20 cm de lado, deslize k 1,0"}

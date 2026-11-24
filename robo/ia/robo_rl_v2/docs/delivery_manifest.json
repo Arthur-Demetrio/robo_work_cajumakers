@@ -1,0 +1,19 @@
+{
+  "robo_rl_v2/control.py": "2148474e39231ea5b6e48a93f8df9aa205a33984bfb5977adba3e5d9560fa598",
+  "robo_rl_v2/replay.py": "077924e935d5506c277444e0cde92fda6c2156fa894c12c25870a3a714ae42ec",
+  "robo_rl_v2/train.py": "eddda4819f78c3abced2e6c452fdb5b656ad8d3573cf2182d973609a52147ecd",
+  "robo_rl_v2/visual.py": "4e846a40873d5b78d6b1a844ae0e6d14a725d34853dab71224ba0e22c98d4c29",
+  "robo_rl_v2/report.py": "c3445702f4ba6e65b6b37c45813c90d42f11402984f615529163e19fdfd10ce4",
+  "robo_rl_v2/__init__.py": "b39d9dff3e3fea61cde0461eb6acb8f78a93bf3c8ab2a397dc725c19ce4fba1a",
+  "robo_rl_v2/evaluate.py": "3b0508d49e6517242a7008aa294844c885ab559998dc330f960eb76383943235",
+  "robo_rl_v2/env.py": "1974a382d9d5d28feb0244b25dd759ba82f42b735b160fc0b06f50801bd267d0",
+  "robo_rl_v2/maps.py": "e322bfda66ff86ce78848ec8ad02c713b384855f54e235c1668e71d06c7fd612",
+  "robo_rl_v2/events.py": "4b56e481f4a42ae54f467e1433dabefae90f15af33d1eb2c92a46bffd15fb66e",
+  "assets/config/nav2_params.yaml": "a8c770f54f5f232298a4bd08891c481e6a370f726cd31adb8bc0ed6c305821d7",
+  "assets/config/lidar.yaml": "23cb76d98e67db0fa34462eae38d7a7a157a640a23b63e4d042115e3510b8df1",
+  "assets/maps/service_areas_arena_04-11_0917.yaml": "1eb9542a24ea86119c69a31402ba02b05727a31b1c94a1c40666b5fd024bc0b8",
+  "assets/maps/arena_04-11_0917.yaml": "36bc3369e6128d29585a81e5006169c9eb835505294589fda63c854c0e71be48",
+  "assets/maps/mapa_atual.yaml": "53ce6a78a0ce113c18fa7b44da017e8faace86729f1117f11fe0027b0faf1ffc",
+  "assets/maps/mapa_atual.pgm": "d43154f4a2bea32ec3515975df5a25afcc06c3edcc54bd3fcb0909703e0072e7",
+  "assets/maps/arena_04-11_0917.pgm": "1e4b72f76eeb8ffa62236d4e889546d98ae8907b7d149a77d1b23757b73e80bd"
+}

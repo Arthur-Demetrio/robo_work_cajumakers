@@ -1,0 +1,35 @@
+[
+  {
+    "group": "level_1",
+    "seed": 2300010004,
+    "success": false,
+    "collision": false,
+    "elapsed": 240.0,
+    "distance": 2.684897023247021,
+    "final_est_error": 8.124882695208266,
+    "estimated_goal_distance": 5.4404257811996,
+    "reward": -66.65441391822536
+  },
+  {
+    "group": "level_2",
+    "seed": 2300020012,
+    "success": false,
+    "collision": true,
+    "elapsed": 73.44,
+    "distance": 2.213966685945647,
+    "final_est_error": 4.012277244796917,
+    "estimated_goal_distance": 2.7257701076294674,
+    "reward": -88.65619333507576
+  },
+  {
+    "group": "level_4",
+    "seed": 2300040011,
+    "success": false,
+    "collision": true,
+    "elapsed": 39.36,
+    "distance": 3.8681248970101096,
+    "final_est_error": 1.835776066986104,
+    "estimated_goal_distance": 4.0309849499423045,
+    "reward": -145.69099474711368
+  }
+]

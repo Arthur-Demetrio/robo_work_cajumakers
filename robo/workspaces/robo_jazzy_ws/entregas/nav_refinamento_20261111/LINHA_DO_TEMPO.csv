@@ -1,0 +1,285 @@
+hora,t_rel,fonte,evento,detalhe,classe,prova
+12:33:31.46,11.2,operador,GOAL_NOVO,Novo goal: x=1.57 y=4.49 yaw=5 graus,operador,rosout alinhador_passagem alinhador_passagem.py:2603
+12:33:32.20,11.94,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): x=0.15 y=-0.18 yaw=0 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:3332
+12:33:32.23,11.97,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:33:32.93,12.67,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:33:36.68,16.42,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): andei 22 cm para dir,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:33:37.78,17.52,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): andei 5 cm para frente,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:33:38.44,18.18,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): angulo 0 graus (erro 5.0),autonomo,rosout alinhador_passagem alinhador_passagem.py:3165
+12:33:38.71,18.45,alinhador,SUCESSO_ETAPA,PREPARO 1 (alinhar fora da passagem): SUCESSO (11 cm e 5 graus do preparo),autonomo,rosout alinhador_passagem alinhador_passagem.py:3365
+12:33:39.34,19.08,alinhador,ROTA_MAPA_DECISAO,Planner: 10.5 m; mapa: 6.1 m: sigo a rota do mapa,autonomo,rosout alinhador_passagem alinhador_passagem.py:3960
+12:33:39.46,19.2,alinhador,TRAVESSIA,"TRAVESSIA 1: travessia pelo LiDAR ate (1.42, -0.18) + 0.00 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3386
+12:33:40.24,19.98,alinhador,TRAVESSIA,TRAVESSIA 1: Paredes vistas (largura 0.91 m): parando na boca para alinhar,autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:33:41.19,20.93,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 1: girar +2.7 graus, centro a -11.9 cm, largura 0.89 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:33:57.38,37.12,alinhador,TRAVESSIA,TRAVESSIA 1: So vejo uma parede: usando a largura de 0.90 m para achar o centro,autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:33:57.38,37.12,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 2: girar +0.0 graus, centro a +10.2 cm, largura 0.90 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:34:03.00,42.74,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 3: girar +4.8 graus, centro a -0.7 cm, largura 0.82 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:34:04.66,44.4,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 4: girar +0.4 graus, centro a -1.9 cm, largura 0.82 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:34:04.66,44.4,alinhador,TRAVESSIA,TRAVESSIA 1: Alinhado: atravessando,autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:34:18.22,57.96,alinhador,TRAVESSIA,TRAVESSIA 1: Parei no cruzamento pelo LiDAR: parede a 14 cm do para-choque (alvo 12 cm; pelo mapa faltavam +4 cm),autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:34:18.48,58.23,alinhador,SUCESSO_ETAPA,TRAVESSIA 1 (LiDAR): SUCESSO,autonomo,rosout alinhador_passagem alinhador_passagem.py:3479
+12:34:18.49,58.23,alinhador,CURVA,"CURVA 1: saindo de lado para a ESQUERDA ate (1.63, 1.06) + 0.60 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3686
+12:34:18.49,58.24,alinhador,CURVA,CURVA 1: Cruzamento: saindo de lado para a ESQUERDA,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:21.01,60.75,alinhador,CURVA,CURVA 1: Sem parede do corredor novo agora: deslizando com o rumo atual,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:25.20,64.94,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:34:25.35,65.09,alinhador,PARADA_SEGURANCA,CURVA 1: PARADA DE SEGURANCA: folga frente 4 / tras 17 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:26.22,65.96,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro -6.2 cm a frente (1 parede(s)), folga frente 4 / tras 18 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:26.22,65.97,alinhador,CURVA,CURVA 1: Perto da parede: afastando -4.0 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:27.51,67.25,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro -4.4 cm a frente (1 parede(s)), folga frente 6 / tras 15 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:27.63,67.37,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:34:29.09,68.83,alinhador,CM_SEGURA_ALINHADOR,"CURVA 1: Collision Monitor segurando em ""deslizar"": parando para medir de novo",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:30.02,69.76,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro -4.3 cm a frente (1 parede(s)), folga frente 6 / tras 15 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:30.19,69.94,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:34:31.63,71.37,alinhador,CM_SEGURA_ALINHADOR,"CURVA 1: Collision Monitor segurando em ""deslizar"": parando para medir de novo",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:32.45,72.19,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro -4.5 cm a frente (1 parede(s)), folga frente 6 / tras 15 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:32.60,72.34,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:34:34.05,73.79,alinhador,CM_SEGURA_ALINHADOR,"CURVA 1: Collision Monitor segurando em ""deslizar"": parando para medir de novo",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:34.97,74.71,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro -4.3 cm a frente (1 parede(s)), folga frente 6 / tras 15 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:35.13,74.87,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:34:36.58,76.32,alinhador,CURVA,CURVA 1: Saida lateral abortada: Collision Monitor bloqueou 4 vezes,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:34:36.84,76.58,alinhador,FALHA_ALINHADOR,CURVA 1: FALHOU - Collision Monitor bloqueou 4 vezes,falha autonoma,rosout alinhador_passagem alinhador_passagem.py:3752
+12:34:36.84,76.58,alinhador,PEDE_AJUDA,Nao consegui sair de lado pelo corredor novo (curva 1). Parei; ajude o robo e mande o goal de novo.,falha autonoma,rosout alinhador_passagem alinhador_passagem.py:4087
+12:34:56.11,95.85,operador,GOAL_NOVO,Novo goal: x=1.49 y=1.95 yaw=5 graus,operador,rosout alinhador_passagem alinhador_passagem.py:2603
+12:34:56.58,96.32,alinhador,PRE_GIRO_DECIDIDO,GOAL FINAL (virar para o caminho): o caminho sai a +76 graus da frente: viro antes do Nav2,autonomo,rosout alinhador_passagem alinhador_passagem.py:2801
+12:35:07.22,106.96,alinhador,SUCESSO_ETAPA,GOAL FINAL (virar para o caminho): SUCESSO,autonomo,rosout alinhador_passagem alinhador_passagem.py:2804
+12:35:07.23,106.97,alinhador,GOAL_NAV2_ENVIADO,GOAL FINAL: x=1.49 y=1.95 yaw=5 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:2839
+12:35:07.23,106.97,nav2,BT_NAVIGATOR,"Begin navigating from current location (1.42, -0.08) to (1.49, 1.95)",info,rosout bt_navigator navigate_to_pose.cpp:252
+12:35:07.26,107.0,nav2,DWB,No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.,autonomo,rosout controller_server controller_server.cpp:441
+12:35:08.48,108.22,nav2,DWB,Could not find a legal trajectory: No valid trajectories out of 352! ,autonomo,rosout controller_server controller_server.cpp:677
+12:35:08.53,108.27,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:35:10.63,110.37,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:35:10.66,110.4,nav2,BT_NAVIGATOR,[navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.,info,rosout bt_navigator simple_action_server.hpp:603
+12:35:10.66,110.4,nav2,BT_NAVIGATOR,Goal canceled,info,rosout bt_navigator bt_action_server_impl.hpp:351
+12:35:10.66,110.4,nav2,NAV2_GOAL_CANCELED,goal bec37b72,cancel (alinhador/operador),/navigate_to_pose/_action/status
+12:35:10.70,110.44,alinhador,ALINHADOR_ASSUME_CORREDOR,GOAL FINAL: interrompido para alinhar,autonomo (cancel interno),rosout alinhador_passagem alinhador_passagem.py:2906
+12:35:10.71,110.45,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): x=1.52 y=-0.20 yaw=86 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:3332
+12:35:10.83,110.57,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:35:11.96,111.7,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): Collision Monitor travou o giro,autonomo,rosout alinhador_passagem alinhador_passagem.py:3223
+12:35:12.24,111.98,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): girando 7 graus a quina pegaria: primeiro 10 cm para tras,autonomo,rosout alinhador_passagem alinhador_passagem.py:3189
+12:35:13.70,113.44,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): andei 9 cm para tras,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:35:14.99,114.73,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): angulo 86 graus (erro 2.3),autonomo,rosout alinhador_passagem alinhador_passagem.py:3165
+12:35:15.81,115.55,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): andei 0 cm para esq,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:35:17.92,117.66,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): andei 16 cm para tras,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:35:17.92,117.66,alinhador,SUCESSO_ETAPA,PREPARO 1 (alinhar fora da passagem): SUCESSO (4 cm e 3 graus do preparo),autonomo,rosout alinhador_passagem alinhador_passagem.py:3365
+12:35:18.31,118.05,alinhador,TRAVESSIA,"TRAVESSIA 1: travessia pelo LiDAR ate (1.62, 1.03) + 0.30 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3386
+12:35:18.81,118.55,alinhador,TRAVESSIA,TRAVESSIA 1: Paredes vistas (largura 0.78 m): parando na boca para alinhar,autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:19.78,119.53,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 1: girar +10.6 graus, centro a -7.5 cm, largura 0.79 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:23.33,123.07,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:35:24.45,124.19,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 2: girar +9.9 graus, centro a -5.3 cm, largura 0.79 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:26.06,125.8,alinhador,CM_SEGURA_ALINHADOR,"TRAVESSIA 1: Collision Monitor segurando em ""girar"": parando para medir de novo",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:27.12,126.86,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 3: girar +10.0 graus, centro a -5.3 cm, largura 0.79 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:28.09,127.83,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:35:29.66,129.4,alinhador,CM_SEGURA_ALINHADOR,"TRAVESSIA 1: Collision Monitor segurando em ""deslocar"": parando para medir de novo",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:30.72,130.46,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 4: girar +8.4 graus, centro a -4.1 cm, largura 0.78 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:32.33,132.07,alinhador,CM_SEGURA_ALINHADOR,"TRAVESSIA 1: Collision Monitor segurando em ""girar"": parando para medir de novo",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:33.39,133.13,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 5: girar +8.4 graus, centro a -4.1 cm, largura 0.78 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:35.00,134.74,alinhador,CM_SEGURA_ALINHADOR,"TRAVESSIA 1: Collision Monitor segurando em ""deslocar"": parando para medir de novo",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:36.03,135.77,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 6: girar +8.8 graus, centro a -4.4 cm, largura 0.78 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:37.60,137.34,alinhador,TRAVESSIA,TRAVESSIA 1: Travessia LiDAR abortada: Collision Monitor bloqueou 5 vezes,autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:37.88,137.62,alinhador,FALHA_ALINHADOR,TRAVESSIA 1 (LiDAR): FALHOU - Collision Monitor bloqueou 5 vezes,falha autonoma,rosout alinhador_passagem alinhador_passagem.py:3479
+12:35:37.89,137.63,alinhador,PREPARO,PREPARO 1 (2a tentativa): x=1.52 y=-0.20 yaw=86 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:3332
+12:35:39.97,139.71,alinhador,PREPARO,PREPARO 1 (2a tentativa): andei 15 cm para frente,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:35:39.98,139.72,alinhador,SUCESSO_ETAPA,PREPARO 1 (2a tentativa): SUCESSO (9 cm e 3 graus do preparo),autonomo,rosout alinhador_passagem alinhador_passagem.py:3365
+12:35:39.98,139.72,alinhador,TRAVESSIA,"TRAVESSIA 1 (2a tentativa): travessia pelo LiDAR ate (1.62, 1.03) + 0.30 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3386
+12:35:40.31,140.05,alinhador,TRAVESSIA,TRAVESSIA 1 (2a tentativa): Paredes vistas (largura 0.78 m): parando na boca para alinhar,autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:41.34,141.08,alinhador,TRAVESSIA,"TRAVESSIA 1 (2a tentativa): Medicao 1: girar +9.3 graus, centro a -1.8 cm, largura 0.78 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:43.48,143.22,alinhador,TRAVESSIA,"TRAVESSIA 1 (2a tentativa): Medicao 2: girar +0.6 graus, centro a -2.7 cm, largura 0.77 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:45.30,145.04,alinhador,TRAVESSIA,"TRAVESSIA 1 (2a tentativa): Medicao 3: girar +0.1 graus, centro a -1.1 cm, largura 0.77 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:45.30,145.04,alinhador,TRAVESSIA,TRAVESSIA 1 (2a tentativa): Alinhado: atravessando,autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:35:57.09,156.83,operador,GOAL_NOVO_PREEMPCAO,Novo goal: x=1.69 y=4.71 yaw=5 graus,operador (troca intencional),rosout alinhador_passagem alinhador_passagem.py:2603
+12:35:57.36,157.1,alinhador,GOAL_SUBSTITUIDO,Goal substituido por um novo.,"operador (preempcao, nao e falha)",rosout alinhador_passagem alinhador_passagem.py:3925
+12:35:58.02,157.76,alinhador,GOAL_NAV2_ENVIADO,GOAL FINAL: x=1.69 y=4.71 yaw=5 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:2839
+12:35:58.02,157.76,nav2,BT_NAVIGATOR,"Begin navigating from current location (1.58, 0.79) to (1.69, 4.71)",info,rosout bt_navigator navigate_to_pose.cpp:252
+12:36:27.64,187.38,operador,GOAL_NOVO_PREEMPCAO,Novo goal: x=1.67 y=1.39 yaw=5 graus,operador (troca intencional),rosout alinhador_passagem alinhador_passagem.py:2603
+12:36:27.65,187.39,nav2,BT_NAVIGATOR,[navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.,info,rosout bt_navigator simple_action_server.hpp:603
+12:36:27.65,187.39,nav2,BT_NAVIGATOR,Goal canceled,info,rosout bt_navigator bt_action_server_impl.hpp:351
+12:36:27.65,187.39,nav2,NAV2_GOAL_CANCELED,goal 10baf62b,cancel (alinhador/operador),/navigate_to_pose/_action/status
+12:36:27.68,187.42,alinhador,GOAL_SUBSTITUIDO,Goal substituido por um novo.,"operador (preempcao, nao e falha)",rosout alinhador_passagem alinhador_passagem.py:3925
+12:36:28.24,187.98,alinhador,PRE_GIRO_DECIDIDO,GOAL FINAL (virar para o caminho): o caminho sai a -119 graus da frente: viro antes do Nav2,autonomo,rosout alinhador_passagem alinhador_passagem.py:2801
+12:36:35.60,195.34,alinhador,SUCESSO_ETAPA,GOAL FINAL (virar para o caminho): SUCESSO,autonomo,rosout alinhador_passagem alinhador_passagem.py:2804
+12:36:35.60,195.34,alinhador,GOAL_NAV2_ENVIADO,GOAL FINAL: x=1.67 y=1.39 yaw=5 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:2839
+12:36:35.60,195.34,nav2,BT_NAVIGATOR,"Begin navigating from current location (1.71, 4.77) to (1.67, 1.39)",info,rosout bt_navigator navigate_to_pose.cpp:252
+12:36:43.69,203.43,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:36:45.70,205.44,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:36:46.23,205.97,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:36:47.73,207.47,nav2,BT_NAVIGATOR,[navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.,info,rosout bt_navigator simple_action_server.hpp:603
+12:36:47.73,207.47,nav2,BT_NAVIGATOR,Goal canceled,info,rosout bt_navigator bt_action_server_impl.hpp:351
+12:36:47.73,207.47,nav2,NAV2_GOAL_CANCELED,goal afb127e0,cancel (alinhador/operador),/navigate_to_pose/_action/status
+12:36:48.02,207.76,alinhador,ANTI_CISCADO,"ANTI_CISCADO 1: GOAL FINAL: 4 inversoes em 4 s sem sair do lugar (2 cm, 0 graus): paro, destravo e mando o goal de novo",autonomo,rosout alinhador_passagem alinhador_passagem.py:2877
+12:36:49.36,209.1,destravar,DESTRAVAR,"DESTRAVAR: DIAGNOSTICO: cm_bloqueou,oscilacao,frente_barrada (planner ok, frente 3 cm, retornos 0)",autonomo,rosout destravar destravar_node.py:662
+12:36:49.56,209.3,destravar,DESTRAVAR,"DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa cm_bloqueou,oscilacao: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq 25 cm: 8 ponto(s) do LiDAR",autonomo,rosout destravar destravar_node.py:662
+12:36:49.57,209.32,destravar,DESTRAVAR,"DESTRAVAR: FALHA: sem alternativa segura (retomar: causa cm_bloqueou,oscilacao: o mesmo controle repetiria | contornar: nao e objeto pequeno com lado livre | lateral: esq 25 cm: 8 ponto(s) do LiDAR na area varrida; esq 1",falha autonoma,rosout destravar destravar_node.py:660
+12:36:49.85,209.59,alinhador,ANTI_CISCADO,ANTI_CISCADO 1: destravar falhou,autonomo,rosout alinhador_passagem alinhador_passagem.py:2823
+12:36:49.90,209.64,alinhador,PRE_GIRO_DECIDIDO,GOAL FINAL (virar para o caminho): o caminho sai a +56 graus da frente: viro antes do Nav2,autonomo,rosout alinhador_passagem alinhador_passagem.py:2801
+12:36:56.76,216.5,alinhador,SUCESSO_ETAPA,GOAL FINAL (virar para o caminho): SUCESSO,autonomo,rosout alinhador_passagem alinhador_passagem.py:2804
+12:36:56.76,216.5,alinhador,GOAL_NAV2_ENVIADO,GOAL FINAL: x=1.67 y=1.39 yaw=5 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:2839
+12:36:56.76,216.5,nav2,BT_NAVIGATOR,"Begin navigating from current location (1.43, 3.83) to (1.67, 1.39)",info,rosout bt_navigator navigate_to_pose.cpp:252
+12:37:38.82,258.56,nav2,DWB,Could not find a legal trajectory: No valid trajectories out of 392! ,autonomo,rosout controller_server controller_server.cpp:677
+12:37:38.91,258.66,nav2,DWB,Could not find a legal trajectory: No valid trajectories out of 392! ,autonomo,rosout controller_server controller_server.cpp:677
+12:37:38.99,258.73,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:37:41.83,261.57,operador,GOAL_NOVO_PREEMPCAO,Novo goal: x=1.68 y=4.90 yaw=5 graus,operador (troca intencional),rosout alinhador_passagem alinhador_passagem.py:2603
+12:37:41.84,261.59,alinhador,GOAL_SUBSTITUIDO,Goal substituido por um novo.,"operador (preempcao, nao e falha)",rosout alinhador_passagem alinhador_passagem.py:3925
+12:37:41.85,261.6,nav2,BT_NAVIGATOR,[navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.,info,rosout bt_navigator simple_action_server.hpp:603
+12:37:41.85,261.6,nav2,BT_NAVIGATOR,Goal canceled,info,rosout bt_navigator bt_action_server_impl.hpp:351
+12:37:41.85,261.6,nav2,NAV2_GOAL_CANCELED,goal 767706b9,cancel (alinhador/operador),/navigate_to_pose/_action/status
+12:37:42.41,262.15,alinhador,PRE_GIRO_DECIDIDO,GOAL FINAL (virar para o caminho): o caminho sai a -65 graus da frente: viro antes do Nav2,autonomo,rosout alinhador_passagem alinhador_passagem.py:2801
+12:37:49.65,269.39,alinhador,SUCESSO_ETAPA,GOAL FINAL (virar para o caminho): SUCESSO,autonomo,rosout alinhador_passagem alinhador_passagem.py:2804
+12:37:49.66,269.4,alinhador,GOAL_NAV2_ENVIADO,GOAL FINAL: x=1.68 y=4.90 yaw=5 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:2839
+12:37:49.66,269.4,nav2,BT_NAVIGATOR,"Begin navigating from current location (1.63, 1.32) to (1.68, 4.90)",info,rosout bt_navigator navigate_to_pose.cpp:252
+12:37:57.23,276.97,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:37:58.09,277.83,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:37:58.21,277.95,nav2,DWB,Could not find a legal trajectory: No valid trajectories out of 392! ,autonomo,rosout controller_server controller_server.cpp:677
+12:37:58.31,278.05,nav2,DWB,Could not find a legal trajectory: No valid trajectories out of 352! ,autonomo,rosout controller_server controller_server.cpp:677
+12:37:58.49,278.23,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:37:58.59,278.33,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:38:04.20,283.94,nav2,DWB,Failed to make progress,autonomo,rosout controller_server controller_server.cpp:574
+12:38:05.56,285.3,destravar,DESTRAVAR,"DESTRAVAR: DIAGNOSTICO: sem_progresso_fisico,quina_dir,frente_barrada (planner ok, frente 2 cm, retornos 0)",autonomo,rosout destravar destravar_node.py:662
+12:38:05.84,285.58,destravar,DESTRAVAR,DESTRAVAR: DECISAO: falhar (sem alternativa segura) | recusadas: retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: 3 ponto(s) do LiDAR na area varrida | lateral: esq 40 cm: 3 ponto(s) do LiDAR ,autonomo,rosout destravar destravar_node.py:662
+12:38:05.84,285.58,destravar,DESTRAVAR,DESTRAVAR: FALHA: sem alternativa segura (retomar: causa sem_progresso_fisico: o mesmo controle repetiria | contornar: 3 ponto(s) do LiDAR na area varrida | lateral: esq 40 cm: 3 ponto(s) do LiDAR na area varrida; esq 30,falha autonoma,rosout destravar destravar_node.py:660
+12:38:06.12,285.86,nav2,BT_NAVIGATOR,Goal failed,falha autonoma,rosout bt_navigator bt_action_server_impl.hpp:346
+12:38:06.12,285.86,nav2,NAV2_GOAL_ABORTED,goal d81d1f6e,falha autonoma,/navigate_to_pose/_action/status
+12:38:06.14,285.88,alinhador,FALHA_ALINHADOR,GOAL FINAL: FALHOU,falha autonoma,rosout alinhador_passagem alinhador_passagem.py:2911
+12:38:17.70,297.44,operador,GOAL_NOVO,Novo goal: x=1.32 y=4.59 yaw=5 graus,operador,rosout alinhador_passagem alinhador_passagem.py:2603
+12:38:18.14,297.88,alinhador,PRE_GIRO_DECIDIDO,GOAL FINAL (virar para o caminho): o caminho sai a +51 graus da frente: viro antes do Nav2,autonomo,rosout alinhador_passagem alinhador_passagem.py:2801
+12:38:19.13,298.87,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:38:20.29,300.03,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:38:25.53,305.27,alinhador,SUCESSO_ETAPA,GOAL FINAL (virar para o caminho): SUCESSO,autonomo,rosout alinhador_passagem alinhador_passagem.py:2804
+12:38:25.54,305.28,alinhador,GOAL_NAV2_ENVIADO,GOAL FINAL: x=1.32 y=4.59 yaw=5 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:2839
+12:38:25.54,305.28,nav2,BT_NAVIGATOR,"Begin navigating from current location (2.05, 2.46) to (1.32, 4.59)",info,rosout bt_navigator navigate_to_pose.cpp:252
+12:38:44.87,324.61,operador,GOAL_NOVO_PREEMPCAO,Novo goal: x=-0.30 y=-0.12 yaw=5 graus,operador (troca intencional),rosout alinhador_passagem alinhador_passagem.py:2603
+12:38:44.88,324.62,nav2,BT_NAVIGATOR,[navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.,info,rosout bt_navigator simple_action_server.hpp:603
+12:38:44.88,324.62,nav2,BT_NAVIGATOR,Goal canceled,info,rosout bt_navigator bt_action_server_impl.hpp:351
+12:38:44.88,324.62,nav2,NAV2_GOAL_CANCELED,goal ae7fd69f,cancel (alinhador/operador),/navigate_to_pose/_action/status
+12:38:44.91,324.65,alinhador,GOAL_SUBSTITUIDO,Goal substituido por um novo.,"operador (preempcao, nao e falha)",rosout alinhador_passagem alinhador_passagem.py:3925
+12:38:45.70,325.44,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): x=1.62 y=1.63 yaw=-91 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:3332
+12:38:45.80,325.54,alinhador,PRE_GIRO_DECIDIDO,PREPARO 1 (alinhar fora da passagem) (posicao) (virar para o caminho): o caminho sai a -110 graus da frente: viro antes do Nav2,autonomo,rosout alinhador_passagem alinhador_passagem.py:2801
+12:38:52.34,332.08,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem) (posicao) (virar para o caminho): angulo -61 graus (erro -3.0),autonomo,rosout alinhador_passagem alinhador_passagem.py:3165
+12:38:52.60,332.34,alinhador,SUCESSO_ETAPA,PREPARO 1 (alinhar fora da passagem) (posicao) (virar para o caminho): SUCESSO,autonomo,rosout alinhador_passagem alinhador_passagem.py:2804
+12:38:52.60,332.35,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem) (posicao): x=1.62 y=1.63 yaw=-63 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:2839
+12:38:52.61,332.35,nav2,BT_NAVIGATOR,"Begin navigating from current location (1.20, 4.62) to (1.62, 1.63)",info,rosout bt_navigator navigate_to_pose.cpp:252
+12:38:54.24,333.98,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.45, 4.47) to (1.62, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:38:54.28,334.02,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.45, 4.47) to (1.62, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:38:55.31,335.05,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.47, 4.54) to (1.67, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:38:56.60,336.34,destravar,DESTRAVAR,DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (1/2),autonomo,rosout destravar destravar_node.py:662
+12:38:58.61,338.35,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.47, 4.54) to (1.67, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:38:59.90,339.64,destravar,DESTRAVAR,DESTRAVAR: SEM CAMINHO: limpei os costmaps; espero 2 s parado e planejo de novo (2/2),autonomo,rosout destravar destravar_node.py:662
+12:39:01.90,341.64,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.47, 4.54) to (1.67, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:39:02.42,342.16,destravar,DESTRAVAR,"DESTRAVAR: DIAGNOSTICO: caminho_invalido,sem_caminho_global,oscilacao (planner sem_caminho, frente 45 cm, retornos 0)",autonomo,rosout destravar destravar_node.py:662
+12:39:02.72,342.46,destravar,DESTRAVAR,DESTRAVAR: DECISAO: lateral (40 cm para dir; depois o corpo anda 18 cm no caminho (area 63% observada)) | recusadas: retomar: planner sem caminho,autonomo,rosout destravar destravar_node.py:662
+12:39:10.18,349.92,destravar,DESTRAVAR,"DESTRAVAR: RESULTADO lateral: ok | chegou | ICP: 27 cm na direcao pedida (dx -16, dy -27 cm)",autonomo,rosout destravar destravar_node.py:662
+12:39:10.19,349.93,destravar,DESTRAVAR,"DESTRAVAR: OK: lateral (40 cm para dir; depois o corpo anda 18 cm no caminho (area 63% observada); ICP: 27 cm na direcao pedida (dx -16, dy -27 cm))",autonomo,rosout destravar destravar_node.py:662
+12:39:10.45,350.19,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.20, 4.50) to (1.62, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:39:10.56,350.3,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.20, 4.50) to (1.62, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:39:11.84,351.58,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.27, 4.43) to (1.62, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:39:12.28,352.02,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.29, 4.37) to (1.62, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:39:14.00,353.74,destravar,DESTRAVAR,"DESTRAVAR: DIAGNOSTICO: caminho_invalido (planner ok, frente 126 cm, retornos 0)",autonomo,rosout destravar destravar_node.py:662
+12:39:14.04,353.78,destravar,DESTRAVAR,DESTRAVAR: DECISAO: retomar (caminho novo e corpo passa 50 cm na direcao dele) | recusadas: -,autonomo,rosout destravar destravar_node.py:662
+12:39:14.06,353.8,destravar,DESTRAVAR,DESTRAVAR: OK: contorno normal: caminho novo e corpo passa 50 cm na direcao dele,autonomo,rosout destravar destravar_node.py:662
+12:39:16.55,356.29,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.47, 4.14) to (1.62, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:39:34.33,374.07,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.90, 2.17) to (1.62, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:39:34.80,374.54,nav2,PLANNER_SEM_CAMINHO,"GridBased plugin failed to plan from (1.90, 2.15) to (1.62, 1.63): ""Failed to create plan with tolerance of: 0.100000""",autonomo,rosout planner_server planner_server.cpp:759
+12:39:36.29,376.03,destravar,DESTRAVAR,"DESTRAVAR: DIAGNOSTICO: nada evidente (planner ok, frente 94 cm, retornos 0)",autonomo,rosout destravar destravar_node.py:662
+12:39:36.33,376.07,destravar,DESTRAVAR,DESTRAVAR: DECISAO: retomar (caminho novo e corpo passa 50 cm na direcao dele) | recusadas: -,autonomo,rosout destravar destravar_node.py:662
+12:39:36.34,376.08,destravar,DESTRAVAR,DESTRAVAR: OK: contorno normal: caminho novo e corpo passa 50 cm na direcao dele,autonomo,rosout destravar destravar_node.py:662
+12:39:43.52,383.26,nav2,BT_NAVIGATOR,[navigate_to_pose] [ActionServer] Client requested to cancel the goal. Cancelling.,info,rosout bt_navigator simple_action_server.hpp:603
+12:39:43.52,383.26,nav2,BT_NAVIGATOR,Goal canceled,info,rosout bt_navigator bt_action_server_impl.hpp:351
+12:39:43.52,383.26,nav2,NAV2_GOAL_CANCELED,goal 5f902562,cancel (alinhador/operador),/navigate_to_pose/_action/status
+12:39:43.85,383.59,alinhador,SUCESSO_ETAPA,"PREPARO 1 (alinhar fora da passagem) (posicao): SUCESSO (aceito a 1 cm do ponto, sem exigir angulo)",autonomo,rosout alinhador_passagem alinhador_passagem.py:2893
+12:39:43.88,383.62,alinhador,SUCESSO_ETAPA,PREPARO 1 (alinhar fora da passagem): SUCESSO (2 cm e 1 graus do preparo),autonomo,rosout alinhador_passagem alinhador_passagem.py:3365
+12:39:44.42,384.16,alinhador,TRAVESSIA,"TRAVESSIA 1: travessia pelo LiDAR ate (1.58, -0.09) + 0.00 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3386
+12:39:44.76,384.5,alinhador,TRAVESSIA,TRAVESSIA 1: Paredes vistas (largura 0.73 m): parando na boca para alinhar,autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:39:45.73,385.47,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 1: girar -5.7 graus, centro a -5.2 cm, largura 0.73 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:39:47.36,387.1,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 2: girar -1.0 graus, centro a -4.2 cm, largura 0.74 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:39:49.02,388.76,alinhador,TRAVESSIA,"TRAVESSIA 1: Medicao 3: girar -0.9 graus, centro a -0.6 cm, largura 0.75 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:39:49.02,388.76,alinhador,TRAVESSIA,TRAVESSIA 1: Alinhado: atravessando,autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:40:02.94,402.68,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:40:04.52,404.26,alinhador,TRAVESSIA,TRAVESSIA 1: Travessia LiDAR abortada: Collision Monitor bloqueando dentro da passagem,autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:40:04.78,404.52,alinhador,TRAVESSIA,TRAVESSIA 1: saindo de re 1.28 m (odom) para tentar de novo,autonomo,rosout alinhador_passagem alinhador_passagem.py:3848
+12:40:16.76,416.5,alinhador,FALHA_ALINHADOR,TRAVESSIA 1 (LiDAR): FALHOU - Collision Monitor bloqueando dentro da passagem,falha autonoma,rosout alinhador_passagem alinhador_passagem.py:3479
+12:40:16.77,416.51,alinhador,PREPARO,PREPARO 1 (2a tentativa): x=1.62 y=1.63 yaw=-91 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:3332
+12:40:18.42,418.16,alinhador,PREPARO,PREPARO 1 (2a tentativa): angulo -91 graus (erro 2.5),autonomo,rosout alinhador_passagem alinhador_passagem.py:3165
+12:40:22.53,422.27,alinhador,PREPARO,PREPARO 1 (2a tentativa): andei 21 cm para dir,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:40:23.82,423.56,alinhador,PREPARO,PREPARO 1 (2a tentativa): andei 7 cm para tras,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:40:23.82,423.56,alinhador,SUCESSO_ETAPA,PREPARO 1 (2a tentativa): SUCESSO (17 cm e 0 graus do preparo),autonomo,rosout alinhador_passagem alinhador_passagem.py:3365
+12:40:23.82,423.56,alinhador,TRAVESSIA,"TRAVESSIA 1 (2a tentativa): travessia pelo LiDAR ate (1.58, -0.09) + 0.00 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3386
+12:40:24.11,423.85,alinhador,TRAVESSIA,"TRAVESSIA 1 (2a tentativa): Paredes vistas: entrando sem parar (-4.8 graus, centro -7.8 cm)",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:40:25.89,425.63,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:40:38.83,438.57,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:40:39.39,439.13,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:40:40.94,440.68,alinhador,TRAVESSIA,TRAVESSIA 1 (2a tentativa): Travessia LiDAR abortada: Collision Monitor bloqueando dentro da passagem,autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:40:41.21,440.95,alinhador,TRAVESSIA,TRAVESSIA 1 (2a tentativa): saindo de re 1.30 m (odom) para tentar de novo,autonomo,rosout alinhador_passagem alinhador_passagem.py:3848
+12:40:53.34,453.09,alinhador,FALHA_ALINHADOR,TRAVESSIA 1 (2a tentativa) (LiDAR): FALHOU - Collision Monitor bloqueando dentro da passagem,falha autonoma,rosout alinhador_passagem alinhador_passagem.py:3479
+12:40:53.35,453.09,alinhador,PEDE_AJUDA,Nao consegui atravessar a passagem 1. Parei fora dela; mande o goal de novo (ou ajude o robo).,falha autonoma,rosout alinhador_passagem alinhador_passagem.py:4094
+12:41:07.55,467.29,operador,GOAL_NOVO,Novo goal: x=0.35 y=0.06 yaw=-2 graus,operador,rosout alinhador_passagem alinhador_passagem.py:2603
+12:41:08.03,467.77,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): x=1.66 y=1.63 yaw=-95 graus,autonomo,rosout alinhador_passagem alinhador_passagem.py:3332
+12:41:09.38,469.12,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): andei 4 cm para dir,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:41:10.88,470.62,alinhador,PREPARO,PREPARO 1 (alinhar fora da passagem): andei 9 cm para frente,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:41:10.88,470.62,alinhador,SUCESSO_ETAPA,PREPARO 1 (alinhar fora da passagem): SUCESSO (9 cm e 3 graus do preparo),autonomo,rosout alinhador_passagem alinhador_passagem.py:3365
+12:41:11.31,471.05,alinhador,TRAVESSIA,"TRAVESSIA 1: travessia pelo LiDAR ate (1.52, -0.04) + 0.00 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3386
+12:41:11.59,471.33,alinhador,TRAVESSIA,"TRAVESSIA 1: Paredes vistas: entrando sem parar (+5.3 graus, centro -7.5 cm)",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:41:33.32,493.06,alinhador,TRAVESSIA,"TRAVESSIA 1: FREIO_CRUZAMENTO: algo a 9 cm do para-choque, ja 5 cm alem do ponto do cruzamento: paro aqui e sigo a saida",autonomo,rosout alinhador_passagem alinhador_passagem.py:3383
+12:41:33.59,493.33,alinhador,SUCESSO_ETAPA,TRAVESSIA 1 (LiDAR): SUCESSO,autonomo,rosout alinhador_passagem alinhador_passagem.py:3479
+12:41:33.60,493.34,alinhador,CURVA,"CURVA 1: saindo de lado para a DIREITA ate (0.84, -0.18) + 0.60 m",autonomo,rosout alinhador_passagem alinhador_passagem.py:3686
+12:41:33.60,493.34,alinhador,CURVA,CURVA 1: Cruzamento: saindo de lado para a DIREITA,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:34.43,494.17,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro -0.6 cm a frente (1 parede(s)), folga frente 7 / tras - cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:37.40,497.14,alinhador,PARADA_SEGURANCA,CURVA 1: PARADA DE SEGURANCA: folga frente 14 / tras 3 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:38.23,497.97,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:41:38.27,498.01,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +6.4 cm a frente (1 parede(s)), folga frente 14 / tras 3 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:38.27,498.01,alinhador,CURVA,CURVA 1: Perto da parede: afastando +4.0 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:39.56,499.3,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +4.0 cm a frente (1 parede(s)), folga frente 11 / tras 5 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:40.21,499.95,alinhador,PARADA_SEGURANCA,CURVA 1: PARADA DE SEGURANCA: folga frente 13 / tras 4 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:41.06,500.8,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +5.5 cm a frente (1 parede(s)), folga frente 14 / tras 4 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:41.07,500.81,alinhador,CURVA,CURVA 1: Perto da parede: afastando +4.0 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:42.40,502.14,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +3.0 cm a frente (1 parede(s)), folga frente 11 / tras 6 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:43.20,502.94,alinhador,PARADA_SEGURANCA,CURVA 1: PARADA DE SEGURANCA: folga frente 14 / tras 4 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:44.06,503.8,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +6.0 cm a frente (1 parede(s)), folga frente 17 / tras 4 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:44.06,503.8,alinhador,CURVA,CURVA 1: Perto da parede: afastando +4.0 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:45.33,505.07,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +3.8 cm a frente (1 parede(s)), folga frente 12 / tras 6 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:48.32,508.06,alinhador,PARADA_SEGURANCA,CURVA 1: PARADA DE SEGURANCA: folga frente 13 / tras 4 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:49.12,508.86,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +5.1 cm a frente (1 parede(s)), folga frente 13 / tras 2 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:49.12,508.86,alinhador,CURVA,CURVA 1: Perto da parede: afastando +4.0 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:50.48,510.22,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +2.0 cm a frente (folgas), folga frente 10 / tras 6 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:51.61,511.35,alinhador,PARADA_SEGURANCA,CURVA 1: PARADA DE SEGURANCA: folga frente 14 / tras 4 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:52.47,512.21,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +5.1 cm a frente (folgas), folga frente 14 / tras 4 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:52.49,512.23,alinhador,CURVA,CURVA 1: Perto da parede: afastando +5.1 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:53.92,513.66,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +0.5 cm a frente (folgas), folga frente 9 / tras 8 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:55.24,514.98,alinhador,PARADA_SEGURANCA,CURVA 1: PARADA DE SEGURANCA: folga frente 14 / tras 4 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:55.43,515.17,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:41:56.11,515.85,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +5.2 cm a frente (folgas), folga frente 14 / tras 4 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:56.11,515.85,alinhador,CURVA,CURVA 1: Perto da parede: afastando +5.2 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:57.60,517.34,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +0.9 cm a frente (folgas), folga frente 9 / tras 8 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:58.73,518.47,alinhador,PARADA_SEGURANCA,CURVA 1: PARADA DE SEGURANCA: folga frente 14 / tras 4 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:58.93,518.67,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:41:59.54,519.28,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +6.1 cm a frente (folgas), folga frente 15 / tras 3 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:41:59.55,519.29,alinhador,CURVA,CURVA 1: Perto da parede: afastando +6.1 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:01.08,520.82,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +0.6 cm a frente (folgas), folga frente 9 / tras 8 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:02.04,521.78,alinhador,PARADA_SEGURANCA,CURVA 1: PARADA DE SEGURANCA: folga frente 15 / tras 4 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:02.23,521.97,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:42:02.91,522.65,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +7.1 cm a frente (folgas), folga frente 16 / tras 2 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:02.91,522.65,alinhador,CURVA,CURVA 1: Perto da parede: afastando +7.1 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:04.56,524.3,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +1.8 cm a frente (folgas), folga frente 11 / tras 7 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:06.68,526.42,alinhador,PARADA_SEGURANCA,CURVA 1: PARADA DE SEGURANCA: folga frente 16 / tras 4 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:06.89,526.63,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:42:07.54,527.28,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +8.5 cm a frente (folgas), folga frente 18 / tras 1 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:07.54,527.28,alinhador,CURVA,CURVA 1: Perto da parede: afastando +8.5 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:09.19,528.93,alinhador,CURVA,"CURVA 1: Medicao: girar +0.0 graus, centro +3.1 cm a frente (folgas), folga frente 13 / tras 6 cm",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:11.32,531.06,alinhador,PARADA_SEGURANCA,CURVA 1: PARADA DE SEGURANCA: folga frente 16 / tras 4 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:11.83,531.57,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:42:13.80,533.54,alinhador,CURVA,CURVA 1: Perto da parede (sem medicao): afastando +4.0 cm,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:16.68,536.42,alinhador,CURVA,CURVA 1: Paredes acabaram perto da saida: terminando de sair,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:28.49,548.23,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:42:30.10,549.84,alinhador,CM_SEGURA_ALINHADOR,"CURVA 1: Collision Monitor segurando em ""deslizar"": parando para medir de novo",autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:32.55,552.29,alinhador,CURVA,CURVA 1: Paredes acabaram perto da saida: terminando de sair,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:34.62,554.36,alinhador,CURVA,CURVA 1: Saida lateral concluida,autonomo,rosout alinhador_passagem alinhador_passagem.py:3684
+12:42:34.63,554.37,cm,CM_PARA,Robot to stop due to VelocityPolygonStop polygon,protecao,rosout collision_monitor collision_monitor_node.cpp:623
+12:42:34.88,554.62,alinhador,SUCESSO_ETAPA,CURVA 1: SUCESSO,autonomo,rosout alinhador_passagem alinhador_passagem.py:3752
+12:42:35.17,554.91,alinhador,TRAJETO_CURTO,"TRAJETO CURTO: 36 cm em linha reta, sem Nav2 (angulo -2 graus)",autonomo,rosout alinhador_passagem alinhador_passagem.py:3297
+12:42:35.45,555.19,alinhador,TRAJETO_CURTO,TRAJETO CURTO: girando 96 graus a quina pegaria: primeiro 36 cm para esq,autonomo,rosout alinhador_passagem alinhador_passagem.py:3189
+12:42:41.60,561.34,alinhador,TRAJETO_CURTO,TRAJETO CURTO: andei 36 cm para esq,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:42:47.42,567.16,alinhador,TRAJETO_CURTO,TRAJETO CURTO: angulo -2 graus (erro 3.2),autonomo,rosout alinhador_passagem alinhador_passagem.py:3165
+12:42:49.27,569.01,alinhador,TRAJETO_CURTO,TRAJETO CURTO: andei 6 cm para dir,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:42:51.12,570.86,alinhador,TRAJETO_CURTO,TRAJETO CURTO: andei 13 cm para frente,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:42:52.20,571.94,alinhador,TRAJETO_CURTO,TRAJETO CURTO: andei 3 cm para dir,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:42:53.44,573.18,alinhador,TRAJETO_CURTO,TRAJETO CURTO: andei 7 cm para frente,autonomo,rosout alinhador_passagem alinhador_passagem.py:3039
+12:42:55.14,574.88,alinhador,TRAJETO_CURTO,TRAJETO CURTO: angulo -2 graus (erro 2.8),autonomo,rosout alinhador_passagem alinhador_passagem.py:3165
+12:42:55.42,575.16,alinhador,TRAJETO_CURTO,TRAJETO CURTO: SUCESSO (3 cm do ponto),autonomo,rosout alinhador_passagem alinhador_passagem.py:3316

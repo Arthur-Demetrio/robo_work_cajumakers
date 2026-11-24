@@ -1,0 +1,21 @@
+1791202938.0639720 [INFO] [launch]: All log files can be found below /home/marcos/robo_jazzy_ws/test_logs/20261005/ros/2026-10-05-09-22-18-063266-marcos-ThinkPad-E14-Gen-2-6713
+1791202938.0640733 [INFO] [launch]: Default logging verbosity is set to INFO
+1791202938.1304033 [INFO] [controller_server-1]: process started with pid [6716]
+1791202938.1305594 [INFO] [smoother_server-2]: process started with pid [6717]
+1791202938.1306367 [INFO] [planner_server-3]: process started with pid [6718]
+1791202938.1306989 [INFO] [behavior_server-4]: process started with pid [6719]
+1791202938.1307559 [INFO] [bt_navigator-5]: process started with pid [6720]
+1791202938.1308103 [INFO] [waypoint_follower-6]: process started with pid [6721]
+1791202938.1308644 [INFO] [velocity_smoother-7]: process started with pid [6722]
+1791202938.1309175 [INFO] [collision_monitor-8]: process started with pid [6723]
+1791202938.1309712 [INFO] [lifecycle_manager-9]: process started with pid [6724]
+1791203165.0122478 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1791203165.3864689 [INFO] [behavior_server-4]: process has finished cleanly [pid 6719]
+1791203165.4357674 [INFO] [velocity_smoother-7]: process has finished cleanly [pid 6722]
+1791203165.4371192 [INFO] [waypoint_follower-6]: process has finished cleanly [pid 6721]
+1791203165.4374390 [INFO] [smoother_server-2]: process has finished cleanly [pid 6717]
+1791203165.4376552 [INFO] [collision_monitor-8]: process has finished cleanly [pid 6723]
+1791203165.4554849 [INFO] [bt_navigator-5]: process has finished cleanly [pid 6720]
+1791203165.6083736 [INFO] [controller_server-1]: process has finished cleanly [pid 6716]
+1791203165.6211979 [INFO] [lifecycle_manager-9]: process has finished cleanly [pid 6724]
+1791203165.7578375 [INFO] [planner_server-3]: process has finished cleanly [pid 6718]

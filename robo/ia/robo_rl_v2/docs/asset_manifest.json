@@ -1,0 +1,30 @@
+[
+  {
+    "path": "assets/config/lidar.yaml",
+    "sha256": "23cb76d98e67db0fa34462eae38d7a7a157a640a23b63e4d042115e3510b8df1"
+  },
+  {
+    "path": "assets/config/nav2_params.yaml",
+    "sha256": "a8c770f54f5f232298a4bd08891c481e6a370f726cd31adb8bc0ed6c305821d7"
+  },
+  {
+    "path": "assets/maps/arena_04-11_0917.pgm",
+    "sha256": "1e4b72f76eeb8ffa62236d4e889546d98ae8907b7d149a77d1b23757b73e80bd"
+  },
+  {
+    "path": "assets/maps/arena_04-11_0917.yaml",
+    "sha256": "36bc3369e6128d29585a81e5006169c9eb835505294589fda63c854c0e71be48"
+  },
+  {
+    "path": "assets/maps/mapa_atual.pgm",
+    "sha256": "d43154f4a2bea32ec3515975df5a25afcc06c3edcc54bd3fcb0909703e0072e7"
+  },
+  {
+    "path": "assets/maps/mapa_atual.yaml",
+    "sha256": "53ce6a78a0ce113c18fa7b44da017e8faace86729f1117f11fe0027b0faf1ffc"
+  },
+  {
+    "path": "assets/maps/service_areas_arena_04-11_0917.yaml",
+    "sha256": "1eb9542a24ea86119c69a31402ba02b05727a31b1c94a1c40666b5fd024bc0b8"
+  }
+]

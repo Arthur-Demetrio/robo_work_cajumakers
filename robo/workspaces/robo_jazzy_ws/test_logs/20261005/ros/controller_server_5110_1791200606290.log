@@ -1,0 +1,142 @@
+[INFO] [1791200606.323428120] [controller_server]: 
+	controller_server lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791200606.327269684] [controller_server]: Creating controller server
+[INFO] [1791200606.339401191] [local_costmap.local_costmap]: 
+	local_costmap lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791200606.339980479] [local_costmap.local_costmap]: Creating Costmap
+[INFO] [1791200606.429033341] [controller_server]: Configuring controller interface
+[INFO] [1791200606.429050453] [controller_server]: getting progress checker plugins..
+[INFO] [1791200606.429188525] [controller_server]: getting goal checker plugins..
+[INFO] [1791200606.429391150] [controller_server]: Controller frequency set to 10.0000Hz
+[INFO] [1791200606.429422696] [local_costmap.local_costmap]: Configuring
+[INFO] [1791200606.435778995] [local_costmap.local_costmap]: Using plugin "obstacle_layer"
+[INFO] [1791200606.438519283] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[INFO] [1791200606.441187017] [local_costmap.local_costmap]: Initialized plugin "obstacle_layer"
+[INFO] [1791200606.441211118] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[INFO] [1791200606.441635456] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[INFO] [1791200606.449089492] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[INFO] [1791200606.449267965] [controller_server]: Controller Server has progress_checker  progress checkers available.
+[INFO] [1791200606.449568801] [controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[INFO] [1791200606.449839624] [controller_server]: Controller Server has goal_checker  goal checkers available.
+[INFO] [1791200606.453222841] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[INFO] [1791200606.454204512] [controller_server]: Setting transform_tolerance to 0.300000
+[INFO] [1791200606.459648962] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[INFO] [1791200606.460038689] [controller_server]: Critic plugin initialized
+[INFO] [1791200606.460136009] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[INFO] [1791200606.460475223] [controller_server]: Critic plugin initialized
+[INFO] [1791200606.460562383] [controller_server]: Using critic "ObstacleFootprint" (dwb_critics::ObstacleFootprintCritic)
+[INFO] [1791200606.460703151] [controller_server]: Critic plugin initialized
+[INFO] [1791200606.460791988] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[INFO] [1791200606.461011870] [controller_server]: Critic plugin initialized
+[INFO] [1791200606.461098563] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[INFO] [1791200606.461313597] [controller_server]: Critic plugin initialized
+[INFO] [1791200606.461390353] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[INFO] [1791200606.461526810] [controller_server]: Critic plugin initialized
+[INFO] [1791200606.461594662] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[INFO] [1791200606.461713167] [controller_server]: Critic plugin initialized
+[INFO] [1791200606.461725420] [controller_server]: Controller Server has FollowPath  controllers available.
+[INFO] [1791200606.608653901] [controller_server]: Activating
+[INFO] [1791200606.608675557] [local_costmap.local_costmap]: Activating
+[INFO] [1791200606.608682222] [local_costmap.local_costmap]: Checking transform
+[INFO] [1791200606.608768917] [local_costmap.local_costmap]: start
+[INFO] [1791200606.859251372] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[INFO] [1791200678.334023786] [controller_server]: Received a goal, begin computing control effort.
+[WARN] [1791200678.334070496] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
+[WARN] [1791200678.334085826] [controller_server]: No progress checker was specified in parameter 'current_progress_checker'. Server will use only plugin loaded progress_checker . This warning will appear once.
+[INFO] [1791200679.434279896] [controller_server]: Passing new path to controller.
+[INFO] [1791200680.434266708] [controller_server]: Passing new path to controller.
+[INFO] [1791200681.434268972] [controller_server]: Passing new path to controller.
+[INFO] [1791200682.534264563] [controller_server]: Passing new path to controller.
+[INFO] [1791200683.534263147] [controller_server]: Passing new path to controller.
+[INFO] [1791200684.534265244] [controller_server]: Passing new path to controller.
+[INFO] [1791200685.534300103] [controller_server]: Passing new path to controller.
+[INFO] [1791200686.634262598] [controller_server]: Passing new path to controller.
+[INFO] [1791200687.634262867] [controller_server]: Passing new path to controller.
+[INFO] [1791200688.634295447] [controller_server]: Passing new path to controller.
+[INFO] [1791200689.634301943] [controller_server]: Passing new path to controller.
+[INFO] [1791200690.734292099] [controller_server]: Passing new path to controller.
+[INFO] [1791200691.734266791] [controller_server]: Passing new path to controller.
+[ERROR] [1791200691.936473431] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791200691.936519324] [DWBLocalPlanner]: 0.62: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791200691.936523231] [DWBLocalPlanner]: 0.38: Oscillation/Trajectory is oscillating.
+[WARN] [1791200691.937096329] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791200692.734376642] [controller_server]: Passing new path to controller.
+[INFO] [1791200693.734293382] [controller_server]: Passing new path to controller.
+[INFO] [1791200694.834299670] [controller_server]: Passing new path to controller.
+[INFO] [1791200695.834296801] [controller_server]: Passing new path to controller.
+[ERROR] [1791200696.636369577] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791200696.636627246] [DWBLocalPlanner]: 0.28: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791200696.636646784] [DWBLocalPlanner]: 0.72: Oscillation/Trajectory is oscillating.
+[WARN] [1791200696.637876110] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[ERROR] [1791200696.736385785] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791200696.736601651] [DWBLocalPlanner]: 0.28: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791200696.736614732] [DWBLocalPlanner]: 0.72: Oscillation/Trajectory is oscillating.
+[WARN] [1791200696.737875638] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791200696.834301459] [controller_server]: Passing new path to controller.
+[ERROR] [1791200697.536413443] [DWBLocalPlanner]: No valid trajectories out of 351! 
+[ERROR] [1791200697.536595122] [DWBLocalPlanner]: 0.50: ObstacleFootprint/Trajectory Hits Obstacle.
+[ERROR] [1791200697.536600766] [DWBLocalPlanner]: 0.50: Oscillation/Trajectory is oscillating.
+[WARN] [1791200697.537202588] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 351! 
+[INFO] [1791200697.834294733] [controller_server]: Passing new path to controller.
+[INFO] [1791200698.934301357] [controller_server]: Passing new path to controller.
+[INFO] [1791200699.934293659] [controller_server]: Passing new path to controller.
+[INFO] [1791200700.934272629] [controller_server]: Passing new path to controller.
+[INFO] [1791200702.034266351] [controller_server]: Passing new path to controller.
+[INFO] [1791200703.034310848] [controller_server]: Passing new path to controller.
+[INFO] [1791200704.034266566] [controller_server]: Passing new path to controller.
+[INFO] [1791200705.034262461] [controller_server]: Passing new path to controller.
+[INFO] [1791200706.134271726] [controller_server]: Passing new path to controller.
+[INFO] [1791200707.134295344] [controller_server]: Passing new path to controller.
+[INFO] [1791200708.134300260] [controller_server]: Passing new path to controller.
+[INFO] [1791200709.234305227] [controller_server]: Passing new path to controller.
+[INFO] [1791200710.234307079] [controller_server]: Passing new path to controller.
+[ERROR] [1791200710.334588455] [controller_server]: Failed to make progress
+[WARN] [1791200710.334976981] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[INFO] [1791200710.354218628] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[INFO] [1791200710.354704205] [controller_server]: Received a goal, begin computing control effort.
+[INFO] [1791200711.254895809] [controller_server]: Passing new path to controller.
+[INFO] [1791200712.254913621] [controller_server]: Passing new path to controller.
+[INFO] [1791200713.254918692] [controller_server]: Passing new path to controller.
+[INFO] [1791200714.354910424] [controller_server]: Passing new path to controller.
+[INFO] [1791200715.354895916] [controller_server]: Passing new path to controller.
+[INFO] [1791200716.354894041] [controller_server]: Passing new path to controller.
+[INFO] [1791200717.354896165] [controller_server]: Passing new path to controller.
+[INFO] [1791200718.454950831] [controller_server]: Passing new path to controller.
+[INFO] [1791200719.454893987] [controller_server]: Passing new path to controller.
+[INFO] [1791200720.454893193] [controller_server]: Passing new path to controller.
+[INFO] [1791200721.454892738] [controller_server]: Passing new path to controller.
+[ERROR] [1791200722.454988978] [controller_server]: Failed to make progress
+[WARN] [1791200722.455131906] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[INFO] [1791200722.473790280] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[INFO] [1791200722.584701848] [controller_server]: Received a goal, begin computing control effort.
+[INFO] [1791200723.684918448] [controller_server]: Passing new path to controller.
+[INFO] [1791200724.684901301] [controller_server]: Passing new path to controller.
+[INFO] [1791200725.684942465] [controller_server]: Passing new path to controller.
+[INFO] [1791200726.684896434] [controller_server]: Passing new path to controller.
+[INFO] [1791200727.784928143] [controller_server]: Passing new path to controller.
+[INFO] [1791200728.784940903] [controller_server]: Passing new path to controller.
+[INFO] [1791200729.784969520] [controller_server]: Passing new path to controller.
+[INFO] [1791200730.884945129] [controller_server]: Passing new path to controller.
+[INFO] [1791200731.884936764] [controller_server]: Passing new path to controller.
+[INFO] [1791200732.884937599] [controller_server]: Passing new path to controller.
+[INFO] [1791200733.884936875] [controller_server]: Passing new path to controller.
+[INFO] [1791200734.984940166] [controller_server]: Passing new path to controller.
+[INFO] [1791200736.184937734] [controller_server]: Cancellation was successful. Stopping the robot.
+[INFO] [1791200736.184972018] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+[INFO] [1791200751.175033692] [controller_server]: Received a goal, begin computing control effort.
+[ERROR] [1791200751.175220336] [tf_help]: Transform data too old when converting from odom to map
+[ERROR] [1791200751.175243332] [tf_help]: Data time: 1791200751s 171776673ns, Transform time: 1791200747s 786037352ns
+[ERROR] [1791200751.175267989] [controller_server]: Unable to transform robot pose into global plan's frame
+[WARN] [1791200751.175304980] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[INFO] [1791200892.526321343] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791200892.526358006] [controller_server]: Running Nav2 LifecycleNode rcl preshutdown (controller_server)
+[INFO] [1791200892.526398379] [controller_server]: Deactivating
+[INFO] [1791200892.526429352] [local_costmap.local_costmap]: Deactivating
+[INFO] [1791200892.608968848] [controller_server]: Destroying bond (controller_server) to lifecycle manager.
+[INFO] [1791200892.619119567] [controller_server]: Cleaning up
+[INFO] [1791200892.619206860] [local_costmap.local_costmap]: Cleaning up
+[INFO] [1791200892.660729712] [controller_server]: Destroying bond (controller_server) to lifecycle manager.

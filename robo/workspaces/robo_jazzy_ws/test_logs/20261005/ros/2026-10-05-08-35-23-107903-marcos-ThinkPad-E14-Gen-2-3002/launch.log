@@ -1,0 +1,5 @@
+1791200123.1085753 [INFO] [launch]: All log files can be found below /home/marcos/robo_jazzy_ws/test_logs/20261005/ros/2026-10-05-08-35-23-107903-marcos-ThinkPad-E14-Gen-2-3002
+1791200123.1086583 [INFO] [launch]: Default logging verbosity is set to INFO
+1791200123.1553619 [INFO] [command_imu_odometry_node-1]: process started with pid [3005]
+1791210350.7050834 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1791210351.7709720 [INFO] [command_imu_odometry_node-1]: process has finished cleanly [pid 3005]

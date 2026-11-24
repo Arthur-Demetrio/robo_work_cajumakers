@@ -1,0 +1,31 @@
+/home/marcos/robo_rl_v2/.venv/lib/python3.12/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+{
+  "run": "/home/marcos/robo_rl_v2/runs/desenvolvimento_v2_20261110_093450",
+  "recommended_envs": 2,
+  "gain_percent": 86.15458945031978,
+  "coverage": {
+    "reference": {
+      "success": 0.0,
+      "collision": 1.0,
+      "timeout": 0.0,
+      "elapsed": 11.073599999999999,
+      "distance": 5.047487631634026,
+      "reward": -105.1400328593717,
+      "max_est_error": 0.5904089688582017,
+      "n": 100,
+      "sampler": "full_footprint_SE2"
+    },
+    "baseline": {
+      "success": 0.0,
+      "collision": 1.0,
+      "timeout": 0.0,
+      "elapsed": 12.273600000000002,
+      "distance": 5.024440947759835,
+      "reward": -105.07618296169771,
+      "max_est_error": 0.7238745466029051,
+      "n": 100,
+      "sampler": "full_footprint_SE2"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+source;share/robo_navigation/environment/ament_prefix_path.sh
+source;share/robo_navigation/environment/path.sh

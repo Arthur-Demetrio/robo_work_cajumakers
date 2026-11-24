@@ -1,0 +1,19 @@
+test_evaluation_rng_and_seed_parity (test_experiment.PilotTests.test_evaluation_rng_and_seed_parity) ... ok
+test_exact_budget (test_experiment.PilotTests.test_exact_budget) ... ok
+test_kl_entropy (test_experiment.PilotTests.test_kl_entropy) ... ok
+test_orchestrated_training_checkpoint_and_report_records (test_experiment.PilotTests.test_orchestrated_training_checkpoint_and_report_records) ... /home/marcos/robo_rl_v2/.venv/lib/python3.12/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+{"out": "variancia_angular_s4201", "new_steps": 0, "metrics": {"fixed": {"success": 0.0, "collision": 1.0, "return_": -103.92118621286569, "timeout": 0.0, "distance": 0.9989585789040752, "localization_error": 1.3220149350803871}, "holdout": {"success": 0.0, "collision": 1.0, "return_": -104.50312384558642, "timeout": 0.0, "distance": 1.051885690381818, "localization_error": 0.28567947266251864}, "stochastic": {"success": 0.0, "collision": 1.0, "return_": -107.64354125802693, "timeout": 0.0, "distance": 1.178240288065516, "localization_error": 1.1710000168069346}}, "std": [0.4730439782142639, 0.6911635398864746, 1.0]}
+{"out": "variancia_angular_s4201", "new_steps": 64, "metrics": {"fixed": {"success": 0.0, "collision": 1.0, "return_": -103.74408121767782, "timeout": 0.0, "distance": 0.9983146200737063, "localization_error": 1.2293568135459014}, "holdout": {"success": 0.0, "collision": 1.0, "return_": -105.64457853542469, "timeout": 0.0, "distance": 1.1144650840718697, "localization_error": 0.23848852403613233}, "stochastic": {"success": 0.0, "collision": 1.0, "return_": -107.63751938524777, "timeout": 0.0, "distance": 1.188343219296129, "localization_error": 0.9685772174048762}, "unseen": {"success": 0.0, "collision": 1.0, "return_": -112.37801643698394, "timeout": 0.0, "distance": 1.539218288379968, "localization_error": 0.458482350898038}, "full_arena": {"success": 0.0, "collision": 1.0, "return_": -94.85533915066785, "timeout": 0.0, "distance": 8.492319588016649, "localization_error": 0.5197716010099181}}, "std": [0.47268179059028625, 0.6917992234230042, 0.9993329644203186]}
+ok
+test_projection_only_angular_every_adam_step (test_experiment.PilotTests.test_projection_only_angular_every_adam_step) ... /home/marcos/robo_rl_v2/fase_ppo_20261112/test_experiment.py:8: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  self.assertTrue(torch.equal(p.log_std[:2],before[:2]));self.assertEqual(float(p.log_std[2]),0.)
+ok
+test_raw_probabilities_not_clipped_gaussian_density (test_experiment.PilotTests.test_raw_probabilities_not_clipped_gaussian_density) ... ok
+test_real_rollout_optimizer_restore_update_and_reload (test_experiment.PilotTests.test_real_rollout_optimizer_restore_update_and_reload) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 8.219s
+
+OK

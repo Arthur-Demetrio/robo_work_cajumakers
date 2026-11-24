@@ -1,0 +1,75 @@
+........................................................................ [ 17%]
+......................F................................................. [ 35%]
+........................................................................ [ 52%]
+........................................................................ [ 70%]
+........................................................................ [ 87%]
+....................F.....F.......................                       [100%]
+=================================== FAILURES ===================================
+_______________ test_cancel_goal_vazio_cancela_follow_path_orfao _______________
+
+ros = None
+
+    def test_cancel_goal_vazio_cancela_follow_path_orfao(ros):
+        srv = ControladorFalso()
+        cli = Node('cliente_teste')
+        ex = MultiThreadedExecutor(4); ex.add_node(srv); ex.add_node(cli)
+        th = threading.Thread(target=ex.spin, daemon=True); th.start()
+        try:
+            ac = ActionClient(cli, FollowPath, 'follow_path')
+            assert ac.wait_for_server(timeout_sec=5)
+            ultimo = {'t': None}
+            cli.create_subscription(TwistStamped, '/cmd_vel_ctrl', lambda m: ultimo.__setitem__('t', time.monotonic()), 10)
+            f = ac.send_goal_async(FollowPath.Goal())
+            t0 = time.monotonic()
+            while not f.done() and time.monotonic() - t0 < 5:
+                time.sleep(0.02)
+            assert f.result().accepted
+            time.sleep(0.5)
+>           assert srv.ativos == 1 and ultimo['t'] is not None and time.monotonic() - ultimo['t'] < 0.3
+E           assert (1 == 1 and 38487.284512109 is not None and (38487.679073447 - 38487.284512109) < 0.3)
+E            +  where 1 = <test_controlador_orfao_ros.ControladorFalso object at 0x75fb14356a20>.ativos
+E            +  and   38487.679073447 = <built-in function monotonic>()
+E            +    where <built-in function monotonic> = time.monotonic
+
+test/test_controlador_orfao_ros.py:77: AssertionError
+----------------------------- Captured stderr call -----------------------------
+[WARN] [1794434545.432970115] [cliente_teste.action_client]: Ignoring unexpected goal response. There may be more than one action server for the action 'follow_path'
+______________________ test_reinsistir_contador_por_goal _______________________
+
+    def test_reinsistir_contador_por_goal():
+        # 'alerta' nasce vazio a cada executar(): cada goal novo do operador tem as suas tentativas
+        fonte, _ = _bloco_reinsistir()
+        i = fonte.index('        def executar(self, goal, area=None):')
+>       assert 'alerta = {}' in fonte[i:i + 600]
+E       assert 'alerta = {}' in "        def executar(self, goal, area=None):\n            if self.p('nav2_principal'):\n                return self._...   self.desvios_bloq = 0   # PASSAGEM_BLOQUEADA: desvios neste goal (max 2)\n            tratadas = []\n            al"
+
+test/test_refinamento_20261111.py:131: AssertionError
+_____________ test_sequencia_de_substituicoes_nunca_tem_dois_goals _____________
+
+ambiente = (<test_substituicao_goal_ros.Nav2Falso object at 0x75fb144adbe0>, <test_substituicao_goal_ros.AlinhadorFalso object at 0x75fb0fc5c8c0>)
+
+    def test_sequencia_de_substituicoes_nunca_tem_dois_goals(ambiente):
+        """Tres goals seguidos, um deles substituido antes de ser aceito. No fim so o ultimo esta ativo e nunca
+        houve dois goals do alinhador rodando juntos por mais que o instante do cancelamento."""
+        srv, al = ambiente
+        srv.atraso = 0.6
+        th, out = _navegar_em_thread(al, _alvo(5.0))
+        time.sleep(0.2)
+        al.chega_goal_novo()          # substitui antes da aceitacao
+        th.join(3)
+>       assert out.get('r') == 'Cancelado'
+E       AssertionError: assert 'falha' == 'Cancelado'
+E         - Cancelado
+E         + falha
+
+test/test_substituicao_goal_ros.py:260: AssertionError
+---------------------------- Captured stderr setup -----------------------------
+[WARN] [1794434777.021183928] [rcl.logging_rosout]: Publisher already registered for node name: 'bt_navigator_falso'. If this is due to multiple nodes with the same name then all logs for the logger named 'bt_navigator_falso' will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[WARN] [1794434777.188068360] [rcl.logging_rosout]: Publisher already registered for node name: 'alinhador_teste_subst'. If this is due to multiple nodes with the same name then all logs for the logger named 'alinhador_teste_subst' will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+=========================== short test summary info ============================
+FAILED test/test_controlador_orfao_ros.py::test_cancel_goal_vazio_cancela_follow_path_orfao
+FAILED test/test_refinamento_20261111.py::test_reinsistir_contador_por_goal
+FAILED test/test_substituicao_goal_ros.py::test_sequencia_de_substituicoes_nunca_tem_dois_goals
+3 failed, 407 passed in 288.95s (0:04:48)
+[ERROR] [1794434780.518068390] [bt_navigator_falso.action_server]: Failed to accept new goal with ID [105 199 132  15 163 226  68 189 160 159 226 152  27 163 219  72]: Failed to accept new goal: feedback publisher is invalid, at ./src/rcl_action/action_server.c:1004
+[WARN] [1794434780.520486810] [bt_navigator_falso.action_server]: Failed to send goal response (the client may have gone away)

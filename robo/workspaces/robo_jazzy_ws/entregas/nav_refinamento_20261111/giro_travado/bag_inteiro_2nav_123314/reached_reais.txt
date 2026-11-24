@@ -1,0 +1,1 @@
+Reached reais: 0 | reproduzidos no modo atual: 0 | na arvore GOAL_TF_ATUAL: 0

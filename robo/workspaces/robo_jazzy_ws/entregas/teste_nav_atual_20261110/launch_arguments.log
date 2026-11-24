@@ -1,0 +1,33 @@
+Arguments (pass arguments as '<name>:=<value>'):
+
+    'nav_profile':
+        One of: ['current', 'dwb_test', 'early_test']
+        (default: 'early_test')
+
+    'bt_xml':
+        no description given
+        (default: PythonExpr(''/home/marcos/robo_jazzy_ws/src/robo_navigation/behavior_trees/navigate_to_pose_early_test.xml'' + ' if '' + LaunchConfig('nav_profile') + '' != 'current' else ' + ''/home/marcos/robo_jazzy_ws/install/robo_navigation/share/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml'', ['math']))
+
+    'limite_vel_angular_real_t':
+        no description given
+        (default: '-1.0')
+
+    'limite_vel_linear_real_t':
+        no description given
+        (default: '-1.0')
+
+    'modo_curva_t':
+        One of: ['lateral']
+        (default: 'lateral')
+
+    'use_sim_time':
+        Usar o relogio de simulacao
+        (default: 'false')
+
+    'autostart':
+        Ativar automaticamente os nos de ciclo de vida
+        (default: 'true')
+
+    'params_file':
+        Arquivo de parametros do Nav2
+        (default: PythonExpr(''/home/marcos/robo_jazzy_ws/src/robo_navigation/config/nav2_params_dwb_test.yaml'' + ' if '' + LaunchConfig('nav_profile') + '' == 'dwb_test' else ' + ''/home/marcos/robo_jazzy_ws/src/robo_navigation/config/nav2_params_early_test.yaml'' + ' if '' + LaunchConfig('nav_profile') + '' == 'early_test' else ' + ''/home/marcos/robo_jazzy_ws/install/robo_navigation/share/robo_navigation/config/nav2_params.yaml'', ['math']))

@@ -1,0 +1,108 @@
+ M CLAUDE.md
+ M ferramentas/gravar_teste.sh
+ M src/robo_hardware/CMakeLists.txt
+ M src/robo_hardware/launch/hardware.launch.py
+ M src/robo_hardware/src/hardware_bridge_node.cpp
+ M src/robo_lidar/config/lidar.yaml
+ M src/robo_lidar/launch/lidar_filter.launch.py
+ M src/robo_lidar/package.xml
+ M src/robo_lidar/scripts/scan_filter_node.py
+ M src/robo_navigation/CMakeLists.txt
+ M src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml
+ M src/robo_navigation/config/nav2_params.yaml
+ M src/robo_navigation/launch/navigation.launch.py
+ M src/robo_navigation/package.xml
+ M src/robo_navigation/scripts/alinhador_passagem.py
+ M src/robo_navigation/scripts/destravar_node.py
+ M src/robo_navigation/scripts/executor_prova.py
+ M src/robo_navigation/scripts/filtro_corpo_scan.py
+ M src/robo_navigation/scripts/suavizador_nav.py
+?? .agents/
+?? .claude/
+?? AGENTS.md
+?? backups/ajustes_missao35_20261111_123505/
+?? backups/baseline_funcional_20261111_161212/
+?? backups/giro_frontal_20261109/
+?? backups/giro_frontal_revisao2_20261109/
+?? backups/giro_integrado_20261109/
+?? backups/integracao_nav_20261110_102801/
+?? backups/integracao_teste_nav_20261110_100823/
+?? backups/nav2_principal_20261111_120103/
+?? backups/nav_candidata_20261110_094606/
+?? backups/partida_nav_20261111_125658/
+?? backups/prioridade_lateral_ws_20261109/
+?? candidatos/
+?? docs/
+?? entregas/
+?? ferramentas/abrir_robo_supervisor.sh
+?? ferramentas/analise/analisar_missao35.py
+?? ferramentas/analise/ler_mcap_parcial.py
+?? ferramentas/analise/replay_filtro_m35.py
+?? ferramentas/analise/revisao_ws_lateral.py
+?? ferramentas/analise/yaw_missao35.py
+?? ferramentas/compilar_firmware_temporal.py
+?? ferramentas/conferir_supervisor_ativo.py
+?? ferramentas/gravacao_qos.yaml
+?? ferramentas/gravar_teste.py
+?? ferramentas/iniciar_filtro_validado.sh
+?? ferramentas/iniciar_nav_validada.sh
+?? ferramentas/iniciar_supervisor_validado.sh
+?? ferramentas/iniciar_teste_giro_t.sh
+?? ferramentas/patches/_patch_texto.py
+?? ferramentas/patches/aplicar_caminho_original.py
+?? ferramentas/patches/aplicar_cm_protecao.py
+?? ferramentas/patches/aplicar_cm_rigido.py
+?? ferramentas/patches/aplicar_curva_insiste.py
+?? ferramentas/patches/aplicar_curva_insiste_seguro.py
+?? ferramentas/patches/aplicar_giro_final_comum.py
+?? ferramentas/patches/aplicar_goal_tf_atual.py
+?? ferramentas/patches/aplicar_localizacao_fixa.py
+?? ferramentas/patches/aplicar_nav_integrada.py
+?? ferramentas/patches/aplicar_perfil_goalalign0.py
+?? ferramentas/patches/aplicar_recuo_lateral.py
+?? ferramentas/patches/aplicar_reinsistir.py
+?? ferramentas/patches/aplicar_rota_mapa_obstaculo.py
+?? ferramentas/patches/aplicar_sem_suavizador.py
+?? ferramentas/patches/aplicar_ws1_remap.py
+?? ferramentas/patches/aplicar_ws2_remap.py
+?? ferramentas/preparar_localization.py
+?? ferramentas/priorizar_lateral_ws.py
+?? ferramentas/restaurar_arquivos_integrado.py
+?? ferramentas/reverter_prioridade_lateral_ws.py
+?? ferramentas/testes/comparar_nav_integrada.py
+?? ferramentas/testes/conferir_bt_navigator_isolado.sh
+?? ferramentas/testes/conferir_manobras_parado.py
+?? ferramentas/testes/diagnosticar_nav_principal.py
+?? ferramentas/testes/replay_nav2_principal.py
+?? ferramentas/testes/servidores_falsos_bt.py
+?? ferramentas/testes/validar_giro_travado.sh
+?? ferramentas/testes/validar_nav_integrada.sh
+?? ferramentas/trajetoria_teste.py
+?? ferramentas/verificar_giro_t.py
+?? firmware/mega_mecanum_temporal/
+?? install_nav2_principal/
+?? src/robo_bt_plugins/
+?? src/robo_hardware/include/
+?? src/robo_hardware/test/
+?? src/robo_navigation/behavior_trees/navigate_to_pose_early_test.xml
+?? src/robo_navigation/behavior_trees/navigate_to_pose_principal.xml
+?? src/robo_navigation/behavior_trees/navigate_to_pose_smooth.xml.antes_lateral_ws
+?? src/robo_navigation/behavior_trees/navigate_to_pose_smooth_anterior_20261110.xml
+?? src/robo_navigation/config/nav2_params_dwb_test.yaml
+?? src/robo_navigation/config/nav2_params_early_test.yaml
+?? src/robo_navigation/config/nav2_params_goalalign0.yaml
+?? src/robo_navigation/config/nav2_params_principal.yaml
+?? src/robo_navigation/config/regioes_passagem.yaml
+?? src/robo_navigation/config/slam_localizacao.yaml
+?? src/robo_navigation/launch/localizacao_slam.launch.py
+?? src/robo_navigation/launch/navigation.launch.py.antes_lateral_ws
+?? src/robo_navigation/launch/navigation_test.launch.py
+?? src/robo_navigation/scripts/alinhador_passagem.py.backup_20261109_112856
+?? src/robo_navigation/scripts/arbitro_nav_principal.py
+?? src/robo_navigation/scripts/arbitro_t.py
+?? src/robo_navigation/scripts/controle_nav_principal.py
+?? src/robo_navigation/scripts/face_ws.py
+?? src/robo_navigation/scripts/giro_frontal.py
+?? src/robo_navigation/scripts/recuperacao_avancada.py
+?? src/robo_navigation/scripts/supervisor_passagem.py
+?? src/robo_navigation/test/

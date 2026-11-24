@@ -1,0 +1,19 @@
+[INFO] [1791208908.043400234] [collision_monitor]: 
+	collision_monitor lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1791208908.257898795] [collision_monitor]: Configuring
+[INFO] [1791208908.260745830] [collision_monitor]: [scan]: Creating Scan
+[INFO] [1791208908.262190009] [collision_monitor]: [FootprintApproach]: Creating Polygon
+[INFO] [1791208908.262807523] [collision_monitor]: [FootprintApproach]: Polygon points are not defined. Using dynamic subscription instead.
+[INFO] [1791208908.263819900] [collision_monitor]: [FootprintApproach]: Making footprint subscriber on /local_costmap/published_footprint topic
+[INFO] [1791208909.313500874] [collision_monitor]: Activating
+[INFO] [1791208909.313549850] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[INFO] [1791210345.481156146] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1791210345.481198466] [collision_monitor]: Running Nav2 LifecycleNode rcl preshutdown (collision_monitor)
+[INFO] [1791210345.481237703] [collision_monitor]: Deactivating
+[INFO] [1791210345.481253742] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[INFO] [1791210345.493034916] [collision_monitor]: Cleaning up
+[INFO] [1791210345.493157317] [collision_monitor]: [FootprintApproach]: Destroying Polygon
+[INFO] [1791210345.493202034] [collision_monitor]: [scan]: Destroying Scan
+[INFO] [1791210345.496140917] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.

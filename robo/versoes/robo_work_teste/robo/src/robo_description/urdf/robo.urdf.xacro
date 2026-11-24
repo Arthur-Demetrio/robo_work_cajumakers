@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+            name="robo">
+    <!-- ============================= -->
+    <!--         BASE DO ROBÔ          -->
+    <!-- ============================= -->
+
+    <link name="base_link">
+
+        <visual>
+            <geometry>
+                <box size= "0.58 0.60 0.05"/>
+            </geometry>
+
+            <origin xyz="0 0 0.06"
+                    rpy="0 0 0" />
+        </visual>
+    </link>
+    <!-- ============================= -->
+    <!--            LIDAR              -->
+    <!-- ============================= -->
+
+    <link name="laser">
+
+        <visual>
+            <geometry>
+                <cylinder
+                    radius="0.0335"
+                    length="0.03"/>
+            </geometry>
+
+            <origin xyz="0 0 0"
+                    rpy="0 0 0"/>
+        </visual>
+
+    </link>
+
+
+    <!-- ============================= -->
+    <!--      BASE -> LIDAR            -->
+    <!-- ============================= -->
+
+    <joint name="base_to_laser"
+           type="fixed">
+
+        <parent link="base_link"/>
+        <child link="laser"/>
+
+        <origin
+            xyz="0.2765 0 0.03"
+            rpy="0 0 0"/>
+
+    </joint>
+
+    <!-- ========================= -->
+    <!-- RODAS                     -->
+    <!-- ========================= -->
+
+    <!-- M1 - dianteira direita -->
+    <link name="wheel_m1">
+        <visual>
+            <geometry>
+                <cylinder radius="0.06" length="0.063"/>
+            </geometry>
+            <origin xyz="0 0 0"
+                    rpy="1.5708 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="base_to_wheel_m1" type="fixed">
+        <parent link="base_link"/>
+            <child link="wheel_m1"/>
+        <origin xyz="0.165 -0.270 0.06"
+                rpy="0 0 0"/>
+    </joint>
+
+
+    <!-- M2 - dianteira esquerda -->
+    <link name="wheel_m2">
+        <visual>
+            <geometry>
+                <cylinder radius="0.06" length="0.063"/>
+            </geometry>
+            <origin xyz="0 0 0"
+                    rpy="1.5708 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="base_to_wheel_m2" type="fixed">
+        <parent link="base_link"/>
+        <child link="wheel_m2"/>
+        <origin xyz="0.165 0.270 0.06"
+                rpy="0 0 0"/>
+    </joint>
+
+
+    <!-- M3 - traseira direita -->
+    <link name="wheel_m3">
+        <visual>
+            <geometry>
+                <cylinder radius="0.06" length="0.063"/>
+            </geometry>
+            <origin xyz="0 0 0"
+                    rpy="1.5708 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="base_to_wheel_m3" type="fixed">
+        <parent link="base_link"/>
+        <child link="wheel_m3"/>
+        <origin xyz="-0.165 -0.270 0.06"
+                rpy="0 0 0"/>
+    </joint>
+
+
+    <!-- M4 - traseira esquerda -->
+    <link name="wheel_m4">
+        <visual>
+            <geometry>
+                <cylinder radius="0.06" length="0.063"/>
+            </geometry>
+            <origin xyz="0 0 0"
+                    rpy="1.5708 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="base_to_wheel_m4" type="fixed">
+        <parent link="base_link"/>
+        <child link="wheel_m4"/>
+        <origin xyz="-0.165 0.270 0.06"
+                rpy="0 0 0"/>
+    </joint>
+</robot>

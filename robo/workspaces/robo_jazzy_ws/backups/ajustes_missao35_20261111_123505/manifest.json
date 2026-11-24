@@ -1,0 +1,17 @@
+{
+  "CLAUDE.md": "868c93016d8d25e9edb2169ca065dfcc29dfe740787707b1ca14506df7574ecb",
+  "AGENTS.md": "6335ae2e9e7fa18b7475e540e29383a739a380ee25e4416b5ab9ec26950edbb9",
+  "src/robo_navigation/config/nav2_params_principal.yaml": "cf15899b7005057d9b36c042a205c5bf7ed3e627ce5ba61ea38692d197ad998b",
+  "src/robo_navigation/scripts/alinhador_passagem.py": "a2a96a0101758b20026b45c4876082b3cd0cef059eeb0c1dc42354bc7cb5dbce",
+  "src/robo_navigation/scripts/controle_nav_principal.py": "d2ba2abb603e9f0d00a40e75e00e89add3d92d0fb3dcb66dd954749c5813a636",
+  "src/robo_navigation/scripts/suavizador_nav.py": "98ddba1e1bfee182e814032b722d1154017256d199204528f832779921377134",
+  "src/robo_navigation/scripts/filtro_corpo_scan.py": "2fc3d1c3d92bad3e85102573d5a475e0d012d231acc022f1c005ef8a06a734ec",
+  "src/robo_lidar/scripts/scan_filter_node.py": "627efd4a1090afa414dab6b965b4b96c729bc8a9f4b17a47f9c51dc2b22ea412",
+  "src/robo_lidar/config/lidar.yaml": "23cb76d98e67db0fa34462eae38d7a7a157a640a23b63e4d042115e3510b8df1",
+  "src/robo_navigation/launch/navigation.launch.py": "a4f931cbe6c2aebd379b549c9066b4c6c5da6412bbbe2c891a6069790d5d9190",
+  "src/robo_navigation/test/sondas_nav2/dwb_probe/probe.cpp": "21f0208a3a8c31bbe090a274a747ecdc93f825d36497a2b693db33a5df4021e2",
+  "src/robo_navigation/test/test_nav2_principal.py": "63ff56cab7de503fcdda9f6c54ddc65f7d38e4c853ec54fde2c4e8929a2a1662",
+  "src/robo_navigation/CMakeLists.txt": "ef98ab7d1df2390897c296e784c2b1bbe4fba98d9c67f14795fbae76ec2e581f",
+  "src/robo_navigation/test/test_integrado_t.py": "a1d6ca6d1cab470dc0a4b78ae0854013f42901df4b9871ce91050fa5db18a558",
+  "src/robo_lidar/launch/lidar_filter.launch.py": "dcbac8131ff3b54c3717649af658241d4ee26b60c990018777612fb9bfea444a"
+}

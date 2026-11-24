@@ -1,0 +1,458 @@
+[
+  {
+    "seed": 2300010015,
+    "group": "level_1",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.04314419450744729,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.10886198860742813
+  },
+  {
+    "seed": 2300020020,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.05232847876429081,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.5248619205628082
+  },
+  {
+    "seed": 2300020004,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.02993401632389544,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.41657913459439494
+  },
+  {
+    "seed": 2300020021,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.03340814356347238,
+    "blocked_lidar_sector": true,
+    "pose_error": 1.563893286097961
+  },
+  {
+    "seed": 2300020002,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.036369164029807,
+    "blocked_lidar_sector": true,
+    "pose_error": 1.4889686902688744
+  },
+  {
+    "seed": 2300020011,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.038456416645039904,
+    "blocked_lidar_sector": true,
+    "pose_error": 1.3785694121046481
+  },
+  {
+    "seed": 2300020019,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.03407383268631587,
+    "blocked_lidar_sector": false,
+    "pose_error": 3.9180586333275302
+  },
+  {
+    "seed": 2300020010,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.03785401249383963,
+    "blocked_lidar_sector": true,
+    "pose_error": 2.4610761007862374
+  },
+  {
+    "seed": 2300020012,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.036986369813755804,
+    "blocked_lidar_sector": false,
+    "pose_error": 4.012277244796917
+  },
+  {
+    "seed": 2300020022,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.040832053187294104,
+    "blocked_lidar_sector": false,
+    "pose_error": 3.772377115763485
+  },
+  {
+    "seed": 2300020009,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.038531839947872126,
+    "blocked_lidar_sector": false,
+    "pose_error": 2.971484870646309
+  },
+  {
+    "seed": 2300020016,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.03953998741927256,
+    "blocked_lidar_sector": false,
+    "pose_error": 3.0427772621715046
+  },
+  {
+    "seed": 2300020008,
+    "group": "level_2",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.04693861893258183,
+    "blocked_lidar_sector": false,
+    "pose_error": 2.7899325201547422
+  },
+  {
+    "seed": 2300030005,
+    "group": "level_3",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.03505170432112665,
+    "blocked_lidar_sector": true,
+    "pose_error": 2.1659207467194896
+  },
+  {
+    "seed": 2300030013,
+    "group": "level_3",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.03737733603919241,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.7041093174060012
+  },
+  {
+    "seed": 2300030003,
+    "group": "level_3",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.03735747036713982,
+    "blocked_lidar_sector": true,
+    "pose_error": 2.4974128885737885
+  },
+  {
+    "seed": 2300030021,
+    "group": "level_3",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.027457928365430963,
+    "blocked_lidar_sector": true,
+    "pose_error": 4.061305749536999
+  },
+  {
+    "seed": 2300030006,
+    "group": "level_3",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.036151688676311466,
+    "blocked_lidar_sector": true,
+    "pose_error": 1.3287907370507615
+  },
+  {
+    "seed": 2300030023,
+    "group": "level_3",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.026796545932694395,
+    "blocked_lidar_sector": true,
+    "pose_error": 4.8809275355524555
+  },
+  {
+    "seed": 2300030016,
+    "group": "level_3",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.036248021663029484,
+    "blocked_lidar_sector": true,
+    "pose_error": 8.048195585419899
+  },
+  {
+    "seed": 2300030014,
+    "group": "level_3",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.037461959721229454,
+    "blocked_lidar_sector": false,
+    "pose_error": 3.0541307175430186
+  },
+  {
+    "seed": 2300040013,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.04176873886789456,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.1474131697060009
+  },
+  {
+    "seed": 2300040007,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.04482556747111194,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.13004386264350654
+  },
+  {
+    "seed": 2300040020,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.03874018137642521,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.05366168885164939
+  },
+  {
+    "seed": 2300040021,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.02864195669803692,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.2470843891674864
+  },
+  {
+    "seed": 2300040022,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.040852843840637865,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.6016058049237228
+  },
+  {
+    "seed": 2300040005,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.03337569482292213,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.07107828831269289
+  },
+  {
+    "seed": 2300040002,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.038867534049413455,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.3244975168807582
+  },
+  {
+    "seed": 2300040000,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.03372157592269465,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.7529551306359309
+  },
+  {
+    "seed": 2300040016,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.0434306428941546,
+    "blocked_lidar_sector": true,
+    "pose_error": 1.0859237077910782
+  },
+  {
+    "seed": 2300040023,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.05118972730395255,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.16336304146226513
+  },
+  {
+    "seed": 2300040003,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.03309876770423997,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.5759203895900047
+  },
+  {
+    "seed": 2300040008,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.05492432299785999,
+    "blocked_lidar_sector": false,
+    "pose_error": 1.0952709460381118
+  },
+  {
+    "seed": 2300040018,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.04101008475029011,
+    "blocked_lidar_sector": false,
+    "pose_error": 1.0982100875550143
+  },
+  {
+    "seed": 2300040017,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.04818329586736292,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.9366419459009664
+  },
+  {
+    "seed": 2300040015,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.03733406836136366,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.46129295311634383
+  },
+  {
+    "seed": 2300040006,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.03849195638808983,
+    "blocked_lidar_sector": true,
+    "pose_error": 1.1913113762998604
+  },
+  {
+    "seed": 2300040004,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.04100572011147585,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.64632028218501
+  },
+  {
+    "seed": 2300040011,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.04409968938105979,
+    "blocked_lidar_sector": true,
+    "pose_error": 1.835776066986104
+  },
+  {
+    "seed": 2300040009,
+    "group": "level_4",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.04119863212247127,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.37873937893718024
+  },
+  {
+    "seed": 2300050008,
+    "group": "level_5",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.033234890544286216,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.08584698576780146
+  },
+  {
+    "seed": 2300050019,
+    "group": "level_5",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.030860244413066,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.08465800837020673
+  },
+  {
+    "seed": 2300050013,
+    "group": "level_5",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.037047020009759846,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.4311712802487254
+  },
+  {
+    "seed": 2300050014,
+    "group": "level_5",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.03057992579173318,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.3582582664772378
+  },
+  {
+    "seed": 2300050011,
+    "group": "level_5",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.03314915138247127,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.7952029727963302
+  },
+  {
+    "seed": 2300050020,
+    "group": "level_5",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.037088497078549165,
+    "blocked_lidar_sector": false,
+    "pose_error": 1.0165522129671138
+  },
+  {
+    "seed": 2300050015,
+    "group": "level_5",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.053756063190518066,
+    "blocked_lidar_sector": false,
+    "pose_error": 6.559783541649096
+  },
+  {
+    "seed": 2300050021,
+    "group": "level_5",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.04085905195843984,
+    "blocked_lidar_sector": false,
+    "pose_error": 4.1936840989455275
+  },
+  {
+    "seed": 2300050009,
+    "group": "level_5",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.040752357182326504,
+    "blocked_lidar_sector": false,
+    "pose_error": 5.9425391521965425
+  },
+  {
+    "seed": 2300050004,
+    "group": "level_5",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.046640444296733974,
+    "blocked_lidar_sector": true,
+    "pose_error": 5.0512482911531915
+  },
+  {
+    "seed": 2300050018,
+    "group": "level_5",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.03339058133413336,
+    "blocked_lidar_sector": false,
+    "pose_error": 1.2632049234524958
+  },
+  {
+    "seed": 2100000001,
+    "group": "viewer",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.03356163565133467,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.06421186080386075
+  },
+  {
+    "seed": 2100000004,
+    "group": "viewer",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.036445847280742856,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.4258655217597504
+  },
+  {
+    "seed": 2100000006,
+    "group": "viewer",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.041251107806982434,
+    "blocked_lidar_sector": true,
+    "pose_error": 0.9734477471447013
+  },
+  {
+    "seed": 2100000007,
+    "group": "viewer",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.041419796584904134,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.9987306693774818
+  },
+  {
+    "seed": 2100000002,
+    "group": "viewer",
+    "nearest_obstacle": "parede_base",
+    "nearest_center_polygon_distance": 0.040996173525282786,
+    "blocked_lidar_sector": false,
+    "pose_error": 0.7132880072025217
+  },
+  {
+    "seed": 2100000005,
+    "group": "viewer",
+    "nearest_obstacle": "caixa_adicionada",
+    "nearest_center_polygon_distance": 0.04375343955946426,
+    "blocked_lidar_sector": true,
+    "pose_error": 1.2431447907502005
+  }
+]

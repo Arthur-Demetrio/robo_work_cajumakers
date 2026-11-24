@@ -1,0 +1,43 @@
+............................F......................FFFF................. [ 26%]
+........................................................................ [ 53%]
+....................................................................F... [ 79%]
+.......................................................                  [100%]
+=================================== FAILURES ===================================
+___________ test_original_bloqueado_com_suavizacao_ok_nao_interfere ____________
+src/robo_navigation/test/test_arvore_integrada.py:422: in test_original_bloqueado_com_suavizacao_ok_nao_interfere
+    assert st == S and m.conta('CaminhoOriginalSeguro') == 0    # so roda quando o suavizado falha
+E   AssertionError: assert ('FAILURE' == 'SUCCESS'
+E     - SUCCESS
+E     + FAILURE)
+_______________________ test_cm_inativo_aborta_sem_mover _______________________
+src/robo_navigation/test/test_destravar_ros_isolado.py:43: in test_cm_inativo_aborta_sem_mover
+    assert r['aceito'] and r['status'] == 6, r          # ABORTED
+E   KeyError: 'aceito'
+________________ test_contorno_normal_devolve_ao_nav2_sem_mover ________________
+src/robo_navigation/test/test_destravar_ros_isolado.py:49: in test_contorno_normal_devolve_ao_nav2_sem_mover
+    assert r['status'] == 4, (r, log[-2000:])            # SUCCEEDED
+E   KeyError: 'status'
+___________________ test_comando_estrangeiro_impede_manobra ____________________
+src/robo_navigation/test/test_destravar_ros_isolado.py:56: in test_comando_estrangeiro_impede_manobra
+    assert r['status'] == 6 and 'exclusivo' in r['error_msg'], r
+E   KeyError: 'status'
+____________________ test_cancelamento_durante_manobra_para ____________________
+src/robo_navigation/test/test_destravar_ros_isolado.py:62: in test_cancelamento_durante_manobra_para
+    assert r['status'] in (5, 6), (r, log[-3000:])       # CANCELED/ABORTED, nunca SUCCEEDED
+E   KeyError: 'status'
+_______ test_dwb_stage_preserves_parameters_and_all_existing_protections _______
+src/robo_navigation/test/test_navigation_profiles.py:54: in test_dwb_stage_preserves_parameters_and_all_existing_protections
+    assert stage==original
+E   AssertionError: assert {'behavior_se...e, ...}}, ...} == {'behavior_se...e, ...}}, ...}
+E     Omitting 9 identical items, use -vv to show
+E     Differing items:
+E     {'collision_monitor': {'ros__parameters': {'SweptTurnStop': {'action_type': 'stop', 'enabled': False, 'holonomic': Tru...linear_max': 0.05, 'linear_min': 0.005, ...}, ...}, 'base_frame_id': 'base_link', 'base_shift_correction': True, ...}}} != {'collision_monitor': {'ros__parameters': {'SweptTurnStop': {'action_type': 'stop', 'enabled': False, 'holonomic': Tru...linear_max': 0.35, 'linear_min': 0.005, ...}, ...}, 'base_frame_id': 'base_link', 'base_shift_correction': True, ...}}}
+E     Use -v to get more diff
+=========================== short test summary info ============================
+FAILED src/robo_navigation/test/test_arvore_integrada.py::test_original_bloqueado_com_suavizacao_ok_nao_interfere
+FAILED src/robo_navigation/test/test_destravar_ros_isolado.py::test_cm_inativo_aborta_sem_mover
+FAILED src/robo_navigation/test/test_destravar_ros_isolado.py::test_contorno_normal_devolve_ao_nav2_sem_mover
+FAILED src/robo_navigation/test/test_destravar_ros_isolado.py::test_comando_estrangeiro_impede_manobra
+FAILED src/robo_navigation/test/test_destravar_ros_isolado.py::test_cancelamento_durante_manobra_para
+FAILED src/robo_navigation/test/test_navigation_profiles.py::test_dwb_stage_preserves_parameters_and_all_existing_protections
+6 failed, 265 passed in 309.09s (0:05:09)

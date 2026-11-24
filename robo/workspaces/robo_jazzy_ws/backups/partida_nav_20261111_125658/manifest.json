@@ -1,0 +1,7 @@
+{
+  "CLAUDE.md": "2d43bdd4c32dab43fc65f1f7e4a996fc0b838917f3832da051b5d5accec8397e",
+  "src/robo_navigation/launch/navigation.launch.py": "63f5582e3f2572065c1ac62a20026ef53a12449cedaf90e4d51d034872f39eb2",
+  "src/robo_navigation/scripts/alinhador_passagem.py": "ee921f7bda8bfac77c2abb938e4c3e6ed3f378b1e688bf7d44f51d1d74ea4272",
+  "src/robo_navigation/test/test_nav2_principal.py": "16412ff3dd3734edff5840884ad189c08dae2027033b3af182dd8fe4804d820a",
+  "src/robo_navigation/test/test_ajustes_missao35.py": "6f9baacf7d62107223618aa24470371e378fb1361c8ae759e4faf3e21efa57b8"
+}

@@ -1,0 +1,16 @@
+/home/marcos/robo_rl_v2/runs/desenvolvimento_v2_20261110_093450
+equivalence passed
+benchmark 1 {'transitions': 4096, 'wall_s': 32.25370229499822, 'transitions_s': 126.99317314140373, 'stopped': False, 'n_envs': 1}
+benchmark 2 {'transitions': 4096, 'wall_s': 28.867972448999353, 'transitions_s': 141.88734616663317, 'stopped': False, 'n_envs': 2}
+benchmark 4 {'transitions': 4096, 'wall_s': 23.345456171999103, 'transitions_s': 175.45170117141703, 'stopped': False, 'n_envs': 4}
+selected 4
+pilot done baseline
+pilot done waypoints
+evaluation full reference {'success': 0.01, 'collision': 0.99, 'timeout': 0.0, 'elapsed': 13.539200000000001, 'distance': 2.9110531162905913, 'reward': -104.009532867977, 'max_est_error': 0.8097433292159486, 'n': 100, 'gate_passed': False}
+evaluation full baseline {'success': 0.03, 'collision': 0.97, 'timeout': 0.0, 'elapsed': 15.191999999999998, 'distance': 2.8162146655805578, 'reward': -98.90727185797117, 'max_est_error': 1.0463018337134793, 'n': 100, 'gate_passed': False}
+evaluation full waypoints {'success': 0.01, 'collision': 0.99, 'timeout': 0.0, 'elapsed': 14.515199999999998, 'distance': 2.7892972221988765, 'reward': -102.31484287593024, 'max_est_error': 0.9319633582773629, 'n': 100, 'gate_passed': False}
+evaluation full planner_oracle {'success': 1.0, 'collision': 0.0, 'timeout': 0.0, 'elapsed': 26.0304, 'distance': 0.18945243073076604, 'reward': 133.09487128079854, 'max_est_error': 0.5089530967775078, 'n': 100, 'gate_passed': True}
+evaluation gate reference {'success': 0.06, 'collision': 0.94, 'timeout': 0.0, 'elapsed': 15.808, 'distance': 1.6538829894030922, 'reward': -95.392166777379, 'max_est_error': 1.0906956558390424, 'n': 100, 'gate_passed': False}
+evaluation gate baseline {'success': 0.1, 'collision': 0.9, 'timeout': 0.0, 'elapsed': 16.7616, 'distance': 1.6232402019023826, 'reward': -87.06372965227438, 'max_est_error': 1.124726295934739, 'n': 100, 'gate_passed': False}
+evaluation gate waypoints {'success': 0.06, 'collision': 0.94, 'timeout': 0.0, 'elapsed': 15.224, 'distance': 1.5938377199894784, 'reward': -94.28313183812898, 'max_est_error': 1.0376844725587844, 'n': 100, 'gate_passed': False}
+COMPLETE /home/marcos/robo_rl_v2/runs/desenvolvimento_v2_20261110_093450

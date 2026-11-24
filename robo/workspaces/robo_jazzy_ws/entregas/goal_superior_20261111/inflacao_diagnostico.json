@@ -1,0 +1,19 @@
+{
+  "0.215": {
+    "conectado": true,
+    "inicio_livre": true,
+    "goal_livre": true
+  },
+  "0.315": {
+    "conectado": true,
+    "inicio_livre": true,
+    "goal_livre": true
+  },
+  "0.325": {
+    "conectado": true,
+    "inicio_livre": true,
+    "goal_livre": true
+  },
+  "obstaculos_costmap_em_mapa_livre": 82,
+  "inscritos_costmap_em_mapa_livre": 9422
+}

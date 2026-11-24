@@ -1,0 +1,32 @@
+=== m32_t3_r0 (missao32 T3: 32 cm de lado, deslize k 0,8) ===
+  -> FALHA_EXPLICITA / bom | disse: WS_1 FALHOU encosto: face parcial perto da bancada: alinhamento anterior insuficiente; necessario reconhecer a face completa mais longe | real: folga 9.3 cm centro +17.1 cm ang -1.5 g | menor dist mesa 7.9 cm
+=== m32_t3_r1 (missao32 T3: 32 cm de lado, deslize k 0,8) ===
+Exception in thread Thread-1 (spin):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+    executor.spin_once()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 907, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 785, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException
+Traceback (most recent call last):
+  File "/home/marcos/sim_encosto/bancada.py", line 431, in <module>
+    main()
+  File "/home/marcos/sim_encosto/bancada.py", line 313, in main
+    registros.append(rodar_cenario(c, rep, areas, degrau, areas_sim, pasta, pr, no, a.timeout,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/marcos/sim_encosto/bancada.py", line 365, in rodar_cenario
+    time.sleep(3.0)   # laser_tf, IMU e map->odom estabilizam
+    ^^^^^^^^^^^^^^^
+KeyboardInterrupt

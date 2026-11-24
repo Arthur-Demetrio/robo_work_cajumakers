@@ -1,0 +1,10 @@
+test_actual_core_loads_without_ros (test_teacher_legacy.LegacyTeacherTests.test_actual_core_loads_without_ros) ... ok
+test_actual_corridor_measurement (test_teacher_legacy.LegacyTeacherTests.test_actual_corridor_measurement) ... ok
+test_actual_encosto_stops_when_measurements_are_stale (test_teacher_legacy.LegacyTeacherTests.test_actual_encosto_stops_when_measurements_are_stale) ... ok
+test_scan_frame_and_dataset (test_teacher_legacy.LegacyTeacherTests.test_scan_frame_and_dataset) ... ok
+test_unrepresentable_turn_is_not_clipped (test_teacher_legacy.LegacyTeacherTests.test_unrepresentable_turn_is_not_clipped) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.634s
+
+OK

@@ -1,0 +1,29 @@
+[WARN] [ros2bag]: Positional "topics" argument deprecated. Please use optional "--topics" argument instead.
+stdin is not a terminal device. Keyboard handling disabled.[INFO] [1794422828.657751365] [rosbag2_recorder]: Press SPACE for pausing/resuming
+[INFO] [1794422828.657971965] [rosbag2_recorder]: Event publisher thread: Started
+[INFO] [1794422828.675409003] [rosbag2_recorder]: Starting recording to '/home/marcos/robo_jazzy_ws/entregas/costmap_sem_conexao_20261111/ensaio_goal_superior'
+[INFO] [1794422828.692702767] [rosbag2_recorder]: Subscribed to topic '/rosout'
+[INFO] [1794422828.693029499] [rosbag2_recorder]: Listening for topics...
+[INFO] [1794422828.693085591] [rosbag2_recorder]: Recording...
+[INFO] [1794422828.693292038] [rosbag2_recorder]: Topics discovery started.
+[INFO] [1794422829.552681312] [rosbag2_recorder]: Subscribed to topic '/cmd_vel_nav'
+[INFO] [1794422829.566347422] [rosbag2_recorder]: Subscribed to topic '/cmd_vel'
+[INFO] [1794422829.573374449] [rosbag2_recorder]: Subscribed to topic '/cmd_vel_nav_base'
+[INFO] [1794422829.582401330] [rosbag2_recorder]: Subscribed to topic '/imu/data'
+[INFO] [1794422829.591768412] [rosbag2_recorder]: Subscribed to topic '/local_costmap/costmap'
+[INFO] [1794422829.608516061] [rosbag2_recorder]: Subscribed to topic '/tf_static'
+[INFO] [1794422829.794577994] [rosbag2_recorder]: Subscribed to topic '/odom'
+[INFO] [1794422829.803783412] [rosbag2_recorder]: Subscribed to topic '/tf'
+[INFO] [1794422829.822324390] [rosbag2_recorder]: Subscribed to topic '/scan_front'
+[INFO] [1794422830.218608441] [rosbag2_recorder]: Subscribed to topic '/global_costmap/costmap'
+[INFO] [1794422830.242425565] [rosbag2_recorder]: Subscribed to topic '/plan'
+[INFO] [1794422830.250598656] [rosbag2_recorder]: Subscribed to topic '/cmd_vel_smoothed'
+[WARN] [1794422830.364515309] [ROSBAG2_TRANSPORT]: Hidden topics are not recorded. Enable them with --include-hidden-topics
+[INFO] [1794422830.981841646] [rosbag2_recorder]: Subscribed to topic '/scan_nav'
+[INFO] [1794422831.095717531] [rosbag2_recorder]: Subscribed to topic '/map'
+[INFO] [1794422831.764761053] [rosbag2_recorder]: Subscribed to topic '/cmd_vel_nav_especial'
+[INFO] [1794423032.446781803] [rosbag2_recorder]: Topics discovery stopped.
+[INFO] [1794423032.447044854] [rosbag2_recorder]: Pausing recording.
+[INFO] [1794423032.447179885] [rosbag2_cpp]: Writing remaining messages from cache to the bag. It may take a while
+[INFO] [1794423032.476237622] [rosbag2_recorder]: Recording stopped
+[INFO] [1794423032.480230493] [rosbag2_recorder]: Event publisher thread: Exited

@@ -1,0 +1,39 @@
+odometry_node:
+  ros__parameters:
+    publish_tf: true
+    odom_frame: odom
+    base_frame: base_link
+    scan_topic: /scan
+    valid_topic: /lidar_odometry/valid
+    publish_rate_hz: 25.0 # igual a taxa da IMU (antes 20)
+    scan_timeout_s: 0.70
+    match_timeout_s: 0.85
+    reference_reset_timeout_s: 1.20
+
+    minimum_scan_points: 24
+    maximum_correspondence_distance_m: 0.30
+    trim_fraction: 0.75
+    maximum_icp_iterations: 16
+    search_linear_window_m: 0.08
+    search_linear_step_m: 0.02
+    # Centrada na pose prevista; precisa cobrir uma parada brusca durante giro
+    # (~0,10 rad entre scans a 0,56 rad/s). Antes: 0.08.
+    search_angular_window_rad: 0.12
+    search_angular_step_rad: 0.02
+    maximum_match_rmse_m: 0.085
+    maximum_scan_translation_m: 0.20
+    maximum_scan_rotation_rad: 0.25
+
+    # V2: deadband menor e referencia por keyframe para acumular movimentos lentos.
+    stationary_translation_deadband_m: 0.001
+    stationary_rotation_deadband_rad: 0.003
+    keyframe_translation_m: 0.030
+    keyframe_rotation_rad: 0.030
+    velocity_filter_alpha: 0.55
+
+    # Giroscopio (BNO055, /imu da robo_bridge com firmware v2): o giro medido
+    # entre scans e o ponto de partida da busca de rotacao. Sem /imu por mais
+    # de imu_timeout_s, volta para a previsao pela velocidade dos scans.
+    use_imu: true
+    imu_topic: /imu
+    imu_timeout_s: 0.30

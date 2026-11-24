@@ -1,0 +1,24 @@
+[INFO] [1794262230.427979831] [collision_monitor]: 
+	collision_monitor lifecycle node launched. 
+	Waiting on external lifecycle transitions to activate
+	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [1794262230.756634903] [collision_monitor]: Configuring
+[INFO] [1794262230.763319526] [collision_monitor]: [scan]: Creating Scan
+[INFO] [1794262230.766281220] [collision_monitor]: [VelocityPolygonStop]: Creating Polygon
+[INFO] [1794262230.766326077] [collision_monitor]: [VelocityPolygonStop]: Creating VelocityPolygon
+[INFO] [1794262230.771649569] [collision_monitor]: [SweptTurnStop]: Creating Polygon
+[INFO] [1794262230.771687828] [collision_monitor]: [SweptTurnStop]: Creating VelocityPolygon
+[INFO] [1794262230.791121454] [collision_monitor]: Activating
+[INFO] [1794262230.791220104] [collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[INFO] [1794262326.474560151] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1794262326.474668501] [collision_monitor]: Running Nav2 LifecycleNode rcl preshutdown (collision_monitor)
+[INFO] [1794262326.474766131] [collision_monitor]: Deactivating
+[INFO] [1794262326.474803213] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[INFO] [1794262326.485006232] [collision_monitor]: Cleaning up
+[INFO] [1794262326.485073255] [collision_monitor]: [VelocityPolygonStop]: Destroying VelocityPolygon
+[INFO] [1794262326.485099151] [collision_monitor]: [VelocityPolygonStop]: Destroying Polygon
+[INFO] [1794262326.485121157] [collision_monitor]: [SweptTurnStop]: Destroying VelocityPolygon
+[INFO] [1794262326.485137831] [collision_monitor]: [SweptTurnStop]: Destroying Polygon
+[INFO] [1794262326.485155405] [collision_monitor]: [scan]: Destroying Scan
+[INFO] [1794262326.487036707] [collision_monitor]: Destroying bond (collision_monitor) to lifecycle manager.
+[INFO] [1794262326.492595272] [collision_monitor]: Destroying

@@ -1,0 +1,40 @@
+<root BTCPP_format="4" main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <RecoveryNode number_of_retries="2" name="BoundedNavigation">
+      <PipelineSequence>
+        <RateController hz="1.0">
+          <RecoveryNode number_of_retries="1">
+            <Sequence>
+              <ComputePathToPose goal="{goal}" path="{path}" planner_id="GridBased" error_code_id="{compute_path_error_code}"/>
+              <SmoothPath unsmoothed_path="{path}" smoothed_path="{smoothed_path}" smoother_id="simple_smoother" max_smoothing_duration="2.0" check_for_collisions="true" error_code_id="{smoothing_path_error_code}"/>
+            </Sequence>
+            <Sequence>
+              <Fallback>
+                <WouldAPlannerRecoveryHelp error_code="{compute_path_error_code}"/>
+                <WouldASmootherRecoveryHelp error_code="{smoothing_path_error_code}"/>
+              </Fallback>
+              <ClearEntireCostmap service_name="global_costmap/clear_entirely_global_costmap"/>
+            </Sequence>
+          </RecoveryNode>
+        </RateController>
+        <RecoveryNode number_of_retries="1">
+          <FollowPath path="{smoothed_path}" controller_id="FollowPath" error_code_id="{follow_path_error_code}"/>
+          <Sequence>
+            <WouldAControllerRecoveryHelp error_code="{follow_path_error_code}"/>
+            <ClearEntireCostmap service_name="local_costmap/clear_entirely_local_costmap"/>
+          </Sequence>
+        </RecoveryNode>
+      </PipelineSequence>
+      <Sequence>
+        <Fallback>
+          <WouldAControllerRecoveryHelp error_code="{follow_path_error_code}"/>
+          <WouldAPlannerRecoveryHelp error_code="{compute_path_error_code}"/>
+        </Fallback>
+        <!-- One transaction owns stop, coverage checks, motion, independent progress,
+             and mandatory fresh reevaluation after rear. Failure is terminal.
+             No RoundRobin fallback may hide a cancellation or communication failure. -->
+        <DriveOnHeading server_name="supervised_escape" dist_to_travel="0.10" speed="0.03" time_allowance="20.0" error_code_id="{recovery_error_code}"/>
+      </Sequence>
+    </RecoveryNode>
+  </BehaviorTree>
+</root>

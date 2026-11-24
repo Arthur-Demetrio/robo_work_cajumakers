@@ -1,0 +1,2 @@
+[INFO] [1791200107.428885200] [scan_filter]: Filtro LiDAR pronto: /scan_raw -> /scan_front; inversao angular=ativa; intervalos bloqueados=4
+[WARN] [1791200173.356970797] [scan_filter]: New subscription discovered on topic '/scan_front', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY

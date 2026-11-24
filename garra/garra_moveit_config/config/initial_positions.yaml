@@ -1,0 +1,9 @@
+# Posicao inicial assumida pelo ros2_control. O DS3218MG nao informa a posicao real: ele vai
+# direto a esta pose ao receber o primeiro comando. q=0 e o comando de 90 graus nos tres servos.
+
+initial_positions:
+  Revolucionar_46: 0.0
+  Revolucionar_49: 0.0
+  Revolucionar_72: 0.0
+  # J4: o firmware liga o servo dos dedos em 90 graus (1472 us).
+  dedos: 1.571

@@ -1,0 +1,4 @@
+1 {'transitions': 4096, 'wall_s': 21.561451585999748, 'transitions_s': 189.96865696461776, 'stopped': False, 'n_envs': 1}
+2 {'transitions': 4096, 'wall_s': 17.326299819003907, 'transitions_s': 236.40362009131388, 'stopped': False, 'n_envs': 2}
+4 {'transitions': 4096, 'wall_s': 17.03362553400075, 'transitions_s': 240.46554221965204, 'stopped': False, 'n_envs': 4}
+all equivalent

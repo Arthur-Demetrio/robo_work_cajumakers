@@ -1,0 +1,42 @@
+{
+  "output": "/home/marcos/robo_rl_v2/runs/treino_v2_nativo_gated_20261110_102312",
+  "steps": 2000000,
+  "seed": 42,
+  "checkpoint_every": 10000,
+  "eval_every": 25000,
+  "eval_episodes": 100,
+  "patience": 4,
+  "variant": "arena_2016_v2",
+  "native": true,
+  "n_envs": 2,
+  "n_steps_per_env": 256,
+  "rollout_total": 512,
+  "source": "/home/marcos/robo_rl_v2/runs/treino_2016_transferido_20261110_085342/final.zip",
+  "source_sha256": "51ae23f3188dd658845e9cf7e8c7eed376e9f019d176f09629684f90354e5dbc",
+  "prior_cumulative_steps": 2347094,
+  "layout_sha256": "1dd87719be6653107073984ee2432aea970c60423d563c9882c9a5d7d525a168",
+  "stages": [
+    {
+      "maximum": 2.0,
+      "line_of_sight": true
+    },
+    {
+      "maximum": 2.0,
+      "line_of_sight": false
+    },
+    {
+      "maximum": 4.0,
+      "line_of_sight": false
+    },
+    {
+      "maximum": 12.0,
+      "line_of_sight": false
+    }
+  ],
+  "gate": {
+    "success_rate": 0.9,
+    "observed_collisions": 0
+  },
+  "localization_sensor_correction_implemented": false,
+  "imitation_learning_implemented": false
+}

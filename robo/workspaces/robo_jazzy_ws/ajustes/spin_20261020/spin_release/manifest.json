@@ -1,0 +1,10 @@
+{
+  "robo_progressive_spin/robo_progressive_spin/progressive_spin_node.py": {
+    "old": "665825fe7c237f4e80ffce34f8572d1ab56cae12ca6ad18bc30350418ae7ce78",
+    "new": "968e04a96a070f6f084e06d3a8d0e697964f481aad2a1904818de38d5da26c79"
+  },
+  "robo_progressive_spin/robo_progressive_spin/geometry.py": {
+    "old": "e69d1232f2548f35a180e32b46d6c488df199f18e13ef1a3aa72dc7915cfa71b",
+    "new": "feafae5a9dee8a538cabbe22e5fd4e0049344bfa816afd281dfb9fd10627177a"
+  }
+}

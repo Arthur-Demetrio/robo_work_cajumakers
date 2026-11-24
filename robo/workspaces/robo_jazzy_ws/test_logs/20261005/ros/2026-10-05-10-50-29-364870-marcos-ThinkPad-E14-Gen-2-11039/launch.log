@@ -1,0 +1,6 @@
+1791208229.3656085 [INFO] [launch]: All log files can be found below /home/marcos/robo_jazzy_ws/test_logs/20261005/ros/2026-10-05-10-50-29-364870-marcos-ThinkPad-E14-Gen-2-11039
+1791208229.3657050 [INFO] [launch]: Default logging verbosity is set to INFO
+1791208229.5516372 [INFO] [async_slam_toolbox_node-1]: process started with pid [11052]
+1791208229.8155868 [INFO] [launch.user]: [LifecycleLaunch] Slamtoolbox node is activating.
+1791208898.8835230 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1791208899.2095890 [INFO] [async_slam_toolbox_node-1]: process has finished cleanly [pid 11052]

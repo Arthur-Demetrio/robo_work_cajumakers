@@ -1,0 +1,18 @@
+# teste_velocidade.py --giro (robo no lugar, comando direto em /cmd_vel_smoothed), 26/10 ~10:30 e ~10:50
+giro +0.05 rad/s     real 0.17 rad/s (9 graus/s)   giro total 11 graus
+giro -0.05 rad/s     real 0.27 rad/s (15 graus/s)  giro total 24 graus
+giro +0.10 rad/s     real 0.28 rad/s (16 graus/s)  giro total 24 graus
+giro -0.10 rad/s     real 0.29 rad/s (17 graus/s)  giro total 26 graus
+giro +0.14 rad/s     real 0.30 rad/s (17 graus/s)  giro total 26 graus
+giro -0.14 rad/s     real 0.31 rad/s (18 graus/s)  giro total 27 graus
+giro +0.20 rad/s     real 0.34 rad/s (19 graus/s)  giro total 31 graus
+giro -0.20 rad/s     real 0.34 rad/s (20 graus/s)  giro total 30 graus
+giro +0.28 rad/s     real 0.38 rad/s (22 graus/s)  giro total 34 graus
+giro -0.28 rad/s     real 0.38 rad/s (22 graus/s)  giro total 33 graus
+giro +0.40 rad/s     real 0.43 rad/s (25 graus/s)  giro total 37 graus
+giro -0.40 rad/s     real 0.43 rad/s (25 graus/s)  giro total 38 graus
+giro +0.55 rad/s     real 0.51 rad/s (29 graus/s)  giro total 43 graus
+giro -0.55 rad/s     real 0.51 rad/s (29 graus/s)  giro total 45 graus
+# Obs.: acima de 0.20 rad/s o Collision Monitor (versao antiga do nav2_params) nao tinha poligono:
+# os giros de 0.28-0.55 rodaram sem essa protecao. O aplicar_giro_rapido.py corrige.
+# Teste linear nao feito (robo a 0.35 m da parede; precisa de >= 1.3 m).

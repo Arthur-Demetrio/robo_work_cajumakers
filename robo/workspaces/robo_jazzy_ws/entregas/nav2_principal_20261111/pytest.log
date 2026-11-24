@@ -1,0 +1,19 @@
+................F.................................................       [100%]
+=================================== FAILURES ===================================
+__________ test_launch_flag_remapeia_todos_publicadores_sem_mexer_cm ___________
+src/robo_navigation/test/test_nav2_principal.py:167: in test_launch_flag_remapeia_todos_publicadores_sem_mexer_cm
+    cmd=[perform_substitutions(ctx,p) for p in proc.cmd]
+/opt/ros/jazzy/lib/python3.12/site-packages/launch/utilities/perform_substitutions_impl.py:26: in perform_substitutions
+    return ''.join([context.perform_substitution(sub) for sub in subs])
+/opt/ros/jazzy/lib/python3.12/site-packages/launch/launch_context.py:241: in perform_substitution
+    return substitution.perform(self)
+/opt/ros/jazzy/lib/python3.12/site-packages/launch/substitutions/local_substitution.py:54: in perform
+    return eval('context.locals.' + self.expression)
+<string>:1: in <module>
+    ???
+/opt/ros/jazzy/lib/python3.12/site-packages/launch/launch_context.py:154: in __getattr__
+    raise AttributeError(
+E   AttributeError: context.locals does not contain attribute 'ros_specific_arguments', it contains: []
+=========================== short test summary info ============================
+FAILED src/robo_navigation/test/test_nav2_principal.py::test_launch_flag_remapeia_todos_publicadores_sem_mexer_cm
+1 failed, 65 passed in 4.30s
