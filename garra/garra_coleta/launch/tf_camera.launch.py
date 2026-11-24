@@ -15,5 +15,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from coleta_comum import tf_camera  # noqa: E402
 
 
+from garra_coleta.logs_launch import salvar_logs  # noqa: E402
+
 def generate_launch_description():
-    return LaunchDescription([tf_camera()])
+    return LaunchDescription(salvar_logs('tf_camera') + [tf_camera()])

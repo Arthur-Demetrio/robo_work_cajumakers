@@ -4,8 +4,10 @@
 Baseado na visao do repositorio niviton/-WORK (vision/cubes/detector.py e grasp.py):
   - camera_calib_webcam.yaml: calibracao da webcam em 1920x1080 (RMS 0,51 px), do -WORK;
   - o tag (quadrado preto de 32 mm) fica no topo do cubo de 42 mm. A posicao sai do PIXEL do centro
-    do tag cruzado com a altura conhecida do topo do cubo (chao, ou --apoio para mesa). O metodo
-    antigo, pela pose 3D do tag (solvePnP), fica em --pnp: a distancia dele sai ~11% maior;
+    do tag cruzado com a altura do topo do cubo. A altura da superficie (chao ou mesa) e descoberta
+    sozinha em cada quadro (--apoio auto, padrao): entre as alturas de --alturas, a que faz o raio do
+    pixel bater com a distancia do solvePnP corrigida (FATOR_PNP). --apoio 0.15 fixa uma altura. O
+    metodo antigo, pela pose 3D do tag (solvePnP), fica em --pnp: a distancia dele sai ~11% maior;
   - a pose da camera no robo vem de ~/.config/garra/camera_montagem.json (calibrar_camera.py;
     recalibrada em 2026-11-16) ou, sem ele, do robot_config_webcam.yaml / MONTAGEM.
 Funciona com o OpenCV 4.6 do ROS Jazzy (API antiga do aruco) e com o >= 4.7.
@@ -67,6 +69,11 @@ TOPICO_TAGS = '/camera/tags_vistos'
 TAG = 0.032              # m, lado do quadrado PRETO do AprilTag
 CUBO = 0.042             # m, aresta do cubo
 Z_CHAO = CUBO / 2        # centro do cubo apoiado no chao
+# Distancia do solvePnP / distancia real, medido em 2026-11-16 (~11% maior). Usado so para ESCOLHER a
+# altura da mesa (--apoio auto); a posicao continua saindo do pixel.
+FATOR_PNP = 1.11
+# Alturas de superficie possiveis (m): chao e as mesas da RoboCup@Work.
+ALTURAS_PADRAO = '0,0.05,0.10,0.15'
 PARADO_S = 1.0           # envio automatico: cubo parado por este tempo
 PARADO_M = 0.005         # m de tremido aceito como parado
 MOVEU_M = 0.02           # envio automatico: so manda de novo se o cubo andou mais que isso
@@ -87,6 +94,8 @@ def para_robo_base(x_borda):
 
 Y_PLANO = -0.029         # m: plano da garra (o braco ainda e planar)
 Y_TOLERANCIA = 0.015
+PLATAFORMA_Y_MIN = -0.103   # = alcance_cubo.py: y que a plataforma Y alcanca
+PLATAFORMA_Y_MAX = 0.117
 
 # Camera no meio, 44 cm atras do centro da base, lente a 54 cm do chao, 41 graus para baixo,
 # olhando para a frente do robo. (Os tags no -WORK deram 39,4 graus: se o x sair deslocado,
@@ -231,6 +240,29 @@ def centro_pelo_pixel(cantos, K, dist, R_base_cam, t_base_cam, apoio=0.0):
     return np.array([topo[0], topo[1], apoio + CUBO / 2])
 
 
+def apoio_automatico(cantos, tvec, K, dist, R_base_cam, t_base_cam, alturas, fator=None):
+    """Altura da superficie do cubo, escolhida entre 'alturas' (m), e o centro do cubo nela.
+
+    Para cada altura h, o raio do pixel do centro do tag cruza o plano do topo (h + CUBO) a uma
+    distancia r(h) da camera. O solvePnP mede essa distancia direto (|tvec|), so que ~11% maior:
+    vale a altura cujo r(h) fica mais perto de |tvec| / FATOR_PNP.
+    Devolve (h, xyz, razao) ou (None, None, None); razao = |tvec| / r(h) e o fator medido agora
+    (deve ficar perto de FATOR_PNP; se nao, ajuste --fator-pnp).
+    """
+    fator = FATOR_PNP if fator is None else fator
+    d_pnp = float(np.linalg.norm(tvec))
+    r_pnp = d_pnp / fator
+    melhor = (None, None, float('inf'), None)
+    for h in alturas:
+        topo = ponto_no_plano(cantos, K, dist, R_base_cam, t_base_cam, h + CUBO)
+        if topo is None:
+            continue
+        r = float(np.linalg.norm(topo - t_base_cam))
+        if abs(r - r_pnp) < melhor[2]:
+            melhor = (h, np.array([topo[0], topo[1], h + CUBO / 2]), abs(r - r_pnp), d_pnp / r)
+    return melhor[0], melhor[1], melhor[3]
+
+
 def ponto_no_plano(cantos, K, dist, R_base_cam, t_base_cam, z):
     """Centro do tag em robo_base, sabendo que ele esta no plano horizontal de altura z (m)."""
     p0, p1, p2, p3 = np.asarray(cantos, float).reshape(4, 2)
@@ -323,6 +355,9 @@ def abrir_camera(indice):
 class App:
     def __init__(self, args):
         self.args = args
+        # None = altura automatica (--apoio auto); senao a altura fixa em m.
+        self.apoio = None if str(args.apoio).lower() == 'auto' else float(args.apoio)
+        self.alturas = [float(v) for v in str(args.alturas).split(',') if v.strip()]
         self.pub = Publicador(args.sem_ros, args.topico)
         self.R, self.t, origem = pose_camera()
         incl = math.degrees(math.asin(-self.R[2, 2]))
@@ -352,8 +387,10 @@ class App:
         x, y, z = self.posicao_final(cubo)
         texto = (f'Cubo {cubo["id"]}: {da_borda(x) * 100:.1f} cm da borda dianteira, y={y * 100:.1f} cm '
                  f'(robo_base x={x:.3f} y={y:.3f} z={z:.3f})')
-        if abs(y - Y_PLANO) > Y_TOLERANCIA:
-            texto += f'  AVISO: fora do plano da garra (y~{Y_PLANO:.3f}); y e ignorado'
+        # O y e alinhado pela plataforma Y (alcance_cubo): so avisa fora do curso dela.
+        if not PLATAFORMA_Y_MIN <= y <= PLATAFORMA_Y_MAX:
+            texto += (f'  AVISO: y fora do curso da plataforma Y '
+                      f'[{PLATAFORMA_Y_MIN:+.3f}, {PLATAFORMA_Y_MAX:+.3f}]')
         print(('Enviado ' if not self.args.sem_ros else '[sem ROS] ') + texto, flush=True)
         self.pub.enviar(x, y, z)
         self.ultimo_enviado = (x, y)
@@ -379,7 +416,8 @@ class App:
             x, y, z = c['xyz']
             org = tuple(int(v) for v in c['cantos'][0] - [0, 14])
             cv2.putText(img, f'ID {c["id"]} da borda: x={da_borda(x) * 100:.1f} y={y * 100:.1f} cm  '
-                        f'(centro: x={x * 100:.1f} z={z * 100:.1f})',
+                        f'(centro: x={x * 100:.1f} z={z * 100:.1f}'
+                        + (f' pnp/pixel={c["razao"]:.3f})' if c.get('razao') else ')'),
                         org, cv2.FONT_HERSHEY_SIMPLEX, 0.9, cor, 2)
         h, w = img.shape[:2]
         cv2.rectangle(img, (0, h - 50), (w, h), (20, 20, 20), -1)
@@ -432,10 +470,16 @@ class App:
                                         tuple(int(v) for v in c[0] - [0, 14]),
                                         cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 255), 2)
                         continue
-                    xyz = (centro_do_cubo(r, t, self.R, self.t) if self.args.pnp else
-                           centro_pelo_pixel(c, det.K, det.dist, self.R, self.t, self.args.apoio))
+                    razao = None
+                    if self.args.pnp:
+                        xyz = centro_do_cubo(r, t, self.R, self.t)
+                    elif self.apoio is None:
+                        _, xyz, razao = apoio_automatico(c, t, det.K, det.dist, self.R, self.t,
+                                                         self.alturas, self.args.fator_pnp)
+                    else:
+                        xyz = centro_pelo_pixel(c, det.K, det.dist, self.R, self.t, self.apoio)
                     if xyz is not None:
-                        cubos.append(dict(id=i, cantos=c, rvec=r, tvec=t, xyz=xyz))
+                        cubos.append(dict(id=i, cantos=c, rvec=r, tvec=t, xyz=xyz, razao=razao))
                 alvo = self.escolher(cubos)
                 if alvo is not None:
                     self.pub.visto(*self.posicao_final(alvo))
@@ -480,8 +524,14 @@ def main():
     ap.add_argument('--camera', type=int, default=None,
                     help='indice /dev/videoN; sem ele, procura a "Web Camera"')
     ap.add_argument('--id', type=int, default=None, help='ID do AprilTag do cubo; sem ele, o mais perto')
-    ap.add_argument('--apoio', type=float, default=0.0,
-                    help='altura (m) da superficie onde estao os cubos: 0 = chao (padrao); mesa = tampo')
+    ap.add_argument('--apoio', default='auto',
+                    help='altura (m) da superficie dos cubos; auto (padrao) = descobre em cada quadro '
+                         'entre --alturas; um numero fixa (0 = chao, mesa = tampo)')
+    ap.add_argument('--alturas', default=ALTURAS_PADRAO,
+                    help=f'com --apoio auto: alturas possiveis em m, separadas por virgula ({ALTURAS_PADRAO})')
+    ap.add_argument('--fator-pnp', type=float, default=FATOR_PNP,
+                    help=f'com --apoio auto: distancia do solvePnP / real ({FATOR_PNP}); confira pelo '
+                         'pnp/pixel mostrado na imagem')
     ap.add_argument('--pnp', action='store_true',
                     help='metodo antigo: posicao pela pose 3D do tag (distancia ~11%% maior)')
     ap.add_argument('--z-medido', action='store_true',

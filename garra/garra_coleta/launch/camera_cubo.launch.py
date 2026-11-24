@@ -18,15 +18,20 @@ ARGS = [
     ('auto', 'true', 'manda o cubo sozinho quando ele fica parado (sem apertar P)'),
     ('indice', '', 'indice da webcam /dev/videoN (vazio = acha a "Web Camera")'),
     ('id', '', 'ID do AprilTag do cubo (vazio = o mais perto)'),
-    ('apoio', '0.0', 'altura (m) da superficie dos cubos: 0 = chao; mesa = altura do tampo'),
+    ('apoio', 'auto', 'altura (m) da superficie dos cubos: auto = descobre sozinha; 0 = chao; mesa = tampo'),
+    ('fator_pnp', '1.11', 'com apoio:=auto: distancia do solvePnP / real (confira o pnp/pixel na imagem)'),
+    ('alturas', '0,0.05,0.10,0.15', 'com apoio:=auto: alturas possiveis (m) da superficie dos cubos'),
     ('tag_plataforma', '256', 'ID do tag da plataforma Y (nao e cubo; vazio = desliga)'),
     ('altura_plataforma', '0.174', 'altura (m) do centro do tag da plataforma ate o chao'),
 ]
 
 
+from garra_coleta.logs_launch import salvar_logs  # noqa: E402
+
 def montar(context):
     a = valores(context, ARGS)
-    extra = ['--topico', a['topico'], '--apoio', a['apoio']]
+    extra = ['--topico', a['topico'], '--apoio', a['apoio'],
+             '--fator-pnp', a['fator_pnp'], '--alturas', a['alturas']]
     if a['auto'] in SIM:
         extra.append('--auto')
     if a['indice']:
@@ -39,4 +44,4 @@ def montar(context):
 
 
 def generate_launch_description():
-    return LaunchDescription(argumentos(ARGS) + [OpaqueFunction(function=montar)])
+    return LaunchDescription(salvar_logs('camera_cubo') + argumentos(ARGS) + [OpaqueFunction(function=montar)])

@@ -16,7 +16,8 @@ Argumentos:
                                         a plataforma Y junto do limite da esquerda (y = +0,11) ao subir e o
                                         alcance_cubo alinha o Y do cubo pela plataforma (padrao true)
     girar, sempre_ativo, id             repassados ao alcance_cubo.launch.py
-    apoio                               altura da superficie dos cubos, repassada ao camera_cubo
+    apoio                               altura da superficie dos cubos (auto = descobre sozinha)
+    fator_pnp, alturas                  com apoio:=auto: fator do solvePnP e alturas possiveis
     velocidade                          repassado ao pegar_cubo.launch.py
 
 Exemplos:
@@ -42,9 +43,12 @@ from coleta_comum import SIM, no  # noqa: E402
 Y_INICIAL = '0.110'
 
 
+from garra_coleta.logs_launch import salvar_logs  # noqa: E402
+
 def montar(context):
     a = {k: LaunchConfiguration(k).perform(context) for k in
-         ('garra', 'camera', 'base', 'plataforma', 'girar', 'sempre_ativo', 'velocidade', 'id', 'apoio')}
+         ('garra', 'camera', 'base', 'plataforma', 'girar', 'sempre_ativo', 'velocidade', 'id', 'apoio',
+          'fator_pnp', 'alturas')}
     pasta = os.path.join(get_package_share_directory('garra_coleta'), 'launch')
     moveit = os.path.join(get_package_share_directory('garra_moveit_config'), 'launch')
 
@@ -68,14 +72,15 @@ def montar(context):
     if a['camera'] == 'vision':
         acoes.append(incluir('tf_camera.launch.py'))
     elif a['camera'] == 'camera_cubo':
-        acoes.append(incluir('camera_cubo.launch.py', id=a['id'], apoio=a['apoio']))
+        acoes.append(incluir('camera_cubo.launch.py', id=a['id'], apoio=a['apoio'],
+                             fator_pnp=a['fator_pnp'], alturas=a['alturas']))
         if a['plataforma'] in SIM:
             acoes.append(no('plataforma_y', '--centralizar', Y_INICIAL))
     return acoes
 
 
 def generate_launch_description():
-    return LaunchDescription([
+    return LaunchDescription(salvar_logs('coleta') + [
         DeclareLaunchArgument('garra', default_value='nenhuma', choices=['nenhuma', 'real', 'demo']),
         DeclareLaunchArgument('camera', default_value='camera_cubo',
                               choices=['camera_cubo', 'vision', 'nenhuma']),
@@ -85,7 +90,13 @@ def generate_launch_description():
         DeclareLaunchArgument('sempre_ativo', default_value='false'),
         DeclareLaunchArgument('velocidade', default_value='0.2'),
         DeclareLaunchArgument('id', default_value=''),
-        DeclareLaunchArgument('apoio', default_value='0.0',
-                              description='altura (m) da superficie dos cubos (camera_cubo): 0 = chao'),
+        DeclareLaunchArgument('apoio', default_value='auto',
+                              description='altura (m) da superficie dos cubos (camera_cubo): auto = '
+                                          'descobre sozinha; 0 = chao; mesa = tampo'),
+        DeclareLaunchArgument('fator_pnp', default_value='1.11',
+                              description='com apoio:=auto: distancia do solvePnP / real; confira o '
+                                          'pnp/pixel mostrado na imagem do camera_cubo'),
+        DeclareLaunchArgument('alturas', default_value='0,0.05,0.10,0.15',
+                              description='com apoio:=auto: alturas possiveis (m) da superficie dos cubos'),
         OpaqueFunction(function=montar),
     ])

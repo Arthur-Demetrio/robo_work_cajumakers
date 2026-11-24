@@ -43,7 +43,12 @@ def generate_launch_description():
             pipelines=['ompl'])
         .to_moveit_configs()
     )
-    return LaunchDescription([
+    try:   # grava a saida dos nos em <repositorio>/logs/ (garra_coleta/logs_launch.py)
+        from garra_coleta.logs_launch import salvar_logs
+        logs = salvar_logs('garra')
+    except ImportError:
+        logs = []
+    return LaunchDescription(logs + [
         DeclareLaunchArgument('use_rviz', default_value='true'),
         generate_rsp_launch(moveit_config),
         Node(

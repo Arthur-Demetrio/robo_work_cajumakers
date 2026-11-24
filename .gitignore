@@ -5,3 +5,6 @@ __pycache__/
 *.pyc
 *.log
 
+
+# saida dos launchers da garra/coleta (garra_coleta/logs_launch.py)
+logs/

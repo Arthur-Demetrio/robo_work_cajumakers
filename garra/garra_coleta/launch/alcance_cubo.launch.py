@@ -27,6 +27,8 @@ ARGS = [
 ]
 
 
+from garra_coleta.logs_launch import salvar_logs  # noqa: E402
+
 def montar(context):
     a = valores(context, ARGS)
     extra = ['--max-ajustes', a['max_ajustes'], '--max-pegadas', a['max_pegadas']]
@@ -38,4 +40,4 @@ def montar(context):
 
 
 def generate_launch_description():
-    return LaunchDescription(argumentos(ARGS) + [OpaqueFunction(function=montar)])
+    return LaunchDescription(salvar_logs('alcance_cubo') + argumentos(ARGS) + [OpaqueFunction(function=montar)])
