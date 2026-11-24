@@ -85,6 +85,9 @@ DESCER_ENTREGA_MM = 0.0
 # (1,5 cm a frente); a 14 cm (0.415, -11 mm interpolado) e a 21 cm (0.485, sem correcao) pega e entrega
 # certinho. Entre pontos interpola; fora, usa o ponto mais perto.
 CORRECAO_X = [(0.405, -0.015), (0.445, 0.0), (0.485, 0.0)]
+# Escala de velocidade dos movimentos por junta (pronta <-> pre-pegada). Mais rapida que as retas: nesses
+# trechos o J1 sai de / chega perto de q=0, onde a folga faz o servo tremer; passar devagar ali piora.
+VELOCIDADE_TRANSPORTE = 0.5
 RECUO = 0.06          # m: pre-pegada recuada na direcao de aproximacao
 SUBIDA = 0.05         # m: quanto sobe depois de pegar
 INCLINACOES = range(-90, 1, 5)  # graus; negativo = ponta para baixo
@@ -137,9 +140,10 @@ def para_garra_base(d):
 
 class Coleta:
 
-    def __init__(self, c, velocidade):
+    def __init__(self, c, velocidade, velocidade_transporte=VELOCIDADE_TRANSPORTE):
         self.c = c
         self.v = velocidade
+        self.v_transporte = velocidade_transporte
         self.dedos = ActionClient(c, GripperCommand, '/garra_dedos_controller/gripper_cmd')
         self.cubo_preso = None   # None = sensor nunca publicou (simulacao ou firmware antigo)
         qos = QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE,
@@ -228,7 +232,7 @@ class Coleta:
             raise RuntimeError(f'{nome}: execucao falhou (codigo {codigo})')
 
     def ir_para(self, nome, q_alvo):
-        traj, codigo = self.c.planejar_juntas(self.c.juntas_atuais(), q_alvo, self.v)
+        traj, codigo = self.c.planejar_juntas(self.c.juntas_atuais(), q_alvo, self.v_transporte)
         if codigo != SUCESSO:
             raise RuntimeError(f'{nome}: planejamento falhou (codigo {codigo})')
         self.executar(nome, traj)
@@ -433,7 +437,9 @@ def main():
     ap.add_argument('x', type=float, nargs='?',
                     help=f'centro do cubo em X de robo_base (m); sem x e z, escuta {TOPICO}')
     ap.add_argument('z', type=float, nargs='?', help='centro do cubo em Z de robo_base (m); no chao: 0.021')
-    ap.add_argument('--velocidade', type=float, default=0.2, help='escala de velocidade (0-1)')
+    ap.add_argument('--velocidade', type=float, default=0.2, help='escala de velocidade das retas perto do cubo (0-1)')
+    ap.add_argument('--velocidade-transporte', type=float, default=VELOCIDADE_TRANSPORTE,
+                    help=f'escala de velocidade de pronta <-> pre-pegada (padrao {VELOCIDADE_TRANSPORTE})')
     ap.add_argument('--fechamento', type=float, default=FECHAMENTO_GRAUS,
                     help=f'graus do J4 ao fechar no cubo (padrao {FECHAMENTO_GRAUS:.0f}, max 100)')
     ap.add_argument('--descer', type=float, default=None,
@@ -464,7 +470,7 @@ def main():
     c = ClienteGarra('pegar_cubo')
     try:
         c.aguardar()
-        coleta = Coleta(c, args.velocidade)
+        coleta = Coleta(c, args.velocidade, args.velocidade_transporte)
         if args.x is None:
             escutar(c, coleta, args)
             return 0

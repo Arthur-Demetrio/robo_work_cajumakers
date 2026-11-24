@@ -39,7 +39,10 @@ HOME = [0.0, 0.0, 0.0]
 # Pose de espera: TCP ~25 cm do chao, 20 cm a frente da base da garra, inclinado 45 graus para baixo,
 # no meio da regiao de coleta e com folga nas juntas. A coleta planeja pelas juntas daqui ate a
 # pre-pegada; as retas a partir dela sao curtas (2 a 5 cm).
-PRONTA = [0.12, -0.95, 0.87]
+# 2026-11-24: J1 tirado de 7 para 20 graus. Perto de q=0 (vertical) a carga do J1 troca de lado na folga
+# das engrenagens e o servo treme parado, sacudindo a camera. TCP ~2 cm mais a frente, inclinacao quase igual.
+# Antes: [0.12, -0.95, 0.87].
+PRONTA = [0.35, -0.63, 1.05]
 
 SUCESSO = MoveItErrorCodes.SUCCESS
 

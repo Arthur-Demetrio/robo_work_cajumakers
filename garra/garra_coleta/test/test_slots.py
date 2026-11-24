@@ -235,7 +235,7 @@ class TestConfig(unittest.TestCase):
 
     def test_config_do_pacote_carrega(self):
         cfg = carregar_config(CONFIG, exigir_completa=False)
-        self.assertEqual(cfg.pontos["pronta"], [0.12, -0.95, 0.87])
+        self.assertEqual(cfg.pontos["pronta"], [0.35, -0.63, 1.05])
         self.assertEqual(len(cfg.slots), 3)
         self.assertEqual(len(cfg.busca_j3), 4)
 

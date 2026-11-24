@@ -27,7 +27,7 @@ VELOCIDADE = 0.2        # 0 a 1, fração da velocidade máxima
 # ============================ 2. POSES (graus) ===================================================
 # [junta1, junta2, junta3]. Ajuste depois de medir na garra. None = ainda não medido.
 POSES = {
-    "pronta":           [6.9, -54.4, 49.8],   # = PRONTA do cliente_garra (0.12, -0.95, 0.87 rad)
+    "pronta":           [20.1, -36.1, 60.2],  # = PRONTA do cliente_garra (0.35, -0.63, 1.05 rad)
     "mostrar_apriltag": None,                 # cubo na frente da câmera, tag virada para ela
     "acima_slots":      None,                 # acima dos slots, sem bater nos cubos guardados
 }
