@@ -1,9 +1,12 @@
-# Posicao inicial assumida pelo ros2_control. O DS3218MG nao informa a posicao real: ele vai
-# direto a esta pose ao receber o primeiro comando. q=0 e o comando de 90 graus nos tres servos.
+# Posicao inicial assumida pelo ros2_control. O DS3218MG nao informa a posicao real.
+# 2026-11-24: = PRONTA do cliente_garra.py. No boot o firmware vai rapido para home (1472 us) e depois,
+# na rampa, para PRONTA (PULSO_PRONTA no garra_servos.ino); o driver manda este mesmo alvo ao abrir a
+# serial. Antes era q=0 (vertical), onde o J1 treme na folga e sacode a camera.
+# Se mudar aqui, mude a PRONTA e o PULSO_PRONTA juntos (test_pronta.py confere).
 
 initial_positions:
-  Revolucionar_46: 0.0
-  Revolucionar_49: 0.0
-  Revolucionar_72: 0.0
+  Revolucionar_46: 0.35
+  Revolucionar_49: -0.63
+  Revolucionar_72: 1.05
   # J4: o firmware liga o servo dos dedos em 90 graus (1472 us).
   dedos: 1.571

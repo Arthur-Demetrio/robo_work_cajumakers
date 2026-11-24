@@ -42,6 +42,7 @@ HOME = [0.0, 0.0, 0.0]
 # 2026-11-24: J1 tirado de 7 para 20 graus. Perto de q=0 (vertical) a carga do J1 troca de lado na folga
 # das engrenagens e o servo treme parado, sacudindo a camera. TCP ~2 cm mais a frente, inclinacao quase igual.
 # Antes: [0.12, -0.95, 0.87].
+# Tambem e a pose de boot: igual ao initial_positions.yaml e ao PULSO_PRONTA do firmware (test_pronta.py).
 PRONTA = [0.35, -0.63, 1.05]
 
 SUCESSO = MoveItErrorCodes.SUCCESS

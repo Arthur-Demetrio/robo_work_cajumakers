@@ -39,9 +39,12 @@
 // pull-up interno. Solta = HIGH (sem cubo); apertada pelo cubo = LOW. Leitura com debounce.
 //
 // Seguranca:
-//  - Ao ligar, todos os servos vao para 90 graus (PULSO_INICIAL), como no sketch do time. Esse
-//    primeiro movimento e na velocidade maxima do servo, porque nao se sabe onde ele esta.
-//    Dai em diante todo movimento, inclusive o primeiro comando, respeita a velocidade abaixo.
+//  - Ao ligar, todos os servos vao para 90 graus (PULSO_INICIAL, a pose "home" do boot; NAO e o
+//    q=0 do modelo calibrado), como no sketch do time. Esse primeiro movimento e na velocidade
+//    maxima do servo, porque nao se sabe onde ele esta: home e a pose de onde esse movimento nao
+//    bate em nada. Depois de ESPERA_HOME_MS (os servos chegam em home) o braco segue sozinho, na
+//    rampa, para a pose PRONTA (PULSO_PRONTA). Comandos recebidos nesse meio tempo so mudam o alvo:
+//    a rampa so comeca depois da espera. Dai em diante todo movimento respeita a velocidade abaixo.
 //  - Velocidade: ~1,5 grau (15 us) a cada 20 ms, ~73 graus/s (3x o sketch do time),
 //    em qualquer tipo de comando. Nao bloqueia: os tres servos andam juntos.
 //  - Se a comunicacao cair, os servos mantem a ultima posicao: soltar deixaria o braco cair.
@@ -62,7 +65,12 @@ const int PASSO_US = 15;              // ~1,5 grau: (2400 - 544) / 180 = 10.31 u
 // Conversao do Servo.write (angulo em graus -> pulso), para o comando manual.
 const int SERVO_WRITE_MIN = 544;
 const int SERVO_WRITE_MAX = 2400;
-const int PULSO_INICIAL = 1472;  // 90 graus no Servo.write = q=0 do modelo (vertical)
+const int PULSO_INICIAL = 1472;  // 90 graus no Servo.write: pose home do boot (J1 ~41, J2 ~7, J3 ~-22 graus)
+// Pose PRONTA (cliente_garra.py) em pulsos, pela calibracao_servos.yaml: zero_us + q * us_por_rad.
+// Se mudar a PRONTA ou a calibracao, recalcule (o test_pronta.py do garra_coleta confere). J4 fica em home.
+// Mesma pose do initial_positions.yaml, para o driver ROS mandar o mesmo alvo ao abrir a serial.
+const int PULSO_PRONTA[N_SERVOS] = {1681, 1886, 654, PULSO_INICIAL};
+const unsigned long ESPERA_HOME_MS = 1500;  // tempo para os servos chegarem em home na velocidade maxima
 
 // Plataforma Y: DS3218 modificado para rotacao continua (pulso = velocidade, nao posicao).
 // Nao entra na rampa de velocidade dos outros servos: o pulso e aplicado direto.
@@ -470,7 +478,8 @@ void setup() {
   cubo_preso = leitura_anterior = digitalRead(PINO_SENSOR) == LOW;
   for (uint8_t i = 0; i < N_SERVOS; i++) {
     // Define o pulso antes do attach para o servo nao ir ao padrao da biblioteca (1500 us).
-    atual[i] = alvo[i] = PULSO_INICIAL;
+    atual[i] = PULSO_INICIAL;
+    alvo[i] = PULSO_PRONTA[i];   // so anda depois de ESPERA_HOME_MS (ver o loop)
     servos[i].writeMicroseconds(PULSO_INICIAL);
     servos[i].attach(PINOS[i], PULSO_MIN, PULSO_MAX);
   }
@@ -520,7 +529,8 @@ void loop() {
     cortar_sinal_y();
   }
 
-  if (agora - ultimo_passo >= PERIODO_MS) {
+  // Depois do boot, segura a rampa ate os servos chegarem em home (millis() comeca em 0 no reset).
+  if (agora >= ESPERA_HOME_MS && agora - ultimo_passo >= PERIODO_MS) {
     ultimo_passo = agora;
     for (uint8_t i = 0; i < N_SERVOS; i++) {
       if (atual[i] == alvo[i]) continue;
