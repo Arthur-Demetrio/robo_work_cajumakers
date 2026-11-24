@@ -37,5 +37,15 @@ class TestBateria(unittest.TestCase):
         self.assertEqual(faixas([], 0.01), '-')
 
 
+class TestEstruturas(unittest.TestCase):
+
+    def test_mao_liberada_so_na_superficie_de_apoio(self):
+        from garra_coleta.estruturas import MAO, dedos_na_superficie
+        pares = dedos_na_superficie(PREFIXO + 'prateleira')
+        self.assertEqual({p[0] for p in pares}, set(MAO))
+        self.assertTrue(all(p[1] == PREFIXO + 'prateleira' for p in pares))
+        self.assertEqual(dedos_na_superficie('robo_base'), [])
+
+
 if __name__ == '__main__':
     unittest.main()

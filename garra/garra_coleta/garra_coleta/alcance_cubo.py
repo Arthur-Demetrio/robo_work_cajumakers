@@ -85,8 +85,8 @@ Y_PLANO = -0.029      # plano da garra (Y do TCP)
 Y_TOLERANCIA = 0.015  # mesmo valor do aviso do camera_cubo.py
 X_ALVO = 0.445
 # Curso do plano da garra com a plataforma Y (os mesmos --y-min/--y-max do plataforma_y.py).
-PLATAFORMA_Y_MIN = -0.103
-PLATAFORMA_Y_MAX = 0.117
+PLATAFORMA_Y_MIN = -0.1213  # 2026-11-24: curso medido (plataforma_y_web.py); era -0.103
+PLATAFORMA_Y_MAX = 0.1904   # 2026-11-24; era 0.117 (limitava o curso)
 # TEMPORARIO (2026-11-21, garra com folga, inclinada para a esquerda): quando a plataforma vai para a
 # DIREITA ate o cubo, os dedos chegam atrasados; o alvo passa do cubo por isto (m) para a direita. Indo para
 # a esquerda, a folga ja fica do lado certo (sem compensacao). Voltar para 0.0 quando a garra for consertada.

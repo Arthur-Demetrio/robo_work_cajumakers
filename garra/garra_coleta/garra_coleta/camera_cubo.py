@@ -94,8 +94,8 @@ def para_robo_base(x_borda):
 
 Y_PLANO = -0.029         # m: plano da garra (o braco ainda e planar)
 Y_TOLERANCIA = 0.015
-PLATAFORMA_Y_MIN = -0.103   # = alcance_cubo.py: y que a plataforma Y alcanca
-PLATAFORMA_Y_MAX = 0.117
+PLATAFORMA_Y_MIN = -0.1213  # = alcance_cubo.py: y que a plataforma Y alcanca (2026-11-24; era -0.103)
+PLATAFORMA_Y_MAX = 0.1904   # 2026-11-24; era 0.117 (limitava o curso)
 
 # Camera no meio, 44 cm atras do centro da base, lente a 54 cm do chao, 41 graus para baixo,
 # olhando para a frente do robo. (Os tags no -WORK deram 39,4 graus: se o x sair deslocado,

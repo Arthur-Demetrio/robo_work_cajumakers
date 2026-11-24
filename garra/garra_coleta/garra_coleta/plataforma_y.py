@@ -303,11 +303,14 @@ def main():
     ap.add_argument('--sem-camera-s', type=float, default=0.3)
     # 30 s (era 15): perto das bordas anda devagar e em pulsos; de -1,7 a +11 cm esgotou os 15 s (2026-11-21).
     ap.add_argument('--tempo-max-s', type=float, default=30.0)
-    # TEMPORARIO (2026-11-20, sem homing ate a peca nova da chave): 20 mm antes dos contatos medidos,
-    # chaves em -12,3 cm (direita, calculado) e 13,7 cm (esquerda, medido), com a camera recalibrada
-    # e o tag a 25,7 cm (curso de 26 cm conferido na trena). Trocar pelo homing depois.
-    ap.add_argument('--y-min', type=float, default=-0.103, help='limite do curso, direita (m, robo_base)')
-    ap.add_argument('--y-max', type=float, default=0.117, help='limite do curso, esquerda (m, robo_base)')
+    # 2026-11-24: curso medido movendo a plataforma pela web (scripts/plataforma_y_web.py) ate cada fim,
+    # lido pela camera: -12,13 cm (direita) a +19,04 cm (esquerda), sem margem. Antes (2026-11-20): 20 mm
+    # antes das chaves em -12,3 e +13,7 cm (curso de 26 cm na trena); a esquerda limitava o curso.
+    # ATENCAO: o curso novo (31 cm) e 5 cm maior que o da trena; conferir a esquerda na trena.
+    ap.add_argument('--y-min', type=float, default=-0.1213,  # 2026-11-24, medido na web (era -0.103)
+                    help='limite do curso, direita (m, robo_base)')
+    ap.add_argument('--y-max', type=float, default=0.1904,  # 2026-11-24, medido na web (era 0.117)
+                    help='limite do curso, esquerda (m, robo_base)')
     ap.add_argument('--zona-borda', type=float, default=0.02,
                     help='a menos disso de --y-min/--y-max anda devagar (m); 0 desliga')
     ap.add_argument('--segurar-mm', type=float, default=SEGURAR_MM,

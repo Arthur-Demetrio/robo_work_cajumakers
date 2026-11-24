@@ -44,6 +44,12 @@ HOME = [0.0, 0.0, 0.0]
 # Antes: [0.12, -0.95, 0.87].
 # Tambem e a pose de boot: igual ao initial_positions.yaml e ao PULSO_PRONTA do firmware (test_pronta.py).
 PRONTA = [0.35, -0.63, 1.05]
+# Espera nas ESTANTES (2026-11-24): braco recolhido atras da frente do robo (x < 0.275 em robo_base), para
+# o robo encostar na estante sem a garra bater nela: com PRONTA a ponta fica a x=0.44, z=0.31, dentro da
+# prateleira. Ponta em x=0.156, z=0.21; J1 a -17 graus (fora da folga de q=0). Achada na simulacao: das
+# poses recolhidas validas, a de mais folga (J2 e J3 perto do limite). O corpo do robo e a camera NAO
+# estao no modelo: conferir na bancada que o braco dobrado nao bate neles.
+PRONTA_ESTANTE = [-0.3, 1.6, -1.9]
 
 SUCESSO = MoveItErrorCodes.SUCCESS
 

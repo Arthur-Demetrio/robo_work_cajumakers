@@ -21,6 +21,14 @@ Uso (com garra_real.launch.py ou demo.launch.py rodando):
     ros2 run garra_coleta pegar_cubo                           # escuta /pegar_cubo e /entregar_cubo
     ros2 topic pub --once /pegar_cubo geometry_msgs/msg/Point "{x: 0.46, z: 0.021}"
     ros2 topic pub --once /entregar_cubo geometry_msgs/msg/Point "{x: 0.46, z: 0.021}"
+    ros2 run garra_coleta pegar_cubo 0.40 0.121 --estante estante_baixa   # cubo numa estante
+    ros2 param set /pegar_cubo estante estante_baixa                     # escutando: troca na hora
+
+Estantes (--estante NOME ou parametro ROS 'estante', '' = nenhuma): NOME e uma estrutura de
+config/bateria_virtual.yaml. Com ela, a estante entra na cena do MoveIt (os planos desviam da
+prateleira de cima) e a pose de espera vira PRONTA_ESTANTE (braco recolhido atras da frente do robo).
+Ao trocar o parametro, a garra vai na hora para a espera nova: troque ANTES de o robo encostar na
+estante e volte para '' depois de sair dela. As medidas e a borda_x (onde o robo para) vem do YAML.
 
 Entrega (--entregar ou /entregar_cubo): com o cubo ja preso nos dedos, leva-o ate (x, z) - o
 centro de onde o cubo deve ficar, ex.: z = altura da mesa + 0.021 -, pela mesma aproximacao da
@@ -41,11 +49,13 @@ import sys
 from control_msgs.action import GripperCommand
 from geometry_msgs.msg import Point, Pose, Quaternion
 import rclpy
+from rclpy.parameter import Parameter
 from rclpy.action import ActionClient
 from rclpy.qos import DurabilityPolicy, QoSProfile, ReliabilityPolicy
 from std_msgs.msg import Bool, String
 
-from garra_coleta.cliente_garra import ClienteGarra, PRONTA, SUCESSO
+from garra_coleta import estruturas
+from garra_coleta.cliente_garra import ClienteGarra, PRONTA, PRONTA_ESTANTE, SUCESSO
 
 FRAME = 'robo_base'
 TOPICO = '/pegar_cubo'
@@ -85,11 +95,27 @@ DESCER_ENTREGA_MM = 0.0
 # (1,5 cm a frente); a 14 cm (0.415, -11 mm interpolado) e a 21 cm (0.485, sem correcao) pega e entrega
 # certinho. Entre pontos interpola; fora, usa o ponto mais perto.
 CORRECAO_X = [(0.405, -0.015), (0.445, 0.0), (0.485, 0.0)]
+# Correcao de x por altura da SUPERFICIE do cubo (m, = z do centro - meia aresta), no lugar de CORRECAO_X.
+# Vale para a superficie a menos de TOLERANCIA_SUPERFICIE da chave; fora delas, CORRECAO_X (chao).
+# 2026-11-24, mesa de 15 cm, garra real: a camera leu o cubo em x=0.497 e a garra so pegou em 0.457
+# (-4 cm; y e altura certos). Pegou, soltou e pegou de novo assim. Um ponto so: vale para toda a mesa.
+CORRECAO_X_SUPERFICIE = {0.15: [(0.497, -0.04)]}
+TOLERANCIA_SUPERFICIE = 0.025
+MEIA_ARESTA = 0.021
 # Escala de velocidade dos movimentos por junta (pronta <-> pre-pegada). Mais rapida que as retas: nesses
 # trechos o J1 sai de / chega perto de q=0, onde a folga faz o servo tremer; passar devagar ali piora.
 VELOCIDADE_TRANSPORTE = 0.5
+# Espera na estante (usar_estante): onde procurar a ponta. ESTANTE_INFINITA = profundidade usada na busca.
+ESTANTE_INFINITA = 2.0
+ESPERA_DZ = (0.08, 0.12, 0.05)          # m acima da prateleira
+ESPERA_X = (0.30, 0.33, 0.36, 0.27)     # m a frente do centro do robo (a frente do robo e 0.275)
+ESPERA_INCLINACOES = (0, -10, -20, 10)
+J1_FOLGA = math.radians(15.0)            # |J1| abaixo disso treme na folga de q=0
 RECUO = 0.06          # m: pre-pegada recuada na direcao de aproximacao
 SUBIDA = 0.05         # m: quanto sobe depois de pegar
+# Na estante sobe so o bastante para descolar o cubo e recua: com 5 cm o recuo bate no vao antes de sair
+# (2026-11-24, simulacao, estante_alta: ate 2-3 cm o recuo sai inteiro, com 5 cm para em ~50%).
+SUBIDA_ESTANTE = 0.015
 INCLINACOES = range(-90, 1, 5)  # graus; negativo = ponta para baixo
 # m acima do centro do cubo onde fica a ponta. Perto do chao o centro (21 mm) fica fora do
 # alcance; ate 15 mm acima ainda prende o cubo de 42 mm pela metade de cima.
@@ -145,10 +171,77 @@ class Coleta:
         self.v = velocidade
         self.v_transporte = velocidade_transporte
         self.dedos = ActionClient(c, GripperCommand, '/garra_dedos_controller/gripper_cmd')
+        self.espera = PRONTA      # pose de espera: PRONTA, ou a da estante (usar_estante)
+        self.estante = ''
+        self._cena = estruturas.Cena(c)
         self.cubo_preso = None   # None = sensor nunca publicou (simulacao ou firmware antigo)
         qos = QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE,
                          durability=DurabilityPolicy.TRANSIENT_LOCAL)
         c.create_subscription(Bool, TOPICO_SENSOR, self._sensor, qos)
+
+    def usar_estante(self, nome, y=None, mover=True):
+        """Escolhe a espera da estante NOME, vai ate ela e poe a estante na cena ('' = sem estante).
+
+        Com mover, a garra vai para a espera com a cena AINDA SEM a estante: o robo nao pode estar
+        encostado nela (troque antes de chegar). mover=False so calcula (bateria_virtual)."""
+        if not nome:
+            self._cena.trocar([])
+            self.estante, self.espera = '', PRONTA
+            print('Sem estante: espera em PRONTA')
+            if mover:
+                self.ir_para('espera', PRONTA)
+            return
+        cfg = estruturas.carregar()
+        e = estruturas.procurar(cfg, nome)
+        if e['tipo'] != 'estante':
+            raise RuntimeError(f"'{nome}' nao e uma estante (tipo {e['tipo']})")
+        if y is None:
+            y = self.c.fk(PRONTA, FRAME).position.y
+        # 1o a estante "infinita" para dentro: o que estiver a frente da borda precisa caber no vao
+        # durante toda a aproximacao do robo, nao so na posicao final.
+        longa = dict(e, profundidade=ESTANTE_INFINITA)
+        objetos, _, sup = estruturas.caixas_da_estrutura(longa, y, cfg['largura_y'])
+        permitir = estruturas.dedos_na_superficie(sup)
+        self._cena.trocar(objetos, permitir)
+        espera = self._espera_na_estante(e, y)
+        if mover:
+            self._cena.trocar([])
+            self.ir_para('espera da estante', espera)
+        objetos, _, sup = estruturas.caixas_da_estrutura(e, y, cfg['largura_y'])
+        self._cena.trocar(objetos, permitir)
+        self.estante, self.espera = nome, espera
+        txt = 'PRONTA_ESTANTE (recolhida)' if espera == PRONTA_ESTANTE else \
+            '[' + ', '.join(f'{v:.3f}' for v in espera) + '] (no vao)'
+        print(f'Estante: {nome}, espera em {txt}')
+
+    def _espera_na_estante(self, e, y):
+        """Pose de espera com a ponta no vao da estante, valida na cena atual (estante infinita).
+
+        Procura a ponta a ESPERA_DZ acima da prateleira e ESPERA_X a frente do centro do robo, garra
+        quase horizontal; prefere J1 fora da folga de q=0. Sem nenhuma: PRONTA_ESTANTE, se valida."""
+        teto = e['altura'] + e['vao']
+        achadas = []
+        for dz in ESPERA_DZ:
+            z = e['altura'] + dz
+            if z > teto - 0.04:
+                continue
+            for x in ESPERA_X:
+                for graus in ESPERA_INCLINACOES:
+                    q = self.c.ik(pose(x, y, z, math.radians(graus)), PRONTA, frame=FRAME)
+                    if q is not None:
+                        achadas.append(q)
+                if any(abs(q[0]) >= J1_FOLGA for q in achadas):
+                    return next(q for q in achadas if abs(q[0]) >= J1_FOLGA)
+        if achadas:
+            print('AVISO: espera da estante com o J1 perto de q=0 (pode tremer).')
+            return achadas[0]
+        if self.c.valido(PRONTA_ESTANTE)[0]:
+            return PRONTA_ESTANTE
+        raise RuntimeError(f"nenhuma pose de espera cabe na estante '{e['nome']}'")
+
+    @property
+    def subida(self):
+        return SUBIDA_ESTANTE if self.estante else SUBIDA
 
     def _sensor(self, msg):
         self.cubo_preso = msg.data
@@ -208,7 +301,7 @@ class Coleta:
             if entrada.fracao < 0.99:
                 continue
             saida = self.c.linha_cartesiana(
-                q_pega, (0.0, 0.0, SUBIDA), evitar_colisao=False, velocidade=self.v)
+                q_pega, (0.0, 0.0, self.subida), evitar_colisao=False, velocidade=self.v)
             if saida.fracao < 0.99:
                 continue
             validas.append(dict(graus=graus, q_pre=q_pre, q_pega=q_pega, entrada=entrada, saida=saida))
@@ -268,18 +361,28 @@ def interpolar(tabela, x):
             return v0 + (v1 - v0) * (x - x0) / (x1 - x0)
 
 
-def x_corrigido(x):
-    """x a mandar para o modelo para a garra real chegar em x (interpola CORRECAO_X; fora, o mais perto)."""
-    dx = interpolar(CORRECAO_X, x)
+def x_corrigido(x, z=None):
+    """x a mandar para o modelo para a garra real chegar no cubo visto em x (z = centro do cubo).
+
+    Usa a tabela de CORRECAO_X_SUPERFICIE da superficie do cubo, se houver; senao CORRECAO_X (chao).
+    Interpola entre os pontos; fora, usa o ponto mais perto."""
+    tabela, onde = CORRECAO_X, 'chao'
+    if z is not None:
+        sup = z - MEIA_ARESTA
+        perto = [h for h in CORRECAO_X_SUPERFICIE if abs(h - sup) <= TOLERANCIA_SUPERFICIE]
+        if perto:
+            h = min(perto, key=lambda h: abs(h - sup))
+            tabela, onde = CORRECAO_X_SUPERFICIE[h], f'superficie {h * 100:.0f} cm'
+    dx = interpolar(tabela, x)
     if abs(dx) >= 0.0005:
-        print(f'Correcao de x: {x:.3f} -> {x + dx:.3f} m ({dx * 1000:+.0f} mm)')
+        print(f'Correcao de x ({onde}): {x:.3f} -> {x + dx:.3f} m ({dx * 1000:+.0f} mm)')
     return x + dx
 
 
 def pegar(c, coleta, x, z, args):
     """Pega (e opcionalmente solta) o cubo com centro em (x, z) de robo_base. Retorna 0 se deu certo."""
     pedido_mm = args.descer if args.descer is not None else round(interpolar(DESCER_POR_X, x), 1)
-    x = x_corrigido(x)
+    x = x_corrigido(x, z)
     q_atual = c.juntas_atuais()
     plano = coleta.plano_de_pegada(x, z, q_atual, pedido_mm / 1000.0)
     if plano is None:
@@ -311,23 +414,33 @@ def pegar(c, coleta, x, z, args):
         if preso is None:
             print(f'AVISO: nada em {TOPICO_SENSOR} (simulacao ou firmware sem sensor); seguindo sem conferir.')
         elif not preso:
-            print('Sensor dos dedos: cubo NAO preso. Abrindo, subindo e voltando para pronta.')
+            print('Sensor dos dedos: cubo NAO preso. Abrindo, subindo e voltando para a espera.')
             coleta.mover_dedos(ABERTA)
             saida = c.linha_cartesiana(
-                c.juntas_atuais(), (0.0, 0.0, SUBIDA), evitar_colisao=False,
+                c.juntas_atuais(), (0.0, 0.0, coleta.subida), evitar_colisao=False,
                 velocidade=args.velocidade)
             coleta.executar('subida sem cubo', saida.trajetoria)
-            coleta.ir_para('pronta', PRONTA)
+            coleta.ir_para('espera', coleta.espera)
             return 2
         else:
             print('Sensor dos dedos: cubo preso.')
     saida = c.linha_cartesiana(
-        c.juntas_atuais(), (0.0, 0.0, SUBIDA), evitar_colisao=False, velocidade=args.velocidade)
+        c.juntas_atuais(), (0.0, 0.0, coleta.subida), evitar_colisao=False, velocidade=args.velocidade)
     coleta.executar('subida', saida.trajetoria)
+    if coleta.estante and not args.soltar:
+        # Na estante, sai do vao recuando na direcao de aproximacao antes de voltar para a espera
+        # (2026-11-24, simulacao: da subida direto para a espera o planejador nem sempre acha caminho).
+        recuo = c.linha_cartesiana(
+            c.juntas_atuais(),
+            para_garra_base((-RECUO * math.cos(a), 0.0, -RECUO * math.sin(a))),
+            velocidade=args.velocidade)
+        if recuo.fracao < 0.99:
+            raise RuntimeError(f'recuo da estante incompleto ({recuo.fracao:.0%})')
+        coleta.executar('recuo da estante', recuo.trajetoria)
     if args.soltar:
         # Volta para a mesma altura em que pegou, incluindo a descida extra.
         descida = c.linha_cartesiana(
-            c.juntas_atuais(), (0.0, 0.0, -SUBIDA), evitar_colisao=False,
+            c.juntas_atuais(), (0.0, 0.0, -coleta.subida), evitar_colisao=False,
             velocidade=args.velocidade)
         coleta.executar('descida', descida.trajetoria)
         coleta.mover_dedos(ABERTA)
@@ -341,7 +454,7 @@ def pegar(c, coleta, x, z, args):
             para_garra_base((-RECUO * math.cos(a), 0.0, -RECUO * math.sin(a))),
             velocidade=args.velocidade)
         coleta.executar('recuo', recuo.trajetoria)
-    coleta.ir_para('pronta', PRONTA)
+    coleta.ir_para('espera', coleta.espera)
     print('Pronto.')
     return 0
 
@@ -351,7 +464,7 @@ def entregar(c, coleta, x, z, args):
 
     Mesma aproximacao da pegada (pre-pegada recuada -> reta), sem abrir os dedos antes de chegar.
     """
-    x = x_corrigido(x)
+    x = x_corrigido(x, z)
     plano = coleta.plano_de_pegada(x, z, c.juntas_atuais(), args.descer_entrega / 1000.0)
     if plano is None:
         print(f'Destino x={x:.3f} z={z:.3f} fora do alcance (nenhuma inclinacao serve).')
@@ -383,7 +496,7 @@ def entregar(c, coleta, x, z, args):
         c.juntas_atuais(), para_garra_base((-RECUO * math.cos(a), 0.0, -RECUO * math.sin(a))),
         velocidade=args.velocidade)
     coleta.executar('recuo', recuo.trajetoria)
-    coleta.ir_para('pronta', PRONTA)
+    coleta.ir_para('espera', coleta.espera)
     print('Pronto.')
     return 0
 
@@ -395,11 +508,19 @@ def escutar(c, coleta, args):
     c.create_subscription(Point, TOPICO_ENTREGA, lambda p: pendentes.append(('entregar', p)), 10)
     pubs = {'pegar': c.create_publisher(String, TOPICO_RESULTADO, 10),
             'entregar': c.create_publisher(String, TOPICO_ENTREGA_RESULTADO, 10)}
+    c.declare_parameter('estante', args.estante or '')
     print(f'Esperando posicoes em {TOPICO} (pegar) e {TOPICO_ENTREGA} (entregar) '
           '(geometry_msgs/msg/Point, x e z em robo_base). Ctrl+C para sair. Exemplo:')
     print(f'  ros2 topic pub --once {TOPICO} geometry_msgs/msg/Point "{{x: 0.46, z: 0.021}}"')
     while rclpy.ok():
         rclpy.spin_once(c, timeout_sec=0.1)
+        estante = c.get_parameter('estante').value
+        if estante != coleta.estante:
+            try:
+                coleta.usar_estante(estante)
+            except (RuntimeError, ValueError) as e:
+                print(f'ERRO ao trocar a estante para {estante!r}: {e}')
+                c.set_parameters([Parameter('estante', value=coleta.estante)])
         if not pendentes:
             continue
         acao, p = pendentes.pop(0)
@@ -447,6 +568,8 @@ def main():
                          'chao; padrao: DESCER_POR_X (5 mm a 14 cm ate 10 mm a 17 cm), max 35')
     ap.add_argument('--descer-entrega', type=float, default=DESCER_ENTREGA_MM,
                     help=f'como --descer, mas na entrega (cubo nos dedos); padrao {DESCER_ENTREGA_MM:.0f}')
+    ap.add_argument('--estante', default='',
+                    help='estrutura de config/bateria_virtual.yaml (tipo estante) onde esta o cubo')
     ap.add_argument('--so-planejar', action='store_true', help='planeja sem mexer a garra')
     ap.add_argument('--soltar', action='store_true', help='devolve o cubo no mesmo lugar')
     ap.add_argument('--entregar', action='store_true',
@@ -471,6 +594,8 @@ def main():
     try:
         c.aguardar()
         coleta = Coleta(c, args.velocidade, args.velocidade_transporte)
+        if args.estante and args.x is not None:
+            coleta.usar_estante(args.estante, mover=not args.so_planejar)
         if args.x is None:
             escutar(c, coleta, args)
             return 0

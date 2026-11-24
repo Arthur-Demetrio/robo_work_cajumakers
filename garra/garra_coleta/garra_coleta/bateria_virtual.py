@@ -32,57 +32,17 @@ import sys
 import time
 from collections import Counter
 
-from moveit_msgs.msg import CollisionObject, PlanningScene
-from moveit_msgs.srv import ApplyPlanningScene
-from geometry_msgs.msg import Pose
 import rclpy
-from shape_msgs.msg import SolidPrimitive
 import yaml
 
-from garra_coleta import pegar_cubo as pc
+from garra_coleta import estruturas, pegar_cubo as pc
+from garra_coleta.estruturas import (  # noqa: F401 (reexportados para os testes)
+    PREFIXO, Cena, caixa, caixas_da_estrutura, config_padrao)
 from garra_coleta.cliente_garra import ClienteGarra, PRONTA, SUCESSO
 
-PREFIXO = 'bateria_'
 # Links das pontas dos dedos e raio (m) em torno do cubo onde o contato deles com a superficie e aviso.
 DEDOS = ('P_1', 'P_1_1')
 RAIO_PEGADA = 0.03
-
-
-def config_padrao():
-    try:
-        from ament_index_python.packages import get_package_share_directory
-        return os.path.join(get_package_share_directory('garra_coleta'), 'config', 'bateria_virtual.yaml')
-    except Exception:
-        return os.path.join(os.path.dirname(__file__), '..', 'config', 'bateria_virtual.yaml')
-
-
-def caixa(nome, x0, x1, z0, z1, y, largura):
-    o = CollisionObject()
-    o.header.frame_id = pc.FRAME
-    o.id = PREFIXO + nome
-    o.operation = CollisionObject.ADD
-    s = SolidPrimitive(type=SolidPrimitive.BOX, dimensions=[x1 - x0, largura, z1 - z0])
-    p = Pose()
-    p.position.x, p.position.y, p.position.z = (x0 + x1) / 2, y, (z0 + z1) / 2
-    p.orientation.w = 1.0
-    o.primitives, o.primitive_poses = [s], [p]
-    return o
-
-
-def caixas_da_estrutura(e, y, largura):
-    """(caixas de colisao, altura da superficie do cubo, nome do corpo dessa superficie)."""
-    piso = []   # o chao ja e o robo_base
-    x0, alt = e['borda_x'], e.get('altura', 0.0)
-    if e['tipo'] == 'chao':
-        return piso, 0.0, 'robo_base'
-    x1 = x0 + e['profundidade']
-    if e['tipo'] == 'mesa':
-        return piso + [caixa('tampo', x0, x1, 0.0, alt, y, largura)], alt, PREFIXO + 'tampo'
-    if e['tipo'] == 'estante':
-        esp, teto = e['espessura'], alt + e['vao']
-        return piso + [caixa('prateleira', x0, x1, 0.0, alt, y, largura),
-                       caixa('teto', x0, x1, teto, teto + esp, y, largura)], alt, PREFIXO + 'prateleira'
-    raise ValueError(f"tipo desconhecido: {e['tipo']}")
 
 
 class Bateria:
@@ -90,29 +50,15 @@ class Bateria:
     def __init__(self, c):
         self.c = c
         self.coleta = pc.Coleta(c, 0.2)
-        self._cena = c.create_client(ApplyPlanningScene, '/apply_planning_scene')
-        if not self._cena.wait_for_service(timeout_sec=10.0):
-            raise RuntimeError('/apply_planning_scene indisponivel. O MoveIt esta rodando?')
-        self._na_cena = []
+        self._cena = Cena(c)
 
-    def cena(self, objetos):
-        """Troca os objetos da bateria na cena do MoveIt."""
-        cena = PlanningScene(is_diff=True)
-        for nome in self._na_cena:
-            r = CollisionObject(id=nome, operation=CollisionObject.REMOVE)
-            r.header.frame_id = pc.FRAME
-            cena.world.collision_objects.append(r)
-        cena.world.collision_objects += objetos
-        req = ApplyPlanningScene.Request(scene=cena)
-        f = self._cena.call_async(req)
-        rclpy.spin_until_future_complete(self.c, f)
-        if f.result() is None or not f.result().success:
-            raise RuntimeError('Falha ao aplicar a cena')
-        self._na_cena = [o.id for o in objetos]
+    def cena(self, objetos, superficie=None):
+        """Troca as caixas; com a superficie, libera o contato das pontas dos dedos com ela (ACM)."""
+        self._cena.trocar(objetos, estruturas.dedos_na_superficie(superficie) if superficie else ())
 
     # --- plano completo, como no pegar_cubo ---
 
-    def fases(self, acao, x, z):
+    def fases(self, acao, x, z, espera=PRONTA):
         """Lista [(nome, trajetoria)] do ciclo inteiro, ou (None, motivo)."""
         c, v = self.c, 0.2
         descer_mm = round(pc.interpolar(pc.DESCER_POR_X, x), 1) if acao == 'pegar' else pc.DESCER_ENTREGA_MM
@@ -125,7 +71,7 @@ class Bateria:
             return None, 'descida nao cabe', plano['graus']
         a = math.radians(plano['graus'])
         fases = []
-        traj, cod = c.planejar_juntas(PRONTA, plano['q_pre'], v)
+        traj, cod = c.planejar_juntas(espera, plano['q_pre'], v)
         if cod != SUCESSO:
             return None, f'transporte nao planeja ({cod})', plano['graus']
         fases.append(('transporte', traj))
@@ -141,7 +87,7 @@ class Bateria:
             fases.append(('descida extra', d.trajetoria))
             q = fim(d.trajetoria)
         if acao == 'pegar':
-            saida = c.linha_cartesiana(q, (0.0, 0.0, pc.SUBIDA), evitar_colisao=False, velocidade=v)
+            saida = c.linha_cartesiana(q, (0.0, 0.0, self.coleta.subida), evitar_colisao=False, velocidade=v)
             nome_saida = 'subida'
         else:
             if descer > 0.0:
@@ -153,7 +99,14 @@ class Bateria:
         if saida.fracao < 0.99:
             return None, f'{nome_saida} incompleta ({saida.fracao:.0%})', plano['graus']
         fases.append((nome_saida, saida.trajetoria))
-        traj, cod = c.planejar_juntas(fim(saida.trajetoria), PRONTA, v)
+        q = fim(saida.trajetoria)
+        if acao == 'pegar' and espera != PRONTA:   # estante: o pegar_cubo recua antes de voltar
+            r = c.linha_cartesiana(q, tuple(-k for k in ida), velocidade=v)
+            if r.fracao < 0.99:
+                return None, f'recuo da estante incompleto ({r.fracao:.0%})', plano['graus']
+            fases.append(('recuo da estante', r.trajetoria))
+            q = fim(r.trajetoria)
+        traj, cod = c.planejar_juntas(q, espera, v)
         if cod != SUCESSO:
             return None, f'volta nao planeja ({cod})', plano['graus']
         fases.append(('volta', traj))
@@ -182,9 +135,32 @@ class Bateria:
                         alvo.append(txt)
         return falhas, avisos
 
-    def caso(self, objetos, superficie, acao, x, z):
-        """Resultado de um cubo: dict com o que deu em (a) e em (b)."""
+    def caso(self, objetos, superficie, acao, x, z, estante=''):
+        """Resultado de um cubo: dict com o que deu em (a) e em (b).
+
+        Estante (nome): o pegar_cubo ja recebe a estante (--estante / parametro), poe ela na cena e
+        espera na pose que usar_estante escolher; entao (a) e (b) sao o mesmo teste."""
         r = dict(acao=acao, x=round(x, 3), z=round(z, 3))
+        if estante:
+            self.cena([])
+            try:
+                with redirect_stdout(io.StringIO()):
+                    self.coleta.usar_estante(estante, mover=False)
+                espera = self.coleta.espera
+            except RuntimeError as erro:
+                espera, r['inclinacao'], r['atual'], r['detalhe_atual'] = None, None, 'falha', str(erro)
+            if espera is not None:
+                fases, motivo, r['inclinacao'] = self.fases(acao, x, z, espera)
+                if fases is None:
+                    r['atual'], r['detalhe_atual'] = 'falha', motivo
+                else:
+                    falhas, avisos = self.colisoes(fases, (x, z), superficie)
+                    r['atual'] = 'colide' if falhas else ('aviso' if avisos else 'ok')
+                    r['detalhe_atual'] = '; '.join(falhas or avisos)
+            r['com_cena'], r['detalhe_com_cena'] = r['atual'], 'estante: sempre com a cena'
+            with redirect_stdout(io.StringIO()):
+                self.coleta.usar_estante('', mover=False)
+            return r
         # (a) pegar_cubo de hoje: planeja sem a estrutura, confere contra ela.
         self.cena([])
         fases, motivo, graus = self.fases(acao, x, z)
@@ -192,7 +168,7 @@ class Bateria:
         if fases is None:
             r['atual'], r['detalhe_atual'] = 'falha', motivo
         else:
-            self.cena(objetos)
+            self.cena(objetos, superficie)
             falhas, avisos = self.colisoes(fases, (x, z), superficie)
             r['atual'] = 'colide' if falhas else ('aviso' if avisos else 'ok')
             r['detalhe_atual'] = '; '.join(falhas or avisos)
@@ -200,7 +176,7 @@ class Bateria:
         if r['atual'] in ('ok', 'aviso'):
             r['com_cena'], r['detalhe_com_cena'] = r['atual'], 'igual ao atual'
             return r
-        self.cena(objetos)
+        self.cena(objetos, superficie)
         fases, motivo, _ = self.fases(acao, x, z)
         if fases is None:
             r['com_cena'], r['detalhe_com_cena'] = 'falha', motivo
@@ -294,7 +270,7 @@ def main():
             for acao in acoes:
                 for x in xs:
                     print(f"[{e['nome']}] {acao} x={x:.3f} ...", flush=True)
-                    r = dict(estrutura=e['nome'], **b.caso(objetos, corpo_sup, acao, x, sup + meio))
+                    r = dict(estrutura=e['nome'], **b.caso(objetos, corpo_sup, acao, x, sup + meio, e['nome'] if e['tipo'] == 'estante' else ''))
                     linhas.append(r)
             todas += linhas
             resumo(e['nome'], e['borda_x'], linhas, passo)
