@@ -170,6 +170,7 @@ class Coleta:
         self.c = c
         self.v = velocidade
         self.v_transporte = velocidade_transporte
+        self.sem_pinca = False   # --sem-pinca: treina so o braco, sem mandar os dedos
         self.dedos = ActionClient(c, GripperCommand, '/garra_dedos_controller/gripper_cmd')
         self.espera = PRONTA      # pose de espera: PRONTA, ou a da estante (usar_estante)
         self.estante = ''
@@ -308,6 +309,9 @@ class Coleta:
         return validas
 
     def mover_dedos(self, posicao):
+        if self.sem_pinca:
+            print(f'   (sem pinca: dedos para {math.degrees(posicao):.0f} graus NAO enviado)')
+            return None
         if not self.dedos.wait_for_server(timeout_sec=5.0):
             raise RuntimeError('Acao dos dedos indisponivel.')
         objetivo = GripperCommand.Goal()
@@ -570,6 +574,9 @@ def main():
                     help=f'como --descer, mas na entrega (cubo nos dedos); padrao {DESCER_ENTREGA_MM:.0f}')
     ap.add_argument('--estante', default='',
                     help='estrutura de config/bateria_virtual.yaml (tipo estante) onde esta o cubo')
+    ap.add_argument('--sem-pinca', action='store_true',
+                    help='faz so o movimento do braco, sem abrir/fechar os dedos (2026-11-24: motor da '
+                         'pinca parou; para treinar a pegada)')
     ap.add_argument('--so-planejar', action='store_true', help='planeja sem mexer a garra')
     ap.add_argument('--soltar', action='store_true', help='devolve o cubo no mesmo lugar')
     ap.add_argument('--entregar', action='store_true',
@@ -594,6 +601,7 @@ def main():
     try:
         c.aguardar()
         coleta = Coleta(c, args.velocidade, args.velocidade_transporte)
+        coleta.sem_pinca = args.sem_pinca
         if args.estante and args.x is not None:
             coleta.usar_estante(args.estante, mover=not args.so_planejar)
         if args.x is None:
